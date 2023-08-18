@@ -8,7 +8,7 @@ const router = createRouter({
       path: "/",
       name: "mainWindow",
       component: MainWindow,
-      // redirect: "/dashboard",
+      redirect: "/seat",
       children: [
         {
           path:"/dashboard",
