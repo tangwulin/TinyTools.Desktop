@@ -65,7 +65,16 @@ const menuOptions = [
 
 const settingOptions = [
   {
-    label: "设置",
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "setting",
+          },
+        },
+        { default: () => "设置" }
+      ),
     key: "setting",
     icon: renderIcon(SettingIcon),
   },
