@@ -1,34 +1,40 @@
 <template>
-  <div id="MainView" class="flex items-center justify-center flex-col w-max h-auto m-auto">
-    <div id="target-div" class="m-auto md:w-fit p-4" style="margin: 0 auto">
+  <div id="SeatView" class="flex items-center justify-center flex-col w-max h-auto m-auto">
+    <div id="target-div" class="md:w-fit p-4" style="margin: 0 auto">
       <div class="flex items-center justify-center mb-4">
-        <n-button :size="'large'">讲台</n-button>
+        <n-button :size='"large"'>讲台</n-button>
       </div>
       <div>
         <SeatTable
-          v-model:seats="allSeats"
-          v-model:rendering-list="oldRenderingList"
-          :key="stKey"
-          :coloring-edge="coloringEdgeSeats"
-          @update="updateHandler"
-          :disable="isPreview || loading"
+            v-model:seats="allSeats"
+            v-model:rendering-list="oldRenderingList"
+            :key="stKey"
+            @update="updateHandler"
+            :disable="isPreview || loading"
         />
       </div>
       <div class="flex justify-center mt-4">
         <p>{{ currentDate }} {{ currentTime }}</p>
       </div>
     </div>
-    <div class="flex items-center justify-center mt-8 flex-col">
-      <div class="flex items-center justify-center flex-col md:flex-row flex-wrap md:w-3/5">
-        <!-- 操作区域 -->
+    <div class="flex items-center justify-center mt-4 flex-col">
+
+      <!-- 调试工具栏 -->
+      <div v-show="enableDevelopFeature">
+        <n-button-group>
+          <n-button @click="colorEdge" :disabled="loading ||isPreview">染色边缘座位</n-button>
+          <n-button @click="removeEdgeColor" :disabled="loading ||isPreview">去除所有染色</n-button>
+        </n-button-group>
+      </div>
+      <div class="flex items-center justify-center flex-col md:flex-row flex-wrap md:w-3/5"> <!-- 操作区域 -->
         <!--        <n-button @click="reloadSeatTable" :disabled="loading">重载座位表组件</n-button>-->
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
-            <n-button @click="replaceSeats" :loading="loading" :disabled="loading || isPreview">
+            <n-button @click="replaceSeats" :loading="loading" :disabled="loading ||isPreview">
               <template #icon>
                 <n-icon>
-                  <RefreshDot />
+                  <RefreshDot/>
                 </n-icon>
               </template>
               重新排列座位
@@ -39,10 +45,10 @@
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
-            <n-button @click="rollSeats(5)" :loading="loading" :disabled="loading || isPreview">
+            <n-button @click="rollSeats(5)" :loading="loading" :disabled="loading ||isPreview">
               <template #icon>
                 <n-icon>
-                  <RefreshDot />
+                  <RefreshDot/>
                 </n-icon>
               </template>
               按规则Roll座位
@@ -54,16 +60,16 @@
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
             <n-popconfirm
-              positive-text="确定"
-              :negative-text="null"
-              @positive-click="rollSeats(times)"
+                positive-text="确定"
+                :negative-text="null"
+                @positive-click="rollSeats(times)"
             >
               <!--suppress VueUnrecognizedSlot -->
               <template #trigger>
-                <n-button :loading="loading" :disabled="loading || isPreview">
+                <n-button :loading="loading" :disabled="loading ||isPreview">
                   <template #icon>
                     <n-icon>
-                      <RefreshDot />
+                      <RefreshDot/>
                     </n-icon>
                   </template>
                   玩把大的！
@@ -71,7 +77,7 @@
               </template>
               <div class="flex flex-row items-center">
                 次数：
-                <n-input-number clearable :precision="0" v-model:value="times" />
+                <n-input-number clearable :precision="0" v-model:value="times"/>
               </div>
             </n-popconfirm>
           </template>
@@ -80,10 +86,10 @@
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
-            <n-button @click="gacha" :loading="loading" :disabled="loading || isPreview">
+            <n-button @click="gacha" :loading="loading" :disabled="loading ||isPreview">
               <template #icon>
                 <n-icon>
-                  <RefreshDot />
+                  <RefreshDot/>
                 </n-icon>
               </template>
               抽卡！
@@ -94,10 +100,10 @@
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
-            <n-button @click="reSort" :loading="loading" :disabled="loading || isPreview">
+            <n-button @click="reSort" :loading="loading" :disabled="loading ||isPreview">
               <template #icon>
                 <n-icon>
-                  <Refresh />
+                  <Refresh/>
                 </n-icon>
               </template>
               随机排列座位
@@ -108,24 +114,27 @@
         </n-tooltip>
       </div>
       <div>
+        <!--                <n-tooltip trigger="hover">-->
+        <!--                  &lt;!&ndash;suppress VueUnrecognizedSlot &ndash;&gt;-->
+        <!--                  <template #trigger>-->
+        <!--                    <n-switch v-model:value="coloringEdgeSeats" @update:value="repaint" :disabled="loading"/>-->
+        <!--                  </template>-->
+        <!--                  边缘位置高亮-->
+        <!--                </n-tooltip>-->
         <!-- 下方工具条 -->
-        <!--        <n-tooltip trigger="hover">-->
-        <!--          &lt;!&ndash;suppress VueUnrecognizedSlot &ndash;&gt;-->
-        <!--          <template #trigger>-->
-        <!--            <n-switch v-model:value="coloringEdgeSeats" @update:value="repaint" :disabled="loading"/>-->
-        <!--          </template>-->
-        <!--          边缘位置高亮-->
-        <!--        </n-tooltip>-->
         <n-button-group>
-          <n-button @click="showHistory = true" :disabled="loading">历史记录</n-button>
-          <n-button @click="showSetting = true">设置</n-button>
-          <n-button @click="showManager" :disabled="loading || isPreview">人员管理</n-button>
-          <n-button @click="showMultiAddModal" :disabled="loading || isPreview">增加人员</n-button>
-          <n-button @click="save(scale)" :disabled="loading || isPreview">保存图片</n-button>
-          <n-dropdown :options="saveOptions" @select="save">
-            <n-button :disabled="loading || isPreview">
+          <n-button @click="showHistory=true" :disabled="loading">历史记录</n-button>
+          <n-button @click="showSetting=true">设置</n-button>
+          <n-button @click="showManager" :disabled="loading ||isPreview">人员管理</n-button>
+          <n-button @click="showMultiAddModal" :disabled="loading ||isPreview">增加人员</n-button>
+          <n-button @click="save(scale)" :disabled="loading ||isPreview">保存图片</n-button>
+          <n-dropdown
+              :options="saveOptions"
+              @select="save"
+          >
+            <n-button :disabled="loading ||isPreview">
               <template #icon>
-                <ArrowDropDownFilled />
+                <ArrowDropDownFilled/>
               </template>
             </n-button>
           </n-dropdown>
@@ -133,14 +142,15 @@
       </div>
     </div>
 
+
     <n-modal v-model:show="showSetting" style="width: 60%">
       <n-card
-        style="width: 60%"
-        title="设置"
-        :bordered="true"
-        size="small"
-        closable
-        @close="showSetting = false"
+          style="width: 60%"
+          title="设置"
+          :bordered="true"
+          size="small"
+          closable
+          @close="showSetting=false"
       >
         <div class="flex flex-row justify-items-start" style="height: 60vh">
           <div class="px-2 pt-2 mr-2 bg-gray-200 rounded">
@@ -153,11 +163,9 @@
             </n-list>
           </div>
           <div class="flex flex-col justify-items-start w-full" :key="scKey">
-            <div id="settingTitle">
-              <p>{{ currentSetting.name }}</p>
-            </div>
+            <div id="settingTitle"><p>{{ currentSetting.name }}</p></div>
             <div class="h-full overflow-y-hidden" id="settingContainer">
-              <component :is="currentSetting.component" v-model:showAddModal="showAddModal" />
+              <component :is="currentSetting.component" v-model:showAddModal="showAddModal"/>
             </div>
           </div>
         </div>
@@ -169,56 +177,64 @@
         <template #header>
           <p>历史记录</p>
         </template>
-        <history-drawer v-model:is-preview="isPreview" v-model:temp="temp" />
+        <history-drawer v-model:is-preview="isPreview" v-model:temp="temp"/>
         <template #footer v-if="isPreview">
-          <n-button type="error" ghost @click="exitPreview" class="ml-auto"> 退出预览 </n-button>
+          <n-button type="error" ghost @click="exitPreview" class="ml-auto">
+            退出预览
+          </n-button>
         </template>
       </n-drawer-content>
     </n-drawer>
 
     <div class="fixed top-0 left-0 mt-4 ml-4" v-if="isPreview">
-      <n-button type="error" @click="exitPreview"> 退出预览 </n-button>
+      <n-button type="error" @click="exitPreview">
+        退出预览
+      </n-button>
     </div>
 
     <div class="fixed top-0 right-0 mt-4 mr-4" v-if="isPreview">
-      <n-button type="success" @click="saveHistory('手动保存')"> 保存当前 </n-button>
+      <n-button type="success" @click="saveHistory('手动保存')">
+        保存当前
+      </n-button>
     </div>
 
     <div class="fixed bottom-0 left-0 mb-2 ml-2 text-xs">
-      <p>
-        TinyTools v{{ version }} Build <a :href="githubLink" target="_blank">{{ revision }}</a>
-      </p>
+      <p>TinyTools v{{ version }} Build <a :href="githubLink" target="_blank">{{ revision }}</a></p>
     </div>
-    <div class="fixed bottom-0 right-0 mb-2 mr-2">
-      <audio
-        controls
-        id="player"
-        src="https://music.163.com/song/media/outer/url?id=430620198.mp3"
-      ></audio>
+    <div class="fixed bottom-0 right-0 mb-2 mr-2 ">
+      <audio controls id="player" src="https://music.163.com/song/media/outer/url?id=430620198.mp3"></audio>
     </div>
   </div>
 </template>
 
 <script setup>
-import { nextTick, onMounted, onUnmounted, ref, watch, toRaw, computed } from 'vue'
-import { NButton, NButtonGroup, NCard, NIcon, NModal, NTooltip, useMessage } from 'naive-ui'
+import { nextTick, onMounted, onUnmounted, ref, watch, toRaw } from 'vue'
+import {
+  NButton,
+  NButtonGroup,
+  NCard,
+  NIcon,
+  NModal,
+  NTooltip,
+  useMessage
+} from 'naive-ui'
 import { Refresh, RefreshDot } from '@vicons/tabler'
 import { ArrowDropDownFilled } from '@vicons/material'
-// import SeatTable from '@/components/SeatTable.vue'
-// import BgmSetting from './BgmSetting.vue'
-// import PersonManage from './PersonManage.vue'
-// import About from './AboutPage.vue'
-// import ImageSetting from './ImageSetting.vue'
-// import HistoryDrawer from '@/components/HistoryDrawer.vue'
-// import DevelopFeature from '../components/DevelopFeature.vue'
+import SeatTable from '@/components/SeatTable.vue'
+import BgmSetting from './BgmSetting.vue'
+import PersonManage from './PersonManage.vue'
+import About from './AboutPage.vue'
+import ImageSetting from './ImageSetting.vue'
+import HistoryDrawer from '@/components/HistoryDrawer.vue'
+import DevelopFeature from '../components/DevelopFeature.vue'
 import { domToPng } from 'modern-screenshot'
-import { useSeatStore } from '../stores/seat'
-import { usePersonStore } from '../stores/person'
-import { useSettingStore } from '../stores/setting'
+import { useSeatStore } from '@/stores/seat'
+import { usePersonStore } from '@/stores/person'
+import { useSettingStore } from '@/stores/setting'
 import { storeToRefs } from 'pinia'
-import { getRenderingList, replaceArrayElements } from '../assets/script/seatHelper'
+import { getRenderingList, parseEdgeSeatIndex, replaceArrayElements } from '@/assets/script/seatHelper'
 import { debounce, shuffle } from 'lodash-es'
-import { getDefaultBgm, getDefaultFinalBgm } from '../assets/script/musicHelper'
+import { getDefaultBgm, getDefaultFinalBgm } from '@/assets/script/musicHelper'
 
 const version = __APP_VERSION__
 const github_sha = __GITHUB_SHA__
@@ -228,7 +244,7 @@ const githubLink = 'https://github.com/tangwulin/TinyTools/tree/' + github_sha
 const message = useMessage()
 
 const seatWorker = new Worker(new URL('../assets/script/seatWorker.js', import.meta.url), {
-  type: 'module'
+  type: 'module',
 })
 
 const seatStore = useSeatStore()
@@ -238,7 +254,6 @@ const settingStore = useSettingStore()
 const { allSeats, oldRenderingList, history } = storeToRefs(seatStore)
 const { allPerson } = storeToRefs(personStore)
 const {
-  coloringEdgeSeats,
   bgms,
   finalBgms,
   isBGMInitialized,
@@ -247,7 +262,7 @@ const {
   enableFadein,
   fadeinTime,
   scale,
-  enableQuickSave,
+  // enableQuickSave,
   enableDevelopFeature
 } = storeToRefs(settingStore)
 
@@ -264,6 +279,19 @@ const stKey = ref(Math.random())
 const scKey = ref(Math.random())
 let msgReactive = null
 
+const colorEdge = () => {
+  const edgeIndex = parseEdgeSeatIndex(allSeats.value.length)
+  edgeIndex.forEach(index => {
+    allSeats.value[index].color = '#43a447'
+  })
+  oldRenderingList.value = getRenderingList(allSeats.value, oldRenderingList.value)
+}
+
+const removeEdgeColor = () => {
+  allSeats.value.forEach(item => {item.color = null})
+  oldRenderingList.value = getRenderingList(allSeats.value, oldRenderingList.value)
+}
+
 const settings = [
   { name: '🎶背景音乐', component: BgmSetting, active: true },
   { name: '💁人员管理', component: PersonManage, active: true },
@@ -274,7 +302,8 @@ const settings = [
 
 let currentSetting = settings[0]
 
-if (bgms.value.length === 0 || finalBgms.value.length === 0) {
+if (bgms.value.length === 0 || finalBgms.value.length === 0)
+{
   bgms.value = getDefaultBgm()
   finalBgms.value = getDefaultFinalBgm()
   isBGMInitialized.value = true
@@ -312,11 +341,13 @@ const play = (option) => {
   const player = document.getElementById('player')
   player.src = option.url
   player.currentTime = option.offset
-  if (option.name) {
+  if (option.name)
+  {
     message.info('正在播放：' + option.name)
     console.log('正在播放：' + option.name)
   }
-  if (enableFadein.value) {
+  if (enableFadein.value)
+  {
     const originVol = player.volume
     player.volume = 0
     let i = 0
@@ -324,7 +355,8 @@ const play = (option) => {
       i++
       player.volume = player.volume + originVol / 50
       if (i >= 50) clearInterval(interval)
-    }, (fadeinTime.value * 1000) / 50)
+    }, fadeinTime.value * 1000 / 50)
+
   }
   player.play()
 }
@@ -370,7 +402,8 @@ onUnmounted(() => {
 })
 
 // 更新日期和时间
-function updateDateTime() {
+function updateDateTime()
+{
   const now = new Date()
   const date = now.toLocaleDateString()
   const time = now.toLocaleTimeString()
@@ -378,13 +411,7 @@ function updateDateTime() {
   currentTime.value = time
 }
 
-const updateHandler = debounce(
-  () => {
-    saveHistory('手动更改')
-  },
-  100,
-  { maxWait: 2000 }
-)
+const updateHandler = debounce(() => {saveHistory('手动更改')}, 100, { maxWait: 2000 })
 
 const saveOptions = [
   {
@@ -394,12 +421,12 @@ const saveOptions = [
   },
   {
     label: '1080P',
-    key: 2
-  },
-  {
+    key: 2,
+
+  }, {
     label: '4K',
-    key: 4
-  }
+    key: 4,
+  },
 ]
 /**
  * 保存当前座位为图片
@@ -413,42 +440,49 @@ const save = async (x) => {
   const target = document.getElementById('target-div')
   const options = {
     filter: (node) => {
-      try {
-        return !node.classList.contains('n-button--dashed')
-      } catch {
+      try
+      {
+        return (!node.classList.contains('n-button--dashed'))
+      }
+      catch
+      {
         return true
       }
     },
     backgroundColor: '#FFFFFF',
-    scale: (960 * x) / target.clientWidth
+    scale: 960 * x / target.clientWidth
   }
   scale.value = x
   domToPng(target, options)
-    .then((dataUrl) => {
-      const link = document.createElement('a')
-      link.download = 'seat-' + currentDate.value + '-' + currentTime.value + '.png'
-      link.href = dataUrl
-      link.click()
-    })
-    .then(() => {
-      msgReactive.content = '保存成功'
-      msgReactive.type = 'success'
-      loading.value = false
-      setTimeout(() => {
-        msgReactive.destroy()
-        msgReactive = null
-      }, 3000)
-    })
+      .then(dataUrl => {
+        const link = document.createElement('a')
+        link.download = 'seat-' + currentDate.value + '-' + currentTime.value + '.png'
+        link.href = dataUrl
+        link.click()
+      })
+      .then(() => {
+        msgReactive.content = '保存成功'
+        msgReactive.type = 'success'
+        loading.value = false
+        setTimeout(() => {
+          msgReactive.destroy()
+          msgReactive = null
+        }, 3000)
+      })
 }
 
 /**
  * 在allSeats或oldRenderingList为空的情况下初始化。
  */
-if (allSeats.value === null || oldRenderingList.value === null) {
-  if (history.value.length !== 0) {
+if (allSeats.value === null || oldRenderingList.value === null)
+{
+  if (history.value.length !== 0)
+  {
     allSeats.value = history.value[0].allSeats
     oldRenderingList.value = history.value[0].oldRenderingList
-  } else {
+  }
+  else
+  {
     allSeats.value = allPerson.value.map((name, index) => {
       return { name: name, index: index, isSeat: true }
     })
@@ -456,10 +490,8 @@ if (allSeats.value === null || oldRenderingList.value === null) {
   }
 }
 
-if (
-  (allPerson.value.length !== 0 && allSeats.value.length === 0) ||
-  allPerson.value.length !== allSeats.value.length
-) {
+if ((allPerson.value.length !== 0 && allSeats.value.length === 0) || allPerson.value.length !== allSeats.value.length)
+{
   allSeats.value = allPerson.value.map((name, index) => {
     return { name: name, index: index, isSeat: true }
   })
@@ -472,21 +504,22 @@ if (
 const saveHistory = (type) => {
   const data = {
     time: Date.now(),
-    allSeats: [...toRaw(allSeats.value)],
-    oldRenderingList: [...toRaw(oldRenderingList.value)],
+    allSeats: [...toRaw(allSeats.value.slice().map(item => {return { ...item, color: null }}))],
+    oldRenderingList: [...toRaw(oldRenderingList.value).slice().map(item => {return { ...item, color: null }})],
     isCurrent: true,
     type: type || '???'
   }
-  history.value = history.value.map((item) => {
-    return { ...item, isCurrent: false }
-  })
-  if (history.value.length !== 0 && history.value[0].type === '手动更改') {
-    if (data.time - history.value[0].time > 60 * 1000) history.value.unshift(data)
-    else history.value[0] = data
-  } else {
-    history.value = history.value.map((item) => {
-      return { ...item, isCurrent: false, isShowing: false }
-    })
+  history.value = history.value.map(item => {return { ...item, isCurrent: false }})
+  if (history.value.length !== 0 && history.value[0].type === '手动更改')
+  {
+    if (data.time - history.value[0].time > 60 * 1000)
+      history.value.unshift(data)
+    else
+      history.value[0] = data
+  }
+  else
+  {
+    history.value = history.value.map(item => {return { ...item, isCurrent: false, isShowing: false }})
     history.value.unshift(data)
   }
   isPreview.value = false
@@ -499,14 +532,10 @@ const saveHistory = (type) => {
 const reSort = async () => {
   loading.value = true
   await nextTick()
-  allSeats.value = shuffle(allSeats.value).map((item, index) => {
-    return { ...item, index: index }
-  })
+  allSeats.value = shuffle(allSeats.value).map((item, index) => {return { ...item, index: index }})
   await nextTick()
   await saveHistory('随机排列座位')
-  setTimeout(() => {
-    loading.value = false
-  }, 50)
+  setTimeout(() => {loading.value = false}, 50)
 }
 /**
  * 与”重新排列座位“一样，只不过会一个个的展示结果
@@ -549,11 +578,10 @@ const rollSeats = async (x) => {
     await nextTick()
     count++ // 增加计数器
 
-    if (count === x + 1) {
+    if (count === (x + 1))
+    {
       clearInterval(intervalId) // 达到执行次数后清除定时器
-      setTimeout(() => {
-        loading.value = false
-      }, 500)
+      setTimeout(() => {loading.value = false}, 500)
       allSeats.value = replaceArrayElements(originSeats).map((item, index) => {
         return {
           ...item,
@@ -575,9 +603,7 @@ const replaceSeats = async () => {
   console.log('开始重新排列座位')
   const stopwatch = performance.now()
   await nextTick()
-  allSeats.value = replaceArrayElements(allSeats.value).map((item, index) => {
-    return { ...item, index: index }
-  })
+  allSeats.value = replaceArrayElements(allSeats.value).map((item, index) => {return { ...item, index: index }})
   await nextTick()
   console.log('执行完成,用时' + (performance.now() - stopwatch) + 'ms')
   setTimeout(async () => {
@@ -601,9 +627,7 @@ const exitPreview = () => {
   isPreview.value = false
   oldRenderingList.value = temp.value.oldRenderingList
   allSeats.value = temp.value.allSeats
-  history.value = history.value.map((item) => {
-    return { ...item, isShowing: false }
-  })
+  history.value = history.value.map(item => {return { ...item, isShowing: false }})
 }
 
 window.addEventListener('beforeunload', isPreview ? exitPreview : () => {})
@@ -623,13 +647,14 @@ seatWorker.onmessage = function (event) {
   allSeats.value = event.data
   reloadSeatTable()
 }
+
 </script>
 
 <style scoped>
-#MainView {
+#SeatView {
   background: white;
   height: 100vh;
   width: 100vw;
-  margin: 0;
+  margin: 0
 }
 </style>

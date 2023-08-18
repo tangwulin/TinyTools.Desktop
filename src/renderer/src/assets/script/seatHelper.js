@@ -134,30 +134,45 @@ export const parseEdgeSeatIndex = (l) => {
 export function replaceArrayElements(source)
 {
   const sourceArray = [...source]
-  const targetArray = []
+  const targetArray = Array.from({ length: sourceArray.length })
   const edgeIndexes = parseEdgeSeatIndex(sourceArray.length)
-  const allIndexes = Array.from({ length: targetArray.length }, (_, i) => i)
+  const sourceArray1 = edgeIndexes.map(index => sourceArray[index])
+  const allIndexes = Array.from({ length: sourceArray.length }, (x, i) => i)
   const notEdgeIndexesArray = difference(allIndexes, edgeIndexes)
 
-  if (sourceArray.length > notEdgeIndexesArray.length) return shuffle(sourceArray)
+  if (edgeIndexes.length > notEdgeIndexesArray.length)
+  {
+    const seatsForNotEdger = shuffle(edgeIndexes).slice(0, notEdgeIndexesArray.length) //截断为需要的长度
+    const seatsForEdger = difference(allIndexes, seatsForNotEdger) //分配给原来不坐犄角旮旯的人剩下的
+    const sourceArray2 = edgeIndexes.map(index => sourceArray[index]) //原来那些不坐犄角旮旯的人
 
-  const seatsForEdger = shuffle(notEdgeIndexesArray).slice(0, sourceArray.length) //截断为需要的长度
+    // 逐个替换元素
+    seatsForEdger.forEach((position, index) => {
+      targetArray[position] = { ...sourceArray2[index] }
+    })
 
-  const positions2 = difference(allIndexes, seatsForEdger) //分配给原来坐犄角旮旯的人剩下的
-  const sourceArray2 = notEdgeIndexesArray.map(index => targetArray[index]) //原来那些不坐犄角旮旯的人
+    seatsForNotEdger.forEach((position, index) => {
+      targetArray[position] = { ...sourceArray1[index] }
+    })
 
-  // 逐个替换元素
-  seatsForEdger.forEach(position => {
-    const sourceIndex = Math.floor(Math.random() * sourceArray.length)
-    targetArray[position] = sourceArray[sourceIndex]
-    sourceArray.splice(sourceIndex, 1) //把用过的删掉
-  })
+    return targetArray.slice()
+  }
+  else
+  {
+    const seatsForEdger = shuffle(notEdgeIndexesArray).slice(0, edgeIndexes.length) //截断为需要的长度
 
-  positions2.forEach(position => {
-    const sourceIndex = Math.floor(Math.random() * sourceArray2.length)
-    targetArray[position] = sourceArray[sourceIndex]
-    sourceArray2.splice(sourceIndex, 1)
-  })
+    const seatsForNotEdger = difference(allIndexes, seatsForEdger) //分配给原来坐犄角旮旯的人剩下的
+    const sourceArray2 = notEdgeIndexesArray.map(index => sourceArray[index]) //原来那些不坐犄角旮旯的人
 
-  return targetArray
+    // 逐个替换元素
+    seatsForEdger.forEach((position, index) => {
+      targetArray[position] = { ...sourceArray1[index] }
+    })
+
+    seatsForNotEdger.forEach((position, index) => {
+      targetArray[position] = { ...sourceArray2[index] }
+    })
+
+    return targetArray.slice()
+  }
 }

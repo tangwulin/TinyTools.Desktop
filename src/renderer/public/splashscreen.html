@@ -1,0 +1,94 @@
+<html style="height: 100%;">
+<head>
+    <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+    <title>splashscreen.jpg</title></head>
+<body style="margin: 0; background: transparent; height: 100%">
+<script>
+  document.addEventListener('contextmenu', function (event) {
+    event.preventDefault()
+  })
+  if (window.__TAURI__.window !== undefined)
+  {
+    const screenHeight = screen.height
+    const screenWidth = screen.width
+    const windowHeight = screenHeight / 1080 * 400
+    const windowWidth = screenWidth / 1920 * 600
+    const newLogicSize = new window.__TAURI__.window.LogicalSize(windowWidth, windowHeight)
+    window.__TAURI__.window.appWindow.setSize(newLogicSize)
+    const mainWindow = window.__TAURI__.window.WebviewWindow.getByLabel('main')
+    const mainWindowHeight = screenHeight / 1080 * 650
+    const mainWindowWidth = screenWidth / 1920 * 1080
+    if (mainWindowHeight > 650 || mainWindowWidth > 1080)
+    {
+      const newMainWindowSize = new window.__TAURI__.window.LogicalSize(mainWindowWidth, mainWindowHeight)
+      mainWindow.setSize(newMainWindowSize)
+    }
+  }
+</script>
+<div style="display: flex; flex-direction: column;align-items: center;justify-content: center;">
+    <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: transparent;transition: background-color 300ms; pointer-events: none;width: 100%"
+         src="./splashscreen.png">
+    <div class="loadingThree">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+</body>
+<style>
+    .loadingThree {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 150px;
+        height: 0.5rem;
+        margin: 1rem auto 0;
+    }
+
+    .loadingThree span {
+        display: inline-block;
+        width: 0.5rem;
+        height: 100%;
+        margin-right: 5px;
+        border-radius: 50%;
+        background: azure;
+        -webkit-animation: load 1.04s ease infinite;
+    }
+
+    .loadingThree span:last-child {
+        margin-right: 0px;
+    }
+
+    @-webkit-keyframes load {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .loadingThree span:nth-child(1) {
+        -webkit-animation-delay: 0.13s;
+    }
+
+    .loadingThree span:nth-child(2) {
+        -webkit-animation-delay: 0.26s;
+    }
+
+    .loadingThree span:nth-child(3) {
+        -webkit-animation-delay: 0.39s;
+    }
+
+    .loadingThree span:nth-child(4) {
+        -webkit-animation-delay: 0.52s;
+    }
+
+    .loadingThree span:nth-child(5) {
+        -webkit-animation-delay: 0.65s;
+    }
+</style>
+</html>

@@ -1,4 +1,4 @@
-import { replaceArrayElements } from '@/assets/script/seatHelper.js'
+import { replaceArrayElements } from "./seatHelper"
 import { shuffle } from 'lodash-es'
 
 self.onmessage = async (event) => {
