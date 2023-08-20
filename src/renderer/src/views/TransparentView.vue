@@ -10,7 +10,7 @@
 
 <style scoped>
 #dock {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.20);
   height: 100vh;
   width: 100vw;
   border-radius: 1rem;
