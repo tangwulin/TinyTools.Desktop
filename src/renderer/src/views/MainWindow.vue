@@ -12,7 +12,7 @@ import {
 
 import logoUrl from "../assets/images/logo.png";
 
-const activeKey = ref(null);
+const activeKey = ref("seat");
 const collapsed = ref(true);
 
 function renderIcon(icon) {
