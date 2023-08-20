@@ -7,6 +7,7 @@ import { ScheduleOutlined as ScheduleIcon } from "@vicons/antd";
 import {
   DataHistogram24Regular as DataIcon,
   Settings16Regular as SettingIcon,
+  Info20Regular as InfoIcon,
 } from "@vicons/fluent";
 
 import logoUrl from "../assets/images/logo.png";
@@ -63,7 +64,21 @@ const menuOptions = [
   },
 ];
 
-const settingOptions = [
+const footerMenuOptions = [
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "about",
+          },
+        },
+        { default: () => "关于" }
+      ),
+    key: "about",
+    icon: renderIcon(InfoIcon),
+  },
   {
     label: () =>
       h(
@@ -115,7 +130,7 @@ const settingOptions = [
             :collapsed="collapsed"
             :collapsed-width="64"
             :collapsed-icon-size="20"
-            :options="settingOptions"
+            :options="footerMenuOptions"
           />
         </n-layout-footer>
       </n-layout>
