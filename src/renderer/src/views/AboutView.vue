@@ -1,6 +1,6 @@
 <script setup>
 import { useMessage } from "naive-ui";
-import { useSettingStore } from "@/stores/setting";
+import { useSettingStore } from "../stores/setting";
 import { storeToRefs } from "pinia";
 
 const setting = useSettingStore();
@@ -31,23 +31,24 @@ const clickHandler = () => {
 </script>
 
 <template>
-  <n-scrollbar>
-    <div class="flex flex-col items-center h-full">
-      <div class="mb-4 w-3/5 bg-gray-200 p-4">
+  <n-scrollbar >
+    <div class="flex flex-col items-center h-full bg-gray-200 pb-2" style="height: 100vh;">
+      <div class="mb-4 w-3/5  p-4">
         <img src="../assets/img.png" alt="logo" />
       </div>
       <p class="mb-8" @click="clickHandler">
         TinyTools v{{ version }} Build {{ revision }}
       </p>
-      <p>TinyTools使用Tauri+Vite+Vue构建</p>
-      <a href="https://tauri.app/" target="_blank">
-        <img
-          src="https://tauri.app/img/index/header_light.svg"
-          alt="tauri logo"
-          class="h-16"
-        />
-      </a>
+      <p>TinyTools使用Electron+Vite+Vue构建</p>
       <div class="flex flex-row" style="max-height: 100px">
+        <a href="https://www.electronjs.org/zh" target="_blank">
+          <img
+            src="https://www.electronjs.org/assets/img/logo.svg"
+            alt="vite logo"
+            class="h-16"
+          />
+        </a>
+        <p class="text-5xl flex items-center text-gray-500">+</p>
         <a href="https://vitejs.cn/" target="_blank">
           <img
             src="https://vitejs.cn/vite3-cn/logo.svg"

@@ -3,9 +3,7 @@
 </script>
 
 <template>
-  <div style="height: 100vh">
-    （尽请期待）
-  </div>
+  （尽请期待）
 </template>
 
 <style scoped>

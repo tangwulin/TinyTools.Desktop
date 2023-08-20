@@ -11,8 +11,8 @@ const router = createRouter({
       redirect: "/seat",
       children: [
         {
-          path:"/dashboard",
-          name:"dashboard",
+          path: "/dashboard",
+          name: "dashboard",
           component: () => import("../views/DashboardView.vue"),
         },
         {
@@ -28,8 +28,49 @@ const router = createRouter({
         {
           path: "/setting",
           name: "setting",
+          redirect: "/setting/bgm",
           component: () => import("../views/SettingView.vue"),
+          children: [
+            {
+              path: "/setting/bgm",
+              name: "bgmSetting",
+              redirect: "/setting/bgm/play",
+              component: () => import("../views/BgmSettingView.vue"),
+              children:[
+                {
+                  path: "/setting/bgm/play",
+                  name: "playSetting",
+                  component: () => import("../views/PlaySettingView.vue"),
+                },
+                {
+                  path: "/setting/bgm/playlist",
+                  name:"playlistSetting",
+                  component: () => import("../views/PlaylistSettingView.vue"),
+                }
+              ]
+            },
+            {
+              path: "/setting/person",
+              name: "personManage",
+              component: () => import("../views/PersonManageView.vue"),
+            },
+            {
+              path: "/setting/debug",
+              name: "debugTool",
+              component: () => import("../views/DebugToolView.vue"),
+            },
+            {
+              path: "/about",
+              name: "about",
+              component: () => import("../views/AboutView.vue"),
+            }
+          ],
         },
+        {
+          path:"/about",
+          name:"about",
+          component: () => import("../views/AboutView.vue"),
+        }
       ],
     },
     {
