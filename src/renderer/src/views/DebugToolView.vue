@@ -16,10 +16,11 @@ const openDockWindow = async () => {
 const closeDockWindow = () => {
   electron.ipcRenderer.send('closeDockWindow')
 }
-// const checkUpdates = async () => {
-//   const update = await checkUpdate()
-//   message.info('检查更新结果：' + JSON.stringify(update))
-// }
+const checkUpdates = async () => {
+  // const update = await checkUpdate()
+  // message.info('检查更新结果：' + JSON.stringify(update))
+  message.error('未实现')
+}
 
 const disableDevelopFeature = () => {
   enableDevelopFeature.value = false
@@ -45,7 +46,7 @@ const relaunch = () => {
     <n-space justify="space-between">
       <n-space class="items-center">
         <div>更改后请重启程序</div>
-        <n-button type="primary" :disabled="isElectron" round @click="relaunch">重启</n-button>
+        <n-button type="primary" :disabled="!isElectron" round @click="relaunch">重启</n-button>
       </n-space>
       <n-space class="items-center">
         <n-button type="error" round @click="clearData">清除数据</n-button>
@@ -58,7 +59,7 @@ const relaunch = () => {
     </n-space>
     <n-space class="items-center">
       <p>手动检查更新</p>
-      <n-button :disabled="!isElectron" @click="checkUpdates">调用Invoke</n-button>
+      <n-button :disabled="!isElectron||true" @click="checkUpdates">手动检查更新</n-button>
     </n-space>
     <n-space class="items-center">
       <p>启用dock栏</p>

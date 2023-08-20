@@ -1,6 +1,6 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import { useSettingStore } from '@/stores/setting'
+import { useSettingStore } from '../stores/setting'
 import { InfoFilled } from '@vicons/material'
 
 const setting = useSettingStore()
