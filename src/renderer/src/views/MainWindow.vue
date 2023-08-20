@@ -97,7 +97,7 @@ const footerMenuOptions = [
 </script>
 
 <template>
-  <n-layout has-sider>
+  <n-layout has-sider :content-style="'height:100vh;width:100%'">
     <n-layout-sider
       bordered
       collapse-mode="width"
@@ -122,7 +122,7 @@ const footerMenuOptions = [
             :collapsed-icon-size="20"
             :options="menuOptions"
           />
-<!--          <n-divider />-->
+          <!--          <n-divider />-->
         </n-layout-content>
         <n-layout-footer position="absolute">
           <n-menu
@@ -136,8 +136,7 @@ const footerMenuOptions = [
       </n-layout>
     </n-layout-sider>
 
-    <!--      此处为避免座位表页面出现左右显示不对称的情况，故不能将直接套一个height:100vh的div-->
-    <!--      需要给内层组件统一套一个height:100vh的div-->
+<!--如果需要给下方router-view内内容加css，请编辑NLayout的content-style-->
     <router-view />
   </n-layout>
 </template>
