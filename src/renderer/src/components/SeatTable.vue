@@ -2,7 +2,7 @@
 import { NButton } from 'naive-ui'
 import draggable from 'vuedraggable-swap'
 import { computed, ref, watch } from 'vue'
-import { getRenderingList, parseRenderingListToSeats } from '@/assets/script/seatHelper'
+import { getRenderingList, parseRenderingListToSeats } from '../assets/script/seatHelper'
 
 const props = defineProps(['seats', 'renderingList', 'coloringEdge', 'rendering', 'disable'])
 const emit = defineEmits(['update', 'update:seats', 'update:renderingList', 'update:rendering'])

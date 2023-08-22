@@ -7,27 +7,12 @@
   document.addEventListener('contextmenu', function (event) {
     event.preventDefault()
   })
-  if (window.__TAURI__.window !== undefined)
-  {
-    const screenHeight = screen.height
-    const screenWidth = screen.width
-    const windowHeight = screenHeight / 1080 * 400
-    const windowWidth = screenWidth / 1920 * 600
-    const newLogicSize = new window.__TAURI__.window.LogicalSize(windowWidth, windowHeight)
-    window.__TAURI__.window.appWindow.setSize(newLogicSize)
-    const mainWindow = window.__TAURI__.window.WebviewWindow.getByLabel('main')
-    const mainWindowHeight = screenHeight / 1080 * 650
-    const mainWindowWidth = screenWidth / 1920 * 1080
-    if (mainWindowHeight > 650 || mainWindowWidth > 1080)
-    {
-      const newMainWindowSize = new window.__TAURI__.window.LogicalSize(mainWindowWidth, mainWindowHeight)
-      mainWindow.setSize(newMainWindowSize)
-    }
-  }
 </script>
 <div style="display: flex; flex-direction: column;align-items: center;justify-content: center;">
     <img style="display: block;-webkit-user-select: none;margin: auto;cursor: zoom-in;background-color: transparent;transition: background-color 300ms; pointer-events: none;width: 100%"
-         src="./splashscreen.png">
+         src="./splashscreen.png"
+         alt="splashscreen"
+    >
     <div class="loadingThree">
         <span></span>
         <span></span>
@@ -59,7 +44,7 @@
     }
 
     .loadingThree span:last-child {
-        margin-right: 0px;
+        margin-right: 0;
     }
 
     @-webkit-keyframes load {

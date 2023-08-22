@@ -10,7 +10,7 @@
 <style>
 @font-face {
   font-family: "CustomFont";
-  src: url("@/assets/fonts/zh-cn.ttf") format("truetype");
+  src: url("./assets/fonts/zh-cn.ttf") format("truetype");
 }
 
 body {

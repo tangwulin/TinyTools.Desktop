@@ -1,9 +1,9 @@
 <script setup>
 import { storeToRefs } from 'pinia'
-import { useSeatStore } from '@/stores/seat'
+import { useSeatStore } from '../stores/seat'
 import { remove } from 'lodash-es'
 import { NButton, useMessage } from 'naive-ui'
-import SeatTable from '@/components/SeatTable.vue'
+import SeatTable from '../components/SeatTable.vue'
 import { computed, ref, watch } from 'vue'
 
 const seat = useSeatStore()
