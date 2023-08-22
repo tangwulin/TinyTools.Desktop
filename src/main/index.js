@@ -133,7 +133,7 @@ app.whenReady().then(() => {
     if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
       dockWindow.loadURL(process.env["ELECTRON_RENDERER_URL"] + "/#/test");
     } else {
-      dockWindow.loadFile(join(__dirname, "../renderer/test"));
+      dockWindow.loadFile(join(__dirname, "../renderer/#/test"));
     }
 
     dockWindow.on("ready-to-show", () => {
