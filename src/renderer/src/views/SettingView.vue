@@ -8,13 +8,13 @@ import {
   Settings16Regular as SettingIcon,
   MusicNote220Regular as MusicIcon,
   MusicNote2Play20Regular as MusicPlayIcon,
-  Person20Regular as PersonIcon
+  Person20Regular as PersonIcon,
 } from "@vicons/fluent";
 
 const settingStore = useSettingStore();
 const { enableDevelopFeature } = storeToRefs(settingStore);
 
-const activeKey = ref("playSetting");
+const activeKey = ref("seatSetting");
 
 function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon) });
@@ -22,16 +22,28 @@ function renderIcon(icon) {
 
 const settingOptions = [
   {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: "bgmSetting",
-          },
-        },
-        { default: () => "背景音乐" }
-      ),
+    label: "通用设置",
+    key: "generalSetting",
+    icon: renderIcon(PersonIcon),
+    children: [
+      {
+        label: () =>
+          h(
+            RouterLink,
+            {
+              to: {
+                name: "seatSetting",
+              },
+            },
+            { default: () => "抽选座位" }
+          ),
+        key: "seatSetting",
+        icon: renderIcon(SettingIcon),
+      },
+    ],
+  },
+  {
+    label: "背景音乐",
     key: "bgmSetting",
     icon: renderIcon(MusicIcon),
     children: [
@@ -102,28 +114,28 @@ const settingOptions = [
 ].concat(
   enableDevelopFeature.value
     ? {
-      label: () =>
-        h(
-          RouterLink,
-          {
-            to: {
-              name: "debugTool",
+        label: () =>
+          h(
+            RouterLink,
+            {
+              to: {
+                name: "debugTool",
+              },
             },
-          },
-          { default: () => "调试工具" }
-        ),
-      key: "debugTool",
-      icon: renderIcon(SettingIcon),
-    }
-    : {  }
+            { default: () => "调试工具" }
+          ),
+        key: "debugTool",
+        icon: renderIcon(SettingIcon),
+      }
+    : []
 );
 </script>
 
 <template>
-  <div style="height: 100vh; width: inherit;margin: 1rem">
+  <div style="height: calc(100vh - 1rem); width: inherit;">
     <n-layout style="height: 100%">
       <n-layout-header bordered>
-        <div>设置</div>
+        <div style="margin: 0.5rem 0 0.5rem 1rem;font-size: 1rem">设置</div>
       </n-layout-header>
       <n-layout-content>
         <n-layout has-sider>
@@ -132,7 +144,7 @@ const settingOptions = [
           </n-layout-sider>
           <n-layout-content>
             <div class="h-full overflow-y-hidden" id="settingContainer">
-              <router-view />
+              <router-view style="margin: auto 1rem"/>
             </div>
           </n-layout-content>
         </n-layout>

@@ -81,6 +81,16 @@
           先随机5次并展示每次结果，再将原始位置按“重新排列座位”的做法排列（虚 晃
           一 枪）
         </n-tooltip>
+        <n-button @click="save(scale)" :disabled="loading || isPreview"
+        >保存图片
+        </n-button>
+        <n-dropdown :options="saveOptions" @select="save">
+          <n-button :disabled="loading || isPreview">
+            <template #icon>
+              <ArrowDropDownFilled />
+            </template>
+          </n-button>
+        </n-dropdown>
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
@@ -151,35 +161,17 @@
         </n-tooltip>
       </div>
       <div>
-        <!--                <n-tooltip trigger="hover">-->
-        <!--                  &lt;!&ndash;suppress VueUnrecognizedSlot &ndash;&gt;-->
-        <!--                  <template #trigger>-->
-        <!--                    <n-switch v-model:value="coloringEdgeSeats" @update:value="repaint" :disabled="loading"/>-->
-        <!--                  </template>-->
-        <!--                  边缘位置高亮-->
-        <!--                </n-tooltip>-->
-        <!-- 下方工具条 -->
-        <n-button-group>
+        <n-button-group v-show="enableOldToolBar">
           <n-button @click="showHistory = true" :disabled="loading"
-            >历史记录
+          >历史记录
           </n-button>
           <n-button @click="showSetting">设置</n-button>
           <n-button @click="showManager" :disabled="loading || isPreview"
-            >人员管理
+          >人员管理
           </n-button>
           <n-button @click="showMultiAddModal" :disabled="loading || isPreview"
-            >增加人员
+          >增加人员
           </n-button>
-          <n-button @click="save(scale)" :disabled="loading || isPreview"
-            >保存图片
-          </n-button>
-          <n-dropdown :options="saveOptions" @select="save">
-            <n-button :disabled="loading || isPreview">
-              <template #icon>
-                <ArrowDropDownFilled />
-              </template>
-            </n-button>
-          </n-dropdown>
         </n-button-group>
       </div>
     </div>
@@ -278,9 +270,6 @@ import {
 import { useRouter } from "vue-router";
 
 const version = __APP_VERSION__;
-const github_sha = __GITHUB_SHA__;
-const revision = __REVISION__;
-const githubLink = "https://github.com/tangwulin/TinyTools/tree/" + github_sha;
 
 const message = useMessage();
 const router = useRouter();
@@ -307,12 +296,11 @@ const {
   enableFadein,
   fadeinTime,
   scale,
-  // enableQuickSave,
   enableDevelopFeature,
+  enableOldToolBar,
 } = storeToRefs(settingStore);
 
 const temp = ref({ allSeats: null, oldRenderingList: null });
-const showAddModal = ref(false);
 const showHistory = ref(false);
 const currentDate = ref("");
 const currentTime = ref("");
@@ -320,7 +308,6 @@ const loading = ref(false);
 const isPreview = ref(false);
 const times = ref(5);
 const stKey = ref(Math.random());
-const scKey = ref(Math.random());
 let msgReactive = null;
 
 const colorEdge = () => {
