@@ -4,7 +4,7 @@
 
 <template>
   <div id="dock" class="text-white">
-    <p>There are tarnsparent test page</p>
+    <p>There are transparent test page</p>
   </div>
 </template>
 
