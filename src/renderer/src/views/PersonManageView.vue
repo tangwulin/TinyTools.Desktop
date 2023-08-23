@@ -218,31 +218,6 @@ const parseExcel = async (uploadFileInfo) => {
     <n-space justify="space-between">
       <p>修改后请重启程序以重新生成座位</p>
       <n-space>
-        <!--        <n-button-->
-        <!--          type="warning"-->
-        <!--          size="small"-->
-        <!--          class="p-2"-->
-        <!--          @click="-->
-        <!--            () => {-->
-        <!--              message.success('重置成功');-->
-        <!--            }-->
-        <!--          "-->
-        <!--        >-->
-        <!--          <template #icon>-->
-        <!--            <n-icon>-->
-        <!--              <Refresh />-->
-        <!--            </n-icon>-->
-        <!--          </template>-->
-        <!--          清空-->
-        <!--        </n-button>-->
-        <n-button type="primary" size="small" class="p-2" @click="">
-          <template #icon>
-            <n-icon>
-              <Refresh />
-            </n-icon>
-          </template>
-          清空
-        </n-button>
         <n-button
           type="primary"
           size="small"
@@ -252,6 +227,19 @@ const parseExcel = async (uploadFileInfo) => {
           <template #icon>
             <n-icon>
               <ImportIcon />
+            </n-icon>
+          </template>
+          导入
+        </n-button>
+        <n-button
+          type="primary"
+          size="small"
+          class="p-2"
+          @click="showAddModal = true"
+        >
+          <template #icon>
+            <n-icon>
+              <PlaylistAdd />
             </n-icon>
           </template>
           添加
