@@ -260,6 +260,7 @@ const rules = {
       </div>
     </n-card>
   </n-modal>
+  <audio id="player" preload="auto"></audio>
 </template>
 
 <style scoped>
