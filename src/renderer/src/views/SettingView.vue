@@ -142,10 +142,11 @@ const settingOptions = [
           <n-layout-sider :width="'14rem'">
             <n-menu :options="settingOptions" v-model:value="activeKey" />
           </n-layout-sider>
-          <n-layout-content>
-            <div class="h-full overflow-y-hidden" id="settingContainer">
-              <router-view style="margin: 0.5rem 0.5rem auto auto"/>
-            </div>
+          <n-layout-content content-style="margin: 0.5rem 0.5rem auto auto">
+<!--            <div class="h-full overflow-y-hidden" id="settingContainer">-->
+<!--              -->
+<!--            </div>-->
+            <router-view/>
           </n-layout-content>
         </n-layout>
       </n-layout-content>
