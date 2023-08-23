@@ -6,8 +6,9 @@ import { InfoFilled } from '@vicons/material'
 import { useSettingStore } from '../stores/setting'
 import { NButton, NCard, NDataTable, NForm, NModal, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { generateUniqueId, getDefaultBgm, getDefaultFinalBgm } from "../assets/script/musicHelper";
+import { getDefaultBgm, getDefaultFinalBgm } from "../assets/script/musicHelper";
 import {useRoute} from "vue-router";
+import { generateUniqueId } from "../assets/script/util";
 
 const message = useMessage()
 const setting = useSettingStore()
