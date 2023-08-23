@@ -202,7 +202,8 @@ const parseExcel = async (uploadFileInfo) => {
   const worksheet = workbook.Sheets[sheetNames[0]]; // 这里我们只读取第一张sheet
   const json = XLSX.utils.sheet_to_json(worksheet);
   const persons = json.map((item) => {
-    if(item.姓名 === undefined || item.姓名 === null || item.姓名 === "") return null;
+    if (item.姓名 === undefined || item.姓名 === null || item.姓名 === "")
+      return null;
     return {
       name: item.姓名,
       sex: item.性别 === "男" ? 1 : item.性别 === "女" ? 2 : 9,
