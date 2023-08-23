@@ -144,7 +144,7 @@ const settingOptions = [
           </n-layout-sider>
           <n-layout-content>
             <div class="h-full overflow-y-hidden" id="settingContainer">
-              <router-view style="margin: auto 1rem"/>
+              <router-view style="margin: 0.5rem 0.5rem auto auto"/>
             </div>
           </n-layout-content>
         </n-layout>
