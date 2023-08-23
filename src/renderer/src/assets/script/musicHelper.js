@@ -3,49 +3,49 @@ import { generateUniqueId } from "./util";
 export const getDefaultBgm = () => {
   return [
     {
-      name: 'Never Gonna Give You Up',
-      url: 'https://music.163.com/song/media/outer/url?id=5221167.mp3',
+      name: "Never Gonna Give You Up",
+      url: "https://music.163.com/song/media/outer/url?id=5221167.mp3",
       offset: 0,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
     {
-      name: '好运来',
-      url: 'https://music.163.com/song/media/outer/url?id=333750.mp3',
+      name: "好运来",
+      url: "https://music.163.com/song/media/outer/url?id=333750.mp3",
       offset: 1,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
     {
-      name: '烟distance',
-      url: 'https://music.163.com/song/media/outer/url?id=2039800852.mp3',
+      name: "烟distance",
+      url: "https://music.163.com/song/media/outer/url?id=2039800852.mp3",
       offset: 0,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
     {
-      name: 'Tunak Tunak Tun',
-      url: 'https://music.163.com/song/media/outer/url?id=1303214808.mp3',
+      name: "Tunak Tunak Tun",
+      url: "https://music.163.com/song/media/outer/url?id=1303214808.mp3",
       offset: 3,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
     {
-      name: '阳光彩虹小白鸡',
-      url: 'https://music.163.com/song/media/outer/url?id=1948834228.mp3',
+      name: "阳光彩虹小白鸡",
+      url: "https://music.163.com/song/media/outer/url?id=1948834228.mp3",
       offset: 0,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
     {
-      name: '水手',
-      url: 'https://music.163.com/song/media/outer/url?id=5238221.mp3',
+      name: "水手",
+      url: "https://music.163.com/song/media/outer/url?id=5238221.mp3",
       offset: 72.2,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
     {
-      name: 'Usagi Flap',
-      url: 'https://music.163.com/song/media/outer/url?id=2016944846.mp3',
+      name: "Usagi Flap",
+      url: "https://music.163.com/song/media/outer/url?id=2016944846.mp3",
       offset: 0,
-      uniqueId: generateUniqueId()
+      uniqueId: generateUniqueId(),
     },
-  ]
-}
+  ];
+};
 
 export const getDefaultFinalBgm = () => {
   return [

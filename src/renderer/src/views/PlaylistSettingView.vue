@@ -46,7 +46,6 @@ const editHandler = (row) => {
   showEditModal.value = true
 }
 const deleteHandler = (row) => {
-
   list.value = list.value.filter(item => item.uniqueId !== row.uniqueId)
   message.success('删除成功')
 }
