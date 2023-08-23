@@ -278,6 +278,14 @@ const parseExcel = async (uploadFileInfo) => {
         @close="
           () => {
             showAddModal = false;
+            if (isEdit)
+              formValue = {
+                name: '',
+                number: '',
+                sex: 9,
+                uniqueId: generateUniqueId(),
+              };
+            isEdit = false;
           }
         "
       >
