@@ -28,7 +28,7 @@ const route = useRoute();
 
 const personStore = usePersonStore();
 const seatStore = useSeatStore();
-const { allPerson, personList } = storeToRefs(personStore);
+const { personList } = storeToRefs(personStore);
 const { allSeats, oldRenderingList } = storeToRefs(seatStore);
 
 const showAddModal = ref(false);
@@ -170,14 +170,22 @@ const addPerson = () => {
       "个人：" +
       multiAddForm.value.names
   );
-  allPerson.value.push(...multiAddForm.value.names);
+  personList.value.push(
+    ...multiAddForm.value.names.map((name) => ({
+      name: name,
+      number: "",
+      sex: 9,
+      uniqueId: generateUniqueId(),
+    }))
+  );
   message.success(
     "添加成功，共添加了" + multiAddForm.value.names.length + "个"
   );
   showAddModal.value = false;
   multiAddForm.value.names
     .map((name, index) => {
-      return { name: name, index: index, isSeat: true, isDashed: false };
+      // return { name: name, index: index, isSeat: true, isDashed: false };
+      return { name: name, isSeat: true, isDashed: false };
     })
     .forEach((item) => allSeats.value.push(item));
   oldRenderingList.value = getRenderingList(allSeats.value, []);
