@@ -8,6 +8,7 @@ import {
   DataHistogram24Regular as DataIcon,
   Settings16Regular as SettingIcon,
   Info20Regular as InfoIcon,
+  Person20Regular as PersonIcon,
 } from "@vicons/fluent";
 
 import logoUrl from "../assets/images/logo.png";
@@ -61,6 +62,34 @@ const menuOptions = [
       ),
     key: "schedule",
     icon: renderIcon(ScheduleIcon),
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "randomSelection",
+          },
+        },
+        { default: () => "随机抽选" }
+      ),
+    key: "randomSelection",
+    icon: renderIcon(DiceIcon),
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "personManage",
+          },
+        },
+        { default: () => "人员管理" }
+      ),
+    key: "personManage",
+    icon: renderIcon(PersonIcon),
   },
 ];
 
