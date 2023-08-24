@@ -32,7 +32,7 @@ const clickHandler = () => {
 
 <template>
   <n-scrollbar >
-    <div class="flex flex-col items-center h-full bg-gray-200 pb-2" style="height: 100vh;">
+    <div class="flex flex-col items-center h-full pb-2 " style="height: 100vh;">
       <div class="mb-4 w-3/5 p-4">
         <img src="../assets/img.png" alt="logo" style="margin: auto"/>
       </div>
