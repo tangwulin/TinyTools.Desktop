@@ -8,7 +8,7 @@ import {
   DataHistogram24Regular as DataIcon,
   Settings16Regular as SettingIcon,
   Info20Regular as InfoIcon,
-  Person20Regular as PersonIcon,
+  Person24Regular as PersonIcon,
 } from "@vicons/fluent";
 import { Dice as DiceIcon } from "@vicons/ionicons5";
 

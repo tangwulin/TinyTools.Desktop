@@ -21,6 +21,7 @@ import {
   TableImport as ImportIcon,
   File as FileIcon,
 } from "@vicons/tabler";
+import { PersonAdd20Filled as PersonAddIcon } from "@vicons/fluent";
 import { generateUniqueId } from "../assets/script/util";
 import * as XLSX from "xlsx";
 
@@ -241,10 +242,10 @@ const parseExcel = async (uploadFileInfo) => {
   }
 };
 
-const tableHeight = ref(window.innerHeight - remToPx(6))
-window.addEventListener('resize', () => {
-  tableHeight.value = window.innerHeight - remToPx(6)
-})
+const tableHeight = ref(window.innerHeight - remToPx(6));
+window.addEventListener("resize", () => {
+  tableHeight.value = window.innerHeight - remToPx(6);
+});
 </script>
 
 <template>
@@ -302,156 +303,151 @@ window.addEventListener('resize', () => {
   >
   </n-data-table>
 
-    <n-modal v-model:show="showAddModal" :mask-closable="false">
-      <n-card
-        style="width: 50%"
-        :title="isEdit ? '编辑人员' : '添加人员'"
-        :bordered="true"
-        size="huge"
-        closable
-        @close="
-          () => {
-            showAddModal = false;
-            if (isEdit)
-              formValue = {
-                name: '',
-                number: '',
-                sex: 9,
-                uniqueId: generateUniqueId(),
-              };
-            isEdit = false;
-          }
-        "
-      >
-        <n-form>
-          <n-form-item label="姓名" path="name">
-            <n-input v-model:value="formValue.name" placeholder="输入姓名" />
-          </n-form-item>
-          <n-form-item label="学号（可选）" path="number">
-            <n-input v-model:value="formValue.number" placeholder="输入学号" />
-          </n-form-item>
-          <n-form-item label="性别（可选）" path="sex">
-            <n-radio-group v-model:value="formValue.sex">
-              <n-space>
-                <n-radio
-                  v-for="sex in sexes"
-                  :key="sex.value"
-                  :value="sex.value"
-                >
-                  {{ sex.label }}
-                </n-radio>
-              </n-space>
-            </n-radio-group>
-          </n-form-item>
-        </n-form>
-        <div class="flex justify-end">
-          <n-button
-            type="primary"
-            :disabled="formValue.name.length === 0"
-            @click="handler"
-            >保存
-          </n-button>
-        </div>
-      </n-card>
-    </n-modal>
+  <n-modal v-model:show="showAddModal" :mask-closable="false">
+    <n-card
+      style="width: 50%"
+      :title="isEdit ? '编辑人员' : '添加人员'"
+      :bordered="true"
+      size="huge"
+      closable
+      @close="
+        () => {
+          showAddModal = false;
+          if (isEdit)
+            formValue = {
+              name: '',
+              number: '',
+              sex: 9,
+              uniqueId: generateUniqueId(),
+            };
+          isEdit = false;
+        }
+      "
+    >
+      <n-form>
+        <n-form-item label="姓名" path="name">
+          <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+        </n-form-item>
+        <n-form-item label="学号（可选）" path="number">
+          <n-input v-model:value="formValue.number" placeholder="输入学号" />
+        </n-form-item>
+        <n-form-item label="性别（可选）" path="sex">
+          <n-radio-group v-model:value="formValue.sex">
+            <n-space>
+              <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
+                {{ sex.label }}
+              </n-radio>
+            </n-space>
+          </n-radio-group>
+        </n-form-item>
+      </n-form>
+      <div class="flex justify-end">
+        <n-button
+          type="primary"
+          :disabled="formValue.name.length === 0"
+          @click="handler"
+          >保存
+        </n-button>
+      </div>
+    </n-card>
+  </n-modal>
 
-    <n-modal v-model:show="showMultiAddModal" :mask-closable="false">
-      <n-card
-        style="width: 50%"
-        title="批量增加人员"
-        :bordered="true"
-        size="huge"
-        closable
-        @close="
-          () => {
-            showMultiAddModal = false;
-          }
-        "
-      >
-        <n-form :label-width="80" :model="multiAddForm">
-          <n-form-item
-            label="请在下方输入姓名，多个请以空格或英文逗号分割"
-            path="input"
-          >
-            <div class="flex flex-col w-full">
-              <n-text>当前已检测到：{{ multiAddForm.names.length }}个</n-text>
-              <n-input
-                v-model:value="multiAddForm.input"
-                type="textarea"
-                placeholder="张三,李四,王五……"
-                @blur="parseName"
-                @focus="parseName"
-                @keyup="parseName"
-              />
-            </div>
-          </n-form-item>
-          <n-form-item label="解析到的姓名" path="names">
-            <n-dynamic-tags v-model:value="multiAddForm.names" />
-          </n-form-item>
-        </n-form>
-        <template #footer>
-          <div class="flex">
-            <NButton
-              class="ml-auto"
-              type="primary"
-              @click="addPerson"
-              :disabled="multiAddForm.names.length === 0"
-            >
-              保存
-            </NButton>
-          </div>
-        </template>
-      </n-card>
-    </n-modal>
-
-    <n-modal v-model:show="showImportModal" :mask-closable="false">
-      <n-card
-        style="width: 50%"
-        title="导入人员"
-        :bordered="true"
-        size="huge"
-        closable
-        @close="showImportModal = false"
-      >
-        <n-upload
-          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-          multiple
-          directory-dnd
-          action=""
-          :on-before-upload="
-            (fileInfo) => {
-              parseExcel(fileInfo);
-            }
-          "
-          :default-upload="false"
-          :max="1"
+  <n-modal v-model:show="showMultiAddModal" :mask-closable="false">
+    <n-card
+      style="width: 50%"
+      title="批量增加人员"
+      :bordered="true"
+      size="huge"
+      closable
+      @close="
+        () => {
+          showMultiAddModal = false;
+        }
+      "
+    >
+      <n-form :label-width="80" :model="multiAddForm">
+        <n-form-item
+          label="请在下方输入姓名，多个请以空格或英文逗号分割"
+          path="input"
         >
-          <n-upload-dragger>
-            <div style="margin-bottom: 12px">
-              <n-icon size="48" :depth="3">
-                <file-icon />
-              </n-icon>
-            </div>
-            <n-text style="font-size: 16px">
-              点击或者拖动文件到该区域来导入人员
-            </n-text>
-          </n-upload-dragger>
-        </n-upload>
-        <template #footer>
-          <div class="flex">
-            <NButton
-              class="ml-auto"
-              type="primary"
-              @click="addPerson"
-              :disabled="multiAddForm.names.length === 0"
-            >
-              保存
-            </NButton>
+          <div class="flex flex-col w-full">
+            <n-text>当前已检测到：{{ multiAddForm.names.length }}个</n-text>
+            <n-input
+              v-model:value="multiAddForm.input"
+              type="textarea"
+              placeholder="张三,李四,王五……"
+              @blur="parseName"
+              @focus="parseName"
+              @keyup="parseName"
+            />
           </div>
-        </template>
-      </n-card>
-    </n-modal>
-  </div>
+        </n-form-item>
+        <n-form-item label="解析到的姓名" path="names">
+          <n-dynamic-tags v-model:value="multiAddForm.names" />
+        </n-form-item>
+      </n-form>
+      <template #footer>
+        <div class="flex">
+          <NButton
+            class="ml-auto"
+            type="primary"
+            @click="addPerson"
+            :disabled="multiAddForm.names.length === 0"
+          >
+            保存
+          </NButton>
+        </div>
+      </template>
+    </n-card>
+  </n-modal>
+
+  <n-modal v-model:show="showImportModal" :mask-closable="false">
+    <n-card
+      style="width: 50%"
+      title="导入人员"
+      :bordered="true"
+      size="huge"
+      closable
+      @close="showImportModal = false"
+    >
+      <n-upload
+        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+        multiple
+        directory-dnd
+        action=""
+        :on-before-upload="
+          (fileInfo) => {
+            parseExcel(fileInfo);
+          }
+        "
+        :default-upload="false"
+        :max="1"
+      >
+        <n-upload-dragger>
+          <div style="margin-bottom: 12px">
+            <n-icon size="48" :depth="3">
+              <file-icon />
+            </n-icon>
+          </div>
+          <n-text style="font-size: 16px">
+            点击或者拖动文件到该区域来导入人员
+          </n-text>
+        </n-upload-dragger>
+      </n-upload>
+      <template #footer>
+        <div class="flex">
+          <NButton
+            class="ml-auto"
+            type="primary"
+            @click="addPerson"
+            :disabled="multiAddForm.names.length === 0"
+          >
+            保存
+          </NButton>
+        </div>
+      </template>
+    </n-card>
+  </n-modal>
 </template>
 
 <style scoped></style>
