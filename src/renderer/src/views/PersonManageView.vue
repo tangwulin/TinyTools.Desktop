@@ -216,16 +216,29 @@ const parseExcel = async (uploadFileInfo) => {
   const sheetNames = workbook.SheetNames; // 工作表名称集合
   const worksheet = workbook.Sheets[sheetNames[0]]; // 这里我们只读取第一张sheet
   const json = XLSX.utils.sheet_to_json(worksheet);
-  const persons = json.map((item) => {
-    if (item.姓名 === undefined || item.姓名 === null || item.姓名 === "")
-      return null;
-    return {
-      name: item.姓名,
-      sex: item.性别 === "男" ? 1 : item.性别 === "女" ? 2 : 9,
-      number: JSON.stringify(item.学号),
-    };
-  });
-  console.log(persons);
+  const persons = json
+    .map((item) => {
+      if (item.姓名 === undefined || item.姓名 === null || item.姓名 === "")
+        return null;
+      return {
+        name: item.姓名,
+        sex: item.性别 === "男" ? 1 : item.性别 === "女" ? 2 : 9,
+        number: JSON.stringify(item.学号),
+      };
+    })
+    .filter((item) => item !== null);
+  if (persons.length === 0) {
+    message.error("未检测到任何人员信息，请检查文件格式是否正确");
+  } else {
+    personList.value.push(
+      ...persons.map((person) => ({
+        ...person,
+        uniqueId: generateUniqueId(),
+      }))
+    );
+    message.success("导入成功");
+    showImportModal.value = false;
+  }
 };
 
 const tableHeight = ref(window.innerHeight - remToPx(6))
