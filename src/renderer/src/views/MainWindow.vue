@@ -10,6 +10,7 @@ import {
   Info20Regular as InfoIcon,
   Person20Regular as PersonIcon,
 } from "@vicons/fluent";
+import { Dice as DiceIcon } from "@vicons/ionicons5";
 
 import logoUrl from "../assets/images/logo.png";
 
@@ -165,7 +166,7 @@ const footerMenuOptions = [
       </n-layout>
     </n-layout-sider>
 
-<!--如果需要给下方router-view内内容加css，请编辑NLayout的content-style-->
+    <!--如果需要给下方router-view内内容加css，请编辑NLayout的content-style-->
     <router-view />
   </n-layout>
 </template>
