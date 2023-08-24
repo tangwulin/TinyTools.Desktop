@@ -8,6 +8,7 @@ import {
   NFormItem,
   NInput,
   NModal,
+  NText,
   useMessage,
 } from "naive-ui";
 import { storeToRefs } from "pinia";
@@ -17,7 +18,6 @@ import { getRenderingList } from "../assets/script/seatHelper";
 import { useRoute } from "vue-router";
 import {
   PlaylistAdd,
-  Refresh,
   TableImport as ImportIcon,
   File as FileIcon,
 } from "@vicons/tabler";
@@ -110,14 +110,14 @@ const createColumns = (edit, del) => {
           case 2:
             return "女";
           default:
-            return "未填写";
+            return h(NText, { depth: 3 }, { default: () => "未填写" });
         }
       },
     },
     {
       title: "操作",
       key: "actions",
-      width: remToPx(4),
+      width: remToPx(8),
       render(row) {
         return h("div", { class: "flex flex-row" }, [
           h(
@@ -144,6 +144,13 @@ const createColumns = (edit, del) => {
       },
     },
   ];
+};
+
+const renderCell = (value) => {
+  if (!value) {
+    return h(NText, { depth: 3 }, { default: () => "未填写" });
+  }
+  return value;
 };
 
 const columns = createColumns(editHandler, deleteHandler);
@@ -212,10 +219,21 @@ const parseExcel = async (uploadFileInfo) => {
   });
   console.log(persons);
 };
+
+const tableHeight = ref(window.innerHeight - remToPx(6))
+window.addEventListener('resize', () => {
+  tableHeight.value = window.innerHeight - remToPx(6)
+})
 </script>
 
 <template>
-  <div>
+  <div
+    style="
+      width: 100%;
+      height: calc(100% - 0.5rem);
+      margin: 0.5rem 0.5rem auto 0.5rem;
+    "
+  >
     <n-space justify="space-between">
       <p>修改后请重启程序以重新生成座位</p>
       <n-space>
@@ -265,6 +283,8 @@ const parseExcel = async (uploadFileInfo) => {
       :data="personList"
       :pagination="false"
       :bordered="false"
+      :render-cell="renderCell"
+      :max-height="tableHeight"
     >
     </n-data-table>
 
