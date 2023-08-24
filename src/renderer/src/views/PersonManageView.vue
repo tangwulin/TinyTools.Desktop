@@ -248,66 +248,59 @@ window.addEventListener('resize', () => {
 </script>
 
 <template>
-  <div
-    style="
-      width: 100%;
-      height: calc(100% - 0.5rem);
-      margin: 0.5rem 0.5rem auto 0.5rem;
-    "
-  >
-    <n-space justify="space-between">
-      <p>修改后请重启程序以重新生成座位</p>
-      <n-space>
-        <n-button
-          type="primary"
-          size="small"
-          class="p-2"
-          @click="showImportModal = true"
-        >
-          <template #icon>
-            <n-icon>
-              <ImportIcon />
-            </n-icon>
-          </template>
-          导入
-        </n-button>
-        <n-button
-          type="primary"
-          size="small"
-          class="p-2"
-          @click="showAddModal = true"
-        >
-          <template #icon>
-            <n-icon>
-              <PlaylistAdd />
-            </n-icon>
-          </template>
-          添加
-        </n-button>
-        <n-button
-          type="primary"
-          size="small"
-          class="p-2"
-          @click="showMultiAddModal = true"
-        >
-          <template #icon>
-            <n-icon>
-              <PlaylistAdd />
-            </n-icon>
-          </template>
-          批量添加
-        </n-button>
-      </n-space>
+  <n-space justify="space-between">
+    <p>修改后请重启程序以重新生成座位</p>
+    <n-space>
+      <n-button
+        type="primary"
+        size="small"
+        class="p-2"
+        @click="showImportModal = true"
+      >
+        <template #icon>
+          <n-icon>
+            <ImportIcon />
+          </n-icon>
+        </template>
+        导入
+      </n-button>
+      <n-button
+        type="primary"
+        size="small"
+        class="p-2"
+        @click="showAddModal = true"
+      >
+        <template #icon>
+          <n-icon>
+            <PersonAddIcon />
+          </n-icon>
+        </template>
+        添加
+      </n-button>
+      <n-button
+        type="primary"
+        size="small"
+        class="p-2"
+        @click="showMultiAddModal = true"
+      >
+        <template #icon>
+          <n-icon>
+            <PlaylistAdd />
+          </n-icon>
+        </template>
+        批量添加
+      </n-button>
     </n-space>
-    <n-data-table
-      :columns="columns"
-      :data="personList"
-      :pagination="false"
-      :bordered="false"
-      :render-cell="renderCell"
-      :max-height="tableHeight"
-    >
-    </n-data-table>
+  </n-space>
+  <n-data-table
+    :columns="columns"
+    :data="personList"
+    :pagination="false"
+    :bordered="false"
+    :render-cell="renderCell"
+    :max-height="tableHeight"
+  >
+  </n-data-table>
 
     <n-modal v-model:show="showAddModal" :mask-closable="false">
       <n-card

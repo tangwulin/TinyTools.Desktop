@@ -1,7 +1,8 @@
 <template>
   <div
     id="SeatView"
-    class="flex items-center justify-center flex-col w-max h-auto m-auto"
+    class="flex items-center justify-center flex-col h-auto m-auto"
+    style="height: 100%"
   >
     <div id="target-div" class="md:w-fit p-4" style="margin: 0 auto">
       <div class="flex items-center justify-center mb-4">
@@ -82,7 +83,7 @@
           一 枪）
         </n-tooltip>
         <n-button @click="save(scale)" :disabled="loading || isPreview"
-        >保存图片
+          >保存图片
         </n-button>
         <n-dropdown :options="saveOptions" @select="save">
           <n-button :disabled="loading || isPreview">
@@ -163,14 +164,14 @@
       <div>
         <n-button-group v-show="enableOldToolBar">
           <n-button @click="showHistory = true" :disabled="loading"
-          >历史记录
+            >历史记录
           </n-button>
           <n-button @click="showSetting">设置</n-button>
           <n-button @click="showManager" :disabled="loading || isPreview"
-          >人员管理
+            >人员管理
           </n-button>
           <n-button @click="showMultiAddModal" :disabled="loading || isPreview"
-          >增加人员
+            >增加人员
           </n-button>
         </n-button-group>
       </div>
@@ -696,10 +697,5 @@ seatWorker.onmessage = function (event) {
 </script>
 
 <style scoped>
-#SeatView {
-  background: white;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-}
+
 </style>

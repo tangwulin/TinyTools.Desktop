@@ -127,7 +127,7 @@ const footerMenuOptions = [
 </script>
 
 <template>
-  <n-layout has-sider :content-style="'height:100vh;width:100%'">
+  <n-layout has-sider content-style="height:100vh;width:100%">
     <n-layout-sider
       bordered
       collapse-mode="width"
@@ -166,8 +166,10 @@ const footerMenuOptions = [
       </n-layout>
     </n-layout-sider>
 
-    <!--如果需要给下方router-view内内容加css，请编辑NLayout的content-style-->
-    <router-view />
+    <!--下方router-view内内容加css只能在各组件内部加-->
+    <n-layout-content content-style="margin:0.5rem 0.5rem auto 0.5rem">
+      <router-view />
+    </n-layout-content>
   </n-layout>
 </template>
 
