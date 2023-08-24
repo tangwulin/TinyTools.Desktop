@@ -103,49 +103,34 @@ const settingOptions = [
         RouterLink,
         {
           to: {
-            name: "personManage",
+            name: "debugTool",
           },
         },
-        { default: () => "人员管理" }
+        { default: () => "调试工具" }
       ),
-    key: "personManage",
-    icon: renderIcon(PersonIcon),
+    key: "debugTool",
+    icon: renderIcon(SettingIcon),
+    show: enableDevelopFeature.value,
   },
-].concat(
-  enableDevelopFeature.value
-    ? {
-        label: () =>
-          h(
-            RouterLink,
-            {
-              to: {
-                name: "debugTool",
-              },
-            },
-            { default: () => "调试工具" }
-          ),
-        key: "debugTool",
-        icon: renderIcon(SettingIcon),
-      }
-    : []
-);
+];
 </script>
 
 <template>
-  <div style="height: calc(100vh - 1rem); width: inherit;">
+  <div style="height: calc(100vh - 1rem); width: inherit">
     <n-layout style="height: 100%">
       <n-layout-header bordered>
-        <div style="margin: 0.5rem 0 0.5rem 1rem;font-size: 1rem">设置</div>
+        <div style="margin: 0.5rem 0 0.5rem 1rem; font-size: 1rem">设置</div>
       </n-layout-header>
       <n-layout-content>
         <n-layout has-sider>
           <n-layout-sider :width="'14rem'">
             <n-menu :options="settingOptions" v-model:value="activeKey" />
           </n-layout-sider>
-          <n-layout-content>
-            <div class="h-full overflow-y-hidden" id="settingContainer">
-              <router-view style="margin: auto 1rem"/>
-            </div>
+          <n-layout-content content-style="margin: 0.5rem 0.5rem auto auto">
+            <!--            <div class="h-full overflow-y-hidden" id="settingContainer">-->
+            <!--              -->
+            <!--            </div>-->
+            <router-view />
           </n-layout-content>
         </n-layout>
       </n-layout-content>

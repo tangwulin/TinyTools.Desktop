@@ -26,6 +26,16 @@ const router = createRouter({
           component: () => import("../views/ScheduleView.vue"),
         },
         {
+          path:"/randomSelection",
+          name:"randomSelection",
+          component: () => import("../views/RandomSelectionView.vue"),
+        },
+        {
+          path: "/person",
+          name: "personManage",
+          component: () => import("../views/PersonManageView.vue"),
+        },
+        {
           path: "/setting",
           name: "setting",
           redirect: "/setting/seat",
@@ -53,11 +63,11 @@ const router = createRouter({
                 },
               ],
             },
-            {
-              path: "/setting/person",
-              name: "personManage",
-              component: () => import("../views/PersonManageView.vue"),
-            },
+            // {
+            //   path: "/setting/person",
+            //   name: "personManage",
+            //   component: () => import("../views/PersonManageView.vue"),
+            // },
             {
               path: "/setting/debug",
               name: "debugTool",

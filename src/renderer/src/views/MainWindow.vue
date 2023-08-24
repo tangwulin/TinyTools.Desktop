@@ -8,7 +8,9 @@ import {
   DataHistogram24Regular as DataIcon,
   Settings16Regular as SettingIcon,
   Info20Regular as InfoIcon,
+  Person24Regular as PersonIcon,
 } from "@vicons/fluent";
+import { Dice as DiceIcon } from "@vicons/ionicons5";
 
 import logoUrl from "../assets/images/logo.png";
 
@@ -62,6 +64,34 @@ const menuOptions = [
     key: "schedule",
     icon: renderIcon(ScheduleIcon),
   },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "randomSelection",
+          },
+        },
+        { default: () => "随机抽选" }
+      ),
+    key: "randomSelection",
+    icon: renderIcon(DiceIcon),
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: "personManage",
+          },
+        },
+        { default: () => "人员管理" }
+      ),
+    key: "personManage",
+    icon: renderIcon(PersonIcon),
+  },
 ];
 
 const footerMenuOptions = [
@@ -97,7 +127,7 @@ const footerMenuOptions = [
 </script>
 
 <template>
-  <n-layout has-sider :content-style="'height:100vh;width:100%'">
+  <n-layout has-sider content-style="height:100vh;width:100%">
     <n-layout-sider
       bordered
       collapse-mode="width"
@@ -110,8 +140,12 @@ const footerMenuOptions = [
     >
       <n-layout class="h-full">
         <n-layout-header>
-          <div class="flex justify-center items-center bg-gray-200">
-            <img :src="logoUrl" alt="logo" style="width: 60%" />
+          <div class="flex justify-center items-center bg-gray-100">
+            <img
+              :src="logoUrl"
+              alt="logo"
+              style="width: 60%; min-width: 3rem"
+            />
           </div>
         </n-layout-header>
         <n-layout-content>
@@ -136,8 +170,10 @@ const footerMenuOptions = [
       </n-layout>
     </n-layout-sider>
 
-<!--如果需要给下方router-view内内容加css，请编辑NLayout的content-style-->
-    <router-view />
+    <!--下方router-view内内容加css只能在各组件内部加-->
+    <n-layout-content content-style="margin:0.5rem 0.5rem auto 0.5rem">
+      <router-view />
+    </n-layout-content>
   </n-layout>
 </template>
 

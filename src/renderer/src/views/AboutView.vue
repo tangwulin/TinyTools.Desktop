@@ -32,15 +32,15 @@ const clickHandler = () => {
 
 <template>
   <n-scrollbar >
-    <div class="flex flex-col items-center h-full bg-gray-200 pb-2" style="height: 100vh;">
-      <div class="mb-4 w-3/5  p-4">
-        <img src="../assets/img.png" alt="logo" />
+    <div class="flex flex-col items-center h-full pb-2 " style="height: 100vh;">
+      <div class="mb-4 w-3/5 p-4">
+        <img src="../assets/img.png" alt="logo" style="margin: auto"/>
       </div>
       <p class="mb-8" @click="clickHandler">
         TinyTools v{{ version }} Build {{ revision }}
       </p>
       <p>TinyTools使用Electron+Vite+Vue构建</p>
-      <div class="flex flex-row" style="max-height: 100px">
+      <div class="flex flex-row" >
         <a href="https://www.electronjs.org/zh" target="_blank">
           <img
             src="https://www.electronjs.org/assets/img/logo.svg"
@@ -70,8 +70,8 @@ const clickHandler = () => {
           </svg>
         </a>
       </div>
-      <p>项目地址：</p>
-      <div class="flex flex-row" style="max-height: 100px">
+<!--      <p>项目地址：</p>-->
+      <div class="flex flex-row mt-8" >
         <a href="https://github.com/tangwulin/TinyTools/" target="_blank">
           <svg
             class="h-12"
@@ -84,13 +84,13 @@ const clickHandler = () => {
             ></path>
           </svg>
         </a>
-        <a href="https://github.com/tangwulin/TinyTools/" target="_blank">
-          <img
-            class="h-12"
-            src="https://gitee.com/static/images/logo-black.svg?t=158106664"
-            alt="gitee logo"
-          />
-        </a>
+<!--        <a href="https://github.com/tangwulin/TinyTools/" target="_blank">-->
+<!--          <img-->
+<!--            class="h-12"-->
+<!--            src="https://gitee.com/static/images/logo-black.svg?t=158106664"-->
+<!--            alt="gitee logo"-->
+<!--          />-->
+<!--        </a>-->
       </div>
       <div class="mt-auto text-xs">
         <p class="mt-auto flex">

@@ -1,7 +1,8 @@
 <template>
   <div
     id="SeatView"
-    class="flex items-center justify-center flex-col w-max h-auto m-auto"
+    class="flex items-center justify-center flex-col h-auto m-auto"
+    style="height: 100%"
   >
     <div id="target-div" class="md:w-fit p-4" style="margin: 0 auto">
       <div class="flex items-center justify-center mb-4">
@@ -82,7 +83,7 @@
           一 枪）
         </n-tooltip>
         <n-button @click="save(scale)" :disabled="loading || isPreview"
-        >保存图片
+          >保存图片
         </n-button>
         <n-dropdown :options="saveOptions" @select="save">
           <n-button :disabled="loading || isPreview">
@@ -163,14 +164,14 @@
       <div>
         <n-button-group v-show="enableOldToolBar">
           <n-button @click="showHistory = true" :disabled="loading"
-          >历史记录
+            >历史记录
           </n-button>
           <n-button @click="showSetting">设置</n-button>
           <n-button @click="showManager" :disabled="loading || isPreview"
-          >人员管理
+            >人员管理
           </n-button>
           <n-button @click="showMultiAddModal" :disabled="loading || isPreview"
-          >增加人员
+            >增加人员
           </n-button>
         </n-button-group>
       </div>
@@ -286,7 +287,7 @@ const personStore = usePersonStore();
 const settingStore = useSettingStore();
 
 const { allSeats, oldRenderingList, history } = storeToRefs(seatStore);
-const { allPerson } = storeToRefs(personStore);
+const { personList } = storeToRefs(personStore);
 const {
   bgms,
   finalBgms,
@@ -506,19 +507,19 @@ if (allSeats.value === null || oldRenderingList.value === null) {
     allSeats.value = history.value[0].allSeats;
     oldRenderingList.value = history.value[0].oldRenderingList;
   } else {
-    allSeats.value = allPerson.value.map((name, index) => {
-      return { name: name, index: index, isSeat: true };
+    allSeats.value = personList.value.map((item, index) => {
+      return { name: item.name, index: index, isSeat: true };
     });
     oldRenderingList.value = getRenderingList(allSeats.value, []);
   }
 }
 
 if (
-  (allPerson.value.length !== 0 && allSeats.value.length === 0) ||
-  allPerson.value.length !== allSeats.value.length
+  (personList.value.length !== 0 && allSeats.value.length === 0) ||
+  personList.value.length !== allSeats.value.length
 ) {
-  allSeats.value = allPerson.value.map((name, index) => {
-    return { name: name, index: index, isSeat: true };
+  allSeats.value = personList.value.map((item, index) => {
+    return { name: item.name, index: index, isSeat: true };
   });
   console.log("seat has been initialized");
 }
@@ -678,7 +679,7 @@ const exitPreview = () => {
 
 window.addEventListener("beforeunload", isPreview ? exitPreview : () => {});
 
-watch(allPerson, reloadSeatTable);
+watch(personList, reloadSeatTable);
 
 watch(allSeats, () => {
   console.log("seat changed");
@@ -696,10 +697,5 @@ seatWorker.onmessage = function (event) {
 </script>
 
 <style scoped>
-#SeatView {
-  background: white;
-  height: 100vh;
-  width: 100vw;
-  margin: 0;
-}
+
 </style>
