@@ -141,7 +141,7 @@ const footerMenuOptions = [
       <n-layout class="h-full">
         <n-layout-header>
           <div class="flex justify-center items-center bg-gray-200">
-            <img :src="logoUrl" alt="logo" style="width: 60%" />
+            <img :src="logoUrl" alt="logo" style="width: 60%;min-width: 3rem" />
           </div>
         </n-layout-header>
         <n-layout-content>
