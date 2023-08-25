@@ -38,7 +38,7 @@ async function release()
   packageJson.version = suffix ? `${ nextVersion }-${ suffix }` : nextVersion;
 
   // const nextTag = `v${ nextVersion }`;
-  const nextTag = `v${ packageJson.version }`;
+  const nextTag = `${ packageJson.version }`;
   await updatelog(nextTag, "release");
 
   // 将新版本写入 package.json 文件
