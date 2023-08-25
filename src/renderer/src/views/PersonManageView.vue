@@ -184,8 +184,7 @@ const addPerson = () => {
   );
   showAddModal.value = false;
   multiAddForm.value.names
-    .map((name, index) => {
-      // return { name: name, index: index, isSeat: true, isDashed: false };
+    .map(name => {
       return { name: name, isSeat: true, isDashed: false };
     })
     .forEach((item) => allSeats.value.push(item));
