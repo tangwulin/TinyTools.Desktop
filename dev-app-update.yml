@@ -1,3 +1,3 @@
-provider: generic
-url: https://example.com/auto-updates
+provider: github
+protocol: https
 updaterCacheDirName: tinytools.desktop-updater
