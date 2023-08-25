@@ -14,12 +14,12 @@ jobs:
 
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ windows-latest ]
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
-        
+
       - uses: olegtarasov/get-tag@v2.1.2
         id: tagName
 
@@ -34,18 +34,11 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
-      - name: build-linux
-        if: matrix.os == 'ubuntu-latest'
-        run: pnpm run build:linux
-
-      - name: build-mac
-        if: matrix.os == 'macos-latest'
-        run: pnpm run build:mac
-
       - name: build-win
         if: matrix.os == 'windows-latest'
         run: pnpm run build:win
-        env: ${{ steps.tagName.outputs.tag }}
+        env:
+          TAG: ${{ steps.tagName.outputs.tag }}
 
       - name: release
         uses: softprops/action-gh-release@v1
