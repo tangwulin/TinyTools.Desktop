@@ -152,6 +152,7 @@ app.whenReady().then(() => {
 
   ipcMain.on("relaunchApp", () => {
     app.relaunch();
+    app.exit();
   });
 
   createWindow();
