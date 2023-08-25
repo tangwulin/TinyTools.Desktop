@@ -58,6 +58,7 @@ function createWindow() {
       preload: join(__dirname, "../preload/index.js"),
       sandbox: false,
     },
+    icon: join(__dirname, "../../resources/icon.png"),
   });
 
   // Hide the splash window when the main window is ready-to-show
@@ -152,6 +153,7 @@ app.whenReady().then(() => {
 
   ipcMain.on("relaunchApp", () => {
     app.relaunch();
+    app.exit();
   });
 
   createWindow();
