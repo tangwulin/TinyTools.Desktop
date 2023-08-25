@@ -1,6 +1,6 @@
 {
   "name": "tinytools.desktop",
-  "version": "3.99.1-beta.1",
+  "version": "3.99.1-beta.2",
   "packageManager": "pnpm@8.6.12",
   "description": "An Electron application with Vue",
   "main": "./out/main/index.js",
