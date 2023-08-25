@@ -19,6 +19,9 @@ jobs:
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
+        
+      - uses: olegtarasov/get-tag@v2.1.2
+        id: tagName
 
       - name: Install Node.js
         uses: actions/setup-node@v3
@@ -42,11 +45,13 @@ jobs:
       - name: build-win
         if: matrix.os == 'windows-latest'
         run: pnpm run build:win
+        env: ${{ steps.tagName.outputs.tag }}
 
       - name: release
         uses: softprops/action-gh-release@v1
         with:
-          draft: true
+          draft: ${{ contains(github.ref_name, 'draft') }}
+          prerelease: ${{ contains(github.ref_name, 'beta') ||  contains(github.ref_name, 'rc') }}
           files: |
             dist/*.exe
             dist/*.zip
