@@ -25,7 +25,6 @@ nsis:
   installerIcon: build/icon.ico
   uninstallerIcon: build/icon.ico
   installerHeaderIcon: build/icon.ico
-#  installerHeader: build/installerHeader.bmp
   createStartMenuShortcut: true
   menuCategory: TinyTools
 mac:
@@ -48,5 +47,5 @@ appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
 publish:
-  provider: generic
-  url: https://example.com/auto-updates
+  - provider: github
+    protocol: https
