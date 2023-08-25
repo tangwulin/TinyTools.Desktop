@@ -23,13 +23,16 @@ jobs:
       - uses: olegtarasov/get-tag@v2.1.2
         id: tagName
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.4.0
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: pnpm install
