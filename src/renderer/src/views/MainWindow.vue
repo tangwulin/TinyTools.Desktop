@@ -10,7 +10,7 @@ import {
   Info20Regular as InfoIcon,
   Person24Regular as PersonIcon,
 } from "@vicons/fluent";
-import { Dice as DiceIcon } from "@vicons/ionicons5";
+import { DiceOutline as DiceIcon } from "@vicons/ionicons5";
 
 import logoUrl from "../assets/images/logo.png";
 
