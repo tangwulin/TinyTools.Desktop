@@ -10,35 +10,54 @@ async function release()
 {
   const flag = process.argv[2] ?? "patch";
   const packageJson = require("../package.json");
-  const suffix = process.argv[3] ?? null;
+  let suffix = process.argv[3] ?? null;
   let [a, b, c] = packageJson.version.split("-")[0].split(".").map(Number);
 
-  if (flag === "major")
-  {  // 主版本
-    a += 1;
-    b = 0;
-    c = 0;
-  }
-  else if (flag === "minor")
-  {  // 次版本
-    b += 1;
-    c = 0;
-  }
-  else if (flag === "patch")
-  {  // 补丁版本
-    c += 1;
-  }
-  else
+  if (!suffix)
   {
-    console.log(`Invalid flag "${ flag }"`);
-    process.exit(1);
+    switch (flag)
+    {
+      case "major":
+        a++;
+        b = 0;
+        c = 0;
+        break;
+      case "minor":
+        b++;
+        c = 0;
+        break;
+      case "patch":
+        c++;
+        break;
+      case "premajor":
+        a++;
+        b = 0;
+        c = 0;
+        suffix = "beta";
+        break;
+      case "preminor":
+        b++;
+        c = 0;
+        suffix = "beta";
+        break;
+      case "prepatch":
+        c++;
+        suffix = "beta";
+        break;
+      case "prerelease":
+        suffix = "rc";
+        break;
+      default:
+        console.log("Invalid flag");
+        process.exit(1);
+    }
   }
 
   const nextVersion = `${ a }.${ b }.${ c }`;
   packageJson.version = suffix ? `${ nextVersion }-${ suffix }` : nextVersion;
 
   // const nextTag = `v${ nextVersion }`;
-  const nextTag = `${ packageJson.version }`;
+  const nextTag = `v${ packageJson.version }`;
   await updatelog(nextTag, "release");
 
   // 将新版本写入 package.json 文件
@@ -46,10 +65,10 @@ async function release()
 
   // 提交修改的文件，打 tag 标签（tag 标签是为了触发 github action 工作流）并推送到远程
   execSync("git add ./package.json ./UPDATE_LOG.md");
-  execSync(`git commit -m "v${ nextTag }"`);
-  execSync(`git tag -a v${ nextTag } -m "v${ nextTag }"`);
+  execSync(`git commit -m "${ nextTag }"`);
+  execSync(`git tag -a ${ nextTag } -m "${ nextTag }"`);
   execSync(`git push`);
-  execSync(`git push origin v${ nextTag }`);
+  execSync(`git push origin ${ nextTag }`);
   console.log(`Publish Successfully...`);
 }
 
