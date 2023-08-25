@@ -1,6 +1,8 @@
 # Updater Log
 
-
+## v3.99.1-beta.1
+- feat: 转用Electron
+- 这是一个大更新，但是我不想写更新日志（还是pre-release吧)
 
 ## v3.1.0
 - feat: 添加了结算音乐功能
