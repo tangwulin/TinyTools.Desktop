@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: tinytools.desktop
+appId: org.tangwulin.dev
+productName: TinyTools
 directories:
   buildResources: build
 files:
@@ -12,12 +12,22 @@ asarUnpack:
   - resources/**
 afterSign: build/notarize.js
 win:
-  executableName: tinytools.desktop
+  executableName: TinyTools
+  icon: build/icons/icon.icns
+  artifactName: ${name}-${version}-setup.${ext}
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: build/icon.ico
+  uninstallerIcon: build/icon.ico
+  installerHeaderIcon: build/icon.ico
+#  installerHeader: build/installerHeader.bmp
+  createStartMenuShortcut: true
+  menuCategory: TinyTools
 mac:
   entitlementsInherit: build/entitlements.mac.plist
   extendInfo:
