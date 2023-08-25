@@ -8,6 +8,7 @@ on:
 jobs:
   release:
     runs-on: ${{ matrix.os }}
+    environment: Release Workflow
 
     strategy:
       matrix:
