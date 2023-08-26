@@ -1,5 +1,12 @@
 # Updater Log
 
+## v3.99.1-beta.3
+- feat: 增加讲台视角
+- feat: 增加首次使用欢迎页面
+- feat: 增加了一些设置
+- feat: 增加了一些提示
+- feat: 增加课程表相关功能
+
 ## v3.99.1-beta.2
 - Release Workflow的测试罢了
 
