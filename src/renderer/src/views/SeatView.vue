@@ -682,9 +682,5 @@ seatWorker.onmessage = function(event) {
 </script>
 
 <style scoped>
-/*@media (min-width: 1024px) {*/
-/*  .lg\:w-1\/2 {*/
-/*    width: 55%;*/
-/*  }*/
-/*}*/
+
 </style>
