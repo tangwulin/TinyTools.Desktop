@@ -28,12 +28,12 @@
           <div class="flex flex-col items-center justify-center">
             <n-button-group>
               <n-button @click="colorEdge" :disabled="loading || isPreview"
-                >染色边缘座位
+              >染色边缘座位
               </n-button>
               <n-button
                 @click="removeEdgeColor"
                 :disabled="loading || isPreview"
-                >去除所有染色
+              >去除所有染色
               </n-button>
             </n-button-group>
           </div>
@@ -83,7 +83,7 @@
           一 枪）
         </n-tooltip>
         <n-button @click="save(scale)" :disabled="loading || isPreview"
-          >保存图片
+        >保存图片
         </n-button>
         <n-dropdown :options="saveOptions" @select="save">
           <n-button :disabled="loading || isPreview">
@@ -168,43 +168,14 @@
         <n-button-group v-show="enableOldToolBar">
           <n-button @click="showSetting">设置</n-button>
           <n-button @click="showManager" :disabled="loading || isPreview"
-            >人员管理
+          >人员管理
           </n-button>
           <n-button @click="showMultiAddModal" :disabled="loading || isPreview"
-            >增加人员
+          >增加人员
           </n-button>
         </n-button-group>
       </div>
     </div>
-
-    <!--    <n-modal v-model:show="showSetting" style="width: 60%">-->
-    <!--      <n-card-->
-    <!--          style="width: 60%"-->
-    <!--          title="设置"-->
-    <!--          :bordered="true"-->
-    <!--          size="small"-->
-    <!--          closable-->
-    <!--          @close="showSetting=false"-->
-    <!--      >-->
-    <!--        <div class="flex flex-row justify-items-start" style="height: 60vh">-->
-    <!--          <div class="px-2 pt-2 mr-2 bg-gray-200 rounded">-->
-    <!--            <n-list class="flex flex-col justify-center w-1/4 min-w-0">-->
-    <!--              <template v-for="item in settings" :key="item.name">-->
-    <!--                <n-list-item v-if="item.active" class="bg-gray-200 mt-auto">-->
-    <!--                  <n-button text @click="handleSetting(item)">{{ item.name }}</n-button>-->
-    <!--                </n-list-item>-->
-    <!--              </template>-->
-    <!--            </n-list>-->
-    <!--          </div>-->
-    <!--          <div class="flex flex-col justify-items-start w-full" :key="scKey">-->
-    <!--            <div id="settingTitle"><p>{{ currentSetting.name }}</p></div>-->
-    <!--            <div class="h-full overflow-y-hidden" id="settingContainer">-->
-    <!--              <component :is="currentSetting.component" v-model:showAddModal="showAddModal"/>-->
-    <!--            </div>-->
-    <!--          </div>-->
-    <!--        </div>-->
-    <!--      </n-card>-->
-    <!--    </n-modal>-->
 
     <n-drawer v-model:show="showHistory" :width="'31vw'">
       <n-drawer-content :native-scrollbar="false">
@@ -261,12 +232,12 @@ import { storeToRefs } from "pinia";
 import {
   getRenderingList,
   parseEdgeSeatIndex,
-  replaceArrayElements,
+  replaceArrayElements
 } from "../assets/script/seatHelper";
 import { debounce, shuffle } from "lodash-es";
 import {
   getDefaultBgm,
-  getDefaultFinalBgm,
+  getDefaultFinalBgm
 } from "../assets/script/musicHelper";
 import { useRouter } from "vue-router";
 
@@ -276,7 +247,7 @@ const router = useRouter();
 const seatWorker = new Worker(
   new URL("../assets/script/seatWorker.js", import.meta.url),
   {
-    type: "module",
+    type: "module"
   }
 );
 
@@ -296,7 +267,7 @@ const {
   fadeinTime,
   scale,
   enableDevelopFeature,
-  enableOldToolBar,
+  enableOldToolBar
 } = storeToRefs(settingStore);
 
 const temp = ref({ allSeats: null, oldRenderingList: null });
@@ -330,7 +301,8 @@ const removeEdgeColor = () => {
   );
 };
 
-if (bgms.value.length === 0 || finalBgms.value.length === 0) {
+if (bgms.value.length === 0 || finalBgms.value.length === 0)
+{
   bgms.value = getDefaultBgm();
   finalBgms.value = getDefaultFinalBgm();
   isBGMInitialized.value = true;
@@ -364,11 +336,13 @@ const play = (option) => {
   const player = document.getElementById("player");
   player.src = option.url;
   player.currentTime = option.offset;
-  if (option.name) {
+  if (option.name)
+  {
     message.info("正在播放：" + option.name);
     console.log("正在播放：" + option.name);
   }
-  if (enableFadein.value) {
+  if (enableFadein.value)
+  {
     const originVol = player.volume;
     player.volume = 0;
     let i = 0;
@@ -422,7 +396,8 @@ onUnmounted(() => {
 });
 
 // 更新日期和时间
-function updateDateTime() {
+function updateDateTime()
+{
   const now = new Date();
   const date = now.toLocaleDateString();
   const time = now.toLocaleTimeString();
@@ -442,16 +417,16 @@ const saveOptions = [
   {
     label: "图片分辨率（宽度）",
     key: 1,
-    disabled: true,
+    disabled: true
   },
   {
     label: "1080P",
-    key: 2,
+    key: 2
   },
   {
     label: "4K",
-    key: 4,
-  },
+    key: 4
+  }
 ];
 /**
  * 保存当前座位为图片
@@ -462,20 +437,23 @@ const save = async (x) => {
   loading.value = true;
   msgReactive = message.create("正在生成图片……", {
     type: "loading",
-    duration: 0,
+    duration: 0
   });
 
   const target = document.getElementById("target-div");
   const options = {
     filter: (node) => {
-      try {
+      try
+      {
         return !node.classList.contains("n-button--dashed");
-      } catch {
+      }
+      catch
+      {
         return true;
       }
     },
     backgroundColor: "#FFFFFF",
-    scale: (960 * x) / target.clientWidth,
+    scale: (960 * x) / target.clientWidth
   };
   scale.value = x;
   domToPng(target, options)
@@ -500,11 +478,15 @@ const save = async (x) => {
 /**
  * 在allSeats或oldRenderingList为空的情况下初始化。
  */
-if (allSeats.value === null || oldRenderingList.value === null) {
-  if (history.value.length !== 0) {
+if (allSeats.value === null || oldRenderingList.value === null)
+{
+  if (history.value.length !== 0)
+  {
     allSeats.value = history.value[0].allSeats;
     oldRenderingList.value = history.value[0].oldRenderingList;
-  } else {
+  }
+  else
+  {
     allSeats.value = personList.value.map((item, index) => {
       return { name: item.name, index: index, isSeat: true };
     });
@@ -515,7 +497,8 @@ if (allSeats.value === null || oldRenderingList.value === null) {
 if (
   (personList.value.length !== 0 && allSeats.value.length === 0) ||
   personList.value.length !== allSeats.value.length
-) {
+)
+{
   allSeats.value = personList.value.map((item, index) => {
     return { name: item.name, index: index, isSeat: true };
   });
@@ -533,26 +516,29 @@ const saveHistory = (type) => {
         allSeats.value.slice().map((item) => {
           return { ...item, color: null };
         })
-      ),
+      )
     ],
     oldRenderingList: [
       ...toRaw(oldRenderingList.value)
         .slice()
         .map((item) => {
           return { ...item, color: null };
-        }),
+        })
     ],
     isCurrent: true,
-    type: type || "???",
+    type: type || "???"
   };
   history.value = history.value.map((item) => {
     return { ...item, isCurrent: false };
   });
-  if (history.value.length !== 0 && history.value[0].type === "手动更改") {
+  if (history.value.length !== 0 && history.value[0].type === "手动更改")
+  { //这里没有对初始位置进行判断，因为到这个页面意味着已经开始正常使用了
     if (data.time - history.value[0].time > 60 * 1000)
       history.value.unshift(data);
     else history.value[0] = data;
-  } else {
+  }
+  else
+  {
     history.value = history.value.map((item) => {
       return { ...item, isCurrent: false, isShowing: false };
     });
@@ -612,13 +598,14 @@ const rollSeats = async (x) => {
     allSeats.value = shuffle(allSeats.value).map((item, index) => {
       return {
         ...item,
-        index: index,
+        index: index
       };
     });
     await nextTick();
     count++; // 增加计数器
 
-    if (count === x + 1) {
+    if (count === x + 1)
+    {
       clearInterval(intervalId); // 达到执行次数后清除定时器
       setTimeout(() => {
         loading.value = false;
@@ -626,7 +613,7 @@ const rollSeats = async (x) => {
       allSeats.value = replaceArrayElements(originSeats).map((item, index) => {
         return {
           ...item,
-          index: index,
+          index: index
         };
       });
       await saveHistory("按规则Roll座位");
@@ -687,7 +674,7 @@ watch(oldRenderingList, () => {
   stKey.value = Math.random();
 });
 
-seatWorker.onmessage = function (event) {
+seatWorker.onmessage = function(event) {
   console.log("收到Web Worker的更新");
   allSeats.value = event.data;
   reloadSeatTable();
