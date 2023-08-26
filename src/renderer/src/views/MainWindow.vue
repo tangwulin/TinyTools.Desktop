@@ -1,5 +1,5 @@
 <script setup>
-import { h, ref } from "vue";
+import { h, ref, watch } from "vue";
 import { RouterLink } from "vue-router";
 import { NIcon } from "naive-ui";
 import { ChairAltOutlined as ChairIcon } from "@vicons/material";
@@ -11,11 +11,35 @@ import {
   Person24Regular as PersonIcon,
 } from "@vicons/fluent";
 import { DiceOutline as DiceIcon } from "@vicons/ionicons5";
+import { useSettingStore } from "../stores/setting";
+import { storeToRefs } from "pinia";
+
+const settingStore = useSettingStore();
+const { enableDevelopFeature } = storeToRefs(settingStore);
 
 import logoUrl from "../assets/images/logo.png";
 
+const version = __APP_VERSION__;
+const shortVersion = version.split("-")[0];
+
 const activeKey = ref("seat");
 const collapsed = ref(true);
+
+const collapsedWithoutAnimation = ref(true);
+watch(
+  () => collapsed.value,
+  (value) => {
+    if (value) {
+      setTimeout(() => {
+        collapsedWithoutAnimation.value = true;
+      }, 50);
+    } else {
+      setTimeout(() => {
+        collapsedWithoutAnimation.value = false;
+      }, 100);
+    }
+  }
+);
 
 function renderIcon(icon) {
   return () => h(NIcon, null, { default: () => h(icon) });
@@ -31,10 +55,11 @@ const menuOptions = [
             name: "dashboard",
           },
         },
-        { default: () => "数据总览" }
+        { default: () => "数据总览（未完成）" }
       ),
     key: "dashboard",
     icon: renderIcon(DataIcon),
+    show: enableDevelopFeature.value,
   },
   {
     label: () =>
@@ -59,10 +84,11 @@ const menuOptions = [
             name: "schedule",
           },
         },
-        { default: () => "值日排班" }
+        { default: () => "值日排班（未完成）" }
       ),
     key: "schedule",
     icon: renderIcon(ScheduleIcon),
+    show: enableDevelopFeature.value,
   },
   {
     label: () =>
@@ -165,7 +191,19 @@ const footerMenuOptions = [
             :collapsed-width="64"
             :collapsed-icon-size="20"
             :options="footerMenuOptions"
+            style="padding: 0"
           />
+          <n-p
+            style="
+              text-align: center;
+              margin: 0 0 0.25rem 0;
+              font-size: 0.75rem;
+              user-select:none;
+            "
+            depth="3"
+          >
+            {{ collapsedWithoutAnimation ? shortVersion : version }}
+          </n-p>
         </n-layout-footer>
       </n-layout>
     </n-layout-sider>

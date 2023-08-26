@@ -8,42 +8,46 @@ on:
 jobs:
   release:
     runs-on: ${{ matrix.os }}
+    environment: Release Workflow
+    env:
+      GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ windows-latest ]
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
+      - uses: olegtarasov/get-tag@v2.1.2
+        id: tagName
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.4.0
+          cache: 'pnpm'
 
       - name: Install Dependencies
         run: pnpm install
 
-      - name: build-linux
-        if: matrix.os == 'ubuntu-latest'
-        run: pnpm run build:linux
-
-      - name: build-mac
-        if: matrix.os == 'macos-latest'
-        run: pnpm run build:mac
-
       - name: build-win
         if: matrix.os == 'windows-latest'
         run: pnpm run build:win
+        env:
+          TAG: ${{ steps.tagName.outputs.tag }}
 
       - name: release
         uses: softprops/action-gh-release@v1
         with:
-          draft: true
+          draft: ${{ contains(github.ref_name, 'draft') }}
+          prerelease: ${{ contains(github.ref_name, 'beta') ||  contains(github.ref_name, 'rc') }}
           files: |
             dist/*.exe
             dist/*.zip

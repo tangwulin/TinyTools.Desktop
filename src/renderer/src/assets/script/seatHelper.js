@@ -1,4 +1,4 @@
-import { difference, shuffle } from 'lodash-es'
+import { difference, shuffle,intersection } from 'lodash-es'
 
 export const getRenderingList = (seat = [], oldRenderingList = [], coloringEdge = false, forceUpdate = false) => {
   let stopwatch = performance.now()
@@ -144,15 +144,15 @@ export function replaceArrayElements(source)
   {
     const seatsForNotEdger = shuffle(edgeIndexes).slice(0, notEdgeIndexesArray.length) //截断为需要的长度
     const seatsForEdger = difference(allIndexes, seatsForNotEdger) //分配给原来不坐犄角旮旯的人剩下的
-    const sourceArray2 = edgeIndexes.map(index => sourceArray[index]) //原来那些不坐犄角旮旯的人
+    const sourceArray2 = notEdgeIndexesArray.map(index => sourceArray[index]) //原来那些坐犄角旮旯的人
 
     // 逐个替换元素
     seatsForEdger.forEach((position, index) => {
-      targetArray[position] = { ...sourceArray2[index] }
+      targetArray[position] = { ...sourceArray1[index] }
     })
 
     seatsForNotEdger.forEach((position, index) => {
-      targetArray[position] = { ...sourceArray1[index] }
+      targetArray[position] = { ...sourceArray2[index] }
     })
 
     return targetArray.slice()

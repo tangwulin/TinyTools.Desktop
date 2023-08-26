@@ -1,8 +1,8 @@
 <script setup>
-import { useSettingStore } from "../stores/setting";
+import { useSettingStore } from "../../stores/setting";
 import { storeToRefs } from "pinia";
 
-import EqualityOrEquity from "../assets/images/equality_or_equity.png";
+import EqualityOrEquity from "../../assets/images/equality_or_equity.png";
 
 const setting = useSettingStore();
 const { enableOldToolBar, lotteryMode } = storeToRefs(setting);
