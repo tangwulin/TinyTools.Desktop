@@ -9,6 +9,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     HistoryDrawer: typeof import('./src/components/HistoryDrawer.vue')['default']
     NAvatar: typeof import('naive-ui')['NAvatar']
+    NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NCheckbox: typeof import('naive-ui')['NCheckbox']
     NCheckboxGroup: typeof import('naive-ui')['NCheckboxGroup']
@@ -41,6 +42,8 @@ declare module 'vue' {
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
     NScrollbar: typeof import('naive-ui')['NScrollbar']
     NSpace: typeof import('naive-ui')['NSpace']
+    NStep: typeof import('naive-ui')['NStep']
+    NSteps: typeof import('naive-ui')['NSteps']
     NSwitch: typeof import('naive-ui')['NSwitch']
     NTag: typeof import('naive-ui')['NTag']
     NTransfer: typeof import('naive-ui')['NTransfer']
