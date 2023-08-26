@@ -9,7 +9,7 @@ import {
   NInput,
   NModal,
   NText,
-  useMessage,
+  useMessage
 } from "naive-ui";
 import { storeToRefs } from "pinia";
 import { usePersonStore } from "../stores/person";
@@ -19,7 +19,7 @@ import { useRoute } from "vue-router";
 import {
   PlaylistAdd,
   TableImport as ImportIcon,
-  File as FileIcon,
+  File as FileIcon
 } from "@vicons/tabler";
 import { PersonAdd20Filled as PersonAddIcon } from "@vicons/fluent";
 import { generateUniqueId } from "../assets/script/util";
@@ -40,14 +40,16 @@ showMultiAddModal.value = route.query.showMultiAddModal === "true";
 
 const showImportModal = ref(false);
 
-if (showAddModal.value) {
+if (showAddModal.value)
+{
   showAddModal.value = false;
   setTimeout(() => {
     showAddModal.value = true;
   }, 100);
 } //虽然切换路由时会自动关闭，但是这样做可以让用户看到动画
 
-if (showMultiAddModal.value) {
+if (showMultiAddModal.value)
+{
   showMultiAddModal.value = false;
   setTimeout(() => {
     showMultiAddModal.value = true;
@@ -60,13 +62,14 @@ const formValue = ref({
   name: "",
   number: "",
   sex: 9,
-  uniqueId: generateUniqueId(),
+  uniqueId: generateUniqueId()
 });
 const multiAddForm = ref({ input: "", names: [] });
 
 const message = useMessage();
 
-function remToPx(remValue) {
+function remToPx(remValue)
+{
   const baseFontSize = parseFloat(
     getComputedStyle(document.documentElement).fontSize
   );
@@ -76,7 +79,7 @@ function remToPx(remValue) {
 const sexes = [
   { label: "男", value: 1 },
   { label: "女", value: 2 },
-  { label: "未填写", value: 9 },
+  { label: "未填写", value: 9 }
 ]; //此处参考了GB/T 2261.1-2003
 
 const editHandler = (row) => {
@@ -95,17 +98,19 @@ const createColumns = (edit, del) => {
   return [
     {
       title: "姓名",
-      key: "name",
+      key: "name"
     },
     {
       title: "学号",
-      key: "number",
+      key: "number"
     },
     {
       title: "性别",
       key: "sex",
-      render(row) {
-        switch (row.sex) {
+      render(row)
+      {
+        switch (row.sex)
+        {
           case 1:
             return "男";
           case 2:
@@ -113,13 +118,14 @@ const createColumns = (edit, del) => {
           default:
             return h(NText, { depth: 3 }, { default: () => "未填写" });
         }
-      },
+      }
     },
     {
       title: "操作",
       key: "actions",
       width: remToPx(8),
-      render(row) {
+      render(row)
+      {
         return h("div", { class: "flex flex-row" }, [
           h(
             NButton,
@@ -127,7 +133,7 @@ const createColumns = (edit, del) => {
               strong: true,
               tertiary: true,
               size: "small",
-              onClick: () => edit(row),
+              onClick: () => edit(row)
             },
             { default: () => "编辑" }
           ),
@@ -137,18 +143,19 @@ const createColumns = (edit, del) => {
               strong: true,
               tertiary: true,
               size: "small",
-              onClick: () => del(row),
+              onClick: () => del(row)
             },
             { default: () => "删除" }
-          ),
+          )
         ]);
-      },
-    },
+      }
+    }
   ];
 };
 
 const renderCell = (value) => {
-  if (!value) {
+  if (!value)
+  {
     return h(NText, { depth: 3 }, { default: () => "未填写" });
   }
   return value;
@@ -158,25 +165,25 @@ const columns = createColumns(editHandler, deleteHandler);
 
 const parseName = () => {
   multiAddForm.value.names = multiAddForm.value.input
-    .split(/[,\s]+/)
-    .filter(
-      (element) => element !== undefined && element !== null && element !== ""
-    );
+                                         .split(/[,\s]+/)
+                                         .filter(
+                                           (element) => element !== undefined && element !== null && element !== ""
+                                         );
 };
 
 const addPerson = () => {
   console.log(
     "添加了这" +
-      multiAddForm.value.names.length +
-      "个人：" +
-      multiAddForm.value.names
+    multiAddForm.value.names.length +
+    "个人：" +
+    multiAddForm.value.names
   );
   personList.value.push(
     ...multiAddForm.value.names.map((name) => ({
       name: name,
       number: "",
       sex: 9,
-      uniqueId: generateUniqueId(),
+      uniqueId: generateUniqueId()
     }))
   );
   message.success(
@@ -184,25 +191,29 @@ const addPerson = () => {
   );
   showAddModal.value = false;
   multiAddForm.value.names
-    .map(name => {
-      return { name: name, isSeat: true, isDashed: false };
-    })
-    .forEach((item) => allSeats.value.push(item));
+              .map(name => {
+                return { name: name, isSeat: true, isDashed: false };
+              })
+              .forEach((item) => allSeats.value.push(item));
   oldRenderingList.value = getRenderingList(allSeats.value, []);
   multiAddForm.value.names = [];
   multiAddForm.value.input = "";
 };
 
 const handler = () => {
-  if (isEdit.value) {
+  if (isEdit.value)
+  {
     personList.value = personList.value.map((item) => {
-      if (item.uniqueId === formValue.value.uniqueId) {
+      if (item.uniqueId === formValue.value.uniqueId)
+      {
         return formValue.value; // 使用展开语法更新 title 属性
       }
       return item; // 非匹配的元素保持原样
     });
     message.success("编辑成功");
-  } else {
+  }
+  else
+  {
     personList.value.push({ ...formValue.value, uniqueId: generateUniqueId() });
     message.success("添加成功");
   }
@@ -223,17 +234,20 @@ const parseExcel = async (uploadFileInfo) => {
       return {
         name: item.姓名,
         sex: item.性别 === "男" ? 1 : item.性别 === "女" ? 2 : 9,
-        number: JSON.stringify(item.学号),
+        number: JSON.stringify(item.学号)
       };
     })
     .filter((item) => item !== null);
-  if (persons.length === 0) {
+  if (persons.length === 0)
+  {
     message.error("未检测到任何人员信息，请检查文件格式是否正确");
-  } else {
+  }
+  else
+  {
     personList.value.push(
       ...persons.map((person) => ({
         ...person,
-        uniqueId: generateUniqueId(),
+        uniqueId: generateUniqueId()
       }))
     );
     message.success("导入成功");
@@ -245,11 +259,12 @@ const tableHeight = ref(window.innerHeight - remToPx(6));
 window.addEventListener("resize", () => {
   tableHeight.value = window.innerHeight - remToPx(6);
 });
+
 </script>
 
 <template>
   <n-space justify="space-between">
-    <p>修改后请重启程序以重新生成座位</p>
+    <p >{{ $route.name === "personManage" ? "修改后请重启程序以重新生成座位" : "" }}</p>
     <n-space>
       <n-button
         type="primary"
@@ -345,7 +360,7 @@ window.addEventListener("resize", () => {
           type="primary"
           :disabled="formValue.name.length === 0"
           @click="handler"
-          >保存
+        >保存
         </n-button>
       </div>
     </n-card>
