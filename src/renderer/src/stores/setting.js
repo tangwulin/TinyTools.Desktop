@@ -24,6 +24,8 @@ export const useSettingStore = defineStore(
     const enableOldToolBar = ref(false);
 
     const lotteryMode=ref("or");
+
+    const isFirstSetup = ref(true);
     return {
       coloringEdgeSeats,
       bgms,
@@ -39,6 +41,7 @@ export const useSettingStore = defineStore(
       enableDevelopFeature,
       enableOldToolBar,
       lotteryMode,
+      isFirstSetup,
     };
   },
   {
