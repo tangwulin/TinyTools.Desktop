@@ -36,12 +36,12 @@ const router = createRouter({
           name: "setup workSchedule",
           component: () => import("../views/Setup/WorkScheduleView.vue")
         },
-        {
-          path:"/setup/done",
-          name:"setup done",
-          component: () => import("../views/Setup/SetupDoneView.vue")
-        }
       ]
+    },
+    {
+      path:"/setup/done",
+      name:"setup done",
+      component: () => import("../views/Setup/SetupDoneView.vue")
     },
     {
       path: "/",
