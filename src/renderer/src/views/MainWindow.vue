@@ -30,7 +30,9 @@ watch(
   () => collapsed.value,
   (value) => {
     if (value) {
-      collapsedWithoutAnimation.value = true;
+      setTimeout(() => {
+        collapsedWithoutAnimation.value = true;
+      }, 50);
     } else {
       setTimeout(() => {
         collapsedWithoutAnimation.value = false;
