@@ -270,8 +270,6 @@ import {
 } from "../assets/script/musicHelper";
 import { useRouter } from "vue-router";
 
-const version = __APP_VERSION__;
-
 const message = useMessage();
 const router = useRouter();
 
