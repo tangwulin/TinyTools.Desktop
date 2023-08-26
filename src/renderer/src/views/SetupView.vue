@@ -23,7 +23,8 @@ watch(current, () => {
       router.push({ name: "setup schedule" });
       break;
     case 4:
-      router.push({ name: "setup workSchedule" });
+      // router.push({ name: "setup workSchedule" });
+      router.push({ name: "setup done" });//后面的功能还没做好，先跳过去
       break;
     case 5:
       router.push({ name: "setup done" });
@@ -45,12 +46,12 @@ watch(current, () => {
         <n-step title="添加人员" />
         <n-step title="分配座位" />
         <n-step title="填写课程表" />
-        <n-step title="填写值日表" />
+<!--        <n-step title="填写值日表" />-->
       </n-steps>
       <n-space style="width: 12rem" justify="end">
         <n-button @click="current--" v-if="current>1">上一步</n-button>
         <n-button @click="current++" v-if="current<=4" :disabled="personList.length===0">
-          {{ current === 4 ? "完成" : "下一步" }}
+          {{ current === 3 ? "完成" : "下一步" }}
         </n-button>
       </n-space>
     </div>
