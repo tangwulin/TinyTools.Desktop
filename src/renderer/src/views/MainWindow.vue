@@ -11,6 +11,11 @@ import {
   Person24Regular as PersonIcon,
 } from "@vicons/fluent";
 import { DiceOutline as DiceIcon } from "@vicons/ionicons5";
+import { useSettingStore } from "../stores/setting";
+import { storeToRefs } from "pinia";
+
+const settingStore = useSettingStore();
+const { enableDevelopFeature } = storeToRefs(settingStore);
 
 import logoUrl from "../assets/images/logo.png";
 
@@ -31,10 +36,11 @@ const menuOptions = [
             name: "dashboard",
           },
         },
-        { default: () => "数据总览" }
+        { default: () => "数据总览（未完成）" }
       ),
     key: "dashboard",
     icon: renderIcon(DataIcon),
+    show: enableDevelopFeature.value,
   },
   {
     label: () =>
@@ -59,10 +65,11 @@ const menuOptions = [
             name: "schedule",
           },
         },
-        { default: () => "值日排班" }
+        { default: () => "值日排班（未完成）" }
       ),
     key: "schedule",
     icon: renderIcon(ScheduleIcon),
+    show: enableDevelopFeature.value,
   },
   {
     label: () =>
