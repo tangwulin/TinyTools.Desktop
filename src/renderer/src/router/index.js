@@ -44,7 +44,7 @@ const router = createRouter({
             {
               path: "/setting/seat",
               name: "seatSetting",
-              component: () => import("../views/SeatSettingView.vue"),
+              component: () => import("../views/Setting/SeatSettingView.vue"),
             },
             {
               path: "/setting/bgm",
@@ -54,12 +54,12 @@ const router = createRouter({
                 {
                   path: "/setting/bgm/play",
                   name: "playSetting",
-                  component: () => import("../views/PlaySettingView.vue"),
+                  component: () => import("../views/Setting/PlaySettingView.vue"),
                 },
                 {
                   path: "/setting/bgm/playlist",
                   name: "playlistSetting",
-                  component: () => import("../views/PlaylistSettingView.vue"),
+                  component: () => import("../views/Setting/PlaylistSettingView.vue"),
                 },
               ],
             },
@@ -71,7 +71,7 @@ const router = createRouter({
             {
               path: "/setting/debug",
               name: "debugTool",
-              component: () => import("../views/DebugToolView.vue"),
+              component: () => import("../views/Setting/DebugToolView.vue"),
             },
           ],
         },

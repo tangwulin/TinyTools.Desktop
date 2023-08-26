@@ -1,5 +1,5 @@
 <script setup>
-import { useSettingStore } from "../stores/setting";
+import { useSettingStore } from "../../stores/setting";
 import { storeToRefs } from "pinia";
 import { NButton, useMessage } from "naive-ui";
 
