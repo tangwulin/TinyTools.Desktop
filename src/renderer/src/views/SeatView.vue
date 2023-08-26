@@ -41,7 +41,7 @@
       </n-collapse>
 
       <div
-        class="flex items-center justify-center flex-col md:flex-row flex-wrap md:w-3/5"
+        class="flex items-center justify-center flex-col md:flex-row flex-wrap md:w-3/5 lg:w-7/12"
       >
         <!-- 操作区域 -->
         <!--        <n-button @click="reloadSeatTable" :disabled="loading">重载座位表组件</n-button>-->
@@ -92,6 +92,9 @@
             </template>
           </n-button>
         </n-dropdown>
+        <n-button @click="showHistory = true" :disabled="loading"
+        >历史记录
+        </n-button>
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
@@ -163,9 +166,6 @@
       </div>
       <div>
         <n-button-group v-show="enableOldToolBar">
-          <n-button @click="showHistory = true" :disabled="loading"
-            >历史记录
-          </n-button>
           <n-button @click="showSetting">设置</n-button>
           <n-button @click="showManager" :disabled="loading || isPreview"
             >人员管理
@@ -220,11 +220,11 @@
       </n-drawer-content>
     </n-drawer>
 
-    <div class="fixed top-0 left-0 mt-4 ml-4" v-if="isPreview">
+    <div class="absolute top-0 left-0 mt-4 ml-4" v-if="isPreview">
       <n-button type="error" @click="exitPreview"> 退出预览</n-button>
     </div>
 
-    <div class="fixed top-0 right-0 mt-4 mr-4" v-if="isPreview">
+    <div class="absolute top-0 right-0 mt-4 mr-4" v-if="isPreview">
       <n-button type="success" @click="saveHistory('手动保存')">
         保存当前
       </n-button>
@@ -695,5 +695,9 @@ seatWorker.onmessage = function (event) {
 </script>
 
 <style scoped>
-
+/*@media (min-width: 1024px) {*/
+/*  .lg\:w-1\/2 {*/
+/*    width: 55%;*/
+/*  }*/
+/*}*/
 </style>
