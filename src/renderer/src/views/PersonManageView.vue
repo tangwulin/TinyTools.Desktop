@@ -264,7 +264,7 @@ window.addEventListener("resize", () => {
 
 <template>
   <n-space justify="space-between">
-    <p >{{ $route.name === "personManage" ? "修改后请重启程序以重新生成座位" : "" }}</p>
+    <p>{{ $route.name === "personManage" ? "修改后请重启程序以重新生成座位" : "" }}</p>
     <n-space>
       <n-button
         type="primary"
@@ -448,6 +448,9 @@ window.addEventListener("resize", () => {
           </n-text>
         </n-upload-dragger>
       </n-upload>
+      <n-space justify="center">
+        <a download="人员导入模板.xlsx" href="person.xlsx" target="_blank">点此获取模板</a>
+      </n-space>
       <template #footer>
         <div class="flex">
           <NButton
