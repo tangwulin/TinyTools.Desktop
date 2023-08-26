@@ -9,7 +9,7 @@ dependencies:
     specifier: ^2.0.0
     version: registry.npmmirror.com/@electron-toolkit/preload@2.0.0(electron@22.3.22)
   '@electron-toolkit/utils':
-    specifier: ^2.0.0
+    specifier: ' ^2.0.0'
     version: registry.npmmirror.com/@electron-toolkit/utils@2.0.0(electron@22.3.22)
   '@vicons/antd':
     specifier: ^0.12.0
