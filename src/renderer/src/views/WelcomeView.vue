@@ -26,8 +26,9 @@ const navToSetup = () => {
 <template>
   <div class="flex flex-col justify-center items-center" style="height: 100vh">
     <n-space vertical size="large" align="center">
-      <p style="font-size: 2rem;">Hi There！</p>
-      <p>欢迎使用TinyTools!<br /> 点击下方按钮即可获得专属工具</p>
+      <p style="font-size: 4rem;">Hi There！</p>
+<!--直男审美，我尽力了-->
+      <p>欢迎使用TinyTools!</p>
       <n-button type="primary" :disabled="!approved" @click="navToSetup">下一步
       </n-button>
       <n-space>
@@ -35,6 +36,7 @@ const navToSetup = () => {
         <p>我已阅读并同意
           <!--suppress CssUnresolvedCustomProperty -->
           <n-button text style="color: var(--n-text-color-hover)">《用户协议》</n-button>
+<!--          TODO:增加对应内容-->
           和
           <!--suppress CssUnresolvedCustomProperty -->
           <n-button text style="color: var(--n-text-color-hover)">《隐私政策》</n-button>
