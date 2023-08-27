@@ -453,9 +453,9 @@ const save = async (x) => {
       }
     },
     backgroundColor: "#FFFFFF",
-    scale: (960 * x) / target.clientWidth
+    scale: 3840 / target.clientWidth //统一保存为4K分辨率
   };
-  scale.value = x;
+  // scale.value = x;
   domToPng(target, options)
     .then((dataUrl) => {
       const link = document.createElement("a");
