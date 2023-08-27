@@ -45,9 +45,9 @@ function createWindow() {
 
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: (width / 1920) * 1080,
+    width: (height / 1080) * 1080,
     height: (height / 1080) * 650,
-    minWidth: (width / 1920) * 1080,
+    minWidth: (height / 1080) * 1080,
     minHeight: (height / 1080) * 650,
     show: false,
     center: true,
@@ -132,10 +132,10 @@ app.whenReady().then(() => {
     // HMR for renderer base on electron-vite cli.
     // Load the remote URL for development or the local html file for production.
     if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
-      dockWindow.loadURL(process.env["ELECTRON_RENDERER_URL"] + "/#/test");
+      dockWindow.loadURL(process.env["ELECTRON_RENDERER_URL"] + "/#/dock");
     } else {
       dockWindow.loadFile(join(__dirname, "../renderer/index.html/"),{
-        hash: "/test"
+        hash: "/dock"
       });
     }
 
