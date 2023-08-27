@@ -2,16 +2,23 @@
 import SeatTable from "../../components/SeatTable.vue";
 
 import { useSeatStore } from "../../stores/seat";
+import { useSettingStore } from "../../stores/setting";
 import { storeToRefs } from "pinia";
 import { debounce } from "lodash-es";
 import { toRaw, ref } from "vue";
 import { useMessage } from "naive-ui";
+
 const message = useMessage();
 import { domToPng } from "modern-screenshot";
 
+import { getRenderingList, replaceArrayElements } from "../../assets/script/seatHelper";
+import { shuffle } from "lodash-es";
 
 const seatStore = useSeatStore();
 const { allSeats, oldRenderingList, history } = storeToRefs(seatStore);
+
+const settingStore = useSettingStore();
+const { lotteryMode } = storeToRefs(settingStore);
 
 const mode = ref(false);
 const stKey = ref(Math.random());
@@ -107,6 +114,45 @@ const save = async () => {
       }, 3000);
     });
 };
+
+const lotteryModes = [
+  {
+    label: "平等",
+    value: "equality",
+    description: "随机打乱座位，会有不尽人意的情况"
+  },
+  {
+    label: "折中",
+    value: "or",
+    description: "外面一圈的人不会再次坐到外面一圈，但仍是随机排列"
+  },
+  {
+    label: "公平（未实现）",
+    value: "equity",
+    description: "通过对前几次结果的分析来决定这一次分配的位置",
+    disabled: true
+  }
+];
+
+const handler = () => {
+  switch (lotteryMode.value)
+  {
+    case "equality":
+      allSeats.value = shuffle(allSeats.value);
+      break;
+    case "or":
+      allSeats.value = replaceArrayElements(allSeats.value);
+      break;
+    case "equity":
+      message.error("该功能尚未实现");
+      break;
+    default:
+      allSeats.value = replaceArrayElements(allSeats.value);
+      break;
+  }
+  oldRenderingList.value = getRenderingList(allSeats.value);
+  saveHistory("初始位置");
+};
 </script>
 
 <template>
@@ -144,6 +190,20 @@ const save = async () => {
             学生视角
           </template>
         </n-switch>
+        <n-radio-group v-model:value="lotteryMode">
+          <n-space>
+            <p>模式选择</p>
+            <n-popover trigger="hover" v-for="item in lotteryModes">
+              <template #trigger>
+                <n-radio :key="item.value" :value="item.value" :disabled="item.disabled">
+                  {{ item.label }}
+                </n-radio>
+              </template>
+              {{ item.description }}
+            </n-popover>
+          </n-space>
+        </n-radio-group>
+        <n-button @click="handler">重新排列座位</n-button>
         <n-button @click="save">保存图片</n-button>
       </n-space>
     </n-space>
