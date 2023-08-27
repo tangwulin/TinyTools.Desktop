@@ -36,12 +36,12 @@ const router = createRouter({
           name: "setup workSchedule",
           component: () => import("../views/Setup/WorkScheduleView.vue")
         },
+        {
+          path:"/setup/done",
+          name:"setup done",
+          component: () => import("../views/Setup/SetupDoneView.vue")
+        },
       ]
-    },
-    {
-      path:"/setup/done",
-      name:"setup done",
-      component: () => import("../views/Setup/SetupDoneView.vue")
     },
     {
       path: "/",
@@ -117,9 +117,9 @@ const router = createRouter({
       ]
     },
     {
-      path: "/test",
-      name: "test",
-      component: () => import("../views/TransparentView.vue")
+      path:"/dock",
+      name:"dock",
+      component: () => import("../views/DockView.vue")
     }
   ]
 });
