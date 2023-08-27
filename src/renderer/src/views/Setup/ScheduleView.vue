@@ -14,7 +14,7 @@ const { allCourses } = storeToRefs(course);
 const message = useMessage();
 
 const hasImportSuccess = ref(false);
-if(allCourses.value.length !== 0)
+if (allCourses.value.length !== 0)
   hasImportSuccess.value = true;
 
 const parseExcel = async (uploadFileInfo) => {
@@ -134,6 +134,15 @@ const parseExcel = async (uploadFileInfo) => {
         <a download="课程表模板.xlsx" href="course.xlsx" target="_blank">点此获取模板</a>
       </n-space>
     </n-card>
+    <n-button
+      v-if="hasImportSuccess"
+      style="position:absolute;top: 1rem;left: 1rem"
+      type="warning"
+      @click="()=>{
+      allCourses=[]
+      hasImportSuccess=false
+    }">重新导入
+    </n-button>
   </div>
 </template>
 
