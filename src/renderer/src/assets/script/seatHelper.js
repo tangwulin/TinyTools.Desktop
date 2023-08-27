@@ -1,4 +1,4 @@
-import { difference, shuffle,intersection } from 'lodash-es'
+import { difference, shuffle } from 'lodash-es'
 
 export const getRenderingList = (seat = [], oldRenderingList = [], coloringEdge = false, forceUpdate = false) => {
   let stopwatch = performance.now()
