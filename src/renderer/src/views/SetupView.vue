@@ -30,6 +30,7 @@ watch(current, () => {
       router.push({ name: "setup done" });
       break;
     default:
+      current.value= 1;
       router.push({ name: "importPerson" });
       break;
   }
@@ -42,17 +43,21 @@ watch(current, () => {
     <!--    开始之前，我们需要填写一些必要信息-->
     <div style="position: fixed ;bottom: 1rem;left: 10%;right:auto;height: 4rem;width: 80%"
          class="flex justify-center items-center mt-auto">
-      <n-steps :current="current">
-        <n-step title="添加人员" />
-        <n-step title="分配座位" />
-        <n-step title="填写课程表" />
-<!--        <n-step title="填写值日表" />-->
-      </n-steps>
-      <n-space style="width: 12rem" justify="end">
-        <n-button @click="current--" v-if="current>1">上一步</n-button>
-        <n-button @click="current++" v-if="current<=4" :disabled="personList.length===0">
-          {{ current === 3 ? "完成" : "下一步" }}
-        </n-button>
+      <n-space justify="space-around">
+        <n-steps :current="current">
+          <n-step title="添加人员" />
+          <n-step title="分配座位" />
+          <n-step title="导入课程表" />
+          <!--        <n-step title="导入值日表" />-->
+          <n-step title="完成" />
+        </n-steps>
+        <n-space style="width: 12rem" justify="end">
+          <n-button @click="current--" v-if="current>1">上一步</n-button>
+          <n-button @click="current++" v-if="current<4" :disabled="personList.length===0">
+            <!--          {{ current === 4 ? "完成" : "下一步" }}-->
+            下一步
+          </n-button>
+        </n-space>
       </n-space>
     </div>
   </div>
