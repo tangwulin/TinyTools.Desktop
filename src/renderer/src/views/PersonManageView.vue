@@ -449,7 +449,7 @@ window.addEventListener("resize", () => {
         </n-upload-dragger>
       </n-upload>
       <n-space justify="center">
-        <a download="人员导入模板.xlsx" href="person.xlsx" target="_blank">点此获取模板</a>
+        <a download="人员导入模板.xlsx" href="xlsx/person.xlsx" target="_blank">点此获取模板</a>
       </n-space>
       <template #footer>
         <div class="flex">

@@ -131,7 +131,7 @@ const parseExcel = async (uploadFileInfo) => {
         </n-upload-dragger>
       </n-upload>
       <n-space v-if="!hasImportSuccess" justify="center">
-        <a download="课程表模板.xlsx" href="course.xlsx" target="_blank">点此获取模板</a>
+        <a download="课程表模板.xlsx" href="xlsx/course.xlsx" target="_blank">点此获取模板</a>
       </n-space>
     </n-card>
     <n-button
