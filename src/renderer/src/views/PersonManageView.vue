@@ -25,6 +25,8 @@ import { PersonAdd20Filled as PersonAddIcon } from "@vicons/fluent";
 import { generateUniqueId } from "../assets/script/util";
 import * as XLSX from "xlsx";
 
+import personXlsx from "../assets/xlsx/person.xlsx";
+
 const route = useRoute();
 
 const personStore = usePersonStore();
@@ -260,6 +262,12 @@ window.addEventListener("resize", () => {
   tableHeight.value = window.innerHeight - remToPx(6);
 });
 
+const downloadTemplate = () => {
+  const a = document.createElement("a");
+  a.href = personXlsx;
+  a.download = "人员导入模板.xlsx";
+  a.click();
+};
 </script>
 
 <template>
@@ -449,7 +457,8 @@ window.addEventListener("resize", () => {
         </n-upload-dragger>
       </n-upload>
       <n-space justify="center">
-        <a download="人员导入模板.xlsx" href="xlsx/person.xlsx" target="_blank">点此获取模板</a>
+<!--        <a download="人员导入模板.xlsx" :href="personXlsx" target="_blank">点此获取模板</a>-->
+        <n-button text @click="downloadTemplate">点此获取模板</n-button>
       </n-space>
       <template #footer>
         <div class="flex">

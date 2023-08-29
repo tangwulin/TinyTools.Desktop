@@ -52,6 +52,7 @@ export default defineConfig({
         '@': resolve('src/renderer/src')
       }
     },
+    assetsInclude: ["**/*.xlsx"],
     build: {
       chunkSizeWarningLimit: 1500,
       // rollupOptions: {

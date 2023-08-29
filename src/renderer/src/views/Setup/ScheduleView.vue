@@ -8,6 +8,8 @@ import { ref } from "vue";
 import { useCourseStore } from "../../stores/course";
 import { storeToRefs } from "pinia";
 
+import courseXlsx from "../../assets/xlsx/course.xlsx";
+
 const course = useCourseStore();
 const { allCourses } = storeToRefs(course);
 
@@ -61,6 +63,13 @@ const parseExcel = async (uploadFileInfo) => {
     message.success("导入成功");
     hasImportSuccess.value = true;
   }
+};
+
+const downloadTemplate = () => {
+  const a = document.createElement("a");
+  a.href = courseXlsx;
+  a.download = "课程表模板.xlsx";
+  a.click();
 };
 </script>
 
@@ -131,7 +140,8 @@ const parseExcel = async (uploadFileInfo) => {
         </n-upload-dragger>
       </n-upload>
       <n-space v-if="!hasImportSuccess" justify="center">
-        <a download="课程表模板.xlsx" href="xlsx/course.xlsx" target="_blank">点此获取模板</a>
+<!--        <a download="课程表模板.xlsx" :href="courseXlsx" target="_blank">点此获取模板</a>-->
+        <n-button text @click="downloadTemplate">点此获取模板</n-button>
       </n-space>
     </n-card>
     <n-button
