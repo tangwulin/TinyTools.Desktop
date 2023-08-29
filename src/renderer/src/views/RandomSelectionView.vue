@@ -1,5 +1,5 @@
 <script setup>
-import { DiceOutline, Dice } from "@vicons/ionicons5";
+import { Dice, DiceOutline } from "@vicons/ionicons5";
 import { ref, watch } from "vue";
 import { usePersonStore } from "../stores/person";
 import { storeToRefs } from "pinia";
@@ -26,7 +26,7 @@ const hasHover2 = ref(false);
 const sexes = [
   { label: "男", value: 1 },
   { label: "女", value: 2 },
-  { label: "未填写", value: 9 },
+  { label: "未填写", value: 9 }
 ]; //此处参考了GB/T 2261.1-2003
 
 const handler = (fast) => {
@@ -56,15 +56,17 @@ const handler = (fast) => {
   }, 3000);
 };
 
-function createOptions(x) {
+function createOptions(x)
+{
   return x.map((item) => ({
     label: item.name,
     value: item.uniqueId,
-    disabled: false,
+    disabled: false
   }));
 }
 
-function createValues(x) {
+function createValues(x)
+{
   return x.map((item) => item.uniqueId);
 }
 
@@ -160,8 +162,8 @@ watch(
           @mouseleave="hasHover1 = false"
         >
           <n-icon size="2rem">
-            <Dice v-if="hasHover1"/>
-            <DiceOutline v-else/>
+            <Dice v-if="hasHover1" />
+            <DiceOutline v-else />
           </n-icon>
           <span>快速开始</span>
         </div>
@@ -173,8 +175,8 @@ watch(
           @mouseleave="hasHover2 = false"
         >
           <n-icon size="2rem">
-            <Dice v-if="hasHover2"/>
-            <DiceOutline v-else/>
+            <Dice v-if="hasHover2" />
+            <DiceOutline v-else />
           </n-icon>
           <span>自定义</span>
         </div>
