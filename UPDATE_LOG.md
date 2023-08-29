@@ -1,5 +1,32 @@
 # Updater Log
 
+## v3.99.1-beta.4
+
+- feat: 提取公共方法
+- feat: 增加设置项
+- feat: 增加无头像时的fallback
+- feat: 增加无头像时的fallback
+- fix: code style
+- feat: 改用方括号访问属性值
+- fix: code style
+- feat: 把依赖打进一个js
+- fix: 修复无法获取模板的bug（不知道为啥原生a标签不行
+- feat: 自动导入
+- feat: 统一由屏幕高度调整窗口大小（竖屏设备自求多福
+- feat: 向导结束页层级调整
+- feat: 统一保存的图片为4K分辨率
+- fix: 修复模板无法获取的问题
+- feat: 初始化向导优化
+- feat: 值日表初步
+- feat: 改个名字
+- feat: 为配置向导-导入课程表增加重新导入功能
+- feat: 为配置向导-分配座位增加抽选座位功能
+- feat: 移除不需要的组件
+- feat: (origin/dev) 一点小修改
+- fix: 修复新抽选方式在外圈数量多于里面的情况下的问题
+- feat: 更新pnpm-lock.yaml
+
+
 ## v3.99.1-beta.3
 - feat: 增加讲台视角
 - feat: 增加首次使用欢迎页面
