@@ -26,6 +26,10 @@ export const useSettingStore = defineStore(
     const lotteryMode=ref("or");
 
     const isFirstSetup = ref(true);
+
+    const enableAvatar = ref(true);
+    const enableFallbackAvatar = ref(true);
+    const avatarWorks=ref([1,2])
     return {
       coloringEdgeSeats,
       bgms,
@@ -42,6 +46,9 @@ export const useSettingStore = defineStore(
       enableOldToolBar,
       lotteryMode,
       isFirstSetup,
+      enableAvatar,
+      enableFallbackAvatar,
+      avatarWorks
     };
   },
   {

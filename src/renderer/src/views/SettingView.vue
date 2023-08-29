@@ -10,6 +10,7 @@ import {
   MusicNote2Play20Regular as MusicPlayIcon,
   Person20Regular as PersonIcon,
 } from "@vicons/fluent";
+import { DiceOutline as DiceIcon } from "@vicons/ionicons5";
 
 const settingStore = useSettingStore();
 const { enableDevelopFeature } = storeToRefs(settingStore);
@@ -39,6 +40,20 @@ const settingOptions = [
           ),
         key: "seatSetting",
         icon: renderIcon(SettingIcon),
+      },
+      {
+        label: () =>
+          h(
+            RouterLink,
+            {
+              to: {
+                name: "randomSelectionSetting",
+              },
+            },
+            { default: () => "随机抽选" }
+          ),
+        key: "randomSelectionSetting",
+        icon: renderIcon(DiceIcon),
       },
     ],
   },

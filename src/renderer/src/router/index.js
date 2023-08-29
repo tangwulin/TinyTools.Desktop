@@ -86,6 +86,11 @@ const router = createRouter({
               component: () => import("../views/Setting/SeatSettingView.vue")
             },
             {
+              path: "/setting/randomSelection",
+              name: "randomSelectionSetting",
+              component: () => import("../views/Setting/RandomSelectionSettingView.vue")
+            },
+            {
               path: "/setting/bgm",
               name: "bgmSetting",
               redirect: "/setting/bgm/play",
