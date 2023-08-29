@@ -22,7 +22,7 @@ import {
   File as FileIcon
 } from "@vicons/tabler";
 import { PersonAdd20Filled as PersonAddIcon } from "@vicons/fluent";
-import { generateUniqueId } from "../assets/script/util";
+import { generateUniqueId, remToPx } from "../assets/script/util";
 import * as XLSX from "xlsx";
 
 import personXlsx from "../assets/xlsx/person.xlsx";
@@ -70,13 +70,7 @@ const multiAddForm = ref({ input: "", names: [] });
 
 const message = useMessage();
 
-function remToPx(remValue)
-{
-  const baseFontSize = parseFloat(
-    getComputedStyle(document.documentElement).fontSize
-  );
-  return remValue * baseFontSize;
-}
+
 
 const sexes = [
   { label: "男", value: 1 },
