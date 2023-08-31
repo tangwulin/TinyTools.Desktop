@@ -1,5 +1,8 @@
 # Updater Log
 
+## v3.99.1-beta.5
+懒得写了（
+
 ## v3.99.1-beta.4
 
 - feat: 提取公共方法
