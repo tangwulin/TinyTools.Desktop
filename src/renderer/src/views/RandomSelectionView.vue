@@ -118,14 +118,29 @@ function selectAvatar(studentId, avatarCount)
   return hashValue % avatarCount;
 }
 
+const male = getAvatarUrls(1, avatarWorks.value);
+const female = getAvatarUrls(2, avatarWorks.value);
+
 const getAvatar = (person) => {
-  if (!enableAvatar) return null;
-  if (!person) return null;
-  if (!person.uniqueId) return null;
-  if (person.avatar) return person.avatar;
+  // if (!enableAvatar) return null;
+  // if (!person) return null;
+  // if (!person.uniqueId) return null;
+  if (person?.avatar) return person.avatar;
   if (!enableFallbackAvatar.value) return null;
   const sn = person.number ? person.number : person.uniqueId;
-  const urls = getAvatarUrls(person.sex, avatarWorks.value);
+  let urls;
+  switch (person.sex)
+  {
+    case 1:
+      urls = male;
+      break;
+    case 2:
+      urls = female;
+      break;
+    default:
+      urls = male.concat(female);
+      break;
+  }
   return urls[selectAvatar(sn, urls.length)].src;
 };
 </script>
