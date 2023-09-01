@@ -1,31 +1,31 @@
 <script setup>
-import { ref } from "vue";
-import { useSettingStore } from "../../stores/setting";
-import { storeToRefs } from "pinia";
-import { remToPx } from "../../assets/script/util";
-import { getAvatarUrls } from "../../assets/script/avatarUrl";
-import { useMessage } from "naive-ui";
+import { ref } from 'vue'
+import { useSettingStore } from '../../stores/setting'
+import { storeToRefs } from 'pinia'
+import { remToPx } from '../../assets/script/util'
+import { getAvatarUrls } from '../../assets/script/avatarUrl'
+import { useMessage } from 'naive-ui'
 
-const message = useMessage();
+const message = useMessage()
 
-const setting = useSettingStore();
-const { enableAvatar, enableFallbackAvatar, avatarWorks } = storeToRefs(setting);
-const works = [{ value: 1, label: "原神" }, { value: 2, label: "明日方舟" }];
+const setting = useSettingStore()
+const { enableAvatar, enableFallbackAvatar, avatarWorks } = storeToRefs(setting)
+const works = [{ value: 1, label: '原神' }, { value: 2, label: '明日方舟' }, { value: 3, label: '崩坏·星穹铁道' }]
 
 const sexes = [
-  { label: "男", value: 1 },
-  { label: "女", value: 2 },
-  { label: "未填写", value: 9 }
-]; //此处参考了GB/T 2261.1-2003
+  { label: '男', value: 1 },
+  { label: '女', value: 2 },
+  { label: '未填写', value: 9 },
+] //此处参考了GB/T 2261.1-2003
 
-const selectedSex = ref(1);
-const selectedAvatar = ref(getAvatarUrls(1, avatarWorks.value));
-const handler = () => {selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value);};
+const selectedSex = ref(1)
+const selectedAvatar = ref(getAvatarUrls(1, avatarWorks.value))
+const handler = () => {selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value)}
 const writeClipboard = (x) => {
   navigator.clipboard.writeText(x)
-           .then(() => {message.success("链接已复制到剪贴板");})
-           .catch(() => {message.error("请授予剪贴板权限！");});
-};
+           .then(() => {message.success('链接已复制到剪贴板')})
+           .catch(() => {message.error('请授予剪贴板权限！')})
+}
 </script>
 
 <template>

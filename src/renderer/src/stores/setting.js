@@ -29,7 +29,7 @@ export const useSettingStore = defineStore(
 
     const enableAvatar = ref(true);
     const enableFallbackAvatar = ref(true);
-    const avatarWorks=ref([1,2])
+    const avatarWorks=ref([1,2,3])
     return {
       coloringEdgeSeats,
       bgms,
