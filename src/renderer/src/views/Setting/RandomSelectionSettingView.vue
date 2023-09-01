@@ -86,9 +86,11 @@ const writeClipboard = (x) => {
               >
                 <n-avatar
                   round
+                  lazy
                   style="margin-bottom: 0.5rem"
                   :size="remToPx(4)"
                   :src="item.src"
+                  object-fit="contain"
                 />
                 <span>{{ item?.description }}</span>
               </div>

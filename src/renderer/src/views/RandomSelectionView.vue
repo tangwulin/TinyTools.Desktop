@@ -187,9 +187,11 @@ const getAvatar = (person) => {
                 <n-avatar
                   v-if="enableAvatar"
                   round
+                  lazy
                   style="margin-bottom: 0.5rem"
                   :size="remToPx(4)"
                   :src="getAvatar(item)"
+                  object-fit="contain"
                 />
                 <span style="font-size: 1.5rem">{{ item?.name }}</span>
               </div>
