@@ -341,6 +341,9 @@ const downloadTemplate = () => {
       "
     >
       <n-form>
+        <n-form-item label="头像" path="avatar">
+          <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
+        </n-form-item>
         <n-form-item label="姓名" path="name">
           <n-input v-model:value="formValue.name" placeholder="输入姓名" />
         </n-form-item>
