@@ -32,7 +32,7 @@ const clickHandler = () => {
 
 <template>
   <n-scrollbar >
-    <div class="flex flex-col items-center h-full pb-2 " style="height: 100vh;">
+    <div class="flex flex-col items-center h-full pb-2 " style="height: 100%;">
       <div class="mb-4 w-3/5 p-4">
         <img src="../assets/img.png" alt="logo" style="margin: auto"/>
       </div>
@@ -92,7 +92,7 @@ const clickHandler = () => {
 <!--          />-->
 <!--        </a>-->
       </div>
-      <div class="mt-auto text-xs">
+      <div class="mt-4 text-xs">
         <p class="mt-auto flex">
           Powered By Aurora Studio
           <a class="ml-auto" :href="githubLink" target="_blank">

@@ -209,7 +209,7 @@ const footerMenuOptions = [
     </n-layout-sider>
 
     <!--下方router-view内内容加css只能在各组件内部加-->
-    <n-layout-content content-style="margin:0.5rem 0.5rem auto 0.5rem">
+    <n-layout-content content-style="padding:0.5rem 0.5rem 0 0.5rem">
       <router-view />
     </n-layout-content>
   </n-layout>
