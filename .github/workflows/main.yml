@@ -37,15 +37,18 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: build frontend
+        run: pnpm run build
+
       - name: build-win_x64
         if: matrix.os == 'windows-latest'
-        run: pnpm run build:win_x64
+        run: electron-builder --win --config --x64
         env:
           TAG: ${{ steps.tagName.outputs.tag }}
 
       - name: build-win_ia32
         if: matrix.os == 'windows-latest'
-        run: pnpm run build:win_ia32
+        run: electron-builder --win --config --ia32
         env:
           TAG: ${{ steps.tagName.outputs.tag }}
 
