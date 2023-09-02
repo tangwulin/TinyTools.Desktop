@@ -40,7 +40,7 @@ const writeClipboard = (x) => {
     </n-space>
     <n-space>
       <p>内置头像来源</p>
-      <n-checkbox-group v-model:value="avatarWorks" :disabled="!enableFallbackAvatar" @change="handler">
+      <n-checkbox-group v-model:value="avatarWorks" :disabled="!enableFallbackAvatar" :on-update:value="handler">
         <n-space item-style="display: flex;">
           <n-checkbox v-for="item in works" :label="item.label" :value="item.value" />
         </n-space>
