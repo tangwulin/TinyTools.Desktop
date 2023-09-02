@@ -220,7 +220,6 @@
 import { nextTick, onMounted, onUnmounted, ref, toRaw, watch } from 'vue'
 import { NButton, NButtonGroup, NIcon, NTooltip, useMessage } from 'naive-ui'
 import { Refresh, RefreshDot } from '@vicons/tabler'
-import { ArrowDropDownFilled } from '@vicons/material'
 import SeatTable from '../components/SeatTable.vue'
 import HistoryDrawer from '../components/HistoryDrawer.vue'
 import { domToPng } from 'modern-screenshot'
@@ -272,24 +271,24 @@ const times = ref(5)
 const stKey = ref(Math.random())
 let msgReactive = null
 
-const lotteryModes = [
-  {
-    label: '平等',
-    value: 'equality',
-    description: '随机打乱座位，会有不尽人意的情况',
-  },
-  {
-    label: '折中',
-    value: 'or',
-    description: '外面一圈的人不会再次坐到外面一圈，但仍是随机排列',
-  },
-  {
-    label: '公平（未实现）',
-    value: 'equity',
-    description: '通过对前几次结果的分析来决定这一次分配的位置',
-    disabled: true,
-  },
-]
+// const lotteryModes = [
+//   {
+//     label: '平等',
+//     value: 'equality',
+//     description: '随机打乱座位，会有不尽人意的情况',
+//   },
+//   {
+//     label: '折中',
+//     value: 'or',
+//     description: '外面一圈的人不会再次坐到外面一圈，但仍是随机排列',
+//   },
+//   {
+//     label: '公平（未实现）',
+//     value: 'equity',
+//     description: '通过对前几次结果的分析来决定这一次分配的位置',
+//     disabled: true,
+//   },
+// ]
 
 const colorEdge = () => {
   const edgeIndex = parseEdgeSeatIndex(allSeats.value.length)
@@ -424,21 +423,21 @@ const updateHandler = debounce(
   { maxWait: 2000 },
 )
 
-const saveOptions = [
-  {
-    label: '图片分辨率（宽度）',
-    key: 1,
-    disabled: true,
-  },
-  {
-    label: '1080P',
-    key: 2,
-  },
-  {
-    label: '4K',
-    key: 4,
-  },
-]
+// const saveOptions = [
+//   {
+//     label: '图片分辨率（宽度）',
+//     key: 1,
+//     disabled: true,
+//   },
+//   {
+//     label: '1080P',
+//     key: 2,
+//   },
+//   {
+//     label: '4K',
+//     key: 4,
+//   },
+// ]
 /**
  * 保存当前座位为图片
  * @returns {Promise<void>}
@@ -652,27 +651,27 @@ const replaceSeats = async () => {
   }, 50)
 }
 
-const handler = (times,type) => {
-  let process=null
-  switch (lotteryMode.value)
-  {
-    case 'equality':
-      process=reSort()
-      break
-    case 'or':
-      if(times) process=rollSeats(times)
-      else
-        if(type) gacha()
-        else replaceSeats()
-      break
-    case 'equity':
-      message.error('暂未实现')
-      break
-    default:
-      message.error('出错了，请前往设置-通用设置-抽选座位重新设置抽选方式')
-      break
-  }
-}
+// const handler = (times,type) => {
+//   let process=null
+//   switch (lotteryMode.value)
+//   {
+//     case 'equality':
+//       process=reSort()
+//       break
+//     case 'or':
+//       if(times) process=rollSeats(times)
+//       else
+//         if(type) gacha()
+//         else replaceSeats()
+//       break
+//     case 'equity':
+//       message.error('暂未实现')
+//       break
+//     default:
+//       message.error('出错了，请前往设置-通用设置-抽选座位重新设置抽选方式')
+//       break
+//   }
+// }
 /**
  * 通过刷新key的方式重新渲染SeatTable组件
  * @returns {Promise<void>}
