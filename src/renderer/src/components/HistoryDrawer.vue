@@ -22,7 +22,7 @@ const temp = computed({
   {
     _temp.value = { ...value }
     emit('update:temp', value)
-  }
+  },
 })
 
 const _isPreview = ref(props.isPreview)
@@ -35,7 +35,7 @@ const isPreview = computed({
   {
     _isPreview.value = value
     emit('update:isPreview', value)
-  }
+  },
 })
 
 watch(() => props.isPreview, () => {
@@ -53,7 +53,7 @@ const previewHandler = (x) => {
     isPreview.value = true
     temp.value = {
       allSeats: [...allSeats.value],
-      oldRenderingList: [...oldRenderingList.value]
+      oldRenderingList: [...oldRenderingList.value],
     }
   }
   history.value = history.value.map(item => {
@@ -70,7 +70,7 @@ const rollbackHandler = (x) => {
     return {
       ...item,
       isCurrent: false,
-      isShowing:false
+      isShowing: false,
     }
   }).map(item => {
     if (item.time === x.time)
@@ -82,7 +82,7 @@ const rollbackHandler = (x) => {
   {
     temp.value = {
       allSeats: [...x.allSeats],
-      oldRenderingList: [...x.oldRenderingList]
+      oldRenderingList: [...x.oldRenderingList],
     }
     isPreview.value = false
   }
@@ -103,7 +103,7 @@ const delHandler = (x) => {
   <n-list>
     <n-scrollbar style="max-height: 100%">
       <n-list-item v-for="item in history">
-        <n-popover trigger="hover" placement="left" id="popover" style="width: 42.5vw;height: 34vh">
+        <n-popover id="popover" placement="left" style="width: 42.5vw;height: 34vh" trigger="hover">
           <template #trigger>
             <div class="flex flex-col">
               <n-button text @click="previewHandler(item)">{{ new Date(item.time).toLocaleString() }}</n-button>
@@ -117,14 +117,14 @@ const delHandler = (x) => {
 
           <div id="preview" class="flex flex-col items-center justify-center">
             <n-button :size='"large"'>讲台</n-button>
-            <SeatTable :seats="item.allSeats" :rendering-list="item.oldRenderingList" :disable="true"/>
+            <SeatTable :disable="true" :rendering-list="item.oldRenderingList" :seats="item.allSeats" />
           </div>
         </n-popover>
         <template #suffix>
           <n-popconfirm
-              @positive-click="rollbackHandler(item)"
-              :positive-text="'确认'"
-              :negative-text="'取消'"
+            :negative-text="'取消'"
+            :positive-text="'确认'"
+            @positive-click="rollbackHandler(item)"
           >
             <template #trigger>
               <n-button type="warning">回滚到此处</n-button>
@@ -132,9 +132,9 @@ const delHandler = (x) => {
             确定要回滚到此处吗？
           </n-popconfirm>
           <n-popconfirm
-              @positive-click="delHandler(item)"
-              :positive-text="'确认'"
-              :negative-text="'取消'"
+            :negative-text="'取消'"
+            :positive-text="'确认'"
+            @positive-click="delHandler(item)"
           >
             <template #trigger>
               <n-button type="error">删除该记录</n-button>

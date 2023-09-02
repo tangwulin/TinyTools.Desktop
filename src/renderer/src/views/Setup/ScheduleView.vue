@@ -1,76 +1,81 @@
 <script setup>
-import * as XLSX from "xlsx";
-import { NText, useMessage } from "naive-ui";
-import {
-  File as FileIcon
-} from "@vicons/tabler";
-import { ref } from "vue";
-import { useCourseStore } from "../../stores/course";
-import { storeToRefs } from "pinia";
+import * as XLSX from 'xlsx'
+import { NText, useMessage } from 'naive-ui'
+import { File as FileIcon } from '@vicons/tabler'
+import { ref } from 'vue'
+import { useCourseStore } from '../../stores/course'
+import { storeToRefs } from 'pinia'
 
-const course = useCourseStore();
-const { allCourses } = storeToRefs(course);
+import courseXlsx from '../../assets/xlsx/course.xlsx'
+import { downloadAnyFile } from '../../assets/script/util'
 
-const message = useMessage();
+const course = useCourseStore()
+const { allCourses } = storeToRefs(course)
 
-const hasImportSuccess = ref(false);
-if(allCourses.value.length !== 0)
-  hasImportSuccess.value = true;
+const message = useMessage()
+
+const hasImportSuccess = ref(false)
+if (allCourses.value.length !== 0)
+  hasImportSuccess.value = true
 
 const parseExcel = async (uploadFileInfo) => {
-  const file = uploadFileInfo.file.file;
-  const data = await file.arrayBuffer();
-  const workbook = XLSX.read(data);
-  const sheetNames = workbook.SheetNames; // 工作表名称集合
-  const worksheet = workbook.Sheets[sheetNames[0]]; // 这里我们只读取第一张sheet
-  const json = XLSX.utils.sheet_to_json(worksheet);
+  const file = uploadFileInfo.file.file
+  const data = await file.arrayBuffer()
+  const workbook = XLSX.read(data)
+  const sheetNames = workbook.SheetNames // 工作表名称集合
+  const worksheet = workbook.Sheets[sheetNames[0]] // 这里我们只读取第一张sheet
+  const json = XLSX.utils.sheet_to_json(worksheet)
 
   const coursesFromExcel = json.map((item) => {
     try
     {
       return {
         time: {
-          start: { hour: parseInt(item["开始时间"].split(":")[0]), minute: parseInt(item["开始时间"].split(":")[1]) },
-          end: { hour: parseInt(item["结束时间"].split(":")[0]), minute: parseInt(item["结束时间"].split(":")[1]) }
+          start: { hour: parseInt(item['开始时间'].split(':')[0]), minute: parseInt(item['开始时间'].split(':')[1]) },
+          end: { hour: parseInt(item['结束时间'].split(':')[0]), minute: parseInt(item['结束时间'].split(':')[1]) },
         },
-        mon: item["星期一"],
-        tue: item["星期二"],
-        wed: item["星期三"],
-        thu: item["星期四"],
-        fri: item["星期五"],
-        spe1: item["特别1"],
-        spe2: item["特别2"],
-        spe3: item["特别3"],
-        spe4: item["特别4"],
-        spe5: item["特别5"]
-      };
+        mon: item['星期一'],
+        tue: item['星期二'],
+        wed: item['星期三'],
+        thu: item['星期四'],
+        fri: item['星期五'],
+        spe1: item['特别1'],
+        spe2: item['特别2'],
+        spe3: item['特别3'],
+        spe4: item['特别4'],
+        spe5: item['特别5'],
+      }
     }
     catch (e)
     {
-      return undefined;
+      return undefined
     }
-  }).filter((item) => item !== undefined);
+  }).filter((item) => item !== undefined)
 
   if (coursesFromExcel.length === 0)
   {
-    message.error("未检测到有效的信息，请检查文件格式是否正确");
+    message.error('未检测到有效的信息，请检查文件格式是否正确')
   }
   else
   {
-    allCourses.value = coursesFromExcel;
-    message.success("导入成功");
-    hasImportSuccess.value = true;
+    allCourses.value = coursesFromExcel
+    message.success('导入成功')
+    hasImportSuccess.value = true
   }
-};
+}
+
+const downloadTemplate = () => {
+  downloadAnyFile(courseXlsx,'课程表模板.xlsx')
+}
 </script>
 
 <template>
   <div style="display: flex;justify-content: center;height: 80%;">
     <n-card
-      style="margin: auto auto;display: flex;justify-content: center;align-items: center"
       :bordered="false"
+      style="margin: auto auto;display: flex;justify-content: center;align-items: center"
     >
-      <n-table :single-line="false" v-if="hasImportSuccess">
+      <n-table v-if="hasImportSuccess" :single-line="false">
         <thead>
         <tr>
           <th>时间</th>
@@ -105,23 +110,23 @@ const parseExcel = async (uploadFileInfo) => {
         </tbody>
       </n-table>
       <n-upload
-        style="width: 40rem"
         v-else
-        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-        multiple
-        directory-dnd
-        action=""
+        :default-upload="false"
+        :max="1"
         :on-before-upload="
           (fileInfo) => {
             parseExcel(fileInfo);
           }
         "
-        :default-upload="false"
-        :max="1"
+        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+        action=""
+        directory-dnd
+        multiple
+        style="width: 40rem"
       >
         <n-upload-dragger>
           <div style="margin-bottom: 12px">
-            <n-icon size="48" :depth="3">
+            <n-icon :depth="3" size="48">
               <file-icon />
             </n-icon>
           </div>
@@ -131,9 +136,19 @@ const parseExcel = async (uploadFileInfo) => {
         </n-upload-dragger>
       </n-upload>
       <n-space v-if="!hasImportSuccess" justify="center">
-        <a download="课程表模板.xlsx" href="course.xlsx" target="_blank">点此获取模板</a>
+        <!--        <a download="课程表模板.xlsx" :href="courseXlsx" target="_blank">点此获取模板</a>-->
+        <n-button text @click="downloadTemplate">点此获取模板</n-button>
       </n-space>
     </n-card>
+    <n-button
+      v-if="hasImportSuccess"
+      style="position:absolute;top: 1rem;left: 1rem"
+      type="warning"
+      @click="()=>{
+      allCourses=[]
+      hasImportSuccess=false
+    }">重新导入
+    </n-button>
   </div>
 </template>
 

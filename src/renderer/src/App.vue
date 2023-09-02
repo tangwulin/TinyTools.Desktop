@@ -1,8 +1,8 @@
 <script setup>
-import { dateZhCN, zhCN } from "naive-ui";
+import { dateZhCN, zhCN } from 'naive-ui'
 </script>
 <template>
-  <n-config-provider :locale="zhCN" :date-locale="dateZhCN">
+  <n-config-provider :date-locale="dateZhCN" :locale="zhCN">
     <n-message-provider>
       <router-view />
     </n-message-provider>

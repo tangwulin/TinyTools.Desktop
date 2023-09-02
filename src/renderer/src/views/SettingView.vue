@@ -1,29 +1,31 @@
 <script setup>
-import { useSettingStore } from "../stores/setting";
-import { storeToRefs } from "pinia";
-import { h } from "vue";
-import { NIcon } from "naive-ui";
-import { RouterLink } from "vue-router";
+import { useSettingStore } from '../stores/setting'
+import { storeToRefs } from 'pinia'
+import { h } from 'vue'
+import { NIcon } from 'naive-ui'
+import { RouterLink } from 'vue-router'
 import {
-  Settings16Regular as SettingIcon,
   MusicNote220Regular as MusicIcon,
   MusicNote2Play20Regular as MusicPlayIcon,
   Person20Regular as PersonIcon,
-} from "@vicons/fluent";
+  Settings16Regular as SettingIcon,
+} from '@vicons/fluent'
+import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 
-const settingStore = useSettingStore();
-const { enableDevelopFeature } = storeToRefs(settingStore);
+const settingStore = useSettingStore()
+const { enableDevelopFeature } = storeToRefs(settingStore)
 
-const activeKey = ref("seatSetting");
+const activeKey = ref('seatSetting')
 
-function renderIcon(icon) {
-  return () => h(NIcon, null, { default: () => h(icon) });
+function renderIcon(icon)
+{
+  return () => h(NIcon, null, { default: () => h(icon) })
 }
 
 const settingOptions = [
   {
-    label: "通用设置",
-    key: "generalSetting",
+    label: '通用设置',
+    key: 'generalSetting',
     icon: renderIcon(PersonIcon),
     children: [
       {
@@ -32,19 +34,33 @@ const settingOptions = [
             RouterLink,
             {
               to: {
-                name: "seatSetting",
+                name: 'seatSetting',
               },
             },
-            { default: () => "抽选座位" }
+            { default: () => '抽选座位' },
           ),
-        key: "seatSetting",
+        key: 'seatSetting',
         icon: renderIcon(SettingIcon),
+      },
+      {
+        label: () =>
+          h(
+            RouterLink,
+            {
+              to: {
+                name: 'randomSelectionSetting',
+              },
+            },
+            { default: () => '随机抽选' },
+          ),
+        key: 'randomSelectionSetting',
+        icon: renderIcon(DiceIcon),
       },
     ],
   },
   {
-    label: "背景音乐",
-    key: "bgmSetting",
+    label: '背景音乐',
+    key: 'bgmSetting',
     icon: renderIcon(MusicIcon),
     children: [
       {
@@ -53,12 +69,12 @@ const settingOptions = [
             RouterLink,
             {
               to: {
-                name: "playSetting",
+                name: 'playSetting',
               },
             },
-            { default: () => "播放设置" }
+            { default: () => '播放设置' },
           ),
-        key: "playSetting",
+        key: 'playSetting',
         icon: renderIcon(SettingIcon),
       },
       {
@@ -67,15 +83,15 @@ const settingOptions = [
             RouterLink,
             {
               to: {
-                name: "playlistSetting",
+                name: 'playlistSetting',
                 query: {
-                  type: "bgm",
+                  type: 'bgm',
                 },
               },
             },
-            { default: () => "抽选音乐" }
+            { default: () => '抽选音乐' },
           ),
-        key: "bgmPlaylist",
+        key: 'bgmPlaylist',
         icon: renderIcon(MusicPlayIcon),
       },
       {
@@ -84,15 +100,15 @@ const settingOptions = [
             RouterLink,
             {
               to: {
-                name: "playlistSetting",
+                name: 'playlistSetting',
                 query: {
-                  type: "finalBgm",
+                  type: 'finalBgm',
                 },
               },
             },
-            { default: () => "结算音乐" }
+            { default: () => '结算音乐' },
           ),
-        key: "finalBgmPlaylist",
+        key: 'finalBgmPlaylist',
         icon: renderIcon(MusicPlayIcon),
       },
     ],
@@ -103,34 +119,33 @@ const settingOptions = [
         RouterLink,
         {
           to: {
-            name: "debugTool",
+            name: 'debugTool',
           },
         },
-        { default: () => "调试工具" }
+        { default: () => '调试工具' },
       ),
-    key: "debugTool",
+    key: 'debugTool',
     icon: renderIcon(SettingIcon),
     show: enableDevelopFeature.value,
   },
-];
+]
 </script>
 
 <template>
   <div style="height: calc(100vh - 1rem); width: inherit">
     <n-layout style="height: 100%">
       <n-layout-header bordered>
-        <div style="margin: 0.5rem 0 0.5rem 1rem; font-size: 1rem">设置</div>
+        <div style="margin: 0 0 0.5rem 0.5rem; font-size: 1rem">设置</div>
       </n-layout-header>
       <n-layout-content>
         <n-layout has-sider>
           <n-layout-sider :width="'14rem'">
-            <n-menu :options="settingOptions" v-model:value="activeKey" />
+            <n-menu v-model:value="activeKey" :options="settingOptions" />
           </n-layout-sider>
-          <n-layout-content content-style="margin: 0.5rem 0.5rem auto auto">
-            <!--            <div class="h-full overflow-y-hidden" id="settingContainer">-->
-            <!--              -->
-            <!--            </div>-->
-            <router-view />
+          <n-layout-content content-style="margin: 0.5rem auto auto auto">
+            <n-scrollbar style="max-height: calc(100vh - 4rem - 1px)">
+              <router-view />
+            </n-scrollbar>
           </n-layout-content>
         </n-layout>
       </n-layout-content>

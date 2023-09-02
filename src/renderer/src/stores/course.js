@@ -1,8 +1,8 @@
-import { defineStore } from "pinia";
-import { ref } from "vue";
+import { defineStore } from 'pinia'
+import { ref } from 'vue'
 
-export const useCourseStore = defineStore("course", () => {
-  const allCourses = ref([]);
+export const useCourseStore = defineStore('course', () => {
+  const allCourses = ref([])
 
-  return { allCourses };
-}, { persist: true });
+  return { allCourses }
+}, { persist: true })

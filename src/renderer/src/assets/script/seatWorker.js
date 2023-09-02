@@ -1,4 +1,4 @@
-import { replaceArrayElements } from "./seatHelper"
+import { replaceArrayElements } from './seatHelper'
 import { shuffle } from 'lodash-es'
 
 self.onmessage = async (event) => {
@@ -8,7 +8,7 @@ self.onmessage = async (event) => {
   // 执行耗时的任务
   const result = replaceArrayElements(data).map((item, index) => {
     return {
-      ...item, index: index, isSeat: false, isDashed: true
+      ...item, index: index, isSeat: false, isDashed: true,
     }
   })
   self.postMessage(result)

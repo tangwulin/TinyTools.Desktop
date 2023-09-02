@@ -1,36 +1,43 @@
 <script setup>
-import { DiceOutline, Dice } from "@vicons/ionicons5";
-import { ref, watch } from "vue";
-import { usePersonStore } from "../stores/person";
-import { storeToRefs } from "pinia";
-import { NButton } from "naive-ui";
-import { shuffle } from "lodash-es";
-import raffleBgm from "../assets/audio/raffle-2.mp3";
+import { Dice, DiceOutline } from '@vicons/ionicons5'
+import { ref, watch } from 'vue'
+import { usePersonStore } from '../stores/person'
+import { useSettingStore } from '../stores/setting'
+import { storeToRefs } from 'pinia'
+import { NButton } from 'naive-ui'
+import { shuffle } from 'lodash-es'
+import raffleBgm from '../assets/audio/raffle-2.mp3'
+import { getAvatarUrls } from '../assets/script/avatarUrl'
 
-const personStore = usePersonStore();
-const { personList } = storeToRefs(personStore);
+import { remToPx } from '../assets/script/util'
 
-const showFastModal = ref(false);
-const showAdvancedModal = ref(false);
-const number = ref(1);
-const isSelected = ref(false);
-const selectedPerson = ref([]);
-const selectedSex = ref([1, 2, 9]);
-const selectionList = ref([]);
+const personStore = usePersonStore()
+const { personList } = storeToRefs(personStore)
 
-const hasHover1 = ref(false);
-const hasHover2 = ref(false);
+const settingStore = useSettingStore()
+const { enableAvatar, enableFallbackAvatar, avatarWorks } = storeToRefs(settingStore)
+
+const showFastModal = ref(false)
+const showAdvancedModal = ref(false)
+const number = ref(1)
+const isSelected = ref(false)
+const selectedPerson = ref([])
+const selectedSex = ref([1, 2, 9])
+const selectionList = ref([])
+
+const hasHover1 = ref(false)
+const hasHover2 = ref(false)
 
 // const itemsEachRow = ref(4);
 
 const sexes = [
-  { label: "男", value: 1 },
-  { label: "女", value: 2 },
-  { label: "未填写", value: 9 },
-]; //此处参考了GB/T 2261.1-2003
+  { label: '男', value: 1 },
+  { label: '女', value: 2 },
+  { label: '未填写', value: 9 },
+] //此处参考了GB/T 2261.1-2003
 
 const handler = (fast) => {
-  const list = fast ? personList.value : selectionList.value;
+  const list = fast ? personList.value : selectionList.value
   // const len = list.length;
   // const result = [];
   // const set = new Set();
@@ -42,56 +49,97 @@ const handler = (fast) => {
   //   }
   // }
   // 实测发现，上述算法在数据量较大时，性能较差，故改用lodash的shuffle方法
-  showFastModal.value = false;
-  showAdvancedModal.value = false;
+  showFastModal.value = false
+  showAdvancedModal.value = false
 
-  isSelected.value = true;
-  const player = document.querySelector("audio");
-  player.play();
+  isSelected.value = true
+  const player = document.querySelector('audio')
+  player.play()
   const interval = setInterval(() => {
-    selectedPerson.value = shuffle(list).slice(0, number.value);
-  }, 250);
+    selectedPerson.value = shuffle(list).slice(0, number.value)
+  }, 250)
   setTimeout(() => {
-    clearInterval(interval);
-  }, 3000);
-};
+    clearInterval(interval)
+  }, 3000)
+}
 
-function createOptions(x) {
+function createOptions(x)
+{
   return x.map((item) => ({
     label: item.name,
     value: item.uniqueId,
     disabled: false,
-  }));
+  }))
 }
 
-function createValues(x) {
-  return x.map((item) => item.uniqueId);
+function createValues(x)
+{
+  return x.map((item) => item.uniqueId)
 }
 
-const options1 = ref(createOptions(personList.value));
-const value1 = ref(createValues(personList.value));
+const options1 = ref(createOptions(personList.value))
+const value1 = ref(createValues(personList.value))
 
 selectionList.value = personList.value.filter((item) =>
-  value1.value.includes(item.uniqueId)
-);
+  value1.value.includes(item.uniqueId),
+)
 
 watch(selectedSex, () => {
   options1.value = createOptions(
-    personList.value.filter((item) => selectedSex.value.includes(item.sex))
-  );
+    personList.value.filter((item) => selectedSex.value.includes(item.sex)),
+  )
   value1.value = createValues(
-    personList.value.filter((item) => selectedSex.value.includes(item.sex))
-  );
-});
+    personList.value.filter((item) => selectedSex.value.includes(item.sex)),
+  )
+})
 watch(
   value1,
   () => {
     selectionList.value = personList.value.filter((item) =>
-      value1.value.includes(item.uniqueId)
-    );
+      value1.value.includes(item.uniqueId),
+    )
   },
-  { deep: true }
-);
+  { deep: true },
+)
+
+function generateHash(input)
+{
+  let hash = 0
+  for (let i = 0; i < input.length; i++)
+  {
+    hash = (hash << 5) - hash + input.charCodeAt(i)
+  }
+  return Math.abs(hash)
+}
+
+function selectAvatar(studentId, avatarCount)
+{
+  const hashValue = generateHash(studentId)
+  return hashValue % avatarCount
+}
+
+const male = getAvatarUrls(1, avatarWorks.value)
+const female = getAvatarUrls(2, avatarWorks.value)
+
+const getAvatar = (person) => {
+  if (person?.avatar) return person.avatar
+  if (!enableFallbackAvatar.value) return null
+  const sn = person.number ? person.number : person.uniqueId
+  let urls
+  switch (person.sex)
+  {
+    case 1:
+      urls = male
+      break
+    case 2:
+      urls = female
+      break
+    default:
+      urls = male.concat(female)
+      break
+  }
+  return urls[selectAvatar(sn, urls.length)].src
+}
 </script>
 
 <template>
@@ -101,8 +149,8 @@ watch(
         <audio :src="raffleBgm" />
         <n-layout
           v-if="isSelected"
-          content-style="display:flex;height:100%;width:100%;"
           :native-scrollbar="false"
+          content-style="display:flex;height:100%;width:100%;"
         >
           <div
             style="
@@ -134,47 +182,51 @@ watch(
                 "
               >
                 <n-avatar
-                  style="margin-bottom: 1rem"
-                  size="large"
-                  :src="item?.avatar"
+                  v-if="enableAvatar"
+                  :size="remToPx(4)"
+                  :src="getAvatar(item)"
+                  lazy
+                  object-fit="contain"
+                  round
+                  style="margin-bottom: 0.5rem"
                 />
                 <span style="font-size: 1.5rem">{{ item?.name }}</span>
               </div>
             </div>
           </div>
         </n-layout>
-        <n-p depth="3" style="font-size: 2rem" v-else> 还没有抽选……</n-p>
+        <n-p v-else depth="3" style="font-size: 2rem"> 还没有抽选……</n-p>
       </div>
     </n-layout-content>
     <n-layout-footer position="absolute">
       <n-divider style="margin: 0" />
       <div
-        style="height: 6rem"
         class="flex flex-row justify-around items-center"
+        style="height: 6rem"
       >
         <div
-          style="margin: auto; width: 4rem; cursor: pointer"
           class="flex flex-col justify-center items-center"
+          style="margin: auto; width: 4rem; cursor: pointer"
           @click="showFastModal = true"
           @mouseenter="hasHover1 = true"
           @mouseleave="hasHover1 = false"
         >
           <n-icon size="2rem">
-            <Dice v-if="hasHover1"/>
-            <DiceOutline v-else/>
+            <Dice v-if="hasHover1" />
+            <DiceOutline v-else />
           </n-icon>
           <span>快速开始</span>
         </div>
         <div
-          style="margin: auto; width: 4rem; cursor: pointer"
           class="flex flex-col justify-center items-center"
+          style="margin: auto; width: 4rem; cursor: pointer"
           @click="showAdvancedModal = true"
           @mouseenter="hasHover2 = true"
           @mouseleave="hasHover2 = false"
         >
           <n-icon size="2rem">
-            <Dice v-if="hasHover2"/>
-            <DiceOutline v-else/>
+            <Dice v-if="hasHover2" />
+            <DiceOutline v-else />
           </n-icon>
           <span>自定义</span>
         </div>
@@ -184,20 +236,20 @@ watch(
 
   <n-modal v-model:show="showFastModal">
     <n-card
-      style="width: 50%"
-      title="快速抽选"
       :bordered="false"
-      size="huge"
-      role="dialog"
       aria-modal="true"
       closable
+      role="dialog"
+      size="huge"
+      style="width: 50%"
+      title="快速抽选"
       @close="showFastModal = false"
     >
       数量
       <n-input-number
         v-model:value="number"
-        :min="1"
         :max="personList.length"
+        :min="1"
         button-placement="both"
       />
       <template #footer>
@@ -210,26 +262,26 @@ watch(
 
   <n-modal v-model:show="showAdvancedModal">
     <n-card
-      style="width: 50%; overflow-y: auto; overflow-x: hidden"
-      title="高级抽选"
       :bordered="false"
-      size="huge"
-      role="dialog"
       aria-modal="true"
       closable
+      role="dialog"
+      size="huge"
+      style="width: 50%; overflow-y: auto; overflow-x: hidden"
+      title="高级抽选"
       @close="showAdvancedModal = false"
     >
       数量
       <n-input-number
         v-model:value="number"
-        :min="1"
         :max="selectionList.length"
+        :min="1"
         button-placement="both"
       />
       <n-divider style="margin: 1rem 0" />
       <div>
         <n-collapse>
-          <n-collapse-item title="性别范围" name="1">
+          <n-collapse-item name="1" title="性别范围">
             <n-checkbox-group v-model:value="selectedSex">
               <n-space item-style="display: flex;">
                 <n-checkbox
@@ -240,7 +292,7 @@ watch(
               </n-space>
             </n-checkbox-group>
           </n-collapse-item>
-          <n-collapse-item title="人员范围" name="2">
+          <n-collapse-item name="2" title="人员范围">
             <n-transfer
               ref="transfer"
               v-model:value="value1"

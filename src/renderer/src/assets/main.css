@@ -5,16 +5,16 @@
 @tailwind utilities;
 
 #app {
-  /*max-width: 1280px;*/
-  margin: 0 auto;
-  padding: 2rem;
+    /*max-width: 1280px;*/
+    margin: 0 auto;
+    padding: 2rem;
 
-  font-weight: normal;
+    font-weight: normal;
 }
 
 button, [type='button'], [type='reset'], [type='submit'] {
-  -webkit-appearance: button;
-  /*noinspection CssUnresolvedCustomProperty*/
-  background-color: var(--n-color);
-  background-image: none;
+    -webkit-appearance: button;
+    /*noinspection CssUnresolvedCustomProperty*/
+    background-color: var(--n-color);
+    background-image: none;
 }

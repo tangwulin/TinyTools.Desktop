@@ -1,9 +1,10 @@
-import { app, shell, BrowserWindow, ipcMain } from "electron";
+import { app, shell, BrowserWindow, ipcMain, protocol } from "electron";
 import { join } from "path";
 import { electronApp, optimizer, is } from "@electron-toolkit/utils";
 import icon from "../../resources/icon.png?asset";
 
-function createWindow() {
+function createWindow()
+{
   // We cannot require the screen module until the app is ready.
   const { screen } = require("electron");
 
@@ -25,17 +26,20 @@ function createWindow() {
     autoHideMenuBar: true,
     webPreferences: {
       preload: join(__dirname, "../preload/index.js"),
-      sandbox: false,
-    },
+      sandbox: false
+    }
   });
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
-  if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
+  if (is.dev && process.env["ELECTRON_RENDERER_URL"])
+  {
     splashWindow.loadURL(
       process.env["ELECTRON_RENDERER_URL"] + "/splashscreen.html"
     );
-  } else {
+  }
+  else
+  {
     splashWindow.loadFile(join(__dirname, "../renderer/splashscreen.html"));
   }
 
@@ -45,9 +49,9 @@ function createWindow() {
 
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: (width / 1920) * 1080,
+    width: (height / 1080) * 1080,
     height: (height / 1080) * 650,
-    minWidth: (width / 1920) * 1080,
+    minWidth: (height / 1080) * 1080,
     minHeight: (height / 1080) * 650,
     show: false,
     center: true,
@@ -56,9 +60,9 @@ function createWindow() {
     ...(process.platform === "linux" ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, "../preload/index.js"),
-      sandbox: false,
+      sandbox: false
     },
-    icon: join(__dirname, "../../resources/icon.png"),
+    icon: join(__dirname, "../../resources/icon.png")
   });
 
   // Hide the splash window when the main window is ready-to-show
@@ -76,11 +80,15 @@ function createWindow() {
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
-  if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
+  if (is.dev && process.env["ELECTRON_RENDERER_URL"])
+  {
     mainWindow.loadURL(process.env["ELECTRON_RENDERER_URL"]);
-  } else {
+  }
+  else
+  {
     mainWindow.loadFile(join(__dirname, "../renderer/index.html"));
   }
+
 }
 
 // This method will be called when Electron has finished
@@ -97,10 +105,16 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window);
   });
 
+  protocol.registerFileProtocol("atom", (request, callback) => {
+    const url = request.url.substr(7);
+    callback(decodeURI(path.normalize(url)));
+  });
+
   let dockWindow = null;
 
   ipcMain.on("openDockWindow", () => {
-    if (dockWindow) {
+    if (dockWindow)
+    {
       dockWindow.show();
       return;
     }
@@ -125,17 +139,20 @@ app.whenReady().then(() => {
       autoHideMenuBar: true,
       webPreferences: {
         preload: join(__dirname, "../preload/index.js"),
-        sandbox: false,
-      },
+        sandbox: false
+      }
     });
 
     // HMR for renderer base on electron-vite cli.
     // Load the remote URL for development or the local html file for production.
-    if (is.dev && process.env["ELECTRON_RENDERER_URL"]) {
-      dockWindow.loadURL(process.env["ELECTRON_RENDERER_URL"] + "/#/test");
-    } else {
-      dockWindow.loadFile(join(__dirname, "../renderer/index.html/"),{
-        hash: "/test"
+    if (is.dev && process.env["ELECTRON_RENDERER_URL"])
+    {
+      dockWindow.loadURL(process.env["ELECTRON_RENDERER_URL"] + "/#/dock");
+    }
+    else
+    {
+      dockWindow.loadFile(join(__dirname, "../renderer/index.html/"), {
+        hash: "/dock"
       });
     }
 
@@ -145,7 +162,8 @@ app.whenReady().then(() => {
   });
 
   ipcMain.on("closeDockWindow", () => {
-    if (dockWindow) {
+    if (dockWindow)
+    {
       dockWindow.close();
       dockWindow = null;
     }
@@ -158,7 +176,7 @@ app.whenReady().then(() => {
 
   createWindow();
 
-  app.on("activate", function () {
+  app.on("activate", function() {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
@@ -169,7 +187,8 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on("window-all-closed", () => {
-  if (process.platform !== "darwin") {
+  if (process.platform !== "darwin")
+  {
     app.quit();
   }
 });
