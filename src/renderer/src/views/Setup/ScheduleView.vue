@@ -7,6 +7,7 @@ import { useCourseStore } from '../../stores/course'
 import { storeToRefs } from 'pinia'
 
 import courseXlsx from '../../assets/xlsx/course.xlsx'
+import { downloadAnyFile } from '../../assets/script/util'
 
 const course = useCourseStore()
 const { allCourses } = storeToRefs(course)
@@ -64,10 +65,7 @@ const parseExcel = async (uploadFileInfo) => {
 }
 
 const downloadTemplate = () => {
-  const a = document.createElement('a')
-  a.href = courseXlsx
-  a.download = '课程表模板.xlsx'
-  a.click()
+  downloadAnyFile(courseXlsx,'课程表模板.xlsx')
 }
 </script>
 

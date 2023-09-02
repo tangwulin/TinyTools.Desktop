@@ -8,7 +8,7 @@ import { getRenderingList } from '../assets/script/seatHelper'
 import { useRoute } from 'vue-router'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
 import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
-import { generateUniqueId, remToPx } from '../assets/script/util'
+import { downloadAnyFile, generateUniqueId, remToPx } from '../assets/script/util'
 import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
@@ -241,10 +241,7 @@ window.addEventListener('resize', () => {
 })
 
 const downloadTemplate = () => {
-  const a = document.createElement('a')
-  a.href = personXlsx
-  a.download = '人员导入模板.xlsx'
-  a.click()
+  downloadAnyFile(personXlsx, '人员导入模板.xlsx')
 }
 </script>
 
