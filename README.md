@@ -1,11 +1,11 @@
 <br />
-<p align="center">
+<p style="text-align: center;">
 <a href="https://github.com/tangwulin/TinyTools.Desktop" target="blank">
     <img src="logo.png" alt="Logo" style="height: 16em">
   </a>
-  <h2 align="center" style="font-weight: 600">TinyTools</h2>
+  <h2 style="text-align: center;font-weight: 600">TinyTools</h2>
 
-  <p align="center">
+  <p style="text-align: center;">
     一个班级管理工具集
     <br />
     <a href="https://tiny-tools-lime.vercel.app/" target="blank"><strong>🌎 访问DEMO</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
