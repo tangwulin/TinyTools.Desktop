@@ -89,12 +89,6 @@ function createWindow()
     mainWindow.loadFile(join(__dirname, "../renderer/index.html"));
   }
 
-  // app.on("ready", async () => {
-  //   globalShortcut.register("CommandOrControl+Shift+i", function() {
-  //     mainWindow.webContents.openDevTools();
-  //   });
-  //   createWindow();
-  // });
 }
 
 // This method will be called when Electron has finished
