@@ -58,7 +58,7 @@
                   <RefreshDot />
                 </n-icon>
               </template>
-              重新排列座位
+              直接出结果
             </n-button>
           </template>
           ”优化“后的排座位方式，不会连续两次抽到边缘位置
@@ -76,22 +76,22 @@
                   <RefreshDot />
                 </n-icon>
               </template>
-              按规则Roll座位
+              虚 晃 一 枪
             </n-button>
           </template>
-          先随机5次并展示每次结果，再将原始位置按“重新排列座位”的做法排列（虚 晃
+          先展示5次随机结果，再将原始位置按“直接出结果”的做法排列（虚 晃
           一 枪）
         </n-tooltip>
-        <n-button :disabled="loading || isPreview" @click="save(scale)"
+        <n-button :disabled="loading || isPreview" @click="save"
         >保存图片
         </n-button>
-        <n-dropdown :options="saveOptions" @select="save">
-          <n-button :disabled="loading || isPreview">
-            <template #icon>
-              <ArrowDropDownFilled />
-            </template>
-          </n-button>
-        </n-dropdown>
+<!--        <n-dropdown :options="saveOptions" @select="save">-->
+<!--          <n-button :disabled="loading || isPreview">-->
+<!--            <template #icon>-->
+<!--              <ArrowDropDownFilled />-->
+<!--            </template>-->
+<!--          </n-button>-->
+<!--        </n-dropdown>-->
         <n-button :disabled="loading" @click="showHistory = true"
         >历史记录
         </n-button>
@@ -100,7 +100,6 @@
           <template #trigger>
             <n-popconfirm
               :negative-text="null"
-              positive-text="确定"
               @positive-click="rollSeats(times)"
             >
               <!--suppress VueUnrecognizedSlot -->
@@ -124,7 +123,7 @@
               </div>
             </n-popconfirm>
           </template>
-          与”按规则Roll座位“一样，只不过次数可以改
+          与”虚 晃 一 枪“一样，只不过次数可以改
         </n-tooltip>
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
@@ -142,7 +141,7 @@
               抽卡！
             </n-button>
           </template>
-          与”重新排列座位“一样，只不过会一个个的展示结果
+          与”直接出结果“的结果一样，只不过会一个个的展示座位
         </n-tooltip>
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
@@ -258,9 +257,9 @@ const {
   enableFinalBgm,
   enableFadein,
   fadeinTime,
-  scale,
   enableDevelopFeature,
   enableOldToolBar,
+  lotteryMode,
 } = storeToRefs(settingStore)
 
 const temp = ref({ allSeats: null, oldRenderingList: null })
@@ -272,6 +271,25 @@ const isPreview = ref(false)
 const times = ref(5)
 const stKey = ref(Math.random())
 let msgReactive = null
+
+const lotteryModes = [
+  {
+    label: '平等',
+    value: 'equality',
+    description: '随机打乱座位，会有不尽人意的情况',
+  },
+  {
+    label: '折中',
+    value: 'or',
+    description: '外面一圈的人不会再次坐到外面一圈，但仍是随机排列',
+  },
+  {
+    label: '公平（未实现）',
+    value: 'equity',
+    description: '通过对前几次结果的分析来决定这一次分配的位置',
+    disabled: true,
+  },
+]
 
 const colorEdge = () => {
   const edgeIndex = parseEdgeSeatIndex(allSeats.value.length)
@@ -423,10 +441,9 @@ const saveOptions = [
 ]
 /**
  * 保存当前座位为图片
- * @param {number}x 倍率，为横向分辨率/960
  * @returns {Promise<void>}
  */
-const save = async (x) => {
+const save = async () => {
   loading.value = true
   msgReactive = message.create('正在生成图片……', {
     type: 'loading',
@@ -458,7 +475,7 @@ const save = async (x) => {
       link.click()
     })
     .then(() => {
-      msgReactive.content = '保存成功'
+      msgReactive.content = '图片生成成功'
       msgReactive.type = 'success'
       loading.value = false
       setTimeout(() => {
@@ -633,6 +650,28 @@ const replaceSeats = async () => {
     await saveHistory('重新排列座位')
     loading.value = false
   }, 50)
+}
+
+const handler = (times,type) => {
+  let process=null
+  switch (lotteryMode.value)
+  {
+    case 'equality':
+      process=reSort()
+      break
+    case 'or':
+      if(times) process=rollSeats(times)
+      else
+        if(type) gacha()
+        else replaceSeats()
+      break
+    case 'equity':
+      message.error('暂未实现')
+      break
+    default:
+      message.error('出错了，请前往设置-通用设置-抽选座位重新设置抽选方式')
+      break
+  }
 }
 /**
  * 通过刷新key的方式重新渲染SeatTable组件
