@@ -1,18 +1,18 @@
 <script setup>
-import PersonManageView from "../PersonManageView.vue";
-import { onBeforeRouteLeave } from "vue-router";
+import PersonManageView from '../PersonManageView.vue'
+import { onBeforeRouteLeave } from 'vue-router'
 
-import { usePersonStore } from "../../stores/person";
-import { useSeatStore } from "../../stores/seat";
-import { storeToRefs } from "pinia";
-import { getRenderingList } from "../../assets/script/seatHelper";
-import { toRaw } from "vue";
+import { usePersonStore } from '../../stores/person'
+import { useSeatStore } from '../../stores/seat'
+import { storeToRefs } from 'pinia'
+import { getRenderingList } from '../../assets/script/seatHelper'
+import { toRaw } from 'vue'
 
-const personStore = usePersonStore();
-const seatStore = useSeatStore();
+const personStore = usePersonStore()
+const seatStore = useSeatStore()
 
-const { personList } = storeToRefs(personStore);
-const { allSeats, oldRenderingList, history } = storeToRefs(seatStore);
+const { personList } = storeToRefs(personStore)
+const { allSeats, oldRenderingList, history } = storeToRefs(seatStore)
 
 const saveHistory = (type) => {
   const data = {
@@ -20,50 +20,50 @@ const saveHistory = (type) => {
     allSeats: [
       ...toRaw(
         allSeats.value.slice().map((item) => {
-          return { ...item, color: null };
-        })
-      )
+          return { ...item, color: null }
+        }),
+      ),
     ],
     oldRenderingList: [
       ...toRaw(oldRenderingList.value)
         .slice()
         .map((item) => {
-          return { ...item, color: null };
-        })
+          return { ...item, color: null }
+        }),
     ],
     isCurrent: true,
-    type: type || "???"
-  };
+    type: type || '???',
+  }
   history.value = history.value.map((item) => {
-    return { ...item, isCurrent: false };
-  });
-  if (history.value.length !== 0 && (history.value[0].type === "手动更改" || history.value[0].type === "初始位置"))
+    return { ...item, isCurrent: false }
+  })
+  if (history.value.length !== 0 && (history.value[0].type === '手动更改' || history.value[0].type === '初始位置'))
   {
-    if (data.time - history.value[0].time > 60 * 1000 && history.value[0].type !== "初始位置")
-      history.value.unshift(data);
-    else history.value[0] = data;
+    if (data.time - history.value[0].time > 60 * 1000 && history.value[0].type !== '初始位置')
+      history.value.unshift(data)
+    else history.value[0] = data
   }
   else
   {
     history.value = history.value.map((item) => {
-      return { ...item, isCurrent: false, isShowing: false };
-    });
-    history.value.unshift(data);
+      return { ...item, isCurrent: false, isShowing: false }
+    })
+    history.value.unshift(data)
   }
-};
+}
 
 onBeforeRouteLeave(() => {
   if (personList.value.length === 0)
-    return false;
+    return false
   else
   {
     allSeats.value = personList.value.map((item, index) => {
-      return { name: item.name, index: index, isSeat: true };
-    });
-    oldRenderingList.value = getRenderingList(allSeats.value, []);
-    saveHistory("初始位置");
+      return { name: item.name, index: index, isSeat: true }
+    })
+    oldRenderingList.value = getRenderingList(allSeats.value, [])
+    saveHistory('初始位置')
   }
-});
+})
 </script>
 
 <template>

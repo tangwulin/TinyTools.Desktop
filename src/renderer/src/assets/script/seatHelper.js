@@ -51,7 +51,7 @@ export const getRenderingList = (seat = [], oldRenderingList = [], coloringEdge 
     for (let i = 0; i < (remaining - remaining % 3) / 3; i++)
     {
       result.push({ name: null, isSeat: false }, { name: null, isSeat: false, isDashed: true }, {
-        name: null, isSeat: false, isDashed: true
+        name: null, isSeat: false, isDashed: true,
       })
     }
     console.log('add blank time:' + (performance.now() - stopwatch) + 'ms')

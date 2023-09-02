@@ -1,200 +1,184 @@
 <script setup>
-import { h, ref } from "vue";
-import {
-  NButton,
-  NCard,
-  NDynamicTags,
-  NForm,
-  NFormItem,
-  NInput,
-  NModal,
-  NText,
-  useMessage
-} from "naive-ui";
-import { storeToRefs } from "pinia";
-import { usePersonStore } from "../stores/person";
-import { useSeatStore } from "../stores/seat";
-import { getRenderingList } from "../assets/script/seatHelper";
-import { useRoute } from "vue-router";
-import {
-  PlaylistAdd,
-  TableImport as ImportIcon,
-  File as FileIcon
-} from "@vicons/tabler";
-import { PersonAdd20Filled as PersonAddIcon } from "@vicons/fluent";
-import { generateUniqueId, remToPx } from "../assets/script/util";
-import * as XLSX from "xlsx";
+import { h, ref } from 'vue'
+import { NButton, NCard, NDynamicTags, NForm, NFormItem, NInput, NModal, NText, useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { usePersonStore } from '../stores/person'
+import { useSeatStore } from '../stores/seat'
+import { getRenderingList } from '../assets/script/seatHelper'
+import { useRoute } from 'vue-router'
+import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
+import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
+import { generateUniqueId, remToPx } from '../assets/script/util'
+import * as XLSX from 'xlsx'
 
-import personXlsx from "../assets/xlsx/person.xlsx";
+import personXlsx from '../assets/xlsx/person.xlsx'
 
-const route = useRoute();
+const route = useRoute()
 
-const personStore = usePersonStore();
-const seatStore = useSeatStore();
-const { personList } = storeToRefs(personStore);
-const { allSeats, oldRenderingList } = storeToRefs(seatStore);
+const personStore = usePersonStore()
+const seatStore = useSeatStore()
+const { personList } = storeToRefs(personStore)
+const { allSeats, oldRenderingList } = storeToRefs(seatStore)
 
-const showAddModal = ref(false);
-showAddModal.value = route.query.showAddModal === "true";
+const showAddModal = ref(false)
+showAddModal.value = route.query.showAddModal === 'true'
 
-const showMultiAddModal = ref(false);
-showMultiAddModal.value = route.query.showMultiAddModal === "true";
+const showMultiAddModal = ref(false)
+showMultiAddModal.value = route.query.showMultiAddModal === 'true'
 
-const showImportModal = ref(false);
+const showImportModal = ref(false)
 
 if (showAddModal.value)
 {
-  showAddModal.value = false;
+  showAddModal.value = false
   setTimeout(() => {
-    showAddModal.value = true;
-  }, 100);
+    showAddModal.value = true
+  }, 100)
 } //虽然切换路由时会自动关闭，但是这样做可以让用户看到动画
 
 if (showMultiAddModal.value)
 {
-  showMultiAddModal.value = false;
+  showMultiAddModal.value = false
   setTimeout(() => {
-    showMultiAddModal.value = true;
-  }, 100);
+    showMultiAddModal.value = true
+  }, 100)
 } //虽然切换路由时会自动关闭，但是这样做可以让用户看到动画
 
-const isEdit = ref(false);
+const isEdit = ref(false)
 
 const formValue = ref({
-  name: "",
-  number: "",
+  name: '',
+  number: '',
   sex: 9,
-  uniqueId: generateUniqueId()
-});
-const multiAddForm = ref({ input: "", names: [] });
+  uniqueId: generateUniqueId(),
+})
+const multiAddForm = ref({ input: '', names: [] })
 
-const message = useMessage();
-
-
+const message = useMessage()
 
 const sexes = [
-  { label: "男", value: 1 },
-  { label: "女", value: 2 },
-  { label: "未填写", value: 9 }
-]; //此处参考了GB/T 2261.1-2003
+  { label: '男', value: 1 },
+  { label: '女', value: 2 },
+  { label: '未填写', value: 9 },
+] //此处参考了GB/T 2261.1-2003
 
 const editHandler = (row) => {
-  formValue.value = { ...row };
-  isEdit.value = true;
-  showAddModal.value = true;
-};
+  formValue.value = { ...row }
+  isEdit.value = true
+  showAddModal.value = true
+}
 
 const deleteHandler = (row) => {
   personList.value = personList.value.filter(
-    (item) => item.uniqueId !== row.uniqueId
-  );
-  message.success("删除成功");
-};
+    (item) => item.uniqueId !== row.uniqueId,
+  )
+  message.success('删除成功')
+}
 const createColumns = (edit, del) => {
   return [
     {
-      title: "姓名",
-      key: "name"
+      title: '姓名',
+      key: 'name',
     },
     {
-      title: "学号",
-      key: "number"
+      title: '学号',
+      key: 'number',
     },
     {
-      title: "性别",
-      key: "sex",
+      title: '性别',
+      key: 'sex',
       render(row)
       {
         switch (row.sex)
         {
           case 1:
-            return "男";
+            return '男'
           case 2:
-            return "女";
+            return '女'
           default:
-            return h(NText, { depth: 3 }, { default: () => "未填写" });
+            return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
-      }
+      },
     },
     {
-      title: "操作",
-      key: "actions",
+      title: '操作',
+      key: 'actions',
       width: remToPx(8),
       render(row)
       {
-        return h("div", { class: "flex flex-row" }, [
+        return h('div', { class: 'flex flex-row' }, [
           h(
             NButton,
             {
               strong: true,
               tertiary: true,
-              size: "small",
-              onClick: () => edit(row)
+              size: 'small',
+              onClick: () => edit(row),
             },
-            { default: () => "编辑" }
+            { default: () => '编辑' },
           ),
           h(
             NButton,
             {
               strong: true,
               tertiary: true,
-              size: "small",
-              onClick: () => del(row)
+              size: 'small',
+              onClick: () => del(row),
             },
-            { default: () => "删除" }
-          )
-        ]);
-      }
-    }
-  ];
-};
+            { default: () => '删除' },
+          ),
+        ])
+      },
+    },
+  ]
+}
 
 const renderCell = (value) => {
   if (!value)
   {
-    return h(NText, { depth: 3 }, { default: () => "未填写" });
+    return h(NText, { depth: 3 }, { default: () => '未填写' })
   }
-  return value;
-};
+  return value
+}
 
-const columns = createColumns(editHandler, deleteHandler);
+const columns = createColumns(editHandler, deleteHandler)
 
 const parseName = () => {
   multiAddForm.value.names = multiAddForm.value.input
                                          .split(/[,\s]+/)
                                          .filter(
-                                           (element) => element !== undefined && element !== null && element !== ""
-                                         );
-};
+                                           (element) => element !== undefined && element !== null && element !== '',
+                                         )
+}
 
 const addPerson = () => {
   console.log(
-    "添加了这" +
+    '添加了这' +
     multiAddForm.value.names.length +
-    "个人：" +
-    multiAddForm.value.names
-  );
+    '个人：' +
+    multiAddForm.value.names,
+  )
   personList.value.push(
     ...multiAddForm.value.names.map((name) => ({
       name: name,
-      number: "",
+      number: '',
       sex: 9,
-      uniqueId: generateUniqueId()
-    }))
-  );
+      uniqueId: generateUniqueId(),
+    })),
+  )
   message.success(
-    "添加成功，共添加了" + multiAddForm.value.names.length + "个"
-  );
-  showAddModal.value = false;
+    '添加成功，共添加了' + multiAddForm.value.names.length + '个',
+  )
+  showAddModal.value = false
   multiAddForm.value.names
               .map(name => {
-                return { name: name, isSeat: true, isDashed: false };
+                return { name: name, isSeat: true, isDashed: false }
               })
-              .forEach((item) => allSeats.value.push(item));
-  oldRenderingList.value = getRenderingList(allSeats.value, []);
-  multiAddForm.value.names = [];
-  multiAddForm.value.input = "";
-};
+              .forEach((item) => allSeats.value.push(item))
+  oldRenderingList.value = getRenderingList(allSeats.value, [])
+  multiAddForm.value.names = []
+  multiAddForm.value.input = ''
+}
 
 const handler = () => {
   if (isEdit.value)
@@ -202,76 +186,76 @@ const handler = () => {
     personList.value = personList.value.map((item) => {
       if (item.uniqueId === formValue.value.uniqueId)
       {
-        return formValue.value; // 使用展开语法更新 title 属性
+        return formValue.value // 使用展开语法更新 title 属性
       }
-      return item; // 非匹配的元素保持原样
-    });
-    message.success("编辑成功");
+      return item // 非匹配的元素保持原样
+    })
+    message.success('编辑成功')
   }
   else
   {
-    personList.value.push({ ...formValue.value, uniqueId: generateUniqueId() });
-    message.success("添加成功");
+    personList.value.push({ ...formValue.value, uniqueId: generateUniqueId() })
+    message.success('添加成功')
   }
-  showAddModal.value = false;
-};
+  showAddModal.value = false
+}
 
 const parseExcel = async (uploadFileInfo) => {
-  const file = uploadFileInfo.file.file;
-  const data = await file.arrayBuffer();
-  const workbook = XLSX.read(data);
-  const sheetNames = workbook.SheetNames; // 工作表名称集合
-  const worksheet = workbook.Sheets[sheetNames[0]]; // 这里我们只读取第一张sheet
-  const json = XLSX.utils.sheet_to_json(worksheet);
+  const file = uploadFileInfo.file.file
+  const data = await file.arrayBuffer()
+  const workbook = XLSX.read(data)
+  const sheetNames = workbook.SheetNames // 工作表名称集合
+  const worksheet = workbook.Sheets[sheetNames[0]] // 这里我们只读取第一张sheet
+  const json = XLSX.utils.sheet_to_json(worksheet)
   const persons = json
     .map((item) => {
-      if (item['姓名'] === undefined || item['姓名'] === null || item['姓名'] === "")
-        return null;
+      if (item['姓名'] === undefined || item['姓名'] === null || item['姓名'] === '')
+        return null
       return {
         name: item['姓名'],
-        sex: item['性别'] === "男" ? 1 : item['性别'] === "女" ? 2 : 9,
-        number: JSON.stringify(item['学号'])
-      };
+        sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
+        number: JSON.stringify(item['学号']),
+      }
     })
-    .filter((item) => item !== null);
+    .filter((item) => item !== null)
   if (persons.length === 0)
   {
-    message.error("未检测到任何人员信息，请检查文件格式是否正确");
+    message.error('未检测到任何人员信息，请检查文件格式是否正确')
   }
   else
   {
     personList.value.push(
       ...persons.map((person) => ({
         ...person,
-        uniqueId: generateUniqueId()
-      }))
-    );
-    message.success("导入成功");
-    showImportModal.value = false;
+        uniqueId: generateUniqueId(),
+      })),
+    )
+    message.success('导入成功')
+    showImportModal.value = false
   }
-};
+}
 
-const tableHeight = ref(window.innerHeight - remToPx(6));
-window.addEventListener("resize", () => {
-  tableHeight.value = window.innerHeight - remToPx(6);
-});
+const tableHeight = ref(window.innerHeight - remToPx(6))
+window.addEventListener('resize', () => {
+  tableHeight.value = window.innerHeight - remToPx(6)
+})
 
 const downloadTemplate = () => {
-  const a = document.createElement("a");
-  a.href = personXlsx;
-  a.download = "人员导入模板.xlsx";
-  a.click();
-};
+  const a = document.createElement('a')
+  a.href = personXlsx
+  a.download = '人员导入模板.xlsx'
+  a.click()
+}
 </script>
 
 <template>
   <n-space justify="space-between">
-    <p>{{ $route.name === "personManage" ? "修改后请重启程序以重新生成座位" : "" }}</p>
+    <p>{{ $route.name === 'personManage' ? '修改后请重启程序以重新生成座位' : '' }}</p>
     <n-space>
       <n-button
-        type="primary"
-        size="small"
         class="p-2"
+        size="small"
+        type="primary"
         @click="showImportModal = true"
       >
         <template #icon>
@@ -282,9 +266,9 @@ const downloadTemplate = () => {
         导入
       </n-button>
       <n-button
-        type="primary"
-        size="small"
         class="p-2"
+        size="small"
+        type="primary"
         @click="showAddModal = true"
       >
         <template #icon>
@@ -295,9 +279,9 @@ const downloadTemplate = () => {
         添加
       </n-button>
       <n-button
-        type="primary"
-        size="small"
         class="p-2"
+        size="small"
+        type="primary"
         @click="showMultiAddModal = true"
       >
         <template #icon>
@@ -310,22 +294,22 @@ const downloadTemplate = () => {
     </n-space>
   </n-space>
   <n-data-table
+    :bordered="false"
     :columns="columns"
     :data="personList"
-    :pagination="false"
-    :bordered="false"
-    :render-cell="renderCell"
     :max-height="tableHeight"
+    :pagination="false"
+    :render-cell="renderCell"
   >
   </n-data-table>
 
   <n-modal v-model:show="showAddModal" :mask-closable="false">
     <n-card
-      style="width: 50%"
-      :title="isEdit ? '编辑人员' : '添加人员'"
       :bordered="true"
-      size="huge"
+      :title="isEdit ? '编辑人员' : '添加人员'"
       closable
+      size="huge"
+      style="width: 50%"
       @close="
         () => {
           showAddModal = false;
@@ -334,7 +318,7 @@ const downloadTemplate = () => {
               name: '',
               number: '',
               sex: 9,
-              uniqueId: generateUniqueId(),
+              uniqueId: generateUniqueId()
             };
           isEdit = false;
         }
@@ -362,8 +346,8 @@ const downloadTemplate = () => {
       </n-form>
       <div class="flex justify-end">
         <n-button
-          type="primary"
           :disabled="formValue.name.length === 0"
+          type="primary"
           @click="handler"
         >保存
         </n-button>
@@ -373,11 +357,11 @@ const downloadTemplate = () => {
 
   <n-modal v-model:show="showMultiAddModal" :mask-closable="false">
     <n-card
+      :bordered="true"
+      closable
+      size="huge"
       style="width: 50%"
       title="批量增加人员"
-      :bordered="true"
-      size="huge"
-      closable
       @close="
         () => {
           showMultiAddModal = false;
@@ -393,8 +377,8 @@ const downloadTemplate = () => {
             <n-text>当前已检测到：{{ multiAddForm.names.length }}个</n-text>
             <n-input
               v-model:value="multiAddForm.input"
-              type="textarea"
               placeholder="张三,李四,王五……"
+              type="textarea"
               @blur="parseName"
               @focus="parseName"
               @keyup="parseName"
@@ -408,10 +392,10 @@ const downloadTemplate = () => {
       <template #footer>
         <div class="flex">
           <NButton
+            :disabled="multiAddForm.names.length === 0"
             class="ml-auto"
             type="primary"
             @click="addPerson"
-            :disabled="multiAddForm.names.length === 0"
           >
             保存
           </NButton>
@@ -422,29 +406,29 @@ const downloadTemplate = () => {
 
   <n-modal v-model:show="showImportModal" :mask-closable="false">
     <n-card
+      :bordered="true"
+      closable
+      size="huge"
       style="width: 50%"
       title="导入人员"
-      :bordered="true"
-      size="huge"
-      closable
       @close="showImportModal = false"
     >
       <n-upload
-        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-        multiple
-        directory-dnd
-        action=""
+        :default-upload="false"
+        :max="1"
         :on-before-upload="
           (fileInfo) => {
             parseExcel(fileInfo);
           }
         "
-        :default-upload="false"
-        :max="1"
+        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+        action=""
+        directory-dnd
+        multiple
       >
         <n-upload-dragger>
           <div style="margin-bottom: 12px">
-            <n-icon size="48" :depth="3">
+            <n-icon :depth="3" size="48">
               <file-icon />
             </n-icon>
           </div>
@@ -454,16 +438,16 @@ const downloadTemplate = () => {
         </n-upload-dragger>
       </n-upload>
       <n-space justify="center">
-<!--        <a download="人员导入模板.xlsx" :href="personXlsx" target="_blank">点此获取模板</a>-->
+        <!--        <a download="人员导入模板.xlsx" :href="personXlsx" target="_blank">点此获取模板</a>-->
         <n-button text @click="downloadTemplate">点此获取模板</n-button>
       </n-space>
       <template #footer>
         <div class="flex">
           <NButton
+            :disabled="multiAddForm.names.length === 0"
             class="ml-auto"
             type="primary"
             @click="addPerson"
-            :disabled="multiAddForm.names.length === 0"
           >
             保存
           </NButton>

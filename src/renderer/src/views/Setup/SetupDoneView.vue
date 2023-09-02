@@ -1,17 +1,17 @@
 <script setup>
-import { useSettingStore } from "../../stores/setting";
-import { storeToRefs } from "pinia";
-import { useRouter } from "vue-router";
+import { useSettingStore } from '../../stores/setting'
+import { storeToRefs } from 'pinia'
+import { useRouter } from 'vue-router'
 
-const router = useRouter();
+const router = useRouter()
 
-const settingStore = useSettingStore();
-const { isFirstSetup } = storeToRefs(settingStore);
+const settingStore = useSettingStore()
+const { isFirstSetup } = storeToRefs(settingStore)
 
 const endSetup = () => {
-  isFirstSetup.value = false;
-  router.push({ name: "mainWindow" });
-};
+  isFirstSetup.value = false
+  router.push({ name: 'mainWindow' })
+}
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const endSetup = () => {
       <n-result status="success" title="配置完成">
         <template #footer>
           <n-space justify="center">
-<!--            <n-button @click="router.push({name:'setup schedule'})">返回修改</n-button>-->
+            <!--            <n-button @click="router.push({name:'setup schedule'})">返回修改</n-button>-->
             <n-button type="success" @click="endSetup">开始使用</n-button>
           </n-space>
         </template>

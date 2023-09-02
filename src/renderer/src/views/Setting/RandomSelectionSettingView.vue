@@ -42,7 +42,7 @@ const writeClipboard = (x) => {
       <p>内置头像来源</p>
       <n-checkbox-group v-model:value="avatarWorks" :disabled="!enableFallbackAvatar" @change="handler">
         <n-space item-style="display: flex;">
-          <n-checkbox v-for="item in works" :value="item.value" :label="item.label" />
+          <n-checkbox v-for="item in works" :label="item.label" :value="item.value" />
         </n-space>
       </n-checkbox-group>
     </n-space>
@@ -85,12 +85,12 @@ const writeClipboard = (x) => {
                 "
               >
                 <n-avatar
-                  round
-                  lazy
-                  style="margin-bottom: 0.5rem"
                   :size="remToPx(4)"
                   :src="item.src"
+                  lazy
                   object-fit="contain"
+                  round
+                  style="margin-bottom: 0.5rem"
                 />
                 <span>{{ item?.description }}</span>
               </div>

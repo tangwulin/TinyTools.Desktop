@@ -6,13 +6,13 @@ import { InfoFilled } from '@vicons/material'
 import { useSettingStore } from '../../stores/setting'
 import { NButton, NCard, NDataTable, NForm, NModal, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { getDefaultBgm, getDefaultFinalBgm } from "../../assets/script/musicHelper";
-import {useRoute} from "vue-router";
-import { generateUniqueId } from "../../assets/script/util";
+import { getDefaultBgm, getDefaultFinalBgm } from '../../assets/script/musicHelper'
+import { useRoute } from 'vue-router'
+import { generateUniqueId } from '../../assets/script/util'
 
 const message = useMessage()
 const setting = useSettingStore()
-const { bgms,finalBgms, isBGMInitialized } = storeToRefs(setting)
+const { bgms, finalBgms, isBGMInitialized } = storeToRefs(setting)
 
 const route = useRoute()
 const type = computed(() => route.query.type)
@@ -23,9 +23,9 @@ const list = computed({
   },
   set(value)
   {
-    if (type.value === 'bgm') bgms.value=value
-    else finalBgms.value=value
-  }
+    if (type.value === 'bgm') bgms.value = value
+    else finalBgms.value = value
+  },
 })
 
 const showEditModal = ref(false)
@@ -82,7 +82,7 @@ if (finalBgms.value.length === 0 && !isBGMInitialized.value)
 }
 
 const onCloseModal = () => {
-  formData.value={ name: '', url: '', offset: 0, uniqueId: '' }
+  formData.value = { name: '', url: '', offset: 0, uniqueId: '' }
   isEdit = false
 }
 
@@ -101,41 +101,41 @@ const createColumns = (play, edit, del) => {
       title()
       {
         return h(
-            'div',
-            { class: 'flex items-center justify-between' },
-            [
-              h(
-                  'div',
-                  { class: 'ml-2', innerHTML: '操作' }
-              ),
-              h(
-                  NButton,
-                  {
-                    strong: true,
-                    type: 'warning',
-                    size: 'small',
-                    class: 'p-2',
-                    renderIcon: () => {return h(Refresh)},
-                    onClick: () => {
-                      bgms.value = getDefaultBgm()
-                      message.success('重置成功')
-                    }
-                  },
-                  { default: () => '重置' }
-              ),
-              h(
-                  NButton,
-                  {
-                    strong: true,
-                    type: 'primary',
-                    size: 'small',
-                    class: 'p-2',
-                    renderIcon: () => {return h(PlaylistAdd)},
-                    onClick: addHandler
-                  },
-                  { default: () => '添加' }
-              ),
-            ])
+          'div',
+          { class: 'flex items-center justify-between' },
+          [
+            h(
+              'div',
+              { class: 'ml-2', innerHTML: '操作' },
+            ),
+            h(
+              NButton,
+              {
+                strong: true,
+                type: 'warning',
+                size: 'small',
+                class: 'p-2',
+                renderIcon: () => {return h(Refresh)},
+                onClick: () => {
+                  bgms.value = getDefaultBgm()
+                  message.success('重置成功')
+                },
+              },
+              { default: () => '重置' },
+            ),
+            h(
+              NButton,
+              {
+                strong: true,
+                type: 'primary',
+                size: 'small',
+                class: 'p-2',
+                renderIcon: () => {return h(PlaylistAdd)},
+                onClick: addHandler,
+              },
+              { default: () => '添加' },
+            ),
+          ])
       },
       key: 'actions',
       width: 200,
@@ -143,38 +143,38 @@ const createColumns = (play, edit, del) => {
       {
         return h('div', { class: 'flex flex-row' }, [
           h(
-              NButton,
-              {
-                strong: true,
-                tertiary: true,
-                size: 'small',
-                onClick: () => play(row)
-              },
-              { default: () => '播放' }
+            NButton,
+            {
+              strong: true,
+              tertiary: true,
+              size: 'small',
+              onClick: () => play(row),
+            },
+            { default: () => '播放' },
           ),
           h(
-              NButton,
-              {
-                strong: true,
-                tertiary: true,
-                size: 'small',
-                onClick: () => edit(row)
-              },
-              { default: () => '编辑' }
+            NButton,
+            {
+              strong: true,
+              tertiary: true,
+              size: 'small',
+              onClick: () => edit(row),
+            },
+            { default: () => '编辑' },
           ),
           h(
-              NButton,
-              {
-                strong: true,
-                tertiary: true,
-                size: 'small',
-                onClick: () => del(row)
-              },
-              { default: () => '删除' }
-          )
+            NButton,
+            {
+              strong: true,
+              tertiary: true,
+              size: 'small',
+              onClick: () => del(row),
+            },
+            { default: () => '删除' },
+          ),
         ])
-      }
-    }
+      },
+    },
   ]
 }
 
@@ -182,8 +182,8 @@ const columns = createColumns(playHandler, editHandler, deleteHandler)
 const rules = {
   name: [
     {
-      required: true
-    }
+      required: true,
+    },
   ],
   url: [
     {
@@ -200,46 +200,46 @@ const rules = {
         }
         return true
       },
-      trigger: ['input', 'blur']
-    }
-  ]
+      trigger: ['input', 'blur'],
+    },
+  ],
 }
 </script>
 
 <template>
   <n-data-table
-      :columns="columns"
-      :data="list"
-      :pagination="false"
-      :bordered="false"
+    :bordered="false"
+    :columns="columns"
+    :data="list"
+    :pagination="false"
   >
   </n-data-table>
-  <n-modal :show="showEditModal" :on-after-leave="onCloseModal">
+  <n-modal :on-after-leave="onCloseModal" :show="showEditModal">
     <n-card
-        style="width: 50%"
-        :title="cardTitle"
-        :bordered="true"
-        size="small"
-        closable
-        @close="showEditModal=false"
+      :bordered="true"
+      :title="cardTitle"
+      closable
+      size="small"
+      style="width: 50%"
+      @close="showEditModal=false"
     >
 
       <n-form
-          :label-width="80"
-          :model="formData"
-          :rules="rules"
+        :label-width="80"
+        :model="formData"
+        :rules="rules"
       >
         <n-form-item label="歌曲名" path="name">
-          <n-input v-model:value="formData.name" placeholder=""/>
+          <n-input v-model:value="formData.name" placeholder="" />
         </n-form-item>
         <n-form-item label="直链地址" path="url">
-          <n-input v-model:value="formData.url" placeholder=""/>
-          <n-popover trigger="hover" placement="right" :duration="500">
+          <n-input v-model:value="formData.url" placeholder="" />
+          <n-popover :duration="500" placement="right" trigger="hover">
             <template #trigger>
               <n-button text>
                 <template #icon>
                   <n-icon>
-                    <info-filled/>
+                    <info-filled />
                   </n-icon>
                 </template>
               </n-button>
@@ -248,14 +248,14 @@ const rules = {
           </n-popover>
         </n-form-item>
         <n-form-item label="开始时间（秒）" path="offset">
-          <n-input-number v-model:value="formData.offset" clearable/>
+          <n-input-number v-model:value="formData.offset" clearable />
         </n-form-item>
       </n-form>
       <div class="flex justify-end">
         <n-button
-            type="primary"
-            :disabled="!(formData.url.length!==0&&formData.name.length!==0)"
-            @click="handler">保存
+          :disabled="!(formData.url.length!==0&&formData.name.length!==0)"
+          type="primary"
+          @click="handler">保存
         </n-button>
       </div>
     </n-card>

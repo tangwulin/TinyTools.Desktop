@@ -1,15 +1,15 @@
 <script setup>
-import { ref, watch } from "vue";
+import { ref } from 'vue'
 
-const hasImported = ref(false);
+const hasImported = ref(false)
 </script>
 
 <template>
   <n-card
-    style="margin: auto auto;display: flex;justify-content: center;align-items: center"
     :bordered="false"
+    style="margin: auto auto;display: flex;justify-content: center;align-items: center"
   >
-    <n-table :single-line="false" v-if="hasImported">
+    <n-table v-if="hasImported" :single-line="false">
       <thead>
       <tr>
       </tr>
