@@ -87,6 +87,7 @@ const writeClipboard = (x) => {
                 <n-avatar
                   :size="remToPx(4)"
                   :src="item.src"
+                  :img-props="{referrerpolicy:'no-referrer'}"
                   lazy
                   object-fit="contain"
                   round
