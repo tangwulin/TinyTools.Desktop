@@ -1,9 +1,22 @@
 <script setup>
 import { h, ref } from 'vue'
-import { NButton, NCard, NDynamicTags, NForm, NFormItem, NInput, NModal, NText, useMessage } from 'naive-ui'
+import {
+  NAvatar,
+  NButton,
+  NCard,
+  NDynamicTags,
+  NForm,
+  NFormItem,
+  NInput,
+  NModal,
+  NSwitch,
+  NText,
+  useMessage,
+} from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { usePersonStore } from '../stores/person'
 import { useSeatStore } from '../stores/seat'
+import { useSettingStore } from '../stores/setting'
 import { getRenderingList } from '../assets/script/seatHelper'
 import { useRoute } from 'vue-router'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
@@ -12,13 +25,16 @@ import { downloadAnyFile, generateUniqueId, remToPx } from '../assets/script/uti
 import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
+import { getAvatarUrls } from '../assets/script/avatarUrl'
 
 const route = useRoute()
 
 const personStore = usePersonStore()
 const seatStore = useSeatStore()
+const settingStore = useSettingStore()
 const { personList } = storeToRefs(personStore)
 const { allSeats, oldRenderingList } = storeToRefs(seatStore)
+const { enableFallbackAvatar, avatarWorks } = storeToRefs(settingStore)
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -74,8 +90,80 @@ const deleteHandler = (row) => {
   )
   message.success('删除成功')
 }
+
+function generateHash(input)
+{
+  let hash = 0
+  for (let i = 0; i < input.length; i++)
+  {
+    hash = (hash << 5) - hash + input.charCodeAt(i)
+  }
+  return Math.abs(hash)
+}
+
+function selectAvatar(studentId, avatarCount)
+{
+  const hashValue = generateHash(studentId)
+  return hashValue % avatarCount
+}
+
+const male = getAvatarUrls(1, avatarWorks.value)
+const female = getAvatarUrls(2, avatarWorks.value)
+
+const getAvatar = (person) => {
+  if (person?.avatar) return person.avatar
+  if (!enableFallbackAvatar.value) return null
+  const sn = person.number ? person.number : person.uniqueId
+  let urls
+  switch (person.sex)
+  {
+    case 1:
+      urls = male
+      break
+    case 2:
+      urls = female
+      break
+    default:
+      urls = male.concat(female)
+      break
+  }
+  return urls[selectAvatar(sn, urls.length)].src
+}
 const createColumns = (edit, del) => {
   return [
+    {
+      title()
+      {
+        return h(
+          'div',
+          { class: 'flex items-center justify-between' },
+          [
+            h(
+              'div',
+              { innerHTML: '头像' },
+            ),
+            h('div', { class: 'flex flex-row items-center justify-between' }, [
+              h('div', { innerHTML: '启用内置头像', class: 'mr-2' }),
+              h(NSwitch, {
+                value: enableFallbackAvatar,
+                ['onUpdate:value']: (value) => {enableFallbackAvatar.value = value},
+              }),
+            ]),
+          ])
+      },
+      key: 'avatar',
+      render(row)
+      {
+        return h(NAvatar, {
+          size: 'large',
+          src: getAvatar(row),
+          imgProps: { referrerpolicy: 'no-referrer' },
+          lazy: true,
+          objectFit: 'contain',
+          round: true,
+        })
+      },
+    },
     {
       title: '姓名',
       key: 'name',
