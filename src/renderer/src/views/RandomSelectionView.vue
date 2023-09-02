@@ -122,9 +122,6 @@ const male = getAvatarUrls(1, avatarWorks.value)
 const female = getAvatarUrls(2, avatarWorks.value)
 
 const getAvatar = (person) => {
-  // if (!enableAvatar) return null;
-  // if (!person) return null;
-  // if (!person.uniqueId) return null;
   if (person?.avatar) return person.avatar
   if (!enableFallbackAvatar.value) return null
   const sn = person.number ? person.number : person.uniqueId
