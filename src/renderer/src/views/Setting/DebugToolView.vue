@@ -72,10 +72,12 @@ const navTo = (name) => {
     message.error('路由不存在')
   }
 }
+const ua = navigator.userAgent
 </script>
 
 <template>
   <n-space vertical>
+    <p>浏览器/Webview的UA：{{ ua }}</p>
     <n-space justify="space-between">
       <n-space class="items-center">
         <div>更改后请重启程序</div>
