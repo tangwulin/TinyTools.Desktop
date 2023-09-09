@@ -15,7 +15,7 @@ const works = [{ value: 1, label: '原神' }, { value: 2, label: '明日方舟' 
 const sexes = [
   { label: '男', value: 1 },
   { label: '女', value: 2 },
-  { label: '未填写', value: 9 },
+  // { label: '未填写', value: 9 },
 ] //此处参考了GB/T 2261.1-2003
 
 const selectedSex = ref(1)
