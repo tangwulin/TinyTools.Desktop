@@ -2,7 +2,8 @@
 import { ref } from 'vue'
 import { usePersonStore } from '../stores/person'
 import { useSettingStore } from '../stores/setting'
-import { useGroupStore } from '../stores/general'
+import { useGroupStore } from '../stores/group'
+import { useScoreStore } from '../stores/score'
 import { storeToRefs } from 'pinia'
 import { remToPx } from '../assets/script/util'
 import { getAvatar } from '../utils/AvatarUtil'
@@ -17,6 +18,9 @@ const { enableAvatar, rates } = storeToRefs(settingStore)
 
 const groupStore = useGroupStore()
 const { groups } = storeToRefs(groupStore)
+
+const scoreStore = useScoreStore()
+const { rates } = storeToRefs(scoreStore)
 
 const showModal = ref(false)
 const currentPerson = ref(null)
