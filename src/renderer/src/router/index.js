@@ -80,6 +80,11 @@ const router = createRouter({
           component: () => import('../views/ScoreView.vue'),
         },
         {
+          path: 'group',
+          name: 'groupManage',
+          component: () => import('../views/GroupManageView.vue'),
+        },
+        {
           path: '/setting',
           name: 'setting',
           redirect: '/setting/seat',

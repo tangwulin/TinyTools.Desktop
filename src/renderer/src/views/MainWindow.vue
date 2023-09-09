@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'
 import {
   ChairAltOutlined as ChairIcon,
-  ScoreboardOutlined as ScoreIcon
+  ScoreboardOutlined as ScoreIcon,
 } from '@vicons/material'
 import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
@@ -13,6 +13,7 @@ import {
   Person24Regular as PersonIcon,
   Settings16Regular as SettingIcon,
 } from '@vicons/fluent'
+import {Group as GroupIcon} from '@vicons/carbon'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
@@ -137,6 +138,20 @@ const menuOptions = [
       ),
     key: 'personManage',
     icon: renderIcon(PersonIcon),
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'groupManage',
+          },
+        },
+        { default: () => '分组管理' },
+      ),
+    key: 'groupManage',
+    icon: renderIcon(GroupIcon),
   },
 ]
 
