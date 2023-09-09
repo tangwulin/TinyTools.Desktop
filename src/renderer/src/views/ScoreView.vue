@@ -68,7 +68,7 @@ const scoreHandler = (rate) => {
           v-for="item in rates"
           style="
                 width: 6rem;
-                height: 4rem;
+                height: 6rem;
                 background: #fff;
                 box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
                 border-radius: 1rem;
@@ -89,6 +89,7 @@ const scoreHandler = (rate) => {
             <div class="flex flex-col items-center">
               <p style="text-align: center;">{{ item?.name }}</p>
               <n-tag size="small" :type="item.score>=0 ? 'info':'error'">{{ item?.score ?? 0 }}</n-tag>
+              <n-p depth="3" style="font-size: 0.75rem;margin: 0;">{{ item?.description }}</n-p>
             </div>
           </div>
         </div>
