@@ -97,44 +97,6 @@ const deleteHandler = (row) => {
   message.success('删除成功')
 }
 
-function generateHash(input)
-{
-  let hash = 0
-  for (let i = 0; i < input.length; i++)
-  {
-    hash = (hash << 5) - hash + input.charCodeAt(i)
-  }
-  return Math.abs(hash)
-}
-
-function selectAvatar(studentId, avatarCount)
-{
-  const hashValue = generateHash(studentId)
-  return hashValue % avatarCount
-}
-
-const male = getAvatarUrls(1, avatarWorks.value)
-const female = getAvatarUrls(2, avatarWorks.value)
-
-const getAvatar = (person) => {
-  if (person?.avatar) return person.avatar
-  if (!enableFallbackAvatar.value) return null
-  const sn = person.number ? person.number : person.uniqueId
-  let urls
-  switch (person.sex)
-  {
-    case 1:
-      urls = male
-      break
-    case 2:
-      urls = female
-      break
-    default:
-      urls = male.concat(female)
-      break
-  }
-  return urls[selectAvatar(sn, urls.length)].src
-}
 const createColumns = (edit, del) => {
   return [
     {
