@@ -53,3 +53,13 @@ export const downloadAnyFile = (url, filename) => fetch(url)
   .catch((err) => {
     console.error(err)
   })
+
+export function generateHash(input)
+{
+  let hash = 0
+  for (let i = 0; i < input.length; i++)
+  {
+    hash = (hash << 5) - hash + input.charCodeAt(i)
+  }
+  return Math.abs(hash)
+}

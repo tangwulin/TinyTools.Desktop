@@ -25,7 +25,7 @@ import { downloadAnyFile, generateUniqueId, remToPx } from '../assets/script/uti
 import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
-import { getAvatarUrls } from '../assets/script/avatarUrl'
+import { getAvatarUrls } from '../utils/AvatarUtil'
 
 const route = useRoute()
 

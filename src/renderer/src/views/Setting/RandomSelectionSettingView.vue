@@ -3,7 +3,7 @@ import { ref } from 'vue'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { remToPx } from '../../assets/script/util'
-import { getAvatarUrls } from '../../assets/script/avatarUrl'
+import { getAvatarUrls } from '../../utils/AvatarUtil'
 import { useMessage } from 'naive-ui'
 
 const message = useMessage()
