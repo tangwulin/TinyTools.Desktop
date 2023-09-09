@@ -14,7 +14,7 @@ const personStore = usePersonStore()
 const { personList } = storeToRefs(personStore)
 
 const settingStore = useSettingStore()
-const { enableAvatar, rates } = storeToRefs(settingStore)
+const { enableAvatar } = storeToRefs(settingStore)
 
 const groupStore = useGroupStore()
 const { groups } = storeToRefs(groupStore)
