@@ -241,8 +241,8 @@ watch(
         button-placement="both"
       />
       <n-divider style="margin: 1rem 0" />
-      <div>
-        <n-collapse>
+      <n-scrollbar style="max-height: 50vh;overflow-x: hidden">
+        <n-collapse >
           <n-collapse-item name="1" title="性别范围">
             <n-checkbox-group v-model:value="selectedSex">
               <n-space item-style="display: flex;">
@@ -260,10 +260,11 @@ watch(
               v-model:value="value1"
               :options="options1"
               source-filterable
+              class="pr-3"
             />
           </n-collapse-item>
         </n-collapse>
-      </div>
+      </n-scrollbar>
       <template #footer>
         <div class="flex justify-end">
           <n-button type="primary" @click="handler(false)">开始</n-button>
