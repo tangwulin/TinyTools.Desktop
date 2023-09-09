@@ -2,7 +2,10 @@
 import { h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'
-import { ChairAltOutlined as ChairIcon } from '@vicons/material'
+import {
+  ChairAltOutlined as ChairIcon,
+  ScoreboardOutlined as ScoreIcon
+} from '@vicons/material'
 import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
   DataHistogram24Regular as DataIcon,
@@ -63,6 +66,20 @@ const menuOptions = [
     key: 'dashboard',
     icon: renderIcon(DataIcon),
     show: enableDevelopFeature.value,
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'score',
+          },
+        },
+        { default: () => '评分（未完成）' },
+      ),
+    key: 'score',
+    icon: renderIcon(ScoreIcon),
   },
   {
     label: () =>

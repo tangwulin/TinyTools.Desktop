@@ -75,6 +75,11 @@ const router = createRouter({
           component: () => import('../views/PersonManageView.vue'),
         },
         {
+          path: '/score',
+          name: 'score',
+          component: () => import('../views/ScoreView.vue'),
+        },
+        {
           path: '/setting',
           name: 'setting',
           redirect: '/setting/seat',
