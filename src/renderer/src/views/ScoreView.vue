@@ -42,6 +42,16 @@ const scoreHandler = (rate) => {
   showModal.value = false
   message.success('操作成功')
 }
+
+const createAvatars = (item) => {
+  const person = personList.value.filter(p => item.members.includes(p.uniqueId))
+  return person.map(p => ({ name: p.name, src: getAvatar(p) }))
+}
+
+const createDropdownOptions = (options) => options.map((option) => ({
+  key: option.name,
+  label: option.name,
+}))
 </script>
 
 <template>
@@ -175,6 +185,7 @@ const scoreHandler = (rate) => {
                   flex-direction: row;
                   justify-content: center;
                   align-items: center;
+                  margin:0 0.5rem;
                 "
             >
               <n-avatar
@@ -184,9 +195,61 @@ const scoreHandler = (rate) => {
                 lazy
                 object-fit="contain"
                 round
-                style="margin: 0.5rem auto"
               />
-              <span>{{ item?.name }}</span>
+              <div class="mx-auto flex flex-col" style="font-size: 0.75rem;">
+                <span>{{ item?.name }}</span>
+                <n-space justify="space-between"><span>{{ item?.members.length }}人</span>
+                  <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
+                </n-space>
+                <n-avatar-group :options="createAvatars(item)" :size="remToPx(2)" :max="5">
+                  <template #avatar="{ option: { name, src } }">
+                    <n-tooltip>
+                      <template #trigger>
+                        <n-avatar :src="src" />
+                      </template>
+                      {{ name }}
+                    </n-tooltip>
+                  </template>
+                  <template #rest="{ options: restOptions, rest }">
+                    <n-dropdown :options="createDropdownOptions(restOptions)" placement="top"
+                                arrow-style="overflow: hidden;" style="overflow: hidden;">
+                      <n-avatar style="font-size: 0.75rem;">+{{ rest }}</n-avatar>
+                    </n-dropdown>
+                  </template>
+                </n-avatar-group>
+              </div>
+            </div>
+          </div>
+
+          <div
+            style="
+                width: 12rem;
+                height: 6rem;
+                background: #fff;
+                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+                border-radius: 1rem;
+                margin: 0.5rem;
+              "
+            @click="$router.push({name:'groupManage',query:{showAddModal:'true'}})"
+          >
+            <div
+              style="
+                  width: 100%;
+                  height: 100%;
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                "
+            >
+              <n-icon size="3rem">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M368.5 240H272v-96.5c0-8.8-7.2-16-16-16s-16 7.2-16 16V240h-96.5c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7H240v96.5c0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7 8.8 0 16-7.2 16-16V272h96.5c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
+                  />
+                </svg>
+              </n-icon>
+              <span>添加分组</span>
             </div>
           </div>
         </div>
