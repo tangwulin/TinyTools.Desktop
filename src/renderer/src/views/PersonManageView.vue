@@ -11,6 +11,7 @@ import {
   NModal,
   NPopover,
   NSwitch,
+  NTag,
   NText,
   useMessage,
 } from 'naive-ui'
@@ -18,6 +19,7 @@ import { storeToRefs } from 'pinia'
 import { usePersonStore } from '../stores/person'
 import { useSeatStore } from '../stores/seat'
 import { useSettingStore } from '../stores/setting'
+import { useGroupStore } from '../stores/general'
 import { getRenderingList } from '../assets/script/seatHelper'
 import { useRoute } from 'vue-router'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
@@ -26,16 +28,18 @@ import { downloadAnyFile, generateUniqueId, remToPx } from '../assets/script/uti
 import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
-import { getAvatarUrls } from '../utils/AvatarUtil'
+import { getAvatar } from '../utils/AvatarUtil'
 
 const route = useRoute()
 
 const personStore = usePersonStore()
 const seatStore = useSeatStore()
 const settingStore = useSettingStore()
+const groupStore = useGroupStore()
 const { personList } = storeToRefs(personStore)
 const { allSeats, oldRenderingList } = storeToRefs(seatStore)
-const { enableFallbackAvatar, avatarWorks } = storeToRefs(settingStore)
+const { enableFallbackAvatar } = storeToRefs(settingStore)
+const { groups } = storeToRefs(groupStore)
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -67,6 +71,7 @@ const formValue = ref({
   name: '',
   number: '',
   sex: 9,
+  groups: [],
   uniqueId: generateUniqueId(),
 })
 const multiAddForm = ref({ input: '', names: [] })
@@ -171,6 +176,17 @@ const createColumns = (edit, del) => {
     {
       title: '学号',
       key: 'number',
+    },
+    {
+      title: '分组',
+      key: 'groups',
+      render(row)
+      {
+        const groupTags = row.group?.map(item => h(NTag, null, { default: () => item.name }))
+        return groupTags
+          ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
+          : h(NText, { depth: 3 }, { default: () => '未加入' })
+      },
     },
     {
       title: '性别',
@@ -399,36 +415,46 @@ const downloadTemplate = () => {
         () => {
           showAddModal = false;
           if (isEdit)
-            formValue = {
+            formValue.value = {
               name: '',
               number: '',
               sex: 9,
+              groups:[],
               uniqueId: generateUniqueId()
             };
           isEdit = false;
         }
       "
     >
-      <n-form>
-        <n-form-item label="头像" path="avatar">
-          <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
-        </n-form-item>
-        <n-form-item label="姓名" path="name">
-          <n-input v-model:value="formValue.name" placeholder="输入姓名" />
-        </n-form-item>
-        <n-form-item label="学号（可选）" path="number">
-          <n-input v-model:value="formValue.number" placeholder="输入学号" />
-        </n-form-item>
-        <n-form-item label="性别（可选）" path="sex">
-          <n-radio-group v-model:value="formValue.sex">
+      <n-scrollbar style="max-height: 70vh;overflow-x: hidden;padding: 0 1rem 0 0;margin: 0 0 1rem 0">
+        <n-form>
+          <n-form-item label="头像" path="avatar">
+            <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
+          </n-form-item>
+          <n-form-item label="姓名" path="name">
+            <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+          </n-form-item>
+          <n-form-item label="学号（可选）" path="number">
+            <n-input v-model:value="formValue.number" placeholder="输入学号" />
+          </n-form-item>
+          <n-form-item label="性别（可选）" path="sex">
+            <n-radio-group v-model:value="formValue.sex">
+              <n-space>
+                <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
+                  {{ sex.label }}
+                </n-radio>
+              </n-space>
+            </n-radio-group>
+          </n-form-item>
+          <n-space vertical>
             <n-space>
-              <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
-                {{ sex.label }}
-              </n-radio>
+              <p>分组（可选）</p>
+              <n-button tertiary size="tiny">分组管理</n-button>
             </n-space>
-          </n-radio-group>
-        </n-form-item>
-      </n-form>
+            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="groups" />
+          </n-space>
+        </n-form>
+      </n-scrollbar>
       <div class="flex justify-end">
         <n-button
           :disabled="formValue.name.length === 0"
