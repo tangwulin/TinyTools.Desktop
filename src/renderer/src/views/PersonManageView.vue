@@ -9,6 +9,7 @@ import {
   NFormItem,
   NInput,
   NModal,
+  NPopover,
   NSwitch,
   NText,
   useMessage,
@@ -138,17 +139,16 @@ const createColumns = (edit, del) => {
           'div',
           { class: 'flex items-center justify-between' },
           [
-            h(
-              'div',
-              { innerHTML: '头像' },
-            ),
-            h('div', { class: 'flex flex-row items-center justify-between' }, [
-              h('div', { innerHTML: '启用内置头像', class: 'mr-2' }),
-              h(NSwitch, {
-                value: enableFallbackAvatar.value,
-                ['onUpdate:value']: (value) => {enableFallbackAvatar.value = value},
-              }),
-            ]),
+            h(NPopover, { trigger: 'click' }, {
+              trigger: () => h('div', { innerHTML: '头像' }),
+              default: () => h('div', { class: 'flex flex-row items-center justify-between' }, [
+                h('div', { innerHTML: '启用内置头像', class: 'mr-2' }),
+                h(NSwitch, {
+                  value: enableFallbackAvatar.value,
+                  ['onUpdate:value']: (value) => {enableFallbackAvatar.value = value},
+                }),
+              ]),
+            }),
           ])
       },
       key: 'avatar',
