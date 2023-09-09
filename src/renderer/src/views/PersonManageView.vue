@@ -29,6 +29,7 @@ import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
 import { getAvatar } from '../utils/AvatarUtil'
+import { difference } from 'lodash-es'
 
 const route = useRoute()
 
@@ -130,7 +131,7 @@ const createColumns = (edit, del) => {
           round: true,
         })
       },
-      width:remToPx(4)
+      width: remToPx(4),
     },
     {
       title: '姓名',
@@ -254,6 +255,9 @@ const handler = () => {
     personList.value = personList.value.map((item) => {
       if (item.uniqueId === formValue.value.uniqueId)
       {
+        // difference(item.group, formValue.value.groups)
+        //   .forEach(x => groups.value.find(x).members = groups.value.find(x).members
+        //                                                      .filter(p => p.uniqueId !== item.uniqueId))
         return formValue.value // 使用展开语法更新 title 属性
       }
       return item // 非匹配的元素保持原样
@@ -311,6 +315,11 @@ window.addEventListener('resize', () => {
 
 const downloadTemplate = () => {
   downloadAnyFile(personXlsx, '人员导入模板.xlsx')
+}
+
+function createOptions(x)
+{
+  return x.map(item => ({ label: item.name, value: item.uniqueId }))
 }
 </script>
 
@@ -411,13 +420,13 @@ const downloadTemplate = () => {
               </n-space>
             </n-radio-group>
           </n-form-item>
-          <n-space vertical>
-            <n-space>
-              <p>分组（可选）</p>
-              <n-button tertiary size="tiny">分组管理</n-button>
-            </n-space>
-            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="groups" />
-          </n-space>
+<!--          <n-space vertical>-->
+<!--            <n-space>-->
+<!--              <p>分组（可选）</p>-->
+<!--              <n-button tertiary size="tiny">分组管理</n-button>-->
+<!--            </n-space>-->
+<!--            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="createOptions(groups)" />-->
+<!--          </n-space>-->
         </n-form>
       </n-scrollbar>
       <div class="flex justify-end">
