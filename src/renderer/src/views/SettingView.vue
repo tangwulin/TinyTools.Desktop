@@ -10,7 +10,7 @@ import {
   Person20Regular as PersonIcon,
   Settings16Regular as SettingIcon,
 } from '@vicons/fluent'
-import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
+import {UserAvatar as AvatarIcon} from '@vicons/carbon'
 
 const settingStore = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(settingStore)
@@ -48,13 +48,13 @@ const settingOptions = [
             RouterLink,
             {
               to: {
-                name: 'randomSelectionSetting',
+                name: 'avatarSetting',
               },
             },
-            { default: () => '随机抽选' },
+            { default: () => '头像设置' },
           ),
-        key: 'randomSelectionSetting',
-        icon: renderIcon(DiceIcon),
+        key: 'avatarSetting',
+        icon: renderIcon(AvatarIcon),
       },
     ],
   },
