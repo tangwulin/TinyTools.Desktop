@@ -145,7 +145,7 @@ const createColumns = (edit, del) => {
             h('div', { class: 'flex flex-row items-center justify-between' }, [
               h('div', { innerHTML: '启用内置头像', class: 'mr-2' }),
               h(NSwitch, {
-                value: enableFallbackAvatar,
+                value: enableFallbackAvatar.value,
                 ['onUpdate:value']: (value) => {enableFallbackAvatar.value = value},
               }),
             ]),
