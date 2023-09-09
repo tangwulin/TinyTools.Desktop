@@ -130,6 +130,7 @@ const createColumns = (edit, del) => {
           round: true,
         })
       },
+      width:remToPx(4)
     },
     {
       title: '姓名',
@@ -144,8 +145,8 @@ const createColumns = (edit, del) => {
       key: 'groups',
       render(row)
       {
-        const groupTags = row.group?.map(item => h(NTag, null, { default: () => item.name }))
-        return groupTags
+        const groupTags = row.group?.map(item => h(NTag, { bordered: false }, { default: () => groups.value.find(g => g.uniqueId === item).name }))
+        return groupTags.length !== 0
           ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
           : h(NText, { depth: 3 }, { default: () => '未加入' })
       },
@@ -229,7 +230,7 @@ const addPerson = () => {
       name: name,
       number: '',
       sex: 9,
-      group:[],
+      group: [],
       uniqueId: generateUniqueId(),
     })),
   )
@@ -282,7 +283,7 @@ const parseExcel = async (uploadFileInfo) => {
         name: item['姓名'],
         sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
         number: JSON.stringify(item['学号']),
-        group:[]
+        group: [],
       }
     })
     .filter((item) => item !== null)
