@@ -3,8 +3,16 @@
 </script>
 
 <template>
-  <div id="dock" class="text-white">
-    <p>There are transparent test page</p>
+  <div id="dock" class="text-white flex flex-row justify-around">
+    <div class="w-1/5 border-2 border-black">
+      asdfcasas
+    </div>
+    <div class="w-1/2 border-2 border-black">
+      <!--    <p>There are transparent test page</p>-->
+    </div>
+    <div class="w-1/4 border-2 border-black">
+
+    </div>
   </div>
 </template>
 
