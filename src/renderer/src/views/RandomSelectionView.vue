@@ -230,7 +230,7 @@ watch(
       role="dialog"
       size="huge"
       style="width: 50%; overflow-y: auto; overflow-x: hidden"
-      title="高级抽选"
+      title="自定义抽选"
       @close="showAdvancedModal = false"
     >
       数量
