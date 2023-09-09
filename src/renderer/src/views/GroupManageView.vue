@@ -102,6 +102,8 @@ const handler = () => {
     message.success('添加成功')
   }
   showModal.value = false
+  currentGroup.value={ name: '', description: '', members: [], avatar: '', uniqueId: '' }
+  value1.value=[]
 }
 
 const deleteHandler = () => {
