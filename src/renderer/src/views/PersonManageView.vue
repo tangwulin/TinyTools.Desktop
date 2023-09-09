@@ -229,6 +229,7 @@ const addPerson = () => {
       name: name,
       number: '',
       sex: 9,
+      group:[],
       uniqueId: generateUniqueId(),
     })),
   )
@@ -281,6 +282,7 @@ const parseExcel = async (uploadFileInfo) => {
         name: item['姓名'],
         sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
         number: JSON.stringify(item['学号']),
+        group:[]
       }
     })
     .filter((item) => item !== null)
