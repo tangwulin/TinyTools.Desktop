@@ -26,7 +26,10 @@ const groupStore = useGroupStore()
 const { groups } = storeToRefs(groupStore)
 
 const scoreStore = useScoreStore()
-const { rates } = storeToRefs(scoreStore)
+const { rates, scoreHistories } = storeToRefs(scoreStore)
+
+const generalStore = useGeneralStore()
+const { lastScoreType } = storeToRefs(generalStore)
 
 const showModal = ref(false)
 const current = ref(null)
@@ -46,6 +49,14 @@ const scoreHandler = (rate) => {
     current.value.score += rate.score
   else
     current.value.score = rate.score
+  scoreHistories.value.push(
+    {
+      time: Date.now(),
+      owner: current.value.uniqueId,
+      ownerType: ('members' in current.value) ? 'group' : 'person',
+      score: rate.score,
+      forWhat: rate.name,
+    })
   showModal.value = false
   message.success('操作成功')
 }
