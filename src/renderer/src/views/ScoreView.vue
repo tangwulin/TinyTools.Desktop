@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { usePersonStore } from '../stores/person'
 import { useSettingStore } from '../stores/setting'
 import { useGroupStore } from '../stores/group'
@@ -9,6 +9,12 @@ import { remToPx } from '../assets/script/util'
 import { getAvatar } from '../utils/AvatarUtil'
 import { GroupFilled as GroupIcon, PersonFilled as PersonIcon } from '@vicons/material'
 import { useMessage } from 'naive-ui'
+import { History as HistoryIcon } from '@vicons/tabler'
+import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
+import {  useRoute } from 'vue-router'
+import { useGeneralStore } from '../stores/general'
+
+const route = useRoute()
 
 const personStore = usePersonStore()
 const { personList } = storeToRefs(personStore)
@@ -25,7 +31,8 @@ const { rates } = storeToRefs(scoreStore)
 const showModal = ref(false)
 const current = ref(null)
 
-const showPerson = ref(true)
+const showPerson = ref(false)
+showPerson.value = route.query.type === 'person'
 
 const message = useMessage()
 
@@ -52,6 +59,11 @@ const createDropdownOptions = (options) => options.map((option) => ({
   key: option.name,
   label: option.name,
 }))
+watch(() => route.query, () => {
+  showPerson.value = route.query.type === 'person'
+  if (route.query?.type) lastScoreType.value = route.query.type
+})
+
 </script>
 
 <template>
@@ -265,7 +277,7 @@ const createDropdownOptions = (options) => options.map((option) => ({
           <div class="flex">
             <div
               class="flex flex-col justify-center items-center cursor-pointer w-12"
-              @click="showPerson=false"
+              @click="$router.push({name:'score',query:{type:'group'}})"
             >
               <n-icon size="1.5rem">
                 <group-icon />
@@ -274,12 +286,32 @@ const createDropdownOptions = (options) => options.map((option) => ({
             </div>
             <div
               class="flex flex-col justify-center items-center cursor-pointer w-12"
-              @click="showPerson=true"
+              @click="$router.push({name:'score',query:{type:'person'}})"
             >
               <n-icon size="1.5rem">
                 <PersonIcon />
               </n-icon>
               个人
+            </div>
+          </div>
+          <div class="flex">
+            <div
+              class="flex flex-col justify-center items-center cursor-pointer w-12"
+              @click="showPerson=true"
+            >
+              <n-icon size="1.5rem">
+                <undo-icon />
+              </n-icon>
+              撤销
+            </div>
+            <div
+              class="flex flex-col justify-center items-center cursor-pointer w-12"
+              @click="$router.push({name:'scoreHistory'})"
+            >
+              <n-icon size="1.5rem">
+                <history-icon />
+              </n-icon>
+              历史
             </div>
           </div>
         </n-space>

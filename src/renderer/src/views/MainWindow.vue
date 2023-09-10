@@ -2,10 +2,7 @@
 import { h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'
-import {
-  ChairAltOutlined as ChairIcon,
-  ScoreboardOutlined as ScoreIcon,
-} from '@vicons/material'
+import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
   DataHistogram24Regular as DataIcon,
@@ -13,14 +10,18 @@ import {
   Person24Regular as PersonIcon,
   Settings16Regular as SettingIcon,
 } from '@vicons/fluent'
-import {Group as GroupIcon} from '@vicons/carbon'
+import { Group as GroupIcon } from '@vicons/carbon'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
 import logoUrl from '../assets/images/logo.png'
+import { useGeneralStore } from '../stores/general'
 
 const settingStore = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(settingStore)
+
+const generalStore = useGeneralStore()
+const { lastScoreType } = storeToRefs(generalStore)
 
 const version = __APP_VERSION__
 const shortVersion = version?.split('-')[0]
@@ -75,6 +76,7 @@ const menuOptions = [
         {
           to: {
             name: 'score',
+            query: { type: lastScoreType.value },
           },
         },
         { default: () => '评分（未完成）' },
