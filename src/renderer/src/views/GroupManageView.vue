@@ -1,6 +1,7 @@
 <script setup>
 import { useGroupStore } from '../stores/group'
 import { usePersonStore } from '../stores/person'
+import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
 import { generateUniqueId, remToPx } from '../assets/script/util'
 import { getAvatar } from '../utils/AvatarUtil'
@@ -16,6 +17,9 @@ const { groups } = storeToRefs(groupStore)
 
 const personStore = usePersonStore()
 const { personList } = storeToRefs(personStore)
+
+const settingStore = useSettingStore()
+const { enableAvatar } = storeToRefs(settingStore)
 
 const showModal = ref(false)
 showModal.value = route.query.showAddModal === 'true'
@@ -179,6 +183,10 @@ watch(
                 <template #avatar>
                   <n-avatar
                     :src="getAvatar(personList.find(p=>p.uniqueId===item))"
+                    :img-props="{referrerpolicy:'no-referrer'}"
+                    lazy
+                    object-fit="contain"
+                    round
                   />
                 </template>
               </n-tag>
@@ -263,8 +271,10 @@ watch(
                 "
           >
             <n-avatar
+              v-if="enableAvatar"
               :size="remToPx(3)"
               :src="getAvatar(item)"
+              :img-props="{referrerpolicy:'no-referrer'}"
               lazy
               object-fit="contain"
               round
@@ -274,7 +284,7 @@ watch(
               <n-space justify="space-between"><span>{{ item?.members.length }}人</span>
                 <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
               </n-space>
-              <n-avatar-group :options="createAvatars(item)" :size="remToPx(2)" :max="5">
+              <n-avatar-group v-if="enableAvatar" :options="createAvatars(item)" :size="remToPx(2)" :max="5">
                 <template #avatar="{ option: { name, src } }">
                   <n-tooltip>
                     <template #trigger>

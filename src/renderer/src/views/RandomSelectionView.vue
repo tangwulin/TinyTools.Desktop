@@ -150,6 +150,7 @@ watch(
                   lazy
                   object-fit="contain"
                   round
+                  :imgProps="{ referrerpolicy: 'no-referrer' }"
                   style="margin-bottom: 0.5rem"
                 />
                 <span style="font-size: 1.5rem">{{ item?.name }}</span>

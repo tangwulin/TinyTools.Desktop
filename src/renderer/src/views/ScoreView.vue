@@ -166,6 +166,7 @@ watch(() => route.query, () => {
                 v-if="enableAvatar"
                 :size="remToPx(3)"
                 :src="getAvatar(item)"
+                :img-props="{referrerpolicy:'no-referrer'}"
                 lazy
                 object-fit="contain"
                 round
@@ -224,11 +225,15 @@ watch(() => route.query, () => {
                 <n-space justify="space-between"><span>{{ item?.members.length }}人</span>
                   <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
                 </n-space>
-                <n-avatar-group :options="createAvatars(item)" :size="remToPx(2)" :max="5">
+                <n-avatar-group v-if="enableAvatar" :options="createAvatars(item)" :size="remToPx(2)" :max="5">
                   <template #avatar="{ option: { name, src } }">
                     <n-tooltip>
                       <template #trigger>
-                        <n-avatar :src="src" />
+                        <n-avatar :src="src"
+                                  :img-props="{referrerpolicy:'no-referrer'}"
+                                  lazy
+                                  object-fit="contain"
+                                  round/>
                       </template>
                       {{ name }}
                     </n-tooltip>
