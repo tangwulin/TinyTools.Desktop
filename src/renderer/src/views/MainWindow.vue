@@ -23,7 +23,7 @@ const settingStore = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(settingStore)
 
 const version = __APP_VERSION__
-const shortVersion = version.split('-')[0]
+const shortVersion = version?.split('-')[0]
 
 const activeKey = ref('seat')
 const collapsed = ref(true)
