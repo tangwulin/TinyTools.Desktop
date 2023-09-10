@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref,watch } from 'vue'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { remToPx } from '../../assets/script/util'
@@ -9,7 +9,7 @@ import { useMessage } from 'naive-ui'
 const message = useMessage()
 
 const setting = useSettingStore()
-const { enableAvatar, enableFallbackAvatar, avatarWorks } = storeToRefs(setting)
+const { enableAvatar, enableFallbackAvatar,avatarWorks } = storeToRefs(setting)
 const works = [{ value: 1, label: '原神' }, { value: 2, label: '明日方舟' }, { value: 3, label: '崩坏·星穹铁道' }]
 
 const sexes = [
@@ -20,12 +20,14 @@ const sexes = [
 
 const selectedSex = ref(1)
 const selectedAvatar = ref(getAvatarUrls(1, avatarWorks.value))
-const handler = () => {selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value)}
+const changeHandler = () => {selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value)}
 const writeClipboard = (x) => {
   navigator.clipboard.writeText(x)
            .then(() => {message.success('链接已复制到剪贴板')})
            .catch(() => {message.error('请授予剪贴板权限！')})
 }
+
+watch(avatarWorks, changeHandler)
 </script>
 
 <template>
@@ -40,7 +42,7 @@ const writeClipboard = (x) => {
     </n-space>
     <n-space>
       <p>内置头像来源</p>
-      <n-checkbox-group v-model:value="avatarWorks" :disabled="!enableFallbackAvatar" :on-update:value="handler">
+      <n-checkbox-group v-model:value="avatarWorks" :disabled="!enableFallbackAvatar" :min="1">
         <n-space item-style="display: flex;">
           <n-checkbox v-for="item in works" :label="item.label" :value="item.value" />
         </n-space>
@@ -49,7 +51,7 @@ const writeClipboard = (x) => {
     <n-space>
       <n-collapse>
         <n-collapse-item title="可用头像列表">
-          <n-radio-group v-model:value="selectedSex" @change="handler">
+          <n-radio-group v-model:value="selectedSex" @change="changeHandler">
             <n-space>
               <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
                 {{ sex.label }}
