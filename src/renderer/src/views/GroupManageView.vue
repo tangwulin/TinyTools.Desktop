@@ -121,11 +121,11 @@ const deleteHandler = () => {
 }
 
 const onModalClose = () => {
-  showModal.value=false
-  currentGroup.value= { name: '', description: '', members: [],avatar:'',uniqueId:'' }
-  value1.value=[]
+  showModal.value = false
+  currentGroup.value = { name: '', description: '', members: [], avatar: '', uniqueId: '' }
+  value1.value = []
   if (route.query?.showAddModal === 'true')
-    setTimeout(()=>{router.push({ name: 'score', query: { type: 'group' } })},150)
+    setTimeout(() => {router.push({ name: 'score', query: { type: 'group' } })}, 150)
 }
 
 const createAvatars = (item) => {
