@@ -23,29 +23,29 @@ const scoreStore = useScoreStore()
 const { rates } = storeToRefs(scoreStore)
 
 const showModal = ref(false)
-const currentPerson = ref(null)
+const current = ref(null)
 
 const showPerson = ref(true)
 
 const message = useMessage()
 
-const clickHandler = (person) => {
+const clickHandler = (item) => {
   showModal.value = true
-  currentPerson.value = person
+  current.value = item
 }
 
 const scoreHandler = (rate) => {
-  if (currentPerson.value?.score)
-    currentPerson.value.score += rate.score
+  if (current.value?.score)
+    current.value.score += rate.score
   else
-    currentPerson.value.score = rate.score
+    current.value.score = rate.score
   showModal.value = false
   message.success('操作成功')
 }
 
 const createAvatars = (item) => {
-  const person = personList.value.filter(p => item.members.includes(p.uniqueId))
-  return person.map(p => ({ name: p.name, src: getAvatar(p) }))
+  const persons = personList.value.filter(p => item.members.includes(p.uniqueId))
+  return persons.map(p => ({ name: p.name, src: getAvatar(p) }))
 }
 
 const createDropdownOptions = (options) => options.map((option) => ({
@@ -58,7 +58,7 @@ const createDropdownOptions = (options) => options.map((option) => ({
   <n-modal v-model:show="showModal">
     <n-card
       style="width: 70%"
-      :title="'向 '+  currentPerson.name +' 发送点评'"
+      :title="'向 '+  current.name +' 发送点评'"
       :bordered="false"
       size="huge"
       role="dialog"
