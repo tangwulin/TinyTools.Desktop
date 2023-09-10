@@ -1,7 +1,6 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { remToPx } from '../assets/script/util'
-import { useGeneralStore } from '../stores/general'
 import { usePersonStore } from '../stores/person'
 import { useGroupStore } from '../stores/group'
 import { useSettingStore } from '../stores/setting'
@@ -9,11 +8,12 @@ import { storeToRefs } from 'pinia'
 import { getAvatar } from '../utils/AvatarUtil'
 
 import { use } from 'echarts/core'
-import { BarChart,PieChart } from 'echarts/charts'
-import { GridComponent, TitleComponent, TooltipComponent,LegendComponent } from 'echarts/components'
+import { BarChart, PieChart } from 'echarts/charts'
+import { GridComponent, LegendComponent, TitleComponent, ToolboxComponent, TooltipComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
 import VChart from 'vue-echarts'
 import { useScoreStore } from '../stores/score'
+import { useRoute,useRouter } from 'vue-router'
 
 use([
   TooltipComponent,
@@ -25,12 +25,8 @@ use([
   TooltipComponent,
   LegendComponent,
   PieChart,
+  ToolboxComponent,
 ])
-
-
-
-const generalStore = useGeneralStore()
-const { lastScoreType } = storeToRefs(generalStore)
 
 const personStore = usePersonStore()
 const { personList } = storeToRefs(personStore)
@@ -43,6 +39,9 @@ const { enableAvatar } = storeToRefs(settingStore)
 
 const scoreStore = useScoreStore()
 const { scoreHistories } = storeToRefs(scoreStore)
+
+const route = useRoute()
+const router = useRouter()
 
 const current = ref(null)
 const keyword = ref('')
@@ -78,6 +77,10 @@ const displayList = computed(() => {
 
 const handler = (item) => {
   current.value = item
+  router.push({
+    name: 'scoreReportDetail',
+    query: { type: ('members' in item) ? 'group' : 'person', uniqueId: item.uniqueId },
+  })
 }
 const firstHistoryTime = new Date(scoreHistories?.value[scoreHistories.value?.length - 1]?.time).toLocaleString()
 
@@ -132,9 +135,8 @@ const data1 =
           .map(item => item
             .reduce(
               (accumulator, currentValue) => {return accumulator + currentValue.score}, 0))
-          .map((sum,index)=>({value:sum,name:allRates[index]})
-)
-
+          .map((sum, index) => ({ value: sum, name: allRates[index] }),
+          )
 
 const option2 = ref({
   title: {
@@ -144,29 +146,42 @@ const option2 = ref({
   },
   tooltip: {
     trigger: 'item',
+    formatter: '{a} <br/>{b} : {c} ({d}%)',
   },
   legend: {
-    orient: 'vertical',
-    left: 'left',
+    left: 'center',
+    top: 'bottom',
+    data: [
+      ...allRates,
+    ],
+  },
+  toolbox: {
+    show: true,
+    feature: {
+      mark: { show: true },
+      dataView: { show: true, readOnly: false },
+      restore: { show: true },
+      saveAsImage: { show: true },
+    },
   },
   series: [
     {
       name: '各评分项总数',
       type: 'pie',
-      radius: '50%',
-      data: [
-        ...data1
-      ],
-      emphasis: {
-        itemStyle: {
-          shadowBlur: 10,
-          shadowOffsetX: 0,
-          shadowColor: 'rgba(0, 0, 0, 0.5)',
-        },
+      radius: [20, 140],
+      roseType: 'area',
+      itemStyle: {
+        borderRadius: 5,
       },
+      data: [
+        ...data1,
+      ],
     },
   ],
 })
+
+const rKey = ref(Math.random())
+watch(() => route.query, () => {rKey.value = Math.random()})
 </script>
 
 <template>
@@ -214,7 +229,7 @@ const option2 = ref({
         <span v-if="current!==null">{{ current?.name }} 的得分情况</span>
         <div style="width: 100%;height: calc(100% - 2rem);display:flex;justify-content: center;align-items: center">
           <div style="display: flex; height: 100%;width: 100%;" v-if="displayType==='class'">
-            <n-grid :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" :cols="2" >
+            <n-grid :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" :cols="2">
               <n-grid-item>
                 <v-chart class="chart" :option="option1" />
               </n-grid-item>
@@ -224,7 +239,8 @@ const option2 = ref({
             </n-grid>
           </div>
           <div style="width: 100%;height: 100%; margin: auto;" v-else>
-            <n-result v-if="current===null" status="404" title="暂无报告" description="请点击左侧列表以选择"/>
+            <n-result v-if="current===null" status="404" title="暂无报告" description="请点击左侧列表以选择" />
+            <router-view v-else :key="rKey" />
           </div>
         </div>
       </n-layout-content>

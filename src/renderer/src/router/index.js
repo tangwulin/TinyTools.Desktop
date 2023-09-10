@@ -82,7 +82,14 @@ const router = createRouter({
         {
           path: '/score/report',
           name: 'scoreReport',
-          component:()=>import('../views/ScoreReport.vue')
+          component: () => import('../views/ScoreReport.vue'),
+          children: [
+            {
+              path: '/score/report/detail',
+              name: 'scoreReportDetail',
+              component: () => import('../views/Score/ScoreReportDetail.vue'),
+            },
+          ],
         },
         {
           path: 'group',
