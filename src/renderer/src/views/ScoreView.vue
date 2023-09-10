@@ -13,6 +13,7 @@ import { History as HistoryIcon } from '@vicons/tabler'
 import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
 import {  useRoute } from 'vue-router'
 import { useGeneralStore } from '../stores/general'
+import {ReportAnalytics as ReportIcon} from '@vicons/tabler'
 
 const route = useRoute()
 
@@ -322,12 +323,12 @@ watch(() => route.query, () => {
             </div>
             <div
               class="flex flex-col justify-center items-center cursor-pointer w-12"
-              @click="$router.push({name:'scoreHistory'})"
+              @click="$router.push({name:'scoreReport'})"
             >
               <n-icon size="1.5rem">
-                <history-icon />
+                <report-icon />
               </n-icon>
-              历史
+              报告
             </div>
           </div>
         </n-space>

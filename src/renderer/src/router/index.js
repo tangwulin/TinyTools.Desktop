@@ -80,9 +80,9 @@ const router = createRouter({
           component: () => import('../views/ScoreView.vue'),
         },
         {
-          path: '/score/history',
-          name: 'scoreHistory',
-          component:()=>import('../views/ScoreHistory.vue')
+          path: '/score/report',
+          name: 'scoreReport',
+          component:()=>import('../views/ScoreReport.vue')
         },
         {
           path: 'group',
