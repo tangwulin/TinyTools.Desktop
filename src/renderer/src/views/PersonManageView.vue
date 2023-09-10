@@ -29,7 +29,7 @@ import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
 import { getAvatar } from '../utils/AvatarUtil'
-import { difference } from 'lodash-es'
+// import { difference } from 'lodash-es'
 
 const route = useRoute()
 
