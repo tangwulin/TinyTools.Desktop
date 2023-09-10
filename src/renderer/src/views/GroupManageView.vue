@@ -6,9 +6,10 @@ import { generateUniqueId, remToPx } from '../assets/script/util'
 import { getAvatar } from '../utils/AvatarUtil'
 import { ref, watch } from 'vue'
 import { NButton, NFormItem, NInput, useMessage } from 'naive-ui'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 const route = useRoute()
+const router = useRouter()
 
 const groupStore = useGroupStore()
 const { groups } = storeToRefs(groupStore)
@@ -83,7 +84,7 @@ const handler = () => {
       if (item.uniqueId === currentGroup.value.uniqueId)
       {
         personList.value.forEach(p => p.group = p.group.filter(g => g !== item.uniqueId))
-        currentGroup.value.members.forEach(x=>personList.value.find(p=>p.uniqueId===x).group.push(item.uniqueId))
+        currentGroup.value.members.forEach(x => personList.value.find(p => p.uniqueId === x).group.push(item.uniqueId))
         return currentGroup.value // 使用展开语法更新 title 属性
       }
       return item // 非匹配的元素保持原样
@@ -102,8 +103,9 @@ const handler = () => {
     message.success('添加成功')
   }
   showModal.value = false
-  currentGroup.value={ name: '', description: '', members: [], avatar: '', uniqueId: '' }
-  value1.value=[]
+  currentGroup.value = { name: '', description: '', members: [], avatar: '', uniqueId: '' }
+  value1.value = []
+  if (route.query?.showAddModal === 'true') router.push({ name: 'score', query: { type: 'group' } })
 }
 
 const deleteHandler = () => {
@@ -112,6 +114,14 @@ const deleteHandler = () => {
   showModal.value = false
   currentGroup.value = { name: '', description: '', members: [], avatar: '', uniqueId: '' }
   message.success('删除成功')
+}
+
+const onModalClose = () => {
+  showModal.value=false
+  currentGroup.value= { name: '', description: '', members: [],avatar:'',uniqueId:'' }
+  value1.value=[]
+  if (route.query?.showAddModal === 'true')
+    setTimeout(()=>{router.push({ name: 'score', query: { type: 'group' } })},150)
 }
 
 const createAvatars = (item) => {
@@ -135,7 +145,7 @@ watch(
 
 <template>
   <div style="height: calc(100vh - 1rem);">
-    <n-modal v-model:show="showModal">
+    <n-modal v-model:show="showModal" :mask-closable="false">
       <n-card
         style="width: 70%"
         :title="isEdit?'编辑':'添加'"
@@ -143,13 +153,9 @@ watch(
         size="huge"
         role="dialog"
         aria-modal="true"
-        :mask-closable=!isEdit
+
         closable
-        @close="()=>{
-        showModal=false
-        currentGroup= { name: '', description: '', members: [],avatar:'',uniqueId:'' }
-        value1=[]
-      }"
+        @close="onModalClose"
       >
         <n-scrollbar style="max-height: 70vh;overflow-x: hidden">
           <div>
