@@ -1,13 +1,11 @@
 <script setup>
-import { ref } from 'vue'
+import { computed, toRaw } from 'vue'
 import VChart from 'vue-echarts'
 import { useRoute } from 'vue-router'
-
 import { use } from 'echarts/core'
 import { BarChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { CanvasRenderer } from 'echarts/renderers'
-import { useGroupStore } from '../../stores/group'
 import { storeToRefs } from 'pinia'
 import { useScoreStore } from '../../stores/score'
 
@@ -18,9 +16,6 @@ use([
   CanvasRenderer,
 ])
 
-const groupStore = useGroupStore()
-const { groups } = storeToRefs(groupStore)
-
 const scoreStore = useScoreStore()
 const { scoreHistories } = storeToRefs(scoreStore)
 
@@ -30,21 +25,30 @@ const current = computed(() => {
   return scoreHistories.value.filter(item => item.owner === route.query.uniqueId)
 })
 
-const allRates = [...new Set(current.value.map(item => item.forWhat))]
-const data1 =
-  allRates.map(
-    r => current
-      .value
-      .filter(s => s.forWhat === r))
-          .map(item => item
-            .reduce(
-              (accumulator, currentValue) => {return accumulator + currentValue.score}, 0))
-          .map((sum, index) => ({ value: Math.abs(sum), name: allRates[index] }),
-          )
+const allRates = computed(() => [...new Set(current.value.map(item => item.forWhat))])
+const fullData = computed(() => allRates.value.map(
+  r => current
+    .value
+    .filter(s => s.forWhat === r))
+                                        .map(item => item.reduce((accumulator, currentValue) => {return accumulator + currentValue.score}, 0)).map((sum, index) => ({
+      value: sum,
+      name: allRates.value[index],
+    }),
+  ))
+
+const positiveData = computed(
+  () => fullData.value.filter(item => item.value >= 0),
+)
+const negativeData = computed(
+  () => fullData.value.filter(item => item.value < 0)
+                .map(item => ({
+                  ...item,
+                  value: Math.abs(item.value),
+                })))
 
 const firstHistoryTime = new Date(scoreHistories?.value[scoreHistories.value?.length - 1]?.time).toLocaleString()
 
-const option2 = ref({
+const option2 = computed(() => ({
   title: {
     text: '各评分项占比',
     subtext: `从${ firstHistoryTime }至今`,
@@ -58,7 +62,7 @@ const option2 = ref({
     left: 'center',
     top: 'bottom',
     data: [
-      ...allRates,
+      ...toRaw(allRates.value),
     ],
   },
   toolbox: {
@@ -72,20 +76,33 @@ const option2 = ref({
   },
   series: [
     {
-      name: '各评分项总数',
+      name: '表扬',
       type: 'pie',
       radius: [20, 140],
+      center: ['25%', '50%'],
       roseType: 'area',
       itemStyle: {
         borderRadius: 5,
       },
       data: [
-        ...data1,
+        ...toRaw(positiveData.value),
+      ],
+    },
+    {
+      name: '待改进',
+      type: 'pie',
+      radius: [20, 140],
+      center: ['75%', '50%'],
+      roseType: 'area',
+      itemStyle: {
+        borderRadius: 5,
+      },
+      data: [
+        ...toRaw(negativeData.value),
       ],
     },
   ],
-})
-
+}))
 </script>
 
 <template>

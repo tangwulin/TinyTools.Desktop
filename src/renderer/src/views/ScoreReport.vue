@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { remToPx } from '../assets/script/util'
 import { usePersonStore } from '../stores/person'
 import { useGroupStore } from '../stores/group'
@@ -13,7 +13,7 @@ import { GridComponent, LegendComponent, TitleComponent, ToolboxComponent, Toolt
 import { CanvasRenderer } from 'echarts/renderers'
 import VChart from 'vue-echarts'
 import { useScoreStore } from '../stores/score'
-import { useRoute,useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 
 use([
   TooltipComponent,
@@ -66,6 +66,7 @@ const displayList = computed(() => {
   switch (displayType.value)
   {
     case 'class':
+      current.value = null
       return []
     case 'group':
       return groups.value.filter(item => item.name.includes(keyword.value))
@@ -181,7 +182,9 @@ const option2 = ref({
 })
 
 const rKey = ref(Math.random())
-watch(() => route.query, () => {rKey.value = Math.random()})
+
+window.addEventListener('resize', () => setTimeout(() => rKey.value = Math.random(), 100))
+
 </script>
 
 <template>
@@ -215,7 +218,7 @@ watch(() => route.query, () => {rKey.value = Math.random()})
           </n-list>
           <div style="height: calc(100vh - 5.5rem);display: flex;flex-direction: column;justify-content: center"
                v-if="displayList.length===0">
-            <n-empty description="真有这名字吗？">
+            <n-empty description="无数据">
             </n-empty>
           </div>
         </n-scrollbar>
