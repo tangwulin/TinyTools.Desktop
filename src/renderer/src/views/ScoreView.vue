@@ -9,11 +9,11 @@ import { remToPx } from '../assets/script/util'
 import { getAvatar } from '../utils/AvatarUtil'
 import { GroupFilled as GroupIcon, PersonFilled as PersonIcon } from '@vicons/material'
 import { useMessage } from 'naive-ui'
-import { History as HistoryIcon } from '@vicons/tabler'
+// import { History as HistoryIcon } from '@vicons/tabler'
 import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
-import {  useRoute } from 'vue-router'
+import { useRoute } from 'vue-router'
 import { useGeneralStore } from '../stores/general'
-import {ReportAnalytics as ReportIcon} from '@vicons/tabler'
+import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
 
 const route = useRoute()
 
@@ -37,6 +37,9 @@ const current = ref(null)
 
 const showPerson = ref(false)
 showPerson.value = route.query.type === 'person'
+
+const firstHistoryTime = computed(() => scoreHistories?.value[scoreHistories.value?.length - 1]?.time)
+const enableUndo = computed(() => Date.now() - firstHistoryTime.value < 3 * 60 * 1000)
 
 const message = useMessage()
 
@@ -62,6 +65,24 @@ const scoreHandler = (rate) => {
   message.success('操作成功')
 }
 
+const undoHandler = () => {
+  const x = { ...scoreHistories.value[scoreHistories.value?.length - 1] }
+  scoreHistories.value = scoreHistories.value.filter(item => item.time !== x.time)
+  switch (x.ownerType)
+  {
+    case 'group':
+      groups.value.find(item => item.uniqueId === x.owner).score -= x.score
+      break
+    case 'person':
+      personList.value.find(item => item.uniqueId === x.owner).score -= x.score
+      break
+    default:
+      message.error('出错了，请检查类型是否正确')
+      break
+  }
+  message.success('操作成功')
+}
+
 const createAvatars = (item) => {
   const persons = personList.value.filter(p => item.members.includes(p.uniqueId))
   return persons.map(p => ({ name: p.name, src: getAvatar(p) }))
@@ -71,11 +92,11 @@ const createDropdownOptions = (options) => options.map((option) => ({
   key: option.name,
   label: option.name,
 }))
+
 watch(() => route.query, () => {
   showPerson.value = route.query.type === 'person'
   if (route.query?.type) lastScoreType.value = route.query.type
 })
-
 </script>
 
 <template>
@@ -234,7 +255,7 @@ watch(() => route.query, () => {
                                   :img-props="{referrerpolicy:'no-referrer'}"
                                   lazy
                                   object-fit="contain"
-                                  round/>
+                                  round />
                       </template>
                       {{ name }}
                     </n-tooltip>
@@ -314,12 +335,13 @@ watch(() => route.query, () => {
           <div class="flex">
             <div
               class="flex flex-col justify-center items-center cursor-pointer w-12"
-              @click="showPerson=true"
+              @click="undoHandler"
+              v-show="enableUndo"
             >
-              <n-icon size="1.5rem">
+              <n-icon size="1.5rem" :depth="enableUndo?1:3">
                 <undo-icon />
               </n-icon>
-              撤销
+              <n-p :depth="enableUndo?1:3" class="mt-0">撤销</n-p>
             </div>
             <div
               class="flex flex-col justify-center items-center cursor-pointer w-12"
