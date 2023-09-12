@@ -136,21 +136,7 @@ const createColumns = (edit, del) => {
     {
       title: '姓名',
       key: 'name',
-    },
-    {
-      title: '学号',
-      key: 'number',
-    },
-    {
-      title: '分组',
-      key: 'groups',
-      render(row)
-      {
-        const groupTags = row.group?.map(item => h(NTag, { bordered: false }, { default: () => groups.value.find(g => g.uniqueId === item).name }))
-        return groupTags.length !== 0
-          ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
-          : h(NText, { depth: 3 }, { default: () => '未加入' })
-      },
+      width: remToPx(6),
     },
     {
       title: '性别',
@@ -166,6 +152,30 @@ const createColumns = (edit, del) => {
           default:
             return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
+      },
+      width:remToPx(4),
+    },
+    {
+      title: '学号',
+      key: 'number',
+    },
+    {
+      title: '分组',
+      key: 'groups',
+      render(row)
+      {
+        const groupTags = row.group?.map(
+          item => h(NTag,
+            { bordered: false },
+            {
+              default:
+                () => groups.value.find(g => g.uniqueId === item)?.name
+                  ?? h(NText, { depth: 3 }, { default: () => '已删除' }),
+            }))
+        console.log(groupTags)
+        return groupTags.length !== 0
+          ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
+          : h(NText, { depth: 3 }, { default: () => '未加入' })
       },
     },
     {
@@ -420,13 +430,13 @@ function createOptions(x)
               </n-space>
             </n-radio-group>
           </n-form-item>
-<!--          <n-space vertical>-->
-<!--            <n-space>-->
-<!--              <p>分组（可选）</p>-->
-<!--              <n-button tertiary size="tiny">分组管理</n-button>-->
-<!--            </n-space>-->
-<!--            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="createOptions(groups)" />-->
-<!--          </n-space>-->
+          <!--          <n-space vertical>-->
+          <!--            <n-space>-->
+          <!--              <p>分组（可选）</p>-->
+          <!--              <n-button tertiary size="tiny">分组管理</n-button>-->
+          <!--            </n-space>-->
+          <!--            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="createOptions(groups)" />-->
+          <!--          </n-space>-->
         </n-form>
       </n-scrollbar>
       <div class="flex justify-end">
