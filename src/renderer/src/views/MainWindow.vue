@@ -26,7 +26,7 @@ const { lastScoreType } = storeToRefs(generalStore)
 const version = __APP_VERSION__
 const shortVersion = version?.split('-')[0]
 
-const activeKey = ref('seat')
+const activeKey = ref(null)
 const collapsed = ref(true)
 
 const collapsedWithoutAnimation = ref(true)
@@ -79,7 +79,7 @@ const menuOptions = [
             query: { type: lastScoreType.value },
           },
         },
-        { default: () => '评分（未完成）' },
+        { default: () => '评分' },
       ),
     key: 'score',
     icon: renderIcon(ScoreIcon),
@@ -246,7 +246,7 @@ const footerMenuOptions = [
     </n-layout-sider>
 
     <!--下方router-view内内容加css只能在各组件内部加-->
-    <n-layout-content content-style="padding:0.5rem 0.5rem 0 0.5rem">
+    <n-layout-content content-style="padding:0.25rem 0.25rem 0 0.25rem">
       <router-view />
     </n-layout-content>
   </n-layout>

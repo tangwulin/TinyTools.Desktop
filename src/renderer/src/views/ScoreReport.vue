@@ -1,5 +1,5 @@
 <script setup>
-import { computed, ref } from 'vue'
+import { computed, ref, toRaw } from 'vue'
 import { remToPx } from '../assets/script/util'
 import { usePersonStore } from '../stores/person'
 import { useGroupStore } from '../stores/group'
@@ -40,7 +40,7 @@ const { enableAvatar } = storeToRefs(settingStore)
 const scoreStore = useScoreStore()
 const { scoreHistories } = storeToRefs(scoreStore)
 
-const route = useRoute()
+// const route = useRoute()
 const router = useRouter()
 
 const current = ref(null)
@@ -83,6 +83,7 @@ const handler = (item) => {
     query: { type: ('members' in item) ? 'group' : 'person', uniqueId: item.uniqueId },
   })
 }
+
 const firstHistoryTime = new Date(scoreHistories?.value[scoreHistories.value?.length - 1]?.time).toLocaleString()
 
 const option1 = ref({
@@ -181,6 +182,83 @@ const option2 = ref({
   ],
 })
 
+const fullData = computed(() => allRates.map(
+  r => scoreHistories
+    .value
+    .filter(s => s.forWhat === r))
+                                        .map(
+                                          item => item.reduce(
+                                            (accumulator, currentValue) => {return accumulator + currentValue.score}, 0))
+                                        .map((sum, index) => ({
+                                            value: sum,
+                                            name: allRates[index],
+                                          }),
+                                        ))
+
+const positiveData = computed(
+  () => fullData.value.filter(item => item.value >= 0),
+)
+const negativeData = computed(
+  () => fullData.value.filter(item => item.value < 0)
+                .map(item => ({
+                  ...item,
+                  value: Math.abs(item.value),
+                })))
+
+const option3 = computed(() => ({
+  title: {
+    text: '各评分项占比',
+    subtext: `从${ firstHistoryTime }至今`,
+    left: 'center',
+  },
+  tooltip: {
+    trigger: 'item',
+    formatter: '{a} <br/>{b} : {c} ({d}%)',
+  },
+  legend: {
+    left: 'center',
+    top: 'bottom',
+    data: [
+      allRates,
+    ],
+  },
+  toolbox: {
+    show: true,
+    feature: {
+      mark: { show: true },
+      dataView: { show: true, readOnly: false },
+      restore: { show: true },
+      saveAsImage: { show: true },
+    },
+  },
+  series: [
+    {
+      name: '表扬',
+      type: 'pie',
+      radius: [20, 140],
+      center: ['25%', '50%'],
+      itemStyle: {
+        borderRadius: 5,
+      },
+      data: [
+        ...toRaw(positiveData.value),
+      ],
+    },
+    {
+      name: '待改进',
+      type: 'pie',
+      radius: [20, 140],
+      center: ['75%', '50%'],
+      itemStyle: {
+        borderRadius: 5,
+      },
+      data: [
+        ...toRaw(negativeData.value),
+      ],
+    },
+  ],
+}))
+
 const rKey = ref(Math.random())
 
 window.addEventListener('resize', () => setTimeout(() => rKey.value = Math.random(), 100))
@@ -191,7 +269,7 @@ window.addEventListener('resize', () => setTimeout(() => rKey.value = Math.rando
   <n-layout style="height: 100%;">
     <n-layout-header>
       <div style="display: flex;flex-direction: row; align-items: center;justify-content: space-around">
-        <p style="font-size: 1.5rem;margin: 0 auto 0.5rem;">评分记录</p>
+        <p style="font-size: 1.5rem;margin: 0 auto 0.5rem;">分析报告</p>
       </div>
     </n-layout-header>
     <n-layout has-sider>
@@ -230,17 +308,22 @@ window.addEventListener('resize', () => setTimeout(() => rKey.value = Math.rando
           </n-button>
         </n-button-group>
         <span v-if="current!==null">{{ current?.name }} 的得分情况</span>
-        <div style="width: 100%;height: calc(100% - 2rem);display:flex;justify-content: center;align-items: center">
-          <div style="display: flex; height: 100%;width: 100%;" v-if="displayType==='class'">
-            <n-grid :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" :cols="2">
-              <n-grid-item>
-                <v-chart class="chart" :option="option1" />
-              </n-grid-item>
-              <n-grid-item>
-                <v-chart class="chart" :option="option2" />
-              </n-grid-item>
-            </n-grid>
-          </div>
+        <div style="width: 100%;height: calc(100vh - 5rem);display:flex;justify-content: center;align-items: center">
+          <n-scrollbar v-if="displayType==='class'">
+            <div style="display: flex; flex-direction: column;height: 100%;width: 100%;" >
+              <n-grid :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" :cols="2" style="height: 90vh;">
+                <n-grid-item>
+                  <v-chart class="chart" :option="option1" />
+                </n-grid-item>
+                <n-grid-item>
+                  <v-chart class="chart" :option="option2" />
+                </n-grid-item>
+              </n-grid>
+              <div>
+                <v-chart class="chart" :option="option3" style="height: calc(100vh - 10rem);width: 100%;"/>
+              </div>
+            </div>
+          </n-scrollbar>
           <div style="width: 100%;height: 100%; margin: auto;" v-else>
             <n-result v-if="current===null" status="404" title="暂无报告" description="请点击左侧列表以选择" />
             <router-view v-else :key="rKey" />
