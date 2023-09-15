@@ -8,6 +8,7 @@ import { getAvatar } from '../utils/AvatarUtil'
 import { ref, watch } from 'vue'
 import { NButton, NFormItem, NInput, useMessage } from 'naive-ui'
 import { useRoute, useRouter } from 'vue-router'
+import { useScoreStore } from '../stores/score'
 
 const route = useRoute()
 const router = useRouter()
@@ -20,6 +21,9 @@ const { personList } = storeToRefs(personStore)
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
+
+const scoreStore = useScoreStore()
+const { scoreHistories } = storeToRefs(scoreStore)
 
 const showModal = ref(false)
 showModal.value = route.query.showAddModal === 'true'
@@ -115,6 +119,7 @@ const handler = () => {
 const deleteHandler = () => {
   groups.value = groups.value.filter(item => item.uniqueId !== currentGroup.value.uniqueId)
   personList.value.forEach(item => item.group = item.group.filter(x => x !== currentGroup.value.uniqueId))
+  scoreHistories.value = scoreHistories.value.filter((item => item.owner !== currentGroup.uniqueId))
   showModal.value = false
   currentGroup.value = { name: '', description: '', members: [], avatar: '', uniqueId: '' }
   message.success('删除成功')

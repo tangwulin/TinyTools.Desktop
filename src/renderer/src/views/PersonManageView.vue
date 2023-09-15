@@ -29,6 +29,7 @@ import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
 import { getAvatar } from '../utils/AvatarUtil'
+import { useScoreStore } from '../stores/score'
 // import { difference } from 'lodash-es'
 
 const route = useRoute()
@@ -37,10 +38,12 @@ const personStore = usePersonStore()
 const seatStore = useSeatStore()
 const settingStore = useSettingStore()
 const groupStore = useGroupStore()
+const scoreStore = useScoreStore()
 const { personList } = storeToRefs(personStore)
 const { allSeats, oldRenderingList } = storeToRefs(seatStore)
 const { enableFallbackAvatar } = storeToRefs(settingStore)
 const { groups } = storeToRefs(groupStore)
+const { scoreHistories } = storeToRefs(scoreStore)
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -95,6 +98,7 @@ const deleteHandler = (row) => {
   personList.value = personList.value.filter(
     (item) => item.uniqueId !== row.uniqueId,
   )
+  scoreHistories.value = scoreHistories.value.filter(item => item.owner !== row.uniqueId)
   message.success('删除成功')
 }
 
@@ -153,7 +157,7 @@ const createColumns = (edit, del) => {
             return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
       },
-      width:remToPx(4),
+      width: remToPx(4),
     },
     {
       title: '学号',
