@@ -65,7 +65,7 @@ export const getRenderingList = (seat = [], oldRenderingList = [], coloringEdge 
       if (item.isSeat)
       {
         i++
-        if (x[i].isSeat) return { ...x[i], isSeat: true }
+        if (x[i]?.isSeat ?? false) return { ...x[i], isSeat: true }
         else return x[i]
       }
       else return item
