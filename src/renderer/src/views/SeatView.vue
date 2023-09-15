@@ -15,6 +15,11 @@
           v-model:seats="allSeats"
           :disable="isPreview || loading"
           @update="updateHandler"
+          @click-seat="args => {
+            if(!enableDevelopFeature) return
+            selectedSeat=args
+            showDebugModal=true
+          }"
         />
       </div>
       <div class="flex justify-center mt-4">
@@ -85,13 +90,13 @@
         <n-button :disabled="loading || isPreview" @click="save"
         >保存图片
         </n-button>
-<!--        <n-dropdown :options="saveOptions" @select="save">-->
-<!--          <n-button :disabled="loading || isPreview">-->
-<!--            <template #icon>-->
-<!--              <ArrowDropDownFilled />-->
-<!--            </template>-->
-<!--          </n-button>-->
-<!--        </n-dropdown>-->
+        <!--        <n-dropdown :options="saveOptions" @select="save">-->
+        <!--          <n-button :disabled="loading || isPreview">-->
+        <!--            <template #icon>-->
+        <!--              <ArrowDropDownFilled />-->
+        <!--            </template>-->
+        <!--          </n-button>-->
+        <!--        </n-dropdown>-->
         <n-button :disabled="loading" @click="showHistory = true"
         >历史记录
         </n-button>
@@ -213,6 +218,22 @@
         src="https://music.163.com/song/media/outer/url?id=430620198.mp3"
       ></audio>
     </div>
+    <n-modal v-model:show="showDebugModal" :mask-closable="false">
+      <n-card
+        style="width: 600px"
+        title="模态框"
+        :bordered="false"
+        size="huge"
+        role="dialog"
+        aria-modal="true"
+        :closable="true"
+        @close="showDebugModal=false"
+      >
+        颜色
+        <n-color-picker :show-alpha="false" :modes="['hex']" v-model:value="selectedSeat.color" />
+        <n-button @click="selectedSeat.color=null">恢复原始颜色</n-button>
+      </n-card>
+    </n-modal>
   </div>
 </template>
 
@@ -270,6 +291,10 @@ const isPreview = ref(false)
 const times = ref(5)
 const stKey = ref(Math.random())
 let msgReactive = null
+
+const showDebugModal = ref(false)
+
+const selectedSeat = ref(null)
 
 // const lotteryModes = [
 //   {
@@ -423,21 +448,6 @@ const updateHandler = debounce(
   { maxWait: 2000 },
 )
 
-// const saveOptions = [
-//   {
-//     label: '图片分辨率（宽度）',
-//     key: 1,
-//     disabled: true,
-//   },
-//   {
-//     label: '1080P',
-//     key: 2,
-//   },
-//   {
-//     label: '4K',
-//     key: 4,
-//   },
-// ]
 /**
  * 保存当前座位为图片
  * @returns {Promise<void>}

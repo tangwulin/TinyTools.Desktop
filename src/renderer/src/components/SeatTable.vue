@@ -5,7 +5,7 @@ import { computed, ref, watch } from 'vue'
 import { getRenderingList, parseRenderingListToSeats } from '../assets/script/seatHelper'
 
 const props = defineProps(['seats', 'renderingList', 'coloringEdge', 'rendering', 'disable', 'reverse'])
-const emit = defineEmits(['update', 'update:seats', 'update:renderingList', 'update:rendering'])
+const emit = defineEmits(['update', 'update:seats', 'update:renderingList', 'update:rendering','clickSeat'])
 
 const rendering = ref(props.rendering)
 
@@ -132,7 +132,7 @@ watch(() => props.coloringEdge, () => {
       item-key="id">
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">
-        <NButton v-if="element.isSeat" :color="element.color" size="large">{{ element.name }}</NButton>
+        <NButton v-if="element.isSeat" :color="element.color" size="large" @click="emit('clickSeat',element)">{{ element.name }}</NButton>
         <div v-else-if="!element.isDashed" class="should-not-be-dragged"></div>
         <NButton v-else :focusable="false" class="should-not-be-dragged" dashed size="large"></NButton>
       </template>
