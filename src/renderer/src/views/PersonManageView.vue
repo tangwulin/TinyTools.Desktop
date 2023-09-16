@@ -157,7 +157,7 @@ const createColumns = (edit, del) => {
             return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
       },
-      width: remToPx(4),
+      width: remToPx(6),
     },
     {
       title: '学号',
