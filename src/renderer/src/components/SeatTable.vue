@@ -132,8 +132,8 @@ watch(() => props.coloringEdge, () => {
       item-key="id">
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">
-        <NButton v-if="element.isSeat" :color="element.color" size="large" @click="emit('clickSeat',element)">{{ element.name }}</NButton>
-        <div v-else-if="!element.isDashed" class="should-not-be-dragged"></div>
+        <NButton v-if="element?.isSeat ?? false" :color="element.color" size="large" @click="emit('clickSeat',element)">{{ element?.name ?? '???' }}</NButton>
+        <div v-else-if="!element?.isDashed ?? false" class="should-not-be-dragged"></div>
         <NButton v-else :focusable="false" class="should-not-be-dragged" dashed size="large"></NButton>
       </template>
     </draggable>
