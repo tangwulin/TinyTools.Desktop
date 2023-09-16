@@ -78,7 +78,7 @@ export const getRenderingList = (seat = [], oldRenderingList = [], coloringEdge 
       }
     })
     console.log('replace time:' + (performance.now() - stopwatch) + 'ms')
-    return oldRenderingList
+    return oldRenderingList.filter(item=>item)
   }
 }
 
