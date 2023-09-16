@@ -176,8 +176,7 @@ const createColumns = (edit, del) => {
                 () => groups.value.find(g => g.uniqueId === item)?.name
                   ?? h(NText, { depth: 3 }, { default: () => '已删除' }),
             }))
-        console.log(groupTags)
-        return groupTags.length !== 0
+        return groupTags?.length
           ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
           : h(NText, { depth: 3 }, { default: () => '未加入' })
       },
