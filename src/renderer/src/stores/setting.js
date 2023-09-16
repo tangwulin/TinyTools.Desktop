@@ -23,7 +23,7 @@ export const useSettingStore = defineStore(
 
     const enableOldToolBar = ref(false)
 
-    const lotteryMode = ref('or')
+    const lotteryMode = ref(2)
 
     const isFirstSetup = ref(true)
 
