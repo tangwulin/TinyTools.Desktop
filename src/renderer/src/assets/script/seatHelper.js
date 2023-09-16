@@ -61,14 +61,21 @@ export const getRenderingList = (seat = [], oldRenderingList = [], coloringEdge 
   {
     console.log('Replace mode')
     let i = -1 //这里是为了适配下面的需要
-    oldRenderingList = oldRenderingList.map(item => {
-      if (item.isSeat)
+    oldRenderingList = oldRenderingList.map((item,index) => {
+      try{
+        if (item.isSeat)
+        {
+          i++
+          if (x[i]?.isSeat ?? false) return { ...x[i], isSeat: true }
+          else return x[i]
+        }
+        else return item
+      }catch (e)
       {
-        i++
-        if (x[i]?.isSeat ?? false) return { ...x[i], isSeat: true }
-        else return x[i]
+        console.error(e)
+        console.log(item)
+        console.log(index)
       }
-      else return item
     })
     console.log('replace time:' + (performance.now() - stopwatch) + 'ms')
     return oldRenderingList
