@@ -110,6 +110,13 @@ const renderingData = computed({
   },
 })
 
+function move(e){
+  // 这里的e表示即将停靠的元素。
+  if(!e.relatedContext.element.isSeat&&!e.relatedContext.element.isDashed){
+    return false;
+  }
+}
+
 watch(() => props.seats, () => {
   console.log('props.seats changed')
   seats.value = props.seats
@@ -129,6 +136,7 @@ watch(() => props.coloringEdge, () => {
       :swap="true"
       class="text-center  grid grid-cols-11"
       filter=".should-not-be-dragged"
+      :move="move"
       item-key="id">
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">
