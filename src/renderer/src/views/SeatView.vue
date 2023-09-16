@@ -248,8 +248,13 @@ import { useSeatStore } from '../stores/seat'
 import { usePersonStore } from '../stores/person'
 import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
-import { getRenderingList, parseEdgeSeatIndex, replaceArrayElements } from '../assets/script/seatHelper'
-import { debounce, shuffle } from 'lodash-es'
+import {
+  getRenderingList,
+  parseEdgeSeatIndex,
+  parseRenderingListToSeats,
+  replaceArrayElements,
+} from '../assets/script/seatHelper'
+import { debounce, difference, shuffle } from 'lodash-es'
 import { getDefaultBgm, getDefaultFinalBgm } from '../assets/script/musicHelper'
 import { useRouter } from 'vue-router'
 
@@ -518,9 +523,39 @@ if (
   personList.value.length !== allSeats.value.length
 )
 {
-  allSeats.value = personList.value.map((item, index) => {
-    return { name: item.name, index: index, isSeat: true }
-  })
+  const nameInSeat = allSeats.value.map(item => item.name)
+  const nameInList = personList.value.map(item => item.name)
+  if (personList.value.length > allSeats.value.length)
+  {
+    const newPersons = difference(nameInList, nameInSeat)
+
+    allSeats.value=allSeats.value.concat(newPersons.map((item, index) => ({
+      name: item,
+      isSeat: true,
+      index: allSeats.value.length + index,
+    })))
+
+    oldRenderingList.value=getRenderingList(allSeats.value,[])
+  }
+  else
+  {
+    const diff = difference(nameInSeat, nameInList)
+    oldRenderingList.value = oldRenderingList.value.map(item => {
+      if (diff.includes(item.name))
+        return ({
+          name: null,
+          isSeat: false,
+          isDashed: true,
+        })
+      else return ({ ...item })
+    })
+
+    allSeats.value = parseRenderingListToSeats(oldRenderingList.value)
+  }
+  // allSeats.value = personList.value.map((item, index) => {
+  //   return { name: item.name, index: index, isSeat: true }
+  // })
+  // oldRenderingList.value = getRenderingList(allSeats.value, oldRenderingList.value)
   console.log('seat has been initialized')
 }
 /**
