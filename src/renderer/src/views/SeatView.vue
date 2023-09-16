@@ -552,10 +552,6 @@ if (
 
     allSeats.value = parseRenderingListToSeats(oldRenderingList.value)
   }
-  // allSeats.value = personList.value.map((item, index) => {
-  //   return { name: item.name, index: index, isSeat: true }
-  // })
-  // oldRenderingList.value = getRenderingList(allSeats.value, oldRenderingList.value)
   console.log('seat has been initialized')
 }
 /**
