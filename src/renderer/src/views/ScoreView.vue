@@ -7,7 +7,7 @@ import { useScoreStore } from '../stores/score'
 import { storeToRefs } from 'pinia'
 import { remToPx } from '../assets/script/util'
 import { getAvatar } from '../utils/AvatarUtil'
-import { GroupFilled as GroupIcon, PersonFilled as PersonIcon } from '@vicons/material'
+import { GroupFilled as GroupIcon, PersonFilled as PersonIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { useMessage } from 'naive-ui'
 // import { History as HistoryIcon } from '@vicons/tabler'
 import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
@@ -43,6 +43,8 @@ const enableUndo = computed(() => Date.now() - firstHistoryTime.value < 3 * 60 *
 
 const message = useMessage()
 
+const showManageModal = ref(false)
+
 const clickHandler = (item) => {
   showModal.value = true
   current.value = item
@@ -65,7 +67,8 @@ const scoreHandler = (rate) => {
   message.success('操作成功')
 }
 
-const undoHandler = () => {
+function undoHandler()
+{
   const x = { ...scoreHistories.value[scoreHistories.value?.length - 1] }
   scoreHistories.value = scoreHistories.value.filter(item => item.time !== x.time)
   switch (x.ownerType)
@@ -149,6 +152,20 @@ watch(() => route.query, () => {
           </div>
         </div>
       </div>
+    </n-card>
+  </n-modal>
+  <n-modal v-model:show="showManageModal">
+    <n-card
+      style="width: 70%"
+      title="评分项管理"
+      :bordered="false"
+      size="huge"
+      role="dialog"
+      aria-modal="true"
+      closable
+      @close="showManageModal=false"
+    >
+
     </n-card>
   </n-modal>
   <n-layout style="height: calc(100% - 0.5rem); width: 100%">
@@ -342,6 +359,15 @@ watch(() => route.query, () => {
                 <undo-icon />
               </n-icon>
               <n-p :depth="enableUndo?1:3" class="mt-0">撤销</n-p>
+            </div>
+            <div
+              class="flex flex-col justify-center items-center cursor-pointer w-12"
+              @click="showManageModal=true"
+            >
+              <n-icon size="1.5rem">
+                <score-icon />
+              </n-icon>
+              评分项
             </div>
             <div
               class="flex flex-col justify-center items-center cursor-pointer w-12"
