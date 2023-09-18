@@ -16,7 +16,7 @@
           :disable="isPreview || loading"
           @update="updateHandler"
           @click-seat="args => {
-            if(!enableDevelopFeature) return
+            if(!enableDevelopFeature||isPreview) return
             selectedSeat=args
             showDebugModal=true
           }"
@@ -234,7 +234,7 @@
     <n-modal v-model:show="showDebugModal" :mask-closable="false">
       <n-card
         style="width: 600px"
-        title="模态框"
+        title="调试工具"
         :bordered="false"
         size="huge"
         role="dialog"
@@ -242,10 +242,24 @@
         :closable="true"
         @close="showDebugModal=false"
       >
-        颜色
-        <n-color-picker :show-alpha="false" :modes="['hex']" v-model:value="selectedSeat.color"
-                        :on-complete="colorChangeHandler" />
-        <n-button @click="selectedSeat.color=null">恢复原始颜色</n-button>
+        <div>
+          <n-text type="error" style="font-size: 1rem;">这里可以直接修改某个座位的信息，无回滚无暂存，修改立即生效，确保你知道自己在干什么！</n-text>
+          <n-space justify="space-between">
+            <span>显示文字</span>
+            <n-input v-model:value="selectedSeat.name" :on-update-value="nameChangeHandler"/>
+          </n-space>
+          <n-space justify="space-between">
+            <span style="text-align: center;">颜色</span>
+            <n-color-picker
+              :show-alpha="false"
+              :modes="['hex']"
+              v-model:value="selectedSeat.color"
+              :on-complete="colorChangeHandler"
+              style="width: 30vw;"
+            />
+            <n-button @click="selectedSeat.color=null">恢复原始颜色</n-button>
+          </n-space>
+        </div>
       </n-card>
     </n-modal>
   </div>
@@ -803,6 +817,11 @@ const exitPreview = () => {
 const colorChangeHandler = () => {
   allSeats.value.find(item => item.index === selectedSeat.value.index).color = selectedSeat.value.color
   oldRenderingList.value.find(item => item.index === selectedSeat.value.index).color = selectedSeat.value.color
+}
+
+const nameChangeHandler = () => {
+  allSeats.value.find(item => item.index === selectedSeat.value.index).name = selectedSeat.value.name
+  oldRenderingList.value.find(item => item.index === selectedSeat.value.index).name = selectedSeat.value.name
 }
 
 window.addEventListener('beforeunload', isPreview ? exitPreview : () => {})
