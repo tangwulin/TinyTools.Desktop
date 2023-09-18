@@ -62,8 +62,8 @@ const previewHandler = (x) => {
     else
       return { ...item, isShowing: false }
   })
-  allSeats.value = x.allSeats
-  oldRenderingList.value = x.oldRenderingList
+  allSeats.value = JSON.parse(JSON.stringify(x.allSeats))
+  oldRenderingList.value = JSON.parse(JSON.stringify(x.oldRenderingList))
 }
 const rollbackHandler = (x) => {
   history.value = history.value.map(item => {
@@ -86,8 +86,8 @@ const rollbackHandler = (x) => {
     }
     isPreview.value = false
   }
-  allSeats.value = x.allSeats
-  oldRenderingList.value = x.oldRenderingList
+  allSeats.value = JSON.parse(JSON.stringify(x.allSeats))
+  oldRenderingList.value = JSON.parse(JSON.stringify(x.oldRenderingList))
 
   message.info('已回滚到' + new Date(x.time).toLocaleString())
 }
