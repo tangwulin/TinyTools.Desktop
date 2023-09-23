@@ -134,7 +134,7 @@ app.whenReady().then(() => {
       transparent: true,
       frame: false,
       resizable: false,
-      movable: false,
+      movable: true,
       enableLargerThanScreen: false,
       autoHideMenuBar: true,
       webPreferences: {
