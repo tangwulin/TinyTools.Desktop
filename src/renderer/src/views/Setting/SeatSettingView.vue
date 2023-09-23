@@ -10,17 +10,22 @@ const { enableOldToolBar, lotteryMode } = storeToRefs(setting)
 const lotteryModes = [
   {
     label: '平等',
-    value: 'equality',
+    value: 1,
     description: '随机打乱座位，会有不尽人意的情况',
   },
   {
     label: '折中',
-    value: 'or',
+    value: 2,
     description: '外面一圈的人不会再次坐到外面一圈，但仍是随机排列',
   },
   {
+    label: '两边到中间',
+    value: 3,
+    description: '就像名字里说的那样',
+  },
+  {
     label: '公平（未实现）',
-    value: 'equity',
+    value: 4,
     description: '通过对前几次结果的分析来决定这一次分配的位置',
     disabled: true,
   },

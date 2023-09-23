@@ -9,7 +9,9 @@ import {
   NFormItem,
   NInput,
   NModal,
+  NPopover,
   NSwitch,
+  NTag,
   NText,
   useMessage,
 } from 'naive-ui'
@@ -17,6 +19,7 @@ import { storeToRefs } from 'pinia'
 import { usePersonStore } from '../stores/person'
 import { useSeatStore } from '../stores/seat'
 import { useSettingStore } from '../stores/setting'
+import { useGroupStore } from '../stores/group'
 import { getRenderingList } from '../assets/script/seatHelper'
 import { useRoute } from 'vue-router'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
@@ -25,16 +28,22 @@ import { downloadAnyFile, generateUniqueId, remToPx } from '../assets/script/uti
 import * as XLSX from 'xlsx'
 
 import personXlsx from '../assets/xlsx/person.xlsx'
-import { getAvatarUrls } from '../assets/script/avatarUrl'
+import { getAvatar } from '../utils/AvatarUtil'
+import { useScoreStore } from '../stores/score'
+// import { difference } from 'lodash-es'
 
 const route = useRoute()
 
 const personStore = usePersonStore()
 const seatStore = useSeatStore()
 const settingStore = useSettingStore()
+const groupStore = useGroupStore()
+const scoreStore = useScoreStore()
 const { personList } = storeToRefs(personStore)
 const { allSeats, oldRenderingList } = storeToRefs(seatStore)
-const { enableFallbackAvatar, avatarWorks } = storeToRefs(settingStore)
+const { enableFallbackAvatar } = storeToRefs(settingStore)
+const { groups } = storeToRefs(groupStore)
+const { scoreHistories } = storeToRefs(scoreStore)
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -66,6 +75,7 @@ const formValue = ref({
   name: '',
   number: '',
   sex: 9,
+  groups: [],
   uniqueId: generateUniqueId(),
 })
 const multiAddForm = ref({ input: '', names: [] })
@@ -88,47 +98,10 @@ const deleteHandler = (row) => {
   personList.value = personList.value.filter(
     (item) => item.uniqueId !== row.uniqueId,
   )
+  scoreHistories.value = scoreHistories.value.filter(item => item.owner !== row.uniqueId)
   message.success('删除成功')
 }
 
-function generateHash(input)
-{
-  let hash = 0
-  for (let i = 0; i < input.length; i++)
-  {
-    hash = (hash << 5) - hash + input.charCodeAt(i)
-  }
-  return Math.abs(hash)
-}
-
-function selectAvatar(studentId, avatarCount)
-{
-  const hashValue = generateHash(studentId)
-  return hashValue % avatarCount
-}
-
-const male = getAvatarUrls(1, avatarWorks.value)
-const female = getAvatarUrls(2, avatarWorks.value)
-
-const getAvatar = (person) => {
-  if (person?.avatar) return person.avatar
-  if (!enableFallbackAvatar.value) return null
-  const sn = person.number ? person.number : person.uniqueId
-  let urls
-  switch (person.sex)
-  {
-    case 1:
-      urls = male
-      break
-    case 2:
-      urls = female
-      break
-    default:
-      urls = male.concat(female)
-      break
-  }
-  return urls[selectAvatar(sn, urls.length)].src
-}
 const createColumns = (edit, del) => {
   return [
     {
@@ -138,17 +111,16 @@ const createColumns = (edit, del) => {
           'div',
           { class: 'flex items-center justify-between' },
           [
-            h(
-              'div',
-              { innerHTML: '头像' },
-            ),
-            h('div', { class: 'flex flex-row items-center justify-between' }, [
-              h('div', { innerHTML: '启用内置头像', class: 'mr-2' }),
-              h(NSwitch, {
-                value: enableFallbackAvatar,
-                ['onUpdate:value']: (value) => {enableFallbackAvatar.value = value},
-              }),
-            ]),
+            h(NPopover, { trigger: 'click' }, {
+              trigger: () => h('div', { innerHTML: '头像' }),
+              default: () => h('div', { class: 'flex flex-row items-center justify-between' }, [
+                h('div', { innerHTML: '启用内置头像', class: 'mr-2' }),
+                h(NSwitch, {
+                  value: enableFallbackAvatar.value,
+                  ['onUpdate:value']: (value) => {enableFallbackAvatar.value = value},
+                }),
+              ]),
+            }),
           ])
       },
       key: 'avatar',
@@ -163,14 +135,12 @@ const createColumns = (edit, del) => {
           round: true,
         })
       },
+      width: remToPx(4),
     },
     {
       title: '姓名',
       key: 'name',
-    },
-    {
-      title: '学号',
-      key: 'number',
+      width: remToPx(6),
     },
     {
       title: '性别',
@@ -186,6 +156,29 @@ const createColumns = (edit, del) => {
           default:
             return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
+      },
+      width: remToPx(6),
+    },
+    {
+      title: '学号',
+      key: 'number',
+    },
+    {
+      title: '分组',
+      key: 'groups',
+      render(row)
+      {
+        const groupTags = row.group?.map(
+          item => h(NTag,
+            { bordered: false },
+            {
+              default:
+                () => groups.value.find(g => g.uniqueId === item)?.name
+                  ?? h(NText, { depth: 3 }, { default: () => '已删除' }),
+            }))
+        return groupTags?.length
+          ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
+          : h(NText, { depth: 3 }, { default: () => '未加入' })
       },
     },
     {
@@ -251,6 +244,7 @@ const addPerson = () => {
       name: name,
       number: '',
       sex: 9,
+      group: [],
       uniqueId: generateUniqueId(),
     })),
   )
@@ -274,6 +268,9 @@ const handler = () => {
     personList.value = personList.value.map((item) => {
       if (item.uniqueId === formValue.value.uniqueId)
       {
+        // difference(item.group, formValue.value.groups)
+        //   .forEach(x => groups.value.find(x).members = groups.value.find(x).members
+        //                                                      .filter(p => p.uniqueId !== item.uniqueId))
         return formValue.value // 使用展开语法更新 title 属性
       }
       return item // 非匹配的元素保持原样
@@ -303,6 +300,7 @@ const parseExcel = async (uploadFileInfo) => {
         name: item['姓名'],
         sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
         number: JSON.stringify(item['学号']),
+        group: [],
       }
     })
     .filter((item) => item !== null)
@@ -330,6 +328,11 @@ window.addEventListener('resize', () => {
 
 const downloadTemplate = () => {
   downloadAnyFile(personXlsx, '人员导入模板.xlsx')
+}
+
+function createOptions(x)
+{
+  return x.map(item => ({ label: item.name, value: item.uniqueId }))
 }
 </script>
 
@@ -399,36 +402,46 @@ const downloadTemplate = () => {
         () => {
           showAddModal = false;
           if (isEdit)
-            formValue = {
+            formValue.value = {
               name: '',
               number: '',
               sex: 9,
+              groups:[],
               uniqueId: generateUniqueId()
             };
           isEdit = false;
         }
       "
     >
-      <n-form>
-        <n-form-item label="头像" path="avatar">
-          <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
-        </n-form-item>
-        <n-form-item label="姓名" path="name">
-          <n-input v-model:value="formValue.name" placeholder="输入姓名" />
-        </n-form-item>
-        <n-form-item label="学号（可选）" path="number">
-          <n-input v-model:value="formValue.number" placeholder="输入学号" />
-        </n-form-item>
-        <n-form-item label="性别（可选）" path="sex">
-          <n-radio-group v-model:value="formValue.sex">
-            <n-space>
-              <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
-                {{ sex.label }}
-              </n-radio>
-            </n-space>
-          </n-radio-group>
-        </n-form-item>
-      </n-form>
+      <n-scrollbar style="max-height: 70vh;overflow-x: hidden;padding: 0 1rem 0 0;margin: 0 0 1rem 0">
+        <n-form>
+          <n-form-item label="头像" path="avatar">
+            <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
+          </n-form-item>
+          <n-form-item label="姓名" path="name">
+            <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+          </n-form-item>
+          <n-form-item label="学号（可选）" path="number">
+            <n-input v-model:value="formValue.number" placeholder="输入学号" />
+          </n-form-item>
+          <n-form-item label="性别（可选）" path="sex">
+            <n-radio-group v-model:value="formValue.sex">
+              <n-space>
+                <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
+                  {{ sex.label }}
+                </n-radio>
+              </n-space>
+            </n-radio-group>
+          </n-form-item>
+          <!--          <n-space vertical>-->
+          <!--            <n-space>-->
+          <!--              <p>分组（可选）</p>-->
+          <!--              <n-button tertiary size="tiny">分组管理</n-button>-->
+          <!--            </n-space>-->
+          <!--            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="createOptions(groups)" />-->
+          <!--          </n-space>-->
+        </n-form>
+      </n-scrollbar>
       <div class="flex justify-end">
         <n-button
           :disabled="formValue.name.length === 0"

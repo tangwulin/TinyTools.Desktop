@@ -14,7 +14,7 @@ const year = now.getFullYear()
 const month = now.getMonth()
 const date = now.getDate()
 const buildDate = `${ year }/${ month + 1 }/${ date }`
-const githubLink = 'https://github.com/tangwulin/TinyTools/tree/' + github_sha
+const githubLink = 'https://github.com/tangwulin/TinyTools.Desktop/tree/' + github_sha
 
 const message = useMessage()
 
@@ -71,9 +71,10 @@ const clickHandler = () => {
           </svg>
         </a>
       </div>
+      <p>用户群：921555937</p>
       <!--      <p>项目地址：</p>-->
-      <div class="flex flex-row mt-8">
-        <a href="https://github.com/tangwulin/TinyTools/" target="_blank">
+      <div class="flex flex-row mt-4">
+        <a href="https://github.com/tangwulin/TinyTools.Desktop" target="_blank">
           <svg
             class="h-12"
             viewBox="0 0 512 512"

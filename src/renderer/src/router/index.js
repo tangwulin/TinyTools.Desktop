@@ -75,6 +75,28 @@ const router = createRouter({
           component: () => import('../views/PersonManageView.vue'),
         },
         {
+          path: '/score',
+          name: 'score',
+          component: () => import('../views/ScoreView.vue'),
+        },
+        {
+          path: '/score/report',
+          name: 'scoreReport',
+          component: () => import('../views/ScoreReport.vue'),
+          children: [
+            {
+              path: '/score/report/detail',
+              name: 'scoreReportDetail',
+              component: () => import('../views/Score/ScoreReportDetail.vue'),
+            },
+          ],
+        },
+        {
+          path: 'group',
+          name: 'groupManage',
+          component: () => import('../views/GroupManageView.vue'),
+        },
+        {
           path: '/setting',
           name: 'setting',
           redirect: '/setting/seat',
@@ -86,9 +108,9 @@ const router = createRouter({
               component: () => import('../views/Setting/SeatSettingView.vue'),
             },
             {
-              path: '/setting/randomSelection',
-              name: 'randomSelectionSetting',
-              component: () => import('../views/Setting/RandomSelectionSettingView.vue'),
+              path: '/setting/avatarSetting',
+              name: 'avatarSetting',
+              component: () => import('../views/Setting/AvatarSetting.vue'),
             },
             {
               path: '/setting/bgm',

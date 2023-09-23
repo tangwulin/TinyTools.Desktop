@@ -15,6 +15,11 @@
           v-model:seats="allSeats"
           :disable="isPreview || loading"
           @update="updateHandler"
+          @click-seat="args => {
+            if(!enableDevelopFeature||isPreview) return
+            selectedSeat=args
+            showDebugModal=true
+          }"
         />
       </div>
       <div class="flex justify-center mt-4">
@@ -45,6 +50,24 @@
       >
         <!-- 操作区域 -->
         <!--        <n-button @click="reloadSeatTable" :disabled="loading">重载座位表组件</n-button>-->
+        <n-tooltip trigger="hover">
+          <!--suppress VueUnrecognizedSlot -->
+          <template #trigger>
+            <n-button
+              :disabled="loading || isPreview"
+              :loading="loading"
+              @click="toMiddle"
+            >
+              <template #icon>
+                <n-icon>
+                  <RefreshDot />
+                </n-icon>
+              </template>
+              直接出结果(新)
+            </n-button>
+          </template>
+          把两遍的调到中间
+        </n-tooltip>
         <n-tooltip trigger="hover">
           <!--suppress VueUnrecognizedSlot -->
           <template #trigger>
@@ -85,13 +108,13 @@
         <n-button :disabled="loading || isPreview" @click="save"
         >保存图片
         </n-button>
-<!--        <n-dropdown :options="saveOptions" @select="save">-->
-<!--          <n-button :disabled="loading || isPreview">-->
-<!--            <template #icon>-->
-<!--              <ArrowDropDownFilled />-->
-<!--            </template>-->
-<!--          </n-button>-->
-<!--        </n-dropdown>-->
+        <!--        <n-dropdown :options="saveOptions" @select="save">-->
+        <!--          <n-button :disabled="loading || isPreview">-->
+        <!--            <template #icon>-->
+        <!--              <ArrowDropDownFilled />-->
+        <!--            </template>-->
+        <!--          </n-button>-->
+        <!--        </n-dropdown>-->
         <n-button :disabled="loading" @click="showHistory = true"
         >历史记录
         </n-button>
@@ -200,19 +223,45 @@
       </n-button>
     </div>
 
-    <!--    <div class="fixed bottom-0 left-0 mb-2 ml-2 text-xs">-->
-    <!--      <p>-->
-    <!--        TinyTools v{{ version }} Build-->
-    <!--        <a :href="githubLink" target="_blank">{{ revision }}</a>-->
-    <!--      </p>-->
-    <!--    </div>-->
     <div class="fixed bottom-0 right-0 mb-2 mr-2">
       <audio
         id="player"
         controls
+        style="width: 20rem;"
         src="https://music.163.com/song/media/outer/url?id=430620198.mp3"
       ></audio>
     </div>
+    <n-modal v-model:show="showDebugModal" :mask-closable="false">
+      <n-card
+        style="width: 600px"
+        title="调试工具"
+        :bordered="false"
+        size="huge"
+        role="dialog"
+        aria-modal="true"
+        :closable="true"
+        @close="showDebugModal=false"
+      >
+        <div>
+          <n-text type="error" style="font-size: 1rem;">这里可以直接修改某个座位的信息，无回滚无暂存，修改立即生效，确保你知道自己在干什么！</n-text>
+          <n-space justify="space-between">
+            <span>显示文字</span>
+            <n-input v-model:value="selectedSeat.name" :on-update-value="nameChangeHandler"/>
+          </n-space>
+          <n-space justify="space-between">
+            <span style="text-align: center;">颜色</span>
+            <n-color-picker
+              :show-alpha="false"
+              :modes="['hex']"
+              v-model:value="selectedSeat.color"
+              :on-complete="colorChangeHandler"
+              style="width: 30vw;"
+            />
+            <n-button @click="selectedSeat.color=null">恢复原始颜色</n-button>
+          </n-space>
+        </div>
+      </n-card>
+    </n-modal>
   </div>
 </template>
 
@@ -227,10 +276,16 @@ import { useSeatStore } from '../stores/seat'
 import { usePersonStore } from '../stores/person'
 import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
-import { getRenderingList, parseEdgeSeatIndex, replaceArrayElements } from '../assets/script/seatHelper'
-import { debounce, shuffle } from 'lodash-es'
+import {
+  getRenderingList,
+  parseEdgeSeatIndex,
+  parseRenderingListToSeats,
+  replaceArrayElements,
+} from '../assets/script/seatHelper'
+import { debounce, difference, shuffle } from 'lodash-es'
 import { getDefaultBgm, getDefaultFinalBgm } from '../assets/script/musicHelper'
 import { useRouter } from 'vue-router'
+import { outerToMiddle } from '../utils/SeatUtil'
 
 const message = useMessage()
 const router = useRouter()
@@ -270,6 +325,10 @@ const isPreview = ref(false)
 const times = ref(5)
 const stKey = ref(Math.random())
 let msgReactive = null
+
+const showDebugModal = ref(false)
+
+const selectedSeat = ref(null)
 
 // const lotteryModes = [
 //   {
@@ -423,21 +482,6 @@ const updateHandler = debounce(
   { maxWait: 2000 },
 )
 
-// const saveOptions = [
-//   {
-//     label: '图片分辨率（宽度）',
-//     key: 1,
-//     disabled: true,
-//   },
-//   {
-//     label: '1080P',
-//     key: 2,
-//   },
-//   {
-//     label: '4K',
-//     key: 4,
-//   },
-// ]
 /**
  * 保存当前座位为图片
  * @returns {Promise<void>}
@@ -508,9 +552,35 @@ if (
   personList.value.length !== allSeats.value.length
 )
 {
-  allSeats.value = personList.value.map((item, index) => {
-    return { name: item.name, index: index, isSeat: true }
-  })
+  const nameInSeat = allSeats.value.map(item => item.name)
+  const nameInList = personList.value.map(item => item.name)
+  if (personList.value.length > allSeats.value.length)
+  {
+    const newPersons = difference(nameInList, nameInSeat)
+
+    allSeats.value = allSeats.value.concat(newPersons.map((item, index) => ({
+      name: item,
+      isSeat: true,
+      index: allSeats.value.length + index,
+    })))
+
+    oldRenderingList.value = getRenderingList(allSeats.value, [])
+  }
+  else
+  {
+    const diff = difference(nameInSeat, nameInList)
+    oldRenderingList.value = oldRenderingList.value.map(item => {
+      if (diff.includes(item.name))
+        return ({
+          name: null,
+          isSeat: false,
+          isDashed: true,
+        })
+      else return ({ ...item })
+    })
+
+    allSeats.value = parseRenderingListToSeats(oldRenderingList.value)
+  }
   console.log('seat has been initialized')
 }
 /**
@@ -651,27 +721,78 @@ const replaceSeats = async () => {
   }, 50)
 }
 
-// const handler = (times,type) => {
-//   let process=null
-//   switch (lotteryMode.value)
-//   {
-//     case 'equality':
-//       process=reSort()
-//       break
-//     case 'or':
-//       if(times) process=rollSeats(times)
-//       else
-//         if(type) gacha()
-//         else replaceSeats()
-//       break
-//     case 'equity':
-//       message.error('暂未实现')
-//       break
-//     default:
-//       message.error('出错了，请前往设置-通用设置-抽选座位重新设置抽选方式')
-//       break
-//   }
-// }
+const toMiddle = async () => {
+  const result = outerToMiddle(oldRenderingList.value)
+
+  function mergeArrays(arr1, arr2, arr3, arr4)
+  {
+    const mergedArray = []
+
+    while (arr1.length > 0 || arr2.length > 0 || arr3.length > 0 || arr4.length > 0)
+    {
+      if (arr1.length > 0)
+      {
+        mergedArray.push(arr1.shift())
+        mergedArray.push(arr1.shift() ?? { name: null, isSeat: false, isDashed: true, color: null })
+      }
+      if (arr2.length > 0)
+      {
+        mergedArray.push(arr2.shift())
+        mergedArray.push(arr2.shift() ?? { name: null, isSeat: false, isDashed: true, color: null })
+      }
+      if (arr3.length > 0)
+      {
+        mergedArray.push(arr3.shift())
+        mergedArray.push(arr3.shift() ?? { name: null, isSeat: false, isDashed: true, color: null })
+      }
+      if (arr4.length > 0)
+      {
+        mergedArray.push(arr4.shift())
+        mergedArray.push(arr4.shift() ?? { name: null, isSeat: false, isDashed: true, color: null })
+      }
+    }
+    return mergedArray
+  }
+
+  const [a, b, c, d] = result.map(item => shuffle(item))
+  const outer = shuffle(a.concat(d))
+  const inner = shuffle(b.concat(c))
+  const newB = outer.slice(0, b.length)
+  const newC = outer.slice(b.length)
+  const newA = inner.slice(0, a.length)
+  const newD = inner.slice(a.length)
+  allSeats.value = mergeArrays(newA, newB, newC, newD)
+  oldRenderingList.value = getRenderingList(allSeats.value, oldRenderingList.value)
+}
+
+/**
+ *
+ * @param {number}times
+ * @param {string?} type
+ */
+const handler = (times, type) => {
+  console.log({ times, type, lotteryMode })
+  switch (lotteryMode.value)
+  {
+    case 1:
+      reSort()
+      break
+    case 2:
+      if (times) rollSeats(times)
+      else if (type) gacha()
+      else replaceSeats()
+      break
+    case 3:
+      toMiddle()
+      break
+    case 4:
+      message.error('暂未实现')
+      break
+    default:
+      message.error('出错了，请前往设置-通用设置-抽选座位重新设置抽选方式')
+      break
+  }
+}
 /**
  * 通过刷新key的方式重新渲染SeatTable组件
  * @returns {Promise<void>}
@@ -691,6 +812,16 @@ const exitPreview = () => {
   history.value = history.value.map((item) => {
     return { ...item, isShowing: false }
   })
+}
+
+const colorChangeHandler = () => {
+  allSeats.value.find(item => item.index === selectedSeat.value.index).color = selectedSeat.value.color
+  oldRenderingList.value.find(item => item.index === selectedSeat.value.index).color = selectedSeat.value.color
+}
+
+const nameChangeHandler = () => {
+  allSeats.value.find(item => item.index === selectedSeat.value.index).name = selectedSeat.value.name
+  oldRenderingList.value.find(item => item.index === selectedSeat.value.index).name = selectedSeat.value.name
 }
 
 window.addEventListener('beforeunload', isPreview ? exitPreview : () => {})

@@ -7,7 +7,7 @@ import { storeToRefs } from 'pinia'
 import { NButton } from 'naive-ui'
 import { shuffle } from 'lodash-es'
 import raffleBgm from '../assets/audio/raffle-2.mp3'
-import { getAvatarUrls } from '../assets/script/avatarUrl'
+import { getAvatar } from '../utils/AvatarUtil'
 
 import { remToPx } from '../assets/script/util'
 
@@ -15,7 +15,7 @@ const personStore = usePersonStore()
 const { personList } = storeToRefs(personStore)
 
 const settingStore = useSettingStore()
-const { enableAvatar, enableFallbackAvatar, avatarWorks } = storeToRefs(settingStore)
+const { enableAvatar } = storeToRefs(settingStore)
 
 const showFastModal = ref(false)
 const showAdvancedModal = ref(false)
@@ -102,44 +102,6 @@ watch(
   { deep: true },
 )
 
-function generateHash(input)
-{
-  let hash = 0
-  for (let i = 0; i < input.length; i++)
-  {
-    hash = (hash << 5) - hash + input.charCodeAt(i)
-  }
-  return Math.abs(hash)
-}
-
-function selectAvatar(studentId, avatarCount)
-{
-  const hashValue = generateHash(studentId)
-  return hashValue % avatarCount
-}
-
-const male = getAvatarUrls(1, avatarWorks.value)
-const female = getAvatarUrls(2, avatarWorks.value)
-
-const getAvatar = (person) => {
-  if (person?.avatar) return person.avatar
-  if (!enableFallbackAvatar.value) return null
-  const sn = person.number ? person.number : person.uniqueId
-  let urls
-  switch (person.sex)
-  {
-    case 1:
-      urls = male
-      break
-    case 2:
-      urls = female
-      break
-    default:
-      urls = male.concat(female)
-      break
-  }
-  return urls[selectAvatar(sn, urls.length)].src
-}
 </script>
 
 <template>
@@ -188,6 +150,7 @@ const getAvatar = (person) => {
                   lazy
                   object-fit="contain"
                   round
+                  :imgProps="{ referrerpolicy: 'no-referrer' }"
                   style="margin-bottom: 0.5rem"
                 />
                 <span style="font-size: 1.5rem">{{ item?.name }}</span>
@@ -268,7 +231,7 @@ const getAvatar = (person) => {
       role="dialog"
       size="huge"
       style="width: 50%; overflow-y: auto; overflow-x: hidden"
-      title="高级抽选"
+      title="自定义抽选"
       @close="showAdvancedModal = false"
     >
       数量
@@ -279,8 +242,8 @@ const getAvatar = (person) => {
         button-placement="both"
       />
       <n-divider style="margin: 1rem 0" />
-      <div>
-        <n-collapse>
+      <n-scrollbar style="max-height: 50vh;overflow-x: hidden">
+        <n-collapse >
           <n-collapse-item name="1" title="性别范围">
             <n-checkbox-group v-model:value="selectedSex">
               <n-space item-style="display: flex;">
@@ -298,10 +261,11 @@ const getAvatar = (person) => {
               v-model:value="value1"
               :options="options1"
               source-filterable
+              class="pr-3"
             />
           </n-collapse-item>
         </n-collapse>
-      </div>
+      </n-scrollbar>
       <template #footer>
         <div class="flex justify-end">
           <n-button type="primary" @click="handler(false)">开始</n-button>

@@ -55,7 +55,7 @@ jobs:
       - name: release
         uses: softprops/action-gh-release@v1
         with:
-          draft: ${{ contains(github.ref_name, 'draft') }}
+#          draft: ${{ contains(github.ref_name, 'draft') }}
           prerelease: ${{ contains(github.ref_name, 'beta') ||  contains(github.ref_name, 'rc') }}
           files: |
             dist/*.exe

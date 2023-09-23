@@ -1,3 +1,5 @@
+import { generateHash } from '../assets/script/util'
+
 const maleGenshin = [
   {
     src: 'https://i0.hdslb.com/bfs/article/558dae2786d93a7ea8b7f9e67dface124a0ca275.jpg',
@@ -1626,4 +1628,39 @@ export const getAvatarUrls = (sex, works) => {
       break
   }
   return result
+}
+
+function selectAvatar(studentId, avatarCount)
+{
+  const hashValue = generateHash(studentId)
+  return hashValue % avatarCount
+}
+
+import {useSettingStore} from '../stores/setting'
+import {storeToRefs} from 'pinia'
+
+const setting =useSettingStore()
+const {enableFallbackAvatar,avatarWorks}=storeToRefs(setting)
+
+const male = getAvatarUrls(1, avatarWorks.value)
+const female = getAvatarUrls(2, avatarWorks.value)
+
+export const getAvatar = (person) => {
+  if (person?.avatar) return person.avatar
+  if (!enableFallbackAvatar.value) return null
+  const sn = person.number ? person.number : person.uniqueId
+  let urls
+  switch (person.sex)
+  {
+    case 1:
+      urls = male
+      break
+    case 2:
+      urls = female
+      break
+    default:
+      urls = male.concat(female)
+      break
+  }
+  return urls[selectAvatar(sn, urls.length)].src
 }

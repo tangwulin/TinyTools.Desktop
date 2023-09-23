@@ -23,13 +23,14 @@ export const useSettingStore = defineStore(
 
     const enableOldToolBar = ref(false)
 
-    const lotteryMode = ref('or')
+    const lotteryMode = ref(2)
 
     const isFirstSetup = ref(true)
 
     const enableAvatar = ref(true)
     const enableFallbackAvatar = ref(true)
     const avatarWorks = ref([1, 2, 3])
+
     return {
       coloringEdgeSeats,
       bgms,

@@ -2,7 +2,7 @@
 import { h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'
-import { ChairAltOutlined as ChairIcon } from '@vicons/material'
+import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
   DataHistogram24Regular as DataIcon,
@@ -10,18 +10,23 @@ import {
   Person24Regular as PersonIcon,
   Settings16Regular as SettingIcon,
 } from '@vicons/fluent'
+import { Group as GroupIcon } from '@vicons/carbon'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
 import logoUrl from '../assets/images/logo.png'
+import { useGeneralStore } from '../stores/general'
 
 const settingStore = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(settingStore)
 
-const version = __APP_VERSION__
-const shortVersion = version.split('-')[0]
+const generalStore = useGeneralStore()
+const { lastScoreType } = storeToRefs(generalStore)
 
-const activeKey = ref('seat')
+const version = __APP_VERSION__
+const shortVersion = version?.split('-')[0]
+
+const activeKey = ref(null)
 const collapsed = ref(true)
 
 const collapsedWithoutAnimation = ref(true)
@@ -63,6 +68,21 @@ const menuOptions = [
     key: 'dashboard',
     icon: renderIcon(DataIcon),
     show: enableDevelopFeature.value,
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'score',
+            query: { type: lastScoreType.value },
+          },
+        },
+        { default: () => '评分' },
+      ),
+    key: 'score',
+    icon: renderIcon(ScoreIcon),
   },
   {
     label: () =>
@@ -120,6 +140,20 @@ const menuOptions = [
       ),
     key: 'personManage',
     icon: renderIcon(PersonIcon),
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'groupManage',
+          },
+        },
+        { default: () => '分组管理' },
+      ),
+    key: 'groupManage',
+    icon: renderIcon(GroupIcon),
   },
 ]
 
@@ -212,7 +246,7 @@ const footerMenuOptions = [
     </n-layout-sider>
 
     <!--下方router-view内内容加css只能在各组件内部加-->
-    <n-layout-content content-style="padding:0.5rem 0.5rem 0 0.5rem">
+    <n-layout-content content-style="padding:0.25rem 0.25rem 0 0.25rem">
       <router-view />
     </n-layout-content>
   </n-layout>

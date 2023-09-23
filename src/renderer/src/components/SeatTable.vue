@@ -5,7 +5,7 @@ import { computed, ref, watch } from 'vue'
 import { getRenderingList, parseRenderingListToSeats } from '../assets/script/seatHelper'
 
 const props = defineProps(['seats', 'renderingList', 'coloringEdge', 'rendering', 'disable', 'reverse'])
-const emit = defineEmits(['update', 'update:seats', 'update:renderingList', 'update:rendering'])
+const emit = defineEmits(['update', 'update:seats', 'update:renderingList', 'update:rendering','clickSeat'])
 
 const rendering = ref(props.rendering)
 
@@ -110,6 +110,13 @@ const renderingData = computed({
   },
 })
 
+function move(e){
+  // 这里的e表示即将停靠的元素。
+  if(!e.relatedContext.element.isSeat&&!e.relatedContext.element.isDashed){
+    return false;
+  }
+}
+
 watch(() => props.seats, () => {
   console.log('props.seats changed')
   seats.value = props.seats
@@ -129,11 +136,12 @@ watch(() => props.coloringEdge, () => {
       :swap="true"
       class="text-center  grid grid-cols-11"
       filter=".should-not-be-dragged"
+      :move="move"
       item-key="id">
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">
-        <NButton v-if="element.isSeat" :color="element.color" size="large">{{ element.name }}</NButton>
-        <div v-else-if="!element.isDashed" class="should-not-be-dragged"></div>
+        <NButton v-if="element?.isSeat ?? false" :color="element.color" size="large" @click="emit('clickSeat',element)">{{ element?.name ?? '???' }}</NButton>
+        <div v-else-if="!element?.isDashed ?? false" class="should-not-be-dragged"></div>
         <NButton v-else :focusable="false" class="should-not-be-dragged" dashed size="large"></NButton>
       </template>
     </draggable>
