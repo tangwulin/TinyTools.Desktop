@@ -15,7 +15,40 @@ const routes: RouteRecordRaw[] = [
     component: MainWindow,
     redirect: { name: 'seat' },
     children: [
-      { path: '/seat', name: 'seat', component: () => import('../views/MainWindow/SeatView.vue') }
+      { path: '/seat', name: 'seat', component: () => import('../views/MainWindow/SeatView.vue') },
+      // { path: '/lottery', name: 'lottery', component: () => import('../views/MainWindow/LotteryView.vue') },
+      // { path: '/help', name: 'help', component: () => import('../views/MainWindow/HelpView.vue') },
+      // { path: '/debug', name: 'debug', component: () => import('../views/MainWindow/DebugView.vue') },
+      {
+        path: '/score',
+        name: 'score',
+        component: () => import('../views/MainWindow/ScoreView.vue')
+      },
+      {
+        path: '/randomSelection',
+        name: 'randomSelection',
+        component: () => import('../views/MainWindow/RandomSelection.vue')
+      },
+      {
+        path: '/personManage',
+        name: 'personManage',
+        component: () => import('../views/MainWindow/PersonManage.vue')
+      },
+      {
+        path: '/groupManage',
+        name: 'groupManage',
+        component: () => import('../views/MainWindow/GroupManage.vue')
+      },
+      {
+        path: '/about',
+        name: 'about',
+        component: () => import('../views/MainWindow/AboutView.vue')
+      },
+      {
+        path: '/setting',
+        name: 'setting',
+        component: () => import('../views/MainWindow/SettingView.vue')
+      }
     ]
   }
 ]
