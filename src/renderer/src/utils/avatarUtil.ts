@@ -1962,14 +1962,14 @@ const male = getAvatarUrls(1, avatarWorks.value)
 const female = getAvatarUrls(2, avatarWorks.value)
 
 export const getAvatar = (item: Person | Group | { number: string } | { uniqueId: string }) => {
-  if ('avatar' in item) return item.avatar
+  if ('avatar' in item && item.avatar) return item.avatar
   if (!enableFallbackAvatar.value) return null
   if ('disabledAvatar' in item && item.disabledAvatar) return null
   const sn =
     'number' in item && item?.number ? item.number : 'uniqueId' in item ? item.uniqueId : ''
   let urls: { src: string; description: string }[]
   switch (
-    'sex' in item ? item.sex : 9 // 1:男,2:女,9:未知
+    'genderCode' in item ? item.genderCode : 9 // 1:男,2:女,9:未知
   ) {
     case 1:
       urls = male

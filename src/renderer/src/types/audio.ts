@@ -6,7 +6,7 @@ export class Audio {
   offset: number
   uniqueId: string
 
-  constructor(name: string, src: string, offset: number, uniqueId: string) {
+  constructor(name: string, src: string, offset: number) {
     this.name = name
     this.src = src
     this.offset = offset

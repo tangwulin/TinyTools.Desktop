@@ -23,11 +23,16 @@
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
     "electron-updater": "^6.1.1",
+    "json-editor-vue": "^0.10.16",
+    "localforage": "^1.10.0",
+    "lodash-es": "^4.17.21",
     "pinia": "^2.1.6",
-    "pinia-plugin-piniastorage": "^1.0.8",
+    "pinia-plugin-persistedstate": "^3.2.0",
+    "pinia-plugin-persistedstate-2": "^2.0.14",
     "vue-router": "4",
     "vuedraggable-swap": "^4.1.0",
-    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz"
+    "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.0/xlsx-0.20.0.tgz",
+    "zipson": "^0.2.12"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^1.0.1",

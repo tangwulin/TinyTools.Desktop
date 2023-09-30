@@ -3,8 +3,10 @@ import { Person } from './person'
 export class Seat {
   owner: Person
   index: number
-  location: string = ''
 
+  get location() {
+    return Math.floor(this.index / 8) + 1 + '排' + ((this.index % 8) + 1) + '座'
+  }
   get displayName() {
     return this.owner.name
   }

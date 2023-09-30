@@ -24,11 +24,11 @@ export class Person {
     }
   }
 
-  constructor(name: string, genderCode: 0 | 1 | 2 | 9, number: string) {
+  constructor(name: string, genderCode: 0 | 1 | 2 | 9, number: string, uniqueId?: string) {
     this.name = name
     this.genderCode = genderCode
     this.number = number
-    this.uniqueId = genUniqueId()
+    this.uniqueId = uniqueId ?? genUniqueId()
     this.group = []
   }
 }

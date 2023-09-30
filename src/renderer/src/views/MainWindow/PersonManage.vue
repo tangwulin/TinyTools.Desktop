@@ -17,32 +17,31 @@ import {
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { usePersonStore } from '../../stores/person'
-import { useSeatStore } from '../../stores/seat'
 import { useSettingStore } from '../../stores/setting'
-import { useGroupStore } from '../../stores/group'
 import { useRoute } from 'vue-router'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
 import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
 import downloadAnyFile from '../../utils/downloadAnyFile'
 import remToPx from '../../utils/remToPx'
-import genUniqueId from '../../utils/genUniqueId'
 import * as XLSX from 'xlsx'
 
 import personXlsx from '../../assets/xlsx/person.xlsx'
 import { getAvatar } from '../../utils/avatarUtil'
 import { useScoreStore } from '../../stores/score'
+import { Person } from '../../types/person'
+import { useSeatStore } from '../../stores/seat'
 
 const route = useRoute()
 
 const personStore = usePersonStore()
 const seatStore = useSeatStore()
 const settingStore = useSettingStore()
-const groupStore = useGroupStore()
+// const groupStore = useGroupStore()
 const scoreStore = useScoreStore()
-const { personList } = storeToRefs(personStore)
-const { allSeats, oldRenderingList } = storeToRefs(seatStore)
+const { persons } = storeToRefs(personStore)
+const { seats } = storeToRefs(seatStore)
 const { enableFallbackAvatar } = storeToRefs(settingStore)
-const { groups } = storeToRefs(groupStore)
+// const { groups } = storeToRefs(groupStore)
 const { scoreHistories } = storeToRefs(scoreStore)
 
 const showAddModal = ref(false)
@@ -69,14 +68,11 @@ if (showMultiAddModal.value) {
 
 const isEdit = ref(false)
 
-const formValue = ref({
-  name: '',
-  number: '',
-  sex: 9,
-  groups: [],
-  uniqueId: genUniqueId()
-})
-const multiAddForm = ref({ input: '', names: [] })
+const formValue = ref<Person>(new Person('', 9, ''))
+const multiAddForm = ref<{
+  input: string
+  names: string[]
+}>({ input: '', names: [] })
 
 const message = useMessage()
 
@@ -86,19 +82,19 @@ const sexes = [
   { label: '未填写', value: 9 }
 ] //此处参考了GB/T 2261.1-2003
 
-const editHandler = (row) => {
-  formValue.value = { ...row }
+const editHandler = (row: Person) => {
+  formValue.value = { ...row, gender: row.gender }
   isEdit.value = true
   showAddModal.value = true
 }
 
-const deleteHandler = (row) => {
-  personList.value = personList.value.filter((item) => item.uniqueId !== row.uniqueId)
-  scoreHistories.value = scoreHistories.value.filter((item) => item.owner !== row.uniqueId)
+const deleteHandler = (row: Person) => {
+  persons.value = persons.value.filter((item) => item.uniqueId !== row.uniqueId)
+  scoreHistories.value = scoreHistories.value.filter((item) => item.ownerId !== row.uniqueId)
   message.success('删除成功')
 }
 
-const createColumns = (edit, del) => {
+const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) => {
   return [
     {
       title() {
@@ -123,7 +119,7 @@ const createColumns = (edit, del) => {
         ])
       },
       key: 'avatar',
-      render(row) {
+      render(row: Person) {
         return h(NAvatar, {
           size: 'large',
           src: getAvatar(row),
@@ -142,9 +138,9 @@ const createColumns = (edit, del) => {
     },
     {
       title: '性别',
-      key: 'sex',
-      render(row) {
-        switch (row.sex) {
+      key: 'gender',
+      render(row: Person) {
+        switch (row.genderCode) {
           case 1:
             return '男'
           case 2:
@@ -153,24 +149,26 @@ const createColumns = (edit, del) => {
             return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
       },
-      width: remToPx(6)
+      width: remToPx(4.5)
     },
     {
       title: '学号',
-      key: 'number'
+      key: 'number',
+      width: remToPx(10)
     },
     {
       title: '分组',
       key: 'groups',
-      render(row) {
+      render(row: Person) {
         const groupTags = row.group?.map((item) =>
           h(
             NTag,
             { bordered: false },
             {
               default: () =>
-                groups.value.find((g) => g.uniqueId === item)?.name ??
-                h(NText, { depth: 3 }, { default: () => '已删除' })
+                // groups.value.find((g) => g.uniqueId === item)?.name ??
+                // h(NText, { depth: 3 }, { default: () => '已删除' })
+                item.name
             }
           )
         )
@@ -183,7 +181,7 @@ const createColumns = (edit, del) => {
       title: '操作',
       key: 'actions',
       width: remToPx(8),
-      render(row) {
+      render(row: Person) {
         return h('div', { class: 'flex flex-row' }, [
           h(
             NButton,
@@ -211,7 +209,7 @@ const createColumns = (edit, del) => {
   ]
 }
 
-const renderCell = (value) => {
+const renderCell = (value: any) => {
   if (!value) {
     return h(NText, { depth: 3 }, { default: () => '未填写' })
   }
@@ -228,90 +226,93 @@ const parseName = () => {
 
 const addPerson = () => {
   console.log('添加了这' + multiAddForm.value.names.length + '个人：' + multiAddForm.value.names)
-  personList.value.push(
-    ...multiAddForm.value.names.map((name) => ({
-      name: name,
-      number: '',
-      sex: 9,
-      group: [],
-      uniqueId: genUniqueId()
-    }))
-  )
+  const newPerson = multiAddForm.value.names.map((name) => new Person(name, 9, ''))
+  persons.value = persons.value.concat(newPerson)
   message.success('添加成功，共添加了' + multiAddForm.value.names.length + '个')
   showAddModal.value = false
-  multiAddForm.value.names
-    .map((name) => {
-      return { name: name, isSeat: true, isDashed: false }
-    })
-    .forEach((item) => allSeats.value.push(item))
-  oldRenderingList.value = getRenderingList(allSeats.value, [])
+  // newPerson
+  //   .map((item) => new Person(item.name, 9, ''))
+  //   .map((item, index) => new Seat(item, seats.value.length + index))
+  //TODO: 为新添加的人员分配座位
+
+  // seatMap.value[seatMap.value.findIndex(item=>item==='empty')]='seat'
   multiAddForm.value.names = []
   multiAddForm.value.input = ''
 }
 
 const handler = () => {
   if (isEdit.value) {
-    personList.value = personList.value.map((item) => {
+    persons.value = persons.value.map((item) => {
       if (item.uniqueId === formValue.value.uniqueId) {
-        // difference(item.group, formValue.value.groups)
-        //   .forEach(x => groups.value.find(x).members = groups.value.find(x).members
-        //                                                      .filter(p => p.uniqueId !== item.uniqueId))
         return formValue.value // 使用展开语法更新 title 属性
       }
       return item // 非匹配的元素保持原样
     })
+
+    // let oldItem = seats.value.find((item) => item.owner.uniqueId === formValue.value.uniqueId)
+    // console.log(oldItem)
+    // if (oldItem !== undefined) oldItem.owner = formValue.value
+
     message.success('编辑成功')
   } else {
-    personList.value.push({ ...formValue.value, uniqueId: genUniqueId() })
+    persons.value.push({ ...formValue.value })
     message.success('添加成功')
   }
   showAddModal.value = false
 }
 
-const parseExcel = async (uploadFileInfo) => {
+const parseExcel = async (uploadFileInfo: any) => {
   const file = uploadFileInfo.file.file
   const data = await file.arrayBuffer()
   const workbook = XLSX.read(data)
   const sheetNames = workbook.SheetNames // 工作表名称集合
   const worksheet = workbook.Sheets[sheetNames[0]] // 这里我们只读取第一张sheet
   const json = XLSX.utils.sheet_to_json(worksheet)
-  const persons = json
-    .map((item) => {
-      if (item['姓名'] === undefined || item['姓名'] === null || item['姓名'] === '') return null
-      return {
-        name: item['姓名'],
-        sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
-        number: JSON.stringify(item['学号']),
-        group: []
-      }
+  const personsFromExcel = json
+    .map((item: any) => {
+      if (item['姓名'] === undefined || item['姓名'] === null || item['姓名'] === '') return
+      // return {
+      //   name: item['姓名'],
+      //   sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
+      //   number: JSON.stringify(item['学号']),
+      //   group: []
+      // }
+      return new Person(
+        item['姓名'],
+        item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
+        JSON.stringify(item['学号'])
+      )
     })
-    .filter((item) => item !== null)
-  if (persons.length === 0) {
+    .filter((item): item is Person => item !== null)
+
+  if (personsFromExcel.length === 0) {
     message.error('未检测到任何人员信息，请检查文件格式是否正确')
   } else {
-    personList.value.push(
-      ...persons.map((person) => ({
-        ...person,
-        uniqueId: genUniqueId()
-      }))
+    persons.value.push(
+      // ...personsFromExcel.map((person) => ({
+      //   ...person,
+      //   uniqueId: genUniqueId()
+      // }))
+      // personsFromExcel.map(item)
+      ...personsFromExcel
     )
     message.success('导入成功')
     showImportModal.value = false
   }
 }
 
-const tableHeight = ref(window.innerHeight - remToPx(6))
+const tableHeight = ref(window.innerHeight - remToPx(5.5))
 window.addEventListener('resize', () => {
-  tableHeight.value = window.innerHeight - remToPx(6)
+  tableHeight.value = window.innerHeight - remToPx(5.5)
 })
 
 const downloadTemplate = () => {
   downloadAnyFile(personXlsx, '人员导入模板.xlsx')
 }
 
-function createOptions(x) {
-  return x.map((item) => ({ label: item.name, value: item.uniqueId }))
-}
+// function createOptions(x) {
+//   return x.map((item) => ({ label: item.name, value: item.uniqueId }))
+// }
 </script>
 
 <template>
@@ -347,7 +348,7 @@ function createOptions(x) {
   <n-data-table
     :bordered="false"
     :columns="columns"
-    :data="personList"
+    :data="persons"
     :max-height="tableHeight"
     :pagination="false"
     :render-cell="renderCell"
@@ -365,13 +366,15 @@ function createOptions(x) {
         () => {
           showAddModal = false
           if (isEdit)
-            formValue.value = {
-              name: '',
-              number: '',
-              sex: 9,
-              groups: [],
-              uniqueId: genUniqueId()
-            }
+            // formValue.value = {
+            //   // name: '',
+            //   // number: '',
+            //   // sex: 9,
+            //   // groups: [],
+            //   // uniqueId: genUniqueId()
+            //
+            // }
+            formValue = new Person('', 9, '')
           isEdit = false
         }
       "
@@ -390,7 +393,7 @@ function createOptions(x) {
             <n-input v-model:value="formValue.number" placeholder="输入学号" />
           </n-form-item>
           <n-form-item label="性别（可选）" path="sex">
-            <n-radio-group v-model:value="formValue.sex">
+            <n-radio-group v-model:value="formValue.genderCode">
               <n-space>
                 <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
                   {{ sex.label }}

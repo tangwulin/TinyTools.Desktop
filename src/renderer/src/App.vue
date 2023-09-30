@@ -20,4 +20,13 @@ body {
   font-family: 'HYWenHei-85W', sans-serif;
   background: transparent;
 }
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /*noinspection CssUnresolvedCustomProperty*/
+  background-color: var(--n-color);
+  background-image: none;
+}
 </style>

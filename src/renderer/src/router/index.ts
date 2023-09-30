@@ -6,7 +6,7 @@ import {
   Router,
   RouteRecordRaw,
   RouterOptions
-} from 'vue-router'
+} from 'vue-router' //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //RouterRecordRaw是路由组件对象
 const routes: RouteRecordRaw[] = [
@@ -47,7 +47,41 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/setting',
         name: 'setting',
-        component: () => import('../views/MainWindow/SettingView.vue')
+        component: () => import('../views/MainWindow/SettingView.vue'),
+        children: [
+          {
+            path: '/setting/seat',
+            name: 'seatSetting',
+            component: () => import('../views/MainWindow/Setting/SeatSettingView.vue')
+          },
+          {
+            path: '/setting/avatarSetting',
+            name: 'avatarSetting',
+            component: () => import('../views/MainWindow/Setting/AvatarSetting.vue')
+          },
+          {
+            path: '/setting/bgm',
+            name: 'bgmSetting',
+            redirect: '/setting/bgm/play',
+            children: [
+              {
+                path: '/setting/bgm/play',
+                name: 'playSetting',
+                component: () => import('../views/MainWindow/Setting/PlaySettingView.vue')
+              },
+              {
+                path: '/setting/bgm/playlist',
+                name: 'playlistSetting',
+                component: () => import('../views/MainWindow/Setting/PlaylistSettingView.vue')
+              }
+            ]
+          },
+          {
+            path: '/setting/debug',
+            name: 'debugTool',
+            component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
+          }
+        ]
       }
     ]
   }
