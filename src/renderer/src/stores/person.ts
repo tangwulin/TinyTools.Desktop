@@ -1,21 +1,8 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
-import { Person } from '../types/person' // import localforage from 'localforage'
-// import localforage from 'localforage'
-//
-// localforage.config({
-//   name: 'data'
-// })
-//
-// const storage1 = {
-//   getItem: (key: string) => {
-//     return localforage.getItem(key)
-//   },
-//   setItem: (key: string, value: string) => {
-//     return localStorage.setItem(key, value)
-//   }
-// }
+import { Person } from '../types/person'
 
+// noinspection JSUnusedGlobalSymbols
 export const usePersonStore = defineStore(
   'person',
   () => {
@@ -31,6 +18,17 @@ export const usePersonStore = defineStore(
           (item) => new Person(item.name, item.genderCode, item.number, item.uniqueId)
         )
         return result
+      },
+      serialize: (state) => {
+        const result = {
+          persons: state.persons.map((item) => {
+            return { ...item, group: [...item.group.map((item) => item.uniqueId)] }
+          })
+        }
+        console.log(result)
+        console.log(state)
+
+        return JSON.stringify(state)
       }
     }
   }

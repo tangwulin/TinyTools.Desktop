@@ -7,6 +7,7 @@ export class Group {
   members: Person[]
   avatar: string
   uniqueId: string
+  score: number = 0
 
   constructor(name: string, description: string, avatar: string) {
     this.name = name

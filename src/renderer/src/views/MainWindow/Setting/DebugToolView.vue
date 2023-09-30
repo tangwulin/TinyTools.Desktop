@@ -1,5 +1,5 @@
 <script setup>
-import { ref, toRaw } from 'vue'
+import { ref } from 'vue'
 import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { NButton, useMessage } from 'naive-ui'
@@ -12,7 +12,6 @@ const settingStore = useSettingStore()
 const { enableDocking, enableDevelopFeature } = storeToRefs(settingStore)
 
 const seatStore = useSeatStore()
-// const { allSeats, oldRenderingList, history } = storeToRefs(seatStore)
 const { seats, seatMap, history } = storeToRefs(seatStore)
 const message = useMessage()
 
@@ -182,12 +181,12 @@ const ua = navigator.userAgent
 
     <n-collapse id="xxx">
       <n-collapse-item title="原始座位信息">
-        <div class="jsoneditor">
+        <div class="json-editor">
           <JsonEditorVue v-model="seats" style="width: 100%" class="jse-theme-dark mr-3" />
         </div>
       </n-collapse-item>
       <n-collapse-item title="渲染座位信息">
-        <div class="jsoneditor">
+        <div class="json-editor">
           <JsonEditorVue v-model="seatMap" style="width: 100%" class="jse-theme-dark mr-3" />
         </div>
       </n-collapse-item>
@@ -196,7 +195,7 @@ const ua = navigator.userAgent
 </template>
 
 <style scoped>
-.jsoneditor {
+.json-editor {
   width: 100%;
   max-height: calc(100vh - 10rem);
   display: flex;

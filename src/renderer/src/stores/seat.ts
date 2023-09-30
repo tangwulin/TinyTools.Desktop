@@ -5,6 +5,7 @@ import { Person } from '../types/person'
 import { usePersonStore } from './person'
 import { parse, stringify } from 'zipson'
 
+// noinspection JSUnusedGlobalSymbols
 export const useSeatStore = defineStore(
   'seat',
   () => {

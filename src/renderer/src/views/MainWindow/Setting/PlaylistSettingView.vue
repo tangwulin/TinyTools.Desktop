@@ -1,5 +1,5 @@
 <!--suppress SpellCheckingInspection, SpellCheckingInspection -->
-<script setup>
+<script setup lang="ts">
 import { computed, h, ref } from 'vue'
 import { PlaylistAdd, Refresh } from '@vicons/tabler'
 import { InfoFilled } from '@vicons/material'
@@ -33,7 +33,7 @@ const addHandler = () => {
   showEditModal.value = true
 }
 const playHandler = (row) => {
-  const player = document.getElementById('player')
+  const player = document.getElementById('player') as HTMLAudioElement
   player.src = row.url
   player.currentTime = row.offset
   player.volume = 0.5

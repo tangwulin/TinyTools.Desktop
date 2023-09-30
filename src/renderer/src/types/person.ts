@@ -8,6 +8,7 @@ export class Person {
   group: Group[]
   uniqueId: string
   avatar: string = ''
+  score: number = 0
 
   get gender() {
     switch (this.genderCode) {
