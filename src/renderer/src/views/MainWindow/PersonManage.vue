@@ -29,12 +29,12 @@ import personXlsx from '../../assets/xlsx/person.xlsx'
 import { getAvatar } from '../../utils/avatarUtil'
 import { useScoreStore } from '../../stores/score'
 import { Person } from '../../types/person'
-import { useSeatStore } from '../../stores/seat'
+// import { useSeatStore } from '../../stores/seat'
 
 const route = useRoute()
 
 const personStore = usePersonStore()
-const seatStore = useSeatStore()
+// const seatStore = useSeatStore()
 const settingStore = useSettingStore()
 // const groupStore = useGroupStore()
 const scoreStore = useScoreStore()
@@ -317,7 +317,7 @@ const downloadTemplate = () => {
 
 <template>
   <n-space justify="space-between">
-    <p>{{ $route.name === 'personManage' ? '修改后请重启程序以重新生成座位' : '' }}</p>
+    <p>{{ route.name === 'personManage' ? '修改后请重启程序以重新生成座位' : '' }}</p>
     <n-space>
       <n-button class="p-2" size="small" type="primary" @click="showImportModal = true">
         <template #icon>
