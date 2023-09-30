@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useGroupStore } from '../../stores/group'
 import { usePersonStore } from '../../stores/person'
 import { useSettingStore } from '../../stores/setting'
@@ -177,13 +177,13 @@ watch(
   <div style="height: calc(100vh - 1rem)">
     <n-modal v-model:show="showModal" :mask-closable="false">
       <n-card
-        style="width: 70%"
-        :title="isEdit ? '编辑' : '添加'"
         :bordered="false"
-        size="huge"
-        role="dialog"
+        :title="isEdit ? '编辑' : '添加'"
         aria-modal="true"
         closable
+        role="dialog"
+        size="huge"
+        style="width: 70%"
         @close="onModalClose"
       >
         <n-scrollbar style="max-height: 70vh; overflow-x: hidden">
@@ -204,17 +204,17 @@ watch(
             <p>当前选择了{{ currentGroup.members.length }}个人</p>
             <n-space>
               <n-tag
-                closable
-                @close="handleRemove(item)"
                 v-for="item in currentGroup.members"
+                closable
                 size="large"
+                @close="handleRemove(item)"
               >
                 <!--此处实际上并没有问题-->
                 {{ persons.find((p) => p.uniqueId === item.uniqueId)?.name }}
                 <template #avatar>
                   <n-avatar
-                    :src="getAvatar(persons.find((p) => p.uniqueId === item.uniqueId) as Person)"
                     :img-props="{ referrerpolicy: 'no-referrer' }"
+                    :src="getAvatar(persons.find((p) => p.uniqueId === item.uniqueId) as Person)"
                     lazy
                     object-fit="contain"
                     round
@@ -238,8 +238,8 @@ watch(
                 ref="transfer"
                 v-model:value="value1"
                 :options="options1"
-                source-filterable
                 class="pr-3"
+                source-filterable
               />
             </n-collapse-item>
           </n-collapse>
@@ -247,7 +247,7 @@ watch(
         <template #footer>
           <div class="flex justify-end">
             <n-space>
-              <n-popconfirm @positive-click="deleteHandler" @negative-click="" v-if="isEdit">
+              <n-popconfirm v-if="isEdit" @positive-click="deleteHandler" @negative-click="">
                 <!--suppress VueUnrecognizedSlot -->
                 <template #trigger>
                   <n-button type="error">删除</n-button>
@@ -255,9 +255,9 @@ watch(
                 确定要删除这个小组吗？
               </n-popconfirm>
               <n-button
+                :disabled="!(currentGroup.name.length !== 0 && currentGroup.members.length !== 0)"
                 type="primary"
                 @click="handler"
-                :disabled="!(currentGroup.name.length !== 0 && currentGroup.members.length !== 0)"
                 >保存
               </n-button>
             </n-space>
@@ -292,9 +292,9 @@ watch(
           >
             <n-avatar
               v-if="enableAvatar"
+              :img-props="{ referrerpolicy: 'no-referrer' }"
               :size="remToPx(3)"
               :src="getAvatar(item)"
-              :img-props="{ referrerpolicy: 'no-referrer' }"
               lazy
               object-fit="contain"
               round
@@ -307,9 +307,9 @@ watch(
               </n-space>
               <n-avatar-group
                 v-if="enableAvatar"
+                :max="5"
                 :options="createAvatars(item)"
                 :size="remToPx(2)"
-                :max="5"
               >
                 <template #avatar="{ option: { name, src } }">
                   <n-tooltip>
@@ -323,8 +323,8 @@ watch(
                 <template #rest="{ options: restOptions, rest }">
                   <n-dropdown
                     :options="createDropdownOptions(restOptions)"
-                    placement="top"
                     arrow-style="overflow: hidden;"
+                    placement="top"
                     style="overflow: hidden"
                   >
                     <n-avatar style="font-size: 0.75rem">+{{ rest }}</n-avatar>
@@ -357,7 +357,7 @@ watch(
             "
           >
             <n-icon size="3rem">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M368.5 240H272v-96.5c0-8.8-7.2-16-16-16s-16 7.2-16 16V240h-96.5c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7H240v96.5c0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7 8.8 0 16-7.2 16-16V272h96.5c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
                 />

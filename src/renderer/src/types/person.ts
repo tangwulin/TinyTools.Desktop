@@ -10,6 +10,14 @@ export class Person {
   avatar: string = ''
   score: number = 0
 
+  constructor(name: string, genderCode: 0 | 1 | 2 | 9, number: string, uniqueId?: string) {
+    this.name = name
+    this.genderCode = genderCode
+    this.number = number
+    this.uniqueId = uniqueId ?? genUniqueId()
+    this.group = []
+  }
+
   get gender() {
     switch (this.genderCode) {
       case 0:
@@ -23,13 +31,5 @@ export class Person {
       default:
         return '未知'
     }
-  }
-
-  constructor(name: string, genderCode: 0 | 1 | 2 | 9, number: string, uniqueId?: string) {
-    this.name = name
-    this.genderCode = genderCode
-    this.number = number
-    this.uniqueId = uniqueId ?? genUniqueId()
-    this.group = []
   }
 }

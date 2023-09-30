@@ -116,22 +116,22 @@ const ua = navigator.userAgent
 <template>
   <n-modal v-model:show="showModal">
     <n-card
-      style="width: 50vw"
       :bordered="false"
-      size="huge"
-      role="dialog"
       aria-modal="true"
       closable
+      role="dialog"
+      size="huge"
+      style="width: 50vw"
       @close="showModal = false"
     >
-      <n-text type="error" style="font-size: 2rem">请注意，你正在清除所有数据！</n-text>
+      <n-text style="font-size: 2rem" type="error">请注意，你正在清除所有数据！</n-text>
       <n-p>输入‘yes’确认清除数据</n-p>
       <n-input v-model:value="confirm" />
       <template #footer>
         <div style="display: flex; flex-direction: row-reverse">
-          <n-button type="error" :disabled="confirm !== 'yes'" @click="clearData"
-            >清除数据</n-button
-          >
+          <n-button :disabled="confirm !== 'yes'" type="error" @click="clearData"
+            >清除数据
+          </n-button>
         </div>
       </template>
     </n-card>
@@ -141,11 +141,11 @@ const ua = navigator.userAgent
     <n-space justify="space-between">
       <n-space class="items-center">
         <div>更改后请重启程序</div>
-        <n-button :disabled="!isElectron" round type="primary" @click="relaunch">重启 </n-button>
+        <n-button :disabled="!isElectron" round type="primary" @click="relaunch">重启</n-button>
       </n-space>
       <n-space class="items-center">
         <n-button round type="error" @click="showModal = true">清除数据</n-button>
-        <n-button round type="error" @click="disableDevelopFeature">关闭调试功能 </n-button>
+        <n-button round type="error" @click="disableDevelopFeature">关闭调试功能</n-button>
       </n-space>
     </n-space>
     <n-space class="items-center">
@@ -158,7 +158,7 @@ const ua = navigator.userAgent
     </n-space>
     <n-space class="items-center">
       <p>手动检查更新</p>
-      <n-button :disabled="!isElectron || true" @click="checkUpdates">手动检查更新 </n-button>
+      <n-button :disabled="!isElectron || true" @click="checkUpdates">手动检查更新</n-button>
     </n-space>
     <n-space class="items-center">
       <p>启用dock栏</p>
@@ -167,9 +167,9 @@ const ua = navigator.userAgent
     <n-space class="items-center">
       <p>跳转到任意路由（慎用）</p>
       <n-input v-model:value="destination" />
-      <n-button round type="primary" @click="navTo(destination)">跳转 </n-button>
+      <n-button round type="primary" @click="navTo(destination)">跳转</n-button>
     </n-space>
-    <n-space class="items-center"> </n-space>
+    <n-space class="items-center"></n-space>
     <p>座位信息修改</p>
     <div>
       <span style="font-size: 1rem; color: red; margin-right: 1rem"
@@ -182,12 +182,12 @@ const ua = navigator.userAgent
     <n-collapse id="xxx">
       <n-collapse-item title="原始座位信息">
         <div class="json-editor">
-          <JsonEditorVue v-model="seats" style="width: 100%" class="jse-theme-dark mr-3" />
+          <JsonEditorVue v-model="seats" class="jse-theme-dark mr-3" style="width: 100%" />
         </div>
       </n-collapse-item>
       <n-collapse-item title="渲染座位信息">
         <div class="json-editor">
-          <JsonEditorVue v-model="seatMap" style="width: 100%" class="jse-theme-dark mr-3" />
+          <JsonEditorVue v-model="seatMap" class="jse-theme-dark mr-3" style="width: 100%" />
         </div>
       </n-collapse-item>
     </n-collapse>

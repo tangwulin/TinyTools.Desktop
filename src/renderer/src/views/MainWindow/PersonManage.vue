@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { h, ref } from 'vue'
 import {
   NAvatar,

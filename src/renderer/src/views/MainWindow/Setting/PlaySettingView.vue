@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
 
@@ -25,7 +25,7 @@ const { enableBgm, enableFinalBgm, enableFadein, fadeinTime } = storeToRefs(sett
       <n-space class="flex justify-center items-center">
         <p>音乐淡入时间</p>
         <n-input-number v-model:value="fadeinTime">
-          <template #suffix> 秒 </template>
+          <template #suffix> 秒</template>
         </n-input-number>
       </n-space>
     </n-space>

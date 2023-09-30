@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Dice, DiceOutline } from '@vicons/ionicons5'
 import { ref, watch } from 'vue'
 import { usePersonStore } from '../../stores/person'
@@ -134,12 +134,12 @@ watch(
               >
                 <n-avatar
                   v-if="enableAvatar"
+                  :imgProps="{ referrerpolicy: 'no-referrer' }"
                   :size="remToPx(4)"
                   :src="getAvatar(item)"
                   lazy
                   object-fit="contain"
                   round
-                  :imgProps="{ referrerpolicy: 'no-referrer' }"
                   style="margin-bottom: 0.5rem"
                 />
                 <span style="font-size: 1.5rem">{{ item?.name }}</span>
@@ -242,8 +242,8 @@ watch(
               ref="transfer"
               v-model:value="value1"
               :options="options1"
-              source-filterable
               class="pr-3"
+              source-filterable
             />
           </n-collapse-item>
         </n-collapse>

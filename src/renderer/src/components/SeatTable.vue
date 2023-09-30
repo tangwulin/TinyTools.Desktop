@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, PropType, ref } from 'vue'
 import { Seat } from '../types/seat'
 import draggable from 'vuedraggable-swap'
@@ -134,12 +134,12 @@ const onMove = (e: dragEvent) => {
     </div>
     <draggable
       v-model="renderingData"
+      :disabled="disable"
+      :move="onMove"
       :swap="true"
       class="text-center grid grid-cols-11"
       filter=".should-not-be-dragged"
-      :move="onMove"
       item-key="id"
-      :disabled="disable"
     >
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">

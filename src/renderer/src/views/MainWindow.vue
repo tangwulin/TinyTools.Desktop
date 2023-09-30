@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'

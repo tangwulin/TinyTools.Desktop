@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { ref, watch } from 'vue'
 import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
@@ -93,9 +93,9 @@ watch(avatarWorks, changeHandler)
                 "
               >
                 <n-avatar
+                  :img-props="{ referrerpolicy: 'no-referrer' }"
                   :size="remToPx(4)"
                   :src="item.src"
-                  :img-props="{ referrerpolicy: 'no-referrer' }"
                   lazy
                   object-fit="contain"
                   round

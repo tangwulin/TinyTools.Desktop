@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { dateZhCN, zhCN } from 'naive-ui'
 </script>
 
@@ -20,6 +20,7 @@ body {
   font-family: 'HYWenHei-85W', sans-serif;
   background: transparent;
 }
+
 button,
 [type='button'],
 [type='reset'],

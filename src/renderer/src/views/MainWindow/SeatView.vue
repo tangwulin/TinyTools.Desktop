@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useSeatStore } from '../../stores/seat'
 import { usePersonStore } from '../../stores/person'
 import { storeToRefs } from 'pinia'
@@ -106,12 +106,12 @@ if (persons.value.length !== seats.value.length) {
       <audio
         id="player"
         controls
-        style="width: 20rem"
         src="https://music.163.com/song/media/outer/url?id=430620198.mp3"
+        style="width: 20rem"
       ></audio>
     </div>
     <n-modal v-model:show="showHasDiffModal">
-      <n-card style="width: 60vw" :bordered="false" size="huge" role="dialog" aria-modal="true">
+      <n-card :bordered="false" aria-modal="true" role="dialog" size="huge" style="width: 60vw">
         <div class="flex flex-col items-center justify-center">
           <p>人数和座位数不一致</p>
           <p>是否重新分配座位？</p>

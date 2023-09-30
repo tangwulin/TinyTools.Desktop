@@ -1,5 +1,5 @@
 <!--suppress SpellCheckingInspection, SpellCheckingInspection -->
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, h, ref } from 'vue'
 import { PlaylistAdd, Refresh } from '@vicons/tabler'
 import { InfoFilled } from '@vicons/material'

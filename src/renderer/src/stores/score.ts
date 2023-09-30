@@ -1,11 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { ScoreHistory } from '../types/scoreHistory'
-// import localforage from 'localforage'
-//
-// localforage.config({
-//   name: 'data'
-// })
 
 export const useScoreStore = defineStore(
   'score',
