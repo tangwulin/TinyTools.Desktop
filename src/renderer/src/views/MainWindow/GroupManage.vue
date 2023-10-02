@@ -3,37 +3,24 @@ import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import remToPx from '../../utils/remToPx'
 import { getAvatar } from '../../utils/avatarUtil'
-import { onMounted, Ref, ref, watch } from 'vue'
+import { Ref, ref, watch } from 'vue'
 import { NButton, NFormItem, NInput, useMessage } from 'naive-ui'
 import { useRoute, useRouter } from 'vue-router'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { useObservable } from '@vueuse/rxjs/index'
 import { liveQuery } from 'dexie'
-import { db } from '../../db'
-import deepcopy from 'deepcopy'
+import { AppDatabase } from '../../db'
+import { asyncComputed } from '@vueuse/core'
 
-// onMounted(async () => {
-//   console.log(deepcopy(await db.persons.toArray()))
-//   console.log(deepcopy(await db.groups.toArray()))
-//   console.log(deepcopy(persons.value))
-// })
+const db = AppDatabase.getInstance()
 
 const route = useRoute()
 const router = useRouter()
 
 const groups = useObservable(liveQuery(() => db.groups.toArray())) as Readonly<Ref<Group[]>>
+// noinspection TypeScriptValidateTypes
 const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
-
-watch(persons, () => {
-  options1.value = createOptions(
-    persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
-  )
-})
-
-// watch(groups, () => {
-//   console.log(groups.value)
-// })
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -64,15 +51,12 @@ const createOptions = (x: Person[]) => {
   }))
 }
 
-const options1 = ref<{ label: string; value: number | undefined; disabled: boolean }[]>([])
+const options1 = asyncComputed(
+  () => createOptions(persons.value.filter((item) => selectedSex.value.includes(item.genderCode))),
+  [],
+  { lazy: true }
+)
 const value1 = ref<number[]>([])
-
-watch(selectedSex, () => {
-  console.log(persons.value)
-  options1.value = createOptions(
-    persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
-  )
-})
 
 const sexes = [
   { label: '男', value: 1 },
