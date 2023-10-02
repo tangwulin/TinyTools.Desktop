@@ -128,7 +128,11 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
     {
       title: '姓名',
       key: 'name',
-      width: remToPx(6)
+      width: remToPx(6),
+      sortOrders: ['ascend', 'descend'],
+      sorter(row1: Person, row2: Person) {
+        return row1.name.localeCompare(row2.name)
+      }
     },
     {
       title: '性别',
@@ -143,12 +147,26 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
             return h(NText, { depth: 3 }, { default: () => '未填写' })
         }
       },
-      width: remToPx(4.5)
+      width: remToPx(5),
+      filterMultiple: true,
+      filterOptionValues: null,
+      filterOptions: [
+        { label: '男', value: 1 },
+        { label: '女', value: 2 },
+        { label: '未填写', value: 9 }
+      ],
+      filter(value: number[], row: Person) {
+        return value.includes(row.genderCode)
+      }
     },
     {
       title: '学号',
       key: 'number',
-      width: remToPx(10)
+      width: remToPx(10),
+      sortOrders: ['ascend', 'descend'],
+      sorter(row1: Person, row2: Person) {
+        return row1.name.localeCompare(row2.name)
+      }
     },
     {
       title: '分组',
