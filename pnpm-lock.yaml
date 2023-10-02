@@ -38,9 +38,9 @@ dependencies:
   pinia:
     specifier: ^2.1.6
     version: 2.1.6(typescript@5.2.2)(vue@3.3.4)
-  pinia-plugin-persistedstate-2:
-    specifier: ^2.0.14
-    version: 2.0.14(pinia@2.1.6)
+  pinia-plugin-persistedstate:
+    specifier: ^3.2.0
+    version: 3.2.0(pinia@2.1.6)
   rxjs:
     specifier: ^7.8.1
     version: 7.8.1
@@ -3673,13 +3673,12 @@ packages:
     dev: true
     optional: true
 
-  /pinia-plugin-persistedstate-2@2.0.14(pinia@2.1.6):
-    resolution: {integrity: sha512-IsBTVhzaaJWm3woUPezW6cZYVkXML2PqTzBwGn9yfvSq4zc+jHAdBLfaOr7uOdIrVMMA12dLClrb6FBI4x6Zzw==}
+  /pinia-plugin-persistedstate@3.2.0(pinia@2.1.6):
+    resolution: {integrity: sha512-tZbNGf2vjAQcIm7alK40sE51Qu/m9oWr+rEgNm/2AWr1huFxj72CjvpQcIQzMknDBJEkQznCLAGtJTIcLKrKdw==}
     peerDependencies:
-      pinia: ^2
+      pinia: ^2.0.0
     dependencies:
       pinia: 2.1.6(typescript@5.2.2)(vue@3.3.4)
-      shvl: 3.0.0
     dev: false
 
   /pinia@2.1.6(typescript@5.2.2)(vue@3.3.4):
@@ -4026,10 +4025,6 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
     dev: true
-
-  /shvl@3.0.0:
-    resolution: {integrity: sha512-5IomAM3ykE/g9K9L6lhODc+TpCuN03rrhlboegeKyyfh66DDdpRD5JN37DYhNHH+RaYjiIDx64K/Ms/xQYOR5w==}
-    dev: false
 
   /signal-exit@3.0.7:
     resolution: {integrity: sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==}
