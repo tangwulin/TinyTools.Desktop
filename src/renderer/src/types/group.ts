@@ -1,4 +1,3 @@
-import genUniqueId from '../utils/genUniqueId'
 import { Person } from './person'
 import { IGroup } from '../interface/IGroup'
 
@@ -15,14 +14,12 @@ export class Group implements IGroup {
     name: string,
     description: string,
     avatar: string,
-    // uniqueId?: string,
     members?: Person[],
     id?: number
   ) {
     this.name = name
     this.description = description
     this.avatar = avatar
-    // this.uniqueId = uniqueId ?? genUniqueId()
     this.members = members ?? []
     if (id) this.id = id
   }
