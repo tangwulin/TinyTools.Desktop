@@ -45,4 +45,5 @@ export const useScoreStore = defineStore(
     return { rates, scoreHistories }
   }
   // { persist: { storage: localforage } }
+  ,{ persist: true}
 )
