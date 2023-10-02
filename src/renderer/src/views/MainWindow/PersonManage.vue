@@ -19,8 +19,10 @@ import { useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
 
 import { AppDatabase } from '../../db'
-const db = AppDatabase.getInstance()
 import { Group } from '../../types/group'
+import { asyncComputed } from '@vueuse/core'
+
+const db = AppDatabase.getInstance()
 
 const route = useRoute()
 
@@ -31,6 +33,8 @@ const { scoreHistories } = storeToRefs(scoreStore)
 
 const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
 const groups = useObservable(liveQuery(() => db.groups.toArray())) as Readonly<Ref<Group[]>>
+
+const loading = asyncComputed(() => persons.value.length === 0, true)
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -360,6 +364,7 @@ const downloadTemplate = () => {
     :max-height="tableHeight"
     :pagination="false"
     :render-cell="renderCell"
+    :loading="loading"
   >
   </n-data-table>
 
@@ -374,14 +379,6 @@ const downloadTemplate = () => {
         () => {
           showAddModal = false
           if (isEdit)
-            // formValue.value = {
-            //   // name: '',
-            //   // number: '',
-            //   // sex: 9,
-            //   // groups: [],
-            //   // uniqueId: genUniqueId()
-            //
-            // }
             formValue = new Person('', 9, '')
           isEdit = false
         }
