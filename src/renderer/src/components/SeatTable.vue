@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { computed, PropType, ref } from 'vue'
-import { Seat } from '../types/seat'
+import { computed, PropType, ref, watch } from 'vue'
+import { Seat, type SeatState } from '../types/seat'
 import draggable from 'vuedraggable-swap'
 
 const props = defineProps({
@@ -9,7 +9,7 @@ const props = defineProps({
     required: true
   },
   seatMap: {
-    type: Array as PropType<('seat' | 'blank' | 'empty')[]>,
+    type: Array as PropType<SeatState[]>,
     required: true
   },
   disable: {
@@ -21,6 +21,16 @@ const props = defineProps({
     default: false
   }
 })
+
+watch(
+  () => props.seatMap,
+  () => (seatMap.value = props.seatMap)
+)
+
+watch(
+  () => props.seats,
+  () => (seats.value = props.seats)
+)
 
 const emit = defineEmits(['update:seats', 'update:seatMap'])
 

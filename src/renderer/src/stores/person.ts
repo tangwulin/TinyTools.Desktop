@@ -1,6 +1,7 @@
 import { ref } from 'vue'
-import { defineStore } from 'pinia'
-import { Person } from '../types/person'
+import { useGroupStore } from './group' // noinspection JSUnusedGlobalSymbols
+import { defineStore, storeToRefs } from 'pinia'
+import { Person } from '../types/person' // noinspection JSUnusedGlobalSymbols
 
 // noinspection JSUnusedGlobalSymbols
 export const usePersonStore = defineStore(
@@ -12,12 +13,29 @@ export const usePersonStore = defineStore(
   {
     persistedState: {
       deserialize: (persistedState) => {
-        const result = JSON.parse(persistedState) as { persons: Person[] }
+        const groupStore = useGroupStore()
+        const { groups } = storeToRefs(groupStore)
 
-        result.persons = result.persons.map(
-          (item) => new Person(item.name, item.genderCode, item.number, item.uniqueId)
-        )
-        return result
+        const data = JSON.parse(persistedState) as {
+          persons: {
+            name: string
+            genderCode: 0 | 1 | 2 | 9
+            number: string
+            group: string[] //因为储存时确实是这样的，只存uniqueId
+            uniqueId: string
+            avatar: string
+            score: number
+          }[]
+        }
+
+        return {
+          persons: data.persons.map(
+            (item) =>
+              new Person(item.name, item.genderCode, item.number, item.uniqueId, [
+                ...groups.value.filter((group) => item.group.includes(group.uniqueId))
+              ])
+          )
+        }
       },
       serialize: (state) => {
         const result = {
@@ -25,10 +43,8 @@ export const usePersonStore = defineStore(
             return { ...item, group: [...item.group.map((item) => item.uniqueId)] }
           })
         }
-        console.log(result)
-        console.log(state)
 
-        return JSON.stringify(state)
+        return JSON.stringify(result)
       }
     }
   }

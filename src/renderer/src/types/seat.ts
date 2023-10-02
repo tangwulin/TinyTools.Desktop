@@ -1,10 +1,11 @@
-import { Person } from './person'
+import { ISeat } from '../interface/ISeat'
+import { IPerson } from '../interface/IPerson'
 
-export class Seat {
-  owner: Person
+export class Seat implements ISeat {
+  owner: IPerson
   index: number
 
-  constructor(owner: Person, index: number) {
+  constructor(owner: IPerson, index: number) {
     this.owner = owner
     this.index = index
   }
@@ -17,3 +18,5 @@ export class Seat {
     return this.owner.name
   }
 }
+
+export type SeatState = 'seat' | 'blank' | 'empty'

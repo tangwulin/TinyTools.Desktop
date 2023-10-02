@@ -1961,12 +1961,15 @@ const { enableFallbackAvatar, avatarWorks } = storeToRefs(setting)
 const male = getAvatarUrls(1, avatarWorks.value)
 const female = getAvatarUrls(2, avatarWorks.value)
 
-export const getAvatar = (item: Person | Group | { number: string } | { uniqueId: string }) => {
+export const getAvatar = (
+  item: Person | Group | { number: string } | { name: string; id?: number }
+) => {
+  if (!item) return null
   if ('avatar' in item && item.avatar) return item.avatar
   if (!enableFallbackAvatar.value) return null
   if ('disabledAvatar' in item && item.disabledAvatar) return null
   const sn =
-    'number' in item && item?.number ? item.number : 'uniqueId' in item ? item.uniqueId : ''
+    'number' in item && item?.number ? item.number : 'name' in item ? item.name + item.id ?? '' : ''
   let urls: { src: string; description: string }[]
   switch (
     'genderCode' in item ? item.genderCode : 9 // 1:男,2:女,9:未知

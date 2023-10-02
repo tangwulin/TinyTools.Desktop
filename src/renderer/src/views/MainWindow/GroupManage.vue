@@ -1,31 +1,42 @@
 <script lang="ts" setup>
-import { useGroupStore } from '../../stores/group'
-import { usePersonStore } from '../../stores/person'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import remToPx from '../../utils/remToPx'
 import { getAvatar } from '../../utils/avatarUtil'
-import { ref, watch } from 'vue'
+import { onMounted, Ref, ref, watch } from 'vue'
 import { NButton, NFormItem, NInput, useMessage } from 'naive-ui'
 import { useRoute, useRouter } from 'vue-router'
-import { useScoreStore } from '../../stores/score'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
+import { useObservable } from '@vueuse/rxjs/index'
+import { liveQuery } from 'dexie'
+import { db } from '../../db'
+import deepcopy from 'deepcopy'
+
+// onMounted(async () => {
+//   console.log(deepcopy(await db.persons.toArray()))
+//   console.log(deepcopy(await db.groups.toArray()))
+//   console.log(deepcopy(persons.value))
+// })
 
 const route = useRoute()
 const router = useRouter()
 
-const groupStore = useGroupStore()
-const { groups } = storeToRefs(groupStore)
+const groups = useObservable(liveQuery(() => db.groups.toArray())) as Readonly<Ref<Group[]>>
+const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
 
-const personStore = usePersonStore()
-const { persons } = storeToRefs(personStore)
+watch(persons, () => {
+  options1.value = createOptions(
+    persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
+  )
+})
+
+// watch(groups, () => {
+//   console.log(groups.value)
+// })
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
-
-const scoreStore = useScoreStore()
-const { scoreHistories } = storeToRefs(scoreStore)
 
 const showModal = ref(false)
 showModal.value = route.query.showAddModal === 'true'
@@ -37,7 +48,6 @@ if (showModal.value) {
   }, 100)
 } //虽然切换路由时会自动关闭，但是这样做可以让用户看到动画
 
-// const currentGroup = ref({ name: '', description: '', members: [], avatar: '' })
 const currentGroup = ref(new Group('', '', ''))
 const isEdit = ref(false)
 
@@ -45,25 +55,20 @@ const selectedSex = ref([1, 2, 9])
 
 const message = useMessage()
 
-// function createOptions(x: Person[]) {
-//   return x.map((item) => ({
-//     label: item.name,
-//     value: item.uniqueId,
-//     disabled: false
-//   }))
-// }
-
-const createOptions = (x: Person[]) =>
-  x.map((item: Person) => ({
+const createOptions = (x: Person[]) => {
+  if (!x) return []
+  return x.map((item: Person) => ({
     label: item.name,
-    value: item.uniqueId,
+    value: item.id,
     disabled: false
   }))
+}
 
-const options1 = ref(createOptions(persons.value))
-const value1 = ref<Person[]>([])
+const options1 = ref<{ label: string; value: number | undefined; disabled: boolean }[]>([])
+const value1 = ref<number[]>([])
 
 watch(selectedSex, () => {
+  console.log(persons.value)
   options1.value = createOptions(
     persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
   )
@@ -78,10 +83,9 @@ const sexes = [
 const clickHandler = (group?: Group) => {
   if (group) {
     currentGroup.value = group
-    value1.value = currentGroup.value.members
+    value1.value = currentGroup.value.members.map((item) => item.id) as number[]
     isEdit.value = true
   } else {
-    // currentGroup.value = { name: '', description: '', members: [], avatar: '', uniqueId: '' }
     currentGroup.value = new Group('', '', '')
     isEdit.value = false
   }
@@ -89,38 +93,16 @@ const clickHandler = (group?: Group) => {
 }
 
 const handleRemove = (item: Person) => {
-  value1.value = value1.value.filter((value) => value !== item)
+  value1.value = value1.value.filter((value) => value !== item.id)
 }
+
 const handler = () => {
-  if (isEdit.value) {
-    groups.value = groups.value.map((item) => {
-      if (item.uniqueId === currentGroup.value.uniqueId) {
-        persons.value.forEach(
-          (p) => (p.group = p.group.filter((g) => g.uniqueId !== item.uniqueId))
-        )
-        currentGroup.value.members.forEach((x) =>
-          (persons.value.find((p) => p.uniqueId === x.uniqueId) as Person).group.push(item)
-        )
-        return currentGroup.value // 使用展开语法更新 title 属性
-      }
-      return item // 非匹配的元素保持原样
-    })
-    message.success('编辑成功')
-  } else {
-    currentGroup.value = {
-      ...currentGroup.value
-      // uniqueId: generateUniqueId()
-    }
-    // persons.value.forEach((item) => {
-    //   if (!('group' in item)) item.group = []
-    // })
-    currentGroup.value.members.forEach((item) =>
-      (persons.value.find((p) => p.uniqueId === item.uniqueId) as Person).group.push(
-        currentGroup.value
-      )
-    )
-    groups.value.push({ ...currentGroup.value })
-    message.success('添加成功')
+  try {
+    db.groups.put(currentGroup.value)
+    message.success(isEdit ? '编辑成功' : '添加成功')
+  } catch (e) {
+    message.error('操作失败')
+    message.error(JSON.stringify(e))
   }
   showModal.value = false
   currentGroup.value = new Group('', '', '')
@@ -129,16 +111,16 @@ const handler = () => {
 }
 
 const deleteHandler = () => {
-  groups.value = groups.value.filter((item) => item.uniqueId !== currentGroup.value.uniqueId)
-  persons.value.forEach(
-    (item) => (item.group = item.group.filter((x) => x.uniqueId !== currentGroup.value.uniqueId))
-  )
-  scoreHistories.value = scoreHistories.value.filter(
-    (item) => item.ownerId !== currentGroup.value.uniqueId
-  )
-  showModal.value = false
-  currentGroup.value = new Group('', '', '')
-  message.success('删除成功')
+  try {
+    db.groups.delete(currentGroup.value.id as number)
+    //TODO: 删除小组时，应该删除小组所有的分数记录
+    showModal.value = false
+    currentGroup.value = new Group('', '', '')
+    message.success('删除成功')
+  } catch (e) {
+    message.error('操作失败')
+    message.error(JSON.stringify(e))
+  }
 }
 
 const onModalClose = () => {
@@ -152,13 +134,17 @@ const onModalClose = () => {
 }
 
 const createAvatars = (item: Group) => {
-  const person = persons.value.filter((p) =>
-    item.members.map((item) => item.uniqueId).includes(p.uniqueId)
-  )
+  if (!persons.value) return []
+  const person = persons.value.filter((p) => item.members.map((m) => m.id).includes(p.id))
   return person.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
 
-const createDropdownOptions = (options: Array<{ name: string; src: string }>) =>
+const createDropdownOptions = (
+  options: Array<{
+    name: string
+    src: string
+  }>
+) =>
   options.map((option) => ({
     key: option.name,
     label: option.name
@@ -166,8 +152,11 @@ const createDropdownOptions = (options: Array<{ name: string; src: string }>) =>
 
 watch(
   value1,
-  () => {
-    currentGroup.value.members = value1.value
+  async () => {
+    currentGroup.value.members = await db.persons
+      .where('id')
+      .anyOf(value1.value as number[])
+      .toArray()
   },
   { deep: true }
 )
@@ -210,11 +199,12 @@ watch(
                 @close="handleRemove(item)"
               >
                 <!--此处实际上并没有问题-->
-                {{ persons.find((p) => p.uniqueId === item.uniqueId)?.name }}
+                <!--                {{ persons.find((p) => p.uniqueId === item.uniqueId)?.name }}-->
+                {{ item.name }}
                 <template #avatar>
                   <n-avatar
                     :img-props="{ referrerpolicy: 'no-referrer' }"
-                    :src="getAvatar(persons.find((p) => p.uniqueId === item.uniqueId) as Person)"
+                    :src="getAvatar(item)"
                     lazy
                     object-fit="contain"
                     round

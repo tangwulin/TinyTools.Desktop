@@ -234,6 +234,9 @@ const footerMenuOptions = [
 
     <!--下方router-view内内容加css只能在各组件内部加-->
     <n-layout-content content-style="padding:0.25rem 0.25rem 0 0.25rem">
+      <!--      <Suspense>-->
+      <!--        <router-view />-->
+      <!--      </Suspense>-->
       <router-view />
     </n-layout-content>
   </n-layout>

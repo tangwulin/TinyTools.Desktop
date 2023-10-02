@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { h, ref } from 'vue'
+import { h, Ref, ref } from 'vue'
 import {
   NAvatar,
   NButton,
@@ -16,7 +16,6 @@ import {
   useMessage
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { usePersonStore } from '../../stores/person'
 import { useSettingStore } from '../../stores/setting'
 import { useRoute } from 'vue-router'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
@@ -29,20 +28,22 @@ import personXlsx from '../../assets/xlsx/person.xlsx'
 import { getAvatar } from '../../utils/avatarUtil'
 import { useScoreStore } from '../../stores/score'
 import { Person } from '../../types/person'
-// import { useSeatStore } from '../../stores/seat'
+import { liveQuery } from 'dexie'
+import { useObservable } from '@vueuse/rxjs'
+import deepcopy from 'deepcopy'
+
+import { db } from '../../db'
+import { Group } from '../../types/group'
 
 const route = useRoute()
 
-const personStore = usePersonStore()
-// const seatStore = useSeatStore()
 const settingStore = useSettingStore()
-// const groupStore = useGroupStore()
 const scoreStore = useScoreStore()
-const { persons } = storeToRefs(personStore)
-// const { seats } = storeToRefs(seatStore)
 const { enableFallbackAvatar } = storeToRefs(settingStore)
-// const { groups } = storeToRefs(groupStore)
 const { scoreHistories } = storeToRefs(scoreStore)
+
+const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
+const groups = useObservable(liveQuery(() => db.groups.toArray())) as Readonly<Ref<Group[]>>
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -83,14 +84,15 @@ const sexes = [
 ] //此处参考了GB/T 2261.1-2003
 
 const editHandler = (row: Person) => {
-  formValue.value = { ...row, gender: row.gender }
+  formValue.value = { ...row }
   isEdit.value = true
   showAddModal.value = true
 }
 
 const deleteHandler = (row: Person) => {
-  persons.value = persons.value.filter((item) => item.uniqueId !== row.uniqueId)
-  scoreHistories.value = scoreHistories.value.filter((item) => item.ownerId !== row.uniqueId)
+  db.persons.delete(row.id as number)
+  scoreHistories.value = scoreHistories.value.filter((item) => item.ownerId !== <number>row.id)
+  //TODO: 删除人员时删除记分记录
   message.success('删除成功')
 }
 
@@ -160,20 +162,27 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
       title: '分组',
       key: 'groups',
       render(row: Person) {
-        const groupTags = row.group?.map((item) =>
-          h(
-            NTag,
-            { bordered: false },
-            {
-              default: () =>
-                // groups.value.find((g) => g.uniqueId === item)?.name ??
-                // h(NText, { depth: 3 }, { default: () => '已删除' })
-                item.name
-            }
+        const groupTags = groups.value
+          ?.map((item) =>
+            item.members
+              .map((member) => member.id)
+              .flat()
+              .includes(row.id as number)
+              ? h(
+                  NTag,
+                  { bordered: false, class: 'm-1' },
+                  {
+                    default: () =>
+                      // groups.value.find((g) => g.uniqueId === item)?.name ??
+                      // h(NText, { depth: 3 }, { default: () => '已删除' })
+                      item.name
+                  }
+                )
+              : null
           )
-        )
+          .filter((item) => item !== null)
         return groupTags?.length
-          ? h('div', { class: 'flex flex-row items-center justify-between' }, groupTags)
+          ? h('div', { class: 'flex flex-row items-center justify-start' }, groupTags)
           : h(NText, { depth: 3 }, { default: () => '未加入' })
       }
     },
@@ -226,37 +235,25 @@ const parseName = () => {
 
 const addPerson = () => {
   console.log('添加了这' + multiAddForm.value.names.length + '个人：' + multiAddForm.value.names)
-  const newPerson = multiAddForm.value.names.map((name) => new Person(name, 9, ''))
-  persons.value = persons.value.concat(newPerson)
-  message.success('添加成功，共添加了' + multiAddForm.value.names.length + '个')
-  showAddModal.value = false
-  // newPerson
-  //   .map((item) => new Person(item.name, 9, ''))
-  //   .map((item, index) => new Seat(item, seats.value.length + index))
-  //TODO: 为新添加的人员分配座位
 
-  // seatMap.value[seatMap.value.findIndex(item=>item==='empty')]='seat'
+  const newPerson = multiAddForm.value.names.map((name) => new Person(name, 9, ''))
+  db.persons.bulkPut(newPerson)
+
+  message.success('添加成功，共添加了' + multiAddForm.value.names.length + '个')
+
+  showAddModal.value = false
+  //TODO: 为新添加的人员分配座位
   multiAddForm.value.names = []
   multiAddForm.value.input = ''
 }
 
 const handler = () => {
-  if (isEdit.value) {
-    persons.value = persons.value.map((item) => {
-      if (item.uniqueId === formValue.value.uniqueId) {
-        return formValue.value // 使用展开语法更新 title 属性
-      }
-      return item // 非匹配的元素保持原样
-    })
-
-    // let oldItem = seats.value.find((item) => item.owner.uniqueId === formValue.value.uniqueId)
-    // console.log(oldItem)
-    // if (oldItem !== undefined) oldItem.owner = formValue.value
-
-    message.success('编辑成功')
-  } else {
-    persons.value.push({ ...formValue.value })
-    message.success('添加成功')
+  try {
+    db.persons.put(deepcopy(formValue.value))
+    message.success(isEdit.value ? '编辑成功' : '添加成功')
+  } catch (e) {
+    message.error('保存失败')
+    message.error(JSON.stringify(e))
   }
   showAddModal.value = false
 }
@@ -288,14 +285,15 @@ const parseExcel = async (uploadFileInfo: any) => {
   if (personsFromExcel.length === 0) {
     message.error('未检测到任何人员信息，请检查文件格式是否正确')
   } else {
-    persons.value.push(
-      // ...personsFromExcel.map((person) => ({
-      //   ...person,
-      //   uniqueId: genUniqueId()
-      // }))
-      // personsFromExcel.map(item)
-      ...personsFromExcel
-    )
+    // persons.value.push(
+    //   // ...personsFromExcel.map((person) => ({
+    //   //   ...person,
+    //   //   uniqueId: genUniqueId()
+    //   // }))
+    //   // personsFromExcel.map(item)
+    //   ...personsFromExcel
+    // )
+    db.persons.bulkPut(personsFromExcel)
     message.success('导入成功')
     showImportModal.value = false
   }

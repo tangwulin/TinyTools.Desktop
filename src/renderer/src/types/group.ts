@@ -1,19 +1,29 @@
 import genUniqueId from '../utils/genUniqueId'
 import { Person } from './person'
+import { IGroup } from '../interface/IGroup'
 
-export class Group {
+export class Group implements IGroup {
+  id?: number
   name: string
   description: string
   members: Person[]
   avatar: string
-  uniqueId: string
+  // uniqueId: string
   score: number = 0
 
-  constructor(name: string, description: string, avatar: string) {
+  constructor(
+    name: string,
+    description: string,
+    avatar: string,
+    // uniqueId?: string,
+    members?: Person[],
+    id?: number
+  ) {
     this.name = name
     this.description = description
     this.avatar = avatar
-    this.uniqueId = genUniqueId()
-    this.members = []
+    // this.uniqueId = uniqueId ?? genUniqueId()
+    this.members = members ?? []
+    if (id) this.id = id
   }
 }
