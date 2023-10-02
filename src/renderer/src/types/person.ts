@@ -1,5 +1,4 @@
 import { IPerson } from '../interface/IPerson'
-import { IGroup } from '../interface/IGroup'
 
 export class Person implements IPerson {
   id?: number
