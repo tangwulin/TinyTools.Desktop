@@ -1,17 +1,22 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Electron</title>
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <!--    <meta-->
-    <!--      http-equiv="Content-Security-Policy"-->
-    <!--      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' media-src 'audio' 'video';"-->
-    <!--    />-->
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <title>Electron</title>
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <!--        <meta-->
+  <!--          http-equiv="Content-Security-Policy"-->
+  <!--          content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; media-src 'audio' 'video';"-->
+  <!--        />-->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="script-src 'self'; style-src 'self' 'unsafe-inline'"
+  />
+  <!--CSP写的不一定对，能用就行-->
+</head>
 
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+<body>
+<div id="app"></div>
+<script type="module" src="/src/main.ts"></script>
+</body>
 </html>
