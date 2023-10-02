@@ -39,6 +39,4 @@ export class AppDatabase extends Dexie {
     return AppDatabase._instance
   }
 }
-
-// export const db = new AppDatabase()
 export default AppDatabase.getInstance()
