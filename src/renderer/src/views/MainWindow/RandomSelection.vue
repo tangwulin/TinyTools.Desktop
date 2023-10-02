@@ -1,18 +1,20 @@
 <script lang="ts" setup>
 import { Dice, DiceOutline } from '@vicons/ionicons5'
-import { ref, watch } from 'vue'
-import { usePersonStore } from '../../stores/person'
+import { ref, type Ref, watch } from 'vue'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { NButton } from 'naive-ui'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
 import { getAvatar } from '../../utils/avatarUtil'
-
 import remToPx from '../../utils/remToPx'
 import { Person } from '../../types/person'
+import { AppDatabase } from '../../db'
+import { useObservable } from '@vueuse/rxjs/index'
+import { liveQuery } from 'dexie'
+import { asyncComputed } from '@vueuse/core'
 
-const personStore = usePersonStore()
-const { persons } = storeToRefs(personStore)
+const db = AppDatabase.getInstance()
+const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -69,32 +71,41 @@ const handler = (fast: boolean) => {
 function createOptions(x: any) {
   return x.map((item: any) => ({
     label: item.name,
-    value: item.uniqueId,
+    value: item.id,
     disabled: false
   }))
 }
 
 function createValues(x: any) {
-  return x.map((item: any) => item.uniqueId)
+  return x.map((item: any) => item.id)
 }
 
-const options1 = ref(createOptions(persons.value))
-const value1 = ref(createValues(persons.value))
+const value1 = ref<number[]>([])
 
-selectionList.value = persons.value.filter((item) => value1.value.includes(item.uniqueId))
 
-watch(selectedSex, () => {
-  options1.value = createOptions(
-    persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
-  )
-  value1.value = createValues(
-    persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
-  )
+
+const options1 = asyncComputed(() =>
+  createOptions(persons.value.filter((item) => selectedSex.value.includes(item.genderCode)))
+)
+
+watch(options1, (value, oldValue) => {
+  if (value.length < oldValue?.length) {
+    value1.value = createValues(
+      persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
+    )
+  } else {
+    if (!oldValue) {
+      value1.value = value1.value.filter((item) => value.map((item) => item.value).includes(item))
+    }
+  }
 })
+
 watch(
   value1,
   () => {
-    selectionList.value = persons.value.filter((item) => value1.value.includes(item.uniqueId))
+    selectionList.value = persons.value.filter((item: Person) =>
+      value1.value.includes(item.id as number)
+    )
   },
   { deep: true }
 )
