@@ -31,7 +31,7 @@
     "localforage": "^1.10.0",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.6",
-    "pinia-plugin-persistedstate-2": "^2.0.14",
+    "pinia-plugin-persistedstate": "^3.2.0",
     "rxjs": "^7.8.1",
     "vue-router": "4",
     "vuedraggable-swap": "^4.1.0",
