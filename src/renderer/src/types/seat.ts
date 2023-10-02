@@ -19,4 +19,12 @@ export class Seat implements ISeat {
   }
 }
 
-export type SeatState = 'seat' | 'blank' | 'empty'
+export class SeatState {
+  index: number
+  state: 'seat' | 'blank' | 'empty'
+
+  constructor(index: number, state: 'seat' | 'blank' | 'empty') {
+    this.index = index
+    this.state = state
+  }
+}

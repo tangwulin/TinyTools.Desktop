@@ -2,10 +2,10 @@
 import { onMounted, onUnmounted, ref } from 'vue'
 import SeatTable from '../../components/SeatTable.vue'
 import { Seat, SeatState } from '../../types/seat'
-// import { useObservable } from '@vueuse/rxjs/index'
-// import { liveQuery } from 'dexie'
 import deepcopy from 'deepcopy'
-import { db } from '../../db'
+import { AppDatabase } from '../../db'
+const db = AppDatabase.getInstance()
+
 import { Person } from '../../types/person'
 
 const persons = ref([] as Person[])
@@ -21,22 +21,19 @@ onMounted(async () => {
   seats.value = (await db.seats.toArray()) as Seat[]
   seatMap.value = await db.seatMap.toArray()
 
-  console.log(deepcopy(seatMap.value), deepcopy(seats.value), deepcopy(persons.value))
-
   if (persons.value.length !== seats.value.length) {
     console.log(persons.value.length, seats.value.length)
-    console.log('人数和座位数不一致2')
+    console.log('人数和座位数不一致')
     if (seats.value.length === 0) {
       seats.value = persons.value.map((item, index) => new Seat(item, index))
       db.seats.bulkPut(deepcopy(seats.value))
       const newSeatMap = genSeatMap(seats.value.length)
       seatMap.value = newSeatMap
-      console.log(newSeatMap)
       db.seatMap.bulkPut(newSeatMap)
-      // console.log(deepcopy(seatMap.value), deepcopy(seats.value), deepcopy(persons.value))
     } else {
       setTimeout(() => {
         showHasDiffModal.value = true
+        console.log('showHasDiffModal', showHasDiffModal.value)
       }, 100)
       showHasDiffModal.value = true
     }
@@ -44,12 +41,10 @@ onMounted(async () => {
 
   updateDateTime()
   updateDateTimeInterval = setInterval(updateDateTime, 1000)
-  const player = document.getElementById('player')
+  const player = document.getElementById('player') as HTMLAudioElement
   if (player) {
     player.volume = 0.6 //关 音 菩 萨
   }
-
-  // console.log(deepcopy(seatMap.value), deepcopy(seats.value), deepcopy(persons.value))
 })
 
 // 在组件卸载时停止更新日期和时间
@@ -93,10 +88,8 @@ const genSeatMap = (seatCount: number) => {
         result.push('empty')
       }
   }
-  return result
+  return result.map((item, index) => new SeatState(index, item))
 }
-
-// console.log(deepcopy(seatMap.value), deepcopy(seats.value), deepcopy(persons.value))
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed, PropType, ref, watch } from 'vue'
-import { Seat, type SeatState } from '../types/seat'
+import { Seat, SeatState } from '../types/seat'
 import draggable from 'vuedraggable-swap'
 
 const props = defineProps({
@@ -54,7 +54,7 @@ const parseRenderingDataToSeatMap = (x: any[]) => {
         break
     }
   }
-  return newSeatMap
+  return newSeatMap.map((item, index) => new SeatState(index, item))
 }
 
 const parseRenderingDataToSeats = (x: any[]) => {
@@ -87,7 +87,7 @@ const renderingData = computed({
     const data: any[] = []
     let i = 0
     for (const item of seatMap.value) {
-      switch (item) {
+      switch (item.state) {
         case 'seat':
           // data.push({ type: 'seat', ...seats.value[i], displayName: seats.value[i].displayName })
           data.push(new RenderingItem('seat', seats.value[i]))

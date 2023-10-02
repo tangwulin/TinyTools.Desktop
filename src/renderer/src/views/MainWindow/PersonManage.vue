@@ -1,20 +1,6 @@
 <script lang="ts" setup>
 import { h, Ref, ref } from 'vue'
-import {
-  NAvatar,
-  NButton,
-  NCard,
-  NDynamicTags,
-  NForm,
-  NFormItem,
-  NInput,
-  NModal,
-  NPopover,
-  NSwitch,
-  NTag,
-  NText,
-  useMessage
-} from 'naive-ui'
+import { NAvatar, NButton, NPopover, NSwitch, NTag, NText, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { useSettingStore } from '../../stores/setting'
 import { useRoute } from 'vue-router'
@@ -32,7 +18,8 @@ import { liveQuery } from 'dexie'
 import { useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
 
-import { db } from '../../db'
+import { AppDatabase } from '../../db'
+const db = AppDatabase.getInstance()
 import { Group } from '../../types/group'
 
 const route = useRoute()
