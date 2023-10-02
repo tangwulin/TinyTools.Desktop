@@ -47,6 +47,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/setting',
         name: 'setting',
+        redirect: '/setting/seat',
         component: () => import('../views/MainWindow/SettingView.vue'),
         children: [
           {
