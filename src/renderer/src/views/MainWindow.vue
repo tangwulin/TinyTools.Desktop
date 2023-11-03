@@ -23,7 +23,11 @@ const { enableDevelopFeature } = storeToRefs(settingStore)
 const generalStore = useGeneralStore()
 const { lastScoreType } = storeToRefs(generalStore)
 
+/* eslint-disable */
+// noinspection TypeScriptUnresolvedReference
+// @ts-ignore:2304
 const version = __APP_VERSION__
+/* eslint-enable */
 const shortVersion = version?.split('-')[0]
 
 const activeKey = ref(null)

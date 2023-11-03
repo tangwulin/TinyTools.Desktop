@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { useMessage } from 'naive-ui'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
@@ -7,15 +7,23 @@ import logo from '../../assets/images/logo.png'
 const setting = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(setting)
 
+/* eslint-disable */
+// noinspection TypeScriptUnresolvedReference
+// @ts-ignore:2304
 const version = __APP_VERSION__
+// noinspection TypeScriptUnresolvedReference
+// @ts-ignore:2304
 const github_sha = __GITHUB_SHA__
-const revision = __REVISION__
+// noinspection TypeScriptUnresolvedReference
+// @ts-ignore:2304
+const revision = __REVISION__ // @ts-ignore
 const now = new Date()
 const year = now.getFullYear()
 const month = now.getMonth()
 const date = now.getDate()
 const buildDate = `${year}/${month + 1}/${date}`
-const githubLink = 'https://github.com/tangwulin/TinyTools.Desktop/tree/' + github_sha
+const githubLink = `https://github.com/tangwulin/TinyTools.Desktop/tree/${github_sha}`
+/* eslint-enable */
 
 const message = useMessage()
 
@@ -30,7 +38,6 @@ const clickHandler = () => {
     else message.info('测试功能已开启！')
 }
 </script>
-
 <template>
   <n-scrollbar>
     <div class="flex flex-col items-center h-full pb-2" style="height: 100%">
