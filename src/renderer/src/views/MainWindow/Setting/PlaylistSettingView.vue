@@ -179,7 +179,7 @@ const rules = {
   url: [
     {
       required: true,
-      validator(rule, value) {
+      validator(_, value: string) {
         if (!value) {
           return new Error('需要填写链接')
         } else if (

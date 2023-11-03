@@ -2,13 +2,13 @@ import genUniqueId from '../utils/genUniqueId'
 
 export class Audio {
   name: string
-  src: string
+  url: string
   offset: number
   uniqueId: string
 
-  constructor(name: string, src: string, offset: number) {
+  constructor(name: string, url: string, offset: number) {
     this.name = name
-    this.src = src
+    this.url = url
     this.offset = offset
     this.uniqueId = genUniqueId()
   }

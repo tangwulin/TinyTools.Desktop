@@ -41,15 +41,15 @@ export default defineConfig({
     assetsInclude: ['**/*.xlsx'],
     build: {
       chunkSizeWarningLimit: 1500,
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              return 'vendor'
-            }
-          }
-        }
-      }
+      // rollupOptions: {
+      //   output: {
+      //     manualChunks(id) {
+      //       if (id.includes('node_modules')) {
+      //         return 'vendor'
+      //       }
+      //     }
+      //   }
+      // }
     },
     define: {
       __APP_VERSION__: JSON.stringify(process.env.npm_package_version),

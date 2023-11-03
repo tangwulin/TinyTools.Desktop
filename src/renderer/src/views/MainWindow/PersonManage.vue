@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { h, Ref, ref } from 'vue'
+import { Component, h, Ref, ref } from "vue";
 import { NAvatar, NButton, NPopover, NSwitch, NTag, NText, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { useSettingStore } from '../../stores/setting'
@@ -10,12 +10,13 @@ import downloadAnyFile from '../../utils/downloadAnyFile'
 import remToPx from '../../utils/remToPx'
 import * as XLSX from 'xlsx'
 
+// @ts-ignore:2307
 import personXlsx from '../../assets/xlsx/person.xlsx'
 import { getAvatar } from '../../utils/avatarUtil'
 import { useScoreStore } from '../../stores/score'
 import { Person } from '../../types/person'
 import { liveQuery } from 'dexie'
-import { useObservable } from '@vueuse/rxjs'
+import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
 
 import { AppDatabase } from '../../db'
@@ -31,8 +32,10 @@ const scoreStore = useScoreStore()
 const { enableFallbackAvatar } = storeToRefs(settingStore)
 const { scoreHistories } = storeToRefs(scoreStore)
 
-const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
-const groups = useObservable(liveQuery(() => db.groups.toArray())) as Readonly<Ref<Group[]>>
+const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
+  Ref<Person[]>
+>
+const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
 
 const loading = asyncComputed(() => persons.value.length === 0, true)
 
@@ -114,18 +117,16 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
       key: 'avatar',
       render(row: Person) {
         const avatarSrc = getAvatar(row)
-        return h(
-          NAvatar,
-          {
-            size: 'large',
-            src: avatarSrc,
-            imgProps: { referrerpolicy: 'no-referrer' },
-            lazy: true,
-            objectFit: 'contain',
-            round: true
-          },
-          typeof avatarSrc === null ? row.name : undefined
-        )
+        return h(NAvatar as Component,{
+              size: 'large',
+              src: avatarSrc,
+              imgProps: { referrerpolicy: 'no-referrer' },
+              lazy: true,
+              objectFit: 'contain',
+              round: true
+            },
+            undefined)
+        // typeof avatarSrc === null ? row.name : undefined)
       },
       width: remToPx(4)
     },
@@ -378,8 +379,7 @@ const downloadTemplate = () => {
       @close="
         () => {
           showAddModal = false
-          if (isEdit)
-            formValue = new Person('', 9, '')
+          if (isEdit) formValue = new Person('', 9, '')
           isEdit = false
         }
       "

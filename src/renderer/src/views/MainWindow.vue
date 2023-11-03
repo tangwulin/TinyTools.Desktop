@@ -3,22 +3,18 @@ import { h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
-import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
+// import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
-  DataHistogram24Regular as DataIcon,
   Info20Regular as InfoIcon,
   Person24Regular as PersonIcon,
   Settings16Regular as SettingIcon
 } from '@vicons/fluent'
 import { Group as GroupIcon } from '@vicons/carbon'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
-import { useSettingStore } from '../stores/setting'
+// import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
 import logoUrl from '../assets/images/logo.png'
 import { useGeneralStore } from '../stores/general'
-
-const settingStore = useSettingStore()
-const { enableDevelopFeature } = storeToRefs(settingStore)
 
 const generalStore = useGeneralStore()
 const { lastScoreType } = storeToRefs(generalStore)
@@ -54,21 +50,21 @@ function renderIcon(icon) {
 }
 
 const menuOptions = [
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'dashboard'
-          }
-        },
-        { default: () => '数据总览（未完成）' }
-      ),
-    key: 'dashboard',
-    icon: renderIcon(DataIcon),
-    show: enableDevelopFeature.value
-  },
+  // {
+  //   label: () =>
+  //     h(
+  //       RouterLink,
+  //       {
+  //         to: {
+  //           name: 'dashboard'
+  //         }
+  //       },
+  //       { default: () => '数据总览（未完成）' }
+  //     ),
+  //   key: 'dashboard',
+  //   icon: renderIcon(DataIcon),
+  //   show: enableDevelopFeature.value
+  // },
   {
     label: () =>
       h(
@@ -98,21 +94,21 @@ const menuOptions = [
     key: 'seat',
     icon: renderIcon(ChairIcon)
   },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'schedule'
-          }
-        },
-        { default: () => '值日排班（未完成）' }
-      ),
-    key: 'schedule',
-    icon: renderIcon(ScheduleIcon),
-    show: enableDevelopFeature.value
-  },
+  // {
+  //   label: () =>
+  //     h(
+  //       RouterLink,
+  //       {
+  //         to: {
+  //           name: 'schedule'
+  //         }
+  //       },
+  //       { default: () => '值日排班（未完成）' }
+  //     ),
+  //   key: 'schedule',
+  //   icon: renderIcon(ScheduleIcon),
+  //   show: enableDevelopFeature.value
+  // },
   {
     label: () =>
       h(
@@ -188,7 +184,6 @@ const footerMenuOptions = [
   }
 ]
 </script>
-
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
     <n-layout-sider
@@ -238,9 +233,6 @@ const footerMenuOptions = [
 
     <!--下方router-view内内容加css只能在各组件内部加-->
     <n-layout-content content-style="padding:0.25rem 0.25rem 0 0.25rem">
-      <!--      <Suspense>-->
-      <!--        <router-view />-->
-      <!--      </Suspense>-->
       <router-view />
     </n-layout-content>
   </n-layout>

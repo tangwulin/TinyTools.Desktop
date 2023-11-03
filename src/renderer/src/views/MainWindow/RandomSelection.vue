@@ -12,9 +12,12 @@ import { AppDatabase } from '../../db'
 import { useObservable } from '@vueuse/rxjs/index'
 import { liveQuery } from 'dexie'
 import { asyncComputed } from '@vueuse/core'
+import { from } from '@vueuse/rxjs'
 
 const db = AppDatabase.getInstance()
-const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
+const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
+  Ref<Person[]>
+>
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -82,8 +85,6 @@ function createValues(x: any) {
 
 const value1 = ref<number[]>([])
 
-
-
 const options1 = asyncComputed(() =>
   createOptions(persons.value.filter((item) => selectedSex.value.includes(item.genderCode)))
 )
@@ -145,7 +146,7 @@ watch(
               >
                 <n-avatar
                   v-if="enableAvatar"
-                  :imgProps="{ referrerpolicy: 'no-referrer' }"
+                  :img-props="{ referrerpolicy: 'no-referrer' }"
                   :size="remToPx(4)"
                   :src="getAvatar(item)"
                   lazy

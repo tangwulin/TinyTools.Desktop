@@ -10,13 +10,7 @@ export class Group implements IGroup {
   // uniqueId: string
   score: number = 0
 
-  constructor(
-    name: string,
-    description: string,
-    avatar: string,
-    members?: Person[],
-    id?: number
-  ) {
+  constructor(name: string, description: string, avatar: string, members?: Person[], id?: number) {
     this.name = name
     this.description = description
     this.avatar = avatar

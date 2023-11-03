@@ -153,7 +153,11 @@ const onMove = (e: dragEvent) => {
     >
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">
-        <div v-if="element.type === 'seat'" class="cell cursor-move">
+        <div
+          v-if="element.type === 'seat'"
+          class="cell cursor-move"
+          :style="{ background: element.data.color }"
+        >
           <span style="margin: auto; font-size: clamp(1.25rem, 1.8vw, 4rem)">
             {{ element.data.displayName }}
           </span>

@@ -1,7 +1,7 @@
-import { ref } from 'vue'
+import { ref } from "vue";
 // import { useGroupStore } from './group' // noinspection JSUnusedGlobalSymbols
-import { defineStore } from 'pinia'
-import { Person } from '../types/person' // noinspection JSUnusedGlobalSymbols
+import { defineStore } from "pinia";
+import { Person } from "../types/person"; // noinspection JSUnusedGlobalSymbols
 
 // noinspection JSUnusedGlobalSymbols
 export const usePersonStore = defineStore(

@@ -12,15 +12,17 @@ import { useObservable } from '@vueuse/rxjs/index'
 import { liveQuery } from 'dexie'
 import { AppDatabase } from '../../db'
 import { asyncComputed } from '@vueuse/core'
+import { from } from '@vueuse/rxjs'
 
 const db = AppDatabase.getInstance()
 
 const route = useRoute()
 const router = useRouter()
 
-const groups = useObservable(liveQuery(() => db.groups.toArray())) as Readonly<Ref<Group[]>>
-// noinspection TypeScriptValidateTypes
-const persons = useObservable(liveQuery(() => db.persons.toArray())) as Readonly<Ref<Person[]>>
+const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
+const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
+  Ref<Person[]>
+>
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -83,7 +85,7 @@ const handleRemove = (item: Person) => {
 const handler = () => {
   try {
     db.groups.put(currentGroup.value)
-    message.success(isEdit ? '编辑成功' : '添加成功')
+    message.success(isEdit.value ? '编辑成功' : '添加成功')
   } catch (e) {
     message.error('操作失败')
     message.error(JSON.stringify(e))

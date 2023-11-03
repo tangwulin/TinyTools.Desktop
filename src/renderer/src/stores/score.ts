@@ -43,7 +43,7 @@ export const useScoreStore = defineStore(
     ])
     const scoreHistories = ref<ScoreHistory[]>([])
     return { rates, scoreHistories }
-  }
+  },
   // { persist: { storage: localforage } }
-  ,{ persist: true}
+  { persist: true }
 )

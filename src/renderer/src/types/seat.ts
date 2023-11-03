@@ -4,10 +4,12 @@ import { IPerson } from '../interface/IPerson'
 export class Seat implements ISeat {
   owner: IPerson
   index: number
+  color: string | null | undefined
 
-  constructor(owner: IPerson, index: number) {
+  constructor(owner: IPerson, index: number, color?: string | null) {
     this.owner = owner
     this.index = index
+    this.color = color
   }
 
   get location() {

@@ -1,24 +1,43 @@
 <script lang="ts" setup>
-import { onMounted, onUnmounted, ref } from 'vue'
+import { nextTick, onMounted, onUnmounted, Ref, ref } from 'vue'
 import SeatTable from '../../components/SeatTable.vue'
 import { Seat, SeatState } from '../../types/seat'
 import deepcopy from 'deepcopy'
 import { AppDatabase } from '../../db'
+import { Person } from '../../types/person'
+import { calcNewSeatByWeight } from '../../utils/seatUtil'
+import { shuffle } from 'lodash-es'
+import { useMessage } from 'naive-ui'
+import { useSettingStore } from '../../stores/setting'
+import { storeToRefs } from 'pinia'
+import { from, useObservable } from '@vueuse/rxjs'
+import { liveQuery } from 'dexie'
+import { SeatHistory } from '../../types/seatHistory'
+import videosrc from '../../assets/video/单抽出金.mp4'
+
 const db = AppDatabase.getInstance()
 
-import { Person } from '../../types/person'
+const message = useMessage()
 
 const persons = ref([] as Person[])
 const seats = ref([] as Seat[])
 const seatMap = ref([] as SeatState[])
+const seatHistory = useObservable(from(liveQuery(() => db.seatHistory.toArray()))) as Readonly<
+  Ref<SeatHistory[]>
+>
+
+const settingStore = useSettingStore()
+const { lotteryMode } = storeToRefs(settingStore)
 
 const currentDate = ref('')
 const currentTime = ref('')
 
-let updateDateTimeInterval: any
+let updateDateTimeInterval: NodeJS.Timeout
 onMounted(async () => {
-  persons.value = await db.persons.toArray()
-  seats.value = (await db.seats.toArray()) as Seat[]
+  persons.value = (await db.persons.toArray()) as Person[]
+  seats.value = ((await db.seats.toArray()) as Seat[]).map(
+    (item) => new Seat(persons.value.find((p) => p.id === item.owner.id) ?? item.owner, item.index)
+  )
   seatMap.value = await db.seatMap.toArray()
 
   if (persons.value.length !== seats.value.length) {
@@ -62,9 +81,10 @@ function updateDateTime() {
 }
 
 const showHasDiffModal = ref(false)
+const playingVideo = ref(false)
 
 const genSeatMap = (seatCount: number) => {
-  const result: any[] = []
+  const result: ('seat' | 'blank' | 'empty')[] = []
   for (let i = 0; i < seatCount; i++) {
     result.push('seat')
     if ((i + 1) % 2 === 0 && (i + 1) % 8 !== 0) result.push('blank')
@@ -89,16 +109,131 @@ const genSeatMap = (seatCount: number) => {
       }
   }
   return result.map((item, index) => new SeatState(index, item))
+  // return result.slice(0, result.length - 3).map((item, index) => new SeatState(index, item)) //这里故意去掉了最后三个空位，因为上面的代码似乎有问题
+}
+
+const raffleSeatImmediately = (result: Seat[]) => {
+  seats.value = result
+  db.seats.bulkPut(deepcopy(result))
+  message.success('抽选完成')
+}
+
+const raffleSeatRemainMysterious = (result: Seat[]) => {
+  seats.value = Array.from(
+    { length: seats.value.length },
+    (_, i) => new Seat({ avatar: '', genderCode: 9, number: '', score: 0, name: '???' }, i)
+  )
+  const series = shuffle(Array.from({ length: result.length }, (_, i) => i))
+
+  let i = 0
+  const timer = setInterval(() => {
+    if (i < series.length) {
+      seats.value = seats.value.map((item) => new Seat(item.owner, item.index, null))
+      seats.value[series[i]] = result[series[i]]
+      seats.value[series[i]].color = '#ADF7B6'
+      i++
+    } else {
+      clearInterval(timer)
+      seats.value = seats.value.map((item) => new Seat(item.owner, item.index, null))
+      db.seats.bulkPut(deepcopy(seats.value))
+      message.success('抽选完成')
+    }
+  }, 500)
+}
+
+const raffleSeatFeint = (result: Seat[], times: number) => {
+  let i = 1
+  const timer = setInterval(() => {
+    if (i < times) {
+      seats.value = shuffle(seats.value)
+      i++
+    } else {
+      clearInterval(timer)
+      seats.value = result
+      db.seats.bulkPut(deepcopy(result))
+      message.success('抽选完成')
+    }
+  }, 500)
+}
+
+const raffleSeatGacha = (result: Seat[]) => {
+  playVideo()
+  setTimeout(() => {
+    seats.value = result
+    db.seats.bulkPut(deepcopy(result))
+  }, 3000)
+}
+
+const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: string) =>
+  db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
+
+const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
+  let result = [] as Seat[]
+  switch (lotteryMode.value) {
+    case 1:
+      result = shuffle(seats.value).map((item, index) => new Seat(item.owner, index))
+      saveHistory(result, seatMap.value, '平等')
+      break
+    case 2:
+      message.error('尚未实现')
+      break
+    case 3:
+      message.error('尚未实现')
+      break
+    case 4:
+      result = calcNewSeatByWeight(
+        seats.value,
+        (seatHistory.value as SeatHistory[])[0]?.seats ?? seats.value
+      )
+      saveHistory(result, seatMap.value, '相对公平')
+      break
+    default:
+      message.error('抽选模式异常')
+      break
+  }
+
+  if (result.length === 0) return
+
+  switch (type) {
+    case 'Immediately':
+      raffleSeatImmediately(result)
+      break
+    case 'RemainMysterious':
+      raffleSeatRemainMysterious(result)
+      break
+    case 'Feint':
+      raffleSeatFeint(result, times ?? 5)
+      break
+    case 'Gacha':
+      raffleSeatGacha(result)
+      break
+    default:
+      message.error('展示模式异常')
+      break
+  }
+}
+
+const playVideo = () => {
+  playingVideo.value = true
+  nextTick(() => {
+    const videoElement = document.querySelector('video')
+    if (videoElement) {
+      videoElement.addEventListener('ended', () => {
+        playingVideo.value = false
+        message.success('抽选完成')
+      })
+    }
+  })
 }
 </script>
 
 <template>
   <div
     id="SeatView"
-    class="flex items-center justify-center flex-col h-auto m-auto"
-    style="height: 100%"
+    class="flex items-center justify-start flex-col h-auto m-auto"
+    style="height: 100%; z-index: 1"
   >
-    <div id="target-div" style="margin: 0 auto">
+    <div id="target-div" style="margin: 0 auto; padding: 2rem 0">
       <div>
         <SeatTable v-model:seat-map="seatMap" v-model:seats="seats" />
       </div>
@@ -106,14 +241,26 @@ const genSeatMap = (seatCount: number) => {
         <p>{{ currentDate }} {{ currentTime }}</p>
       </div>
     </div>
+    <div>
+      <div>
+        <n-button @click="handler('Immediately')">直接出结果</n-button>
+        <n-button @click="handler('RemainMysterious')">来点神秘感</n-button>
+        <n-button @click="handler('Feint', 5)">虚 晃 一 枪</n-button>
+        <n-button @click="handler('Gacha')">抽卡！</n-button>
+        <!--        <n-button @click="playVideo">播放视频</n-button>-->
+      </div>
+    </div>
     <div class="fixed bottom-0 right-0 mb-2 mr-2">
       <audio
         id="player"
         controls
         src="https://music.163.com/song/media/outer/url?id=430620198.mp3"
-        style="width: 20rem"
+        style="width: 16rem"
       ></audio>
     </div>
+    <n-modal v-model:show="playingVideo" transform-origin="center">
+      <video :src="videosrc" preload="auto" autoplay style="width: 100%; height: 100%" />
+    </n-modal>
     <n-modal v-model:show="showHasDiffModal">
       <n-card :bordered="false" aria-modal="true" role="dialog" size="huge" style="width: 60vw">
         <div class="flex flex-col items-center justify-center">
@@ -126,6 +273,19 @@ const genSeatMap = (seatCount: number) => {
         </div>
       </n-card>
     </n-modal>
+    <!--    <n-drawer v-model:show="showHistory" :width="'31vw'">-->
+    <!--      <n-drawer-content :native-scrollbar="false">-->
+    <!--        <template #header>-->
+    <!--          <p>历史记录</p>-->
+    <!--        </template>-->
+    <!--        <history-drawer v-model:is-preview="isPreview" v-model:temp="temp" />-->
+    <!--        <template v-if="isPreview" #footer>-->
+    <!--          <n-button class="ml-auto" ghost type="error" @click="exitPreview">-->
+    <!--            退出预览-->
+    <!--          </n-button>-->
+    <!--        </template>-->
+    <!--      </n-drawer-content>-->
+    <!--    </n-drawer>-->
   </div>
 </template>
 

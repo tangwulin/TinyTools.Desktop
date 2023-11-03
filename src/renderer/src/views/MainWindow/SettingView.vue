@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
-import { h } from 'vue'
+import { h, ref } from 'vue'
 import { NIcon } from 'naive-ui'
 import { RouterLink } from 'vue-router'
 import {

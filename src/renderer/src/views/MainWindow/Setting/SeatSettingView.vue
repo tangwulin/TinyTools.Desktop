@@ -16,18 +16,19 @@ const lotteryModes = [
   {
     label: '折中',
     value: 2,
-    description: '外面一圈的人不会再次坐到外面一圈，但仍是随机排列'
+    description: '外面一圈的人不会再次坐到外面一圈，但仍是随机排列',
+    disabled: true
   },
   {
     label: '两边到中间',
     value: 3,
-    description: '就像名字里说的那样'
+    description: '就像名字里说的那样',
+    disabled: true
   },
   {
-    label: '公平（未实现）',
+    label: '相对公平',
     value: 4,
-    description: '通过对前几次结果的分析来决定这一次分配的位置',
-    disabled: true
+    description: '通过对前几次结果的分析来决定这一次分配的位置'
   }
 ]
 </script>

@@ -1,18 +1,17 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { NButton, useMessage } from 'naive-ui'
 import { useRouter } from 'vue-router'
-import JsonEditorVue from 'json-editor-vue'
 import 'vanilla-jsoneditor/themes/jse-theme-dark.css'
-import { useSeatStore } from '../../../stores/seat'
+// import { useSeatStore } from '../../../stores/seat'
 
 const settingStore = useSettingStore()
 const { enableDocking, enableDevelopFeature } = storeToRefs(settingStore)
 
-const seatStore = useSeatStore()
-const { seats, seatMap, history } = storeToRefs(seatStore)
+// const seatStore = useSeatStore()
+// const { seats, seatMap, history } = storeToRefs(seatStore)
 const message = useMessage()
 
 const destination = ref('')
@@ -21,7 +20,8 @@ const router = useRouter()
 const showModal = ref(false)
 const confirm = ref('')
 
-let isElectron = null
+let isElectron: boolean
+const electron = window.electron || {}
 try {
   isElectron = !!window.electron
 } catch (e) {
@@ -72,44 +72,44 @@ const navTo = (name) => {
   }
 }
 
-const saveHistory = (type) => {
-  const data = {
-    time: Date.now(),
-    seats: [
-      // ...toRaw(
-      //   seats.value.slice().map((item) => {
-      //     return { ...item, color: null }
-      //   })
-      // )
-      ...seats
-    ],
-    seatMap: [
-      // ...toRaw(seatMap.value)
-      //   .slice()
-      //   .map((item) => {
-      //     return { ...item, color: null }
-      //   })
-      ...seatMap
-    ],
-    isCurrent: true,
-    type: type || '???'
-  }
-  history.value = history.value.map((item) => {
-    return { ...item, isCurrent: false }
-  })
-  if (history.value.length !== 0 && history.value[0].type === '手动更改') {
-    //这里没有对初始位置进行判断，因为到这个页面意味着已经开始正常使用了
-    if (data.time - history.value[0].time > 60 * 1000) history.value.unshift(data)
-    else history.value[0] = data
-  } else {
-    history.value = history.value.map((item) => {
-      return { ...item, isCurrent: false, isShowing: false }
-    })
-    history.value.unshift(data)
-  }
-  // isPreview.value = false
-  if (type === '手动保存' || type === '手动更改') message.success('保存成功')
-}
+// const saveHistory = (type) => {
+//   const data = {
+//     time: Date.now(),
+//     seats: [
+//       // ...toRaw(
+//       //   seats.value.slice().map((item) => {
+//       //     return { ...item, color: null }
+//       //   })
+//       // )
+//       ...seats
+//     ],
+//     seatMap: [
+//       // ...toRaw(seatMap.value)
+//       //   .slice()
+//       //   .map((item) => {
+//       //     return { ...item, color: null }
+//       //   })
+//       ...seatMap
+//     ],
+//     isCurrent: true,
+//     type: type || '???'
+//   }
+//   history.value = history.value.map((item) => {
+//     return { ...item, isCurrent: false }
+//   })
+//   if (history.value.length !== 0 && history.value[0].type === '手动更改') {
+//     //这里没有对初始位置进行判断，因为到这个页面意味着已经开始正常使用了
+//     if (data.time - history.value[0].time > 60 * 1000) history.value.unshift(data)
+//     else history.value[0] = data
+//   } else {
+//     history.value = history.value.map((item) => {
+//       return { ...item, isCurrent: false, isShowing: false }
+//     })
+//     history.value.unshift(data)
+//   }
+//   // isPreview.value = false
+//   if (type === '手动保存' || type === '手动更改') message.success('保存成功')
+// }
 const ua = navigator.userAgent
 </script>
 
@@ -170,27 +170,27 @@ const ua = navigator.userAgent
       <n-button round type="primary" @click="navTo(destination)">跳转</n-button>
     </n-space>
     <n-space class="items-center"></n-space>
-    <p>座位信息修改</p>
-    <div>
-      <span style="font-size: 1rem; color: red; margin-right: 1rem"
-        >注意：修改实时生效，不可回滚，修改错误会导致程序无法正常使用
-        （如下方只有null请切回座位抽选页再切回这里）</span
-      >
-      <n-button type="warning" @click="saveHistory('手动更改')">保存一次历史记录</n-button>
-    </div>
+    <!--    <p>座位信息修改</p>-->
+    <!--    <div>-->
+    <!--      <span style="font-size: 1rem; color: red; margin-right: 1rem"-->
+    <!--        >注意：修改实时生效，不可回滚，修改错误会导致程序无法正常使用-->
+    <!--        （如下方只有null请切回座位抽选页再切回这里）</span-->
+    <!--      >-->
+    <!--&lt;!&ndash;      <n-button type="warning" @click="saveHistory('手动更改')">保存一次历史记录</n-button>&ndash;&gt;-->
+    <!--    </div>-->
 
-    <n-collapse id="xxx">
-      <n-collapse-item title="原始座位信息">
-        <div class="json-editor">
-          <JsonEditorVue v-model="seats" class="jse-theme-dark mr-3" style="width: 100%" />
-        </div>
-      </n-collapse-item>
-      <n-collapse-item title="渲染座位信息">
-        <div class="json-editor">
-          <JsonEditorVue v-model="seatMap" class="jse-theme-dark mr-3" style="width: 100%" />
-        </div>
-      </n-collapse-item>
-    </n-collapse>
+    <!--    <n-collapse id="xxx">-->
+    <!--      <n-collapse-item title="原始座位信息">-->
+    <!--        <div class="json-editor">-->
+    <!--          <JsonEditorVue v-model="seats" class="jse-theme-dark mr-3" style="width: 100%" />-->
+    <!--        </div>-->
+    <!--      </n-collapse-item>-->
+    <!--      <n-collapse-item title="渲染座位信息">-->
+    <!--        <div class="json-editor">-->
+    <!--          <JsonEditorVue v-model="seatMap" class="jse-theme-dark mr-3" style="width: 100%" />-->
+    <!--        </div>-->
+    <!--      </n-collapse-item>-->
+    <!--    </n-collapse>-->
   </n-space>
 </template>
 

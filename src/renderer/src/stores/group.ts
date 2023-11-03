@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import { defineStores } from 'pinia'
+import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { Group } from '../types/group'
 
@@ -49,5 +49,5 @@ export const useGroupStore = defineStore(
   //     }
   //   }
   // }
-{ persist: true }
+  { persist: true }
 )

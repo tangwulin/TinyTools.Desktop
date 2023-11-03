@@ -21,9 +21,9 @@ export class AppDatabase extends Dexie {
     this.version(1).stores({
       persons: '++id, name, genderCode, number',
       groups: '++id, name, description, members',
-      seats: '++id, owner, index',
+      seats: 'index, owner',
       seatMap: 'index',
-      seatHistory: '++id, timestamp'
+      seatHistory: '++id, timestamp, type'
     })
     this.persons.mapToClass(Person)
     this.groups.mapToClass(Group)
@@ -39,4 +39,5 @@ export class AppDatabase extends Dexie {
     return AppDatabase._instance
   }
 }
+
 export default AppDatabase.getInstance()
