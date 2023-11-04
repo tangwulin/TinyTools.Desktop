@@ -180,8 +180,8 @@ watch(
             <n-space>
               <n-tag
                 v-for="item in currentGroup.members"
-                closable
                 :key="item.id"
+                closable
                 size="large"
                 @close="handleRemove(item)"
               >

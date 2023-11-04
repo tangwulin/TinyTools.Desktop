@@ -57,9 +57,9 @@ watch(avatarWorks, changeHandler)
         <n-space item-style="display: flex;">
           <n-checkbox
             v-for="item in works"
+            :key="item.value"
             :label="item.label"
             :value="item.value"
-            :key="item.value"
           />
         </n-space>
       </n-checkbox-group>
