@@ -204,6 +204,9 @@ export const calcNewSeatByWeight = (
   }
   return result.map((item) => {
     const owner = item.owner
-    return new Seat(new Person(owner.name,owner.genderCode,owner.number,owner?.id,owner?.avatar), item.index)
+    return new Seat(
+      new Person(owner.name, owner.genderCode, owner.number, owner?.id, owner?.avatar),
+      item.index
+    )
   })
 }

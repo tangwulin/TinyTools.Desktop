@@ -55,7 +55,12 @@ watch(avatarWorks, changeHandler)
       <p>内置头像来源</p>
       <n-checkbox-group v-model:value="avatarWorks" :disabled="!enableFallbackAvatar" :min="1">
         <n-space item-style="display: flex;">
-          <n-checkbox v-for="item in works" :label="item.label" :value="item.value" />
+          <n-checkbox
+            v-for="item in works"
+            :label="item.label"
+            :value="item.value"
+            :key="item.value"
+          />
         </n-space>
       </n-checkbox-group>
     </n-space>
@@ -72,6 +77,7 @@ watch(avatarWorks, changeHandler)
           <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
             <div
               v-for="item in selectedAvatar"
+              :key="item.description"
               style="
                 width: 8rem;
                 height: 8rem;

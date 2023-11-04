@@ -39,7 +39,7 @@ const seats = ref(props.seats)
 const reverse = ref(props.reverse)
 const disable = ref(props.disable)
 
-const parseRenderingDataToSeatMap = (x: any[]) => {
+const parseRenderingDataToSeatMap = (x: RenderingItem[]) => {
   const newSeatMap: ('seat' | 'blank' | 'empty')[] = []
   for (const item of x) {
     switch (item.type) {
@@ -57,12 +57,12 @@ const parseRenderingDataToSeatMap = (x: any[]) => {
   return newSeatMap.map((item, index) => new SeatState(index, item))
 }
 
-const parseRenderingDataToSeats = (x: any[]) => {
+const parseRenderingDataToSeats = (x: RenderingItem[]) => {
   const newSeats: Seat[] = []
   for (const item of x) {
     switch (item.type) {
       case 'seat':
-        newSeats.push(item.data)
+        newSeats.push(item.data as Seat)
         break
     }
   }
@@ -84,7 +84,7 @@ class RenderingItem {
 
 const renderingData = computed({
   get() {
-    const data: any[] = []
+    const data: RenderingItem[] = []
     let i = 0
     for (const item of seatMap.value) {
       switch (item.state) {

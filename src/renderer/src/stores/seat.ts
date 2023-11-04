@@ -1,6 +1,6 @@
-import { ref } from "vue";
-import { defineStore } from "pinia";
-import { Seat } from "../types/seat";
+import { ref } from 'vue'
+import { defineStore } from 'pinia'
+import { Seat } from '../types/seat'
 
 // noinspection JSUnusedGlobalSymbols
 export const useSeatStore = defineStore(

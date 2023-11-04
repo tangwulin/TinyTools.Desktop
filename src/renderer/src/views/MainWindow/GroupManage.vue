@@ -181,6 +181,7 @@ watch(
               <n-tag
                 v-for="item in currentGroup.members"
                 closable
+                :key="item.id"
                 size="large"
                 @close="handleRemove(item)"
               >
@@ -205,7 +206,12 @@ watch(
             <n-collapse-item name="1" title="性别">
               <n-checkbox-group v-model:value="selectedSex">
                 <n-space item-style="display: flex;">
-                  <n-checkbox v-for="sex in sexes" :label="sex.label" :value="sex.value" />
+                  <n-checkbox
+                    v-for="sex in sexes"
+                    :key="sex.value"
+                    :label="sex.label"
+                    :value="sex.value"
+                  />
                 </n-space>
               </n-checkbox-group>
             </n-collapse-item>
@@ -223,7 +229,7 @@ watch(
         <template #footer>
           <div class="flex justify-end">
             <n-space>
-              <n-popconfirm v-if="isEdit" @positive-click="deleteHandler" @negative-click="">
+              <n-popconfirm v-if="isEdit" @positive-click="deleteHandler">
                 <!--suppress VueUnrecognizedSlot -->
                 <template #trigger>
                   <n-button type="error">删除</n-button>
@@ -245,6 +251,7 @@ watch(
       <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto">
         <div
           v-for="item in groups"
+          :key="item.id"
           style="
             width: 12rem;
             height: 6rem;

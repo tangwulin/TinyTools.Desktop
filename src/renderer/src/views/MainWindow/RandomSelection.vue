@@ -41,9 +41,9 @@ const sexes = [
   { label: '未填写', value: 9 }
 ] //此处参考了GB/T 2261.1-2003
 
-const selectSomething = (list: any[], x: number) => {
+function selectSomething<T>(list: T[], x: number): T[] {
   const len = list.length
-  const result: Person[] = []
+  const result: typeof list = []
   const set = new Set()
   while (set.size < x) {
     const index = Math.floor(Math.random() * len)
@@ -71,16 +71,16 @@ const handler = (fast: boolean) => {
   }, 3000)
 }
 
-function createOptions(x: any) {
-  return x.map((item: any) => ({
+function createOptions(x: Person[]) {
+  return x.map((item) => ({
     label: item.name,
     value: item.id,
     disabled: false
   }))
 }
 
-function createValues(x: any) {
-  return x.map((item: any) => item.id)
+function createValues(x: Person[]) {
+  return x.map((item) => item.id as number)
 }
 
 const value1 = ref<number[]>([])
@@ -125,6 +125,7 @@ watch(
           <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
             <div
               v-for="item in selectedPerson"
+              :key="item.id"
               style="
                 width: 8rem;
                 height: 8rem;
@@ -245,7 +246,12 @@ watch(
           <n-collapse-item name="1" title="性别范围">
             <n-checkbox-group v-model:value="selectedSex">
               <n-space item-style="display: flex;">
-                <n-checkbox v-for="sex in sexes" :label="sex.label" :value="sex.value" />
+                <n-checkbox
+                  v-for="sex in sexes"
+                  :key="sex.value"
+                  :label="sex.label"
+                  :value="sex.value"
+                />
               </n-space>
             </n-checkbox-group>
           </n-collapse-item>

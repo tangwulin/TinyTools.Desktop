@@ -44,9 +44,9 @@ const lotteryModes = [
       <img :src="EqualityOrEquity" alt="EqualityOrEquity" style="width: 18rem" />
       <n-radio-group v-model:value="lotteryMode">
         <n-space>
-          <n-popover v-for="item in lotteryModes" trigger="hover">
+          <n-popover v-for="item in lotteryModes" :key="item.value" trigger="hover">
             <template #trigger>
-              <n-radio :key="item.value" :disabled="item.disabled" :value="item.value">
+              <n-radio :disabled="item.disabled" :value="item.value">
                 {{ item.label }}
               </n-radio>
             </template>

@@ -1,11 +1,11 @@
-import { app, BrowserWindow, ipcMain, shell } from 'electron'
+import { app, BrowserWindow, ipcMain, shell,screen } from 'electron'
 import { join } from 'path'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
 
 function createWindow(): void {
   // We cannot require the screen module until the app is ready.
-  const { screen } = require('electron')
+  // const { screen } = require('electron')
 
   // Create a window that fills the screen's available work area.
   const primaryDisplay = screen.getPrimaryDisplay()

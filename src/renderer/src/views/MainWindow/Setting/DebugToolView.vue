@@ -21,7 +21,12 @@ const showModal = ref(false)
 const confirm = ref('')
 
 let isElectron: boolean
-const electron = window.electron || {}
+const electron =
+  (window.electron as {
+    ipcRenderer: {
+      send: (channel: string) => void
+    }
+  }) || {}
 try {
   isElectron = !!window.electron
 } catch (e) {
@@ -195,9 +200,9 @@ const ua = navigator.userAgent
 </template>
 
 <style scoped>
-.json-editor {
-  width: 100%;
-  max-height: calc(100vh - 10rem);
-  display: flex;
-}
+//.json-editor {
+//  width: 100%;
+//  max-height: calc(100vh - 10rem);
+//  display: flex;
+//}
 </style>
