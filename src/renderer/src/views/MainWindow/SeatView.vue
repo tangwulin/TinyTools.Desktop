@@ -13,7 +13,8 @@ import { storeToRefs } from 'pinia'
 import { from, useObservable } from '@vueuse/rxjs'
 import { liveQuery } from 'dexie'
 import { SeatHistory } from '../../types/seatHistory'
-import videosrc from '../../assets/video/单抽出金.mp4'
+import videoSrc from '../../assets/video/单抽出金.mp4'
+import { History24Filled as HistoryIcon } from '@vicons/fluent'
 
 const db = AppDatabase.getInstance()
 
@@ -31,6 +32,11 @@ const { lotteryMode } = storeToRefs(settingStore)
 
 const currentDate = ref('')
 const currentTime = ref('')
+
+const showHistory = ref(false)
+// const isPreview = ref(false)
+const showHasDiffModal = ref(false)
+const playingVideo = ref(false)
 
 let updateDateTimeInterval: NodeJS.Timeout
 onMounted(async () => {
@@ -79,9 +85,6 @@ function updateDateTime() {
   currentDate.value = date
   currentTime.value = time
 }
-
-const showHasDiffModal = ref(false)
-const playingVideo = ref(false)
 
 const genSeatMap = (seatCount: number) => {
   const result: ('seat' | 'blank' | 'empty')[] = []
@@ -256,7 +259,21 @@ const playVideo = () => {
         controls
         src="https://music.163.com/song/media/outer/url?id=430620198.mp3"
         style="width: 16rem"
-      ></audio>
+      />
+    </div>
+
+    <!--  历史记录按钮  <-->
+    <div class="fixed top-3 right-4">
+      <n-popover trigger="hover" placement="left">
+        <template #trigger>
+          <n-button text style="font-size: 36px" @click="showHistory = true">
+            <n-icon :depth="3">
+              <history-icon />
+            </n-icon>
+          </n-button>
+        </template>
+        <span>历史记录</span>
+      </n-popover>
     </div>
     <n-modal v-model:show="playingVideo" transform-origin="center">
       <video :src="videosrc" preload="auto" autoplay style="width: 100%; height: 100%" />
@@ -273,19 +290,19 @@ const playVideo = () => {
         </div>
       </n-card>
     </n-modal>
-    <!--    <n-drawer v-model:show="showHistory" :width="'31vw'">-->
-    <!--      <n-drawer-content :native-scrollbar="false">-->
-    <!--        <template #header>-->
-    <!--          <p>历史记录</p>-->
-    <!--        </template>-->
-    <!--        <history-drawer v-model:is-preview="isPreview" v-model:temp="temp" />-->
-    <!--        <template v-if="isPreview" #footer>-->
-    <!--          <n-button class="ml-auto" ghost type="error" @click="exitPreview">-->
-    <!--            退出预览-->
-    <!--          </n-button>-->
-    <!--        </template>-->
-    <!--      </n-drawer-content>-->
-    <!--    </n-drawer>-->
+
+    <!--  历史记录Drawer  <-->
+    <n-drawer v-model:show="showHistory" :width="'31vw'">
+      <n-drawer-content :native-scrollbar="false">
+        <template #header>
+          <p>历史记录</p>
+        </template>
+        <!--            <history-drawer v-model:is-preview="isPreview" v-model:temp="temp" />-->
+        <!--        <template v-if="isPreview" #footer>-->
+        <!--          <n-button class="ml-auto" ghost type="error" @click="exitPreview"> 退出预览</n-button>-->
+        <!--        </template>-->
+      </n-drawer-content>
+    </n-drawer>
   </div>
 </template>
 
