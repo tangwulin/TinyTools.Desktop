@@ -247,6 +247,7 @@ const playVideo = () => {
     class="flex items-center justify-start flex-col h-auto m-auto"
     style="height: 100%; z-index: 1"
   >
+    <!--  座位表展示区域  <-->
     <div id="target-div" style="margin: 0 auto; padding: 2rem 0">
       <div>
         <SeatTable v-model:seat-map="seatMap" v-model:seats="seats" />
@@ -255,15 +256,19 @@ const playVideo = () => {
         <p>{{ currentDate }} {{ currentTime }}</p>
       </div>
     </div>
+
+    <!--  下方操作按钮区域  <-->
     <div>
-      <div>
+      <n-button-group>
         <n-button @click="handler('Immediately')">直接出结果</n-button>
         <n-button @click="handler('RemainMysterious')">来点神秘感</n-button>
         <n-button @click="handler('Feint', 5)">虚 晃 一 枪</n-button>
         <n-button @click="handler('Gacha')">抽卡！</n-button>
         <!--        <n-button @click="playVideo">播放视频</n-button>-->
-      </div>
+      </n-button-group>
     </div>
+
+    <!--  悬浮的播放器  <-->
     <div class="fixed bottom-0 right-0 mb-2 mr-2">
       <audio
         id="player"
@@ -286,9 +291,13 @@ const playVideo = () => {
         <span>历史记录</span>
       </n-popover>
     </div>
+
+    <!--  视频Modal  <-->
     <n-modal v-model:show="playingVideo" transform-origin="center">
-      <video :src="videosrc" preload="auto" autoplay style="width: 100%; height: 100%" />
+      <video :src="videoSrc" preload="auto" autoplay style="width: 100%; height: 100%" />
     </n-modal>
+
+    <!--  人数和座位数不一致Modal  <-->
     <n-modal v-model:show="showHasDiffModal">
       <n-card :bordered="false" aria-modal="true" role="dialog" size="huge" style="width: 60vw">
         <div class="flex flex-col items-center justify-center">
