@@ -39,13 +39,22 @@ const showHasDiffModal = ref(false)
 const playingVideo = ref(false)
 
 let updateDateTimeInterval: NodeJS.Timeout
-onMounted(async () => {
-  persons.value = (await db.persons.toArray()) as Person[]
-  seats.value = ((await db.seats.toArray()) as Seat[]).map(
-    (item) => new Seat(persons.value.find((p) => p.id === item.owner.id) ?? item.owner, item.index)
-  )
-  seatMap.value = await db.seatMap.toArray()
 
+const personsPromise = db.persons.toArray().then((result) => {
+  persons.value = result as Person[]
+})
+
+const seatsPromise = db.seats.toArray().then((result) => {
+  seats.value = result.map(
+    (item) => new Seat(persons.value.find((p) => p.id === item.owner.id) ?? item.owner, item.index)
+  ) as Seat[]
+})
+
+const seatMapPromise = db.seatMap.toArray().then((result) => {
+  seatMap.value = result
+})
+
+Promise.all([personsPromise, seatsPromise, seatMapPromise]).then(() => {
   if (persons.value.length !== seats.value.length) {
     console.log(persons.value.length, seats.value.length)
     console.log('人数和座位数不一致')
@@ -63,7 +72,9 @@ onMounted(async () => {
       showHasDiffModal.value = true
     }
   }
+})
 
+onMounted(() => {
   updateDateTime()
   updateDateTimeInterval = setInterval(updateDateTime, 1000)
   const player = document.getElementById('player') as HTMLAudioElement
