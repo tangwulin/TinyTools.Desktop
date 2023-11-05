@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Dice, DiceOutline } from '@vicons/ionicons5'
-import { ref, type Ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { NButton } from 'naive-ui'
@@ -9,15 +9,9 @@ import { getAvatar } from '../../utils/avatarUtil'
 import remToPx from '../../utils/remToPx'
 import { Person } from '../../types/person'
 import { AppDatabase } from '../../db'
-import { useObservable } from '@vueuse/rxjs/index'
-import { liveQuery } from 'dexie'
-import { asyncComputed } from '@vueuse/core'
-import { from } from '@vueuse/rxjs'
+import { selectSomething } from '../../utils/arrayUtil'
 
 const db = AppDatabase.getInstance()
-const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
-  Ref<Person[]>
->
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -33,27 +27,21 @@ const selectionList = ref<Person[]>([])
 const hasHover1 = ref(false)
 const hasHover2 = ref(false)
 
-// const itemsEachRow = ref(4);
-
 const sexes = [
   { label: '男', value: 1 },
   { label: '女', value: 2 },
   { label: '未填写', value: 9 }
 ] //此处参考了GB/T 2261.1-2003
 
-function selectSomething<T>(list: T[], x: number): T[] {
-  const len = list.length
-  const result: typeof list = []
-  const set = new Set()
-  while (set.size < x) {
-    const index = Math.floor(Math.random() * len)
-    if (!set.has(index)) {
-      set.add(index)
-      result.push(list[index])
-    }
-  }
-  return result
-}
+const persons = ref<Person[]>([])
+const options1 = ref<
+  {
+    label: string
+    value: number
+    disabled: boolean
+  }[]
+>([])
+const value1 = ref<number[]>([])
 
 const handler = (fast: boolean) => {
   const list = fast ? persons.value : selectionList.value
@@ -64,7 +52,7 @@ const handler = (fast: boolean) => {
   if (player) player.play()
   const interval = setInterval(() => {
     selectedPerson.value = selectSomething(list, number.value).slice()
-    //不使用lodash的shuffle，因为lodash的shuffle会改变原数组，而此处不希望改变原数组
+    //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
   }, 250)
   setTimeout(() => {
     clearInterval(interval)
@@ -74,7 +62,7 @@ const handler = (fast: boolean) => {
 function createOptions(x: Person[]) {
   return x.map((item) => ({
     label: item.name,
-    value: item.id,
+    value: item.id as number,
     disabled: false
   }))
 }
@@ -83,23 +71,33 @@ function createValues(x: Person[]) {
   return x.map((item) => item.id as number)
 }
 
-const value1 = ref<number[]>([])
+db.persons
+  .toArray()
+  .then((result) => {
+    persons.value = result
+  })
+  .then(() => {
+    options1.value = createOptions(persons.value)
+    value1.value = createValues(persons.value)
+  })
 
-const options1 = asyncComputed(() =>
-  createOptions(persons.value.filter((item) => selectedSex.value.includes(item.genderCode)))
-)
-
-watch(options1, (value, oldValue) => {
-  if (value.length < oldValue?.length) {
-    value1.value = createValues(
-      persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
-    )
-  } else {
-    if (!oldValue) {
-      value1.value = value1.value.filter((item) => value.map((item) => item.value).includes(item))
-    }
-  }
+watch(selectedSex, () => {
+  options1.value = createOptions(
+    persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
+  )
 })
+
+watch(
+  options1,
+  (value, oldValue) => {
+    if (value.length < oldValue?.length) {
+      value1.value = createValues(
+        persons.value.filter((item) => selectedSex.value.includes(item.genderCode))
+      )
+    }
+  },
+  { deep: true }
+)
 
 watch(
   value1,
@@ -107,6 +105,7 @@ watch(
     selectionList.value = persons.value.filter((item: Person) =>
       value1.value.includes(item.id as number)
     )
+    if (number.value > selectionList.value.length) number.value = selectionList.value.length
   },
   { deep: true }
 )
@@ -268,7 +267,7 @@ watch(
       </n-scrollbar>
       <template #footer>
         <div class="flex justify-end">
-          <n-button type="primary" @click="handler(false)">开始</n-button>
+          <n-button type="primary" :disabled="number === 0" @click="handler(false)">开始</n-button>
         </div>
       </template>
     </n-card>
