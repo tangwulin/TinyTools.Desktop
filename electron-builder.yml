@@ -1,4 +1,4 @@
-appId: com.electron.app
+appId: org.tangwulin.tinytools
 productName: tinytools-desktop
 directories:
   buildResources: build
@@ -12,7 +12,9 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: tinytools-desktop
+  executableName: TinyTools.desktop
+  icon: build/icons/icon.icns
+  artifactName: ${name}-${version}-${arch}-setup.${ext}
 nsis:
   artifactName: ${name}-${version}-${arch}-setup.${ext}
   shortcutName: ${productName}
@@ -39,5 +41,5 @@ appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
 publish:
-  provider: generic
-  url: https://example.com/auto-updates
+  - provider: github
+    protocol: https
