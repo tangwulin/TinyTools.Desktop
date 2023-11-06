@@ -117,15 +117,18 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
       key: 'avatar',
       render(row: Person) {
         const avatarSrc = getAvatar(row)
-        return h(NAvatar as Component,{
-              size: 'large',
-              src: avatarSrc,
-              imgProps: { referrerpolicy: 'no-referrer' },
-              lazy: true,
-              objectFit: 'contain',
-              round: true
-            },
-            undefined)
+        return h(
+          NAvatar as Component,
+          {
+            size: 'large',
+            src: avatarSrc,
+            imgProps: { referrerpolicy: 'no-referrer' },
+            lazy: true,
+            objectFit: 'contain',
+            round: true
+          },
+          undefined
+        )
         // typeof avatarSrc === null ? row.name : undefined)
       },
       width: remToPx(4)
