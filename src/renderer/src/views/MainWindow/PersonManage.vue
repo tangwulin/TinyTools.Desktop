@@ -1,6 +1,16 @@
 <script lang="ts" setup>
 import { Component, h, Ref, ref } from 'vue'
-import { NAvatar, NButton, NPopover, NSwitch, NTag, NText, useMessage } from 'naive-ui'
+import {
+  DataTableBaseColumn,
+  DataTableFilterState,
+  NAvatar,
+  NButton,
+  NPopover,
+  NSwitch,
+  NTag,
+  NText,
+  useMessage
+} from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { useSettingStore } from '../../stores/setting'
 import { useRoute } from 'vue-router'
@@ -97,6 +107,10 @@ const deleteHandler = (row: Person) => {
   message.success('删除成功')
 }
 
+const handleUpdateFilter = (filters: DataTableFilterState, sourceColumn: DataTableBaseColumn) => {
+  columns[2].filterOptionValues = filters[sourceColumn.key] as null // TODO: 把as null改为更好的实现
+}
+
 const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) => {
   return [
     {
@@ -170,8 +184,8 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
         { label: '女', value: 2 },
         { label: '未填写', value: 9 }
       ],
-      filter(value: number[], row: Person) {
-        return value.includes(row.genderCode)
+      filter(value: number, row: Person) {
+        return value === row.genderCode
       }
     },
     {
@@ -376,6 +390,7 @@ const downloadTemplate = () => {
     :pagination="false"
     :render-cell="renderCell"
     :loading="loading"
+    @update:filters="handleUpdateFilter"
   >
   </n-data-table>
 
@@ -491,11 +506,7 @@ const downloadTemplate = () => {
       <n-upload
         :default-upload="false"
         :max="1"
-        :on-before-upload="
-          (fileInfo) => {
-            parseExcel(fileInfo)
-          }
-        "
+        :on-before-upload="parseExcel"
         accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
         action=""
         directory-dnd
