@@ -15,6 +15,7 @@ import { liveQuery } from 'dexie'
 import { SeatHistory } from '../../types/seatHistory'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
+import raffleConfig from '../../settings/raffleModes.json'
 
 const db = AppDatabase.getInstance()
 
@@ -29,6 +30,8 @@ const seatHistory = useObservable(from(liveQuery(() => db.seatHistory.toArray())
 
 const settingStore = useSettingStore()
 const { lotteryMode } = storeToRefs(settingStore)
+
+const raffleModes = raffleConfig['raffleModes']
 
 const currentDate = ref('')
 const currentTime = ref('')
@@ -248,7 +251,7 @@ const playVideo = () => {
     style="height: 100%; z-index: 1"
   >
     <!--  座位表展示区域  <-->
-    <div id="target-div" style="margin: 0 auto; padding: 2rem 0">
+    <div id="target-div" style="margin: 0 auto; padding: 1.5rem 0">
       <div>
         <SeatTable v-model:seat-map="seatMap" v-model:seats="seats" />
       </div>
@@ -259,7 +262,18 @@ const playVideo = () => {
 
     <!--  下方操作按钮区域  <-->
     <div>
-      <n-button-group>
+      <n-space justify="space-around">
+        <n-p depth="3">座位预选：无</n-p>
+        <n-popover>
+          <template #trigger>
+            <n-p depth="3"
+              >抽选模式：{{ raffleModes.find((item) => item.value === lotteryMode).label }}
+            </n-p>
+          </template>
+          <span>{{ raffleModes.find((item) => item.value === lotteryMode).description }}</span>
+        </n-popover>
+      </n-space>
+      <n-button-group class="mt-2">
         <n-button @click="handler('Immediately')">直接出结果</n-button>
         <n-button @click="handler('RemainMysterious')">来点神秘感</n-button>
         <n-button @click="handler('Feint', 5)">虚 晃 一 枪</n-button>
