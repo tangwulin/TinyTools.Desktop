@@ -32,9 +32,18 @@ const scoreStore = useScoreStore()
 const { enableFallbackAvatar } = storeToRefs(settingStore)
 const { scoreHistories } = storeToRefs(scoreStore)
 
-const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
-  Ref<Person[]>
->
+const loading = asyncComputed(() => persons.value.length === 0, true)
+
+const persons = useObservable(
+  from(
+    liveQuery(() =>
+      db.persons.toArray().then((result) => {
+        loading.value = false
+        return result
+      })
+    )
+  )
+) as Readonly<Ref<Person[]>>
 const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
 
 const loading = asyncComputed(() => persons.value.length === 0, true)
