@@ -46,8 +46,6 @@ const persons = useObservable(
 ) as Readonly<Ref<Person[]>>
 const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
 
-const loading = asyncComputed(() => persons.value.length === 0, true)
-
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
 
