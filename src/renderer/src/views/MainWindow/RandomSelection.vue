@@ -1,17 +1,20 @@
 <script lang="ts" setup>
 import { Dice, DiceOutline } from '@vicons/ionicons5'
-import { ref, watch } from 'vue'
+import { computed, nextTick, ref, watch } from 'vue'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
-import { NButton } from 'naive-ui'
+import { NButton, useMessage } from 'naive-ui'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
 import { getAvatar } from '../../utils/avatarUtil'
 import remToPx from '../../utils/remToPx'
 import { Person } from '../../types/person'
 import { AppDatabase } from '../../db'
 import { selectSomething } from '../../utils/arrayUtil'
+import singleVideo from '../../assets/video/单抽出金.mp4'
+import groupVideo from '../../assets/video/十连出金.mp4'
 
 const db = AppDatabase.getInstance()
+const message = useMessage()
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -26,6 +29,12 @@ const selectionList = ref<Person[]>([])
 
 const hasHover1 = ref(false)
 const hasHover2 = ref(false)
+
+const playingVideo = ref(false)
+const videoSrc = computed(() => {
+  if (number.value === 1) return singleVideo
+  else return groupVideo
+})
 
 const sexes = [
   { label: '男', value: 1 },
@@ -48,15 +57,32 @@ const handler = (fast: boolean) => {
   showFastModal.value = false
   showAdvancedModal.value = false
   isSelected.value = true
-  const player = document.querySelector('audio')
-  if (player) player.play()
-  const interval = setInterval(() => {
-    selectedPerson.value = selectSomething(list, number.value).slice()
-    //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
-  }, 250)
-  setTimeout(() => {
-    clearInterval(interval)
-  }, 3000)
+
+  if (fast) {
+    const player = document.querySelector('audio')
+    if (player) player.play()
+    const interval = setInterval(() => {
+      selectedPerson.value = selectSomething(list, number.value).slice()
+      //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
+    }, 250)
+    setTimeout(() => {
+      clearInterval(interval)
+    }, 3000)
+  } else {
+    playingVideo.value = true
+    nextTick(() => {
+      const videoElement = document.querySelector('video')
+      if (videoElement) {
+        videoElement.addEventListener('ended', () => {
+          playingVideo.value = false
+          message.success('抽选完成')
+        })
+      }
+    })
+    setTimeout(() => {
+      selectedPerson.value = selectSomething(list, number.value).slice() //抽一次就行了
+    }, 3000)
+  }
 }
 
 function createOptions(x: Person[]) {
@@ -176,7 +202,7 @@ watch(
             <Dice v-if="hasHover1" />
             <DiceOutline v-else />
           </n-icon>
-          <span>快速开始</span>
+          <span>快速抽选</span>
         </div>
         <div
           class="flex flex-col justify-center items-center"
@@ -189,7 +215,7 @@ watch(
             <Dice v-if="hasHover2" />
             <DiceOutline v-else />
           </n-icon>
-          <span>自定义</span>
+          <span>常规抽选</span>
         </div>
       </div>
     </n-layout-footer>
@@ -271,6 +297,11 @@ watch(
         </div>
       </template>
     </n-card>
+  </n-modal>
+
+  <!--  视频Modal  <-->
+  <n-modal v-model:show="playingVideo" transform-origin="center">
+    <video :src="videoSrc" preload="auto" autoplay style="width: 100%; height: 100%" />
   </n-modal>
 </template>
 
