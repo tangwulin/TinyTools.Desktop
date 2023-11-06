@@ -199,10 +199,4 @@ const ua = navigator.userAgent
   </n-space>
 </template>
 
-<style scoped>
-//.json-editor {
-//  width: 100%;
-//  max-height: calc(100vh - 10rem);
-//  display: flex;
-//}
-</style>
+<style scoped></style>
