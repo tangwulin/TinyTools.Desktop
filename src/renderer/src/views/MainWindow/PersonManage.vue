@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Component, h, Ref, ref } from "vue";
+import { Component, h, Ref, ref } from 'vue'
 import { NAvatar, NButton, NPopover, NSwitch, NTag, NText, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { useSettingStore } from '../../stores/setting'
