@@ -6,7 +6,7 @@ export const useSettingStore = defineStore(
   'setting',
   () => {
     const coloringEdgeSeats = ref<boolean>(false)
-
+    //TODO:把bgm配置移到db里
     const bgms = ref<Audio[]>([])
     const finalBgms = ref<Audio[]>([])
     const isBGMInitialized = ref<boolean>(false)
