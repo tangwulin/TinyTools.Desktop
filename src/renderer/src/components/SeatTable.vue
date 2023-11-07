@@ -159,7 +159,7 @@ const onMove = (e: dragEvent) => {
           :style="{ background: element.data.color }"
         >
           <span style="margin: auto; font-size: clamp(1.25rem, 1.8vw, 4rem)">
-            {{ element.data.displayName }}
+            {{ element.data.displayName ?? element.data.owner.name }}
           </span>
         </div>
         <div v-else-if="element.type === 'blank'" class="cell blank should-not-be-dragged"></div>
