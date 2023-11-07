@@ -332,7 +332,7 @@ const playVideo = () => {
         <template #header>
           <p>历史记录</p>
         </template>
-        <!--            <history-drawer v-model:is-preview="isPreview" v-model:temp="temp" />-->
+        <history-list :seat-history="seatHistory" />
         <!--        <template v-if="isPreview" #footer>-->
         <!--          <n-button class="ml-auto" ghost type="error" @click="exitPreview"> 退出预览</n-button>-->
         <!--        </template>-->
