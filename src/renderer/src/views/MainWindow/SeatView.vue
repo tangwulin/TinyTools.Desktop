@@ -268,10 +268,10 @@ const playVideo = () => {
         <n-popover>
           <template #trigger>
             <n-p depth="3"
-              >抽选模式：{{ raffleModes.find((item) => item.value === lotteryMode).label }}
+              >抽选模式：{{ raffleModes.find((item) => item.value === lotteryMode)?.label }}
             </n-p>
           </template>
-          <span>{{ raffleModes.find((item) => item.value === lotteryMode).description }}</span>
+          <span>{{ raffleModes.find((item) => item.value === lotteryMode)?.description }}</span>
         </n-popover>
       </n-space>
       <n-button-group class="mt-2">
