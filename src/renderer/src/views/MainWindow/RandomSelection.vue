@@ -293,7 +293,12 @@ watch(
       </n-scrollbar>
       <template #footer>
         <div class="flex justify-end">
-          <n-button type="primary" :disabled="number === 0" @click="handler(false)">开始</n-button>
+          <n-button
+            type="primary"
+            :disabled="number === 0 || number > selectionList.length"
+            @click="handler(false)"
+            >开始
+          </n-button>
         </div>
       </template>
     </n-card>
