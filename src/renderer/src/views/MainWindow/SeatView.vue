@@ -67,6 +67,7 @@ Promise.all([personsPromise, seatsPromise, seatMapPromise]).then(() => {
       const newSeatMap = genSeatMap(seats.value.length)
       seatMap.value = newSeatMap
       db.seatMap.bulkPut(newSeatMap)
+      saveHistory(seats.value, newSeatMap, '初始座位')
     } else {
       setTimeout(() => {
         showHasDiffModal.value = true
