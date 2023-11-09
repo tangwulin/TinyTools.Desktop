@@ -22,6 +22,7 @@ const { enableAvatar } = storeToRefs(settingStore)
 const showFastModal = ref(false)
 const showAdvancedModal = ref(false)
 const number = ref(1)
+const number2 = ref(1)
 const isSelected = ref(false)
 const selectedPerson = ref<Person[]>([])
 const selectedSex = ref([1, 2, 9])
@@ -80,7 +81,7 @@ const handler = (fast: boolean) => {
       }
     })
     setTimeout(() => {
-      selectedPerson.value = selectSomething(list, number.value).slice() //抽一次就行了
+      selectedPerson.value = selectSomething(list, number2.value).slice() //抽一次就行了
     }, 3000)
   }
 }
@@ -260,7 +261,7 @@ watch(
     >
       数量
       <n-input-number
-        v-model:value="number"
+        v-model:value="number2"
         :max="selectionList.length"
         :min="1"
         button-placement="both"
