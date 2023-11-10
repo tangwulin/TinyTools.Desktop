@@ -11,18 +11,18 @@ const props = defineProps({
 
 const history = computed(() => props.seatHistory)
 
-const emit = defineEmits(['OnRollback', 'OnPreview', 'OnDelete'])
+const emit = defineEmits(['rollback', 'preview', 'delete'])
 
 const rollbackHandler = (x: SeatHistory) => {
-  emit('OnRollback', x)
+  emit('rollback', x)
 }
 
 const previewHandler = (x: SeatHistory) => {
-  emit('OnPreview', x)
+  emit('preview', x)
 }
 
 const delHandler = (x: SeatHistory) => {
-  emit('OnDelete', x)
+  emit('delete', x)
 }
 </script>
 
