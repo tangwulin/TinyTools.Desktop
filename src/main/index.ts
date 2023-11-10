@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain, shell, screen } from 'electron'
+import { app, BrowserWindow, ipcMain, screen, shell } from 'electron'
 import { join } from 'path'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
@@ -59,6 +59,60 @@ app.whenReady().then(() => {
   // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
+  })
+
+  let dockWindow = null as BrowserWindow | null
+
+  ipcMain.on('openDockWindow', () => {
+    if (dockWindow) {
+      dockWindow.show()
+      return
+    }
+    // We cannot require the screen module until the app is ready.
+    // const { screen } = require('electron')
+
+    // Create a window that fills the screen's available work area.
+    const primaryDisplay = screen.getPrimaryDisplay()
+    const { width, height } = primaryDisplay.size
+
+    dockWindow = new BrowserWindow({
+      width: width * 0.5,
+      height: height * 0.15,
+      x: width * 0.25,
+      y: height * 0.75,
+      show: false,
+      transparent: true,
+      frame: false,
+      resizable: false,
+      movable: true,
+      enableLargerThanScreen: false,
+      autoHideMenuBar: true,
+      webPreferences: {
+        preload: join(__dirname, '../preload/index.js'),
+        sandbox: false
+      }
+    })
+
+    // HMR for renderer base on electron-vite cli.
+    // Load the remote URL for development or the local html file for production.
+    if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
+      dockWindow.loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#/dock')
+    } else {
+      dockWindow.loadFile(join(__dirname, '../renderer/index.html/'), {
+        hash: '/dock'
+      })
+    }
+
+    dockWindow.on('ready-to-show', () => {
+      dockWindow?.show()
+    })
+  })
+
+  ipcMain.on('closeDockWindow', () => {
+    if (dockWindow) {
+      dockWindow.close()
+      dockWindow = null
+    }
   })
 
   ipcMain.on('relaunchApp', () => {
