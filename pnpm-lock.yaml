@@ -115,6 +115,9 @@ devDependencies:
   less:
     specifier: ^4.2.0
     version: 4.2.0
+  modern-screenshot:
+    specifier: ^4.4.33
+    version: 4.4.33
   naive-ui:
     specifier: ^2.34.4
     version: 2.34.4(vue@3.3.4)
@@ -3384,6 +3387,10 @@ packages:
       pathe: 1.1.1
       pkg-types: 1.0.3
       ufo: 1.3.0
+    dev: true
+
+  /modern-screenshot@4.4.33:
+    resolution: {integrity: sha512-uxxD4PdbIitXFlcNbO6kpRuxssfN+rJDfr8Pk2/eOx1dFz+LcaYDfbfeq7UxKuhsOVeN1tj996wEY3yJYwhnaQ==}
     dev: true
 
   /ms@2.1.2:

@@ -1,6 +1,6 @@
 {
   "name": "tinytools-desktop",
-  "version": "4.0.0-alpha",
+  "version": "4.0.0-alpha+2023110901",
   "description": "An Electron application with Vue and TypeScript",
   "main": "./out/main/index.js",
   "author": "tangwulin",
@@ -58,6 +58,7 @@
     "eslint": "^8.47.0",
     "eslint-plugin-vue": "^9.17.0",
     "less": "^4.2.0",
+    "modern-screenshot": "^4.4.33",
     "naive-ui": "^2.34.4",
     "postcss": "^8.4.30",
     "prettier": "^3.0.2",
