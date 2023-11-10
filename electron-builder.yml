@@ -1,5 +1,5 @@
 appId: org.tangwulin.tinytools
-productName: tinytools-desktop
+productName: TinyTools.Desktop
 directories:
   buildResources: build
 files:
