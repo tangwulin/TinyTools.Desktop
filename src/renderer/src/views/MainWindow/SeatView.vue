@@ -7,7 +7,7 @@ import { AppDatabase } from '../../db'
 import { Person } from '../../types/person'
 import { calcNewSeatByWeight } from '../../utils/seatUtil'
 import { shuffle } from 'lodash-es'
-import { useMessage } from 'naive-ui'
+import { MessageReactive, useMessage } from 'naive-ui'
 import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import { from, useObservable } from '@vueuse/rxjs'
@@ -16,6 +16,7 @@ import { SeatHistory } from '../../types/seatHistory'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
 import raffleConfig from '../../settings/raffleModes.json'
+import { domToPng } from 'modern-screenshot'
 
 const db = AppDatabase.getInstance()
 
@@ -37,7 +38,8 @@ const currentDate = ref('')
 const currentTime = ref('')
 
 const showHistory = ref(false)
-// const isPreview = ref(false)
+const isPreview = ref(false)
+const loading = ref(false)
 const showHasDiffModal = ref(false)
 const playingVideo = ref(false)
 
@@ -137,6 +139,7 @@ const raffleSeatImmediately = (result: Seat[]) => {
 }
 
 const raffleSeatRemainMysterious = (result: Seat[]) => {
+  loading.value = true
   seats.value = Array.from(
     { length: seats.value.length },
     (_, i) => new Seat({ avatar: '', genderCode: 9, number: '', score: 0, name: '???' }, i)
@@ -155,11 +158,13 @@ const raffleSeatRemainMysterious = (result: Seat[]) => {
       seats.value = seats.value.map((item) => new Seat(item.owner, item.index, null))
       db.seats.bulkPut(deepcopy(seats.value))
       message.success('抽选完成')
+      loading.value = false
     }
   }, 500)
 }
 
 const raffleSeatFeint = (result: Seat[], times: number) => {
+  loading.value = true
   let i = 1
   const timer = setInterval(() => {
     if (i < times) {
@@ -170,6 +175,7 @@ const raffleSeatFeint = (result: Seat[], times: number) => {
       seats.value = result
       db.seats.bulkPut(deepcopy(result))
       message.success('抽选完成')
+      loading.value = false
     }
   }, 500)
 }
@@ -243,18 +249,100 @@ const playVideo = () => {
     }
   })
 }
+
+const previewHandler = (x: SeatHistory) => {
+  if (loading.value) {
+    message.error('请先等待抽选完成后再进行预览操作')
+    return
+  }
+  isPreview.value = true
+  seats.value = x.seats
+  seatMap.value = x.seatMap
+  message.info('正在预览 ' + new Date(x.timestamp).toLocaleString())
+}
+
+const exitPreview = () => {
+  isPreview.value = false
+  Promise.all([
+    db.seats.toArray().then((result) => (seats.value = result as Seat[])),
+    db.seatMap.toArray().then((result) => (seatMap.value = result as SeatState[]))
+  ]).then(() => {
+    message.success('已退出预览')
+  })
+}
+
+const rollbackHandler = (x: SeatHistory) => {
+  if (loading.value) {
+    message.error('请先等待抽选完成后再进行回滚操作')
+    return
+  }
+  seats.value = x.seats
+  seatMap.value = x.seatMap
+  db.seats.bulkPut(deepcopy(x.seats))
+  db.seatMap.bulkPut(deepcopy(x.seatMap))
+  saveHistory(x.seats, x.seatMap, '回滚而来')
+  message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
+}
+
+const delHandler = (x: SeatHistory) => {
+  db.seatHistory.delete(x.timestamp)
+  message.success('删除成功')
+}
+const save = async () => {
+  loading.value = true
+  let msgReactive = message.create('正在生成图片……', {
+    type: 'loading',
+    duration: 0
+  }) as MessageReactive | null
+
+  const target = document.getElementById('target-div')
+  if (!target) return
+  const options = {
+    filter: (node) => {
+      try {
+        return !node.classList.contains('n-button--dashed')
+      } catch {
+        return true
+      }
+    },
+    backgroundColor: '#FFFFFF',
+    scale: 3840 / target.clientWidth //统一保存为4K分辨率
+  }
+  // scale.value = x;
+  domToPng(target, options)
+    .then((dataUrl) => {
+      const link = document.createElement('a')
+      link.download = 'seat-' + currentDate.value + '-' + currentTime.value + '.png'
+      link.href = dataUrl
+      link.click()
+    })
+    .then(() => {
+      if (!msgReactive) return
+      msgReactive.content = '图片生成成功'
+      msgReactive.type = 'success'
+      loading.value = false
+      setTimeout(() => {
+        msgReactive?.destroy()
+        msgReactive = null
+      }, 3000)
+    })
+}
 </script>
 
 <template>
   <div
     id="SeatView"
     class="flex items-center justify-start flex-col h-auto m-auto"
-    style="height: 100%; z-index: 1"
+    style="height: 100%"
   >
     <!--  座位表展示区域  <-->
-    <div id="target-div" style="margin: 0 auto; padding: 1.5rem 0">
+    <div id="target-div" style="margin: 0 auto; padding: 1rem 0">
       <div>
-        <SeatTable v-model:seat-map="seatMap" v-model:seats="seats" />
+        <SeatTable
+          v-model:seat-map="seatMap"
+          v-model:seats="seats"
+          :disable="loading || isPreview"
+        />
       </div>
       <div class="flex justify-center mt-4" style="font-size: 1rem">
         <p>{{ currentDate }} {{ currentTime }}</p>
@@ -262,7 +350,7 @@ const playVideo = () => {
     </div>
 
     <!--  下方操作按钮区域  <-->
-    <div>
+    <div style="display: flex; flex-direction: column">
       <n-space justify="space-around">
         <n-p depth="3">座位预选：无</n-p>
         <n-popover>
@@ -275,11 +363,28 @@ const playVideo = () => {
         </n-popover>
       </n-space>
       <n-button-group class="mt-2">
-        <n-button @click="handler('Immediately')">直接出结果</n-button>
-        <n-button @click="handler('RemainMysterious')">来点神秘感</n-button>
-        <n-button @click="handler('Feint', 5)">虚 晃 一 枪</n-button>
-        <n-button @click="handler('Gacha')">抽卡！</n-button>
+        <n-button :disabled="loading || isPreview" @click="handler('Immediately')"
+          >直接出结果
+        </n-button>
+        <n-button :disabled="loading || isPreview" @click="handler('RemainMysterious')"
+          >来点神秘感
+        </n-button>
+        <n-button :disabled="loading || isPreview" @click="handler('Feint', 5)"
+          >虚 晃 一 枪
+        </n-button>
+        <n-button :disabled="loading || isPreview" @click="handler('Gacha')">抽卡！</n-button>
         <!--        <n-button @click="playVideo">播放视频</n-button>-->
+      </n-button-group>
+      <n-button-group>
+        <n-button @click="showHistory = true"
+          >历史记录
+          <template #icon>
+            <n-icon :depth="3">
+              <history-icon />
+            </n-icon>
+          </template>
+        </n-button>
+        <n-button :disabled="loading || isPreview" @click="save">保存图片</n-button>
       </n-button-group>
     </div>
 
@@ -293,18 +398,12 @@ const playVideo = () => {
       />
     </div>
 
-    <!--  历史记录按钮  <-->
-    <div class="fixed top-3 right-4">
-      <n-popover trigger="hover" placement="left">
-        <template #trigger>
-          <n-button text style="font-size: 36px" @click="showHistory = true">
-            <n-icon :depth="3">
-              <history-icon />
-            </n-icon>
-          </n-button>
-        </template>
-        <span>历史记录</span>
-      </n-popover>
+    <div v-if="isPreview" class="absolute top-0 left-0 mt-4 ml-4">
+      <n-button type="error" @click="exitPreview"> 退出预览</n-button>
+    </div>
+
+    <div v-if="isPreview" class="absolute top-0 right-0 mt-4 mr-4">
+      <n-button type="success" @click="saveHistory(seats, seatMap, '手动保存')"> 保存当前</n-button>
     </div>
 
     <!--  视频Modal  <-->
@@ -332,10 +431,15 @@ const playVideo = () => {
         <template #header>
           <p>历史记录</p>
         </template>
-        <history-list :seat-history="seatHistory" />
-        <!--        <template v-if="isPreview" #footer>-->
-        <!--          <n-button class="ml-auto" ghost type="error" @click="exitPreview"> 退出预览</n-button>-->
-        <!--        </template>-->
+        <history-list
+          :seat-history="seatHistory"
+          @preview="previewHandler"
+          @rollback="rollbackHandler"
+          @delete="delHandler"
+        />
+        <template v-if="isPreview" #footer>
+          <n-button class="ml-auto" ghost type="error" @click="exitPreview"> 退出预览</n-button>
+        </template>
       </n-drawer-content>
     </n-drawer>
   </div>
