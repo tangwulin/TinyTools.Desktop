@@ -1,7 +1,9 @@
-import { app, BrowserWindow, ipcMain, screen, shell } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron'
 import { join } from 'path'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+
+let tray = null as Tray | null
 
 function createWindow(): void {
   // We cannot require the screen module until the app is ready.
@@ -32,6 +34,29 @@ function createWindow(): void {
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
+
+  mainWindow.on('close', (e) => {
+    e.preventDefault()
+    mainWindow.hide()
+  })
+
+  tray = new Tray('resources/icon.png')
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      type: 'normal',
+      label: '打开主界面',
+      click: () => mainWindow.show()
+    },
+    {
+      type: 'normal',
+      label: '退出',
+      click: () => app.exit()
+    }
+  ])
+  tray.setToolTip('TinyTools.Desktop')
+  tray.setContextMenu(contextMenu)
+
+  tray.on('click', () => mainWindow.show())
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
