@@ -50,7 +50,6 @@ const delHandler = (x: SeatHistory) => {
           </template>
 
           <div id="preview" class="flex flex-col items-center justify-start">
-<!--            <n-button :size="'large'">讲台</n-button>-->
             <seat-table :seats="item.seats" :seat-map="item.seatMap" :disable="true" />
           </div>
         </n-popover>
