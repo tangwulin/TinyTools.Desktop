@@ -21,7 +21,7 @@ export const useSettingStore = defineStore(
 
     const enableOldToolBar = ref<boolean>(false)
 
-    const lotteryMode = ref<number>(2)
+    const lotteryMode = ref<number>(4)
 
     const isFirstSetup = ref<boolean>(true)
 
