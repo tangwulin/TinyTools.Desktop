@@ -318,7 +318,7 @@ const save = async () => {
   const options = {
     filter: (node) => {
       try {
-        return !node.classList.contains('n-button--dashed')
+        return !node.classList.contains('border-dashed')
       } catch {
         return true
       }
