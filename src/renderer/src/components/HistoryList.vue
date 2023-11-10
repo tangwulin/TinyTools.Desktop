@@ -9,7 +9,7 @@ const props = defineProps({
   }
 })
 
-const history = computed(() => props.seatHistory)
+const history = computed(() => props.seatHistory.slice().reverse())
 
 const emit = defineEmits(['rollback', 'preview', 'delete'])
 
@@ -29,7 +29,7 @@ const delHandler = (x: SeatHistory) => {
 <template>
   <n-list>
     <n-scrollbar style="max-height: 100%">
-      <n-list-item v-for="item in history">
+      <n-list-item v-for="item in history" :key="item.timestamp">
         <n-popover
           id="popover"
           placement="left"
