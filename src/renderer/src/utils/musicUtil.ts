@@ -40,7 +40,7 @@ export const getDefaultBgm = () => {
     },
     {
       name: 'Usagi Flap',
-      url: 'https://music.163.com/song/media/outer/url?id=2016944846.mp3',
+      url: 'https://music.163.com/song/media/outer/url?id=2059973927.mp3',
       offset: 0,
       uniqueId: genUniqueId()
     }
