@@ -3,6 +3,8 @@ import { computed, PropType, ref, watch } from 'vue'
 import { Seat, SeatState } from '../types/seat'
 import draggable from 'vuedraggable-swap'
 
+const key = ref(0)
+
 const props = defineProps({
   seats: {
     type: Array as PropType<Seat[]>,
@@ -54,6 +56,7 @@ const parseRenderingDataToSeatMap = (x: RenderingItem[]) => {
         break
     }
   }
+  key.value = Math.random()
   return newSeatMap.map((item, index) => new SeatState(index, item))
 }
 
@@ -143,6 +146,7 @@ const onMove = (e: dragEvent) => {
       </div>
     </div>
     <draggable
+      :key="key"
       v-model="renderingData"
       :disabled="disable"
       :move="onMove"
