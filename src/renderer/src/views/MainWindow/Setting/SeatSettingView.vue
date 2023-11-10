@@ -6,17 +6,17 @@ import config from '../../../settings/raffleModes.json'
 import EqualityOrEquity from '../../../assets/images/equality_or_equity.png'
 
 const setting = useSettingStore()
-const { enableOldToolBar, lotteryMode } = storeToRefs(setting)
+const { lotteryMode } = storeToRefs(setting)
 
 const raffleModes = config['raffleModes']
 </script>
 
 <template>
   <n-space :size="'large'" vertical>
-    <n-space class="items-center">
-      <p>启用旧版工具栏</p>
-      <n-switch v-model:value="enableOldToolBar" />
-    </n-space>
+    <!--    <n-space class="items-center">-->
+    <!--      <p>启用旧版工具栏</p>-->
+    <!--      <n-switch v-model:value="enableOldToolBar" />-->
+    <!--    </n-space>-->
     <n-space vertical>
       <p>抽选座位模式</p>
       <img :src="EqualityOrEquity" alt="EqualityOrEquity" style="width: 18rem" />
