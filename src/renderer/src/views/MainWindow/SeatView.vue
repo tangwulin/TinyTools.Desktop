@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { nextTick, onMounted, onUnmounted, Ref, ref } from 'vue'
+import { nextTick, onMounted, onUnmounted, Ref, ref, toRaw } from 'vue'
 import SeatTable from '../../components/SeatTable.vue'
 import { Seat, SeatState } from '../../types/seat'
 import deepcopy from 'deepcopy'
@@ -17,6 +17,18 @@ import videoSrc from '../../assets/video/单抽出金.mp4'
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
 import raffleConfig from '../../settings/raffleModes.json'
 import { domToPng } from 'modern-screenshot'
+import { Audio } from '../../types/audio'
+
+const setting = useSettingStore()
+
+const { enableBgm, enableFinalBgm, enableFadein, fadeinTime, bgms, finalBgms } =
+  storeToRefs(setting)
+
+const bgmList = shuffle(toRaw(bgms.value))
+let bgmIndex = 0
+
+const finalBgmList = shuffle(toRaw(finalBgms.value))
+let finalBgmIndex = 0
 
 const db = AppDatabase.getInstance()
 
@@ -140,6 +152,7 @@ const raffleSeatImmediately = (result: Seat[]) => {
 
 const raffleSeatRemainMysterious = (result: Seat[]) => {
   loading.value = true
+  playBgm()
   seats.value = Array.from(
     { length: seats.value.length },
     (_, i) => new Seat({ avatar: '', genderCode: 9, number: '', score: 0, name: '???' }, i)
@@ -154,28 +167,33 @@ const raffleSeatRemainMysterious = (result: Seat[]) => {
       seats.value[series[i]].color = '#ADF7B6'
       i++
     } else {
+      pauseBgm()
       clearInterval(timer)
       seats.value = seats.value.map((item) => new Seat(item.owner, item.index, null))
       db.seats.bulkPut(deepcopy(seats.value))
       message.success('抽选完成')
       loading.value = false
+      playFinalBgm()
     }
   }, 500)
 }
 
 const raffleSeatFeint = (result: Seat[], times: number) => {
   loading.value = true
+  playBgm()
   let i = 1
   const timer = setInterval(() => {
     if (i < times) {
       seats.value = shuffle(seats.value)
       i++
     } else {
+      pauseBgm()
       clearInterval(timer)
       seats.value = result
       db.seats.bulkPut(deepcopy(result))
       message.success('抽选完成')
       loading.value = false
+      playFinalBgm()
     }
   }, 500)
 }
@@ -326,6 +344,57 @@ const save = async () => {
         msgReactive = null
       }, 3000)
     })
+}
+
+const play = (option: Audio) => {
+  const player = document.getElementById('player') as HTMLAudioElement
+  player.src = option.url
+  player.currentTime = option.offset
+  if (option.name) {
+    message.info('正在播放：' + option.name)
+    console.log('正在播放：' + option.name)
+  }
+  if (enableFadein.value) {
+    const originVol = player.volume
+    player.volume = 0
+    let i = 0
+    const interval = setInterval(
+      () => {
+        i++
+        player.volume = player.volume + originVol / 50
+        if (i >= 50) clearInterval(interval)
+      },
+      (fadeinTime.value * 1000) / 50
+    )
+  }
+  player.play()
+}
+/**
+ * 从抽选时音乐库里面挑一首出来放。
+ */
+const playBgm = () => {
+  if (!enableBgm.value) return
+  const bgm = bgmList[bgmIndex]
+  console.log(bgmList)
+  if (bgmIndex < bgmList.length - 1) bgmIndex++
+  else bgmIndex = 0
+  play(bgm)
+}
+/**
+ * 顾名思义，暂停用的
+ */
+const pauseBgm = () => {
+  const player = document.getElementById('player') as HTMLAudioElement
+  player.pause()
+}
+
+const playFinalBgm = () => {
+  if (!enableFinalBgm.value) return
+  const bgm = finalBgmList[finalBgmIndex]
+  console.log(finalBgmList)
+  if (finalBgmIndex < finalBgmList.length - 1) finalBgmIndex++
+  else finalBgmIndex = 0
+  play(bgm)
 }
 </script>
 
