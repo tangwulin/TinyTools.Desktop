@@ -23,7 +23,7 @@ export class AppDatabase extends Dexie {
       groups: '++id, name, description, members',
       seats: 'index, owner',
       seatMap: 'index',
-      seatHistory: '++id, timestamp, type'
+      seatHistory: 'timestamp, type'
     })
     this.persons.mapToClass(Person)
     this.groups.mapToClass(Group)
