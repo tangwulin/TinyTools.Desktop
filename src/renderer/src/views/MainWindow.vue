@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { h, ref, watch } from 'vue'
+import { Component, h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { NIcon } from 'naive-ui'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
@@ -45,7 +45,7 @@ watch(
   }
 )
 
-function renderIcon(icon) {
+function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
 
