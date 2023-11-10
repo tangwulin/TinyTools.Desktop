@@ -15,7 +15,7 @@ import { liveQuery } from 'dexie'
 import { SeatHistory } from '../../types/seatHistory'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
-import raffleConfig from '../../settings/raffleModes.json'
+import raffleConfig from '../../config/raffleModes.json'
 import { domToPng } from 'modern-screenshot'
 import { Audio } from '../../types/audio'
 

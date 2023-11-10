@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
-import config from '../../../settings/raffleModes.json'
+import config from '../../../config/raffleModes.json'
 
 import EqualityOrEquity from '../../../assets/images/equality_or_equity.png'
 
