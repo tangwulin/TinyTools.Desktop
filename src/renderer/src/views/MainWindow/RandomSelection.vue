@@ -33,7 +33,7 @@ const hasHover2 = ref(false)
 
 const playingVideo = ref(false)
 const videoSrc = computed(() => {
-  if (number.value === 1) return singleVideo
+  if (number2.value === 1) return singleVideo
   else return groupVideo
 })
 
