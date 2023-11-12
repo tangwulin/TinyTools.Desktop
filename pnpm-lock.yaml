@@ -17,6 +17,9 @@ dependencies:
   '@vueuse/rxjs':
     specifier: ^10.4.1
     version: 10.4.1(rxjs@7.8.1)(vue@3.3.4)
+  axios:
+    specifier: ^1.6.1
+    version: 1.6.1
   deepcopy:
     specifier: ^2.1.0
     version: 2.1.0
