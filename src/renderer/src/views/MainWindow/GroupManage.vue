@@ -13,6 +13,7 @@ import { liveQuery } from 'dexie'
 import { AppDatabase } from '../../db'
 import { asyncComputed } from '@vueuse/core'
 import { from } from '@vueuse/rxjs'
+import deepcopy from 'deepcopy'
 
 const db = AppDatabase.getInstance()
 
@@ -84,7 +85,7 @@ const handleRemove = (item: Person) => {
 
 const handler = () => {
   try {
-    db.groups.put(currentGroup.value)
+    db.groups.put(deepcopy(currentGroup.value))
     message.success(isEdit.value ? '编辑成功' : '添加成功')
   } catch (e) {
     message.error('操作失败')
