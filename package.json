@@ -28,7 +28,7 @@
     "deepcopy": "^2.1.0",
     "dexie": "^3.2.4",
     "electron-updater": "^6.1.1",
-    "json-editor-vue": "^0.10.16",
+    "extract-file-icon-fix": "^0.3.3",
     "lodash-es": "^4.17.21",
     "pinia": "^2.1.6",
     "pinia-plugin-persistedstate": "^3.2.0",
