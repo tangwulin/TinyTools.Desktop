@@ -1,12 +1,12 @@
 export class ScoreHistory {
-  time: number
+  timestamp: number
   score: number
   description: string
   ownerId: number
   ownerType: 'person' | 'group'
 
   constructor(score: number, description: string, ownerId: number, ownerType: 'person' | 'group') {
-    this.time = Date.now()
+    this.timestamp = Date.now()
     this.score = score
     this.description = description
     this.ownerId = ownerId
