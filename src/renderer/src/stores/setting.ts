@@ -1,6 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { Audio } from '../types/audio'
+import { School } from '../interface/school'
 
 export const useSettingStore = defineStore(
   'setting',
@@ -29,6 +30,11 @@ export const useSettingStore = defineStore(
     const enableFallbackAvatar = ref<boolean>(true)
     const avatarWorks = ref<number[]>([1, 2, 3])
 
+    const schoolId = ref<number | null>(null)
+    const schoolInfo = ref<School | null>(null)
+    const classComputerMac = ref<string | null>(null)
+
+    const courseSource = ref<string>('')
     return {
       coloringEdgeSeats,
       bgms,
@@ -45,7 +51,11 @@ export const useSettingStore = defineStore(
       isFirstSetup,
       enableAvatar,
       enableFallbackAvatar,
-      avatarWorks
+      avatarWorks,
+      schoolId,
+      schoolInfo,
+      classComputerMac,
+      courseSource
     }
   },
   { persist: true }
