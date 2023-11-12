@@ -224,15 +224,13 @@ const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: str
           }
           if (Date.now() - result.timestamp < 1000 * 60) {
             db.seatHistory.delete(result.timestamp)
-            //目的是为了防止用户在短时间内多次手动保存，导致历史记录过多
+            //目的是为了避免用户在短时间内多次拖动座位导致的历史记录过多
           }
         }
-        db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
       })
-    message.success('已保存')
-  } else {
-    db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
   }
+  db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
+  message.success('已保存本次记录')
 }
 
 const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
