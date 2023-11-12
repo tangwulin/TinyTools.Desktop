@@ -3,7 +3,7 @@ import { History24Filled as HistoryIcon } from '@vicons/fluent'
 import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
 import { liveQuery } from 'dexie'
-import { shuffle } from 'lodash-es'
+import { debounce, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
@@ -206,8 +206,34 @@ const raffleSeatGacha = (result: Seat[]) => {
   }, 3000)
 }
 
-const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: string) =>
-  db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
+const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: string) => {
+  if (type === '手动更改') {
+    db.seatHistory
+      .orderBy('timestamp')
+      .reverse()
+      .limit(1)
+      .first()
+      .then((result) => {
+        if (result) {
+          if (
+            JSON.stringify(result.seats) === JSON.stringify(currentSeat) &&
+            JSON.stringify(result.seatMap) === JSON.stringify(currentSeatMap)
+          ) {
+            //未发生变化，无需保存
+            return
+          }
+          if (Date.now() - result.timestamp < 1000 * 60) {
+            db.seatHistory.delete(result.timestamp)
+            //目的是为了防止用户在短时间内多次手动保存，导致历史记录过多
+          }
+        }
+        db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
+      })
+    message.success('已保存')
+  } else {
+    db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
+  }
+}
 
 const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
   let result = [] as Seat[]
@@ -396,6 +422,18 @@ const playFinalBgm = () => {
   else finalBgmIndex = 0
   play(bgm)
 }
+
+const dragHandler = debounce(
+  () => {
+    db.seats.bulkPut(deepcopy(seats.value))
+    db.seatMap.bulkPut(deepcopy(seatMap.value))
+    saveHistory(seats.value, seatMap.value, '手动更改')
+  },
+  100,
+  {
+    maxWait: 2000
+  }
+)
 </script>
 
 <template>
@@ -411,6 +449,7 @@ const playFinalBgm = () => {
           v-model:seat-map="seatMap"
           v-model:seats="seats"
           :disable="loading || isPreview"
+          @dragend="dragHandler"
         />
       </div>
       <div class="flex justify-center mt-4" style="font-size: 1rem">

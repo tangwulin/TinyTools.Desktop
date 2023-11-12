@@ -34,7 +34,7 @@ watch(
   () => (seats.value = props.seats)
 )
 
-const emit = defineEmits(['update:seats', 'update:seatMap'])
+const emit = defineEmits(['update:seats', 'update:seatMap', 'dragend'])
 
 const seatMap = ref(props.seatMap)
 const seats = ref(props.seats)
@@ -154,6 +154,7 @@ const onMove = (e: dragEvent) => {
       class="text-center grid grid-cols-11"
       filter=".should-not-be-dragged"
       item-key="id"
+      @dragend="emit('dragend', $event)"
     >
       <!--suppress VueUnrecognizedSlot -->
       <template #item="{ element }">
