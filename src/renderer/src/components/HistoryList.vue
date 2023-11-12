@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, PropType } from 'vue'
 import { SeatHistory } from '../types/seatHistory'
 
@@ -50,7 +50,7 @@ const delHandler = (x: SeatHistory) => {
           </template>
 
           <div id="preview" class="flex flex-col items-center justify-start">
-            <seat-table :seats="item.seats" :seat-map="item.seatMap" :disable="true" />
+            <seat-table :disable="true" :seat-map="item.seatMap" :seats="item.seats" />
           </div>
         </n-popover>
         <template #suffix>

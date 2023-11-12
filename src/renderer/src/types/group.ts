@@ -1,5 +1,5 @@
-import { Person } from './person'
 import { IGroup } from '../interface/IGroup'
+import { Person } from './person'
 
 export class Group implements IGroup {
   id?: number

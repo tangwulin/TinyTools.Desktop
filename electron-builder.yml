@@ -14,9 +14,11 @@ asarUnpack:
 win:
   executableName: TinyTools.desktop
   icon: build/icons/icon.icns
-  artifactName: ${name}-${version}-${arch}-setup.${ext}
+#  artifactName: ${name}-${version}-${arch}-setup.${ext}
+  artifactName: TinyTools.Desktop-${version}-${arch}-setup.${ext}
 nsis:
-  artifactName: ${name}-${version}-${arch}-setup.${ext}
+#  artifactName: ${name}-${version}-${arch}-setup.${ext}
+  artifactName: TinyTools.Desktop-${version}-${arch}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}
   createDesktopShortcut: always

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
+import { useSettingStore } from '../../../stores/setting'
 
 const setting = useSettingStore()
 

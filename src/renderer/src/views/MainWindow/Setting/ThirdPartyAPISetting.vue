@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import { h, ref } from 'vue'
+<script lang="ts" setup>
 import { type ElectronAPI } from '@electron-toolkit/preload'
 import { NAvatar, type SelectRenderLabel } from 'naive-ui'
-import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
+import { h, ref } from 'vue'
 import { type School } from '../../../interface/school'
+import { useSettingStore } from '../../../stores/setting'
 
 const settingStore = useSettingStore()
 const { schoolId, schoolInfo, classComputerMac } = storeToRefs(settingStore)
@@ -82,12 +82,12 @@ const updateValue = (value: number) => {
       <p>学校选择</p>
       <n-select
         v-model:value="schoolId"
-        filterable
-        placeholder="选择学校"
-        :options="options"
-        :render-label="renderLabel"
         :loading="loading"
         :on-update-value="updateValue"
+        :options="options"
+        :render-label="renderLabel"
+        filterable
+        placeholder="选择学校"
       />
     </n-space>
     <n-space class="config-item">

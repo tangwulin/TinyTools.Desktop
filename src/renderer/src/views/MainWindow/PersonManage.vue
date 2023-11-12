@@ -1,5 +1,10 @@
 <script lang="ts" setup>
-import { Component, h, Ref, ref } from 'vue'
+import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
+import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
+import { asyncComputed } from '@vueuse/core'
+import { from, useObservable } from '@vueuse/rxjs'
+import deepcopy from 'deepcopy'
+import { liveQuery } from 'dexie'
 import {
   DataTableBaseColumn,
   DataTableFilterState,
@@ -12,25 +17,20 @@ import {
   useMessage
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { useSettingStore } from '../../stores/setting'
+import { Component, h, Ref, ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
-import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
-import downloadAnyFile from '../../utils/downloadAnyFile'
-import remToPx from '../../utils/remToPx'
 import * as XLSX from 'xlsx'
 
 // @ts-ignore:2307
 import personXlsx from '../../assets/xlsx/person.xlsx'
-import { getAvatar } from '../../utils/avatarUtil'
-import { Person } from '../../types/person'
-import { liveQuery } from 'dexie'
-import { from, useObservable } from '@vueuse/rxjs'
-import deepcopy from 'deepcopy'
 
 import { AppDatabase } from '../../db'
+import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
-import { asyncComputed } from '@vueuse/core'
+import { Person } from '../../types/person'
+import { getAvatar } from '../../utils/avatarUtil'
+import downloadAnyFile from '../../utils/downloadAnyFile'
+import remToPx from '../../utils/remToPx'
 
 const db = AppDatabase.getInstance()
 
@@ -382,10 +382,10 @@ const downloadTemplate = () => {
     :bordered="false"
     :columns="columns"
     :data="persons"
+    :loading="loading"
     :max-height="tableHeight"
     :pagination="false"
     :render-cell="renderCell"
-    :loading="loading"
     @update:filters="handleUpdateFilter"
   >
   </n-data-table>

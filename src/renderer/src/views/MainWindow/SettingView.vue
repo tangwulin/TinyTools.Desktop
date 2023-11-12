@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { useSettingStore } from '../../stores/setting'
-import { storeToRefs } from 'pinia'
-import { h, ref } from 'vue'
-import { NIcon } from 'naive-ui'
-import { RouterLink } from 'vue-router'
+import { UserAvatar as AvatarIcon } from '@vicons/carbon'
 import {
   MusicNote220Regular as MusicIcon,
   MusicNote2Play20Regular as MusicPlayIcon,
   Person20Regular as PersonIcon,
   Settings16Regular as SettingIcon
 } from '@vicons/fluent'
-import { UserAvatar as AvatarIcon } from '@vicons/carbon'
+import { NIcon } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { h, ref } from 'vue'
+import { RouterLink } from 'vue-router'
+import { useSettingStore } from '../../stores/setting'
 
 const settingStore = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(settingStore)

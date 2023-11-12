@@ -1,11 +1,11 @@
 import Dexie from 'dexie'
-import { Seat, SeatState } from './types/seat'
-import { Person } from './types/person'
+import { Course } from './interface/course'
 import { Group } from './types/group'
-import { SeatHistory } from './types/seatHistory'
-import { ScoreHistory } from './types/scoreHistory'
+import { Person } from './types/person'
 import { Rate } from './types/rate'
-import { Course } from "./interface/course";
+import { ScoreHistory } from './types/scoreHistory'
+import { Seat, SeatState } from './types/seat'
+import { SeatHistory } from './types/seatHistory'
 
 export class AppDatabase extends Dexie {
   private static _instance: AppDatabase

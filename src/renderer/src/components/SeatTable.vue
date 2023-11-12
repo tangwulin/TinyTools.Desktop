@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, PropType, ref, watch } from 'vue'
-import { Seat, SeatState } from '../types/seat'
 import draggable from 'vuedraggable-swap'
+import { Seat, SeatState } from '../types/seat'
 
 const key = ref(0)
 
@@ -159,8 +159,8 @@ const onMove = (e: dragEvent) => {
       <template #item="{ element }">
         <div
           v-if="element.type === 'seat'"
-          class="cell cursor-move"
           :style="{ background: element.data.color }"
+          class="cell cursor-move"
         >
           <span style="margin: auto; font-size: clamp(1.25rem, 1.8vw, 4rem)">
             {{ element.data.displayName ?? element.data.owner.name }}

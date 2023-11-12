@@ -1,6 +1,6 @@
-import { Group } from '../types/group'
-import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
+import { useSettingStore } from '../stores/setting'
+import { Group } from '../types/group'
 import { Person } from '../types/person'
 
 function generateHash(input: string) {

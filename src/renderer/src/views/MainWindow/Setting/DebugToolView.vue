@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useSettingStore } from '../../../stores/setting'
-import { storeToRefs } from 'pinia'
-import { NButton, useMessage } from 'naive-ui'
-import { useRouter } from 'vue-router'
+<script lang="ts" setup>
 import { type ElectronAPI } from '@electron-toolkit/preload'
+import { NButton, useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useSettingStore } from '../../../stores/setting'
 
 const settingStore = useSettingStore()
 const { enableDocking, enableDevelopFeature } = storeToRefs(settingStore)

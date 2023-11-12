@@ -1,14 +1,14 @@
 <!--suppress SpellCheckingInspection, SpellCheckingInspection -->
 <script lang="ts" setup>
-import { computed, h, ref } from 'vue'
-import { PlaylistAdd, Refresh } from '@vicons/tabler'
 import { InfoFilled } from '@vicons/material'
-import { useSettingStore } from '../../../stores/setting'
+import { PlaylistAdd, Refresh } from '@vicons/tabler'
 import { NButton, NCard, NDataTable, NForm, NModal, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { getDefaultBgm, getDefaultFinalBgm } from '../../../utils/musicUtil'
+import { computed, h, ref } from 'vue'
 import { useRoute } from 'vue-router'
+import { useSettingStore } from '../../../stores/setting'
 import genUniqueId from '../../../utils/genUniqueId'
+import { getDefaultBgm, getDefaultFinalBgm } from '../../../utils/musicUtil'
 
 const message = useMessage()
 const setting = useSettingStore()

@@ -1,23 +1,23 @@
 <script lang="ts" setup>
-import { nextTick, onMounted, onUnmounted, Ref, ref, toRaw } from 'vue'
-import SeatTable from '../../components/SeatTable.vue'
-import { Seat, SeatState } from '../../types/seat'
-import deepcopy from 'deepcopy'
-import { AppDatabase } from '../../db'
-import { Person } from '../../types/person'
-import { calcNewSeatByWeight } from '../../utils/seatUtil'
-import { shuffle } from 'lodash-es'
-import { MessageReactive, useMessage } from 'naive-ui'
-import { useSettingStore } from '../../stores/setting'
-import { storeToRefs } from 'pinia'
-import { from, useObservable } from '@vueuse/rxjs'
-import { liveQuery } from 'dexie'
-import { SeatHistory } from '../../types/seatHistory'
-import videoSrc from '../../assets/video/单抽出金.mp4'
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
-import raffleConfig from '../../config/raffleModes.json'
+import { from, useObservable } from '@vueuse/rxjs'
+import deepcopy from 'deepcopy'
+import { liveQuery } from 'dexie'
+import { shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
+import { MessageReactive, useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { nextTick, onMounted, onUnmounted, Ref, ref, toRaw } from 'vue'
+import videoSrc from '../../assets/video/单抽出金.mp4'
+import SeatTable from '../../components/SeatTable.vue'
+import raffleConfig from '../../config/raffleModes.json'
+import { AppDatabase } from '../../db'
+import { useSettingStore } from '../../stores/setting'
 import { Audio } from '../../types/audio'
+import { Person } from '../../types/person'
+import { Seat, SeatState } from '../../types/seat'
+import { SeatHistory } from '../../types/seatHistory'
+import { calcNewSeatByWeight } from '../../utils/seatUtil'
 
 const setting = useSettingStore()
 
@@ -477,7 +477,7 @@ const playFinalBgm = () => {
 
     <!--  视频Modal  <-->
     <n-modal v-model:show="playingVideo" transform-origin="center">
-      <video :src="videoSrc" preload="auto" autoplay style="width: 100%; height: 100%" />
+      <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
     </n-modal>
 
     <!--  人数和座位数不一致Modal  <-->
@@ -502,9 +502,9 @@ const playFinalBgm = () => {
         </template>
         <history-list
           :seat-history="seatHistory"
+          @delete="delHandler"
           @preview="previewHandler"
           @rollback="rollbackHandler"
-          @delete="delHandler"
         />
         <template v-if="isPreview" #footer>
           <n-button class="ml-auto" ghost type="error" @click="exitPreview"> 退出预览</n-button>

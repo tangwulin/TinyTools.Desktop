@@ -1,10 +1,10 @@
 <script lang="ts" setup>
+import { useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
 import { ref, watch } from 'vue'
 import { useSettingStore } from '../../../stores/setting'
-import { storeToRefs } from 'pinia'
-import remToPx from '../../../utils/remToPx'
 import { getAvatarUrls } from '../../../utils/avatarUtil'
-import { useMessage } from 'naive-ui'
+import remToPx from '../../../utils/remToPx'
 
 const message = useMessage()
 

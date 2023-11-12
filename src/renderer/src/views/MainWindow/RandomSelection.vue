@@ -1,17 +1,17 @@
 <script lang="ts" setup>
 import { Dice, DiceOutline } from '@vicons/ionicons5'
-import { computed, nextTick, ref, watch } from 'vue'
-import { useSettingStore } from '../../stores/setting'
-import { storeToRefs } from 'pinia'
 import { NButton, useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { computed, nextTick, ref, watch } from 'vue'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
+import groupVideo from '../../assets/video/十连出金.mp4'
+import singleVideo from '../../assets/video/单抽出金.mp4'
+import { AppDatabase } from '../../db'
+import { useSettingStore } from '../../stores/setting'
+import { Person } from '../../types/person'
+import { selectSomething } from '../../utils/arrayUtil'
 import { getAvatar } from '../../utils/avatarUtil'
 import remToPx from '../../utils/remToPx'
-import { Person } from '../../types/person'
-import { AppDatabase } from '../../db'
-import { selectSomething } from '../../utils/arrayUtil'
-import singleVideo from '../../assets/video/单抽出金.mp4'
-import groupVideo from '../../assets/video/十连出金.mp4'
 
 const db = AppDatabase.getInstance()
 const message = useMessage()
@@ -295,8 +295,8 @@ watch(
       <template #footer>
         <div class="flex justify-end">
           <n-button
-            type="primary"
             :disabled="number === 0 || number > selectionList.length"
+            type="primary"
             @click="handler(false)"
             >开始
           </n-button>
@@ -307,7 +307,7 @@ watch(
 
   <!--  视频Modal  <-->
   <n-modal v-model:show="playingVideo" transform-origin="center">
-    <video :src="videoSrc" preload="auto" autoplay style="width: 100%; height: 100%" />
+    <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
   </n-modal>
 </template>
 

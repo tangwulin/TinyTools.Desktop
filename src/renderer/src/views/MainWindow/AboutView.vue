@@ -1,8 +1,8 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useMessage } from 'naive-ui'
-import { useSettingStore } from '../../stores/setting'
 import { storeToRefs } from 'pinia'
 import logo from '../../assets/images/logo.png'
+import { useSettingStore } from '../../stores/setting'
 
 const setting = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(setting)

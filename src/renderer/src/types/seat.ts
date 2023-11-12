@@ -1,5 +1,5 @@
-import { ISeat } from '../interface/ISeat'
 import { IPerson } from '../interface/IPerson'
+import { ISeat } from '../interface/ISeat'
 
 export class Seat implements ISeat {
   owner: IPerson

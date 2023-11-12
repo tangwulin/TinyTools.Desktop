@@ -1,18 +1,22 @@
 import { type ElectronAPI } from '@electron-toolkit/preload'
-import { School } from '../interface/school'
-import { Course } from '../interface/course'
 import { ClassInfo } from '../interface/classInfo'
+import { Course } from '../interface/course'
+import { School } from '../interface/school'
 
 const electron = window.electron as ElectronAPI
 
 export class ThirdPartyAPIService {
-  protected apiUrl: string
   mac: string
   classId?: number
+  protected apiUrl: string
 
   constructor(apiUrl: string, mac: string) {
     this.apiUrl = apiUrl
     this.mac = mac
+  }
+
+  public static async getSchoolList(): Promise<School[]> {
+    return electron.ipcRenderer.invoke('getSchoolList')
   }
 
   public setApiUrl(apiUrl: string) {
@@ -34,10 +38,6 @@ export class ThirdPartyAPIService {
     } else {
       this.classId = classId
     }
-  }
-
-  public static async getSchoolList(): Promise<School[]> {
-    return electron.ipcRenderer.invoke('getSchoolList')
   }
 
   public async initClassInfo(): Promise<ClassInfo> {

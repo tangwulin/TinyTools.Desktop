@@ -1,25 +1,25 @@
-<script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { useSettingStore } from '../../stores/setting'
-import { storeToRefs } from 'pinia'
-import remToPx from '../../utils/remToPx'
-import { getAvatar } from '../../utils/avatarUtil'
+<script lang="ts" setup>
+// import { History as HistoryIcon } from '@vicons/tabler'
+import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
 import {
   GroupFilled as GroupIcon,
   PersonFilled as PersonIcon,
   ScoreboardOutlined as ScoreIcon
 } from '@vicons/material'
-import { useMessage } from 'naive-ui'
-// import { History as HistoryIcon } from '@vicons/tabler'
-import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
-import { useRoute } from 'vue-router'
-import { useGeneralStore } from '../../stores/general'
 import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
+import { useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { computed, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import { AppDatabase } from '../../db'
-import { Person } from '../../types/person'
+import { useGeneralStore } from '../../stores/general'
+import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
-import { ScoreHistory } from '../../types/scoreHistory'
+import { Person } from '../../types/person'
 import { Rate } from '../../types/rate'
+import { ScoreHistory } from '../../types/scoreHistory'
+import { getAvatar } from '../../utils/avatarUtil'
+import remToPx from '../../utils/remToPx'
 
 const db = AppDatabase.getInstance()
 
@@ -153,13 +153,13 @@ watch(
 <template>
   <n-modal v-model:show="showModal">
     <n-card
-      style="width: 70%"
-      :title="'向 ' + current?.name + ' 发送点评'"
       :bordered="false"
-      size="huge"
-      role="dialog"
+      :title="'向 ' + current?.name + ' 发送点评'"
       aria-modal="true"
       closable
+      role="dialog"
+      size="huge"
+      style="width: 70%"
       @close="showModal = false"
     >
       <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto">
@@ -187,7 +187,7 @@ watch(
           >
             <div class="flex flex-col items-center">
               <p style="text-align: center">{{ item?.name }}</p>
-              <n-tag size="small" :type="item.score >= 0 ? 'info' : 'error'"
+              <n-tag :type="item.score >= 0 ? 'info' : 'error'" size="small"
                 >{{ item?.score ?? 0 }}
               </n-tag>
               <n-p depth="3" style="font-size: 0.75rem; margin: 0">{{ item?.description }}</n-p>
@@ -199,13 +199,13 @@ watch(
   </n-modal>
   <n-modal v-model:show="showManageModal">
     <n-card
-      style="width: 70%"
-      title="评分项管理"
       :bordered="false"
-      size="huge"
-      role="dialog"
       aria-modal="true"
       closable
+      role="dialog"
+      size="huge"
+      style="width: 70%"
+      title="评分项管理"
       @close="showManageModal = false"
     >
     </n-card>
@@ -220,30 +220,30 @@ watch(
           <div
             v-for="item in persons"
             style="
-                width: 6rem;
-                height: 6rem;
-                background: #fff;
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-                margin: 0.5rem;
-              "
+              width: 6rem;
+              height: 6rem;
+              background: #fff;
+              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+              border-radius: 1rem;
+              margin: 0.5rem;
+            "
             @click="clickHandler(item)"
           >
             <div
               style="
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                "
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+              "
             >
               <n-avatar
                 v-if="enableAvatar"
+                :img-props="{ referrerpolicy: 'no-referrer' }"
                 :size="remToPx(3)"
                 :src="getAvatar(item)"
-                :img-props="{ referrerpolicy: 'no-referrer' }"
                 lazy
                 object-fit="contain"
                 round
@@ -251,8 +251,8 @@ watch(
               />
               <div class="flex flex-row items-center">
                 <p>{{ item?.name }}</p>
-                <n-tag size="small" :type="item?.score >= 0 ? 'info' : 'error'"
-                >{{ item?.score ?? 0 }}
+                <n-tag :type="item?.score >= 0 ? 'info' : 'error'" size="small"
+                  >{{ item?.score ?? 0 }}
                 </n-tag>
               </div>
             </div>
@@ -266,25 +266,25 @@ watch(
           <div
             v-for="item in groups"
             style="
-                width: 12rem;
-                height: 6rem;
-                background: #fff;
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-                margin: 0.5rem;
-              "
+              width: 12rem;
+              height: 6rem;
+              background: #fff;
+              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+              border-radius: 1rem;
+              margin: 0.5rem;
+            "
             @click="clickHandler(item)"
           >
             <div
               style="
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: center;
-                  align-items: center;
-                  margin: 0 0.5rem;
-                "
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin: 0 0.5rem;
+              "
             >
               <n-avatar
                 v-if="enableAvatar"
@@ -297,21 +297,21 @@ watch(
               <div class="mx-auto flex flex-col" style="font-size: 0.75rem">
                 <span>{{ item?.name }}</span>
                 <n-space justify="space-between"
-                ><span>{{ item?.members.length }}人</span>
+                  ><span>{{ item?.members.length }}人</span>
                   <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
                 </n-space>
                 <n-avatar-group
                   v-if="enableAvatar"
+                  :max="5"
                   :options="createAvatars(item)"
                   :size="remToPx(2)"
-                  :max="5"
                 >
                   <template #avatar="{ option: { name, src } }">
                     <n-tooltip>
                       <template #trigger>
                         <n-avatar
-                          :src="src"
                           :img-props="{ referrerpolicy: 'no-referrer' }"
+                          :src="src"
                           lazy
                           object-fit="contain"
                           round
@@ -323,8 +323,8 @@ watch(
                   <template #rest="{ options: restOptions, rest }">
                     <n-dropdown
                       :options="createDropdownOptions(restOptions)"
-                      placement="top"
                       arrow-style="overflow: hidden;"
+                      placement="top"
                       style="overflow: hidden"
                     >
                       <n-avatar style="font-size: 0.75rem">+{{ rest }}</n-avatar>
@@ -337,27 +337,27 @@ watch(
 
           <div
             style="
-                width: 12rem;
-                height: 6rem;
-                background: #fff;
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-                margin: 0.5rem;
-              "
+              width: 12rem;
+              height: 6rem;
+              background: #fff;
+              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
+              border-radius: 1rem;
+              margin: 0.5rem;
+            "
             @click="$router.push({ name: 'groupManage', query: { showAddModal: 'true' } })"
           >
             <div
               style="
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: center;
-                  align-items: center;
-                "
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+              "
             >
               <n-icon size="3rem">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M368.5 240H272v-96.5c0-8.8-7.2-16-16-16s-16 7.2-16 16V240h-96.5c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7H240v96.5c0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7 8.8 0 16-7.2 16-16V272h96.5c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
                   />
@@ -395,11 +395,11 @@ watch(
           </div>
           <div class="flex">
             <div
+              v-show="enableUndo"
               class="flex flex-col justify-center items-center cursor-pointer w-12"
               @click="undoHandler"
-              v-show="enableUndo"
             >
-              <n-icon size="1.5rem" :depth="enableUndo ? 1 : 3">
+              <n-icon :depth="enableUndo ? 1 : 3" size="1.5rem">
                 <undo-icon />
               </n-icon>
               <n-p :depth="enableUndo ? 1 : 3" class="mt-0">撤销</n-p>

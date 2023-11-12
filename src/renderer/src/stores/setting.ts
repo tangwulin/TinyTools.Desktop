@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
-import { Audio } from '../types/audio'
 import { School } from '../interface/school'
+import { Audio } from '../types/audio'
 
 export const useSettingStore = defineStore(
   'setting',

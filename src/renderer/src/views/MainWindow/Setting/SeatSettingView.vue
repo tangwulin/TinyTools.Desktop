@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-import { useSettingStore } from '../../../stores/setting'
 import { storeToRefs } from 'pinia'
-import config from '../../../config/raffleModes.json'
 
 import EqualityOrEquity from '../../../assets/images/equality_or_equity.png'
+import config from '../../../config/raffleModes.json'
+import { useSettingStore } from '../../../stores/setting'
 
 const setting = useSettingStore()
 const { lotteryMode } = storeToRefs(setting)

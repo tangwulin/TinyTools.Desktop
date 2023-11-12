@@ -1,18 +1,18 @@
 <script lang="ts" setup>
-import { Component, h, ref, watch } from 'vue'
-import { RouterLink } from 'vue-router'
-import { NIcon } from 'naive-ui'
-import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
+import { Group as GroupIcon } from '@vicons/carbon'
 // import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
   Info20Regular as InfoIcon,
   Person24Regular as PersonIcon,
   Settings16Regular as SettingIcon
 } from '@vicons/fluent'
-import { Group as GroupIcon } from '@vicons/carbon'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
+import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
+import { NIcon } from 'naive-ui'
 // import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
+import { Component, h, ref, watch } from 'vue'
+import { RouterLink } from 'vue-router'
 import logoUrl from '../assets/images/logo.png'
 import { useGeneralStore } from '../stores/general'
 

@@ -1,5 +1,5 @@
-import { Seat } from '../types/seat'
 import { Person } from '../types/person'
+import { Seat } from '../types/seat'
 
 function calcDistance(x: Seat, y: Seat): number
 // function calcDistance(x: number, y: number): number

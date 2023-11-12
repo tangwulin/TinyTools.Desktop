@@ -1,10 +1,10 @@
-<script setup lang="ts">
-import { ref } from 'vue'
-import { useSettingStore } from '../stores/setting'
+<script lang="ts" setup>
 import { storeToRefs } from 'pinia'
-import { getTodayCourse } from '../services/LocalClassScheduleService'
+import { ref } from 'vue'
 import { Course } from '../interface/course'
+import { getTodayCourse } from '../services/LocalClassScheduleService'
 import { ThirdPartyAPIService } from '../services/ThirdPartyAPIService'
+import { useSettingStore } from '../stores/setting'
 
 const setting = useSettingStore()
 const { courseSource, schoolInfo, classComputerMac } = storeToRefs(setting)
