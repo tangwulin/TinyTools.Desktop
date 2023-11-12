@@ -23,7 +23,6 @@ import * as XLSX from 'xlsx'
 // @ts-ignore:2307
 import personXlsx from '../../assets/xlsx/person.xlsx'
 import { getAvatar } from '../../utils/avatarUtil'
-import { useScoreStore } from '../../stores/score'
 import { Person } from '../../types/person'
 import { liveQuery } from 'dexie'
 import { from, useObservable } from '@vueuse/rxjs'
@@ -38,9 +37,7 @@ const db = AppDatabase.getInstance()
 const route = useRoute()
 
 const settingStore = useSettingStore()
-const scoreStore = useScoreStore()
 const { enableFallbackAvatar } = storeToRefs(settingStore)
-const { scoreHistories } = storeToRefs(scoreStore)
 
 const loading = asyncComputed(() => persons.value.length === 0, true)
 
@@ -102,7 +99,6 @@ const editHandler = (row: Person) => {
 
 const deleteHandler = (row: Person) => {
   db.persons.delete(row.id as number)
-  scoreHistories.value = scoreHistories.value.filter((item) => item.ownerId !== <number>row.id)
   //TODO: 删除人员时删除记分记录
   message.success('删除成功')
 }
