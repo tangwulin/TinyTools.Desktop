@@ -2,6 +2,7 @@ import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron
 import { join } from 'path'
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
+import { getCourseList, getSchoolList, initClassInfo } from './ThirdPartyAPI.js'
 
 let tray = null as Tray | null
 
@@ -144,6 +145,10 @@ app.whenReady().then(() => {
     app.relaunch()
     app.exit()
   })
+
+  ipcMain.handle('getSchoolList', () => getSchoolList())
+  ipcMain.handle('initClassInfo', (_, args) => initClassInfo(...args))
+  ipcMain.handle('getCourseList', (_, args) => getCourseList(...args))
 
   createWindow()
 

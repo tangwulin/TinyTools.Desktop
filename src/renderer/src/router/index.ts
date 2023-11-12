@@ -72,6 +72,11 @@ const routes: RouteRecordRaw[] = [
             ]
           },
           {
+            path: '/setting/thirdPartyApi',
+            name: 'thirdApi',
+            component: () => import('../views/MainWindow/Setting/ThirdPartyAPISetting.vue')
+          },
+          {
             path: '/setting/debug',
             name: 'debugTool',
             component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
