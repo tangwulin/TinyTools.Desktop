@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 
 const hasImported = ref(false)
@@ -7,17 +7,14 @@ const hasImported = ref(false)
 <template>
   <n-card
     :bordered="false"
-    style="margin: auto auto;display: flex;justify-content: center;align-items: center"
+    style="margin: auto auto; display: flex; justify-content: center; align-items: center"
   >
     <n-table v-if="hasImported" :single-line="false">
       <thead>
-      <tr>
-      </tr>
+        <tr></tr>
       </thead>
     </n-table>
   </n-card>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
