@@ -118,20 +118,6 @@ const settingOptions = [
         RouterLink,
         {
           to: {
-            name: 'thirdApi'
-          }
-        },
-        { default: () => '第三方API' }
-      ),
-    key: 'apiSetting',
-    icon: renderIcon(SettingIcon)
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
             name: 'debugTool'
           }
         },

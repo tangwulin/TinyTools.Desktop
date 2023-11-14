@@ -1,7 +1,14 @@
-export interface Course {
-  ClassTimeName: string //应该是第几节课
-  ClassBegin: string
-  ClassOver: string
-  CourseName: string
-  TeacherName: string
+export interface CourseTableItem {
+  id?: number
+  time: { start: { hour: number; minute: number }; end: { hour: number; minute: number } }
+  mon: string
+  tue: string
+  wed: string
+  thu: string
+  fri: string
+  spe1: string
+  spe2: string
+  spe3: string
+  spe4: string
+  spe5: string
 }

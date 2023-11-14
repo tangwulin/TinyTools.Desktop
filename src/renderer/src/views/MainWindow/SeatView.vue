@@ -441,7 +441,10 @@ const dragHandler = debounce(
     style="height: 100%"
   >
     <!--  座位表展示区域  <-->
-    <div id="target-div" style="margin: 0 auto; padding: 1rem 0">
+    <div
+      id="target-div"
+      style="margin: 0 0; padding: 1rem 0; height: calc(100vh - 6rem); width: 85%"
+    >
       <div>
         <SeatTable
           v-model:seat-map="seatMap"

@@ -1,9 +1,19 @@
 <script lang="ts" setup>
+import { useElementSize } from '@vueuse/core'
 import { computed, PropType, ref, watch } from 'vue'
 import draggable from 'vuedraggable-swap'
 import { Seat, SeatState } from '../types/seat'
 
 const key = ref(0)
+const el = ref(null)
+
+const { width } = useElementSize(el)
+const widthPerSeat = computed(() => width.value / 11)
+
+const getFontSize = (n: number) => {
+  if (n < 4) return (widthPerSeat.value * 0.7) / 3
+  else return (widthPerSeat.value * 0.8) / n
+}
 
 const props = defineProps({
   seats: {
@@ -32,6 +42,15 @@ watch(
 watch(
   () => props.seats,
   () => (seats.value = props.seats)
+)
+
+watch(
+  () => props.reverse,
+  () => (reverse.value = props.reverse)
+)
+watch(
+  () => props.disable,
+  () => (disable.value = props.disable)
 )
 
 const emit = defineEmits(['update:seats', 'update:seatMap', 'dragend'])
@@ -106,10 +125,10 @@ const renderingData = computed({
           break
       }
     }
-    return reverse.value ? data.reverse() : data
+    return reverse.value ? data.slice().reverse() : data
   },
   set(value) {
-    value = reverse.value ? value.reverse() : value
+    value = reverse.value ? value.slice().reverse() : value
     seatMap.value = parseRenderingDataToSeatMap(value)
     seats.value = parseRenderingDataToSeats(value)
     emit('update:seatMap', seatMap.value)
@@ -136,13 +155,26 @@ const onMove = (e: dragEvent) => {
       return false
   }
 }
+
+watch(
+  () => renderingData.value,
+  () => {
+    key.value = Math.random()
+  }
+)
 </script>
 
 <template>
-  <div style="width: calc(clamp(3rem, 5vw, 6rem) * 5 / 3 * 11)">
-    <div class="flex items-center justify-center mb-4">
-      <div class="cell">
-        <span style="margin: auto; font-size: clamp(1.25rem, 1.8vw, 4rem)">讲台</span>
+  <div ref="el" style="width: 100%; height: 100%">
+    <div v-if="!reverse" class="flex items-center justify-center mb-4">
+      <div class="cell" style="width: 10%">
+        <span
+          :style="{
+            margin: 'auto',
+            fontSize: getFontSize(2) + 'px'
+          }"
+          >讲台</span
+        >
       </div>
     </div>
     <draggable
@@ -163,7 +195,14 @@ const onMove = (e: dragEvent) => {
           :style="{ background: element.data.color }"
           class="cell cursor-move"
         >
-          <span style="margin: auto; font-size: clamp(1.25rem, 1.8vw, 4rem)">
+          <span
+            :style="{
+              margin: 'auto',
+              fontSize:
+                getFontSize(element.data.displayName.length ?? element.data.owner.name.length) +
+                'px'
+            }"
+          >
             {{ element.data.displayName ?? element.data.owner.name }}
           </span>
         </div>
@@ -174,6 +213,17 @@ const onMove = (e: dragEvent) => {
         ></div>
       </template>
     </draggable>
+    <div v-if="reverse" class="flex items-center justify-center mt-4">
+      <div class="cell" style="width: 10%">
+        <span
+          :style="{
+            margin: 'auto',
+            fontSize: getFontSize(2) + 'px'
+          }"
+          >讲台</span
+        >
+      </div>
+    </div>
   </div>
 </template>
 
@@ -189,9 +239,9 @@ const onMove = (e: dragEvent) => {
 
 .cell {
   display: flex;
-  height: clamp(3rem, 5vw, 6rem);
+  width: 100%;
   aspect-ratio: 5/3;
   border: 1px solid rgb(224, 224, 230);
-  border-radius: calc(clamp(3px, 0.5vw, 10px));
+  border-radius: calc(clamp(3px, 8%, 10px));
 }
 </style>

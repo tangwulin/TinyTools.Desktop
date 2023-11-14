@@ -5,4 +5,4 @@ out
 .idea
 /src/renderer/auto-imports.d.ts
 /src/renderer/components.d.ts
-/src/main/ThirdPartyAPI_source.js
+

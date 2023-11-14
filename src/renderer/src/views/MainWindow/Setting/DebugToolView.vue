@@ -4,7 +4,10 @@ import { NButton, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { AppDatabase } from '../../../db'
 import { useSettingStore } from '../../../stores/setting'
+
+const db = AppDatabase.getInstance()
 
 const settingStore = useSettingStore()
 const { enableDocking, enableDevelopFeature } = storeToRefs(settingStore)
@@ -45,6 +48,7 @@ const disableDevelopFeature = () => {
 
 const clearData = () => {
   localStorage.clear()
+  db.delete()
   message.success('数据已清除！程序即将重启！')
   setTimeout(() => {
     relaunch()

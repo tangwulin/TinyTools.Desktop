@@ -1,5 +1,5 @@
 import Dexie from 'dexie'
-import { Course } from './interface/course'
+import { CourseTableItem } from './interface/course'
 import { Group } from './types/group'
 import { Person } from './types/person'
 import { Rate } from './types/rate'
@@ -17,7 +17,7 @@ export class AppDatabase extends Dexie {
   seatHistory!: Dexie.Table<SeatHistory, number>
   rates!: Dexie.Table<Rate, number>
   scoreHistories!: Dexie.Table<ScoreHistory, number>
-  coursesTable!: Dexie.Table<{ on: number; courses: Course[] }, number>
+  coursesTable!: Dexie.Table<CourseTableItem, number>
 
   constructor() {
     super('AppDatabase')
@@ -29,7 +29,7 @@ export class AppDatabase extends Dexie {
       seatHistory: 'timestamp, type',
       rates: '++id, name, description',
       scoreHistories: 'timestamp, ownerId',
-      coursesTable: 'on'
+      coursesTable: '++id'
     })
     this.persons.mapToClass(Person)
     this.groups.mapToClass(Group)

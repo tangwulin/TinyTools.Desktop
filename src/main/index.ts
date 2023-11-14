@@ -1,8 +1,7 @@
+import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron'
 import { join } from 'path'
-import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import icon from '../../resources/icon.png?asset'
-import { getCourseList, getSchoolList, initClassInfo } from './ThirdPartyAPI.js'
 
 let tray = null as Tray | null
 
@@ -16,10 +15,10 @@ function createWindow(): void {
 
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: (height / 1080) * 1280,
-    height: (height / 1080) * 750,
-    minWidth: (height / 1080) * 1280,
-    minHeight: (height / 1080) * 750,
+    width: (height / 1080) * 1080,
+    height: (height / 1080) * 650,
+    minWidth: (height / 1080) * 1080,
+    minHeight: (height / 1080) * 650,
     show: false,
     center: true,
     enableLargerThanScreen: false,
@@ -145,10 +144,6 @@ app.whenReady().then(() => {
     app.relaunch()
     app.exit()
   })
-
-  ipcMain.handle('getSchoolList', () => getSchoolList())
-  ipcMain.handle('initClassInfo', (_, args) => initClassInfo(...args))
-  ipcMain.handle('getCourseList', (_, args) => getCourseList(...args))
 
   createWindow()
 

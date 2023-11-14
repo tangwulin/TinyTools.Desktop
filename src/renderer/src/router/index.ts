@@ -1,11 +1,12 @@
 import { createRouter, createWebHashHistory, Router, RouteRecordRaw, RouterOptions } from "vue-router"; //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
-import MainWindow from "../views/MainWindow.vue";
+import MainWindow from "../views/MainWindow.vue"; //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //RouterRecordRaw是路由组件对象
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
     component: MainWindow,
+    name: 'mainWindow',
     redirect: { name: 'seat' },
     children: [
       { path: '/seat', name: 'seat', component: () => import('../views/MainWindow/SeatView.vue') },
@@ -71,16 +72,49 @@ const routes: RouteRecordRaw[] = [
             ]
           },
           {
-            path: '/setting/thirdPartyApi',
-            name: 'thirdApi',
-            component: () => import('../views/MainWindow/Setting/ThirdPartyAPISetting.vue')
-          },
-          {
             path: '/setting/debug',
             name: 'debugTool',
             component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
           }
         ]
+      }
+    ]
+  },
+  {
+    path: '/welcome',
+    name: 'welcome',
+    component: () => import('../views/MainWindow/WelcomeView.vue')
+  },
+  {
+    path: '/setup',
+    name: 'setup',
+    component: () => import('../views/MainWindow/SetupView.vue'),
+    redirect: '/setup/person',
+    children: [
+      {
+        path: '/setup/person',
+        name: 'importPerson',
+        component: () => import('../views/MainWindow/Setup/ImportPersonView.vue')
+      },
+      {
+        path: '/setup/seat',
+        name: 'assignSeat',
+        component: () => import('../views/MainWindow/Setup/AssignSeatView.vue')
+      },
+      {
+        path: '/setup/schedule',
+        name: 'setup schedule',
+        component: () => import('../views/MainWindow/Setup/ScheduleView.vue')
+      },
+      {
+        path: '/setup/work-schedule',
+        name: 'setup workSchedule',
+        component: () => import('../views/MainWindow/Setup/WorkScheduleView.vue')
+      },
+      {
+        path: '/setup/done',
+        name: 'setup done',
+        component: () => import('../views/MainWindow/Setup/SetupDoneView.vue')
       }
     ]
   },

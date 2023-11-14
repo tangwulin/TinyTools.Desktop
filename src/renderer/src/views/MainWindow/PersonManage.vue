@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
-import { asyncComputed } from '@vueuse/core'
+import { asyncComputed, useElementSize } from '@vueuse/core'
 import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
 import { liveQuery } from 'dexie'
@@ -17,7 +17,7 @@ import {
   useMessage
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { Component, h, Ref, ref } from 'vue'
+import { Component, computed, h, Ref, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import * as XLSX from 'xlsx'
 
@@ -52,6 +52,8 @@ const persons = useObservable(
   )
 ) as Readonly<Ref<Person[]>>
 const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
+
+const el = ref(null)
 
 const showAddModal = ref(false)
 showAddModal.value = route.query.showAddModal === 'true'
@@ -334,10 +336,11 @@ const parseExcel = async (uploadFileInfo: any) => {
   }
 }
 
-const tableHeight = ref(window.innerHeight - remToPx(5.5))
-window.addEventListener('resize', () => {
-  tableHeight.value = window.innerHeight - remToPx(5.5)
-})
+const { height } = useElementSize(el)
+const tableHeight = computed(() => height.value - remToPx(5.5))
+// window.addEventListener('resize', () => {
+//   tableHeight.value = height - remToPx(5.5)
+// })
 
 const downloadTemplate = () => {
   downloadAnyFile(personXlsx, '人员导入模板.xlsx')
@@ -349,192 +352,194 @@ const downloadTemplate = () => {
 </script>
 
 <template>
-  <n-space justify="space-between">
-    <p>{{ route.name === 'personManage' ? '修改后请重启程序以重新生成座位' : '' }}</p>
-    <n-space>
-      <n-button class="p-2" size="small" type="primary" @click="showImportModal = true">
-        <template #icon>
-          <n-icon>
-            <ImportIcon />
-          </n-icon>
-        </template>
-        导入
-      </n-button>
-      <n-button class="p-2" size="small" type="primary" @click="showAddModal = true">
-        <template #icon>
-          <n-icon>
-            <PersonAddIcon />
-          </n-icon>
-        </template>
-        添加
-      </n-button>
-      <n-button class="p-2" size="small" type="primary" @click="showMultiAddModal = true">
-        <template #icon>
-          <n-icon>
-            <PlaylistAdd />
-          </n-icon>
-        </template>
-        批量添加
-      </n-button>
-    </n-space>
-  </n-space>
-  <n-data-table
-    :bordered="false"
-    :columns="columns"
-    :data="persons"
-    :loading="loading"
-    :max-height="tableHeight"
-    :pagination="false"
-    :render-cell="renderCell"
-    @update:filters="handleUpdateFilter"
-  >
-  </n-data-table>
-
-  <n-modal v-model:show="showAddModal" :mask-closable="false">
-    <n-card
-      :bordered="true"
-      :title="isEdit ? '编辑人员' : '添加人员'"
-      closable
-      size="huge"
-      style="width: 50%"
-      @close="
-        () => {
-          showAddModal = false
-          if (isEdit) formValue = new Person('', 9, '')
-          isEdit = false
-        }
-      "
-    >
-      <n-scrollbar
-        style="max-height: 70vh; overflow-x: hidden; padding: 0 1rem 0 0; margin: 0 0 1rem 0"
-      >
-        <n-form>
-          <n-form-item label="头像" path="avatar">
-            <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
-          </n-form-item>
-          <n-form-item label="姓名" path="name">
-            <n-input v-model:value="formValue.name" placeholder="输入姓名" />
-          </n-form-item>
-          <n-form-item label="学号（可选）" path="number">
-            <n-input v-model:value="formValue.number" placeholder="输入学号" />
-          </n-form-item>
-          <n-form-item label="性别（可选）" path="sex">
-            <n-radio-group v-model:value="formValue.genderCode">
-              <n-space>
-                <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
-                  {{ sex.label }}
-                </n-radio>
-              </n-space>
-            </n-radio-group>
-          </n-form-item>
-          <!--          <n-space vertical>-->
-          <!--            <n-space>-->
-          <!--              <p>分组（可选）</p>-->
-          <!--              <n-button tertiary size="tiny">分组管理</n-button>-->
-          <!--            </n-space>-->
-          <!--            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="createOptions(groups)" />-->
-          <!--          </n-space>-->
-        </n-form>
-      </n-scrollbar>
-      <div class="flex justify-end">
-        <n-button :disabled="formValue.name.length === 0" type="primary" @click="handler"
-          >保存
-        </n-button>
-      </div>
-    </n-card>
-  </n-modal>
-
-  <n-modal v-model:show="showMultiAddModal" :mask-closable="false">
-    <n-card
-      :bordered="true"
-      closable
-      size="huge"
-      style="width: 50%"
-      title="批量增加人员"
-      @close="
-        () => {
-          showMultiAddModal = false
-        }
-      "
-    >
-      <n-form :label-width="80" :model="multiAddForm">
-        <n-form-item label="请在下方输入姓名，多个请以空格或英文逗号分割" path="input">
-          <div class="flex flex-col w-full">
-            <n-text>当前已检测到：{{ multiAddForm.names.length }}个</n-text>
-            <n-input
-              v-model:value="multiAddForm.input"
-              placeholder="张三,李四,王五……"
-              type="textarea"
-              @blur="parseName"
-              @focus="parseName"
-              @keyup="parseName"
-            />
-          </div>
-        </n-form-item>
-        <n-form-item label="解析到的姓名" path="names">
-          <n-dynamic-tags v-model:value="multiAddForm.names" />
-        </n-form-item>
-      </n-form>
-      <template #footer>
-        <div class="flex">
-          <NButton
-            :disabled="multiAddForm.names.length === 0"
-            class="ml-auto"
-            type="primary"
-            @click="addPerson"
-          >
-            保存
-          </NButton>
-        </div>
-      </template>
-    </n-card>
-  </n-modal>
-
-  <n-modal v-model:show="showImportModal" :mask-closable="false">
-    <n-card
-      :bordered="true"
-      closable
-      size="huge"
-      style="width: 50%"
-      title="导入人员"
-      @close="showImportModal = false"
-    >
-      <n-upload
-        :default-upload="false"
-        :max="1"
-        :on-before-upload="parseExcel"
-        accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
-        action=""
-        directory-dnd
-        multiple
-      >
-        <n-upload-dragger>
-          <div style="margin-bottom: 12px">
-            <n-icon :depth="3" size="48">
-              <file-icon />
+  <div ref="el" style="width: 100%; height: 100%">
+    <n-space justify="space-between">
+      <p>{{ route.name === 'personManage' ? '修改后请重启程序以重新生成座位' : '' }}</p>
+      <n-space>
+        <n-button class="p-2" size="small" type="primary" @click="showImportModal = true">
+          <template #icon>
+            <n-icon>
+              <ImportIcon />
             </n-icon>
-          </div>
-          <n-text style="font-size: 16px"> 点击或者拖动文件到该区域来导入人员</n-text>
-        </n-upload-dragger>
-      </n-upload>
-      <n-space justify="center">
-        <!--        <a download="人员导入模板.xlsx" :href="personXlsx" target="_blank">点此获取模板</a>-->
-        <n-button text @click="downloadTemplate">点此获取模板</n-button>
+          </template>
+          导入
+        </n-button>
+        <n-button class="p-2" size="small" type="primary" @click="showAddModal = true">
+          <template #icon>
+            <n-icon>
+              <PersonAddIcon />
+            </n-icon>
+          </template>
+          添加
+        </n-button>
+        <n-button class="p-2" size="small" type="primary" @click="showMultiAddModal = true">
+          <template #icon>
+            <n-icon>
+              <PlaylistAdd />
+            </n-icon>
+          </template>
+          批量添加
+        </n-button>
       </n-space>
-      <template #footer>
-        <div class="flex">
-          <NButton
-            :disabled="multiAddForm.names.length === 0"
-            class="ml-auto"
-            type="primary"
-            @click="addPerson"
-          >
-            保存
-          </NButton>
+    </n-space>
+    <n-data-table
+      :bordered="false"
+      :columns="columns"
+      :data="persons"
+      :loading="loading"
+      :max-height="tableHeight"
+      :pagination="false"
+      :render-cell="renderCell"
+      @update:filters="handleUpdateFilter"
+    >
+    </n-data-table>
+
+    <n-modal v-model:show="showAddModal" :mask-closable="false">
+      <n-card
+        :bordered="true"
+        :title="isEdit ? '编辑人员' : '添加人员'"
+        closable
+        size="huge"
+        style="width: 50%"
+        @close="
+          () => {
+            showAddModal = false
+            if (isEdit) formValue = new Person('', 9, '')
+            isEdit = false
+          }
+        "
+      >
+        <n-scrollbar
+          style="max-height: 70vh; overflow-x: hidden; padding: 0 1rem 0 0; margin: 0 0 1rem 0"
+        >
+          <n-form>
+            <n-form-item label="头像" path="avatar">
+              <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
+            </n-form-item>
+            <n-form-item label="姓名" path="name">
+              <n-input v-model:value="formValue.name" placeholder="输入姓名" />
+            </n-form-item>
+            <n-form-item label="学号（可选）" path="number">
+              <n-input v-model:value="formValue.number" placeholder="输入学号" />
+            </n-form-item>
+            <n-form-item label="性别（可选）" path="sex">
+              <n-radio-group v-model:value="formValue.genderCode">
+                <n-space>
+                  <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
+                    {{ sex.label }}
+                  </n-radio>
+                </n-space>
+              </n-radio-group>
+            </n-form-item>
+            <!--          <n-space vertical>-->
+            <!--            <n-space>-->
+            <!--              <p>分组（可选）</p>-->
+            <!--              <n-button tertiary size="tiny">分组管理</n-button>-->
+            <!--            </n-space>-->
+            <!--            <n-transfer ref="transfer" v-model:value="formValue.groups" :options="createOptions(groups)" />-->
+            <!--          </n-space>-->
+          </n-form>
+        </n-scrollbar>
+        <div class="flex justify-end">
+          <n-button :disabled="formValue.name.length === 0" type="primary" @click="handler"
+            >保存
+          </n-button>
         </div>
-      </template>
-    </n-card>
-  </n-modal>
+      </n-card>
+    </n-modal>
+
+    <n-modal v-model:show="showMultiAddModal" :mask-closable="false">
+      <n-card
+        :bordered="true"
+        closable
+        size="huge"
+        style="width: 50%"
+        title="批量增加人员"
+        @close="
+          () => {
+            showMultiAddModal = false
+          }
+        "
+      >
+        <n-form :label-width="80" :model="multiAddForm">
+          <n-form-item label="请在下方输入姓名，多个请以空格或英文逗号分割" path="input">
+            <div class="flex flex-col w-full">
+              <n-text>当前已检测到：{{ multiAddForm.names.length }}个</n-text>
+              <n-input
+                v-model:value="multiAddForm.input"
+                placeholder="张三,李四,王五……"
+                type="textarea"
+                @blur="parseName"
+                @focus="parseName"
+                @keyup="parseName"
+              />
+            </div>
+          </n-form-item>
+          <n-form-item label="解析到的姓名" path="names">
+            <n-dynamic-tags v-model:value="multiAddForm.names" />
+          </n-form-item>
+        </n-form>
+        <template #footer>
+          <div class="flex">
+            <NButton
+              :disabled="multiAddForm.names.length === 0"
+              class="ml-auto"
+              type="primary"
+              @click="addPerson"
+            >
+              保存
+            </NButton>
+          </div>
+        </template>
+      </n-card>
+    </n-modal>
+
+    <n-modal v-model:show="showImportModal" :mask-closable="false">
+      <n-card
+        :bordered="true"
+        closable
+        size="huge"
+        style="width: 50%"
+        title="导入人员"
+        @close="showImportModal = false"
+      >
+        <n-upload
+          :default-upload="false"
+          :max="1"
+          :on-before-upload="parseExcel"
+          accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel"
+          action=""
+          directory-dnd
+          multiple
+        >
+          <n-upload-dragger>
+            <div style="margin-bottom: 12px">
+              <n-icon :depth="3" size="48">
+                <file-icon />
+              </n-icon>
+            </div>
+            <n-text style="font-size: 16px"> 点击或者拖动文件到该区域来导入人员</n-text>
+          </n-upload-dragger>
+        </n-upload>
+        <n-space justify="center">
+          <!--        <a download="人员导入模板.xlsx" :href="personXlsx" target="_blank">点此获取模板</a>-->
+          <n-button text @click="downloadTemplate">点此获取模板</n-button>
+        </n-space>
+        <template #footer>
+          <div class="flex">
+            <NButton
+              :disabled="multiAddForm.names.length === 0"
+              class="ml-auto"
+              type="primary"
+              @click="addPerson"
+            >
+              保存
+            </NButton>
+          </div>
+        </template>
+      </n-card>
+    </n-modal>
+  </div>
 </template>
 
 <style scoped></style>
