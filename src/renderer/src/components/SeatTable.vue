@@ -199,7 +199,7 @@ watch(
             :style="{
               margin: 'auto',
               fontSize:
-                getFontSize(element.data.displayName.length ?? element.data.owner.name.length) +
+                getFontSize(element.data.displayName?.length ?? element.data.owner.name?.length) +
                 'px'
             }"
           >
