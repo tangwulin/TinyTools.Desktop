@@ -11,7 +11,7 @@ import { AppDatabase } from '../../../db'
 import { Person } from '../../../types/person'
 import { Seat, SeatState } from '../../../types/seat'
 import { SeatHistory } from '../../../types/seatHistory'
-import { calcNewSeatByWeight } from '../../../utils/seatUtil'
+import { genSeatMap } from '../../../utils/seatUtil'
 
 const db = AppDatabase.getInstance()
 
@@ -65,35 +65,6 @@ Promise.all([personsPromise, seatsPromise, seatMapPromise]).then(() => {
     }
   }
 })
-
-const genSeatMap = (seatCount: number) => {
-  const result: ('seat' | 'blank' | 'empty')[] = []
-  for (let i = 0; i < seatCount; i++) {
-    result.push('seat')
-    if ((i + 1) % 2 === 0 && (i + 1) % 8 !== 0) result.push('blank')
-  }
-
-  if (result.length % 11 !== 0) {
-    switch ((11 - (result.length % 11)) % 3) {
-      case 1:
-        result.push('empty')
-        break
-      case 2:
-        result.push('empty')
-        result.push('empty')
-        break
-    }
-
-    if (result.length % 11 !== 0)
-      for (let i = 0; i < Math.floor((11 - (result.length % 11)) / 3); i++) {
-        result.push('blank')
-        result.push('empty')
-        result.push('empty')
-      }
-  }
-  return result.map((item, index) => new SeatState(index, item))
-  // return result.slice(0, result.length - 3).map((item, index) => new SeatState(index, item)) //这里故意去掉了最后三个空位，因为上面的代码似乎有问题
-}
 
 const raffleSeatImmediately = (result: Seat[]) => {
   seats.value = result

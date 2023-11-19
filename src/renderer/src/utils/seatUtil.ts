@@ -1,5 +1,5 @@
 import { Person } from '../types/person'
-import { Seat } from '../types/seat'
+import { Seat, SeatState } from '../types/seat'
 
 function calcDistance(x: Seat, y: Seat): number
 // function calcDistance(x: number, y: number): number
@@ -209,4 +209,33 @@ export const calcNewSeatByWeight = (
       item.index
     )
   })
+}
+export const genSeatMap = (seatCount: number) => {
+  const result: ('seat' | 'blank' | 'empty')[] = []
+  for (let i = 0; i < seatCount; i++) {
+    result.push('seat')
+    if ((i + 1) % 2 === 0 && (i + 1) % 8 !== 0) result.push('blank')
+  }
+
+  if (result.length % 11 !== 0) {
+    switch ((11 - (result.length % 11)) % 3) {
+      case 1:
+        result.push('empty')
+        break
+      case 2:
+        result.push('empty')
+        result.push('empty')
+        break
+    }
+
+    if (result.length % 11 !== 0) {
+      const times = Math.floor((11 - (result.length % 11)) / 3)
+      for (let i = 0; i < times; i++) {
+        result.push('blank')
+        result.push('empty')
+        result.push('empty')
+      }
+    }
+  }
+  return result.map((item, index) => new SeatState(index, item))
 }
