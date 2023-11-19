@@ -19,9 +19,6 @@ const persons = ref([] as Person[])
 const seats = ref([] as Seat[])
 const seatMap = ref([] as SeatState[])
 
-const currentDate = ref('')
-const currentTime = ref('')
-
 const reverse = ref(false)
 const loading = ref(false)
 const showHasDiffModal = ref(false)
