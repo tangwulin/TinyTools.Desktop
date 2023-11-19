@@ -7,6 +7,8 @@ import {
   ScoreboardOutlined as ScoreIcon
 } from '@vicons/material'
 import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
+import { from, useObservable } from '@vueuse/rxjs'
+import { liveQuery } from 'dexie'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, ref, watch } from 'vue'
@@ -16,8 +18,6 @@ import { useGeneralStore } from '../../stores/general'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
-import { Rate } from '../../types/rate'
-import { ScoreHistory } from '../../types/scoreHistory'
 import { getAvatar } from '../../utils/avatarUtil'
 import remToPx from '../../utils/remToPx'
 
@@ -42,17 +42,11 @@ const groupsPromise = db.groups.toArray().then((result) => {
   groups.value = result as Group[]
 })
 
-const rates = ref<Rate[]>([])
-const ratesPromise = db.rates.toArray().then((result) => {
-  rates.value = result as Rate[]
-})
+const rates = useObservable(from(liveQuery(() => db.rates.toArray())))
 
-const scoreHistories = ref<ScoreHistory[]>([])
-const scoreHistoriesPromise = db.scoreHistories.toArray().then((result) => {
-  scoreHistories.value = result as ScoreHistory[]
-})
+const scoreHistories = useObservable(from(liveQuery(() => db.scoreHistories.toArray())))
 
-Promise.all([personsPromise, groupsPromise, ratesPromise, scoreHistoriesPromise]).then(() => {
+Promise.all([personsPromise, groupsPromise]).then(() => {
   loading.value = false
 })
 
@@ -62,9 +56,7 @@ const current = ref<Person | Group | null>(null)
 const showPerson = ref(false)
 showPerson.value = route.query.type === 'person'
 
-const firstHistoryTime = computed(
-  () => scoreHistories?.value[scoreHistories.value?.length - 1]?.timestamp
-)
+const firstHistoryTime = computed(() => scoreHistories.value?.at(-1)?.timestamp ?? Date.now())
 const enableUndo = computed(() => Date.now() - firstHistoryTime.value < 3 * 60 * 1000)
 
 const message = useMessage()
@@ -107,10 +99,10 @@ const scoreHandler = (rate) => {
 
 function undoHandler() {
   // const x = { ...scoreHistories.value[scoreHistories.value?.length - 1] }
-  const x = scoreHistories.value[-1]
+  const x = scoreHistories.value?.at(-1)
   // scoreHistories.value = scoreHistories.value.filter((item) => item.time !== x.time)
-  db.scoreHistories.delete(x.timestamp as number)
-  switch (x.ownerType) {
+  db.scoreHistories.delete(x?.timestamp as number)
+  switch (x?.ownerType) {
     case 'group': {
       const group = groups.value.find((item) => item.id === x.ownerId) as Group
       group.score -= x.score
