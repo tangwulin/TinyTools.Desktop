@@ -1,35 +1,4 @@
-<script lang="ts" setup>
-import { storeToRefs } from 'pinia'
-import { ref } from 'vue'
-import { Course } from '../interface/course'
-import { getTodayCourse } from '../services/LocalClassScheduleService'
-import { useSettingStore } from '../stores/setting'
-
-const setting = useSettingStore()
-const { courseSource, schoolInfo, classComputerMac } = storeToRefs(setting)
-
-const todayCourse = ref<Course[]>([])
-
-switch (courseSource.value) {
-  case 'local':
-    todayCourse.value = await getTodayCourse().then((res) => res?.courses ?? [])
-    break
-  case 'remote':
-    {
-      if (schoolInfo.value && classComputerMac.value) {
-        const api = new ThirdPartyAPIService(schoolInfo.value.WebApi_IP, classComputerMac.value)
-        api.initClassInfo().then(() =>
-          api.getCourseList().then((res) => {
-            todayCourse.value = res
-          })
-        )
-      }
-    }
-    break
-  default:
-    break
-}
-</script>
+<script lang="ts" setup></script>
 
 <template>
   <div id="dock" class="text-white flex flex-row justify-around">
