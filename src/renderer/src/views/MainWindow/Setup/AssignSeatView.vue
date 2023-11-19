@@ -121,7 +121,7 @@ const save = async () => {
   domToPng(target, options)
     .then((dataUrl) => {
       const link = document.createElement('a')
-      link.download = 'seat-' + currentDate.value + '-' + currentTime.value + '.png'
+      link.download = '初始座位.png'
       link.href = dataUrl
       link.click()
     })
