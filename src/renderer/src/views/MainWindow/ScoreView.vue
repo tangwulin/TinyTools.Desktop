@@ -56,7 +56,7 @@ const current = ref<Person | Group | null>(null)
 const showPerson = ref(false)
 showPerson.value = route.query.type === 'person'
 
-const firstHistoryTime = computed(() => scoreHistories.value?.at(-1)?.timestamp ?? Date.now())
+const firstHistoryTime = computed(() => scoreHistories.value?.at(-1)?.timestamp ?? 0)
 const enableUndo = computed(() => Date.now() - firstHistoryTime.value < 3 * 60 * 1000)
 
 const message = useMessage()

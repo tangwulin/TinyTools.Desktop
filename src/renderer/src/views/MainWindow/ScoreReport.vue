@@ -281,10 +281,6 @@ const handler = (item: Person | Group) => {
     query: { type: 'members' in item ? 'group' : 'person', id: item.id }
   })
 }
-
-const rKey = ref(Math.random())
-
-window.addEventListener('resize', () => setTimeout(() => (rKey.value = Math.random()), 100))
 </script>
 
 <template>
@@ -406,7 +402,7 @@ window.addEventListener('resize', () => setTimeout(() => (rKey.value = Math.rand
               title="暂无报告"
               description="请点击左侧列表以选择"
             />
-            <router-view v-else :key="rKey" />
+            <router-view v-else />
           </div>
         </div>
       </n-layout-content>

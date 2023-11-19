@@ -1,17 +1,13 @@
 <script setup lang="ts">
-import { from, useObservable } from '@vueuse/rxjs'
-import { liveQuery } from 'dexie'
 import { BarChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { useMessage } from 'naive-ui'
-import { computed, toRaw } from 'vue'
+import { computed, ref, toRaw, watch } from "vue";
 import VChart from 'vue-echarts'
 import { useRoute } from 'vue-router'
 import { AppDatabase } from '../../../db'
-import { Group } from "../../../types/group";
-import { Person } from "../../../types/person";
 import { ScoreHistory } from '../../../types/scoreHistory'
 
 const db = AppDatabase.getInstance()
@@ -20,22 +16,36 @@ use([TooltipComponent, GridComponent, BarChart, CanvasRenderer])
 
 const message = useMessage()
 
-const scoreHistories = useObservable(from(liveQuery(() => db.scoreHistories.toArray())))
-
-const groups = useObservable(from(liveQuery(() => db.groups.toArray())))
-
-const personList = useObservable(from(liveQuery(() => db.persons.toArray())))
-
 const route = useRoute()
 
-const current = computed(() => {
-  return scoreHistories?.value?.filter((item) => item.ownerId === parseInt(<string>route.query.id))
-})
+const id = computed(() => parseInt(<string>route.query.id))
 
-const allRates = computed(() => [...new Set(current.value?.map((item) => item.description))])
+const historyForThis = ref([] as ScoreHistory[])
+db.scoreHistories
+  .where('ownerId')
+  .equals(id.value)
+  .toArray()
+  .then((res) => {
+    historyForThis.value = res
+  })
+
+watch(
+  () => route.query.id,
+  () => {
+    db.scoreHistories
+      .where('ownerId')
+      .equals(id.value)
+      .toArray()
+      .then((res) => {
+        historyForThis.value = res
+      })
+  }
+)
+
+const allRates = computed(() => [...new Set(historyForThis.value?.map((item) => item.description))])
 const fullData = computed(() =>
   allRates.value
-    .map((r) => current.value?.filter((s) => s.description === r))
+    .map((r) => historyForThis.value?.filter((s) => s.description === r))
     .map(
       (item) =>
         item?.reduce((accumulator, currentValue) => {
@@ -48,24 +58,24 @@ const fullData = computed(() =>
     }))
 )
 
-const positiveData = computed(() => fullData.value.filter((item) => (item.value as number) >= 0))
+const positiveData = computed(() => fullData.value.filter((item) => item.value >= 0))
 const negativeData = computed(() =>
   fullData.value
-    .filter((item) => (item.value as number) < 0)
+    .filter((item) => item.value < 0)
     .map((item) => ({
       ...item,
-      value: Math.abs(item.value as number)
+      value: Math.abs(item.value)
     }))
 )
 
-const firstHistoryTime = new Date(
-  (scoreHistories?.value as ScoreHistory[])[0]?.timestamp ?? 0
-).toLocaleString()
+const firstHistoryTime = computed(() =>
+  new Date(historyForThis.value?.at(0)?.timestamp ?? 0).toLocaleString()
+)
 
 const option2 = computed(() => ({
   title: {
     text: '各评分项占比',
-    subtext: `从${firstHistoryTime}至今`,
+    subtext: `从${firstHistoryTime.value}至今`,
     left: 'center'
   },
   tooltip: {
@@ -112,21 +122,48 @@ const option2 = computed(() => ({
   ]
 }))
 
-const deleteHandler = (x) => {
-  // scoreHistories.value = scoreHistories.value.filter((item) => item.time !== x.time)
-  db.scoreHistories.delete(x.time)
-  switch (x.ownerType) {
-    case 'group':
-      (groups.value?.find((item) => item.id === x.owner) as Group).score -= x.score
-      break
-    case 'person':
-      (personList.value?.find((item) => item.id === x.owner) as Person).score -= x.score
-      break
-    default:
-      message.error('出错了，请检查类型是否正确')
-      break
-  }
-  message.success('操作成功')
+const deleteHandler = (x: ScoreHistory) => {
+  db.transaction('rw', db.scoreHistories, db.groups, db.persons, async () => {
+    db.scoreHistories.delete(x.timestamp)
+    //TODO:此处删除应该修改db中的数据
+    switch (x.ownerType) {
+      case 'group':
+        db.groups
+          .where('id')
+          .equals(x.ownerId)
+          .modify((item) => {
+            item.score -= x.score
+          })
+        // ;(groups.value?.find((item) => item.id === x.owner) as Group).score -= x.score
+        break
+      case 'person':
+        db.persons
+          .where('id')
+          .equals(x.ownerId)
+          .modify((item) => {
+            item.score -= x.score
+          })
+        // ;(persons.value?.find((item) => item.id === x.owner) as Person).score -= x.score
+        break
+      default:
+        message.error('出错了，请检查类型是否正确')
+        break
+    }
+  })
+    .then(() => {
+      db.scoreHistories
+        .where('ownerId')
+        .equals(id.value)
+        .toArray()
+        .then((res) => {
+          historyForThis.value = res
+        })
+      message.success('操作成功')
+    })
+    .catch((e) => {
+      message.error('操作失败')
+      console.error(e)
+    })
 }
 </script>
 
@@ -138,7 +175,7 @@ const deleteHandler = (x) => {
       <v-chart style="height: 70vh" :option="option2" />
       <div>
         <n-list hoverable>
-          <n-list-item v-for="item in current">
+          <n-list-item v-for="item in historyForThis">
             <n-space justify="space-between">
               <span>{{ item.description }}</span>
               <div style="width: 14rem; display: flex; justify-content: space-between">
