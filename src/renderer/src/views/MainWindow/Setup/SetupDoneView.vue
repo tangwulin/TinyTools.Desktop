@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
-import { useSettingStore } from '../../../stores/setting'
 import ratesConfig from '../../../config/rates.json'
 import { AppDatabase } from '../../../db'
+import { useSettingStore } from '../../../stores/setting'
+import { getDefaultBgm, getDefaultFinalBgm } from '../../../utils/musicUtil'
 
 const db = AppDatabase.getInstance()
 
@@ -12,10 +13,12 @@ const rates = ratesConfig['rates']
 const router = useRouter()
 
 const settingStore = useSettingStore()
-const { isFirstSetup } = storeToRefs(settingStore)
+const { isFirstSetup, bgms, finalBgms } = storeToRefs(settingStore)
 
 const endSetup = () => {
   db.rates.bulkPut(rates)
+  bgms.value = getDefaultBgm()
+  finalBgms.value = getDefaultFinalBgm()
   isFirstSetup.value = false
   router.push({ name: 'mainWindow' })
 }
