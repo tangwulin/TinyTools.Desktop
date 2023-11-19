@@ -83,7 +83,7 @@ const displayTypes = [
 const displayList = computed(() => {
   switch (displayType.value) {
     case 'class':
-      current.value = null
+      // current.value = null
       return []
     case 'group':
       return groups?.value.filter((item) => item.name.includes(keyword.value))
@@ -366,7 +366,9 @@ const handler = (item: Person | Group) => {
             {{ item.name }}
           </n-button>
         </n-button-group>
-        <span v-if="current !== null">{{ current?.name }} 的得分情况</span>
+        <span v-if="current !== null && displayType !== 'class'"
+          >{{ current?.name }} 的得分情况</span
+        >
         <div
           style="
             width: 100%;
