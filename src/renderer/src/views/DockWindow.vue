@@ -3,7 +3,6 @@ import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { Course } from '../interface/course'
 import { getTodayCourse } from '../services/LocalClassScheduleService'
-import { ThirdPartyAPIService } from '../services/ThirdPartyAPIService'
 import { useSettingStore } from '../stores/setting'
 
 const setting = useSettingStore()
