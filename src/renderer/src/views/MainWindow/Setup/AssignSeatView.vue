@@ -1,11 +1,9 @@
 <script lang="ts" setup>
-import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
-import { liveQuery } from 'dexie'
 import { debounce, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
-import { Ref, ref } from 'vue'
+import { ref } from 'vue'
 import SeatTable from '../../../components/SeatTable.vue'
 import { AppDatabase } from '../../../db'
 import { Person } from '../../../types/person'
@@ -20,9 +18,6 @@ const message = useMessage()
 const persons = ref([] as Person[])
 const seats = ref([] as Seat[])
 const seatMap = ref([] as SeatState[])
-const seatHistory = useObservable(from(liveQuery(() => db.seatHistory.toArray()))) as Readonly<
-  Ref<SeatHistory[]>
->
 
 const currentDate = ref('')
 const currentTime = ref('')
@@ -96,31 +91,9 @@ const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: str
   message.success('已保存本次记录')
 }
 
-const handler = (type: 1 | 2 | 3 | 4) => {
-  let result = [] as Seat[]
-  switch (type) {
-    case 1:
-      result = shuffle(seats.value).map((item, index) => new Seat(item.owner, index))
-      break
-    case 2:
-      message.error('尚未实现')
-      break
-    case 3:
-      message.error('尚未实现')
-      break
-    case 4:
-      result = calcNewSeatByWeight(
-        seats.value,
-        (seatHistory.value as SeatHistory[])[0]?.seats ?? seats.value
-      )
-      break
-    default:
-      message.error('抽选模式异常')
-      break
-  }
-
+const handler = () => {
+  const result = shuffle(seats.value).map((item, index) => new Seat(item.owner, index))
   if (result.length === 0) return
-
   raffleSeatImmediately(result)
 }
 
@@ -200,7 +173,7 @@ const dragHandler = debounce(
     </p>
     <div style="display: flex; flex-direction: column">
       <n-space class="mt-2 flex flex-col justify-center items-center">
-        <n-button :disabled="loading" @click="handler(1)">重抽座位</n-button>
+        <n-button :disabled="loading" @click="handler">重抽座位</n-button>
         <n-button :disabled="loading" @click="save">保存图片</n-button>
         <n-switch v-model:value="reverse">
           <template #checked> 老师视角</template>
