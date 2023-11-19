@@ -2,6 +2,12 @@
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
 import { useSettingStore } from '../../../stores/setting'
+import ratesConfig from '../../../config/rates.json'
+import { AppDatabase } from '../../../db'
+
+const db = AppDatabase.getInstance()
+
+const rates = ratesConfig['rates']
 
 const router = useRouter()
 
@@ -9,6 +15,7 @@ const settingStore = useSettingStore()
 const { isFirstSetup } = storeToRefs(settingStore)
 
 const endSetup = () => {
+  db.rates.bulkPut(rates)
   isFirstSetup.value = false
   router.push({ name: 'mainWindow' })
 }
