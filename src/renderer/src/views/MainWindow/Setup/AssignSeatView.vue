@@ -214,21 +214,19 @@ const dragHandler = debounce(
   >
     <!--  座位表展示区域  <-->
     <div id="target-div" style="margin: 0 auto; padding: 1rem 0; width: 80%">
-      <div>
-        <SeatTable
-          v-model:seat-map="seatMap"
-          v-model:seats="seats"
-          :disable="loading"
-          :reverse="reverse"
-          @dragend="dragHandler"
-        />
-      </div>
-      <div class="flex justify-center mt-4" style="font-size: 1rem">
-        <p>{{ currentDate }} {{ currentTime }}</p>
-      </div>
+      <SeatTable
+        v-model:seat-map="seatMap"
+        v-model:seats="seats"
+        :disable="loading"
+        :reverse="reverse"
+        @dragend="dragHandler"
+      />
     </div>
 
     <!--  下方操作按钮区域  <-->
+    <p>
+      上面是系统按导入姓名的顺序自动分配的座位，如果需要调整，可以拖动座位到另一个位置上来交换这两个座位的位置
+    </p>
     <div style="display: flex; flex-direction: column">
       <n-space class="mt-2 flex flex-col justify-center items-center">
         <n-button :disabled="loading" @click="handler(1)">重抽座位</n-button>
@@ -238,16 +236,6 @@ const dragHandler = debounce(
           <template #unchecked> 学生视角</template>
         </n-switch>
       </n-space>
-      <!--      <n-button-group>-->
-      <!--        <n-button @click="showHistory = true"-->
-      <!--          >历史记录-->
-      <!--          <template #icon>-->
-      <!--            <n-icon :depth="3">-->
-      <!--              <history-icon />-->
-      <!--            </n-icon>-->
-      <!--          </template>-->
-      <!--        </n-button>-->
-      <!--      </n-button-group>-->
     </div>
   </div>
 </template>
