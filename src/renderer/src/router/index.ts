@@ -4,7 +4,8 @@ import {
   Router,
   RouteRecordRaw,
   RouterOptions
-} from 'vue-router' //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
+} from 'vue-router'
+import { useSettingStore } from '../stores/setting'; //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 import MainWindow from '../views/MainWindow.vue' //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //RouterRecordRaw是路由组件对象
@@ -32,9 +33,9 @@ const routes: RouteRecordRaw[] = [
           {
             path: '/score/report/detail',
             name: 'scoreReportDetail',
-            component: () => import('../views/MainWindow/Score/ScoreReportDetail.vue'),
-          },
-        ],
+            component: () => import('../views/MainWindow/Score/ScoreReportDetail.vue')
+          }
+        ]
       },
       {
         path: '/randomSelection',
@@ -150,6 +151,18 @@ const options: RouterOptions = {
 }
 
 // Router是路由对象类型
-const router: Router = createRouter(options);
+const router: Router = createRouter(options)
+router.beforeEach((to, _, next) => {
+  const settingStore = useSettingStore()
+  if (settingStore.isFirstSetup && to.name !== 'welcome') {
+    if (!to.path.includes('setup')) {
+      next({ name: 'welcome' })
+    } else {
+      next()
+    }
+  } else {
+    next()
+  }
+})
 
-export default router;
+export default router
