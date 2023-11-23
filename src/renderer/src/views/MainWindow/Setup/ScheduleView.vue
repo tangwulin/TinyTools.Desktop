@@ -6,9 +6,11 @@ import { liveQuery } from 'dexie'
 import { NText, useMessage } from 'naive-ui'
 import { computed } from 'vue'
 import * as XLSX from 'xlsx'
+// @ts-ignore:2307
 import courseXlsx from '../../../assets/xlsx/course.xlsx'
 
 import { AppDatabase } from '../../../db'
+import { CourseTableItem } from "../../../interface/course";
 
 import downloadAnyFile from '../../../utils/downloadAnyFile'
 
@@ -29,7 +31,7 @@ const parseExcel = async (uploadFileInfo) => {
   const json = XLSX.utils.sheet_to_json(worksheet)
 
   const coursesFromExcel = json
-    .map((item) => {
+    .map((item:any) => {
       try {
         return {
           time: {
@@ -63,7 +65,7 @@ const parseExcel = async (uploadFileInfo) => {
     message.error('未检测到有效的信息，请检查文件格式是否正确')
   } else {
     db.open()
-    db.coursesTable.bulkPut(coursesFromExcel)
+    db.coursesTable.bulkPut(coursesFromExcel as CourseTableItem[])
     message.success('导入成功')
   }
 }
