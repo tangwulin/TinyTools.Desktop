@@ -10,7 +10,7 @@ import * as XLSX from 'xlsx'
 import courseXlsx from '../../../assets/xlsx/course.xlsx'
 
 import { AppDatabase } from '../../../db'
-import { CourseTableItem } from "../../../interface/course";
+import { CourseTableItem } from '../../../interface/course'
 
 import downloadAnyFile from '../../../utils/downloadAnyFile'
 

@@ -3,7 +3,7 @@ import { History24Filled as HistoryIcon } from '@vicons/fluent'
 import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
 import { liveQuery } from 'dexie'
-import { chunk, debounce, shuffle } from 'lodash-es'
+import { debounce, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
@@ -17,7 +17,7 @@ import { Audio } from '../../types/audio'
 import { Person } from '../../types/person'
 import { Seat, SeatState } from '../../types/seat'
 import { SeatHistory } from '../../types/seatHistory'
-import { calcNewSeatByWeight, calcWeight, genSeatMap } from '../../utils/seatUtil'
+import { calcNewSeatByWeight, genSeatMap } from '../../utils/seatUtil'
 
 const setting = useSettingStore()
 
@@ -404,24 +404,6 @@ const dragHandler = debounce(
     maxWait: 2000
   }
 )
-
-const testWeightCalc = () => {
-  const theLuckyGuy = seats.value[Math.floor(Math.random() * seats.value.length)]
-  const result = calcWeight(
-    theLuckyGuy,
-    seats.value,
-    seatHistory.value[0]?.seats ?? seats.value,
-    seatHistory.value[1]?.seats ?? undefined
-  )
-  console.log(theLuckyGuy.owner.name)
-  console.table(chunk(result, 8))
-  const finalResult = calcNewSeatByWeight(
-    seats.value,
-    seatHistory.value[0]?.seats ?? seats.value,
-    seatHistory.value[1]?.seats ?? undefined
-  ).map((item) => item.owner.name)
-  console.table(chunk(finalResult, 8))
-}
 </script>
 
 <template>
@@ -484,7 +466,6 @@ const testWeightCalc = () => {
           </template>
         </n-button>
         <n-button :disabled="loading || isPreview" @click="save">保存图片</n-button>
-        <n-button @click="testWeightCalc">测试权重计算</n-button>
       </n-button-group>
     </div>
 
