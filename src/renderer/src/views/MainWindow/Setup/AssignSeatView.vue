@@ -104,13 +104,13 @@ const save = async () => {
   const target = document.getElementById('target-div')
   if (!target) return
   const options = {
-    filter: (node) => {
-      try {
-        return !node.classList.contains('border-dashed')
-      } catch {
-        return true
-      }
-    },
+    // filter: (node) => {
+    //   try {
+    //     return !node.classList.contains('border-dashed')
+    //   } catch {
+    //     return true
+    //   }
+    // },
     backgroundColor: '#FFFFFF',
     scale: 3840 / target.clientWidth //统一保存为4K分辨率
   }
