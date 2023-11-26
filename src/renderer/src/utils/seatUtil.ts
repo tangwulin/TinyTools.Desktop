@@ -22,7 +22,7 @@ const calcWeightByDistance = (distance: number) => {
     case 2:
       return -2
     default:
-      return distance
+      return distance * 2
   }
 }
 
@@ -93,12 +93,12 @@ const regionWeightMap = new Map<number, number[]>([
   [1, [0, 0, 1, 1]],
   [2, [0, 1, 1, 0]],
   [3, [0, 0, 0, 0]],
-  [4, [2, 2, 0, -1]],
-  [5, [2, 2, -1, -2]],
-  [6, [3, 3, -1, -2]],
-  [7, [4, 3, -2, -3]],
-  [8, [4, 3, -3, -3]],
-  [9, [5, 4, -3, -3]]
+  [4, [3, 3, -1, -1]],
+  [5, [3, 3, -1, -2]],
+  [6, [4, 4, -1, -2]],
+  [7, [5, 4, -2, -3]],
+  [8, [5, 4, -3, -3]],
+  [9, [6, 5, -3, -3]]
 ])
 
 export const calcWeight = (
@@ -150,58 +150,31 @@ export const calcNewSeatByWeight = (
     weightSeries: genWeightSeries(x).sort((a, b) => b.weight - a.weight)
   }))
 
-  const result = [] as Seat[]
-  //这里reverse是因为要让后排同学选到前排
-  for (const personAndWeights of seatsWeightSeries.reverse()) {
-    //TODO:尽可能在同一权重的一组座位中fallback
+  const remainStudentIds = seatsWeightSeries.map((x) => x.owner.id) as (number | undefined | null)[]
+  const result = new Array(allSeat.length).fill(null) as Seat[]
+  for (let i = 0; i < result.length; i++) {
+    let bestStudentId: number | null = null
+    let bestStudentPriority = -Infinity
+    let bestStudentIndex = -1
+    for (let j = remainStudentIds.length; j >= 0; j--) {
+      const studentId = remainStudentIds[j]
+      if (!studentId) continue
 
-    // if (!result[personAndWeights.weightSeries[0].index]) {
-    //   result[personAndWeights.weightSeries[0].index] = {
-    //     ...(allSeat.find((item) => item.owner.id === personAndWeights.owner.id) as Seat),
-    //     index: personAndWeights.weightSeries[0].index
-    //   } as Seat
-    // } else {
-    //   const thisSeat = result[personAndWeights.weightSeries[0].index]
-    //
-    //   //查一下现在占用这个位置的人和TA的权重
-    //   const otherPersonAndTheyWeights = seatsWeightSeries.find(
-    //     (item) => item.owner.id === thisSeat.owner.id
-    //   ) as { owner: IPerson; weightSeries: { index: number; weight: number }[] } //这里的类型断言是因为ts不知道find一定能找到
-    //
-    //   const otherPersonCurrentChoiceIndex = otherPersonAndTheyWeights.weightSeries.findIndex(
-    //     (item) => item.index === thisSeat.index
-    //   )
-    //   const otherPersonCurrentChoice =
-    //     otherPersonAndTheyWeights.weightSeries[otherPersonCurrentChoiceIndex]
-    //   const otherPersonNextChoice =
-    //     otherPersonAndTheyWeights.weightSeries[otherPersonCurrentChoiceIndex + 1]
-    //
-    //   const thisPersonCurrentChoiceIndex = personAndWeights.weightSeries.findIndex(
-    //     (item) => item.index === thisSeat.index
-    //   )
-    //   const thisPersonCurrentChoice = personAndWeights.weightSeries[thisPersonCurrentChoiceIndex]
-    //   const thisPersonNextChoice = personAndWeights.weightSeries[thisPersonCurrentChoiceIndex + 1]
-    //
-    //   if (
-    //     otherPersonCurrentChoice.weight > thisPersonCurrentChoice.weight &&
-    //     otherPersonNextChoice.weight < thisPersonNextChoice.weight
-    //   ) {
-    //     result[personAndWeights.weightSeries[0].index] = allSeat.find(
-    //       (item) => item.owner.id === personAndWeights.owner.id
-    //     ) as Seat
-    //   }
-    // }
-    // while (result[personAndWeights.weightSeries[0].index])
-    for (const indexAndWeight of personAndWeights.weightSeries) {
-      if (!result[indexAndWeight.index]) {
-        result[indexAndWeight.index] = {
-          ...(allSeat.find((item) => item.owner.id === personAndWeights.owner.id) as Seat),
-          index: indexAndWeight.index
-        } as Seat
-        break
-      }
+      const currentPriority =
+        seatsWeightSeries
+          .find((x) => x.owner.id === studentId)
+          ?.weightSeries.find((x) => x.index === i)?.weight ?? -Infinity
+      if (currentPriority < bestStudentPriority) continue
+
+      bestStudentId = studentId
+      bestStudentPriority = currentPriority
+      bestStudentIndex = j
     }
+
+    result[i] = allSeat.find((item) => item.owner.id === bestStudentId) as Seat
+    remainStudentIds[bestStudentIndex] = null
   }
+
   return result.map((item) => {
     const owner = item.owner
     return new Seat(
