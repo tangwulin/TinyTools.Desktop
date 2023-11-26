@@ -212,10 +212,10 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
       saveHistory(result, seatMap.value, '平等')
       break
     case 2:
-      message.error('尚未实现')
+      message.error('尚未从V3移植')
       break
     case 3:
-      message.error('尚未实现')
+      message.error('尚未从V3移植')
       break
     case 4:
       result = calcNewSeatByWeight(
