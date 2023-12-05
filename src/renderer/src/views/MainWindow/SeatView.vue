@@ -54,6 +54,7 @@ const isPreview = ref(false)
 const loading = ref(false)
 const showHasDiffModal = ref(false)
 const playingVideo = ref(false)
+const reverse = ref(false)
 
 let updateDateTimeInterval: NodeJS.Timeout
 
@@ -422,6 +423,7 @@ const dragHandler = debounce(
           v-model:seat-map="seatMap"
           v-model:seats="seats"
           :disable="loading || isPreview"
+          :reverse="reverse"
           @dragend="dragHandler"
         />
       </div>
@@ -456,7 +458,7 @@ const dragHandler = debounce(
         <n-button :disabled="loading || isPreview" @click="handler('Gacha')">抽卡！</n-button>
         <!--        <n-button @click="playVideo">播放视频</n-button>-->
       </n-button-group>
-      <n-button-group>
+      <n-button-group style="display: flex;justify-items: center;align-items: center">
         <n-button @click="showHistory = true"
           >历史记录
           <template #icon>
@@ -466,6 +468,10 @@ const dragHandler = debounce(
           </template>
         </n-button>
         <n-button :disabled="loading || isPreview" @click="save">保存图片</n-button>
+        <n-switch v-model:value="reverse">
+          <template #checked> 老师视角</template>
+          <template #unchecked> 学生视角</template>
+        </n-switch>
       </n-button-group>
     </div>
 
