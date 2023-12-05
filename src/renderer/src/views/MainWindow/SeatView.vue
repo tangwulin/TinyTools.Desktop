@@ -458,7 +458,7 @@ const dragHandler = debounce(
         <n-button :disabled="loading || isPreview" @click="handler('Gacha')">抽卡！</n-button>
         <!--        <n-button @click="playVideo">播放视频</n-button>-->
       </n-button-group>
-      <n-button-group style="display: flex;justify-items: center;align-items: center">
+      <n-button-group style="display: flex; justify-items: center; align-items: center">
         <n-button @click="showHistory = true"
           >历史记录
           <template #icon>
