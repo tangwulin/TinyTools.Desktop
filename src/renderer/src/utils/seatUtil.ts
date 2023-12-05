@@ -128,6 +128,9 @@ export const calcWeight = (
     if (allSeat[i].owner.id === item.owner.id) {
       weight[i] -= 100
     }
+    if (oldAllSeat && oldAllSeat[i].owner.id === item.owner.id) {
+      weight[i] -= 50
+    }
     if (oldOldAllSeat && oldOldAllSeat[i].owner.id === item.owner.id) {
       weight[i] -= 50
     }
