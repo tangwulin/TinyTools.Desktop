@@ -35,10 +35,10 @@ function createWindow(): void {
     mainWindow.show()
   })
 
-  mainWindow.on('close', (e) => {
-    e.preventDefault()
-    mainWindow.hide()
-  })
+  // mainWindow.on('close', (e) => {
+  //   e.preventDefault()
+  //   mainWindow.hide()
+  // })
 
   tray = new Tray('resources/icon.png')
   const contextMenu = Menu.buildFromTemplate([
