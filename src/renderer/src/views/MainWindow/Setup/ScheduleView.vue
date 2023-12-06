@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { File as FileIcon } from '@vicons/tabler'
 import { useObservable } from '@vueuse/rxjs'
 import { from } from '@vueuse/rxjs/index'
@@ -31,7 +31,7 @@ const parseExcel = async (uploadFileInfo) => {
   const json = XLSX.utils.sheet_to_json(worksheet)
 
   const coursesFromExcel = json
-    .map((item:any) => {
+    .map((item: any) => {
       try {
         return {
           time: {

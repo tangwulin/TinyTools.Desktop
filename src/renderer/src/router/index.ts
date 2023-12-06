@@ -1,12 +1,6 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  Router,
-  RouteRecordRaw,
-  RouterOptions
-} from 'vue-router'
-import { useSettingStore } from '../stores/setting'; //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
-import MainWindow from '../views/MainWindow.vue' //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
+import { createRouter, createWebHashHistory, Router, RouteRecordRaw, RouterOptions } from "vue-router";
+import { useSettingStore } from "../stores/setting"; //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
+import MainWindow from "../views/MainWindow.vue"; //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //由于router的API默认使用了类型进行初始化，内部包含类型定义，所以本文内部代码中的所有数据类型是可以省略的
 //RouterRecordRaw是路由组件对象
 const routes: RouteRecordRaw[] = [
@@ -165,4 +159,4 @@ router.beforeEach((to, _, next) => {
   }
 })
 
-export default router
+export default router;

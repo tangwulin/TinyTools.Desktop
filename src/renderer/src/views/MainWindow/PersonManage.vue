@@ -100,9 +100,20 @@ const editHandler = (row: Person) => {
 }
 
 const deleteHandler = (row: Person) => {
-  db.persons.delete(row.id as number)
-  //TODO: 删除人员时删除记分记录
-  message.success('删除成功')
+  db.transaction('rw', db.persons, db.scoreHistories, async () => {
+    db.persons.delete(row.id as number)
+    db.scoreHistories
+      .where('ownerId')
+      .equals(row.id as number)
+      .delete()
+  })
+    .then(() => {
+      message.success('删除成功')
+    })
+    .catch((e) => {
+      message.error('删除失败')
+      message.error(JSON.stringify(e))
+    })
 }
 
 const handleUpdateFilter = (filters: DataTableFilterState, sourceColumn: DataTableBaseColumn) => {

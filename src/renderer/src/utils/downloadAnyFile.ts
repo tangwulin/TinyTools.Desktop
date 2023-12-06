@@ -32,4 +32,4 @@ const downloadAnyFile = (url: Request | string | URL, filename?: string) =>
       console.error(err)
     })
 
-export default downloadAnyFile
+export default downloadAnyFile;

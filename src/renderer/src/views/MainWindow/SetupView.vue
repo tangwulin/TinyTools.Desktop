@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useObservable } from '@vueuse/rxjs'
 import { from } from '@vueuse/rxjs/index'
 import { liveQuery } from 'dexie'
@@ -52,7 +52,7 @@ watch(current, () => {
         style="height: 4rem; display: flex; align-items: center; justify-content: center"
       >
         <div class="flex justify-center items-center">
-          <n-space justify="space-around" class="mt-auto">
+          <n-space class="mt-auto" justify="space-around">
             <n-steps :current="current">
               <n-step title="添加人员" />
               <n-step title="分配座位" />

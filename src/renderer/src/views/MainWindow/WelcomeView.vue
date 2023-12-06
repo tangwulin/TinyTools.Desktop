@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
@@ -26,7 +26,7 @@ const navToSetup = () => {
       <p style="font-size: 4rem">Hi There！</p>
       <!--直男审美，我尽力了-->
       <p>欢迎使用TinyTools!</p>
-      <n-button :disabled="!approved" type="primary" @click="navToSetup">下一步 </n-button>
+      <n-button :disabled="!approved" type="primary" @click="navToSetup">下一步</n-button>
       <n-space>
         <n-checkbox v-model:checked="approved" />
         <p>

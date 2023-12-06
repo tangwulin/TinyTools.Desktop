@@ -98,16 +98,23 @@ const handler = () => {
 }
 
 const deleteHandler = () => {
-  try {
+  db.transaction('rw', db.groups, db.scoreHistories, async () => {
     db.groups.delete(currentGroup.value.id as number)
-    //TODO: 删除小组时，应该删除小组所有的分数记录
-    showModal.value = false
-    currentGroup.value = new Group('', '', '')
-    message.success('删除成功')
-  } catch (e) {
-    message.error('操作失败')
-    message.error(JSON.stringify(e))
-  }
+    db.scoreHistories
+      .where('ownerId')
+      .equals(currentGroup.value.id as number)
+      .delete()
+  })
+    .then(() => {
+      showModal.value = false
+      currentGroup.value = new Group('', '', '')
+      value1.value = []
+      message.success('删除成功')
+    })
+    .catch((e) => {
+      message.error('操作失败')
+      message.error(JSON.stringify(e))
+    })
 }
 
 const onModalClose = () => {

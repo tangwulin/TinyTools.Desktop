@@ -1,10 +1,10 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { BarChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { useMessage } from 'naive-ui'
-import { computed, ref, toRaw, watch } from "vue";
+import { computed, ref, toRaw, watch } from 'vue'
 import VChart from 'vue-echarts'
 import { useRoute } from 'vue-router'
 import { AppDatabase } from '../../../db'
@@ -125,7 +125,6 @@ const option2 = computed(() => ({
 const deleteHandler = (x: ScoreHistory) => {
   db.transaction('rw', db.scoreHistories, db.groups, db.persons, async () => {
     db.scoreHistories.delete(x.timestamp)
-    //TODO:此处删除应该修改db中的数据
     switch (x.ownerType) {
       case 'group':
         db.groups
@@ -172,7 +171,7 @@ const deleteHandler = (x: ScoreHistory) => {
     <n-scrollbar
       style="display: flex; flex-direction: column; height: calc(100vh - 5rem); width: 100%"
     >
-      <v-chart style="height: 70vh" :option="option2" />
+      <v-chart :option="option2" style="height: 70vh" />
       <div>
         <n-list hoverable>
           <n-list-item v-for="item in historyForThis">

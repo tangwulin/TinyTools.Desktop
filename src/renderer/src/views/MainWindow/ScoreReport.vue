@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { BarChart, PieChart } from 'echarts/charts'
 import {
   GridComponent,
@@ -285,7 +285,7 @@ const handler = (item: Person | Group) => {
 
 <template>
   <div v-if="loading">
-    <n-progress type="line" :percentage="percentage" :show-indicator="false" />
+    <n-progress :percentage="percentage" :show-indicator="false" type="line" />
   </div>
   <n-layout style="height: 100%">
     <n-layout-header>
@@ -302,23 +302,23 @@ const handler = (item: Person | Group) => {
     </n-layout-header>
     <n-layout has-sider>
       <n-layout-sider
-        :width="remToPx(10)"
-        position="static"
         :collapsed="displayType === 'class'"
         :collapsed-width="0"
+        :width="remToPx(10)"
+        position="static"
       >
         <n-input-group>
           <n-input
             v-model:value="keyword"
-            clearable
             :style="{ width: '100%' }"
-            size="small"
-            placeholder="搜索"
             class="mb-1"
+            clearable
+            placeholder="搜索"
+            size="small"
           />
         </n-input-group>
         <n-scrollbar style="height: calc(100vh - 5.5rem)">
-          <n-list hoverable clickable>
+          <n-list clickable hoverable>
             <n-list-item v-for="item in displayList" :key="item.id" @click="handler(item)">
               <div
                 style="
@@ -330,12 +330,12 @@ const handler = (item: Person | Group) => {
               >
                 <n-avatar
                   v-if="enableAvatar"
+                  :img-props="{ referrerpolicy: 'no-referrer' }"
                   :src="getAvatar(item)"
+                  class="mr-4"
+                  object-fit="contain"
                   round
                   size="small"
-                  class="mr-4"
-                  :img-props="{ referrerpolicy: 'no-referrer' }"
-                  object-fit="contain"
                 />
                 <p>{{ item.name }}</p>
               </div>
@@ -359,8 +359,8 @@ const handler = (item: Person | Group) => {
           <n-button
             v-for="item in displayTypes"
             :key="item.key"
-            size="small"
             class="mx-4"
+            size="small"
             @click="displayType = item.key"
           >
             {{ item.name }}
@@ -380,18 +380,18 @@ const handler = (item: Person | Group) => {
         >
           <n-scrollbar v-if="displayType === 'class'">
             <div style="display: flex; flex-direction: column; height: 100%; width: 100%">
-              <n-grid :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" :cols="2" style="height: 90vh">
+              <n-grid :cols="2" :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" style="height: 90vh">
                 <n-grid-item>
-                  <v-chart class="chart" :option="option1" />
+                  <v-chart :option="option1" class="chart" />
                 </n-grid-item>
                 <n-grid-item>
-                  <v-chart class="chart" :option="option2" />
+                  <v-chart :option="option2" class="chart" />
                 </n-grid-item>
               </n-grid>
               <div>
                 <v-chart
-                  class="chart"
                   :option="option3"
+                  class="chart"
                   style="height: calc(100vh - 10rem); width: 100%"
                 />
               </div>
@@ -400,9 +400,9 @@ const handler = (item: Person | Group) => {
           <div v-else style="width: 100%; height: 100%; margin: auto">
             <n-result
               v-if="current === null"
+              description="请点击左侧列表以选择"
               status="404"
               title="暂无报告"
-              description="请点击左侧列表以选择"
             />
             <router-view v-else />
           </div>

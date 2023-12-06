@@ -315,21 +315,21 @@ watch(
       @close="showManageModal = false"
     >
       <template #header-extra>
-        <n-button type="primary" size="small" @click="showEditModal = true">添加</n-button>
+        <n-button size="small" type="primary" @click="showEditModal = true">添加</n-button>
       </template>
       <div>
         <n-data-table
+          :bordered="false"
           :columns="columns"
           :data="rates"
-          :pagination="false"
-          :bordered="false"
           :max-height="tableHeight"
+          :pagination="false"
         />
       </div>
     </n-card>
   </n-modal>
 
-  <n-layout style="height: calc(100% - 0.5rem); width: 100%" ref="el">
+  <n-layout ref="el" style="height: calc(100% - 0.5rem); width: 100%">
     <n-layout-content style="height: calc(100% - 1rem - 4rem)">
       <n-scrollbar v-if="showPerson">
         <div

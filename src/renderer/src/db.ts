@@ -48,4 +48,4 @@ export class AppDatabase extends Dexie {
   }
 }
 
-export default AppDatabase.getInstance()
+export default AppDatabase.getInstance();

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
 import ratesConfig from '../../../config/rates.json'

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { onBeforeRouteLeave } from 'vue-router'
 import PersonManage from '../PersonManage.vue'
 
