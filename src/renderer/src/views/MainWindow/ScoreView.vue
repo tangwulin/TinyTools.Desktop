@@ -9,9 +9,9 @@ import {
 import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
 import { from, useObservable } from '@vueuse/rxjs'
 import { liveQuery } from 'dexie'
-import { useMessage } from 'naive-ui'
+import { DataTableColumns, NButton, NCard, NForm, NModal, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { computed, ref, watch } from 'vue'
+import { computed, h, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import { AppDatabase } from '../../db'
 import { useGeneralStore } from '../../stores/general'
@@ -20,6 +20,8 @@ import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { getAvatar } from '../../utils/avatarUtil'
 import remToPx from '../../utils/remToPx'
+import { useElementSize } from '@vueuse/core/index'
+import { Rate } from '../../types/rate'
 
 const db = AppDatabase.getInstance()
 
@@ -62,6 +64,24 @@ const enableUndo = computed(() => Date.now() - firstHistoryTime.value < 3 * 60 *
 const message = useMessage()
 
 const showManageModal = ref(false)
+const showEditModal = ref(false)
+
+const formData = ref(new Rate('', 0, ''))
+const isEdit = ref(false)
+
+const el = ref(null)
+const { height } = useElementSize(el)
+const tableHeight = computed(() => height.value - remToPx(10))
+
+const handler = () => {
+  if (!isEdit.value) {
+    db.rates.add({ ...formData.value, id: undefined })
+  } else {
+    db.rates.update(formData.value.id as number, formData.value)
+  }
+  message.success(`${isEdit ? '编辑成功' : '添加成功'}`)
+  showEditModal.value = false
+}
 
 const clickHandler = (item: Person | Group) => {
   showModal.value = true
@@ -133,6 +153,73 @@ const createDropdownOptions = (options) =>
     label: option.name
   }))
 
+const createColumns = (
+  del: (rate: Rate) => void,
+  edit: (rate: Rate) => void
+): DataTableColumns<Rate> => {
+  return [
+    {
+      title: '名称',
+      key: 'name'
+    },
+    {
+      title: '分数',
+      key: 'score'
+    },
+    {
+      title: '描述',
+      key: 'description'
+    },
+    {
+      title: '操作',
+      key: 'actions',
+      width: remToPx(7.5),
+      render(row) {
+        return h('div', { class: 'flex items-center justify-between' }, [
+          h(
+            NButton,
+            {
+              type: 'info',
+              size: 'small',
+              onClick: () => edit(row)
+            },
+            {
+              default: () => '编辑'
+            }
+          ),
+          h(
+            NButton,
+            {
+              type: 'error',
+              size: 'small',
+              onClick: () => del(row)
+            },
+            {
+              default: () => '删除'
+            }
+          )
+        ])
+      }
+    }
+  ]
+}
+
+const columns = createColumns(
+  (rate) => {
+    db.rates.delete(rate.id as number)
+    message.success('删除成功')
+  },
+  (rate) => {
+    formData.value = rate
+    isEdit.value = true
+    showEditModal.value = true
+  }
+)
+const onCloseModal = () => {
+  formData.value = new Rate('', 0, '')
+  isEdit.value = false
+}
+
 watch(
   () => route.query,
   () => {
@@ -143,6 +230,33 @@ watch(
 </script>
 
 <template>
+  <n-modal :on-after-leave="onCloseModal" :show="showEditModal">
+    <n-card
+      :bordered="true"
+      :title="isEdit ? '编辑' : '添加'"
+      closable
+      size="small"
+      style="width: 50%"
+      @close="showEditModal = false"
+    >
+      <n-form :label-width="80" :model="formData">
+        <n-form-item label="名称" path="name">
+          <n-input v-model:value="formData.name" placeholder="" />
+        </n-form-item>
+        <n-form-item label="分数" path="score">
+          <n-input-number v-model:value="formData.score" />
+        </n-form-item>
+        <n-form-item label="描述" path="description">
+          <n-input v-model:value="formData.description" placeholder="" />
+        </n-form-item>
+      </n-form>
+      <div class="flex justify-end">
+        <n-button :disabled="formData.name.length === 0" type="primary" @click="handler"
+          >保存
+        </n-button>
+      </div>
+    </n-card>
+  </n-modal>
   <n-modal v-model:show="showModal">
     <n-card
       :bordered="false"
@@ -200,10 +314,22 @@ watch(
       title="评分项管理"
       @close="showManageModal = false"
     >
+      <template #header-extra>
+        <n-button type="primary" size="small" @click="showEditModal = true">添加</n-button>
+      </template>
+      <div>
+        <n-data-table
+          :columns="columns"
+          :data="rates"
+          :pagination="false"
+          :bordered="false"
+          :max-height="tableHeight"
+        />
+      </div>
     </n-card>
   </n-modal>
 
-  <n-layout style="height: calc(100% - 0.5rem); width: 100%">
+  <n-layout style="height: calc(100% - 0.5rem); width: 100%" ref="el">
     <n-layout-content style="height: calc(100% - 1rem - 4rem)">
       <n-scrollbar v-if="showPerson">
         <div
@@ -300,6 +426,7 @@ watch(
                 >
                   <template #avatar="{ option: { name, src } }">
                     <n-tooltip>
+                      <!--suppress VueUnrecognizedSlot -->
                       <template #trigger>
                         <n-avatar
                           :img-props="{ referrerpolicy: 'no-referrer' }"
