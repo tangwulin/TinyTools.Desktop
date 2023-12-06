@@ -40,7 +40,7 @@ function createWindow(): void {
   //   mainWindow.hide()
   // })
 
-  tray = new Tray('resources/icon.png')
+  tray = new Tray(join(__dirname, '../../resources/icon.png'))
   const contextMenu = Menu.buildFromTemplate([
     {
       type: 'normal',
