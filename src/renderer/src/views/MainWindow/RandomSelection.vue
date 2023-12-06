@@ -295,7 +295,7 @@ watch(
       <template #footer>
         <div class="flex justify-end">
           <n-button
-            :disabled="number === 0 || number > selectionList.length"
+            :disabled="number2 === 0 || number2 > selectionList.length"
             type="primary"
             @click="handler(false)"
             >开始
