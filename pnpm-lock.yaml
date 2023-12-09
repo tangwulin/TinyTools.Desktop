@@ -107,7 +107,7 @@ devDependencies:
     specifier: ^10.4.16
     version: 10.4.16(postcss@8.4.32)
   electron:
-    specifier: ^v22.3.27
+    specifier: ^22.3.27
     version: 22.3.27
   electron-builder:
     specifier: ^24.9.1
