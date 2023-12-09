@@ -178,11 +178,11 @@ export const calcNewSeatByWeight = (
     remainStudentIds[bestStudentIndex] = null
   }
 
-  return result.map((item) => {
+  return result.map((item, index) => {
     const owner = item.owner
     return new Seat(
       new Person(owner.name, owner.genderCode, owner.number, owner?.id, owner?.avatar),
-      item.index
+      index
     )
   })
 }

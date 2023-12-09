@@ -231,6 +231,8 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
       break
   }
 
+  db.seats.bulkPut(result)
+
   if (result.length === 0) return
 
   switch (type) {
