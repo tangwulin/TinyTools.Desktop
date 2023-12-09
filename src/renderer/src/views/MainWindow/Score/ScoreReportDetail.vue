@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { EChartsOption } from 'echarts'
 import { BarChart } from 'echarts/charts'
 import { GridComponent, TooltipComponent } from 'echarts/components'
 import { use } from 'echarts/core'
@@ -120,7 +121,7 @@ const option2 = computed(() => ({
       data: [...toRaw(negativeData.value)]
     }
   ]
-}))
+} as EChartsOption))
 
 const deleteHandler = (x: ScoreHistory) => {
   db.transaction('rw', db.scoreHistories, db.groups, db.persons, async () => {
