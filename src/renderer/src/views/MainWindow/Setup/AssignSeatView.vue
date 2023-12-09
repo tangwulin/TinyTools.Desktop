@@ -90,6 +90,7 @@ const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: str
 
 const handler = () => {
   const result = shuffle(seats.value).map((item, index) => new Seat(item.owner, index))
+  db.seats.bulkPut(result)
   if (result.length === 0) return
   raffleSeatImmediately(result)
 }
