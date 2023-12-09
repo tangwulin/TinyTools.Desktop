@@ -4,7 +4,7 @@ import { GridComponent, TooltipComponent } from 'echarts/components'
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { useMessage } from 'naive-ui'
-import { computed, ref, toRaw, watch } from 'vue'
+import { computed, onMounted, ref, toRaw, watch } from 'vue'
 import VChart from 'vue-echarts'
 import { useRoute } from 'vue-router'
 import { AppDatabase } from '../../../db'
@@ -164,6 +164,15 @@ const deleteHandler = (x: ScoreHistory) => {
       console.error(e)
     })
 }
+const chart = ref()
+onMounted(() => {
+  setTimeout(() => {
+    chart.value?.resize()
+    window.addEventListener('resize', () => {
+      chart.value?.resize()
+    })
+  }, 200)
+})
 </script>
 
 <template>
@@ -171,7 +180,7 @@ const deleteHandler = (x: ScoreHistory) => {
     <n-scrollbar
       style="display: flex; flex-direction: column; height: calc(100vh - 5rem); width: 100%"
     >
-      <v-chart :option="option2" style="height: 70vh" />
+      <v-chart ref="chart" :option="option2" style="height: 70vh" />
       <div>
         <n-list hoverable>
           <n-list-item v-for="item in historyForThis">

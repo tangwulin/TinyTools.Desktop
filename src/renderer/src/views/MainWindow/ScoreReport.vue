@@ -10,7 +10,7 @@ import {
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { storeToRefs } from 'pinia'
-import { computed, ref } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import VChart from 'vue-echarts'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../db'
@@ -41,7 +41,6 @@ use([
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
 
-const loading = ref(true)
 const percentage = ref(0)
 
 const persons = ref<Person[]>([])
@@ -100,7 +99,6 @@ const current = ref<Person | Group | null>(null)
 
 const option1 = ref()
 const option2 = ref()
-const option3 = ref()
 let data1 = [] as { value: number; name: string }[]
 let fullData = [] as { value: number; name: string }[]
 let positiveData = [] as { value: number; name: string }[]
@@ -112,9 +110,19 @@ Promise.all([personPromise, groupPromise, scoreHistoryPromise]).then(() => {
   allRates.push(...new Set(scoreHistories.value.map((item) => item.description)))
   percentage.value += 16
 
+  data1 = [...allRates]
+    .map((r) => scoreHistories.value.filter((s) => s.description === r))
+    .map((item) =>
+      item.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.score
+      }, 0)
+    )
+    .map((sum, index) => ({ value: sum, name: allRates[index] }))
+  percentage.value += 16
+
   option1.value = {
     title: {
-      text: '各小组评分比较',
+      text: '数据总览',
       subtext: `从${firstHistoryTime}至今`,
       left: 'center'
     },
@@ -146,53 +154,17 @@ Promise.all([personPromise, groupPromise, scoreHistoryPromise]).then(() => {
     ],
     series: [
       {
-        name: '分数',
+        name: '各小组评分比较',
         type: 'bar',
+        center: ['25%', '50%'],
         barWidth: '60%',
         data: groups?.value.map((item) => item.score)
-      }
-    ]
-  }
-
-  data1 = [...allRates]
-    .map((r) => scoreHistories.value.filter((s) => s.description === r))
-    .map((item) =>
-      item.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue.score
-      }, 0)
-    )
-    .map((sum, index) => ({ value: sum, name: allRates[index] }))
-  percentage.value += 16
-
-  option2.value = {
-    title: {
-      text: '各评分项占比',
-      subtext: `从${firstHistoryTime}至今`,
-      left: 'center'
-    },
-    tooltip: {
-      trigger: 'item',
-      formatter: '{a} <br/>{b} : {c} ({d}%)'
-    },
-    legend: {
-      left: 'center',
-      top: 'bottom',
-      data: [...allRates]
-    },
-    toolbox: {
-      show: true,
-      feature: {
-        mark: { show: true },
-        dataView: { show: true, readOnly: false },
-        restore: { show: true },
-        saveAsImage: { show: true }
-      }
-    },
-    series: [
+      },
       {
         name: '各评分项总数',
         type: 'pie',
         radius: [20, 140],
+        center: ['75%', '50%'],
         roseType: 'area',
         itemStyle: {
           borderRadius: 5
@@ -224,7 +196,7 @@ Promise.all([personPromise, groupPromise, scoreHistoryPromise]).then(() => {
     }))
   percentage.value += 16
 
-  option3.value = {
+  option2.value = {
     title: {
       text: '各评分项占比',
       subtext: `从${firstHistoryTime}至今`,
@@ -271,7 +243,6 @@ Promise.all([personPromise, groupPromise, scoreHistoryPromise]).then(() => {
       }
     ]
   }
-  loading.value = false
 })
 
 const handler = (item: Person | Group) => {
@@ -281,12 +252,35 @@ const handler = (item: Person | Group) => {
     query: { type: 'members' in item ? 'group' : 'person', id: item.id }
   })
 }
+
+const chart1Ref = ref()
+const chart2Ref = ref()
+
+const drawCharts = () => {
+  chart1Ref.value?.resize()
+  chart2Ref.value?.resize()
+}
+
+onMounted(() => {
+  setTimeout(() => {
+    drawCharts()
+    window.addEventListener('resize', () => {
+      drawCharts()
+    })
+  }, 200)
+})
+
+watch(
+  () => displayType.value,
+  () => {
+    setTimeout(() => {
+      drawCharts()
+    }, 200)
+  }
+)
 </script>
 
 <template>
-  <div v-if="loading">
-    <n-progress :percentage="percentage" :show-indicator="false" type="line" />
-  </div>
   <n-layout style="height: 100%">
     <n-layout-header>
       <div
@@ -379,22 +373,24 @@ const handler = (item: Person | Group) => {
           "
         >
           <n-scrollbar v-if="displayType === 'class'">
-            <div style="display: flex; flex-direction: column; height: 100%; width: 100%">
-              <n-grid :cols="2" :x-gap="remToPx(0.75)" :y-gap="remToPx(0.75)" style="height: 90vh">
-                <n-grid-item>
-                  <v-chart :option="option1" class="chart" />
-                </n-grid-item>
-                <n-grid-item>
-                  <v-chart :option="option2" class="chart" />
-                </n-grid-item>
-              </n-grid>
-              <div>
-                <v-chart
-                  :option="option3"
-                  class="chart"
-                  style="height: calc(100vh - 10rem); width: 100%"
-                />
-              </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                height: calc(2 * (100vh - 5rem));
+                width: 100%;
+              "
+            >
+              <v-chart
+                ref="chart1Ref"
+                :option="option1"
+                style="height: calc(100vh - 5rem); width: 100%"
+              ></v-chart>
+              <v-chart
+                ref="chart2Ref"
+                :option="option2"
+                style="height: calc(100vh - 5rem); width: 100%"
+              ></v-chart>
             </div>
           </n-scrollbar>
           <div v-else style="width: 100%; height: 100%; margin: auto">
