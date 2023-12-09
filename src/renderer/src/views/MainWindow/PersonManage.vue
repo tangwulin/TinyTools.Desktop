@@ -1,5 +1,8 @@
 <script lang="ts" setup>
-import { PersonAdd20Filled as PersonAddIcon } from '@vicons/fluent'
+import {
+  ClipboardPaste24Regular as PasteIcon,
+  PersonAdd20Filled as PersonAddIcon
+} from '@vicons/fluent'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
 import { asyncComputed, useElementSize } from '@vueuse/core'
 import { from, useObservable } from '@vueuse/rxjs'
@@ -349,17 +352,23 @@ const parseExcel = async (uploadFileInfo: any) => {
 
 const { height } = useElementSize(el)
 const tableHeight = computed(() => height.value - remToPx(5.5))
-// window.addEventListener('resize', () => {
-//   tableHeight.value = height - remToPx(5.5)
-// })
 
 const downloadTemplate = () => {
   downloadAnyFile(personXlsx, '人员导入模板.xlsx')
 }
 
-// function createOptions(x) {
-//   return x.map((item) => ({ label: item.name, value: item.uniqueId }))
-// }
+const rowProps = (row: Person) => {
+  return {
+    style: 'cursor: pointer;',
+    onClick: () => {
+      editHandler(row)
+    }
+  }
+}
+
+const pasteAvatarLink = async () => {
+  formValue.value.avatar = await navigator.clipboard.readText()
+}
 </script>
 
 <template>
@@ -401,6 +410,7 @@ const downloadTemplate = () => {
       :max-height="tableHeight"
       :pagination="false"
       :render-cell="renderCell"
+      :row-props="rowProps"
       @update:filters="handleUpdateFilter"
     >
     </n-data-table>
@@ -425,7 +435,11 @@ const downloadTemplate = () => {
         >
           <n-form>
             <n-form-item label="头像" path="avatar">
-              <n-input v-model:value="formValue.avatar" placeholder="输入图片直链" />
+              <n-input v-model:value="formValue.avatar" placeholder="输入图片直链">
+                <template #suffix>
+                  <n-icon :component="PasteIcon" style="cursor: pointer" @click="pasteAvatarLink" />
+                </template>
+              </n-input>
             </n-form-item>
             <n-form-item label="姓名" path="name">
               <n-input v-model:value="formValue.name" placeholder="输入姓名" />

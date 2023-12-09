@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ClipboardPaste24Regular as PasteIcon } from '@vicons/fluent'
 import { asyncComputed } from '@vueuse/core'
 import { from } from '@vueuse/rxjs'
 import { useObservable } from '@vueuse/rxjs/index'
@@ -154,6 +155,10 @@ watch(
   },
   { deep: true }
 )
+
+const pasteAvatarLink = async () => {
+  currentGroup.value.avatar = await navigator.clipboard.readText()
+}
 </script>
 
 <template>
@@ -176,7 +181,11 @@ watch(
                 <n-input v-model:value="currentGroup.name" placeholder="输入名称" />
               </n-form-item>
               <n-form-item label="小组头像（可选）" path="avatar">
-                <n-input v-model:value="currentGroup.avatar" placeholder="输入图片直链" />
+                <n-input v-model:value="currentGroup.avatar" placeholder="输入图片直链" >
+                  <template #suffix>
+                    <n-icon :component="PasteIcon" style="cursor: pointer" @click="pasteAvatarLink" />
+                  </template>
+                </n-input>
               </n-form-item>
               <n-form-item label="描述（可选）" path="number">
                 <n-input v-model:value="currentGroup.description" placeholder="输入描述" />
