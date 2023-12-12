@@ -13,7 +13,9 @@ const { enableAvatar, enableFallbackAvatar, avatarWorks } = storeToRefs(setting)
 const works = [
   { value: 1, label: '原神' },
   { value: 2, label: '明日方舟' },
-  { value: 3, label: '崩坏·星穹铁道' }
+  { value: 3, label: '崩坏·星穹铁道' },
+  { value: 4, label: '蔚蓝档案' },
+  { value: 5, label: '赛马娘' }
 ]
 
 const sexes = [
@@ -25,8 +27,12 @@ const sexes = [
 const selectedSex = ref(1)
 const selectedAvatar = ref(getAvatarUrls(1, avatarWorks.value))
 const changeHandler = () => {
-  selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value)
+  selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value).filter((item) =>
+    item.description.includes(value.value)
+  )
 }
+
+const value = ref('')
 const writeClipboard = (x) => {
   navigator.clipboard
     .writeText(x)
@@ -39,6 +45,7 @@ const writeClipboard = (x) => {
 }
 
 watch(avatarWorks, changeHandler)
+watch(value, changeHandler)
 </script>
 
 <template>
@@ -66,7 +73,8 @@ watch(avatarWorks, changeHandler)
     </n-space>
     <n-space>
       <n-collapse>
-        <n-collapse-item title="可用头像列表">
+        <n-input v-model:value="value" type="text" placeholder="搜索" />
+        <n-collapse-item :title="`头像列表 共${selectedAvatar.length}个 点击头像可复制链接`">
           <n-radio-group v-model:value="selectedSex" @change="changeHandler">
             <n-space>
               <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">

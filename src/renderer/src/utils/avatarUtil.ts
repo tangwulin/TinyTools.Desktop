@@ -4,12 +4,17 @@ import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'
 
-const maleGenshin = avatarConfig['maleGenshin']
-const femaleGenshin = avatarConfig['femaleGenshin']
-const maleArknights = avatarConfig['maleArknights']
-const femaleArknights = avatarConfig['femaleArknights']
-const maleStarrail = avatarConfig['maleStarrail']
-const femaleStarrail = avatarConfig['femaleStarrail']
+// const maleGenshin = avatarConfig['maleGenshin']
+// const femaleGenshin = avatarConfig['femaleGenshin']
+// const maleArknights = avatarConfig['maleArknights']
+// const femaleArknights = avatarConfig['femaleArknights']
+// const maleStarrail = avatarConfig['maleStarrail']
+// const femaleStarrail = avatarConfig['femaleStarrail']
+const genshin = avatarConfig['genshin']
+const arknights = avatarConfig['arknights']
+const starRail = avatarConfig['starRail']
+const blueArchive = avatarConfig['blueArchive']
+const umamusume = avatarConfig['umamusume']
 
 function generateHash(input: string) {
   let hash = 0
@@ -36,13 +41,13 @@ export const getAvatarUrls = (sex: number, works: number[]) => {
       works.forEach((work) => {
         switch (work) {
           case 1:
-            result = result.concat(maleGenshin)
+            result = result.concat(genshin.male)
             break
           case 2:
-            result = result.concat(maleArknights)
+            result = result.concat(arknights.male)
             break
           case 3:
-            result = result.concat(maleStarrail)
+            result = result.concat(starRail.male)
             break
           default:
             break
@@ -53,13 +58,19 @@ export const getAvatarUrls = (sex: number, works: number[]) => {
       works.forEach((work) => {
         switch (work) {
           case 1:
-            result = result.concat(femaleGenshin)
+            result = result.concat(genshin.female)
             break
           case 2:
-            result = result.concat(femaleArknights)
+            result = result.concat(arknights.female)
             break
           case 3:
-            result = result.concat(femaleStarrail)
+            result = result.concat(starRail.female)
+            break
+          case 4:
+            result = result.concat(blueArchive.female)
+            break
+          case 5:
+            result = result.concat(umamusume.female)
             break
           default:
             break
@@ -106,5 +117,6 @@ export const getAvatar = (
       urls = male.concat(female)
       break
   }
+  console.log(urls)
   return urls[selectAvatar(sn, urls.length)].src
 }

@@ -1,6 +1,6 @@
 {
   "name": "tinytools-desktop",
-  "version": "4.0.0-alpha+2023120901",
+  "version": "4.0.0-alpha+2023121201",
   "description": "An Electron application with Vue and TypeScript",
   "main": "./out/main/index.js",
   "author": "tangwulin",
@@ -19,7 +19,8 @@
     "build:win_arm64": "pnpm run build && electron-builder --win --config --arm64",
     "build:win_ia32": "pnpm run build && electron-builder --win --config --ia32",
     "build:mac": "npm run build && electron-builder --mac --config",
-    "build:linux": "npm run build && electron-builder --linux --config"
+    "build:linux": "npm run build && electron-builder --linux --config",
+    "updateAvatars": "ts-node ./scripts/updateBuiltInAvatar.ts --files"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
@@ -67,7 +68,9 @@
     "naive-ui": "^2.35.0",
     "postcss": "^8.4.32",
     "prettier": "^3.1.0",
+    "puppeteer": "^21.6.0",
     "tailwindcss": "^3.3.6",
+    "ts-node": "^10.9.2",
     "typescript": "^5.3.2",
     "unplugin-auto-import": "^0.17.2",
     "unplugin-vue-components": "^0.26.0",
