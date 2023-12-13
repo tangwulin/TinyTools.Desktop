@@ -84,8 +84,8 @@ watch(value, changeHandler)
           </n-radio-group>
           <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
             <div
-              v-for="item in selectedAvatar"
-              :key="item.description"
+              v-for="(item, index) in selectedAvatar"
+              :key="index"
               style="
                 width: 8rem;
                 height: 8rem;
@@ -94,7 +94,7 @@ watch(value, changeHandler)
                 border-radius: 1rem;
                 margin: 0.5rem;
               "
-              @click="writeClipboard(item.src)"
+              @click="writeClipboard(item.url)"
             >
               <div
                 style="
@@ -109,7 +109,7 @@ watch(value, changeHandler)
                 <n-avatar
                   :img-props="{ referrerpolicy: 'no-referrer' }"
                   :size="remToPx(4)"
-                  :src="item.src"
+                  :src="item.url"
                   lazy
                   object-fit="contain"
                   round
