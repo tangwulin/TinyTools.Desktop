@@ -5,8 +5,15 @@ import puppeteer, { type Page } from 'puppeteer'
 
 const avatars = {}
 
-const updateBuiltInAvatar = async () => {
-  const browser = await puppeteer.launch()
+const stopwatch = performance.now()
+updateBuiltInAvatar().then(() => {
+  console.log(avatars)
+  console.log(`耗时：${(performance.now() - stopwatch) / 1000}秒`)
+  fs.writeFileSync('./src/renderer/src/config/avatars.json', JSON.stringify(avatars))
+})
+
+async function updateBuiltInAvatar() {
+  const browser = await puppeteer.launch({ headless: 'new' })
   // case '崩坏3':
   //   updateHonkai3rd()
   //   break
@@ -174,7 +181,7 @@ const updateBlueArchive = async (config: { blackList: string[] }) => {
       if (female.length === 0) {
         throw new Error('蔚蓝档案头像获取失败')
       }
-      avatars['blueArchive'] = { female }
+      avatars['blueArchive'] = { male: [], female }
     })
 }
 
@@ -256,12 +263,10 @@ const updateStarRail = async () => {
         description: '玲可',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/49/CharacterIcon_1110.webp'
       },
-
       {
         description: '卡芙卡',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a1/CharacterIcon_1005.webp'
       },
-
       {
         description: '驭空',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1207.webp'
@@ -270,7 +275,6 @@ const updateStarRail = async () => {
         description: '银狼',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/95/CharacterIcon_1006.webp'
       },
-
       {
         description: '希儿',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/3/32/CharacterIcon_1102.webp'
@@ -279,12 +283,10 @@ const updateStarRail = async () => {
         description: '姬子',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d0/CharacterIcon_1003.webp'
       },
-
       {
         description: '布洛妮娅',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a7/CharacterIcon_1101.webp'
       },
-
       {
         description: '克拉拉',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/e/e2/CharacterIcon_1107.webp'
@@ -309,7 +311,6 @@ const updateStarRail = async () => {
         description: '三月七',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/8/84/CharacterIcon_1001.webp'
       },
-
       {
         description: '艾丝妲',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2f/CharacterIcon_1009.webp'
@@ -330,7 +331,6 @@ const updateStarRail = async () => {
         description: '佩拉',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d2/CharacterIcon_1106.webp'
       },
-
       {
         description: '虎克',
         url: 'https://huiji-public.huijistatic.com/starrail/uploads/1/11/CharacterIcon_1109.webp'
@@ -369,13 +369,6 @@ const updateUmamusume = async (page: Page, config: { webUrl: string; blackList: 
       })
     }
   )
-  avatars['umamusume'] = { female }
+  avatars['umamusume'] = { male: [], female }
   await page.close()
 }
-
-const stopwatch = performance.now()
-updateBuiltInAvatar().then(() => {
-  console.log(avatars)
-  console.log(`耗时：${(performance.now() - stopwatch) / 1000}秒`)
-  fs.writeFileSync('./src/renderer/src/config/avatars.json', JSON.stringify(avatars))
-})
