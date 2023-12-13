@@ -27,11 +27,11 @@ function generateHash(input: string) {
 /**
  * 获取头像地址
  * @param sex number 性别,1:男,2:女
- * @param works number[] 作品,1:原神,2:明日方舟,3:崩坏·星穹铁道
+ * @param works number[] 作品
  */
 export const getAvatarUrls = (sex: number, works: number[]) => {
   let result: {
-    src: string
+    url: string
     description: string
   }[] = []
   works = works || [1, 2, 3]
@@ -103,7 +103,7 @@ export const getAvatar = (
   if ('disabledAvatar' in item && item.disabledAvatar) return null
   const sn =
     'number' in item && item?.number ? item.number : 'name' in item ? item.name + item.id ?? '' : ''
-  let urls: { src: string; description: string }[]
+  let urls: { url: string; description: string }[]
   switch (
     'genderCode' in item ? item.genderCode : 9 // 1:男,2:女,9:未知
   ) {
@@ -117,6 +117,5 @@ export const getAvatar = (
       urls = male.concat(female)
       break
   }
-  console.log(urls)
-  return urls[selectAvatar(sn, urls.length)].src
+  return urls[selectAvatar(sn, urls.length)].url
 }

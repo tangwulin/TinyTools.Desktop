@@ -60,8 +60,8 @@ const updateGenshin = async (
       return el.map((item) => {
         return {
           description: item.querySelector('figcaption').innerHTML,
-          // url: `https:${item.querySelector('img').getAttribute('data-src').split('@')[0]}`
-          src: `https:${item.querySelector('img').getAttribute('data-src')}` //小图片，节省带宽
+          // url: `https:${item.querySelector('img').getAttribute('data-url').split('@')[0]}`
+          url: `https:${item.querySelector('img').getAttribute('data-src')}` //小图片，节省带宽
         }
       })
     })
@@ -126,7 +126,7 @@ const updateArknights = async (page: Page, config: { webUrl: string; blackList: 
         return el.map((item) => {
           return {
             name: item.querySelector('div.name > div > a > div').innerHTML,
-            src: item.querySelector('div.avatar > div > a > img').getAttribute('data-src'),
+            url: item.querySelector('div.avatar > div > a > img').getAttribute('data-src'),
             gender: item.querySelector('div.other > div.sex').innerHTML
           }
         })
@@ -136,10 +136,10 @@ const updateArknights = async (page: Page, config: { webUrl: string; blackList: 
     result.forEach((item) => {
       switch (item.gender) {
         case '男':
-          male.push({ description: item.name, src: item.src })
+          male.push({ description: item.name, url: item.url })
           break
         case '女':
-          female.push({ description: item.name, src: item.src })
+          female.push({ description: item.name, url: item.url })
           break
         default:
           break
@@ -168,7 +168,7 @@ const updateBlueArchive = async (config: { blackList: string[] }) => {
           const description = `${item.family_name}${item.given_name}${
             item.skin.length > 0 ? `(${item.skin})` : ''
           }`
-          return { description, src: `https:${item.avatar}` }
+          return { description, url: `https:${item.avatar}` }
         })
         .filter((item) => !config.blackList.includes(item.description))
       if (female.length === 0) {
@@ -184,168 +184,168 @@ const updateStarRail = async () => {
     male: [
       {
         description: '银枝',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0d/CharacterIcon_1302.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0d/CharacterIcon_1302.webp'
       },
       {
         description: '丹恒•饮月',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/4/43/CharacterIcon_1213.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/43/CharacterIcon_1213.webp'
       },
       {
         description: '卢卡',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/c/c3/CharacterIcon_1111.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/c/c3/CharacterIcon_1111.webp'
       },
       {
         description: '景元',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/7/7a/CharacterIcon_1204.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/7/7a/CharacterIcon_1204.webp'
       },
       {
         description: '刃',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0d/CharacterIcon_1205.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0d/CharacterIcon_1205.webp'
       },
       {
         description: '罗刹',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2c/CharacterIcon_1203.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2c/CharacterIcon_1203.webp'
       },
       {
         description: '瓦尔特',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f9/CharacterIcon_1004.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f9/CharacterIcon_1004.webp'
       },
       {
         description: '杰帕德',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/c/ce/CharacterIcon_1104.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/c/ce/CharacterIcon_1104.webp'
       },
       {
         description: '丹恒',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0f/CharacterIcon_1002.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0f/CharacterIcon_1002.webp'
       },
       {
         description: '阿兰',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/5/59/CharacterIcon_1008.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/5/59/CharacterIcon_1008.webp'
       },
       {
         description: '桑博',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/1/10/CharacterIcon_1108.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/1/10/CharacterIcon_1108.webp'
       }
     ],
     female: [
       {
         description: '寒鸦',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f6/CharacterIcon_1215.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f6/CharacterIcon_1215.webp'
       },
       {
         description: '藿藿',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/d/dc/CharacterIcon_1217.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/dc/CharacterIcon_1217.webp'
       },
       {
         description: '托帕&账账',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/4/4c/CharacterIcon_1112.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/4c/CharacterIcon_1112.webp'
       },
       {
         description: '桂乃芬',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0b/CharacterIcon_1210.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0b/CharacterIcon_1210.webp'
       },
       {
         description: '镜流',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/9/97/CharacterIcon_1212.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/97/CharacterIcon_1212.webp'
       },
       {
         description: '符玄',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d7/CharacterIcon_1208.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d7/CharacterIcon_1208.webp'
       },
       {
         description: '玲可',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/4/49/CharacterIcon_1110.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/49/CharacterIcon_1110.webp'
       },
 
       {
         description: '卡芙卡',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a1/CharacterIcon_1005.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a1/CharacterIcon_1005.webp'
       },
 
       {
         description: '驭空',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1207.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1207.webp'
       },
       {
         description: '银狼',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/9/95/CharacterIcon_1006.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/95/CharacterIcon_1006.webp'
       },
 
       {
         description: '希儿',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/3/32/CharacterIcon_1102.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/3/32/CharacterIcon_1102.webp'
       },
       {
         description: '姬子',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d0/CharacterIcon_1003.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d0/CharacterIcon_1003.webp'
       },
 
       {
         description: '布洛妮娅',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a7/CharacterIcon_1101.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a7/CharacterIcon_1101.webp'
       },
 
       {
         description: '克拉拉',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/e/e2/CharacterIcon_1107.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/e/e2/CharacterIcon_1107.webp'
       },
       {
         description: '彦卿',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1209.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1209.webp'
       },
       {
         description: '白露',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/0/01/CharacterIcon_1211.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/01/CharacterIcon_1211.webp'
       },
       {
         description: '开拓者',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/c/c2/CharacterIcon_8002.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/c/c2/CharacterIcon_8002.webp'
       },
       {
         description: '开拓者',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/a/ab/CharacterIcon_8004.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/ab/CharacterIcon_8004.webp'
       },
       {
         description: '三月七',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/8/84/CharacterIcon_1001.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/8/84/CharacterIcon_1001.webp'
       },
 
       {
         description: '艾丝妲',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2f/CharacterIcon_1009.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2f/CharacterIcon_1009.webp'
       },
       {
         description: '黑塔',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/0/00/CharacterIcon_1013.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/00/CharacterIcon_1013.webp'
       },
       {
         description: '希露瓦',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f6/CharacterIcon_1103.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f6/CharacterIcon_1103.webp'
       },
       {
         description: '娜塔莎',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/9/92/CharacterIcon_1105.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/92/CharacterIcon_1105.webp'
       },
       {
         description: '佩拉',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d2/CharacterIcon_1106.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d2/CharacterIcon_1106.webp'
       },
 
       {
         description: '虎克',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/1/11/CharacterIcon_1109.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/1/11/CharacterIcon_1109.webp'
       },
       {
         description: '青雀',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f8/CharacterIcon_1201.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f8/CharacterIcon_1201.webp'
       },
       {
         description: '停云',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/2/20/CharacterIcon_1202.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/20/CharacterIcon_1202.webp'
       },
       {
         description: '素裳',
-        src: 'https://huiji-public.huijistatic.com/starrail/uploads/7/71/CharacterIcon_1206.webp'
+        url: 'https://huiji-public.huijistatic.com/starrail/uploads/7/71/CharacterIcon_1206.webp'
       }
     ]
   }
@@ -364,7 +364,7 @@ const updateUmamusume = async (page: Page, config: { webUrl: string; blackList: 
       return el.map((item) => {
         return {
           description: item.querySelector('span > div > center > a').innerHTML,
-          src: item.querySelector('span > div > a > img').getAttribute('src')
+          url: item.querySelector('span > div > a > img').getAttribute('src')
         }
       })
     }
