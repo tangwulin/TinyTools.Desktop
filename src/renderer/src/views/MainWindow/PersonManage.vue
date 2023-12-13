@@ -366,8 +366,40 @@ const rowProps = (row: Person) => {
   }
 }
 
+async function getClipboardImage() {
+  // 如果是文本类型
+  const text = await navigator.clipboard.readText()
+  if (text) return text
+
+  // 获取剪贴板内容
+  const clipboardItems = await navigator.clipboard.read().catch(() => [])
+
+  for (const clipboardItem of clipboardItems) {
+    for (const type of clipboardItem.types) {
+      // 如果是图片类型
+      if (type.startsWith('image/')) {
+        const blob = await clipboardItem.getType(type)
+        await blobToBase64(blob)
+        return await blobToBase64(blob)
+      }
+    }
+  }
+
+  return ''
+}
+
+function blobToBase64(blob: Blob):Promise<string> {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader()
+    reader.onloadend = () => resolve(reader.result as string)
+    reader.onerror = reject
+    reader.readAsDataURL(blob)
+  })
+}
+
 const pasteAvatarLink = async () => {
-  formValue.value.avatar = await navigator.clipboard.readText()
+  const res = await getClipboardImage()
+  if (res) formValue.value.avatar = res
 }
 </script>
 
