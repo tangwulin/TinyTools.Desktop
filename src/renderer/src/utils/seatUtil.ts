@@ -1,3 +1,4 @@
+import { IPerson } from '../interface/IPerson'
 import { Person } from '../types/person'
 import { Seat, SeatState } from '../types/seat'
 
@@ -101,7 +102,7 @@ const regionWeightMap = new Map<number, number[]>([
   [9, [6, 5, -3, -3]]
 ])
 
-export const calcWeight = (
+export const calcWeightByCorrectionAlgorithm = (
   item: Seat,
   allSeat: Seat[],
   oldAllSeat: Seat[],
@@ -142,17 +143,13 @@ export const calcWeight = (
 export const genWeightSeries = (weights: number[]) =>
   Array.from({ length: weights.length }, (_, i) => ({ index: i, weight: weights[i] }))
 
-export const calcNewSeatByWeight = (
-  allSeat: Seat[],
-  oldAllSeat: Seat[],
-  oldOldAllSeat?: Seat[]
-) => {
-  const seatsWeights = allSeat.map((x) => calcWeight(x, allSeat, oldAllSeat, oldOldAllSeat))
-  const seatsWeightSeries = seatsWeights.map((x, i) => ({
-    owner: allSeat[i].owner,
-    weightSeries: genWeightSeries(x).sort((a, b) => b.weight - a.weight)
-  }))
-
+function calcSeatByWeight(
+  seatsWeightSeries: {
+    owner: IPerson
+    weightSeries: { index: number; weight: number }[]
+  }[],
+  allSeat: Seat[]
+) {
   const remainStudentIds = seatsWeightSeries.map((x) => x.owner.id) as (number | undefined | null)[]
   const result = new Array(allSeat.length).fill(null) as Seat[]
   for (let i = 0; i < result.length; i++) {
@@ -177,7 +174,92 @@ export const calcNewSeatByWeight = (
     result[i] = allSeat.find((item) => item.owner.id === bestStudentId) as Seat
     remainStudentIds[bestStudentIndex] = null
   }
+  return result
+}
 
+function getWeightSeries(seatsWeights: number[][], allSeat: Seat[]) {
+  return seatsWeights.map((x, i) => ({
+    owner: allSeat[i].owner,
+    weightSeries: genWeightSeries(x).sort((a, b) => b.weight - a.weight)
+  }))
+}
+
+export const calcNewSeatByCorrectionAlgorithm = (
+  allSeat: Seat[],
+  oldAllSeat: Seat[],
+  oldOldAllSeat?: Seat[]
+) => {
+  const seatsWeights = allSeat.map((x) =>
+    calcWeightByCorrectionAlgorithm(x, allSeat, oldAllSeat, oldOldAllSeat)
+  )
+  const seatsWeightSeries = getWeightSeries(seatsWeights, allSeat)
+
+  const result = calcSeatByWeight(seatsWeightSeries, allSeat)
+
+  return result.map((item, index) => {
+    const owner = item.owner
+    return new Seat(
+      new Person(owner.name, owner.genderCode, owner.number, owner?.id, owner?.avatar),
+      index
+    )
+  })
+}
+const calcBigGroup = (index: number) => {
+  switch ((index + 1) % 8) {
+    case 1:
+    case 2:
+      return 1
+    case 3:
+    case 4:
+      return 2
+    case 5:
+    case 6:
+      return 3
+    case 7:
+    case 0:
+      return 4
+    default:
+      throw new Error('calcBigGroup error')
+  }
+}
+
+export const calcNewSeatByOutsideToInsideAlgorithm = (allSeat: Seat[]) => {
+  const seatsWeights = allSeat.map((x) => {
+    const bigGroup = calcBigGroup(x.index)
+    switch (bigGroup) {
+      case 1:
+      case 4:
+        return new Array(allSeat.length).fill(0).map((_, i) => {
+          switch (calcBigGroup(i)) {
+            case 2:
+            case 3:
+              return 100 * Math.random()
+            case 1:
+            case 4:
+              return -100
+            default:
+              return 0
+          }
+        })
+      case 2:
+      case 3:
+        return new Array(allSeat.length).fill(0).map((_, i) => {
+          switch (calcBigGroup(i)) {
+            case 1:
+            case 4:
+              return 100 * Math.random()
+            case 2:
+            case 3:
+              return -100
+            default:
+              return 0
+          }
+        })
+    }
+  })
+
+  const seatsWeightSeries = getWeightSeries(seatsWeights, allSeat)
+  const result = calcSeatByWeight(seatsWeightSeries, allSeat)
   return result.map((item, index) => {
     const owner = item.owner
     return new Seat(

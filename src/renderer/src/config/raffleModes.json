@@ -14,8 +14,7 @@
     {
       "label": "两边到中间",
       "value": 3,
-      "description": "就像名字里说的那样",
-      "disabled": true
+      "description": "就像名字里说的那样"
     },
     {
       "label": "相对公平",

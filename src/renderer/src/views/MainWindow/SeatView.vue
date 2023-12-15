@@ -17,7 +17,11 @@ import { Audio } from '../../types/audio'
 import { Person } from '../../types/person'
 import { Seat, SeatState } from '../../types/seat'
 import { SeatHistory } from '../../types/seatHistory'
-import { calcNewSeatByWeight, genSeatMap } from '../../utils/seatUtil'
+import {
+  calcNewSeatByCorrectionAlgorithm,
+  calcNewSeatByOutsideToInsideAlgorithm,
+  genSeatMap
+} from '../../utils/seatUtil'
 
 const setting = useSettingStore()
 
@@ -216,10 +220,11 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
       message.error('尚未从V3移植')
       break
     case 3:
-      message.error('尚未从V3移植')
+      result = calcNewSeatByOutsideToInsideAlgorithm(seats.value)
+      saveHistory(result, seatMap.value, '外圈向内')
       break
     case 4:
-      result = calcNewSeatByWeight(
+      result = calcNewSeatByCorrectionAlgorithm(
         seats.value,
         (seatHistory.value as SeatHistory[])[0]?.seats ?? seats.value,
         (seatHistory.value as SeatHistory[])[1]?.seats ?? undefined
