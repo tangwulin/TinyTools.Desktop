@@ -1,6 +1,6 @@
 {
   "name": "tinytools-desktop",
-  "version": "4.0.0-alpha+2023121201",
+  "version": "4.0.0-alpha+2023121501",
   "description": "An Electron application with Vue and TypeScript",
   "main": "./out/main/index.js",
   "author": "tangwulin",
