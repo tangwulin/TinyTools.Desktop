@@ -69,19 +69,36 @@ const clickHandler = () => {
       <p>内置头像来源：</p>
       <div>
         <p>
-          原神：<a href="https://www.bilibili.com/read/cv19356383/">图片来源</a>&nbsp; &nbsp;
-          <a href="https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2%E7%AD%9B%E9%80%89"
+          原神：<a href="https://www.bilibili.com/read/cv19356383/" target="_blank">图片来源</a
+          >&nbsp; &nbsp;
+          <a
+            href="https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2%E7%AD%9B%E9%80%89"
+            target="_blank"
             >性别判断来源</a
           >
         </p>
         <p>
-          明日方舟：<a href="https://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%80%E8%A7%88"
+          明日方舟：<a
+            href="https://prts.wiki/w/%E5%B9%B2%E5%91%98%E4%B8%80%E8%A7%88"
+            target="_blank"
             >图片&性别来源</a
           >
         </p>
         <p>蔚蓝档案：<a href="https://kivo.wiki/">图片来源</a></p>
-        <p>星穹铁道：<a href="https://starrail.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5#%E8%A7%92%E8%89%B2">图片来源</a></p>
-        <p>赛马娘：<a href="https://wiki.biligame.com/umamusume/%E8%B5%9B%E9%A9%AC%E5%A8%98%E4%B8%80%E8%A7%88">图片来源</a></p>
+        <p>
+          星穹铁道：<a
+            href="https://starrail.huijiwiki.com/wiki/%E9%A6%96%E9%A1%B5#%E8%A7%92%E8%89%B2"
+            target="_blank"
+            >图片来源</a
+          >
+        </p>
+        <p>
+          赛马娘：<a
+            href="https://wiki.biligame.com/umamusume/%E8%B5%9B%E9%A9%AC%E5%A8%98%E4%B8%80%E8%A7%88"
+            target="_blank"
+            >图片来源</a
+          >
+        </p>
         <p>本项目所使用角色头像版权均属于各游戏版权方</p>
       </div>
       <!--      <p>项目地址：</p>-->
