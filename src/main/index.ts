@@ -4,6 +4,7 @@ import { join } from 'path'
 import icon from '../../resources/icon.png?asset'
 
 let tray = null as Tray | null
+let mainWindow = null as BrowserWindow | null
 
 function createWindow(): void {
   // We cannot require the screen module until the app is ready.
@@ -14,7 +15,7 @@ function createWindow(): void {
   const height = primaryDisplay.size.height
 
   // Create the browser window.
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: (height / 1080) * 1080,
     height: (height / 1080) * 650,
     minWidth: (height / 1080) * 1080,
@@ -32,7 +33,7 @@ function createWindow(): void {
   })
 
   mainWindow.on('ready-to-show', () => {
-    mainWindow.show()
+    mainWindow?.show()
   })
 
   // mainWindow.on('close', (e) => {
@@ -45,7 +46,7 @@ function createWindow(): void {
     {
       type: 'normal',
       label: '打开主界面',
-      click: () => mainWindow.show()
+      click: () => mainWindow?.show()
     },
     {
       type: 'normal',
@@ -56,7 +57,7 @@ function createWindow(): void {
   tray.setToolTip('TinyTools.Desktop')
   tray.setContextMenu(contextMenu)
 
-  tray.on('click', () => mainWindow.show())
+  tray.on('click', () => mainWindow?.show())
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
@@ -144,6 +145,21 @@ app.whenReady().then(() => {
     app.relaunch()
     app.exit()
   })
+
+  //限制只能开启一个应用(4.0以上版本)
+  const gotTheLock = app.requestSingleInstanceLock()
+  if (!gotTheLock) {
+    app.quit()
+  } else {
+    app.on('second-instance', () => {
+      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+      if (mainWindow) {
+        if (mainWindow.isMinimized()) mainWindow.restore()
+        mainWindow.focus()
+        mainWindow.show()
+      }
+    })
+  }
 
   createWindow()
 
