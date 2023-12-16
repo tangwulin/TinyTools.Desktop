@@ -1,29 +1,29 @@
-<script setup>
-import { h, ref, watch } from 'vue'
-import { RouterLink, useRouter } from 'vue-router'
-import { NIcon, useDialog, useMessage } from 'naive-ui'
-import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
-import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
+<script lang="ts" setup>
+import { Group as GroupIcon } from '@vicons/carbon'
+// import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
-  DataHistogram24Regular as DataIcon,
   Info20Regular as InfoIcon,
   Person24Regular as PersonIcon,
-  Settings16Regular as SettingIcon,
+  Settings16Regular as SettingIcon
 } from '@vicons/fluent'
-import { Group as GroupIcon } from '@vicons/carbon'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
-import { useSettingStore } from '../stores/setting'
+import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
+import { NIcon } from 'naive-ui'
+// import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
+import { Component, h, ref, watch } from 'vue'
+import { RouterLink } from 'vue-router'
 import logoUrl from '../assets/images/logo.png'
 import { useGeneralStore } from '../stores/general'
-
-const settingStore = useSettingStore()
-const { enableDevelopFeature } = storeToRefs(settingStore)
 
 const generalStore = useGeneralStore()
 const { lastScoreType } = storeToRefs(generalStore)
 
+/* eslint-disable */
+// noinspection TypeScriptUnresolvedReference
+// @ts-ignore:2304
 const version = __APP_VERSION__
+/* eslint-enable */
 const shortVersion = version?.split('-')[0]
 
 const activeKey = ref(null)
@@ -33,42 +33,38 @@ const collapsedWithoutAnimation = ref(true)
 watch(
   () => collapsed.value,
   (value) => {
-    if (value)
-    {
+    if (value) {
       setTimeout(() => {
         collapsedWithoutAnimation.value = true
       }, 50)
-    }
-    else
-    {
+    } else {
       setTimeout(() => {
         collapsedWithoutAnimation.value = false
       }, 100)
     }
-  },
+  }
 )
 
-function renderIcon(icon)
-{
+function renderIcon(icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
 }
 
 const menuOptions = [
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'dashboard',
-          },
-        },
-        { default: () => '数据总览（未完成）' },
-      ),
-    key: 'dashboard',
-    icon: renderIcon(DataIcon),
-    show: enableDevelopFeature.value,
-  },
+  // {
+  //   label: () =>
+  //     h(
+  //       RouterLink,
+  //       {
+  //         to: {
+  //           name: 'dashboard'
+  //         }
+  //       },
+  //       { default: () => '数据总览（未完成）' }
+  //     ),
+  //   key: 'dashboard',
+  //   icon: renderIcon(DataIcon),
+  //   show: enableDevelopFeature.value
+  // },
   {
     label: () =>
       h(
@@ -76,13 +72,13 @@ const menuOptions = [
         {
           to: {
             name: 'score',
-            query: { type: lastScoreType.value },
-          },
+            query: { type: lastScoreType.value }
+          }
         },
-        { default: () => '评分' },
+        { default: () => '评分' }
       ),
     key: 'score',
-    icon: renderIcon(ScoreIcon),
+    icon: renderIcon(ScoreIcon)
   },
   {
     label: () =>
@@ -90,42 +86,42 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'seat',
-          },
+            name: 'seat'
+          }
         },
-        { default: () => '座位抽选' },
+        { default: () => '座位抽选' }
       ),
     key: 'seat',
-    icon: renderIcon(ChairIcon),
+    icon: renderIcon(ChairIcon)
   },
+  // {
+  //   label: () =>
+  //     h(
+  //       RouterLink,
+  //       {
+  //         to: {
+  //           name: 'schedule'
+  //         }
+  //       },
+  //       { default: () => '值日排班（未完成）' }
+  //     ),
+  //   key: 'schedule',
+  //   icon: renderIcon(ScheduleIcon),
+  //   show: enableDevelopFeature.value
+  // },
   {
     label: () =>
       h(
         RouterLink,
         {
           to: {
-            name: 'schedule',
-          },
+            name: 'randomSelection'
+          }
         },
-        { default: () => '值日排班（未完成）' },
-      ),
-    key: 'schedule',
-    icon: renderIcon(ScheduleIcon),
-    show: enableDevelopFeature.value,
-  },
-  {
-    label: () =>
-      h(
-        RouterLink,
-        {
-          to: {
-            name: 'randomSelection',
-          },
-        },
-        { default: () => '随机抽选' },
+        { default: () => '随机抽选' }
       ),
     key: 'randomSelection',
-    icon: renderIcon(DiceIcon),
+    icon: renderIcon(DiceIcon)
   },
   {
     label: () =>
@@ -133,13 +129,13 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'personManage',
-          },
+            name: 'personManage'
+          }
         },
-        { default: () => '人员管理' },
+        { default: () => '人员管理' }
       ),
     key: 'personManage',
-    icon: renderIcon(PersonIcon),
+    icon: renderIcon(PersonIcon)
   },
   {
     label: () =>
@@ -147,14 +143,14 @@ const menuOptions = [
         RouterLink,
         {
           to: {
-            name: 'groupManage',
-          },
+            name: 'groupManage'
+          }
         },
-        { default: () => '分组管理' },
+        { default: () => '分组管理' }
       ),
     key: 'groupManage',
-    icon: renderIcon(GroupIcon),
-  },
+    icon: renderIcon(GroupIcon)
+  }
 ]
 
 const footerMenuOptions = [
@@ -164,13 +160,13 @@ const footerMenuOptions = [
         RouterLink,
         {
           to: {
-            name: 'about',
-          },
+            name: 'about'
+          }
         },
-        { default: () => '关于' },
+        { default: () => '关于' }
       ),
     key: 'about',
-    icon: renderIcon(InfoIcon),
+    icon: renderIcon(InfoIcon)
   },
   {
     label: () =>
@@ -178,35 +174,16 @@ const footerMenuOptions = [
         RouterLink,
         {
           to: {
-            name: 'setting',
-          },
+            name: 'setting'
+          }
         },
-        { default: () => '设置' },
+        { default: () => '设置' }
       ),
     key: 'setting',
-    icon: renderIcon(SettingIcon),
-  },
+    icon: renderIcon(SettingIcon)
+  }
 ]
-const dialog = useDialog()
-const message = useMessage()
-const router = useRouter()
-const openDialog = () => {
-  dialog.warning({
-    title: '警告',
-    content: 'TinyToolsV3因架构缺陷已不再维护和增加新功能，请使用更新的TinyToolsV4。新版应用采用TypeScript重构，性能更好，功能更强大，界面更美观。旧版本数据可一键迁移至新版本中。',
-    positiveText: '跳转到数据导出页',
-    negativeText: '我知道了',
-    maskClosable: false,
-    closable: false,
-    onPositiveClick: () => {
-      router.push({ name: 'dataExport' })
-    },
-  })
-}
-
-onMounted(() => openDialog())
 </script>
-
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
     <n-layout-sider
@@ -222,11 +199,7 @@ onMounted(() => openDialog())
       <n-layout class="h-full">
         <n-layout-header>
           <div class="flex justify-center items-center bg-gray-100">
-            <img
-              :src="logoUrl"
-              alt="logo"
-              style="width: 60%; min-width: 3rem"
-            />
+            <img :src="logoUrl" alt="logo" style="width: 60%; min-width: 3rem" />
           </div>
         </n-layout-header>
         <n-layout-content>
@@ -250,12 +223,7 @@ onMounted(() => openDialog())
           />
           <n-p
             depth="3"
-            style="
-              text-align: center;
-              margin: 0 0 0.25rem 0;
-              font-size: 0.75rem;
-              user-select:none;
-            "
+            style="text-align: center; margin: 0 0 0.25rem 0; font-size: 0.75rem; user-select: none"
           >
             {{ collapsedWithoutAnimation ? shortVersion : version }}
           </n-p>

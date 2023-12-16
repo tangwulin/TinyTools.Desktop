@@ -8,7 +8,6 @@
   <p style="text-align: center;">
     一个班级管理工具集
     <br />
-    <a href="https://tiny-tools-lime.vercel.app/" target="blank"><strong>🌎 访问DEMO</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="#%EF%B8%8F-安装" target="blank"><strong>📦️ 下载安装包</strong></a>&nbsp;&nbsp;|&nbsp;&nbsp;
     <a href="https://qm.qq.com/cgi-bin/qm/qr?k=uzG7G5F3KZHdTiM4iLhpu-75XjFDHLLp&jump_from=webapi&authKey=buoIUVnbAl04s8AdlaApJAV94ZjnU12GwPz7M0iEPrNe6UXchAAIIJ37VSguYBIk" target="blank"><strong>💬 加入交流群</strong></a>
     <br />
@@ -17,9 +16,9 @@
 
 ## ✨ 特性
 
-- ✅ 使用 Vue.js 全家桶开发
-- ✈️ 使用WebWorker处理数据，拒绝慢、卡 ~~（当然要是你的机器太差也没办法）~~
-- ⚙️ 全新编写的多种座位抽选逻辑，尽力保证所有人的感受
+[//]: # (- ✈️ 使用WebWorker处理数据，拒绝慢、卡 ~~（当然要是你的机器太差也没办法）~~)
+- ✅ 使用 Vue+Vite 开发，轻量、快速
+- ⚙️ 全新编写的多种抽选算法，支持公平抽选
 - 🎶 内置数十首坤曲 ~~增添一些抽座位时的乐趣~~
 - 📃 内含随机抽选工具
 - 🛠  更多特性开发中
@@ -51,7 +50,7 @@ pnpm dev
 
 ```bash
 # For windows
-pnpm build:win
+pnpm build:win_x64
 
 # For macOS
 pnpm build:mac
