@@ -11,6 +11,7 @@ import {
   Settings16Regular as SettingIcon,
 } from '@vicons/fluent'
 import {UserAvatar as AvatarIcon} from '@vicons/carbon'
+import {DatabaseExport as DatabaseExportIcon} from '@vicons/tabler'
 
 const settingStore = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(settingStore)
@@ -127,6 +128,20 @@ const settingOptions = [
     key: 'debugTool',
     icon: renderIcon(SettingIcon),
     show: enableDevelopFeature.value,
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'dataExport',
+          },
+        },
+        { default: () => '数据导出' },
+      ),
+    key: 'dataExport',
+    icon: renderIcon(DatabaseExportIcon),
   },
 ]
 </script>

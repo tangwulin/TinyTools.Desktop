@@ -134,6 +134,11 @@ const router = createRouter({
               name: 'debugTool',
               component: () => import('../views/Setting/DebugToolView.vue'),
             },
+            {
+              path: '/setting/dataExport',
+              name: 'dataExport',
+              component: () => import('../views/Setting/DataExport.vue'),
+            },
           ],
         },
         {

@@ -1,7 +1,7 @@
 <script setup>
 import { h, ref, watch } from 'vue'
-import { RouterLink } from 'vue-router'
-import { NIcon } from 'naive-ui'
+import { RouterLink, useRouter } from 'vue-router'
+import { NIcon, useDialog, useMessage } from 'naive-ui'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
@@ -187,6 +187,24 @@ const footerMenuOptions = [
     icon: renderIcon(SettingIcon),
   },
 ]
+const dialog = useDialog()
+const message = useMessage()
+const router = useRouter()
+const openDialog = () => {
+  dialog.warning({
+    title: '警告',
+    content: 'TinyToolsV3因架构缺陷已不再维护和增加新功能，请使用更新的TinyToolsV4。新版应用采用TypeScript重构，性能更好，功能更强大，界面更美观。旧版本数据可一键迁移至新版本中。',
+    positiveText: '跳转到数据导出页',
+    negativeText: '我知道了',
+    maskClosable: false,
+    closable: false,
+    onPositiveClick: () => {
+      router.push({ name: 'dataExport' })
+    },
+  })
+}
+
+onMounted(() => openDialog())
 </script>
 
 <template>
