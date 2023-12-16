@@ -5,7 +5,9 @@ import { dateZhCN, zhCN } from 'naive-ui'
 <template>
   <n-config-provider :date-locale="dateZhCN" :locale="zhCN">
     <n-message-provider>
-      <router-view />
+      <n-dialog-provider>
+        <router-view />
+      </n-dialog-provider>
     </n-message-provider>
   </n-config-provider>
 </template>
