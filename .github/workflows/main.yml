@@ -4,59 +4,48 @@ on:
   push:
     tags:
       - v*.*.*
+  workflow_dispatch:
 
 jobs:
   release:
     runs-on: ${{ matrix.os }}
-    environment: Release Workflow
-    env:
-      GH_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
     strategy:
       matrix:
-        os: [ windows-latest ]
+        os: [windows-latest]
 
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v3
 
-      - uses: olegtarasov/get-tag@v2.1.2
-        id: tagName
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: 'pnpm'
 
       - name: Install Dependencies
-        run: pnpm install
+        run: npm install
 
-      - name: build frontend
-        run: pnpm run build
+      - name: build-linux
+        if: matrix.os == 'ubuntu-latest'
+        run: npm run build:linux
+
+      - name: build-mac
+        if: matrix.os == 'macos-latest'
+        run: npm run build:mac
 
       - name: build-win_x64
         if: matrix.os == 'windows-latest'
-        run: electron-builder --win --config --x64
-        env:
-          TAG: ${{ steps.tagName.outputs.tag }}
+        run: npm run build:win_x64
 
       - name: build-win_ia32
         if: matrix.os == 'windows-latest'
-        run: electron-builder --win --config --ia32
-        env:
-          TAG: ${{ steps.tagName.outputs.tag }}
+        run: npm run build:win_ia32
 
       - name: release
         uses: softprops/action-gh-release@v1
         with:
-#          draft: ${{ contains(github.ref_name, 'draft') }}
-          prerelease: ${{ contains(github.ref_name, 'beta') ||  contains(github.ref_name, 'rc') }}
+          draft: true
           files: |
             dist/*.exe
             dist/*.zip
