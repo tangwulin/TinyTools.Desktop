@@ -47,6 +47,7 @@ jobs:
         with:
           draft: true
           files: |
+            dist/*.tar.gz
             dist/*.exe
             dist/*.zip
             dist/*.dmg
@@ -54,7 +55,6 @@ jobs:
             dist/*.snap
             dist/*.deb
             dist/*.rpm
-            dist/*.tar.gz
             dist/*.yml
             dist/*.blockmap
         env:
