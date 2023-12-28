@@ -298,6 +298,7 @@ const rollbackHandler = (x: SeatHistory) => {
     message.error('请先等待抽选完成后再进行回滚操作')
     return
   }
+  exitPreview()
   seats.value = x.seats
   seatMap.value = x.seatMap
   db.seats.bulkPut(deepcopy(x.seats))
