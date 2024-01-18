@@ -1,8 +1,23 @@
 <script lang="ts" setup>
+import { from, useObservable } from '@vueuse/rxjs'
+import { liveQuery } from 'dexie'
+import { useMessage } from 'naive-ui'
 import { onBeforeRouteLeave } from 'vue-router'
+import { AppDatabase } from '../../../db'
 import PersonManage from '../PersonManage.vue'
 
-onBeforeRouteLeave(() => {})
+const message = useMessage()
+
+const db = AppDatabase.getInstance()
+const persons = useObservable(from(liveQuery(() => db.persons.toArray())))
+
+onBeforeRouteLeave(() => {
+  if (persons.value?.length === 0) {
+    message.error('至少添加一个人')
+    return false
+  }
+  return true
+})
 </script>
 
 <template>
