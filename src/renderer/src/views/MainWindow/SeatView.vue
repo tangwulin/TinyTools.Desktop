@@ -221,7 +221,7 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
       break
     case 3:
       result = calcNewSeatByOutsideToInsideAlgorithm(seats.value)
-      saveHistory(result, seatMap.value, '外圈向内')
+      saveHistory(result, seatMap.value, '两边到中间')
       break
     case 4:
       result = calcNewSeatByCorrectionAlgorithm(
@@ -367,7 +367,7 @@ const play = (option: Audio) => {
       () => {
         i++
         player.volume = player.volume + originVol / 50
-        if (i >= 50) clearInterval(interval)
+        if (i > 50) clearInterval(interval)
       },
       (fadeinTime.value * 1000) / 50
     )
