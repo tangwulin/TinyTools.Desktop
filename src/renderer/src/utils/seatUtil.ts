@@ -21,7 +21,7 @@ const calcWeightByDistance = (distance: number) => {
     case 2:
       return -2
     default:
-      return distance * 2
+      return distance
   }
 }
 
@@ -237,7 +237,7 @@ const calcBigGroup = (index: number) => {
   }
 }
 
-export const calcNewSeatByOutsideToInsideAlgorithm = (originSeatTable: SeatTableItem[]) => {
+export const calcNewSeatBySideToMiddleAlgorithm = (originSeatTable: SeatTableItem[]) => {
   const allSeat = getSeatsFromSeatTable(originSeatTable)
   const seatsWeights = allSeat.map((x) => {
     const bigGroup = calcBigGroup(x.locationIndex)

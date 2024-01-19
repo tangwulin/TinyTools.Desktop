@@ -20,7 +20,7 @@ import { SeatHistory } from '../../types/seatHistory'
 import { SeatTableItem } from '../../types/SeatTableItem'
 import {
   calcNewSeatByCorrectionAlgorithm,
-  calcNewSeatByOutsideToInsideAlgorithm,
+  calcNewSeatBySideToMiddleAlgorithm,
   genSeatTable,
   getSeatsFromSeatTable,
   reGenSeatTable,
@@ -232,7 +232,8 @@ const raffleSeatFeint = (result: SeatTableItem[], times: number) => {
 const raffleSeatGacha = (result: SeatTableItem[]) => {
   playVideo()
   setTimeout(() => {
-    raffleSeatImmediately(result)
+    seatTable.value = result
+    db.seatTable.bulkPut(deepcopy(result))
   }, 5000)
 }
 const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
@@ -282,7 +283,7 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
       message.error('尚未从V3移植')
       break
     case 3:
-      result = calcNewSeatByOutsideToInsideAlgorithm(seatTable.value)
+      result = calcNewSeatBySideToMiddleAlgorithm(seatTable.value)
       saveHistory(result, '两边到中间')
       break
     case 4:
