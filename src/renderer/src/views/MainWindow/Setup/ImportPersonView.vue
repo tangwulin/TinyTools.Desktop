@@ -3,12 +3,11 @@ import { from, useObservable } from '@vueuse/rxjs'
 import { liveQuery } from 'dexie'
 import { useMessage } from 'naive-ui'
 import { onBeforeRouteLeave } from 'vue-router'
-import { AppDatabase } from '../../../db'
+import db from '../../../db'
 import PersonManage from '../PersonManage.vue'
 
 const message = useMessage()
 
-const db = AppDatabase.getInstance()
 const persons = useObservable(from(liveQuery(() => db.persons.toArray())))
 
 onBeforeRouteLeave(() => {

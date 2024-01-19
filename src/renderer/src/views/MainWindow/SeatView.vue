@@ -15,12 +15,16 @@ import { AppDatabase } from '../../db'
 import { useSettingStore } from '../../stores/setting'
 import { Audio } from '../../types/audio'
 import { Person } from '../../types/person'
-import { Seat, SeatState } from '../../types/seat'
+import { Seat } from '../../types/seat'
 import { SeatHistory } from '../../types/seatHistory'
+import { SeatTableItem } from '../../types/SeatTableItem'
 import {
   calcNewSeatByCorrectionAlgorithm,
   calcNewSeatByOutsideToInsideAlgorithm,
-  genSeatMap
+  genSeatTable,
+  getSeatsFromSeatTable,
+  reGenSeatTable,
+  updateSeatTable
 } from '../../utils/seatUtil'
 
 const setting = useSettingStore()
@@ -39,11 +43,10 @@ const db = AppDatabase.getInstance()
 const message = useMessage()
 
 const persons = ref([] as Person[])
-const seats = ref([] as Seat[])
-const seatMap = ref([] as SeatState[])
 const seatHistory = useObservable(from(liveQuery(() => db.seatHistory.toArray()))) as Readonly<
   Ref<SeatHistory[]>
 >
+const seatTable = ref([] as SeatTableItem[])
 
 const settingStore = useSettingStore()
 const { lotteryMode } = storeToRefs(settingStore)
@@ -66,35 +69,64 @@ const personsPromise = db.persons.toArray().then((result) => {
   persons.value = result as Person[]
 })
 
-const seatsPromise = db.seats.toArray().then((result) => {
-  seats.value = result.map(
-    (item) => new Seat(persons.value.find((p) => p.id === item.owner.id) ?? item.owner, item.index)
-  ) as Seat[]
+const seatTablePromise = db.seatTable.toArray().then((result) => {
+  seatTable.value = result
 })
 
-const seatMapPromise = db.seatMap.toArray().then((result) => {
-  seatMap.value = result
-})
+Promise.all([personsPromise, seatTablePromise]).then(() => {
+  const personsCount = persons.value.length
+  const seatTableCount = seatTable.value.filter((item) => item.type === 'seat').length
 
-Promise.all([personsPromise, seatsPromise, seatMapPromise]).then(() => {
-  if (persons.value.length !== seats.value.length) {
-    console.log(persons.value.length, seats.value.length)
+  if (personsCount !== seatTableCount) {
+    console.log(personsCount, seatTableCount)
     console.log('人数和座位数不一致')
-    if (seats.value.length === 0) {
-      seats.value = persons.value.map((item, index) => new Seat(item, index))
-      db.seats.bulkPut(deepcopy(seats.value))
-      const newSeatMap = genSeatMap(seats.value.length)
-      seatMap.value = newSeatMap
-      db.seatMap.bulkPut(newSeatMap)
-      saveHistory(seats.value, newSeatMap, '初始座位')
+    const seats = persons.value.map((item, index) => new Seat(item.name, index, undefined, item.id))
+    let newSeatTable = [] as SeatTableItem[]
+    if (seatTable.value.length === 0) {
+      //没有座位表，直接生成
+      newSeatTable = genSeatTable(seats)
+
+      db.transaction('rw', db.seatTable, async () => {
+        await db.seatTable.bulkPut(newSeatTable)
+      })
+        .then(() => {
+          // seatTable.value = newSeatTable
+          message.success('已生成座位表')
+        })
+        .catch((err) => {
+          console.log(err)
+          message.error('生成座位表失败')
+        })
     } else {
-      setTimeout(() => {
-        showHasDiffModal.value = true
-        console.log('showHasDiffModal', showHasDiffModal.value)
-      }, 100)
-      showHasDiffModal.value = true
+      message.error('人数和座位数不一致,尝试重新生成座位表')
+      //有座位表，尝试重新生成
+      newSeatTable = reGenSeatTable(seatTable.value, seats)
+
+      db.transaction('rw', db.seatTable, async () => {
+        await db.seatTable.bulkPut(deepcopy(newSeatTable))
+      })
+        .then(() => {
+          // seatTable.value = newSeatTable
+          message.success('已重新生成座位表')
+        })
+        .catch((err) => {
+          console.log(err)
+          message.error('重新生成座位表失败')
+        })
     }
+    seatTable.value = newSeatTable
   }
+
+  //用于人名更新后更新座位的显示名
+  seatTable.value = seatTable.value.map((item) => {
+    if (item.type !== 'seat') return item
+    else {
+      const person = persons.value.find((person) => person.id === item.data?.ownerId)
+      if (person) item.setDisplayName(person.name)
+      else item.setDisplayName('Error')
+      return item
+    }
+  })
 })
 
 onMounted(() => {
@@ -120,33 +152,56 @@ function updateDateTime() {
   currentTime.value = time
 }
 
-const raffleSeatImmediately = (result: Seat[]) => {
-  seats.value = result
-  db.seats.bulkPut(deepcopy(result))
+const raffleSeatImmediately = (result: SeatTableItem[]) => {
+  seatTable.value = result
+  db.seatTable.bulkPut(deepcopy(result))
   message.success('抽选完成')
 }
 
-const raffleSeatRemainMysterious = (result: Seat[]) => {
+const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
   loading.value = true
   playBgm()
-  seats.value = Array.from(
-    { length: seats.value.length },
-    (_, i) => new Seat({ avatar: '', genderCode: 9, number: '', score: 0, name: '???' }, i)
+  const newSeats = getSeatsFromSeatTable(result)
+  seatTable.value = updateSeatTable(
+    seatTable.value,
+    newSeats.map((item) => {
+      item.displayName = '???' //先把所有座位的displayName都改成???
+      return item
+    })
   )
-  const series = shuffle(Array.from({ length: result.length }, (_, i) => i))
+
+  const series = shuffle(
+    result.filter((item) => item.type === 'seat').map((item) => item.locationIndex as number)
+  )
 
   let i = 0
   const timer = setInterval(() => {
     if (i < series.length) {
-      seats.value = seats.value.map((item) => new Seat(item.owner, item.index, null))
-      seats.value[series[i]] = result[series[i]]
-      seats.value[series[i]].color = '#ADF7B6'
+      //去除所有座位的颜色
+      seatTable.value = seatTable.value.map((item) => {
+        item.removeColor()
+        return item
+      })
+
+      //给当前座位上色
+      seatTable.value[series[i]].setColor('#ADF7B6')
+
+      //重新添加displayName
+      seatTable.value[series[i]].setDisplayName(
+        persons.value.find((item) => item.id === seatTable.value[series[i]].data?.ownerId)?.name ??
+          'Error'
+      )
       i++
     } else {
       pauseBgm()
       clearInterval(timer)
-      seats.value = seats.value.map((item) => new Seat(item.owner, item.index, null))
-      db.seats.bulkPut(deepcopy(seats.value))
+
+      //去除所有座位的颜色
+      seatTable.value = seatTable.value.map((item) => {
+        item.removeColor()
+        return item
+      })
+      db.seatTable.bulkPut(deepcopy(seatTable.value))
       message.success('抽选完成')
       loading.value = false
       playFinalBgm()
@@ -154,19 +209,19 @@ const raffleSeatRemainMysterious = (result: Seat[]) => {
   }, 500)
 }
 
-const raffleSeatFeint = (result: Seat[], times: number) => {
+const raffleSeatFeint = (result: SeatTableItem[], times: number) => {
   loading.value = true
   playBgm()
   let i = 1
   const timer = setInterval(() => {
     if (i < times) {
-      seats.value = shuffle(seats.value)
+      //TODO:修一下这里
       i++
     } else {
       pauseBgm()
       clearInterval(timer)
-      seats.value = result
-      db.seats.bulkPut(deepcopy(result))
+      seatTable.value = result
+      db.seatTable.bulkPut(deepcopy(result))
       message.success('抽选完成')
       loading.value = false
       playFinalBgm()
@@ -174,15 +229,13 @@ const raffleSeatFeint = (result: Seat[], times: number) => {
   }, 500)
 }
 
-const raffleSeatGacha = (result: Seat[]) => {
+const raffleSeatGacha = (result: SeatTableItem[]) => {
   playVideo()
   setTimeout(() => {
-    seats.value = result
-    db.seats.bulkPut(deepcopy(result))
-  }, 3000)
+    raffleSeatImmediately(result)
+  }, 5000)
 }
-
-const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: string) => {
+const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
   if (type === '手动更改') {
     db.seatHistory
       .orderBy('timestamp')
@@ -191,52 +244,59 @@ const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: str
       .first()
       .then((result) => {
         if (result) {
-          if (
-            JSON.stringify(result.seats) === JSON.stringify(currentSeat) &&
-            JSON.stringify(result.seatMap) === JSON.stringify(currentSeatMap)
-          ) {
+          if (JSON.stringify(result.seatTable) === JSON.stringify(currentSeatTable)) {
             //未发生变化，无需保存
             return
           }
-          if (Date.now() - result.timestamp < 1000 * 60) {
-            db.seatHistory.delete(result.timestamp)
-            //目的是为了避免用户在短时间内多次拖动座位导致的历史记录过多
-          }
+
+          //TODO:给每个记录增加子记录而不是直接覆盖
+          db.seatHistory
+            .orderBy('timestamp')
+            .reverse()
+            .limit(1)
+            .modify((item) => {
+              item.seatTable = deepcopy(currentSeatTable)
+              item.timestamp = Date.now()
+            })
         }
       })
+  } else {
+    db.seatHistory.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
   }
-  db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
   message.success('已保存本次记录')
 }
 
 const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
-  let result = [] as Seat[]
+  let result = [] as SeatTableItem[]
   switch (lotteryMode.value) {
     case 1:
-      result = shuffle(seats.value).map((item, index) => new Seat(item.owner, index))
-      saveHistory(result, seatMap.value, '平等')
+      //TODO:把真随机计算座位的方法实现改为权重
+      const newSeats = shuffle(getSeatsFromSeatTable(seatTable.value)).map((item, index) => {
+        item.locationIndex = index
+        return item
+      })
+      result = updateSeatTable(seatTable.value, newSeats)
+      saveHistory(result, '平等')
       break
     case 2:
       message.error('尚未从V3移植')
       break
     case 3:
-      result = calcNewSeatByOutsideToInsideAlgorithm(seats.value)
-      saveHistory(result, seatMap.value, '两边到中间')
+      result = calcNewSeatByOutsideToInsideAlgorithm(seatTable.value)
+      saveHistory(result, '两边到中间')
       break
     case 4:
       result = calcNewSeatByCorrectionAlgorithm(
-        seats.value,
-        (seatHistory.value as SeatHistory[])[1]?.seats ?? seats.value,
-        (seatHistory.value as SeatHistory[])[2]?.seats ?? undefined
+        seatTable.value,
+        (seatHistory.value as SeatHistory[])[1]?.seatTable,
+        (seatHistory.value as SeatHistory[])[2]?.seatTable
       )
-      saveHistory(result, seatMap.value, '相对公平')
+      saveHistory(result, '相对公平')
       break
     default:
       message.error('抽选模式异常')
       break
   }
-
-  db.seats.bulkPut(result)
 
   if (result.length === 0) return
 
@@ -278,19 +338,18 @@ const previewHandler = (x: SeatHistory) => {
     return
   }
   isPreview.value = true
-  seats.value = x.seats
-  seatMap.value = x.seatMap
+  seatTable.value = x.seatTable
   message.info('正在预览 ' + new Date(x.timestamp).toLocaleString())
 }
 
 const exitPreview = () => {
   isPreview.value = false
-  Promise.all([
-    db.seats.toArray().then((result) => (seats.value = result as Seat[])),
-    db.seatMap.toArray().then((result) => (seatMap.value = result as SeatState[]))
-  ]).then(() => {
-    message.success('已退出预览')
-  })
+  db.seatTable
+    .toArray()
+    .then((result) => (seatTable.value = result as SeatTableItem[]))
+    .then(() => {
+      message.success('已退出预览')
+    })
 }
 
 const rollbackHandler = (x: SeatHistory) => {
@@ -298,12 +357,12 @@ const rollbackHandler = (x: SeatHistory) => {
     message.error('请先等待抽选完成后再进行回滚操作')
     return
   }
-  exitPreview()
-  seats.value = x.seats
-  seatMap.value = x.seatMap
-  db.seats.bulkPut(deepcopy(x.seats))
-  db.seatMap.bulkPut(deepcopy(x.seatMap))
-  saveHistory(x.seats, x.seatMap, '回滚而来')
+  if (isPreview.value) {
+    exitPreview()
+  }
+  message.error('暂未实现')
+  seatTable.value = x.seatTable
+  saveHistory(x.seatTable, '回滚而来')
   message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
 }
 
@@ -404,9 +463,10 @@ const playFinalBgm = () => {
 
 const dragHandler = debounce(
   () => {
-    db.seats.bulkPut(deepcopy(seats.value))
-    db.seatMap.bulkPut(deepcopy(seatMap.value))
-    saveHistory(seats.value, seatMap.value, '手动更改')
+    db.transaction('rw', db.seatTable, async () => {
+      await db.seatTable.bulkPut(deepcopy(seatTable.value))
+      saveHistory(seatTable.value, '初始座位')
+    })
   },
   100,
   {
@@ -428,8 +488,7 @@ const dragHandler = debounce(
     >
       <div>
         <SeatTable
-          v-model:seat-map="seatMap"
-          v-model:seats="seats"
+          v-model:seat-table-data="seatTable"
           :disable="loading || isPreview"
           :reverse="reverse"
           @dragend="dragHandler"
@@ -498,7 +557,7 @@ const dragHandler = debounce(
     </div>
 
     <div v-if="isPreview" class="absolute top-0 right-0 mt-4 mr-4">
-      <n-button type="success" @click="saveHistory(seats, seatMap, '手动保存')"> 保存当前</n-button>
+      <n-button type="success" @click="saveHistory(seatTable, '手动保存')"> 保存当前</n-button>
     </div>
 
     <!--  视频Modal  <-->
