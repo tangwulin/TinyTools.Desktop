@@ -29,11 +29,11 @@ const delHandler = (x: SeatHistory) => {
 <template>
   <n-list>
     <n-scrollbar style="max-height: 100%">
-      <n-list-item v-for="item in history" :key="item.timestamp">
+      <n-list-item v-for="(item, index) in history" :key="item.timestamp">
         <n-popover
           id="popover"
           placement="left"
-          style="width: 42.5vw; height: 34vh"
+          style="width: 42.5vw; height: 42vh"
           trigger="hover"
         >
           <template #trigger>
@@ -50,7 +50,7 @@ const delHandler = (x: SeatHistory) => {
           </template>
 
           <div id="preview" class="flex flex-col items-center justify-start">
-            <seat-table :disable="true" :seat-map="item.seatMap" :seats="item.seats" />
+            <seat-table :disable="true" :seat-table-data="item.seatTable" />
           </div>
         </n-popover>
         <template #suffix>
@@ -60,7 +60,7 @@ const delHandler = (x: SeatHistory) => {
             @positive-click="rollbackHandler(item)"
           >
             <template #trigger>
-              <n-button type="warning">回滚到此处</n-button>
+              <n-button type="warning" :disabled="index === 0"> 回滚到此处 </n-button>
             </template>
             确定要回滚到此处吗？
           </n-popconfirm>
@@ -70,7 +70,7 @@ const delHandler = (x: SeatHistory) => {
             @positive-click="delHandler(item)"
           >
             <template #trigger>
-              <n-button type="error">删除该记录</n-button>
+              <n-button type="error" :disabled="index === 0"> 删除该记录 </n-button>
             </template>
             确定要删除该记录吗？
           </n-popconfirm>
@@ -81,33 +81,5 @@ const delHandler = (x: SeatHistory) => {
 </template>
 
 <style scoped>
-#popover {
-  width: 50vw;
-  height: 15vh;
-}
 
-#preview {
-  margin-left: 12rem;
-  width: 48vw;
-  height: 40vh;
-  transform-origin: top left;
-  transform: scale(0.4);
-}
-
-@media (max-width: 1080px) {
-  #popover {
-    width: 53vw;
-    height: 32vh;
-  }
-}
-
-@media (max-width: 1080px) {
-  #preview {
-    margin-left: 1rem;
-    width: 80vw;
-    height: 60vh;
-    transform-origin: top left;
-    transform: scale(0.45);
-  }
-}
 </style>

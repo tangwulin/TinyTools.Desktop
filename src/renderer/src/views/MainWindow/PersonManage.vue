@@ -17,6 +17,7 @@ import {
   NSwitch,
   NTag,
   NText,
+  type UploadFileInfo,
   useMessage
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
@@ -27,15 +28,13 @@ import * as XLSX from 'xlsx'
 // @ts-ignore:2307
 import personXlsx from '../../assets/xlsx/person.xlsx'
 
-import { AppDatabase } from '../../db'
+import db from '../../db'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { getAvatar } from '../../utils/avatarUtil'
 import downloadAnyFile from '../../utils/downloadAnyFile'
 import remToPx from '../../utils/remToPx'
-
-const db = AppDatabase.getInstance()
 
 const route = useRoute()
 
@@ -103,12 +102,23 @@ const editHandler = (row: Person) => {
 }
 
 const deleteHandler = (row: Person) => {
-  db.transaction('rw', db.persons, db.scoreHistories, async () => {
-    db.persons.delete(row.id as number)
-    db.scoreHistories
+  db.transaction('rw', db.persons, db.scoreHistories, db.seatTable, async () => {
+    await db.scoreHistories
       .where('ownerId')
       .equals(row.id as number)
       .delete()
+    const seatTable = await db.seatTable.toArray()
+    const locationIndex = seatTable.find((item) => item.data?.ownerId === row.id)?.locationIndex
+    if (locationIndex) {
+      await db.seatTable
+        .where('locationIndex')
+        .equals(locationIndex as number)
+        .modify((item) => {
+          item.type = 'empty'
+          item.data = undefined
+        })
+    }
+    await db.persons.delete(row.id as number)
   })
     .then(() => {
       message.success('删除成功')
@@ -269,7 +279,7 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
   ]
 }
 
-const renderCell = (value: any) => {
+const renderCell = (value: unknown) => {
   if (!value) {
     return h(NText, { depth: 3 }, { default: () => '未填写' })
   }
@@ -309,22 +319,26 @@ const handler = () => {
   showAddModal.value = false
 }
 
-const parseExcel = async (uploadFileInfo: any) => {
-  const file = uploadFileInfo.file.file
+interface UploadInfo {
+  file: UploadFileInfo
+}
+
+interface personFromExcel {
+  ['姓名']: string
+  ['性别']: string
+  ['学号']: string
+}
+
+const parseExcel = async (uploadFileInfo: UploadInfo) => {
+  const file = uploadFileInfo.file.file as File
   const data = await file.arrayBuffer()
   const workbook = XLSX.read(data)
   const sheetNames = workbook.SheetNames // 工作表名称集合
   const worksheet = workbook.Sheets[sheetNames[0]] // 这里我们只读取第一张sheet
   const json = XLSX.utils.sheet_to_json(worksheet)
   const personsFromExcel = json
-    .map((item: any) => {
+    .map((item: personFromExcel) => {
       if (item['姓名'] === undefined || item['姓名'] === null || item['姓名'] === '') return
-      // return {
-      //   name: item['姓名'],
-      //   sex: item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
-      //   number: JSON.stringify(item['学号']),
-      //   group: []
-      // }
       return new Person(
         item['姓名'],
         item['性别'] === '男' ? 1 : item['性别'] === '女' ? 2 : 9,
@@ -357,14 +371,14 @@ const downloadTemplate = () => {
   downloadAnyFile(personXlsx, '人员导入模板.xlsx')
 }
 
-const rowProps = (row: Person) => {
-  return {
-    style: 'cursor: pointer;',
-    onClick: () => {
-      editHandler(row)
-    }
-  }
-}
+// const rowProps = (row: Person) => {
+//   return {
+//     style: 'cursor: pointer;',
+//     onClick: () => {
+//       editHandler(row)
+//     }
+//   }
+// }
 
 async function getClipboardImage() {
   // 如果是文本类型
@@ -388,7 +402,7 @@ async function getClipboardImage() {
   return ''
 }
 
-function blobToBase64(blob: Blob):Promise<string> {
+function blobToBase64(blob: Blob): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader()
     reader.onloadend = () => resolve(reader.result as string)
@@ -442,7 +456,6 @@ const pasteAvatarLink = async () => {
       :max-height="tableHeight"
       :pagination="false"
       :render-cell="renderCell"
-      :row-props="rowProps"
       @update:filters="handleUpdateFilter"
     >
     </n-data-table>

@@ -1,10 +1,20 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron'
+import { NsisUpdater } from 'electron-updater'
 import { join } from 'path'
 import icon from '../../resources/icon.png?asset'
+import { createGiteeUpdaterOptions } from './gitee-updater-ts'
+import { getFileIconByCache } from './utils/fsUtil'
 
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
+
+const updaterOptions = createGiteeUpdaterOptions({
+  repo: 'twl12138/TinyTools.Desktop',
+  updateManifest: 'alpha.yml'
+})
+
+const updater = new NsisUpdater(updaterOptions)
 
 function createWindow(): void {
   // We cannot require the screen module until the app is ready.
@@ -80,14 +90,47 @@ app.whenReady().then(() => {
   // Set app user model id for windows
   electronApp.setAppUserModelId('com.electron')
 
-  // Default open or close DevTools by F12 in development
-  // and ignore CommandOrControl + R in production.
-  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
+  //限制只能开启一个应用(4.0以上版本)
+  const gotTheLock = app.requestSingleInstanceLock()
+  if (!gotTheLock) {
+    app.quit()
+  } else {
+    app.on('second-instance', () => {
+      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+      if (mainWindow) {
+        if (mainWindow.isMinimized()) mainWindow.restore()
+        mainWindow.focus()
+        mainWindow.show()
+      }
+    })
+  }
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
   })
 
+  createWindow()
+
+  // Default open or close DevTools by F12 in development
+  // and ignore CommandOrControl + R in production.
+  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
+
   let dockWindow = null as BrowserWindow | null
+
+  ipcMain.on('closeDockWindow', () => {
+    if (dockWindow) {
+      dockWindow.close()
+      dockWindow = null
+    }
+  })
+
+  ipcMain.on('relaunchApp', () => {
+    app.relaunch()
+    app.exit()
+  })
+
+  ipcMain.handle('getThumbnail', async (_, ...args) => {
+    return getFileIconByCache(args[0])
+  })
 
   ipcMain.on('openDockWindow', () => {
     if (dockWindow) {
@@ -133,35 +176,6 @@ app.whenReady().then(() => {
       dockWindow?.show()
     })
   })
-
-  ipcMain.on('closeDockWindow', () => {
-    if (dockWindow) {
-      dockWindow.close()
-      dockWindow = null
-    }
-  })
-
-  ipcMain.on('relaunchApp', () => {
-    app.relaunch()
-    app.exit()
-  })
-
-  //限制只能开启一个应用(4.0以上版本)
-  const gotTheLock = app.requestSingleInstanceLock()
-  if (!gotTheLock) {
-    app.quit()
-  } else {
-    app.on('second-instance', () => {
-      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
-      if (mainWindow) {
-        if (mainWindow.isMinimized()) mainWindow.restore()
-        mainWindow.focus()
-        mainWindow.show()
-      }
-    })
-  }
-
-  createWindow()
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the

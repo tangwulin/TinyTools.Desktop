@@ -75,6 +75,14 @@ const navTo = (name) => {
 }
 
 const ua = navigator.userAgent
+
+const filePath = ref('')
+const getThumbnail = async () => {
+  const result = await electron.ipcRenderer.invoke('getThumbnail', filePath.value)
+  console.log(result)
+  message.success('获取成功！')
+  message.info('结果：' + JSON.stringify(result))
+}
 </script>
 
 <template>
@@ -132,6 +140,11 @@ const ua = navigator.userAgent
       <p>跳转到任意路由（慎用）</p>
       <n-input v-model:value="destination" />
       <n-button round type="primary" @click="navTo(destination)">跳转</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>获取文件缩略图</p>
+      <n-input v-model:value="filePath" />
+      <n-button round type="primary" @click="getThumbnail">获取</n-button>
     </n-space>
   </n-space>
 </template>
