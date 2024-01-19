@@ -22,6 +22,21 @@ const message = useMessage()
 
 const hasImportSuccess = computed(() => allCourses.value?.length !== 0)
 
+interface courseFromExcel {
+  ['开始时间']: string
+  ['结束时间']: string
+  ['星期一']: string
+  ['星期二']: string
+  ['星期三']: string
+  ['星期四']: string
+  ['星期五']: string
+  ['特别1']: string
+  ['特别2']: string
+  ['特别3']: string
+  ['特别4']: string
+  ['特别5']: string
+}
+
 const parseExcel = async (uploadFileInfo) => {
   const file = uploadFileInfo.file.file
   const data = await file.arrayBuffer()
@@ -31,7 +46,7 @@ const parseExcel = async (uploadFileInfo) => {
   const json = XLSX.utils.sheet_to_json(worksheet)
 
   const coursesFromExcel = json
-    .map((item: any) => {
+    .map((item: courseFromExcel) => {
       try {
         return {
           time: {

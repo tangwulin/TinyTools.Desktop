@@ -5,66 +5,100 @@ import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { ref } from 'vue'
 import SeatTable from '../../../components/SeatTable.vue'
-import { AppDatabase } from '../../../db'
+import db from '../../../db'
 import { Person } from '../../../types/person'
-import { Seat, SeatState } from '../../../types/seat'
+import { Seat } from '../../../types/seat'
 import { SeatHistory } from '../../../types/seatHistory'
-import { genSeatMap } from '../../../utils/seatUtil'
-
-const db = AppDatabase.getInstance()
+import { SeatTableItem } from '../../../types/SeatTableItem'
+import {
+  genSeatTable,
+  getSeatsFromSeatTable,
+  reGenSeatTable,
+  updateSeatTable
+} from '../../../utils/seatUtil'
 
 const message = useMessage()
 
 const persons = ref([] as Person[])
-const seats = ref([] as Seat[])
-const seatMap = ref([] as SeatState[])
+const seatTable = ref([] as SeatTableItem[])
 
 const reverse = ref(false)
 const loading = ref(false)
-const showHasDiffModal = ref(false)
 
 const personsPromise = db.persons.toArray().then((result) => {
   persons.value = result as Person[]
 })
 
-const seatsPromise = db.seats.toArray().then((result) => {
-  seats.value = result.map(
-    (item) => new Seat(persons.value.find((p) => p.id === item.owner.id) ?? item.owner, item.index)
-  ) as Seat[]
+const seatTablePromise = db.seatTable.toArray().then((result) => {
+  seatTable.value = result
 })
 
-const seatMapPromise = db.seatMap.toArray().then((result) => {
-  seatMap.value = result
-})
+Promise.all([personsPromise, seatTablePromise]).then(() => {
+  const personsCount = persons.value.length
+  const seatTableCount = seatTable.value.filter((item) => item.type === 'seat').length
 
-Promise.all([personsPromise, seatsPromise, seatMapPromise]).then(() => {
-  if (persons.value.length !== seats.value.length) {
-    console.log(persons.value.length, seats.value.length)
+  if (personsCount !== seatTableCount) {
+    console.log(personsCount, seatTableCount)
     console.log('人数和座位数不一致')
-    if (seats.value.length === 0) {
-      seats.value = persons.value.map((item, index) => new Seat(item, index))
-      db.seats.bulkPut(deepcopy(seats.value))
-      const newSeatMap = genSeatMap(seats.value.length)
-      seatMap.value = newSeatMap
-      db.seatMap.bulkPut(newSeatMap)
-      saveHistory(seats.value, newSeatMap, '初始座位')
+    const seats = persons.value.map((item, index) => new Seat(item.name, index, undefined, item.id))
+    let newSeatTable = [] as SeatTableItem[]
+    if (seatTable.value.length === 0) {
+      //没有座位表，直接生成
+      newSeatTable = genSeatTable(seats)
+
+      db.transaction('rw', db.seatTable, async () => {
+        await db.seatTable.bulkPut(newSeatTable)
+        saveHistory(seatTable.value, '初始座位')
+      })
+        .then(() => {
+          // seatTable.value = newSeatTable
+          message.success('已生成座位表')
+        })
+        .catch((err) => {
+          console.log(err)
+          message.error('生成座位表失败')
+        })
     } else {
-      setTimeout(() => {
-        showHasDiffModal.value = true
-        console.log('showHasDiffModal', showHasDiffModal.value)
-      }, 100)
-      showHasDiffModal.value = true
+      message.error('人数和座位数不一致,尝试重新生成座位表')
+      //有座位表，尝试重新生成
+      newSeatTable = reGenSeatTable(seatTable.value, seats)
+
+      db.transaction('rw', db.seatTable, async () => {
+        await db.seatTable.bulkPut(deepcopy(newSeatTable))
+      })
+        .then(() => {
+          // seatTable.value = newSeatTable
+          message.success('已重新生成座位表')
+        })
+        .catch((err) => {
+          console.log(err)
+          message.error('重新生成座位表失败')
+        })
     }
+    seatTable.value = newSeatTable
   }
+  //用于人名更新后更新座位的显示名
+  seatTable.value = seatTable.value.map((item) => {
+    if (item.type !== 'seat') return item
+    else {
+      const person = persons.value.find((person) => person.id === item.data?.ownerId)
+      if (person) item.setDisplayName(person.name)
+      else item.setDisplayName('Error')
+      return item
+    }
+  })
 })
 
-const raffleSeatImmediately = (result: Seat[]) => {
-  seats.value = result
-  db.seats.bulkPut(deepcopy(result))
+const raffleSeatImmediately = (result: SeatTableItem[]) => {
+  seatTable.value = result
+  db.transaction('rw', db.seatTable, db.seatHistory, async () => {
+    await db.seatTable.bulkPut(deepcopy(result))
+    saveHistory(result, '初始座位')
+  })
   message.success('抽选完成')
 }
 
-const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: string) => {
+const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
   if (type === '初始座位') {
     db.seatHistory
       .orderBy('timestamp')
@@ -73,10 +107,7 @@ const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: str
       .first()
       .then((result) => {
         if (result) {
-          if (
-            JSON.stringify(result.seats) === JSON.stringify(currentSeat) &&
-            JSON.stringify(result.seatMap) === JSON.stringify(currentSeatMap)
-          ) {
+          if (JSON.stringify(result.seatTable) === JSON.stringify(currentSeatTable)) {
             //未发生变化，无需保存
             return
           }
@@ -84,15 +115,24 @@ const saveHistory = (currentSeat: Seat[], currentSeatMap: SeatState[], type: str
         }
       })
   }
-  db.seatHistory.add(deepcopy(new SeatHistory(currentSeat, currentSeatMap, type)))
+  db.seatHistory.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
   message.success('已保存本次记录')
 }
 
 const handler = () => {
-  const result = shuffle(seats.value).map((item, index) => new Seat(item.owner, index))
-  db.seats.bulkPut(result)
-  if (result.length === 0) return
-  raffleSeatImmediately(result)
+  const newSeats = shuffle(getSeatsFromSeatTable(seatTable.value)).map((item, index) => {
+    item.locationIndex = index
+    return item
+  }) as Seat[]
+  if (newSeats.length === 0) return
+
+  try {
+    const result = updateSeatTable(seatTable.value, newSeats)
+    raffleSeatImmediately(result)
+  } catch (e) {
+    message.error(JSON.stringify(e))
+    console.log(e)
+  }
 }
 
 const save = async () => {
@@ -105,13 +145,6 @@ const save = async () => {
   const target = document.getElementById('target-div')
   if (!target) return
   const options = {
-    // filter: (node) => {
-    //   try {
-    //     return !node.classList.contains('border-dashed')
-    //   } catch {
-    //     return true
-    //   }
-    // },
     backgroundColor: '#FFFFFF',
     scale: 3840 / target.clientWidth //统一保存为4K分辨率
   }
@@ -137,9 +170,10 @@ const save = async () => {
 
 const dragHandler = debounce(
   () => {
-    db.seats.bulkPut(deepcopy(seats.value))
-    db.seatMap.bulkPut(deepcopy(seatMap.value))
-    saveHistory(seats.value, seatMap.value, '初始座位')
+    db.transaction('rw', db.seatTable, db.seatHistory, async () => {
+      await db.seatTable.bulkPut(deepcopy(seatTable.value))
+      saveHistory(seatTable.value, '初始座位')
+    })
   },
   100,
   {
@@ -157,8 +191,7 @@ const dragHandler = debounce(
     <!--  座位表展示区域  <-->
     <div id="target-div" style="margin: 0 auto; padding: 1rem 0; width: 80%">
       <SeatTable
-        v-model:seat-map="seatMap"
-        v-model:seats="seats"
+        v-model:seat-table-data="seatTable"
         :disable="loading"
         :reverse="reverse"
         @dragend="dragHandler"

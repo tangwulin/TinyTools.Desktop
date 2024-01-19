@@ -73,55 +73,58 @@ const firstHistoryTime = computed(() =>
   new Date(historyForThis.value?.at(0)?.timestamp ?? 0).toLocaleString()
 )
 
-const option2 = computed(() => ({
-  title: {
-    text: '各评分项占比',
-    subtext: `从${firstHistoryTime.value}至今`,
-    left: 'center'
-  },
-  tooltip: {
-    trigger: 'item',
-    formatter: '{a} <br/>{b} : {c} ({d}%)'
-  },
-  legend: {
-    left: 'center',
-    top: 'bottom',
-    data: [...toRaw(allRates.value)]
-  },
-  toolbox: {
-    show: true,
-    feature: {
-      mark: { show: true },
-      dataView: { show: true, readOnly: false },
-      restore: { show: true },
-      saveAsImage: { show: true }
-    }
-  },
-  series: [
-    {
-      name: '表扬',
-      type: 'pie',
-      radius: [20, 140],
-      center: ['25%', '50%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 5
+const option2 = computed(
+  () =>
+    ({
+      title: {
+        text: '各评分项占比',
+        subtext: `从${firstHistoryTime.value}至今`,
+        left: 'center'
       },
-      data: [...toRaw(positiveData.value)]
-    },
-    {
-      name: '待改进',
-      type: 'pie',
-      radius: [20, 140],
-      center: ['75%', '50%'],
-      roseType: 'area',
-      itemStyle: {
-        borderRadius: 5
+      tooltip: {
+        trigger: 'item',
+        formatter: '{a} <br/>{b} : {c} ({d}%)'
       },
-      data: [...toRaw(negativeData.value)]
-    }
-  ]
-} as EChartsOption))
+      legend: {
+        left: 'center',
+        top: 'bottom',
+        data: [...toRaw(allRates.value)]
+      },
+      toolbox: {
+        show: true,
+        feature: {
+          mark: { show: true },
+          dataView: { show: true, readOnly: false },
+          restore: { show: true },
+          saveAsImage: { show: true }
+        }
+      },
+      series: [
+        {
+          name: '表扬',
+          type: 'pie',
+          radius: [20, 140],
+          center: ['25%', '50%'],
+          roseType: 'area',
+          itemStyle: {
+            borderRadius: 5
+          },
+          data: [...toRaw(positiveData.value)]
+        },
+        {
+          name: '待改进',
+          type: 'pie',
+          radius: [20, 140],
+          center: ['75%', '50%'],
+          roseType: 'area',
+          itemStyle: {
+            borderRadius: 5
+          },
+          data: [...toRaw(negativeData.value)]
+        }
+      ]
+    }) as EChartsOption
+)
 
 const deleteHandler = (x: ScoreHistory) => {
   db.transaction('rw', db.scoreHistories, db.groups, db.persons, async () => {

@@ -2,7 +2,8 @@
 import { useElementSize } from '@vueuse/core'
 import { computed, PropType, ref, watch } from 'vue'
 import draggable from 'vuedraggable-swap'
-import { Seat, SeatState } from '../types/seat'
+import { Seat } from '../types/seat'
+import { SeatTableItem } from '../types/SeatTableItem'
 
 const key = ref(0)
 const el = ref(null)
@@ -16,12 +17,8 @@ const getFontSize = (n: number) => {
 }
 
 const props = defineProps({
-  seats: {
-    type: Array as PropType<Seat[]>,
-    required: true
-  },
-  seatMap: {
-    type: Array as PropType<SeatState[]>,
+  seatTableData: {
+    type: Array as PropType<SeatTableItem[]>,
     required: true
   },
   disable: {
@@ -35,13 +32,8 @@ const props = defineProps({
 })
 
 watch(
-  () => props.seatMap,
-  () => (seatMap.value = props.seatMap)
-)
-
-watch(
-  () => props.seats,
-  () => (seats.value = props.seats)
+  () => props.seatTableData,
+  () => (seatTableData.value = props.seatTableData)
 )
 
 watch(
@@ -53,86 +45,27 @@ watch(
   () => (disable.value = props.disable)
 )
 
-const emit = defineEmits(['update:seats', 'update:seatMap', 'dragend'])
+const emit = defineEmits(['dragend', 'update:seatTableData'])
 
-const seatMap = ref(props.seatMap)
-const seats = ref(props.seats)
+const seatTableData = ref(props.seatTableData)
 const reverse = ref(props.reverse)
 const disable = ref(props.disable)
 
-const parseRenderingDataToSeatMap = (x: RenderingItem[]) => {
-  const newSeatMap: ('seat' | 'blank' | 'empty')[] = []
-  for (const item of x) {
-    switch (item.type) {
-      case 'seat':
-        newSeatMap.push('seat')
-        break
-      case 'blank':
-        newSeatMap.push('blank')
-        break
-      case 'empty':
-        newSeatMap.push('empty')
-        break
-    }
-  }
-  key.value = Math.random()
-  return newSeatMap.map((item, index) => new SeatState(index, item))
-}
-
-const parseRenderingDataToSeats = (x: RenderingItem[]) => {
-  const newSeats: Seat[] = []
-  for (const item of x) {
-    switch (item.type) {
-      case 'seat':
-        newSeats.push(item.data as Seat)
-        break
-    }
-  }
-  // return newSeats.map((item, index) => {
-  //   return { ...item, index: index }
-  // })
-  return newSeats.map((item, index) => new Seat(item.owner, index))
-}
-
-class RenderingItem {
-  type: 'seat' | 'blank' | 'empty'
-  data?: Seat
-
-  constructor(type: 'seat' | 'blank' | 'empty' = 'blank', data?: Seat) {
-    this.type = type
-    this.data = data
-  }
-}
-
 const renderingData = computed({
   get() {
-    const data: RenderingItem[] = []
-    let i = 0
-    for (const item of seatMap.value) {
-      switch (item.state) {
-        case 'seat':
-          // data.push({ type: 'seat', ...seats.value[i], displayName: seats.value[i].displayName })
-          data.push(new RenderingItem('seat', seats.value[i]))
-          i++
-          break
-        case 'blank':
-          // data.push({ type: 'blank' })
-          data.push(new RenderingItem('blank'))
-          break
-        case 'empty':
-          // data.push({ type: 'empty' })
-          data.push(new RenderingItem('empty'))
-          break
-      }
-    }
-    return reverse.value ? data.slice().reverse() : data
+    return reverse.value ? seatTableData.value.slice().reverse() : seatTableData.value
   },
   set(value) {
-    value = reverse.value ? value.slice().reverse() : value
-    seatMap.value = parseRenderingDataToSeatMap(value)
-    seats.value = parseRenderingDataToSeats(value)
-    emit('update:seatMap', seatMap.value)
-    emit('update:seats', seats.value)
+    let seatIndex = 0
+    value = (reverse.value ? value.slice().reverse() : value).map((item, index) => {
+      item.locationIndex = index
+      if (item.type === 'seat') {
+        ;(item.data as Seat).locationIndex = seatIndex++
+      }
+      return item
+    })
+    seatTableData.value = value
+    emit('update:seatTableData', value)
   }
 })
 
@@ -198,15 +131,13 @@ watch(
           <span
             :style="{
               margin: 'auto',
-              fontSize:
-                getFontSize(element.data.displayName?.length ?? element.data.owner.name?.length) +
-                'px'
+              fontSize: getFontSize(element.data.displayName?.length ?? 3) + 'px'
             }"
           >
-            {{ element.data.displayName ?? element.data.owner.name }}
+            {{ element.data.displayName ?? 'Error' }}
           </span>
         </div>
-        <div v-else-if="element.type === 'blank'" class="cell blank should-not-be-dragged"></div>
+        <div v-else-if="element.type === 'aisle'" class="cell blank should-not-be-dragged"></div>
         <div
           v-else-if="element.type === 'empty'"
           class="cell should-not-be-dragged border-dashed"

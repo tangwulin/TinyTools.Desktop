@@ -1,11 +1,20 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron'
+import { NsisUpdater } from 'electron-updater'
 import { join } from 'path'
 import icon from '../../resources/icon.png?asset'
+import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 import { getFileIconByCache } from './utils/fsUtil'
 
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
+
+const updaterOptions = createGiteeUpdaterOptions({
+  repo: 'twl12138/TinyTools.Desktop',
+  updateManifest: 'alpha.yml'
+})
+
+const updater = new NsisUpdater(updaterOptions)
 
 function createWindow(): void {
   // We cannot require the screen module until the app is ready.

@@ -13,8 +13,8 @@ const downloadAnyFile = (url: Request | string | URL, filename?: string) =>
             typeof url === 'string'
               ? url?.split('/')
               : 'pathname' in url
-              ? url?.pathname?.split('/')
-              : [] //copied from https://stackoverflow.com/questions/4250364/how-to-trim-a-file-extension-from-a-string-in-javascript
+                ? url?.pathname?.split('/')
+                : [] //copied from https://stackoverflow.com/questions/4250364/how-to-trim-a-file-extension-from-a-string-in-javascript
           filename = urlParts[urlParts.length - 1]
         }
       }
