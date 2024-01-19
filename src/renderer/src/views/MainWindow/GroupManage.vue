@@ -181,9 +181,13 @@ const pasteAvatarLink = async () => {
                 <n-input v-model:value="currentGroup.name" placeholder="输入名称" />
               </n-form-item>
               <n-form-item label="小组头像（可选）" path="avatar">
-                <n-input v-model:value="currentGroup.avatar" placeholder="输入图片直链" >
+                <n-input v-model:value="currentGroup.avatar" placeholder="输入图片直链">
                   <template #suffix>
-                    <n-icon :component="PasteIcon" style="cursor: pointer" @click="pasteAvatarLink" />
+                    <n-icon
+                      :component="PasteIcon"
+                      style="cursor: pointer"
+                      @click="pasteAvatarLink"
+                    />
                   </template>
                 </n-input>
               </n-form-item>

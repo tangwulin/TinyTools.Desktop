@@ -73,7 +73,7 @@ watch(value, changeHandler)
     </n-space>
     <n-space>
       <n-collapse>
-        <n-input v-model:value="value" type="text" placeholder="搜索" />
+        <n-input v-model:value="value" placeholder="搜索" type="text" />
         <n-collapse-item :title="`头像列表 共${selectedAvatar.length}个 点击头像可复制链接`">
           <n-radio-group v-model:value="selectedSex" @change="changeHandler">
             <n-space>

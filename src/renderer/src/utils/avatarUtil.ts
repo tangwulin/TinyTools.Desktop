@@ -14,6 +14,7 @@ const genshin = avatarConfig['genshin']
 const arknights = avatarConfig['arknights']
 const starRail = avatarConfig['starRail']
 const blueArchive = avatarConfig['blueArchive']
+// noinspection SpellCheckingInspection
 const umamusume = avatarConfig['umamusume']
 
 function generateHash(input: string) {

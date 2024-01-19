@@ -7,6 +7,7 @@ import {
   ScoreboardOutlined as ScoreIcon
 } from '@vicons/material'
 import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
+import { useElementSize } from '@vueuse/core/index'
 import { from, useObservable } from '@vueuse/rxjs'
 import { liveQuery } from 'dexie'
 import { DataTableColumns, NButton, NCard, NForm, NModal, useMessage } from 'naive-ui'
@@ -18,10 +19,9 @@ import { useGeneralStore } from '../../stores/general'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
+import { Rate } from '../../types/rate'
 import { getAvatar } from '../../utils/avatarUtil'
 import remToPx from '../../utils/remToPx'
-import { useElementSize } from '@vueuse/core/index'
-import { Rate } from '../../types/rate'
 
 const db = AppDatabase.getInstance()
 
