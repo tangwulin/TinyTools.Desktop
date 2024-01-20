@@ -23,12 +23,12 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/score',
         name: 'score',
-        component: () => import('../views/MainWindow/ScoreView.vue')
+        component: () => import('../views/MainWindow/ScoreViewView.vue')
       },
       {
         path: '/score/report',
         name: 'scoreReport',
-        component: () => import('../views/MainWindow/ScoreReport.vue'),
+        component: () => import('../views/MainWindow/ScoreReportView.vue'),
         children: [
           {
             path: '/score/report/detail',
@@ -40,17 +40,17 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/randomSelection',
         name: 'randomSelection',
-        component: () => import('../views/MainWindow/RandomSelection.vue')
+        component: () => import('../views/MainWindow/RandomSelectionView.vue')
       },
       {
         path: '/personManage',
         name: 'personManage',
-        component: () => import('../views/MainWindow/PersonManage.vue')
+        component: () => import('../views/MainWindow/PersonManageView.vue')
       },
       {
         path: '/groupManage',
         name: 'groupManage',
-        component: () => import('../views/MainWindow/GroupManage.vue')
+        component: () => import('../views/MainWindow/GroupManageView.vue')
       },
       {
         path: '/about',

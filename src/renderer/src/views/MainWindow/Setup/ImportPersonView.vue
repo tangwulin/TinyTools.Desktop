@@ -4,7 +4,7 @@ import { liveQuery } from 'dexie'
 import { useMessage } from 'naive-ui'
 import { onBeforeRouteLeave } from 'vue-router'
 import db from '../../../db'
-import PersonManage from '../PersonManage.vue'
+import PersonManage from '../PersonManageView.vue'
 
 const message = useMessage()
 
