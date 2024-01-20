@@ -7,3 +7,6 @@ out
 /src/renderer/components.d.ts
 
 /scripts/updateBuiltInAvatar.js
+
+# Sentry Config File
+.env.sentry-build-plugin
