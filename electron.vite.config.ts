@@ -1,3 +1,4 @@
+import { sentryVitePlugin } from '@sentry/vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import { execSync } from 'child_process'
 import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
@@ -13,11 +14,31 @@ process.env.githubSHA = githubSHA
 
 export default defineConfig({
   main: {
-    plugins: [externalizeDepsPlugin()]
+    build: {
+      sourcemap: true
+    },
+    plugins: [
+      externalizeDepsPlugin(),
+      sentryVitePlugin({
+        org: 'aurora-studio',
+        project: 'electron'
+      })
+    ]
   },
+
   preload: {
-    plugins: [externalizeDepsPlugin()]
+    build: {
+      sourcemap: true
+    },
+    plugins: [
+      externalizeDepsPlugin(),
+      sentryVitePlugin({
+        org: 'aurora-studio',
+        project: 'electron'
+      })
+    ]
   },
+
   renderer: {
     resolve: {
       alias: {
@@ -36,11 +57,15 @@ export default defineConfig({
       }),
       Components({
         resolvers: [NaiveUiResolver()]
+      }),
+      sentryVitePlugin({
+        org: 'aurora-studio',
+        project: 'electron'
       })
     ],
     assetsInclude: ['**/*.xlsx'],
     build: {
-      chunkSizeWarningLimit: 1500
+      chunkSizeWarningLimit: 1500,
       // rollupOptions: {
       //   output: {
       //     manualChunks(id) {
@@ -50,6 +75,7 @@ export default defineConfig({
       //     }
       //   }
       // }
+      sourcemap: true
     },
     define: {
       __APP_VERSION__: JSON.stringify(process.env.npm_package_version),

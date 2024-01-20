@@ -9,6 +9,12 @@ import { getFileIconByCache } from './utils/fsUtil'
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
 
+import * as Sentry from '@sentry/electron'
+
+Sentry.init({
+  dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744'
+})
+
 const updaterOptions = createGiteeUpdaterOptions({
   repo: 'twl12138/TinyTools.Desktop',
   updateManifest: 'alpha.yml'

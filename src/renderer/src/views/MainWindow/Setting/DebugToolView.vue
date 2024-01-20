@@ -83,6 +83,10 @@ const getThumbnail = async () => {
   message.success('获取成功！')
   message.info('结果：' + JSON.stringify(result))
 }
+
+const throwError = () => {
+  throw new Error('测试错误')
+}
 </script>
 
 <template>
@@ -145,6 +149,10 @@ const getThumbnail = async () => {
       <p>获取文件缩略图</p>
       <n-input v-model:value="filePath" />
       <n-button round type="primary" @click="getThumbnail">获取</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>手动抛出错误</p>
+      <n-button round type="primary" @click="throwError">抛出测试错误</n-button>
     </n-space>
   </n-space>
 </template>
