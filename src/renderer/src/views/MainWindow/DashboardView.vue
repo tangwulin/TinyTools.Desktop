@@ -195,11 +195,23 @@ const voiceText = computed(() => {
 })
 
 // 自动播放背景音乐
-new Howl({
+const bgMusicInst = new Howl({
   src: [bgMusic],
   volume: 0.7,
   loop: true,
   autoplay: true
+})
+
+const isPlaying = ref(false)
+
+bgMusicInst.on('play', () => {
+  isPlaying.value = true
+})
+bgMusicInst.on('pause', () => {
+  isPlaying.value = false
+})
+bgMusicInst.on('stop', () => {
+  isPlaying.value = false
 })
 
 /**
@@ -242,6 +254,21 @@ onBeforeUnmount(() => {
 
 <template>
   <div id="dashboard" ref="dashboardRef">
+    <div
+      style="
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: row;
+        z-index: 500;
+        color: hsl(92, 0%, 59%);
+        margin: 3px;
+      "
+      @click="bgMusicInst.playing() ? bgMusicInst.stop() : bgMusicInst.play()"
+    >
+      {{ isPlaying ? '关闭' : '开启' }}BGM
+    </div>
     <div ref="sceneEle" :style="{ zoom: `${dashboardWidth / 1500}` }" class="scene">
       <div class="layer" data-depth="0"></div>
       <!-- 背景 -->
