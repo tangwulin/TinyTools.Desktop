@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { Dashboard as DashboardIcon, Group as GroupIcon } from '@vicons/carbon'
-// import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
   Info20Regular as InfoIcon,
   Person24Regular as PersonIcon,
@@ -8,12 +7,11 @@ import {
 } from '@vicons/fluent'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
+import { Menu2 as MenuIcon } from '@vicons/tabler'
 import { NIcon } from 'naive-ui'
-// import { useSettingStore } from '../stores/setting'
 import { storeToRefs } from 'pinia'
 import { Component, h, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
-import logoUrl from '../assets/images/logo.png'
 import { useGeneralStore } from '../stores/general'
 
 const generalStore = useGeneralStore()
@@ -28,6 +26,7 @@ const shortVersion = version?.split('-')[0]
 
 const activeKey = ref(null)
 const collapsed = ref(true)
+const collapsedSlider = ref(false)
 
 const collapsedWithoutAnimation = ref(true)
 watch(
@@ -42,14 +41,34 @@ watch(
         collapsedWithoutAnimation.value = false
       }, 100)
     }
-  }
+  },
+  { deep: true }
 )
 
-function renderIcon(icon: Component) {
-  return () => h(NIcon, null, { default: () => h(icon) })
+function renderIcon(icon: Component, props?: any) {
+  return () => h(NIcon, props, { default: () => h(icon) })
 }
 
 const menuOptions = [
+  {
+    label: () =>
+      h(
+        'div',
+        {
+          onClick: () => {
+            collapsed.value = !collapsed.value
+          },
+          draggable: false
+        },
+        { default: () => (collapsed.value ? '展开' : '收起') }
+      ),
+    key: 'menu',
+    icon: renderIcon(MenuIcon, {
+      onClick: () => {
+        collapsed.value = !collapsed.value
+      }
+    })
+  },
   {
     label: () =>
       h(
@@ -194,47 +213,56 @@ const footerMenuOptions = [
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
     <n-layout-sider
-      :collapsed="collapsed"
-      :collapsed-width="64"
-      :width="180"
-      bordered
-      collapse-mode="width"
+      :collapsed="collapsedSlider"
+      :collapsed-width="0"
+      :width="collapsedWithoutAnimation ? 64 : 180"
       show-trigger
-      @collapse="collapsed = true"
-      @expand="collapsed = false"
+      @collapse="collapsedSlider = true"
+      @expand="collapsedSlider = false"
+      collapse-mode="width"
     >
-      <n-layout class="h-full">
-        <n-layout-header>
-          <div class="flex justify-center items-center bg-gray-100">
-            <img :src="logoUrl" alt="logo" style="width: 60%; min-width: 3rem" />
-          </div>
-        </n-layout-header>
-        <n-layout-content>
-          <n-menu
-            v-model:value="activeKey"
-            :collapsed="collapsed"
-            :collapsed-icon-size="20"
-            :collapsed-width="64"
-            :options="menuOptions"
-          />
-          <!--          <n-divider />-->
-        </n-layout-content>
-        <n-layout-footer position="absolute">
-          <n-menu
-            v-model:value="activeKey"
-            :collapsed="collapsed"
-            :collapsed-icon-size="20"
-            :collapsed-width="64"
-            :options="footerMenuOptions"
-            style="padding: 0"
-          />
-          <n-p
-            depth="3"
-            style="text-align: center; margin: 0 0 0.25rem 0; font-size: 0.75rem; user-select: none"
-          >
-            {{ collapsedWithoutAnimation ? shortVersion : version }}
-          </n-p>
-        </n-layout-footer>
+      <n-layout has-sider content-style="height:100vh;width:100%">
+        <n-layout-sider
+          :collapsed="collapsed"
+          :collapsed-width="64"
+          :width="180"
+          bordered
+          collapse-mode="width"
+        >
+          <n-layout class="h-full">
+            <n-layout-content>
+              <n-menu
+                v-model:value="activeKey"
+                :collapsed="collapsed"
+                :collapsed-icon-size="20"
+                :collapsed-width="64"
+                :options="menuOptions"
+              />
+              <!--          <n-divider />-->
+            </n-layout-content>
+            <n-layout-footer position="absolute">
+              <n-menu
+                v-model:value="activeKey"
+                :collapsed="collapsed"
+                :collapsed-icon-size="20"
+                :collapsed-width="64"
+                :options="footerMenuOptions"
+                style="padding: 0"
+              />
+              <n-p
+                depth="3"
+                style="
+                text-align: center;
+                margin: 0 0 0.25rem 0;
+                font-size: 0.75rem;
+                user-select: none;
+              "
+              >
+                {{ collapsedWithoutAnimation ? shortVersion : version }}
+              </n-p>
+            </n-layout-footer>
+          </n-layout>
+        </n-layout-sider>
       </n-layout>
     </n-layout-sider>
 
