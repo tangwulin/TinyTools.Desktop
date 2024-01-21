@@ -216,6 +216,11 @@ const raffleSeatFeint = (result: SeatTableItem[], times: number) => {
   const timer = setInterval(() => {
     if (i < times) {
       //TODO:修一下这里
+      const randomSeats = shuffle(getSeatsFromSeatTable(seatTable.value)).map((item, index) => {
+        item.locationIndex = index
+        return item
+      })
+      seatTable.value = updateSeatTable(seatTable.value, randomSeats)
       i++
     } else {
       pauseBgm()
