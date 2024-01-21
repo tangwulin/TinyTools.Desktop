@@ -69,19 +69,19 @@ const handleClick1 = () => {
           <n-space vertical style="width: 60%">
             <p style="font-size: 1rem">资源</p>
             <n-space class="items-center" justify="space-between">
-              <p>money</p>
+              <p>龙门币</p>
               <n-input-number v-model:value="userStore.asset.money" />
             </n-space>
             <n-space class="items-center" justify="space-between">
-              <p>gem</p>
+              <p>合成玉</p>
               <n-input-number v-model:value="userStore.asset.gem" />
             </n-space>
             <n-space class="items-center" justify="space-between">
-              <p>stone</p>
+              <p>源石</p>
               <n-input-number v-model:value="userStore.asset.stone" />
             </n-space>
             <n-space class="items-center" justify="space-between">
-              <p>sense</p>
+              <p>理智</p>
               <n-input-number v-model:value="userStore.asset.sense" />
             </n-space>
           </n-space>
