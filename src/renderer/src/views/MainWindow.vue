@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { type ElectronAPI } from '@electron-toolkit/preload'
 import { Dashboard as DashboardIcon, Group as GroupIcon } from '@vicons/carbon'
 import {
   Info20Regular as InfoIcon,
@@ -8,11 +9,21 @@ import {
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { Menu2 as MenuIcon } from '@vicons/tabler'
-import { NIcon } from 'naive-ui'
+import { NIcon, useDialog } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { Component, h, ref, watch } from 'vue'
+import { Component, h, onMounted, ref, watch } from 'vue'
 import { RouterLink } from 'vue-router'
 import { useGeneralStore } from '../stores/general'
+
+let isElectron: boolean
+const electron = window.electron as ElectronAPI
+
+try {
+  isElectron = !!window.electron
+} catch (e) {
+  isElectron = false
+}
+const dialog = useDialog()
 
 const generalStore = useGeneralStore()
 const { lastScoreType } = storeToRefs(generalStore)
@@ -209,6 +220,47 @@ const footerMenuOptions = [
     icon: renderIcon(SettingIcon)
   }
 ]
+
+onMounted(() => {
+  if (isElectron) {
+    setTimeout(() => {
+      electron.ipcRenderer.send('checkForUpdate')
+    }, 3000)
+  }
+})
+
+electron.ipcRenderer.on('printUpdaterMessage', (event, data) => {
+  console.log('printUpdaterMessage', event, data)
+})
+
+// 5. 收到主进程可更新的消息，做自己的业务逻辑
+electron.ipcRenderer.on('updateAvailable', (event, data) => {
+  console.log('updateAvailable', event, data)
+  dialog.info({
+    title: '检测到新版本',
+    content: '厉害',
+    positiveText: '哇',
+    onPositiveClick: () => {
+      // message.success('耶！')
+    }
+  })
+})
+
+// 6. 点击确认更新
+electron.ipcRenderer.send('comfirmUpdate')
+
+// 9. 收到进度信息，做进度条
+electron.ipcRenderer.on('downloadProgress', () => {
+  // do sth.
+})
+
+// 11. 下载完成，反馈给用户是否立即更新
+electron.ipcRenderer.on('updateDownloaded', () => {
+  // do sth.
+})
+
+// 12. 告诉主进程，立即更新
+electron.ipcRenderer.send('updateNow')
 </script>
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
@@ -252,11 +304,11 @@ const footerMenuOptions = [
               <n-p
                 depth="3"
                 style="
-                text-align: center;
-                margin: 0 0 0.25rem 0;
-                font-size: 0.75rem;
-                user-select: none;
-              "
+                  text-align: center;
+                  margin: 0 0 0.25rem 0;
+                  font-size: 0.75rem;
+                  user-select: none;
+                "
               >
                 {{ collapsedWithoutAnimation ? shortVersion : version }}
               </n-p>
