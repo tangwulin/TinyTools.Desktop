@@ -118,11 +118,6 @@ const routes: RouteRecordRaw[] = [
           }
         ]
       },
-      {
-        path: '/test',
-        name: 'test',
-        component: () => import('../views/MainWindow/TestView.vue')
-      }
     ]
   },
   {
