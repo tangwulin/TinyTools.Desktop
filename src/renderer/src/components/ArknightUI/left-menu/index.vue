@@ -10,14 +10,24 @@ defineProps<{
 defineEmits<{
   (e: 'clear-voice'): void
 }>()
+import ANMessage from '../ANMessage.vue'
+
+const notification = useNotification()
+const handleClick1 = () => {
+  notification.create({
+    closable: false,
+    duration: 3000,
+    content: () => h(ANMessage, null, () => '开发中，敬请期待')
+  })
+}
 </script>
 
 <template>
-  <div class="left-menu">
+  <div class="left-menu" >
     <VoiceBox v-show="voice" :text="voice" @click="$emit('clear-voice')" />
     <div class="flex">
       <NewsBanner />
-      <div>
+      <div @click="handleClick1">
         <div class="button friend-button">
           <IconFriend class="icon" />
           <span class="text">好友</span>

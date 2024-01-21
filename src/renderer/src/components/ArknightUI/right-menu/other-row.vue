@@ -1,24 +1,35 @@
 <script lang="ts" setup>
-import image8 from '../../../assets/images/ArknightUI/image8.png'
-import image7 from '../../../assets/images/ArknightUI/image7.png'
-import image9 from '../../../assets/images/ArknightUI/image9.png'
+import { useNotification } from 'naive-ui'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
+import image7 from '../../../assets/images/ArknightUI/image7.png'
+import image8 from '../../../assets/images/ArknightUI/image8.png'
+import image9 from '../../../assets/images/ArknightUI/image9.png'
+import ANMessage from '../ANMessage.vue'
+
+const notification = useNotification()
+const handleClick1 = () => {
+  notification.create({
+    closable: false,
+    duration: 3000,
+    content: () => h(ANMessage, null, () => '开发中，敬请期待')
+  })
+}
 </script>
 
 <template>
   <div class="other-row">
-    <div class="task">
+    <div class="task" @click="handleClick1">
       <div class="title">任务</div>
       <img class="icon" :src="image8" alt="icon" />
       <img class="right-bottom" :src="image10" alt="right bottom" />
     </div>
-    <div class="hostel">
+    <div class="hostel" @click="handleClick1">
       <div class="title">基建</div>
       <div class="sub">BETA</div>
       <img class="icon" :src="image7" alt="icon" />
       <img class="right-bottom" :src="image10" alt="right bottom" />
     </div>
-    <div class="depository">
+    <div class="depository" @click="handleClick1">
       <div class="title">仓库</div>
       <img class="icon" :src="image9" alt="icon" />
       <img class="right-bottom" :src="image10" alt="right bottom" />

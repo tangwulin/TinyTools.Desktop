@@ -3,12 +3,22 @@ import { useUserStore } from '../../../stores/user'
 import mind from '../../../assets/images/ArknightUI/mind.png'
 import image1 from '../../../assets/images/ArknightUI/image1.png'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
+import ANMessage from '../ANMessage.vue'
+
+const notification = useNotification()
+const handleClick1 = () => {
+  notification.create({
+    closable: false,
+    duration: 3000,
+    content: () => h(ANMessage, null, () => '开发中，敬请期待')
+  })
+}
 
 const userStore = useUserStore()
 </script>
 
 <template>
-  <div class="fight-row">
+  <div class="fight-row" @click="handleClick1">
     <div class="sense">
       <img class="bg" :src="mind" alt="mind" />
       <div class="current">{{ userStore.asset.sense }}</div>

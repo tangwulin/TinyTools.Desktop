@@ -1,14 +1,27 @@
 <script lang="ts" setup>
-import image6 from '../../../assets/images/ArknightUI/image6.png'
+import { useNotification } from 'naive-ui'
+import { useRouter } from 'vue-router'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
 import image11 from '../../../assets/images/ArknightUI/image11.png'
 import image4 from '../../../assets/images/ArknightUI/image4.png'
 import image5 from '../../../assets/images/ArknightUI/image5.png'
+import image6 from '../../../assets/images/ArknightUI/image6.png'
+import ANMessage from '../ANMessage.vue'
+
+const router = useRouter()
+const notification = useNotification()
+const handleClick1 = () => {
+  notification.create({
+    closable: false,
+    duration: 3000,
+    content: () => h(ANMessage, null, () => '开发中，敬请期待')
+  })
+}
 </script>
 
 <template>
   <div class="shop-row">
-    <div class="left">
+    <div class="left" @click="handleClick1">
       <div class="title">采购中心</div>
       <img class="icon" :src="image6" alt="icon" />
       <img class="right-bottom" :src="image10" alt="right bottom" />
@@ -19,12 +32,15 @@ import image5 from '../../../assets/images/ArknightUI/image5.png'
         <div class="title">招募</div>
       </div>
       <div class="bottom">
-        <div class="item mr-1">
+        <div
+          class="item mr-1"
+          @click="router.push({ name: 'personManage', query: { showAddModal: true } })"
+        >
           <div class="title">公开招募</div>
           <img class="icon" :src="image4" alt="icon" />
           <img class="right-bottom" :src="image10" alt="right bottom" />
         </div>
-        <div class="item">
+        <div class="item" @click="router.push({ name: 'randomSelection' })">
           <div class="title">干员寻访</div>
           <img class="icon" :src="image5" alt="icon" />
           <img class="right-bottom" :src="image10" alt="right bottom" />
@@ -89,6 +105,7 @@ import image5 from '../../../assets/images/ArknightUI/image5.png'
   width: 400px;
   padding: 4px;
 }
+
 .top {
   display: flex;
   background-color: #323232;
