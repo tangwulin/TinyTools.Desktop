@@ -5,35 +5,43 @@ import 'swiper/css/pagination'
 import { Swiper, SwiperSlide } from 'swiper/vue'
 
 import newsLabel from '../../../assets/images/ArknightUI/news-label.png'
+import 多利的任务单 from '../../../assets/images/ArknightUI/activity/多利的任务单.jpg'
+import 火山旅梦 from '../../../assets/images/ArknightUI/activity/火山旅梦.jpg'
+import 绿野幻梦 from '../../../assets/images/ArknightUI/activity/绿野幻梦.jpg'
+import 夏日嘉年华 from '../../../assets/images/ArknightUI/activity/夏日嘉年华.jpg'
+import 氤氲奇境 from '../../../assets/images/ArknightUI/activity/氤氲奇境.jpg'
+import 引领者试炼 from '../../../assets/images/ArknightUI/activity/引领者试炼.jpg'
+import 云间清醒梦 from '../../../assets/images/ArknightUI/activity/云间清醒梦.jpg'
 
+//TODO:把这个东西拆出去到一个JSON文件里
 const activityList = [
   {
     name: '多利的任务单',
-    bannerImg: '/images/activity/多利的任务单.jpg'
+    bannerImg: 多利的任务单
   },
   {
     name: '火山旅梦',
-    bannerImg: '/images/activity/火山旅梦.jpg'
+    bannerImg: 火山旅梦
   },
   {
     name: '绿野幻梦',
-    bannerImg: '/images/activity/绿野幻梦.jpg'
+    bannerImg: 绿野幻梦
   },
   {
     name: '夏日嘉年华',
-    bannerImg: '/images/activity/夏日嘉年华.jpg'
+    bannerImg: 夏日嘉年华
   },
   {
     name: '氤氲奇境',
-    bannerImg: '/images/activity/氤氲奇境.jpg'
+    bannerImg: 氤氲奇境
   },
   {
     name: '引领者试炼',
-    bannerImg: '/images/activity/引领者试炼.jpg'
+    bannerImg: 引领者试炼
   },
   {
     name: '云间清醒梦',
-    bannerImg: '/images/activity/云间清醒梦.jpg'
+    bannerImg: 云间清醒梦
   }
 ]
 </script>
