@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Group as GroupIcon } from '@vicons/carbon'
+import { Dashboard as DashboardIcon, Group as GroupIcon } from '@vicons/carbon'
 // import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
 import {
   Info20Regular as InfoIcon,
@@ -50,21 +50,21 @@ function renderIcon(icon: Component) {
 }
 
 const menuOptions = [
-  // {
-  //   label: () =>
-  //     h(
-  //       RouterLink,
-  //       {
-  //         to: {
-  //           name: 'dashboard'
-  //         }
-  //       },
-  //       { default: () => '数据总览（未完成）' }
-  //     ),
-  //   key: 'dashboard',
-  //   icon: renderIcon(DataIcon),
-  //   show: enableDevelopFeature.value
-  // },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'dashboard'
+          },
+          draggable: false
+        },
+        { default: () => '数据总览' }
+      ),
+    key: 'dashboard',
+    icon: renderIcon(DashboardIcon)
+  },
   {
     label: () =>
       h(
@@ -73,7 +73,8 @@ const menuOptions = [
           to: {
             name: 'score',
             query: { type: lastScoreType.value }
-          }
+          },
+          draggable: false
         },
         { default: () => '评分' }
       ),
@@ -87,7 +88,8 @@ const menuOptions = [
         {
           to: {
             name: 'seat'
-          }
+          },
+          draggable: false
         },
         { default: () => '座位抽选' }
       ),
@@ -116,7 +118,8 @@ const menuOptions = [
         {
           to: {
             name: 'randomSelection'
-          }
+          },
+          draggable: false
         },
         { default: () => '随机抽选' }
       ),
@@ -130,7 +133,8 @@ const menuOptions = [
         {
           to: {
             name: 'personManage'
-          }
+          },
+          draggable: false
         },
         { default: () => '人员管理' }
       ),
@@ -144,7 +148,8 @@ const menuOptions = [
         {
           to: {
             name: 'groupManage'
-          }
+          },
+          draggable: false
         },
         { default: () => '分组管理' }
       ),
@@ -161,7 +166,8 @@ const footerMenuOptions = [
         {
           to: {
             name: 'about'
-          }
+          },
+          draggable: false
         },
         { default: () => '关于' }
       ),
@@ -175,7 +181,8 @@ const footerMenuOptions = [
         {
           to: {
             name: 'setting'
-          }
+          },
+          draggable: false
         },
         { default: () => '设置' }
       ),
@@ -232,7 +239,7 @@ const footerMenuOptions = [
     </n-layout-sider>
 
     <!--下方router-view内内容加css只能在各组件内部加-->
-    <n-layout-content content-style="padding:0.25rem 0.25rem 0 0.25rem">
+    <n-layout-content>
       <router-view />
     </n-layout-content>
   </n-layout>
