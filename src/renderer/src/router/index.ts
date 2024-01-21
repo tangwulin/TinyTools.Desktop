@@ -16,10 +16,31 @@ const routes: RouteRecordRaw[] = [
     name: 'mainWindow',
     redirect: { name: 'seat' },
     children: [
-      { path: '/seat', name: 'seat', component: () => import('../views/MainWindow/SeatView.vue') },
-      // { path: '/lottery', name: 'lottery', component: () => import('../views/MainWindow/LotteryView.vue') },
-      // { path: '/help', name: 'help', component: () => import('../views/MainWindow/HelpView.vue') },
-      // { path: '/debug', name: 'debug', component: () => import('../views/MainWindow/DebugView.vue') },
+      {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: () => import('../views/MainWindow/DashboardView.vue')
+      },
+      {
+        path: '/seat',
+        name: 'seat',
+        component: () => import('../views/MainWindow/SeatView.vue')
+      },
+      // {
+      //   path: '/lottery',
+      //   name: 'lottery',
+      //   component: () => import('../views/MainWindow/LotteryView.vue')
+      // },
+      // {
+      //   path: '/help',
+      //   name: 'help',
+      //   component: () => import('../views/MainWindow/HelpView.vue')
+      // },
+      // {
+      //   path: '/debug',
+      //   name: 'debug',
+      //   component: () => import('../views/MainWindow/DebugView.vue')
+      // },
       {
         path: '/score',
         name: 'score',
@@ -96,7 +117,7 @@ const routes: RouteRecordRaw[] = [
             component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
           }
         ]
-      }
+      },
     ]
   },
   {

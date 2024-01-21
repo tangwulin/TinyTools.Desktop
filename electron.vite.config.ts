@@ -12,75 +12,83 @@ const githubSHA = execSync('git rev-parse HEAD').toString().trim().toString()
 process.env.revision = revision
 process.env.githubSHA = githubSHA
 
-export default defineConfig({
-  main: {
-    build: {
-      sourcemap: true
+export default ({ mode }) => {
+  return defineConfig({
+    main: {
+      build: {
+        sourcemap: true
+      },
+      plugins: [
+        externalizeDepsPlugin(),
+        mode === 'production' || mode === 'prod'
+          ? sentryVitePlugin({
+              org: 'aurora-studio',
+              project: 'electron'
+            })
+          : undefined
+      ]
     },
-    plugins: [
-      externalizeDepsPlugin(),
-      sentryVitePlugin({
-        org: 'aurora-studio',
-        project: 'electron'
-      })
-    ]
-  },
 
-  preload: {
-    build: {
-      sourcemap: true
+    preload: {
+      build: {
+        sourcemap: true
+      },
+      plugins: [
+        externalizeDepsPlugin(),
+        mode === 'production' || mode === 'prod'
+          ? sentryVitePlugin({
+              org: 'aurora-studio',
+              project: 'electron'
+            })
+          : undefined
+      ]
     },
-    plugins: [
-      externalizeDepsPlugin(),
-      sentryVitePlugin({
-        org: 'aurora-studio',
-        project: 'electron'
-      })
-    ]
-  },
 
-  renderer: {
-    resolve: {
-      alias: {
-        '@renderer': resolve('src/renderer/src')
+    renderer: {
+      resolve: {
+        alias: {
+          '@renderer': resolve('src/renderer/src')
+        }
+      },
+      plugins: [
+        vue(),
+        AutoImport({
+          imports: [
+            'vue',
+            {
+              'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
+            }
+          ]
+        }),
+        Components({
+          resolvers: [NaiveUiResolver()]
+        }),
+        mode === 'production' || mode === 'prod'
+          ? sentryVitePlugin({
+              org: 'aurora-studio',
+              project: 'electron'
+            })
+          : undefined
+      ],
+      assetsInclude: ['**/*.xlsx'],
+      build: {
+        chunkSizeWarningLimit: 1500,
+        // rollupOptions: {
+        //   output: {
+        //     manualChunks(id) {
+        //       if (id.includes('node_modules')) {
+        //         return 'vendor'
+        //       }
+        //     }
+        //   }
+        // }
+        sourcemap: true
+      },
+      define: {
+        __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
+        __GITHUB_SHA__: JSON.stringify(process.env.githubSHA),
+        __REVISION__: JSON.stringify(process.env.revision)
       }
-    },
-    plugins: [
-      vue(),
-      AutoImport({
-        imports: [
-          'vue',
-          {
-            'naive-ui': ['useDialog', 'useMessage', 'useNotification', 'useLoadingBar']
-          }
-        ]
-      }),
-      Components({
-        resolvers: [NaiveUiResolver()]
-      }),
-      sentryVitePlugin({
-        org: 'aurora-studio',
-        project: 'electron'
-      })
-    ],
-    assetsInclude: ['**/*.xlsx'],
-    build: {
-      chunkSizeWarningLimit: 1500,
-      // rollupOptions: {
-      //   output: {
-      //     manualChunks(id) {
-      //       if (id.includes('node_modules')) {
-      //         return 'vendor'
-      //       }
-      //     }
-      //   }
-      // }
-      sourcemap: true
-    },
-    define: {
-      __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
-      __GITHUB_SHA__: JSON.stringify(process.env.githubSHA),
-      __REVISION__: JSON.stringify(process.env.revision)
     }
-  }
-})
+  })
+}
