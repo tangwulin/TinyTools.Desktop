@@ -323,11 +323,11 @@ interface UploadInfo {
   file: UploadFileInfo
 }
 
-interface personFromExcel {
-  ['姓名']: string
-  ['性别']: string
-  ['学号']: string
-}
+// interface personFromExcel {
+//   ['姓名']: string
+//   ['性别']: string
+//   ['学号']: string
+// }
 
 const parseExcel = async (uploadFileInfo: UploadInfo) => {
   const file = uploadFileInfo.file.file as File
@@ -337,7 +337,7 @@ const parseExcel = async (uploadFileInfo: UploadInfo) => {
   const worksheet = workbook.Sheets[sheetNames[0]] // 这里我们只读取第一张sheet
   const json = XLSX.utils.sheet_to_json(worksheet)
   const personsFromExcel = json
-    .map((item: personFromExcel) => {
+    .map((item: any) => {
       if (item['姓名'] === undefined || item['姓名'] === null || item['姓名'] === '') return
       return new Person(
         item['姓名'],

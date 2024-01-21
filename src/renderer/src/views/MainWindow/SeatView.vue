@@ -289,8 +289,8 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
     case 4:
       result = calcNewSeatByCorrectionAlgorithm(
         seatTable.value,
-        (seatHistory.value as SeatHistory[])[1]?.seatTable,
-        (seatHistory.value as SeatHistory[])[2]?.seatTable
+        (seatHistory.value as SeatHistory[])[seatHistory.value.length - 2]?.seatTable,
+        (seatHistory.value as SeatHistory[])[seatHistory.value.length - 3]?.seatTable
       )
       saveHistory(result, '相对公平')
       break

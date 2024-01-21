@@ -51,7 +51,7 @@ function resize() {
 /**
  * 一个动画帧
  */
-function step(timestamp: number) {
+function step() {
   if (!canvasCtx) return
   // 清空画布
   canvasCtx.clearRect(0, 0, CANVAS_WIDTH, CANVAS_HEIGHT)

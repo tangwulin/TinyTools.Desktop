@@ -6,6 +6,7 @@ import IconSetting from '../../components/ArknightUI/icons/Setting.vue'
 import IconWarning from '../../components/ArknightUI/icons/Warning.vue'
 import { useUserStore } from '../../stores/user'
 import ANMessage from './ANMessage.vue'
+import { h, ref } from 'vue'
 
 const notification = useNotification()
 const userStore = useUserStore()

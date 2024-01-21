@@ -5,6 +5,7 @@ import image7 from '../../../assets/images/ArknightUI/image7.png'
 import image8 from '../../../assets/images/ArknightUI/image8.png'
 import image9 from '../../../assets/images/ArknightUI/image9.png'
 import ANMessage from '../ANMessage.vue'
+import { h } from 'vue'
 
 const notification = useNotification()
 const handleClick1 = () => {

@@ -4,6 +4,8 @@ import mind from '../../../assets/images/ArknightUI/mind.png'
 import image1 from '../../../assets/images/ArknightUI/image1.png'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
 import ANMessage from '../ANMessage.vue'
+import { useNotification } from 'naive-ui'
+import { h } from 'vue'
 
 const notification = useNotification()
 const handleClick1 = () => {

@@ -7,6 +7,7 @@ import image4 from '../../../assets/images/ArknightUI/image4.png'
 import image5 from '../../../assets/images/ArknightUI/image5.png'
 import image6 from '../../../assets/images/ArknightUI/image6.png'
 import ANMessage from '../ANMessage.vue'
+import { h } from 'vue'
 
 const router = useRouter()
 const notification = useNotification()
@@ -34,7 +35,7 @@ const handleClick1 = () => {
       <div class="bottom">
         <div
           class="item mr-1"
-          @click="router.push({ name: 'personManage', query: { showAddModal: true } })"
+          @click="router.push({ name: 'personManage', query: { showAddModal: 'true' } })"
         >
           <div class="title">公开招募</div>
           <img class="icon" :src="image4" alt="icon" />

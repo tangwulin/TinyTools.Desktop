@@ -22,9 +22,10 @@ onMounted(() => {
     updateCurrent()
   }, 1000)
   // 获取设备电量剩余百分比
-  navigator.getBattery()?.then((battery: any) => {
-    batteryLevel.value = Math.floor(battery.level * 3)
-  })
+  // navigator.getBattery()?.then((battery: any) => {
+  //   batteryLevel.value = Math.floor(battery.level * 3)
+  // })
+  batteryLevel.value = 3
 })
 
 onBeforeUnmount(() => {

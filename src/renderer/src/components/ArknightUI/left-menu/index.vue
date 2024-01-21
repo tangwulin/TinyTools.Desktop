@@ -3,6 +3,8 @@ import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
 import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
 import NewsBanner from './news-banner.vue'
 import VoiceBox from './voice-box.vue'
+import { useNotification } from 'naive-ui'
+import { h } from 'vue'
 
 defineProps<{
   voice: string
