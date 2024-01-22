@@ -46,7 +46,7 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
       //没有座位表，直接生成
       newSeatTable = genSeatTable(seats)
 
-      db.transaction('rw', db.seatTable, async () => {
+      db.transaction('rw', db.seatTable, db.seatHistory, async () => {
         await db.seatTable.bulkPut(newSeatTable)
         saveHistory(seatTable.value, '初始座位')
       })
