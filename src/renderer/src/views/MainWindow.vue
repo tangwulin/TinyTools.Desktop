@@ -269,9 +269,9 @@ electron.ipcRenderer.send('updateNow')
       :collapsed-width="0"
       :width="collapsedWithoutAnimation ? 64 : 180"
       show-trigger
+      collapse-mode="width"
       @collapse="collapsedSlider = true"
       @expand="collapsedSlider = false"
-      collapse-mode="width"
     >
       <n-layout has-sider content-style="height:100vh;width:100%">
         <n-layout-sider
