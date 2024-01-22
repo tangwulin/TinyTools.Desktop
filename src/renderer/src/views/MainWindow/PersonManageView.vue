@@ -225,8 +225,8 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
       render(row: Person) {
         const groupTags = groups.value
           ?.map((item) =>
-            item.members
-              .map((member) => member.id)
+            item.membersID
+              // .map((member) => member.id)
               .flat()
               .includes(row.id as number)
               ? h(

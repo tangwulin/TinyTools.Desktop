@@ -143,7 +143,7 @@ function undoHandler() {
 }
 
 const createAvatars = (item) => {
-  const members = persons.value.filter((p) => item.members.includes(p.id))
+  const members = persons.value.filter((p) => item.membersID.includes(p.id))
   return members.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
 
@@ -415,7 +415,7 @@ watch(
               <div class="mx-auto flex flex-col" style="font-size: 0.75rem">
                 <span>{{ item?.name }}</span>
                 <n-space justify="space-between"
-                  ><span>{{ item?.members.length }}人</span>
+                  ><span>{{ item?.membersID.length }}人</span>
                   <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
                 </n-space>
                 <n-avatar-group

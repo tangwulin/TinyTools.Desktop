@@ -71,7 +71,7 @@ const sexes = [
 const clickHandler = (group?: Group) => {
   if (group) {
     currentGroup.value = group
-    value1.value = currentGroup.value.members.map((item) => item.id) as number[]
+    value1.value = currentGroup.value.membersID
     isEdit.value = true
   } else {
     currentGroup.value = new Group('', '', '')
@@ -130,7 +130,7 @@ const onModalClose = () => {
 
 const createAvatars = (item: Group) => {
   if (!persons.value) return []
-  const person = persons.value.filter((p) => item.members.map((m) => m.id).includes(p.id))
+  const person = persons.value.filter((p) => item.membersID.includes(p.id as number))
   return person.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
 
@@ -148,10 +148,7 @@ const createDropdownOptions = (
 watch(
   value1,
   async () => {
-    currentGroup.value.members = await db.persons
-      .where('id')
-      .anyOf(value1.value as number[])
-      .toArray()
+    currentGroup.value.membersID = value1.value
   },
   { deep: true }
 )
@@ -197,22 +194,22 @@ const pasteAvatarLink = async () => {
             </n-form>
           </div>
           <div class="flex flex-col mb-4">
-            <p>当前选择了{{ currentGroup.members.length }}个人</p>
+            <p>当前选择了{{ currentGroup.membersID.length }}个人</p>
             <n-space>
               <n-tag
-                v-for="item in currentGroup.members"
-                :key="item.id"
+                v-for="item in currentGroup.membersID"
+                :key="item"
                 closable
                 size="large"
-                @close="handleRemove(item)"
+                @close="handleRemove(persons.find((p) => p.id === item) as Person)"
               >
                 <!--此处实际上并没有问题-->
                 <!--                {{ persons.find((p) => p.uniqueId === item.uniqueId)?.name }}-->
-                {{ item.name }}
+                {{ (persons.find((p) => p.id === item) as Person).name }}
                 <template #avatar>
                   <n-avatar
                     :img-props="{ referrerpolicy: 'no-referrer' }"
-                    :src="getAvatar(item)"
+                    :src="getAvatar(persons.find((p) => p.id === item) as Person)"
                     lazy
                     object-fit="contain"
                     round
@@ -258,7 +255,7 @@ const pasteAvatarLink = async () => {
                 确定要删除这个小组吗？
               </n-popconfirm>
               <n-button
-                :disabled="!(currentGroup.name.length !== 0 && currentGroup.members.length !== 0)"
+                :disabled="!(currentGroup.name.length !== 0 && currentGroup.membersID.length !== 0)"
                 type="primary"
                 @click="handler"
                 >保存
@@ -306,7 +303,7 @@ const pasteAvatarLink = async () => {
             <div class="mx-auto flex flex-col" style="font-size: 0.75rem">
               <span>{{ item?.name }}</span>
               <n-space justify="space-between"
-                ><span>{{ item?.members.length }}人</span>
+                ><span>{{ item?.membersID.length }}人</span>
                 <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
               </n-space>
               <n-avatar-group
