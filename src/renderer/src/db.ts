@@ -22,7 +22,7 @@ export class AppDatabase extends Dexie {
     super('AppDatabase')
     this.version(1).stores({
       persons: '++id, name, genderCode, number',
-      groups: '++id, name, description, members',
+      groups: '++id, name, description',
       seatHistory: 'timestamp, type',
       rates: '++id, name, description',
       scoreHistories: 'timestamp, ownerId',
