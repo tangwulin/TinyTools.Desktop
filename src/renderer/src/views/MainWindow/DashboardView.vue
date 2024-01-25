@@ -300,7 +300,7 @@ onBeforeUnmount(() => {
         <RightMenu />
       </div>
     </div>
-    <div class="absolute left-0 top-0" :style="{ zoom: `${dashboardWidth / 1500}` }">
+    <div :style="{ zoom: `${dashboardWidth / 1500}` }" class="absolute left-0 top-0">
       <HeaderMenu />
     </div>
   </div>

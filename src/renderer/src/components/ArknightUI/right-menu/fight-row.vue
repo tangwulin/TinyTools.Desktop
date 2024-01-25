@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import { useUserStore } from '../../../stores/user'
-import mind from '../../../assets/images/ArknightUI/mind.png'
-import image1 from '../../../assets/images/ArknightUI/image1.png'
-import image10 from '../../../assets/images/ArknightUI/image10.png'
-import ANMessage from '../ANMessage.vue'
 import { useNotification } from 'naive-ui'
 import { h } from 'vue'
+import image1 from '../../../assets/images/ArknightUI/image1.png'
+import image10 from '../../../assets/images/ArknightUI/image10.png'
+import mind from '../../../assets/images/ArknightUI/mind.png'
+import { useUserStore } from '../../../stores/user'
+import ANMessage from '../ANMessage.vue'
 
 const notification = useNotification()
 const handleClick1 = () => {
@@ -22,7 +22,7 @@ const userStore = useUserStore()
 <template>
   <div class="fight-row" @click="handleClick1">
     <div class="sense">
-      <img class="bg" :src="mind" alt="mind" />
+      <img :src="mind" alt="mind" class="bg" />
       <div class="current">{{ userStore.asset.sense }}</div>
       <div class="max">理智/90</div>
     </div>
@@ -32,8 +32,8 @@ const userStore = useUserStore()
       <div class="level">{{ userStore.fightInfo.name }}</div>
     </div>
     <div class="mark">
-      <img class="icon" :src="image1" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image1" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
   </div>
 </template>
@@ -80,6 +80,7 @@ const userStore = useUserStore()
     left: 0;
     width: 100%;
   }
+
   .current {
     position: relative;
     font-size: 80px;
@@ -130,6 +131,7 @@ const userStore = useUserStore()
 .mark {
   position: absolute;
   inset: 0;
+
   .icon {
     position: absolute;
     left: 380px;

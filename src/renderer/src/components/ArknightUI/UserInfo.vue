@@ -1,14 +1,14 @@
 <script lang="ts" setup>
+import rhodesIsland from '../../assets/images/ArknightUI/rhodes-island.png'
 import Level from '../../components/ArknightUI/Level.vue'
 import { useUserStore } from '../../stores/user'
-import rhodesIsland from '../../assets/images/ArknightUI/rhodes-island.png'
 
 const userStore = useUserStore()
 </script>
 
 <template>
   <div class="user-info">
-    <img class="logo" :src="rhodesIsland" alt="罗德岛" />
+    <img :src="rhodesIsland" alt="罗德岛" class="logo" />
     <div class="rect"></div>
     <div class="text">
       <div class="name">{{ userStore.user.name }}</div>

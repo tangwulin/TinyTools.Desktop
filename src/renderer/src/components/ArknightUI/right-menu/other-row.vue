@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { useNotification } from 'naive-ui'
+import { h } from 'vue'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
 import image7 from '../../../assets/images/ArknightUI/image7.png'
 import image8 from '../../../assets/images/ArknightUI/image8.png'
 import image9 from '../../../assets/images/ArknightUI/image9.png'
 import ANMessage from '../ANMessage.vue'
-import { h } from 'vue'
 
 const notification = useNotification()
 const handleClick1 = () => {
@@ -21,19 +21,19 @@ const handleClick1 = () => {
   <div class="other-row">
     <div class="task" @click="handleClick1">
       <div class="title">任务</div>
-      <img class="icon" :src="image8" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image8" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
     <div class="hostel" @click="handleClick1">
       <div class="title">基建</div>
       <div class="sub">BETA</div>
-      <img class="icon" :src="image7" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image7" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
     <div class="depository" @click="handleClick1">
       <div class="title">仓库</div>
-      <img class="icon" :src="image9" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image9" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
   </div>
 </template>

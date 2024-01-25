@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { useNotification } from 'naive-ui'
+import { h, ref } from 'vue'
 import IconCalendar from '../../components/ArknightUI/icons/Calendar.vue'
 import IconMail from '../../components/ArknightUI/icons/Mail.vue'
 import IconSetting from '../../components/ArknightUI/icons/Setting.vue'
 import IconWarning from '../../components/ArknightUI/icons/Warning.vue'
 import { useUserStore } from '../../stores/user'
 import ANMessage from './ANMessage.vue'
-import { h, ref } from 'vue'
 
 const notification = useNotification()
 const userStore = useUserStore()
@@ -23,26 +23,26 @@ const handleClick1 = () => {
 
 <template>
   <div class="header-menu space-x-4 p-3">
-    <IconSetting width="48px" fill="white" class="cursor-pointer" @click="showSetting = true" />
-    <IconWarning width="48px" fill="white" class="cursor-pointer" @click="handleClick1" />
-    <IconMail width="48px" fill="white" class="cursor-pointer" @click="handleClick1" />
-    <IconCalendar width="48px" fill="white" class="cursor-pointer" @click="handleClick1" />
+    <IconSetting class="cursor-pointer" fill="white" width="48px" @click="showSetting = true" />
+    <IconWarning class="cursor-pointer" fill="white" width="48px" @click="handleClick1" />
+    <IconMail class="cursor-pointer" fill="white" width="48px" @click="handleClick1" />
+    <IconCalendar class="cursor-pointer" fill="white" width="48px" @click="handleClick1" />
   </div>
 
   <n-modal v-model:show="showSetting" :mask-closable="false">
     <n-card
-      style="width: 600px"
-      title="数据展示页设置"
       :bordered="false"
-      size="huge"
-      role="dialog"
       aria-modal="true"
       closable
+      role="dialog"
+      size="huge"
+      style="width: 600px"
+      title="数据展示页设置"
       @close="showSetting = false"
     >
       <n-scrollbar style="max-height: 50vh; overflow-x: hidden">
         <n-space vertical>
-          <n-space vertical style="width: 60%">
+          <n-space style="width: 60%" vertical>
             <!--          <n-checkbox>显示干员</n-checkbox>-->
             <!--          <n-checkbox>显示干员语音</n-checkbox>-->
             <!--          <n-checkbox>显示干员语音文本</n-checkbox>-->
@@ -67,7 +67,7 @@ const handleClick1 = () => {
         </n-space>
         <n-divider />
         <n-space vertical>
-          <n-space vertical style="width: 60%">
+          <n-space style="width: 60%" vertical>
             <p style="font-size: 1rem">资源</p>
             <n-space class="items-center" justify="space-between">
               <p>龙门币</p>
@@ -89,7 +89,7 @@ const handleClick1 = () => {
         </n-space>
         <n-divider />
         <n-space vertical>
-          <n-space vertical style="width: 60%">
+          <n-space style="width: 60%" vertical>
             <p style="font-size: 1rem">战斗信息</p>
             <n-space class="items-center" justify="space-between">
               <p>名称</p>

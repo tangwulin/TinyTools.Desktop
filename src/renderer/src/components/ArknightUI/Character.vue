@@ -8,7 +8,7 @@ defineEmits<{
 
 <template>
   <div class="w-full h-full relative flex items-center justify-center">
-    <img class="img" :src="character" alt="character" @click="$emit('click')" />
+    <img :src="character" alt="character" class="img" @click="$emit('click')" />
   </div>
 </template>
 

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useNotification } from 'naive-ui'
+import { h } from 'vue'
 import { useRouter } from 'vue-router'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
 import image11 from '../../../assets/images/ArknightUI/image11.png'
@@ -7,7 +8,6 @@ import image4 from '../../../assets/images/ArknightUI/image4.png'
 import image5 from '../../../assets/images/ArknightUI/image5.png'
 import image6 from '../../../assets/images/ArknightUI/image6.png'
 import ANMessage from '../ANMessage.vue'
-import { h } from 'vue'
 
 const router = useRouter()
 const notification = useNotification()
@@ -24,12 +24,12 @@ const handleClick1 = () => {
   <div class="shop-row">
     <div class="left" @click="handleClick1">
       <div class="title">采购中心</div>
-      <img class="icon" :src="image6" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image6" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
     <div class="right">
       <div class="top">
-        <img class="icon" :src="image11" alt="icon" />
+        <img :src="image11" alt="icon" class="icon" />
         <div class="title">招募</div>
       </div>
       <div class="bottom">
@@ -38,13 +38,13 @@ const handleClick1 = () => {
           @click="router.push({ name: 'personManage', query: { showAddModal: 'true' } })"
         >
           <div class="title">公开招募</div>
-          <img class="icon" :src="image4" alt="icon" />
-          <img class="right-bottom" :src="image10" alt="right bottom" />
+          <img :src="image4" alt="icon" class="icon" />
+          <img :src="image10" alt="right bottom" class="right-bottom" />
         </div>
         <div class="item" @click="router.push({ name: 'randomSelection' })">
           <div class="title">干员寻访</div>
-          <img class="icon" :src="image5" alt="icon" />
-          <img class="right-bottom" :src="image10" alt="right bottom" />
+          <img :src="image5" alt="icon" class="icon" />
+          <img :src="image10" alt="right bottom" class="right-bottom" />
         </div>
       </div>
     </div>

@@ -117,7 +117,7 @@ const routes: RouteRecordRaw[] = [
             component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
           }
         ]
-      },
+      }
     ]
   },
   {

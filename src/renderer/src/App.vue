@@ -3,7 +3,7 @@ import { dateZhCN, GlobalThemeOverrides, NConfigProvider, zhCN } from 'naive-ui'
 
 const themeOverrides: GlobalThemeOverrides = {
   Notification: {
-    padding: '0',
+    padding: '0'
   }
 }
 </script>

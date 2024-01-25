@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { format } from 'date-fns'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import IconBattery from '../../../components/ArknightUI/icons/Battery.vue'
 
 let timer: any = null
@@ -39,7 +39,7 @@ onBeforeUnmount(() => {
 <template>
   <div class="system-info">
     <div class="line line--left"></div>
-    <IconBattery class="icon" :level="batteryLevel" />
+    <IconBattery :level="batteryLevel" class="icon" />
     <div class="time">{{ current }}</div>
     <div class="line line--right"></div>
   </div>
@@ -68,6 +68,7 @@ onBeforeUnmount(() => {
     flex: 1;
   }
 }
+
 .icon {
   flex-shrink: 0;
   font-size: 28px;

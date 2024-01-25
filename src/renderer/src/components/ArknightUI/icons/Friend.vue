@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-  <svg viewBox="0 0 64 64" width="1em" height="1em">
+  <svg height="1em" viewBox="0 0 64 64" width="1em">
     <g fill="currentColor">
       <path
         d="M55.94,47.43v5.5c0,0-2.13,2.3-4.26,0V57H37.85v-7.89l-5.32,2.57h-1.06l-5.32-2.57V57H12.32v-4.07c-2.13,2.3-4.26,0-4.26,0

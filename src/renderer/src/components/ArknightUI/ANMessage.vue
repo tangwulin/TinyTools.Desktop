@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const props = defineProps({
   type: {
     type: String,
@@ -17,14 +17,14 @@ const props = defineProps({
 
 <template>
   <div
-    :style="{ top: props.top + 'px', 'margin-left': -8 + 'px' }"
     :class="`ac-message ${props.type}`"
+    :style="{ top: props.top + 'px', 'margin-left': -8 + 'px' }"
   >
     <i
       :class="`ac-message-icon iconfont icon-circle-${props.type}`"
       style="height: 40px; display: block"
     />
-    <div style="font-size: 20px;">
+    <div style="font-size: 20px">
       <slot></slot>
     </div>
   </div>

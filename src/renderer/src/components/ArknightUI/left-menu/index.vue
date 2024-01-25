@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
-import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
-import NewsBanner from './news-banner.vue'
-import VoiceBox from './voice-box.vue'
 import { useNotification } from 'naive-ui'
 import { h } from 'vue'
+import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
+import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
+import ANMessage from '../ANMessage.vue'
+import NewsBanner from './news-banner.vue'
+import VoiceBox from './voice-box.vue'
 
 defineProps<{
   voice: string
@@ -12,7 +13,6 @@ defineProps<{
 defineEmits<{
   (e: 'clear-voice'): void
 }>()
-import ANMessage from '../ANMessage.vue'
 
 const notification = useNotification()
 const handleClick1 = () => {
@@ -25,7 +25,7 @@ const handleClick1 = () => {
 </script>
 
 <template>
-  <div class="left-menu" >
+  <div class="left-menu">
     <VoiceBox v-show="voice" :text="voice" @click="$emit('clear-voice')" />
     <div class="flex">
       <NewsBanner />

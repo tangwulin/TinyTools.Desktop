@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import image10 from '../../../assets/images/ArknightUI/image10.png'
 import image2 from '../../../assets/images/ArknightUI/image2.png'
 import image3 from '../../../assets/images/ArknightUI/image3.png'
-import image10 from '../../../assets/images/ArknightUI/image10.png'
 import router from '../../../router'
 </script>
 
@@ -9,14 +9,14 @@ import router from '../../../router'
   <div class="team-row">
     <div class="item" @click="router.push({ name: 'groupManage' })">
       <div class="title">编队</div>
-      <img class="icon" :src="image2" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image2" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
     <div class="item" @click="router.push({ name: 'personManage' })">
       <div class="title">干员</div>
       <div class="sub">角色管理</div>
-      <img class="icon" :src="image3" alt="icon" />
-      <img class="right-bottom" :src="image10" alt="right bottom" />
+      <img :src="image3" alt="icon" class="icon" />
+      <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
     <div class="black"></div>
   </div>

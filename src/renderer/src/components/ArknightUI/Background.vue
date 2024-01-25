@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { ref, onMounted, onBeforeUnmount, shallowRef, CSSProperties } from 'vue'
 import { random } from 'lodash-es'
+import { CSSProperties, onBeforeUnmount, onMounted, ref, shallowRef } from 'vue'
 
 /**
  * 粒子
@@ -15,6 +15,7 @@ interface Dust {
   vectorY: number
   vectorOpacity: number
 }
+
 // 常量
 const MAX_DUST_NUM = 200
 const CANVAS_WIDTH = 1920
@@ -36,13 +37,13 @@ function resize() {
       canvasStyle.value = {
         width: '100%',
         top: '50%',
-        transform: 'translateY(-50%)',
+        transform: 'translateY(-50%)'
       }
     } else {
       canvasStyle.value = {
         height: '100%',
         left: '50%',
-        transform: 'translateX(-50%)',
+        transform: 'translateX(-50%)'
       }
     }
   }
@@ -103,7 +104,7 @@ function randomDust(): Dust {
     color: '#888',
     vectorX: random(-0.05, -0.8),
     vectorY: random(-0.4, 0.4),
-    vectorOpacity: random(0.01, 0.02),
+    vectorOpacity: random(0.01, 0.02)
   }
 }
 
@@ -128,10 +129,10 @@ onBeforeUnmount(() => {
   <div ref="backgroundELe" class="backrgound">
     <canvas
       ref="canvasEle"
-      class="absolute block"
-      :width="CANVAS_WIDTH"
       :height="CANVAS_HEIGHT"
       :style="canvasStyle"
+      :width="CANVAS_WIDTH"
+      class="absolute block"
     ></canvas>
     <div class="mask"></div>
   </div>

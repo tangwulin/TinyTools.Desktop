@@ -11,16 +11,16 @@ const userStore = useUserStore()
 <template>
   <div class="asset-info">
     <div class="item">
-      <img class="icon" :src="money" alt="money" />
+      <img :src="money" alt="money" class="icon" />
       <span class="number">{{ userStore.asset.money }}</span>
     </div>
     <div class="item">
-      <img class="icon" :src="gem" alt="gem" />
+      <img :src="gem" alt="gem" class="icon" />
       <span class="number">{{ userStore.asset.gem }}</span>
       <IconAdd class="button" />
     </div>
     <div class="item">
-      <img class="icon" :src="stone" alt="stone" />
+      <img :src="stone" alt="stone" class="icon" />
       <span class="number">{{ userStore.asset.stone }}</span>
       <IconAdd class="button" />
     </div>

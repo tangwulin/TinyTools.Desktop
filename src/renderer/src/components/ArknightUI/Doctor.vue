@@ -4,7 +4,7 @@ import doctor from '../../assets/images/ArknightUI/doctor.png'
 
 <template>
   <div class="w-full h-full relative flex items-center justify-center">
-    <img class="img" :src="doctor" alt="doctor" />
+    <img :src="doctor" alt="doctor" class="img" />
   </div>
 </template>
 

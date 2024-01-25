@@ -19,18 +19,18 @@ const stroke = computed(() => {
       <circle
         cx="50%"
         cy="50%"
+        fill="none"
         r="48"
         stroke="rgba(255, 255, 255, .2)"
-        fill="none"
         stroke-width="4"
       ></circle>
       <circle
+        :stroke-dasharray="stroke"
         cx="50%"
         cy="50%"
-        r="48"
-        :stroke-dasharray="stroke"
-        stroke="#ffee22"
         fill="none"
+        r="48"
+        stroke="#ffee22"
         stroke-width="4"
       ></circle>
     </svg>
