@@ -4,12 +4,6 @@ import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'
 
-// const maleGenshin = avatarConfig['maleGenshin']
-// const femaleGenshin = avatarConfig['femaleGenshin']
-// const maleArknights = avatarConfig['maleArknights']
-// const femaleArknights = avatarConfig['femaleArknights']
-// const maleStarrail = avatarConfig['maleStarrail']
-// const femaleStarrail = avatarConfig['femaleStarrail']
 const genshin = avatarConfig['genshin']
 const arknights = avatarConfig['arknights']
 const starRail = avatarConfig['starRail']
@@ -118,5 +112,5 @@ export const getAvatar = (
       urls = male.concat(female)
       break
   }
-  return urls[selectAvatar(sn, urls.length)].url
+  return urls[selectAvatar(sn, urls.length)]?.url ?? null
 }
