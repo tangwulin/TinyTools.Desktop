@@ -14,28 +14,9 @@ updateBuiltInAvatar().then(() => {
 
 async function updateBuiltInAvatar() {
   const browser = await puppeteer.launch({ headless: 'new' })
-  // case '崩坏3':
-  //   updateHonkai3rd()
-  //   break
-  // case 'Fate/Grand Order':
-  //   updateFateGrandOrder()
-  //   break
-  // case '公主连结':
-  //   updatePrincessConnect()
-  //   break
-  // case '碧蓝航线':
-  //   updateAzurLane()
-  //   break
-  // case '少女前线':
-  //   updateGirlsFrontline()
-  //   break
-  // case '阴阳师':
-  //   updateOnmyoji()
-  //   break
-  //
   await Promise.all([
     updateGenshin(await browser.newPage(), {
-      webUrl: 'https://www.bilibili.com/read/cv19356383/',
+      webUrl: 'https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2',
       genderWebUrl: 'https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2%E7%AD%9B%E9%80%89',
       blackList: []
     }),
@@ -61,18 +42,32 @@ const updateGenshin = async (
   await page.setViewport({ width: 1080, height: 1024 })
   console.log(config.webUrl)
   await page.goto(config.webUrl)
-  await page.waitForSelector('#read-article-holder > figure:nth-child(101)')
+  await page.waitForSelector('#CardSelectTr > div:nth-child(83)')
+
+  const tarveler = [
+    {
+      description: '空',
+      url: 'https://i0.hdslb.com/bfs/article/921ef6095df5ab142613cd27b2a7f52c861badb1.jpg@1256w_1256h_!web-article-pic.avif'
+    },
+    {
+      description: '荧',
+      url: 'https://i0.hdslb.com/bfs/article/4c46a8c0a2c52f91568bfd03ba25451bcf2a230a.jpg@1256w_1256h_!web-article-pic.avif'
+    }
+  ]
+
   const result = (
-    await page.$$eval('#read-article-holder > figure', (el) => {
+    await page.$$eval('#CardSelectTr > div', (el) => {
       return el.map((item) => {
         return {
-          description: item.querySelector('figcaption').innerHTML,
+          description: item.querySelector('div.L').innerHTML,
           // url: `https:${item.querySelector('img').getAttribute('data-url').split('@')[0]}`
-          url: `https:${item.querySelector('img').getAttribute('data-src')}` //小图片，节省带宽
+          url: item.querySelector('a.image > img').getAttribute('src') //小图片，节省带宽
         }
       })
     })
-  ).filter((item) => !config.blackList.includes(item.description))
+  )
+    .filter((item) => !config.blackList.includes(item.description))
+    .concat(...tarveler)
 
   await page.goto(config.genderWebUrl)
   await page.waitForSelector('#CardSelectTr > tbody > tr:nth-child(82)')
