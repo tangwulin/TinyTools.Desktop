@@ -21,10 +21,6 @@ const themeOverrides: GlobalThemeOverrides = {
 </template>
 
 <style>
-.n-notification {
-  padding: 0;
-}
-
 @font-face {
   font-family: 'HYWenHei-85W';
   src: url('./assets/fonts/HYWenHei-85W.ttf') format('truetype');
