@@ -462,7 +462,7 @@ const dragHandler = debounce(
   () => {
     db.transaction('rw', db.seatTable, db.seatHistory, async () => {
       await db.seatTable.bulkPut(deepcopy(seatTable.value))
-      saveHistory(seatTable.value, '初始座位')
+      saveHistory(seatTable.value, '手动更改')
     })
   },
   100,
