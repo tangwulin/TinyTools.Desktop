@@ -20,6 +20,7 @@ import { SeatHistory } from '../../types/seatHistory'
 import { SeatTableItem } from '../../types/SeatTableItem'
 import {
   calcNewSeatByCorrectionAlgorithm,
+  calcNewSeatByRealRandom,
   calcNewSeatBySideToMiddleAlgorithm,
   genSeatTable,
   getSeatsFromSeatTable,
@@ -215,12 +216,7 @@ const raffleSeatFeint = (result: SeatTableItem[], times: number) => {
   let i = 1
   const timer = setInterval(() => {
     if (i < times) {
-      //TODO:修一下这里
-      const randomSeats = shuffle(getSeatsFromSeatTable(seatTable.value)).map((item, index) => {
-        item.locationIndex = index
-        return item
-      })
-      seatTable.value = updateSeatTable(seatTable.value, randomSeats)
+      seatTable.value = calcNewSeatByRealRandom(seatTable.value)
       i++
     } else {
       pauseBgm()
@@ -276,12 +272,7 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
   let result = [] as SeatTableItem[]
   switch (lotteryMode.value) {
     case 1:
-      //TODO:把真随机计算座位的方法实现改为权重
-      const newSeats = shuffle(getSeatsFromSeatTable(seatTable.value)).map((item, index) => {
-        item.locationIndex = index
-        return item
-      })
-      result = updateSeatTable(seatTable.value, newSeats)
+      result = calcNewSeatByRealRandom(seatTable.value)
       saveHistory(result, '平等')
       break
     case 2:

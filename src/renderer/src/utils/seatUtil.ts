@@ -1,3 +1,4 @@
+import { shuffle } from 'lodash-es'
 import { Seat } from '../types/seat'
 import { SeatTableItem } from '../types/SeatTableItem'
 
@@ -356,7 +357,6 @@ export const reGenSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
     }
   }
   //理论上需要写一个删除空余座位的逻辑，但是需要最后一行的位置全部为空才能删除，所以暂时不写
-  //TODO: 删除空余座位的逻辑
 
   return result.map((item, index) => new SeatTableItem(item.type, item.data, index))
 }
@@ -375,4 +375,14 @@ export const updateSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
     if (item.type === 'seat') item.setSeat(seats.shift() as Seat)
   }
   return result.map((item, index) => new SeatTableItem(item.type, item.data, index))
+}
+
+//TODO:让真随机计算座位的实现支持权重等特性
+export const calcNewSeatByRealRandom = (seatTable: SeatTableItem[]) => {
+  const newSeats = shuffle(getSeatsFromSeatTable(seatTable)).map((item, index) => {
+    item.locationIndex = index
+    return item
+  })
+
+  return updateSeatTable(seatTable, newSeats)
 }
