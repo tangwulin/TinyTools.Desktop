@@ -130,7 +130,7 @@ const deleteHandler = (row: Person) => {
 }
 
 const handleUpdateFilter = (filters: DataTableFilterState, sourceColumn: DataTableBaseColumn) => {
-  columns[2].filterOptionValues = filters[sourceColumn.key] as null // TODO: 把as null改为更好的实现
+  columns[2].filterOptionValues = filters[sourceColumn.key] as null
 }
 
 const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) => {
@@ -303,7 +303,10 @@ const addPerson = () => {
   message.success('添加成功，共添加了' + multiAddForm.value.names.length + '个')
 
   showAddModal.value = false
-  //TODO: 为新添加的人员分配座位
+  // 为何这里不用给为新添加的人员分配座位？
+  // 理论上在有人员变动的情况下座位数量和人员数量必不可能继续相等
+  // 哪怕你是删了一个人再添加一个人，也会导致座位数量和人员数量不相等（删了人会删座位）
+  // 所以当再次到座位页面时将会重新分配座位
   multiAddForm.value.names = []
   multiAddForm.value.input = ''
 }
@@ -311,6 +314,7 @@ const addPerson = () => {
 const handler = () => {
   try {
     db.persons.put(deepcopy(formValue.value))
+    // 这里不分配座位，因为人员变动时座位数量和人员数量必不可能继续相等
     message.success(isEdit.value ? '编辑成功' : '添加成功')
   } catch (e) {
     message.error('保存失败')
