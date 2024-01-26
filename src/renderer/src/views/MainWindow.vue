@@ -247,7 +247,7 @@ electron.ipcRenderer.on('updateAvailable', (event, data) => {
 })
 
 // 6. 点击确认更新
-electron.ipcRenderer.send('comfirmUpdate')
+// electron.ipcRenderer.send('comfirmUpdate')
 
 // 9. 收到进度信息，做进度条
 electron.ipcRenderer.on('downloadProgress', () => {
@@ -260,7 +260,7 @@ electron.ipcRenderer.on('updateDownloaded', () => {
 })
 
 // 12. 告诉主进程，立即更新
-electron.ipcRenderer.send('updateNow')
+// electron.ipcRenderer.send('updateNow')
 </script>
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
