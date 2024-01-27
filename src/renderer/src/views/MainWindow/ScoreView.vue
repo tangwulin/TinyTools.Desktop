@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import { History as HistoryIcon } from '@vicons/tabler'
 import { ArrowUndo24Filled as UndoIcon } from '@vicons/fluent'
 import {
   GroupFilled as GroupIcon,
@@ -9,11 +8,14 @@ import {
 import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
 import { useElementSize } from '@vueuse/core/index'
 import { from, useObservable } from '@vueuse/rxjs'
+import deepcopy from 'deepcopy'
 import { liveQuery } from 'dexie'
 import { DataTableColumns, NButton, NCard, NForm, NModal, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, h, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
+import AddGroup from '../../components/AddGroup.vue'
+import GroupItem from '../../components/GroupItem.vue'
 import { AppDatabase } from '../../db'
 import { useGeneralStore } from '../../stores/general'
 import { useSettingStore } from '../../stores/setting'
@@ -21,7 +23,10 @@ import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { Rate } from '../../types/rate'
 import { getAvatar } from '../../utils/avatarUtil'
-import remToPx from '../../utils/remToPx'
+
+import { remToPx } from '../../utils/styleUtil'
+import EntityItem from '../../components/EntityItem.vue'
+import RateItem from './ScoreView/RateItem.vue'
 
 const db = AppDatabase.getInstance()
 
@@ -88,17 +93,17 @@ const clickHandler = (item: Person | Group) => {
   current.value = item
 }
 
-const scoreHandler = (rate) => {
+const scoreHandler = (rate: Rate) => {
   if (!current.value) return
   const ownerType = 'members' in current.value ? 'group' : 'person'
   switch (ownerType) {
     case 'group':
       current.value.score += rate.score
-      db.groups.update(current.value.id as number, current.value)
+      db.groups.update(current.value.id as number, deepcopy(current.value))
       break
     case 'person':
       current.value.score += rate.score
-      db.persons.update(current.value.id as number, current.value)
+      db.persons.update(current.value.id as number, deepcopy(current.value))
       break
     default:
       message.error('出错了，请检查类型是否正确')
@@ -142,16 +147,10 @@ function undoHandler() {
   message.success('操作成功')
 }
 
-const createAvatars = (item) => {
-  const members = persons.value.filter((p) => item.membersID.includes(p.id))
+const createAvatars = (item: Group) => {
+  const members = persons.value.filter((p) => item.membersID.includes(p.id as number))
   return members.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
-
-const createDropdownOptions = (options) =>
-  options.map((option) => ({
-    key: option.name,
-    label: option.name
-  }))
 
 const createColumns = (
   del: (rate: Rate) => void,
@@ -257,6 +256,7 @@ watch(
       </div>
     </n-card>
   </n-modal>
+
   <n-modal v-model:show="showModal">
     <n-card
       :bordered="false"
@@ -269,40 +269,11 @@ watch(
       @close="showModal = false"
     >
       <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto">
-        <div
-          v-for="item in rates"
-          style="
-            width: 6rem;
-            height: 6rem;
-            background: #fff;
-            box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-            border-radius: 1rem;
-            margin: 0.5rem;
-          "
-          @click="scoreHandler(item)"
-        >
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              align-items: center;
-            "
-          >
-            <div class="flex flex-col items-center">
-              <p style="text-align: center">{{ item?.name }}</p>
-              <n-tag :type="item.score >= 0 ? 'info' : 'error'" size="small"
-                >{{ item?.score ?? 0 }}
-              </n-tag>
-              <n-p depth="3" style="font-size: 0.75rem; margin: 0">{{ item?.description }}</n-p>
-            </div>
-          </div>
-        </div>
+        <RateItem v-for="item in rates" @click="scoreHandler(item)" :rate="item" />
       </div>
     </n-card>
   </n-modal>
+
   <n-modal v-model:show="showManageModal">
     <n-card
       :bordered="false"
@@ -335,156 +306,38 @@ watch(
         <div
           style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto"
         >
-          <div
+          <EntityItem
             v-for="item in persons"
-            style="
-              width: 6rem;
-              height: 6rem;
-              background: #fff;
-              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-              border-radius: 1rem;
-              margin: 0.5rem;
-            "
+            :display-name="item.name"
             @click="clickHandler(item)"
+            :avatar="getAvatar(item)"
+            :enable-avatar="enableAvatar"
           >
-            <div
-              style="
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-              "
-            >
-              <n-avatar
-                v-if="enableAvatar"
-                :img-props="{ referrerpolicy: 'no-referrer' }"
-                :size="remToPx(3)"
-                :src="getAvatar(item)"
-                lazy
-                object-fit="contain"
-                round
-                style="margin: 0.5rem auto"
-              />
-              <div class="flex flex-row items-center">
-                <p>{{ item?.name }}</p>
-                <n-tag :type="item?.score >= 0 ? 'info' : 'error'" size="small"
-                  >{{ item?.score ?? 0 }}
-                </n-tag>
-              </div>
-            </div>
-          </div>
+            <template v-slot:footer>
+              <n-tag :type="item?.score >= 0 ? 'info' : 'error'" size="small"
+                >{{ item?.score ?? 0 }}
+              </n-tag>
+            </template>
+          </EntityItem>
         </div>
       </n-scrollbar>
+
       <n-scrollbar v-else>
         <div
           style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto"
         >
-          <div
+          <GroupItem
             v-for="item in groups"
-            style="
-              width: 12rem;
-              height: 6rem;
-              background: #fff;
-              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-              border-radius: 1rem;
-              margin: 0.5rem;
-            "
             @click="clickHandler(item)"
-          >
-            <div
-              style="
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin: 0 0.5rem;
-              "
-            >
-              <n-avatar
-                v-if="enableAvatar"
-                :size="remToPx(3)"
-                :src="getAvatar(item)"
-                lazy
-                object-fit="contain"
-                round
-              />
-              <div class="mx-auto flex flex-col" style="font-size: 0.75rem">
-                <span>{{ item?.name }}</span>
-                <n-space justify="space-between"
-                  ><span>{{ item?.membersID.length }}人</span>
-                  <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
-                </n-space>
-                <n-avatar-group
-                  v-if="enableAvatar"
-                  :max="5"
-                  :options="createAvatars(item)"
-                  :size="remToPx(2)"
-                >
-                  <template #avatar="{ option: { name, src } }">
-                    <n-tooltip>
-                      <!--suppress VueUnrecognizedSlot -->
-                      <template #trigger>
-                        <n-avatar
-                          :img-props="{ referrerpolicy: 'no-referrer' }"
-                          :src="src"
-                          lazy
-                          object-fit="contain"
-                          round
-                        />
-                      </template>
-                      {{ name }}
-                    </n-tooltip>
-                  </template>
-                  <template #rest="{ options: restOptions, rest }">
-                    <n-dropdown
-                      :options="createDropdownOptions(restOptions)"
-                      arrow-style="overflow: hidden;"
-                      placement="top"
-                      style="overflow: hidden"
-                    >
-                      <n-avatar style="font-size: 0.75rem">+{{ rest }}</n-avatar>
-                    </n-dropdown>
-                  </template>
-                </n-avatar-group>
-              </div>
-            </div>
-          </div>
+            :group="item"
+            :members-avatar="createAvatars(item)"
+            :enable-avatar="enableAvatar"
+            :avatar="getAvatar(item)"
+          />
 
-          <div
-            style="
-              width: 12rem;
-              height: 6rem;
-              background: #fff;
-              box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-              border-radius: 1rem;
-              margin: 0.5rem;
-            "
+          <add-group
             @click="$router.push({ name: 'groupManage', query: { showAddModal: 'true' } })"
-          >
-            <div
-              style="
-                width: 100%;
-                height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-              "
-            >
-              <n-icon size="3rem">
-                <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M368.5 240H272v-96.5c0-8.8-7.2-16-16-16s-16 7.2-16 16V240h-96.5c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7H240v96.5c0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7 8.8 0 16-7.2 16-16V272h96.5c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
-                  />
-                </svg>
-              </n-icon>
-              <span>添加分组</span>
-            </div>
-          </div>
+          />
         </div>
       </n-scrollbar>
     </n-layout-content>

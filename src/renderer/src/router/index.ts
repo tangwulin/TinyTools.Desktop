@@ -44,7 +44,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/score',
         name: 'score',
-        component: () => import('../views/MainWindow/ScoreViewView.vue')
+        component: () => import('../views/MainWindow/ScoreView.vue')
       },
       {
         path: '/score/report',
