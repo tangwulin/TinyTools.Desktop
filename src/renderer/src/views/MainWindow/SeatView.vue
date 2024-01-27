@@ -558,7 +558,7 @@ const dragHandler = debounce(
     </div>
 
     <!--  视频Modal  <-->
-    <n-modal v-model:show="playingVideo" transform-origin="center">
+    <n-modal v-model:show="playingVideo" transform-origin="center" :mask-closable="false">
       <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
     </n-modal>
 
