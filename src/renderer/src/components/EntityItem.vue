@@ -55,9 +55,9 @@ const avatarSize = computed(() => {
 const fontSize = computed(() => {
   if (typeof props.size === 'number') return props.size / 3 + 'rem'
   else if (props.size === 'small') return '0.5rem'
-  else if (props.size === 'medium') return '1rem'
+  else if (props.size === 'medium') return '14px'
   else if (props.size === 'large') return '1.5rem'
-  else return '1rem'
+  else return '14px'
 })
 </script>
 <template>

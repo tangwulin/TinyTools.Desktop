@@ -88,7 +88,6 @@ watch(value, changeHandler)
               :key="index"
               :display-name="item.description"
               :avatar="item.url"
-              size="large"
               @click="writeClipboard(item.url)"
             />
           </div>
