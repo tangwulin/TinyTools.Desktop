@@ -354,14 +354,6 @@ const parseExcel = async (uploadFileInfo: UploadInfo) => {
   if (personsFromExcel.length === 0) {
     message.error('未检测到任何人员信息，请检查文件格式是否正确')
   } else {
-    // persons.value.push(
-    //   // ...personsFromExcel.map((person) => ({
-    //   //   ...person,
-    //   //   uniqueId: genUniqueId()
-    //   // }))
-    //   // personsFromExcel.map(item)
-    //   ...personsFromExcel
-    // )
     db.persons.bulkPut(personsFromExcel)
     message.success('导入成功')
     showImportModal.value = false
