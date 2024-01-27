@@ -19,7 +19,7 @@ import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { ScoreHistory } from '../../types/scoreHistory'
 import { getAvatar } from '../../utils/avatarUtil'
-import remToPx from '../../utils/remToPx'
+import { remToPx } from '../../utils/styleUtil'
 
 const router = useRouter()
 

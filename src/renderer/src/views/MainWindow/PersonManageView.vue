@@ -34,7 +34,7 @@ import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { getAvatar } from '../../utils/avatarUtil'
 import downloadAnyFile from '../../utils/downloadAnyFile'
-import remToPx from '../../utils/remToPx'
+import { remToPx } from '../../utils/styleUtil'
 
 const route = useRoute()
 
