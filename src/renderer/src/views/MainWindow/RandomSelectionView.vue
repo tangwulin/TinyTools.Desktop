@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { Dice, DiceOutline } from '@vicons/ionicons5'
 import { NButton, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, nextTick, ref, watch } from 'vue'
@@ -11,7 +10,8 @@ import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
 import { selectSomething } from '../../utils/arrayUtil'
 import { getAvatar } from '../../utils/avatarUtil'
-import remToPx from '../../utils/remToPx'
+import EntityItem from '../../components/EntityItem.vue'
+import RaffleModeSelect from './RandomSelectionView/RaffleModeSelect.vue'
 
 const db = AppDatabase.getInstance()
 const message = useMessage()
@@ -27,9 +27,6 @@ const isSelected = ref(false)
 const selectedPerson = ref<Person[]>([])
 const selectedSex = ref([1, 2, 9])
 const selectionList = ref<Person[]>([])
-
-const hasHover1 = ref(false)
-const hasHover2 = ref(false)
 
 const playingVideo = ref(false)
 const videoSrc = computed(() => {
@@ -149,41 +146,14 @@ watch(
           content-style="display:flex;height:100%;width:100%;"
         >
           <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
-            <div
+            <EntityItem
               v-for="item in selectedPerson"
               :key="item.id"
-              style="
-                width: 8rem;
-                height: 8rem;
-                background: #fff;
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-                margin: 0.5rem;
-              "
-            >
-              <div
-                style="
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                <n-avatar
-                  v-if="enableAvatar"
-                  :img-props="{ referrerpolicy: 'no-referrer' }"
-                  :size="remToPx(4)"
-                  :src="getAvatar(item)"
-                  lazy
-                  object-fit="contain"
-                  round
-                  style="margin-bottom: 0.5rem"
-                />
-                <span style="font-size: 1.5rem">{{ item?.name }}</span>
-              </div>
-            </div>
+              :display-name="item.name"
+              size="large"
+              :avatar="getAvatar(item)"
+              :enable-avatar="enableAvatar"
+            />
           </div>
         </n-layout>
         <n-p v-else depth="3" style="font-size: 2rem"> 还没有抽选……</n-p>
@@ -192,32 +162,12 @@ watch(
     <n-layout-footer position="absolute">
       <n-divider style="margin: 0" />
       <div class="flex flex-row justify-around items-center" style="height: 6rem">
-        <div
-          class="flex flex-col justify-center items-center"
-          style="margin: auto; width: 4rem; cursor: pointer"
-          @click="showFastModal = true"
-          @mouseenter="hasHover1 = true"
-          @mouseleave="hasHover1 = false"
-        >
-          <n-icon size="2rem">
-            <Dice v-if="hasHover1" />
-            <DiceOutline v-else />
-          </n-icon>
+        <RaffleModeSelect @click="showFastModal = true">
           <span>快速抽选</span>
-        </div>
-        <div
-          class="flex flex-col justify-center items-center"
-          style="margin: auto; width: 4rem; cursor: pointer"
-          @click="showAdvancedModal = true"
-          @mouseenter="hasHover2 = true"
-          @mouseleave="hasHover2 = false"
-        >
-          <n-icon size="2rem">
-            <Dice v-if="hasHover2" />
-            <DiceOutline v-else />
-          </n-icon>
+        </RaffleModeSelect>
+        <RaffleModeSelect @click="showAdvancedModal = true">
           <span>常规抽选</span>
-        </div>
+        </RaffleModeSelect>
       </div>
     </n-layout-footer>
   </n-layout>

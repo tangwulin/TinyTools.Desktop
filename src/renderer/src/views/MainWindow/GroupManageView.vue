@@ -9,12 +9,13 @@ import { NButton, NFormItem, NInput, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { Ref, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import GroupItem from '../../components/GroupItem.vue'
 import { AppDatabase } from '../../db'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { getAvatar } from '../../utils/avatarUtil'
-import remToPx from '../../utils/remToPx'
+import AddGroup from '../../components/AddGroup.vue'
 
 const db = AppDatabase.getInstance()
 
@@ -133,17 +134,6 @@ const createAvatars = (item: Group) => {
   const person = persons.value.filter((p) => item.membersID.includes(p.id as number))
   return person.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
-
-const createDropdownOptions = (
-  options: Array<{
-    name: string
-    src: string
-  }>
-) =>
-  options.map((option) => ({
-    key: option.name,
-    label: option.name
-  }))
 
 watch(
   value1,
@@ -267,106 +257,17 @@ const pasteAvatarLink = async () => {
     </n-modal>
     <n-scrollbar>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto">
-        <div
+        <group-item
           v-for="item in groups"
           :key="item.id"
-          style="
-            width: 12rem;
-            height: 6rem;
-            background: #fff;
-            box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-            border-radius: 1rem;
-            margin: 0.5rem;
-          "
+          :group="item"
+          :avatar="getAvatar(item)"
+          :members-avatar="createAvatars(item)"
+          :enable-avatar="enableAvatar"
           @click="clickHandler(item)"
-        >
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              margin: 0 0.5rem;
-            "
-          >
-            <n-avatar
-              v-if="enableAvatar"
-              :img-props="{ referrerpolicy: 'no-referrer' }"
-              :size="remToPx(3)"
-              :src="getAvatar(item)"
-              lazy
-              object-fit="contain"
-              round
-            />
-            <div class="mx-auto flex flex-col" style="font-size: 0.75rem">
-              <span>{{ item?.name }}</span>
-              <n-space justify="space-between"
-                ><span>{{ item?.membersID.length }}人</span>
-                <n-tag :bordered="false" size="small">{{ item.score ?? 0 }}</n-tag>
-              </n-space>
-              <n-avatar-group
-                v-if="enableAvatar"
-                :max="5"
-                :options="createAvatars(item)"
-                :size="remToPx(2)"
-              >
-                <template #avatar="{ option: { name, src } }">
-                  <n-tooltip>
-                    <!--suppress VueUnrecognizedSlot -->
-                    <template #trigger>
-                      <n-avatar :src="src" />
-                    </template>
-                    {{ name }}
-                  </n-tooltip>
-                </template>
-                <template #rest="{ options: restOptions, rest }">
-                  <n-dropdown
-                    :options="createDropdownOptions(restOptions)"
-                    arrow-style="overflow: hidden;"
-                    placement="top"
-                    style="overflow: hidden"
-                  >
-                    <n-avatar style="font-size: 0.75rem">+{{ rest }}</n-avatar>
-                  </n-dropdown>
-                </template>
-              </n-avatar-group>
-            </div>
-          </div>
-        </div>
+        />
 
-        <div
-          style="
-            width: 12rem;
-            height: 6rem;
-            background: #fff;
-            box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-            border-radius: 1rem;
-            margin: 0.5rem;
-          "
-          @click="clickHandler()"
-        >
-          <div
-            style="
-              width: 100%;
-              height: 100%;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-            "
-          >
-            <n-icon size="3rem">
-              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M368.5 240H272v-96.5c0-8.8-7.2-16-16-16s-16 7.2-16 16V240h-96.5c-8.8 0-16 7.2-16 16 0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7H240v96.5c0 4.4 1.8 8.4 4.7 11.3 2.9 2.9 6.9 4.7 11.3 4.7 8.8 0 16-7.2 16-16V272h96.5c8.8 0 16-7.2 16-16s-7.2-16-16-16z"
-                />
-              </svg>
-            </n-icon>
-            <span>添加分组</span>
-          </div>
-        </div>
+        <AddGroup @click="clickHandler()" />
       </div>
     </n-scrollbar>
   </div>

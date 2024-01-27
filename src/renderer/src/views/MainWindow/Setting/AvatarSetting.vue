@@ -4,7 +4,7 @@ import { storeToRefs } from 'pinia'
 import { ref, watch } from 'vue'
 import { useSettingStore } from '../../../stores/setting'
 import { getAvatarUrls } from '../../../utils/avatarUtil'
-import remToPx from '../../../utils/remToPx'
+import EntityItem from '../../../components/EntityItem.vue'
 
 const message = useMessage()
 
@@ -83,41 +83,14 @@ watch(value, changeHandler)
             </n-space>
           </n-radio-group>
           <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
-            <div
+            <entity-item
               v-for="(item, index) in selectedAvatar"
               :key="index"
-              style="
-                width: 8rem;
-                height: 8rem;
-                background: #fff;
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-                margin: 0.5rem;
-              "
+              :display-name="item.description"
+              :avatar="item.url"
+              size="large"
               @click="writeClipboard(item.url)"
-            >
-              <div
-                style="
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                <n-avatar
-                  :img-props="{ referrerpolicy: 'no-referrer' }"
-                  :size="remToPx(4)"
-                  :src="item.url"
-                  lazy
-                  object-fit="contain"
-                  round
-                  style="margin-bottom: 0.5rem"
-                />
-                <span>{{ item?.description }}</span>
-              </div>
-            </div>
+            />
           </div>
         </n-collapse-item>
       </n-collapse>
