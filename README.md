@@ -98,3 +98,9 @@ pnpm build:linux
 ## 🖼️ 截图
 
 （暂时没有，有空补上）
+
+## ❤️ 开源项目鸣谢（排名不分先后）
+- [NaiveUI](https://github.com/tusen-ai/naive-ui)
+- [Electron-vite](https://github.com/alex8088/electron-vite)
+- [modern-screenshot](https://github.com/qq15725/modern-screenshot)
+- [仿明日方舟UI](https://github.com/lxchapu/arknights)

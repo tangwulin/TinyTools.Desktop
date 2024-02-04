@@ -101,6 +101,15 @@ const clickHandler = () => {
         </p>
         <p>本项目所使用角色头像版权均属于各游戏版权方</p>
       </div>
+      <div class="flex flex-col mt-4">
+        <p>开源项目鸣谢</p>
+        <a href="https://github.com/tusen-ai/naive-ui" target="_blank">Naive-UI</a>
+        <a href="https://github.com/alex8088/electron-vite" target="_blank">electron-vite</a>
+        <a href="https://github.com/qq15725/modern-screenshot" target="_blank">
+          modern-screenshot</a
+        >
+        <a href="https://github.com/lxchapu/arknights" target="_blank">仿明日方舟UI</a>
+      </div>
       <!--      <p>项目地址：</p>-->
       <div class="flex flex-row mt-4">
         <a href="https://github.com/tangwulin/TinyTools.Desktop" target="_blank">
