@@ -41,7 +41,7 @@ const clickHandler = () => {
 <template>
   <n-scrollbar>
     <div class="flex flex-col items-center h-full pb-2" style="height: 100%">
-      <div class="mb-4 w-3/5 p-4">
+      <div class="w-3/5 p-4">
         <img :src="logo" alt="logo" style="margin: auto" />
       </div>
       <p class="mb-8" @click="clickHandler">TinyTools v{{ version }} Build {{ revision }}</p>
