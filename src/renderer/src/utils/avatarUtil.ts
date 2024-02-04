@@ -97,7 +97,7 @@ export const getAvatar = (
   if (!enableFallbackAvatar.value) return null
   if ('disabledAvatar' in item && item.disabledAvatar) return null
   const sn =
-    'number' in item && item?.number ? item.number : 'name' in item ? item.name + item.id ?? '' : ''
+    'number' in item && item?.number ? item.number : 'name' in item ? item.name + item.id : ''
   let urls: { url: string; description: string }[]
   switch (
     'genderCode' in item ? item.genderCode : 9 // 1:男,2:女,9:未知
