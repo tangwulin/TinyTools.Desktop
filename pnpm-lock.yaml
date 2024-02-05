@@ -38,6 +38,9 @@ dependencies:
   electron-updater:
     specifier: ^6.1.7
     version: 6.1.7
+  extract-file-icon-fix:
+    specifier: ^0.3.3
+    version: 0.3.3
   howler:
     specifier: ^2.2.4
     version: 2.2.4
@@ -3052,6 +3055,13 @@ packages:
       strip-final-newline: 3.0.0
     dev: true
 
+  /extract-file-icon-fix@0.3.3:
+    resolution: {integrity: sha512-JCzPT+gcqeLpEyq00NTOMWW7GFCcp/XIXwbGNsI5meiQFrAyRQ+nQzDXX8B1oPEa20eYmwXo/FoslcAwLLVzXQ==}
+    requiresBuild: true
+    dependencies:
+      node-addon-api: 1.7.1
+    dev: false
+
   /extract-zip@2.0.1:
     resolution: {integrity: sha512-GDhU9ntwuKyGXdZBUgTIe+vXnWj0fppUEtMDL0+idd5Sta8TGpHssn/eusA9mrPr9qNDym6SxAYZjNvCn/9RBg==}
     engines: {node: '>= 10.17.0'}
@@ -4056,6 +4066,10 @@ packages:
     resolution: {integrity: sha512-dBpDMdxv9Irdq66304OLfEmQ9tbNRFnFTuZiLo+bD+r332bBmMJ8GBLXklIXXgxd3+v9+KUnZaUR5PJMa75Gsg==}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /node-addon-api@1.7.1:
+    resolution: {integrity: sha512-2+DuKodWvwRTrCfKOeR24KIc5unKjOh8mz17NCzVnHWfjAdDqbfbjqh7gUT+BkXBRQM52+xCHciKWonJ3CbJMQ==}
+    dev: false
 
   /node-addon-api@1.7.2:
     resolution: {integrity: sha512-ibPK3iA+vaY1eEjESkQkM0BbCqFOaZMiXRTtdB0u7b4djtY6JnsjvPdUHVMg6xQt3B8fpTTWHI9A+ADjM9frzg==}
