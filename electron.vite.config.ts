@@ -73,15 +73,6 @@ export default ({ mode }) => {
       assetsInclude: ['**/*.xlsx'],
       build: {
         chunkSizeWarningLimit: 1500,
-        // rollupOptions: {
-        //   output: {
-        //     manualChunks(id) {
-        //       if (id.includes('node_modules')) {
-        //         return 'vendor'
-        //       }
-        //     }
-        //   }
-        // }
         sourcemap: true
       },
       define: {
