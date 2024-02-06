@@ -227,6 +227,8 @@ app.whenReady().then(() => {
       movable: true,
       enableLargerThanScreen: false,
       autoHideMenuBar: true,
+      skipTaskbar: app.isPackaged,
+      alwaysOnTop: !app.isPackaged, // 方便开发时调试
       webPreferences: {
         preload: join(__dirname, '../preload/index.js'),
         sandbox: false
