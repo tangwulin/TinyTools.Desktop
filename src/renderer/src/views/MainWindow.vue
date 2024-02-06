@@ -9,6 +9,7 @@ import {
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { Menu2 as MenuIcon } from '@vicons/tabler'
+import { UpdateInfo } from 'builder-util-runtime'
 import { NIcon, useDialog } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { Component, h, onMounted, ref, watch } from 'vue'
@@ -224,8 +225,8 @@ const footerMenuOptions = [
 onMounted(() => {
   if (isElectron) {
     setTimeout(() => {
-      electron.ipcRenderer.send('checkForUpdate')
-    }, 3000)
+      electron.ipcRenderer.send('checkForUpdates')
+    }, 500)
   }
 })
 
@@ -234,14 +235,20 @@ electron.ipcRenderer.on('printUpdaterMessage', (event, data) => {
 })
 
 // 5. 收到主进程可更新的消息，做自己的业务逻辑
-electron.ipcRenderer.on('updateAvailable', (event, data) => {
-  console.log('updateAvailable', event, data)
+electron.ipcRenderer.on('updateAvailable', (_, data: UpdateInfo) => {
   dialog.info({
+    closable: false,
+    closeOnEsc: false,
+    maskClosable: false,
     title: '检测到新版本',
-    content: '厉害',
-    positiveText: '哇',
+    content: data.releaseNotes as string,
+    negativeText: '不更新',
+    positiveText: '更新',
     onPositiveClick: () => {
-      // message.success('耶！')
+      electron.ipcRenderer.send('comfirmUpdate')
+    },
+    onNegativeClick: () => {
+      // 不用做什么
     }
   })
 })
@@ -250,13 +257,29 @@ electron.ipcRenderer.on('updateAvailable', (event, data) => {
 // electron.ipcRenderer.send('comfirmUpdate')
 
 // 9. 收到进度信息，做进度条
-electron.ipcRenderer.on('downloadProgress', () => {
+electron.ipcRenderer.on('downloadProgress', (event, data) => {
+  console.log('downloadProgress', event, data)
   // do sth.
 })
 
 // 11. 下载完成，反馈给用户是否立即更新
 electron.ipcRenderer.on('updateDownloaded', () => {
   // do sth.
+  dialog.success({
+    closable: false,
+    closeOnEsc: false,
+    maskClosable: false,
+    title: '下载已完成',
+    content: '新版本文件下载完成，是否现在更新？',
+    positiveText: '是',
+    negativeText: '否',
+    onPositiveClick: () => {
+      electron.ipcRenderer.send('updateNow')
+    },
+    onNegativeClick: () => {
+      //do nothing
+    }
+  })
 })
 
 // 12. 告诉主进程，立即更新

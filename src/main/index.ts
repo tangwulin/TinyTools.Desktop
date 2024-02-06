@@ -10,7 +10,7 @@ import { getFileIconByCache } from './utils/fsUtil'
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
 
-if (import.meta.env.PROD) {
+if (app.isPackaged) {
   Sentry.init({
     dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744'
   })
@@ -18,7 +18,7 @@ if (import.meta.env.PROD) {
 
 // 将日志在渲染进程里面打印出来
 function printUpdaterMessage(arg) {
-  let message = {
+  const message = {
     error: '更新出错',
     checking: '正在检查更新',
     updateAvailable: '检测到新版本',
@@ -124,7 +124,7 @@ app.whenReady().then(() => {
 
   const updaterOptions = createGiteeUpdaterOptions({
     repo: 'twl12138/TinyTools.Desktop',
-    updateManifest: 'alpha.yml'
+    updateManifest: 'latest.yml'
   })
 
   const updater = new NsisUpdater(updaterOptions)
@@ -161,7 +161,7 @@ app.whenReady().then(() => {
     updater.downloadUpdate()
   })
 
-  updater.on('update-not-available', function (_) {
+  updater.on('update-not-available', () => {
     printUpdaterMessage('updateNotAvailable')
   })
 
