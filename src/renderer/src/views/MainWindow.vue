@@ -245,60 +245,62 @@ onMounted(() => {
   }
 })
 
-electron.ipcRenderer.on('printUpdaterMessage', (event, data) => {
-  console.log('printUpdaterMessage', event, data)
-})
-
-// 5. 收到主进程可更新的消息，做自己的业务逻辑
-electron.ipcRenderer.on('updateAvailable', (_, data: UpdateInfo) => {
-  dialog.info({
-    closable: false,
-    closeOnEsc: false,
-    maskClosable: false,
-    title: '检测到新版本',
-    content: data.releaseNotes as string,
-    negativeText: '不更新',
-    positiveText: '更新',
-    onPositiveClick: () => {
-      electron.ipcRenderer.send('comfirmUpdate')
-    },
-    onNegativeClick: () => {
-      // 不用做什么
-    }
+if (isElectron) {
+  electron.ipcRenderer.on('printUpdaterMessage', (event, data) => {
+    console.log('printUpdaterMessage', event, data)
   })
-})
 
-// 6. 点击确认更新
-// electron.ipcRenderer.send('comfirmUpdate')
-
-// 9. 收到进度信息，做进度条
-electron.ipcRenderer.on('downloadProgress', (event, data) => {
-  console.log('downloadProgress', event, data)
-  // do sth.
-})
-
-// 11. 下载完成，反馈给用户是否立即更新
-electron.ipcRenderer.on('updateDownloaded', () => {
-  // do sth.
-  dialog.success({
-    closable: false,
-    closeOnEsc: false,
-    maskClosable: false,
-    title: '下载已完成',
-    content: '新版本文件下载完成，是否现在更新？',
-    positiveText: '是',
-    negativeText: '否',
-    onPositiveClick: () => {
-      electron.ipcRenderer.send('updateNow')
-    },
-    onNegativeClick: () => {
-      //do nothing
-    }
+  // 5. 收到主进程可更新的消息，做自己的业务逻辑
+  electron.ipcRenderer.on('updateAvailable', (_, info: UpdateInfo) => {
+    dialog.info({
+      closable: false,
+      closeOnEsc: false,
+      maskClosable: false,
+      title: `发现新版本 ${info.version}，是否立即下载？`,
+      content: info.releaseNotes as string,
+      negativeText: '不更新',
+      positiveText: '更新',
+      onPositiveClick: () => {
+        electron.ipcRenderer.send('comfirmUpdate')
+      },
+      onNegativeClick: () => {
+        // 不用做什么
+      }
+    })
   })
-})
 
-// 12. 告诉主进程，立即更新
-// electron.ipcRenderer.send('updateNow')
+  // 6. 点击确认更新
+  // electron.ipcRenderer.send('comfirmUpdate')
+
+  // 9. 收到进度信息，做进度条
+  electron.ipcRenderer.on('downloadProgress', (event, data) => {
+    console.log('downloadProgress', event, data)
+    // do sth.
+  })
+
+  // 11. 下载完成，反馈给用户是否立即更新
+  electron.ipcRenderer.on('updateDownloaded', () => {
+    // do sth.
+    dialog.success({
+      closable: false,
+      closeOnEsc: false,
+      maskClosable: false,
+      title: '下载已完成',
+      content: '新版本文件下载完成，是否现在更新？',
+      positiveText: '是',
+      negativeText: '否',
+      onPositiveClick: () => {
+        electron.ipcRenderer.send('updateNow')
+      },
+      onNegativeClick: () => {
+        //do nothing
+      }
+    })
+  })
+
+  // 12. 告诉主进程，立即更新
+  // electron.ipcRenderer.send('updateNow')
+}
 </script>
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
