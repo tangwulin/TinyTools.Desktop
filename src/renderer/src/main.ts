@@ -1,3 +1,4 @@
+import VueLuckyCanvas from '@lucky-canvas/vue'
 import * as Sentry from '@sentry/electron'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
@@ -14,4 +15,8 @@ if (import.meta.env.PROD) {
 
 const pinia = createPinia()
 pinia.use(piniaPluginPersistedstate)
-createApp(App).use(router).use(pinia).mount('#app')
+const app = createApp(App)
+app.use(router)
+app.use(pinia)
+app.use(VueLuckyCanvas)
+app.mount('#app')

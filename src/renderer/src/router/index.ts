@@ -26,11 +26,11 @@ const routes: RouteRecordRaw[] = [
         name: 'seat',
         component: () => import('../views/MainWindow/SeatView.vue')
       },
-      // {
-      //   path: '/lottery',
-      //   name: 'lottery',
-      //   component: () => import('../views/MainWindow/LotteryView.vue')
-      // },
+      {
+        path: '/lottery',
+        name: 'lottery',
+        component: () => import('../views/MainWindow/LotteryView.vue')
+      },
       // {
       //   path: '/help',
       //   name: 'help',

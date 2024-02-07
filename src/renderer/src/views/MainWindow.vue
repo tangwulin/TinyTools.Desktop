@@ -8,7 +8,7 @@ import {
 } from '@vicons/fluent'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
-import { Menu2 as MenuIcon } from '@vicons/tabler'
+import { Gift as GiftIcon, Menu2 as MenuIcon } from '@vicons/tabler'
 import { UpdateInfo } from 'builder-util-runtime'
 import { NIcon, useDialog } from 'naive-ui'
 import { storeToRefs } from 'pinia'
@@ -156,6 +156,21 @@ const menuOptions = [
       ),
     key: 'randomSelection',
     icon: renderIcon(DiceIcon)
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'lottery'
+          },
+          draggable: false
+        },
+        { default: () => '幸运抽奖' }
+      ),
+    key: 'lottery',
+    icon: renderIcon(GiftIcon)
   },
   {
     label: () =>

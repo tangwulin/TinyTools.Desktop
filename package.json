@@ -26,6 +26,7 @@
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
     "@electron-toolkit/utils": "^2.0.0",
+    "@lucky-canvas/vue": "^0.1.11",
     "@sentry/electron": "^4.17.0",
     "@sentry/vite-plugin": "^2.10.2",
     "@vueuse/core": "^10.7.0",
@@ -38,7 +39,6 @@
     "extract-file-icon-fix": "^0.3.3",
     "howler": "^2.2.4",
     "lodash-es": "^4.17.21",
-    "lucky-canvas": "^1.7.27",
     "parallax-js": "^3.1.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.0",
