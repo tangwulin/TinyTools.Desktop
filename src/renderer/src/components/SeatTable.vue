@@ -82,7 +82,7 @@ const onMove = (e: dragEvent) => {
     case 'seat':
     case 'empty':
       return true
-    case 'blank':
+    case 'aisle':
       return false
     default:
       return false
@@ -137,7 +137,7 @@ watch(
             {{ element.data.displayName ?? 'Error' }}
           </span>
         </div>
-        <div v-else-if="element.type === 'aisle'" class="cell blank should-not-be-dragged"></div>
+        <div v-else-if="element.type === 'aisle'" class="cell aisle should-not-be-dragged"></div>
         <div
           v-else-if="element.type === 'empty'"
           class="cell should-not-be-dragged border-dashed"
@@ -159,7 +159,7 @@ watch(
 </template>
 
 <style scoped>
-.cell.should-not-be-dragged.blank {
+.cell.should-not-be-dragged.aisle {
   border: none;
   pointer-events: none;
 }
