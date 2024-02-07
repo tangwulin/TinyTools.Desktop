@@ -18,7 +18,6 @@ export const getFilesAndFoldersInDir = (dir: string) => {
 
 export const getFileIconByCache = async (filePath: string) => {
   const ext = path.extname(filePath)
-  console.log('ext', ext)
   if (isPicture(ext)) {
     const stats = await fs.promises.stat(filePath)
     //大小小于10M的图片直接返回
