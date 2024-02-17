@@ -1,9 +1,8 @@
 <script lang="ts" setup>
 import rhodesIsland from '../../assets/images/ArknightUI/rhodes-island.png'
 import Level from '../../components/ArknightUI/Level.vue'
-import { useUserStore } from '../../stores/user'
-
-const userStore = useUserStore()
+import { useArknightsUIStore } from '../../stores/arknightsUI'
+const arknightsUIStore = useArknightsUIStore()
 </script>
 
 <template>
@@ -11,10 +10,10 @@ const userStore = useUserStore()
     <img :src="rhodesIsland" alt="罗德岛" class="logo" />
     <div class="rect"></div>
     <div class="text">
-      <div class="name">{{ userStore.user.name }}</div>
-      <div class="uid">ID: {{ userStore.user.id }}</div>
+      <div class="name">{{ arknightsUIStore.user.name }}</div>
+      <div class="uid">ID: {{ arknightsUIStore.user.id }}</div>
     </div>
-    <Level :level="userStore.user.level" :percent="userStore.user.exp" />
+    <Level :level="arknightsUIStore.user.level" :percent="arknightsUIStore.user.exp" />
   </div>
 </template>
 

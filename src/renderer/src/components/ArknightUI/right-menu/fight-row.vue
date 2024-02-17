@@ -4,9 +4,11 @@ import { h } from 'vue'
 import image1 from '../../../assets/images/ArknightUI/image1.png'
 import image10 from '../../../assets/images/ArknightUI/image10.png'
 import mind from '../../../assets/images/ArknightUI/mind.png'
-import { useUserStore } from '../../../stores/user'
+import { useArknightsUIStore } from '../../../stores/arknightsUI'
+
 import ANMessage from '../ANMessage.vue'
 
+const arknightsUIStore = useArknightsUIStore()
 const notification = useNotification()
 const handleClick1 = () => {
   notification.create({
@@ -15,21 +17,19 @@ const handleClick1 = () => {
     content: () => h(ANMessage, null, () => '开发中，敬请期待')
   })
 }
-
-const userStore = useUserStore()
 </script>
 
 <template>
   <div class="fight-row" @click="handleClick1">
     <div class="sense">
       <img :src="mind" alt="mind" class="bg" />
-      <div class="current">{{ userStore.asset.sense }}</div>
+      <div class="current">{{ arknightsUIStore.asset.sense }}</div>
       <div class="max">理智/90</div>
     </div>
     <div class="fight">
       <div class="title">终端</div>
       <span class="tag">当前</span>
-      <div class="level">{{ userStore.fightInfo.name }}</div>
+      <div class="level">{{ arknightsUIStore.fightInfo.name }}</div>
     </div>
     <div class="mark">
       <img :src="image1" alt="icon" class="icon" />

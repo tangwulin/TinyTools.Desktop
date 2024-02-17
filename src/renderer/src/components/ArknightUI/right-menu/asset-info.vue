@@ -3,25 +3,24 @@ import gem from '../../../assets/images/ArknightUI/gem.png'
 import money from '../../../assets/images/ArknightUI/money.png'
 import stone from '../../../assets/images/ArknightUI/stone.png'
 import IconAdd from '../../../components/ArknightUI/icons/Add.vue'
-import { useUserStore } from '../../../stores/user'
-
-const userStore = useUserStore()
+import { useArknightsUIStore } from '../../../stores/arknightsUI'
+const arknightsUIStore = useArknightsUIStore()
 </script>
 
 <template>
   <div class="asset-info">
     <div class="item">
       <img :src="money" alt="money" class="icon" />
-      <span class="number">{{ userStore.asset.money }}</span>
+      <span class="number">{{ arknightsUIStore.asset.money }}</span>
     </div>
     <div class="item">
       <img :src="gem" alt="gem" class="icon" />
-      <span class="number">{{ userStore.asset.gem }}</span>
+      <span class="number">{{ arknightsUIStore.asset.gem }}</span>
       <IconAdd class="button" />
     </div>
     <div class="item">
       <img :src="stone" alt="stone" class="icon" />
-      <span class="number">{{ userStore.asset.stone }}</span>
+      <span class="number">{{ arknightsUIStore.asset.stone }}</span>
       <IconAdd class="button" />
     </div>
   </div>
