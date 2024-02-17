@@ -55,10 +55,14 @@ function createMainWindow(): void {
     mainWindow?.show()
   })
 
-  // mainWindow.on('close', (e) => {
-  //   e.preventDefault()
-  //   mainWindow.hide()
-  // })
+  mainWindow.on('close', () => {
+    mainWindow = null //把主窗口对象设置为null，方便后续判断主窗口是否存在
+  })
+
+  mainWindow.webContents.setWindowOpenHandler((details) => {
+    shell.openExternal(details.url)
+    return { action: 'deny' }
+  })
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
@@ -75,7 +79,7 @@ const createTray = () => {
     {
       type: 'normal',
       label: '打开主界面',
-      click: () => mainWindow?.show()
+      click: () => (mainWindow ? mainWindow.show() : createMainWindow())
     },
     {
       type: 'normal',
@@ -86,46 +90,8 @@ const createTray = () => {
   tray.setToolTip('TinyTools.Desktop')
   tray.setContextMenu(contextMenu)
 
-  tray.on('click', () => mainWindow?.show())
-
-  mainWindow.webContents.setWindowOpenHandler((details) => {
-    shell.openExternal(details.url)
-    return { action: 'deny' }
-  })
-
-  // HMR for renderer base on electron-vite cli.
-  // Load the remote URL for development or the local html file for production.
-  if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
-  } else {
-    mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
-  }
+  tray.on('click', () => (mainWindow ? mainWindow.show() : createMainWindow()))
 }
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.whenReady().then(() => {
-  // Set app user model id for windows
-  electronApp.setAppUserModelId('com.electron')
-
-  //限制只能开启一个应用(4.0以上版本)
-  const gotTheLock = app.requestSingleInstanceLock()
-  if (!gotTheLock) {
-    app.quit()
-  } else {
-    app.on('second-instance', () => {
-      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
-      if (mainWindow) {
-        if (mainWindow.isMinimized()) mainWindow.restore()
-        mainWindow.focus()
-        mainWindow.show()
-      }
-    })
-  }
-  app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
-  })
 
 const createUpdater = () => {
   const updaterOptions = createGiteeUpdaterOptions({
@@ -296,7 +262,7 @@ app.whenReady().then(() => {
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createMainWindow()
   })
 })
 
@@ -304,10 +270,10 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+  // if (process.platform !== 'darwin') {
+  //   app.quit()
+  // }
 })
 
-// In this file you can include the rest of your app"s specific main process
+// In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
