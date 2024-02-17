@@ -9,7 +9,7 @@ const stopwatch = performance.now()
 updateBuiltInAvatar().then(() => {
   console.log(avatars)
   console.log(`耗时：${(performance.now() - stopwatch) / 1000}秒`)
-  fs.writeFileSync('./src/renderer/src/config/avatars.json', JSON.stringify(avatars))
+  fs.writeFileSync('./src/renderer/src/data/avatars.json', JSON.stringify(avatars))
 })
 
 async function updateBuiltInAvatar() {
