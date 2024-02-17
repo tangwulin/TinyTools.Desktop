@@ -1,5 +1,17 @@
 <script lang="ts" setup>
-import character from '../../assets/images/ArknightUI/character.png'
+import { asyncComputed } from '@vueuse/core'
+import { storeToRefs } from 'pinia'
+import { getCharacterInfo } from '../../services/ArknightsUIService'
+import { useArknightsUIStore } from '../../stores/arknightsUI'
+
+const arknightsUIStore = useArknightsUIStore()
+
+const { selectedCharacterKey, selectedCharacterImageIndex } = storeToRefs(arknightsUIStore)
+
+const characterImage = asyncComputed(async () => {
+  const res = await getCharacterInfo(selectedCharacterKey.value)
+  return res.images[selectedCharacterImageIndex.value]
+})
 
 defineEmits<{
   (e: 'click'): void
@@ -8,7 +20,13 @@ defineEmits<{
 
 <template>
   <div class="w-full h-full relative flex items-center justify-center">
-    <img :src="character" alt="character" class="img" draggable="false" @click="$emit('click')" />
+    <img
+      :src="characterImage"
+      alt="character"
+      class="img"
+      draggable="false"
+      @click="$emit('click')"
+    />
   </div>
 </template>
 
