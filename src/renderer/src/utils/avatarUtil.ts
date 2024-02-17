@@ -1,5 +1,5 @@
 import { storeToRefs } from 'pinia'
-import avatarConfig from '../config/avatars.json'
+import avatarConfig from '../data/avatars.json'
 import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'

@@ -1,8 +1,8 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import * as Sentry from '@sentry/electron'
-import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron'
+import { app, BrowserWindow, ipcMain, Menu, protocol, screen, shell, Tray } from 'electron'
 import { NsisUpdater } from 'electron-updater'
-import { join } from 'path'
+import path, { join } from 'path'
 import icon from '../../resources/icon.png?asset'
 import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 import { getFileIconByCache } from './utils/fsUtil'
@@ -28,10 +28,7 @@ function printUpdaterMessage(arg) {
   if (mainWindow) mainWindow.webContents.send('printUpdaterMessage', message[arg] ?? arg)
 }
 
-function createWindow(): void {
-  // We cannot require the screen module until the app is ready.
-  // const { screen } = require('electron')
-
+function createMainWindow(): void {
   // Create a window that fills the screen's available work area.
   const primaryDisplay = screen.getPrimaryDisplay()
   const height = primaryDisplay.size.height
@@ -58,28 +55,9 @@ function createWindow(): void {
     mainWindow?.show()
   })
 
-  // mainWindow.on('close', (e) => {
-  //   e.preventDefault()
-  //   mainWindow.hide()
-  // })
-
-  tray = new Tray(join(__dirname, '../../resources/icon.png'))
-  const contextMenu = Menu.buildFromTemplate([
-    {
-      type: 'normal',
-      label: '打开主界面',
-      click: () => mainWindow?.show()
-    },
-    {
-      type: 'normal',
-      label: '退出',
-      click: () => app.exit()
-    }
-  ])
-  tray.setToolTip('TinyTools.Desktop')
-  tray.setContextMenu(contextMenu)
-
-  tray.on('click', () => mainWindow?.show())
+  mainWindow.on('close', () => {
+    mainWindow = null //把主窗口对象设置为null，方便后续判断主窗口是否存在
+  })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
@@ -95,33 +73,27 @@ function createWindow(): void {
   }
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.whenReady().then(() => {
-  // Set app user model id for windows
-  electronApp.setAppUserModelId('com.electron')
+const createTray = () => {
+  tray = new Tray(join(__dirname, '../../resources/icon.png'))
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      type: 'normal',
+      label: '打开主界面',
+      click: () => (mainWindow ? mainWindow.show() : createMainWindow())
+    },
+    {
+      type: 'normal',
+      label: '退出',
+      click: () => app.exit()
+    }
+  ])
+  tray.setToolTip('TinyTools.Desktop')
+  tray.setContextMenu(contextMenu)
 
-  //限制只能开启一个应用(4.0以上版本)
-  const gotTheLock = app.requestSingleInstanceLock()
-  if (!gotTheLock) {
-    app.quit()
-  } else {
-    app.on('second-instance', () => {
-      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
-      if (mainWindow) {
-        if (mainWindow.isMinimized()) mainWindow.restore()
-        mainWindow.focus()
-        mainWindow.show()
-      }
-    })
-  }
-  app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
-  })
+  tray.on('click', () => (mainWindow ? mainWindow.show() : createMainWindow()))
+}
 
-  createWindow()
-
+const createUpdater = () => {
   const updaterOptions = createGiteeUpdaterOptions({
     repo: 'twl12138/TinyTools.Desktop',
     updateManifest: 'latest.yml'
@@ -157,7 +129,7 @@ app.whenReady().then(() => {
   })
 
   // 7. 收到确认更新提示，执行下载
-  ipcMain.on('comfirmUpdate', () => {
+  ipcMain.on('confirmUpdate', () => {
     updater.downloadUpdate()
   })
 
@@ -180,36 +152,16 @@ app.whenReady().then(() => {
       updater.quitAndInstall()
     })
   })
+}
 
-  // Default open or close DevTools by F12 in development
-  // and ignore CommandOrControl + R in production.
-  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
-
-  let dockWindow = null as BrowserWindow | null
-
-  ipcMain.on('closeDockWindow', () => {
-    if (dockWindow) {
-      dockWindow.close()
-      dockWindow = null
-    }
-  })
-
-  ipcMain.on('relaunchApp', () => {
-    app.relaunch()
-    app.exit()
-  })
-
-  ipcMain.handle('getThumbnail', async (_, ...args) => {
-    return getFileIconByCache(args[0])
-  })
-
-  ipcMain.on('openDockWindow', () => {
+// This method will be called when Electron has finished
+// initialization and is ready to create browser windows.
+function showDockWindow(dockWindow: BrowserWindow | null) {
+  return () => {
     if (dockWindow) {
       dockWindow.show()
       return
     }
-    // We cannot require the screen module until the app is ready.
-    // const { screen } = require('electron')
 
     // Create a window that fills the screen's available work area.
     const primaryDisplay = screen.getPrimaryDisplay()
@@ -248,12 +200,69 @@ app.whenReady().then(() => {
     dockWindow.on('ready-to-show', () => {
       dockWindow?.show()
     })
+  }
+}
+
+// Some APIs can only be used after this event occurs.
+app.whenReady().then(() => {
+  // Set app user model id for windows
+  electronApp.setAppUserModelId('org.tangwulin.tinytools')
+
+  protocol.registerFileProtocol('atom', (request, callback) => {
+    const url = request.url.substring(7)
+    callback(decodeURI(path.normalize(url)))
   })
+
+  //限制只能开启一个应用(4.0以上版本)
+  const gotTheLock = app.requestSingleInstanceLock()
+  if (!gotTheLock) {
+    app.quit()
+  } else {
+    app.on('second-instance', () => {
+      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+      if (mainWindow) {
+        if (mainWindow.isMinimized()) mainWindow.restore()
+        mainWindow.focus()
+        mainWindow.show()
+      }
+    })
+  }
+  app.on('browser-window-created', (_, window) => {
+    optimizer.watchWindowShortcuts(window)
+  })
+
+  createMainWindow()
+  createTray()
+  createUpdater()
+
+  // Default open or close DevTools by F12 in development
+  // and ignore CommandOrControl + R in production.
+  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
+
+  let dockWindow = null as BrowserWindow | null
+
+  ipcMain.on('closeDockWindow', () => {
+    if (dockWindow) {
+      dockWindow.close()
+      dockWindow = null
+    }
+  })
+
+  ipcMain.on('relaunchApp', () => {
+    app.relaunch()
+    app.exit()
+  })
+
+  ipcMain.handle('getThumbnail', async (_, ...args) => {
+    return getFileIconByCache(args[0])
+  })
+
+  ipcMain.on('openDockWindow', showDockWindow(dockWindow))
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createMainWindow()
   })
 })
 
@@ -261,10 +270,10 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+  // if (process.platform !== 'darwin') {
+  //   app.quit()
+  // }
 })
 
-// In this file you can include the rest of your app"s specific main process
+// In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

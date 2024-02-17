@@ -1,4 +1,4 @@
-import musicConfig from '../config/musics.json'
+import musicConfig from '../data/musics.json'
 import genUniqueId from './genUniqueId'
 
 const raffleBgm = musicConfig.raffleBgm

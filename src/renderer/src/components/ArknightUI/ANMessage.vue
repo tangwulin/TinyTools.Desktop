@@ -18,7 +18,7 @@ const props = defineProps({
 <template>
   <div
     :class="`ac-message ${props.type}`"
-    :style="{ top: props.top + 'px', 'margin-left': -8 + 'px' }"
+    :style="{ top: props.top + 'px', margin: '-1rem -1rem -1rem -1.5rem' }"
   >
     <i
       :class="`ac-message-icon iconfont icon-circle-${props.type}`"

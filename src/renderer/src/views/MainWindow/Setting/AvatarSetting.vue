@@ -18,7 +18,7 @@ const works = [
   { value: 5, label: '赛马娘' }
 ]
 
-const sexes = [
+const genders = [
   { label: '男', value: 1 },
   { label: '女', value: 2 }
   // { label: '未填写', value: 9 },
@@ -77,8 +77,8 @@ watch(value, changeHandler)
         <n-collapse-item :title="`头像列表 共${selectedAvatar.length}个 点击头像可复制链接`">
           <n-radio-group v-model:value="selectedSex" @change="changeHandler">
             <n-space>
-              <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
-                {{ sex.label }}
+              <n-radio v-for="gender in genders" :key="gender.value" :value="gender.value">
+                {{ gender.label }}
               </n-radio>
             </n-space>
           </n-radio-group>
