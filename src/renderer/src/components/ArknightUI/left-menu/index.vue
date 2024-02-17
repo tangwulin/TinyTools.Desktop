@@ -1,8 +1,13 @@
 <script lang="ts" setup>
-import { useNotification } from 'naive-ui'
-import { h } from 'vue'
+import { useDialog, useNotification } from 'naive-ui'
+import { storeToRefs } from 'pinia'
+import { h, ref, watch } from 'vue'
 import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
 import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
+import { getCharacterKey, getCharacterSupportLanguages } from '../../../services/ArknightsUIService'
+import { useArknightsUIStore } from '../../../stores/arknightsUI'
+import { getAvatarUrls } from '../../../utils/avatarUtil'
+import EntityItem from '../../EntityItem.vue'
 import ANMessage from '../ANMessage.vue'
 import NewsBanner from './news-banner.vue'
 import VoiceBox from './voice-box.vue'
@@ -15,6 +20,18 @@ defineEmits<{
 }>()
 
 const notification = useNotification()
+const dialog = useDialog()
+
+const arknightsUIStore = useArknightsUIStore()
+const {
+  selectedCharacterKey,
+  selectedCharacterVoiceLang,
+  selectedCharacterDialogLang,
+  selectedCharacterImageIndex
+} = storeToRefs(arknightsUIStore)
+
+const showArchive = ref(false)
+
 const handleClick1 = () => {
   notification.create({
     closable: false,
@@ -22,6 +39,112 @@ const handleClick1 = () => {
     content: () => h(ANMessage, null, () => '开发中，敬请期待')
   })
 }
+
+const genders = [
+  { label: '男', value: 1 },
+  { label: '女', value: 2 }
+  // { label: '未填写', value: 9 },
+] //此处参考了GB/T 2261.1-2003
+
+const keyword = ref('')
+const selectedSex = ref(1)
+const selectedAvatar = ref(getAvatarUrls(1, [2])) //这里只需要明日方舟的头像
+const changeHandler = () => {
+  selectedAvatar.value = getAvatarUrls(selectedSex.value, [2]).filter((item) =>
+    item.description.includes(keyword.value)
+  )
+}
+
+const clickHandler = (name: string) => {
+  dialog.warning({
+    title: '更换干员',
+    content: `确定更换干员为${name}吗？`,
+    positiveText: '确定',
+    negativeText: '取消',
+    onPositiveClick: () => {
+      const key = getCharacterKey(name)
+      if (!key) {
+        notification.error({
+          title: '更换失败',
+          duration: 3000,
+          content: `未找到干员${name}`
+        })
+        return
+      }
+      getCharacterSupportLanguages(key).then((res) => {
+        const unSupportVoiceLang = !res.voice.includes(selectedCharacterVoiceLang.value)
+        const unSupportDialogLang = !res.dialog.includes(selectedCharacterDialogLang.value)
+        const content = [] as any
+        if (unSupportVoiceLang || unSupportDialogLang) {
+          if (unSupportVoiceLang) {
+            content.push(
+              h('span', null, `选择的干员不支持 ${selectedCharacterVoiceLang.value} 语音`)
+            )
+          }
+          if (unSupportDialogLang) {
+            content.push(
+              h(
+                'span',
+                null,
+                `${unSupportVoiceLang ? '、' : '选择的干员不支持 '}${
+                  selectedCharacterDialogLang.value
+                } 对话`
+              )
+            )
+          } else {
+            content.push(h('br'))
+          }
+
+          let msg = '继续更换将切换至支持的 '
+          if (unSupportVoiceLang) {
+            msg += res.voice[0] + ' 语音'
+          }
+          if (unSupportDialogLang) {
+            if (unSupportVoiceLang) {
+              msg += '和 '
+            }
+            msg += res.dialog[0] + ' 对话'
+          }
+          content.push(h('p', null, msg + '，是否继续更换？'))
+          dialog.warning({
+            title: '警告',
+            content: () => h('div', null, content),
+            positiveText: '确定',
+            negativeText: '取消',
+            onPositiveClick: () => {
+              selectedCharacterKey.value = key
+              if (unSupportVoiceLang) {
+                selectedCharacterVoiceLang.value = res.voice[0]
+              }
+              if (unSupportDialogLang) {
+                selectedCharacterDialogLang.value = res.dialog[0]
+              }
+              selectedCharacterImageIndex.value = 0
+              notification.success({
+                title: '更换成功',
+                duration: 3000,
+                content: `已更换为${name}`
+              })
+            },
+            onNegativeClick: () => {
+              return
+            }
+          })
+        } else {
+          selectedCharacterKey.value = key
+          selectedCharacterImageIndex.value = 0
+          notification.success({
+            title: '更换成功',
+            duration: 3000,
+            content: `已更换为${name}`
+          })
+        }
+      })
+    }
+  })
+}
+
+watch(keyword, changeHandler)
 </script>
 
 <template>
@@ -29,18 +152,55 @@ const handleClick1 = () => {
     <VoiceBox v-show="voice" :text="voice" @click="$emit('clear-voice')" />
     <div class="flex">
       <NewsBanner />
-      <div @click="handleClick1">
-        <div class="button friend-button">
+      <div>
+        <div class="button friend-button" @click="handleClick1">
           <IconFriend class="icon" />
           <span class="text">好友</span>
         </div>
-        <div class="button archive-button">
+        <div class="button archive-button" @click="showArchive = true">
           <IconArchive class="icon" />
           <span class="text">档案</span>
         </div>
       </div>
     </div>
   </div>
+
+  <n-modal v-model:show="showArchive" :mask-closable="false">
+    <n-card
+      :bordered="false"
+      aria-modal="true"
+      closable
+      role="dialog"
+      size="huge"
+      style="width: 50%"
+      title="更换干员"
+      @close="showArchive = false"
+    >
+      <n-input v-model:value="keyword" placeholder="搜索" type="text" clearable />
+      <n-space>
+        <span>筛选</span>
+        <n-radio-group v-model:value="selectedSex" @change="changeHandler">
+          <n-space>
+            <n-radio v-for="gender in genders" :key="gender.value" :value="gender.value">
+              {{ gender.label }}
+            </n-radio>
+          </n-space>
+        </n-radio-group>
+        <span>点击下方卡片即可更改干员</span>
+      </n-space>
+      <n-scrollbar style="max-height: 50vh; overflow-x: hidden">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
+          <entity-item
+            v-for="(item, index) in selectedAvatar"
+            :key="index"
+            :display-name="item.description"
+            :avatar="item.url"
+            @click="clickHandler(item.description)"
+          />
+        </div>
+      </n-scrollbar>
+    </n-card>
+  </n-modal>
 </template>
 
 <style lang="scss" scoped>
