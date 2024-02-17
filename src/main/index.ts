@@ -157,7 +157,7 @@ app.whenReady().then(() => {
   })
 
   // 7. 收到确认更新提示，执行下载
-  ipcMain.on('comfirmUpdate', () => {
+  ipcMain.on('confirmUpdate', () => {
     updater.downloadUpdate()
   })
 

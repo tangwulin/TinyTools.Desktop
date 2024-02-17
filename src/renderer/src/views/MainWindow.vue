@@ -261,7 +261,7 @@ if (isElectron) {
       negativeText: '不更新',
       positiveText: '更新',
       onPositiveClick: () => {
-        electron.ipcRenderer.send('comfirmUpdate')
+        electron.ipcRenderer.send('confirmUpdate')
       },
       onNegativeClick: () => {
         // 不用做什么
@@ -270,7 +270,7 @@ if (isElectron) {
   })
 
   // 6. 点击确认更新
-  // electron.ipcRenderer.send('comfirmUpdate')
+  // electron.ipcRenderer.send('confirmUpdate')
 
   // 9. 收到进度信息，做进度条
   electron.ipcRenderer.on('downloadProgress', (event, data) => {
