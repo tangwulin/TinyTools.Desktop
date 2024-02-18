@@ -21,7 +21,8 @@
     "build:win": "npm run build && electron-builder --win --config --x64 --ia32",
     "build:mac": "npm run build && electron-builder --mac --config",
     "build:linux": "npm run build && electron-builder --linux --config",
-    "updateAvatars": "ts-node ./scripts/updateBuiltInAvatar.ts --files"
+    "updateAvatars": "ts-node ./scripts/updateBuiltInAvatar.ts --files",
+    "updateArknightsResources": "ts-node ./scripts/updateArknightsResources.ts"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^2.0.0",
