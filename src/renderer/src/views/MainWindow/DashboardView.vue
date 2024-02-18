@@ -143,7 +143,7 @@ onBeforeUnmount(() => {
       <!-- 左右菜单 -->
       <div class="layer pointer-events-none" data-depth="0.4">
         <LeftMenu
-          :voice="voiceText"
+          :voice="voiceText as string"
           @clear-voice="
             () => {
               currentVoice = -1
