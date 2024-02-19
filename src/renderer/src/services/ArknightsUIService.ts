@@ -1,3 +1,4 @@
+import type { ElectronAPI } from '@electron-toolkit/preload'
 import { createAlova } from 'alova'
 import GlobalFetch from 'alova/GlobalFetch'
 import VueHook from 'alova/vue'
@@ -9,14 +10,24 @@ type CharaNameAndKey = {
   charaKey: string
 }
 
+let isElectron: boolean
+const electron = window.electron as ElectronAPI
+
+try {
+  isElectron = !!window.electron
+} catch (e) {
+  isElectron = false
+}
+
 const apiInst = createAlova({
   statesHook: VueHook,
+  baseURL: isElectron ? await electron.ipcRenderer.invoke('getRendererPath') : undefined,
   requestAdapter: GlobalFetch(),
   responded: (response) => response.json()
 })
 
 export const getCharacterInfo = (characterKey: string) =>
-  apiInst.Get<CharaData>(`/arknights/${characterKey}.json`)
+  apiInst.Get<CharaData>(`./arknights/${characterKey}.json`)
 
 export const getCharacterList = () => characterList as CharaNameAndKey[]
 

@@ -257,6 +257,14 @@ app.whenReady().then(() => {
     return getFileIconByCache(args[0])
   })
 
+  ipcMain.handle('getRendererPath', () => {
+    if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
+      return process.env['ELECTRON_RENDERER_URL']
+    } else {
+      return join(__dirname, '../renderer/')
+    }
+  })
+
   ipcMain.on('openDockWindow', showDockWindow(dockWindow))
 
   app.on('activate', function () {
