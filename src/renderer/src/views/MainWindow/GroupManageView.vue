@@ -1,31 +1,28 @@
 <script lang="ts" setup>
 import { ClipboardPaste24Regular as PasteIcon } from '@vicons/fluent'
 import { asyncComputed } from '@vueuse/core'
-import { from } from '@vueuse/rxjs'
-import { useObservable } from '@vueuse/rxjs/index'
 import deepcopy from 'deepcopy'
-import { liveQuery } from 'dexie'
 import { NButton, NFormItem, NInput, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { Ref, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
+import AddGroup from '../../components/AddGroup.vue'
 import GroupItem from '../../components/GroupItem.vue'
 import { AppDatabase } from '../../db'
+import { deleteGroup, getDynamicGroupList } from '../../services/DBServices/Group'
+import { getDynamicPersonList } from '../../services/DBServices/Person'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { getAvatar } from '../../utils/avatarUtil'
-import AddGroup from '../../components/AddGroup.vue'
 
 const db = AppDatabase.getInstance()
 
 const route = useRoute()
 const router = useRouter()
 
-const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
-const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
-  Ref<Person[]>
->
+const groups = getDynamicGroupList()
+const persons = getDynamicPersonList()
 
 const settingStore = useSettingStore()
 const { enableAvatar } = storeToRefs(settingStore)
@@ -72,7 +69,7 @@ const sexes = [
 const clickHandler = (group?: Group) => {
   if (group) {
     currentGroup.value = group
-    value1.value = currentGroup.value.membersID
+    value1.value = currentGroup.value.memberIds
     isEdit.value = true
   } else {
     currentGroup.value = new Group('', '', '')
@@ -100,13 +97,7 @@ const handler = () => {
 }
 
 const deleteHandler = () => {
-  db.transaction('rw', db.groups, db.scoreHistories, async () => {
-    db.groups.delete(currentGroup.value.id as number)
-    db.scoreHistories
-      .where('ownerId')
-      .equals(currentGroup.value.id as number)
-      .delete()
-  })
+  deleteGroup(currentGroup.value.id as number)
     .then(() => {
       showModal.value = false
       currentGroup.value = new Group('', '', '')
@@ -131,14 +122,14 @@ const onModalClose = () => {
 
 const createAvatars = (item: Group) => {
   if (!persons.value) return []
-  const person = persons.value.filter((p) => item.membersID.includes(p.id as number))
+  const person = persons.value.filter((p) => item.memberIds.includes(p.id as number))
   return person.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
 
 watch(
   value1,
   async () => {
-    currentGroup.value.membersID = value1.value
+    currentGroup.value.memberIds = value1.value
   },
   { deep: true }
 )
@@ -184,10 +175,10 @@ const pasteAvatarLink = async () => {
             </n-form>
           </div>
           <div class="flex flex-col mb-4">
-            <p>当前选择了{{ currentGroup.membersID.length }}个人</p>
+            <p>当前选择了{{ currentGroup.memberIds.length }}个人</p>
             <n-space>
               <n-tag
-                v-for="item in currentGroup.membersID"
+                v-for="item in currentGroup.memberIds"
                 :key="item"
                 closable
                 size="large"
@@ -245,7 +236,7 @@ const pasteAvatarLink = async () => {
                 确定要删除这个小组吗？
               </n-popconfirm>
               <n-button
-                :disabled="!(currentGroup.name.length !== 0 && currentGroup.membersID.length !== 0)"
+                :disabled="!(currentGroup.name.length !== 0 && currentGroup.memberIds.length !== 0)"
                 type="primary"
                 @click="handler"
                 >保存

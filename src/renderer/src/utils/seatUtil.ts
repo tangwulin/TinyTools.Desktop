@@ -120,10 +120,10 @@ export const calcWeightByCorrectionAlgorithm = (
 
   const originRegion = calcRegionBySeat(item)
   const olderRegion1 = olderSeatTable1
-    ? calcRegionBySeat(olderSeats1.find((x) => x.ownerId === item.ownerId) as Seat)
+    ? calcRegionBySeat(olderSeats1.find((x) => x.personId === item.personId) as Seat)
     : 'A' //用来在没有olderSeatTable1的时候，让older1Region不影响regionWeight
   const olderRegion2 = olderSeatTable2
-    ? calcRegionBySeat(olderSeats1.find((x) => x.ownerId === item.ownerId) as Seat)
+    ? calcRegionBySeat(olderSeats1.find((x) => x.personId === item.personId) as Seat)
     : 'A' //同上不解释
 
   const regionScore = [originRegion, olderRegion1, olderRegion2]
@@ -143,17 +143,17 @@ export const calcWeightByCorrectionAlgorithm = (
     weight[i] += calcWeightByDistance(calcDistance(originSeats[i], item))
 
     //排除原位置
-    if (originSeats[i].ownerId === item.ownerId) {
+    if (originSeats[i].personId === item.personId) {
       weight[i] -= 100
     }
 
     //排除上一次坐的位置（如果有）
-    if (olderSeatTable1 && olderSeats1[i].ownerId === item.ownerId) {
+    if (olderSeatTable1 && olderSeats1[i].personId === item.personId) {
       weight[i] -= 50
     }
 
     //排除上上次坐的位置（如果有）
-    if (olderSeatTable2 && olderSeats2[i].ownerId === item.ownerId) {
+    if (olderSeatTable2 && olderSeats2[i].personId === item.personId) {
       weight[i] -= 50
     }
 
@@ -191,7 +191,7 @@ function calcSeatByWeight(
       bestStudentIndex = j
     }
 
-    result[i] = allSeat.find((item) => item.ownerId === bestStudentId) as Seat
+    result[i] = allSeat.find((item) => item.personId === bestStudentId) as Seat
     remainStudentIds[bestStudentIndex] = null
   }
   return result
@@ -199,7 +199,7 @@ function calcSeatByWeight(
 
 function getWeightSeries(seatsWeights: number[][], allSeat: Seat[]) {
   return seatsWeights.map((x, i) => ({
-    ownerId: allSeat[i].ownerId as number,
+    ownerId: allSeat[i].personId as number,
     weightSeries: genWeightSeries(x).sort((a, b) => b.weight - a.weight)
   }))
 }
@@ -313,7 +313,7 @@ export const genSeatTable = (seats: Seat[]) => {
 export const reGenSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
   const seatTableRemovedMissingPerson = seatTable.map((item) => {
     if (item.type === 'seat') {
-      if (seats.every((x) => x.ownerId !== item.data?.ownerId)) item.setEmpty()
+      if (seats.every((x) => x.personId !== item.data?.personId)) item.setEmpty()
     }
     return item
   })
@@ -349,7 +349,7 @@ export const reGenSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
       }
     }
     const seatsToAdd = seats.filter((x) =>
-      seatTableRemovedMissingPerson.every((y) => y.data?.ownerId !== x.ownerId)
+      seatTableRemovedMissingPerson.every((y) => y.data?.personId !== x.personId)
     )
 
     for (const seat of seatsToAdd) {

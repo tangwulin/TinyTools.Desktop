@@ -1,17 +1,16 @@
 <script lang="ts" setup>
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
-import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
-import { liveQuery } from 'dexie'
 import { debounce, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { nextTick, onMounted, onUnmounted, Ref, ref, toRaw } from 'vue'
+import { nextTick, onMounted, onUnmounted, ref, toRaw } from 'vue'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import SeatTable from '../../components/SeatTable.vue'
 import raffleConfig from '../../data/raffleModes.json'
-import { AppDatabase } from '../../db'
+import db from '../../db'
+import { getDynamicSeatHistoryList, saveHistory } from '../../services/DBServices/SeatHistories'
 import { useSettingStore } from '../../stores/setting'
 import { Audio } from '../../types/audio'
 import { Person } from '../../types/person'
@@ -39,14 +38,10 @@ let bgmIndex = 0
 const finalBgmList = shuffle(toRaw(finalBgms.value))
 let finalBgmIndex = 0
 
-const db = AppDatabase.getInstance()
-
 const message = useMessage()
 
 const persons = ref([] as Person[])
-const seatHistory = useObservable(from(liveQuery(() => db.seatHistory.toArray()))) as Readonly<
-  Ref<SeatHistory[]>
->
+const seatHistories = getDynamicSeatHistoryList()
 const seatTable = ref([] as SeatTableItem[])
 
 const settingStore = useSettingStore()
@@ -122,7 +117,7 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
   seatTable.value = seatTable.value.map((item) => {
     if (item.type !== 'seat') return item
     else {
-      const person = persons.value.find((person) => person.id === item.data?.ownerId)
+      const person = persons.value.find((person) => person.id === item.data?.personId)
       if (person) item.setDisplayName(person.name)
       else item.setDisplayName('Error')
       return item
@@ -189,7 +184,7 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
 
       //重新添加displayName
       seatTable.value[series[i]].setDisplayName(
-        persons.value.find((item) => item.id === seatTable.value[series[i]].data?.ownerId)?.name ??
+        persons.value.find((item) => item.id === seatTable.value[series[i]].data?.personId)?.name ??
           'Error'
       )
       i++
@@ -237,36 +232,6 @@ const raffleSeatGacha = (result: SeatTableItem[]) => {
     db.seatTable.bulkPut(deepcopy(result))
   }, 5000)
 }
-const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
-  if (type === '手动更改') {
-    db.seatHistory
-      .orderBy('timestamp')
-      .reverse()
-      .limit(1)
-      .first()
-      .then((result) => {
-        if (result) {
-          if (JSON.stringify(result.seatTable) === JSON.stringify(currentSeatTable)) {
-            //未发生变化，无需保存
-            return
-          }
-
-          //TODO:给每个记录增加子记录而不是直接覆盖
-          db.seatHistory
-            .orderBy('timestamp')
-            .reverse()
-            .limit(1)
-            .modify((item) => {
-              item.seatTable = deepcopy(currentSeatTable)
-              item.timestamp = Date.now()
-            })
-        }
-      })
-  } else {
-    db.seatHistory.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
-  }
-  message.success('已保存本次记录')
-}
 
 const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
   let result = [] as SeatTableItem[]
@@ -285,8 +250,8 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
     case 4:
       result = calcNewSeatByCorrectionAlgorithm(
         seatTable.value,
-        (seatHistory.value as SeatHistory[])[seatHistory.value.length - 2]?.seatTable,
-        (seatHistory.value as SeatHistory[])[seatHistory.value.length - 3]?.seatTable
+        seatHistories.value.at(-2)?.seatTable,
+        seatHistories.value.at(-3)?.seatTable
       )
       saveHistory(result, '相对公平')
       break
@@ -364,7 +329,7 @@ const rollbackHandler = (x: SeatHistory) => {
 }
 
 const delHandler = (x: SeatHistory) => {
-  db.seatHistory.delete(x.timestamp)
+  db.seatHistories.delete(x.timestamp)
   message.success('删除成功')
 }
 const save = async () => {
@@ -460,7 +425,7 @@ const playFinalBgm = () => {
 
 const dragHandler = debounce(
   () => {
-    db.transaction('rw', db.seatTable, db.seatHistory, async () => {
+    db.transaction('rw', db.seatTable, db.seatHistories, async () => {
       await db.seatTable.bulkPut(deepcopy(seatTable.value))
       saveHistory(seatTable.value, '手动更改')
     })
@@ -583,7 +548,7 @@ const dragHandler = debounce(
           <p>历史记录</p>
         </template>
         <history-list
-          :seat-history="seatHistory"
+          :seat-history="seatHistories"
           @delete="delHandler"
           @preview="previewHandler"
           @rollback="rollbackHandler"

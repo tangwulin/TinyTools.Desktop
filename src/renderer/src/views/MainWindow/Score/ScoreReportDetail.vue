@@ -9,7 +9,7 @@ import { computed, onMounted, ref, toRaw, watch } from 'vue'
 import VChart from 'vue-echarts'
 import { useRoute } from 'vue-router'
 import { AppDatabase } from '../../../db'
-import { ScoreHistory } from '../../../types/scoreHistory'
+import { RateHistory } from '../../../types/rateHistory'
 
 const db = AppDatabase.getInstance()
 
@@ -21,8 +21,8 @@ const route = useRoute()
 
 const id = computed(() => parseInt(<string>route.query.id))
 
-const historyForThis = ref([] as ScoreHistory[])
-db.scoreHistories
+const historyForThis = ref([] as RateHistory[])
+db.rateHistories
   .where('ownerId')
   .equals(id.value)
   .toArray()
@@ -33,7 +33,7 @@ db.scoreHistories
 watch(
   () => route.query.id,
   () => {
-    db.scoreHistories
+    db.rateHistories
       .where('ownerId')
       .equals(id.value)
       .toArray()
@@ -126,9 +126,9 @@ const option2 = computed(
     }) as EChartsOption
 )
 
-const deleteHandler = (x: ScoreHistory) => {
-  db.transaction('rw', db.scoreHistories, db.groups, db.persons, async () => {
-    db.scoreHistories.delete(x.timestamp)
+const deleteHandler = (x: RateHistory) => {
+  db.transaction('rw', db.rateHistories, db.groups, db.persons, async () => {
+    db.rateHistories.delete(x.timestamp)
     switch (x.ownerType) {
       case 'group':
         db.groups
@@ -154,7 +154,7 @@ const deleteHandler = (x: ScoreHistory) => {
     }
   })
     .then(() => {
-      db.scoreHistories
+      db.rateHistories
         .where('ownerId')
         .equals(id.value)
         .toArray()

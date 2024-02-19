@@ -63,7 +63,7 @@ const createDropdownOptions = (options) =>
       <div class="mx-auto flex flex-col" style="font-size: 0.75rem">
         <span>{{ group?.name }}</span>
         <n-space justify="space-between"
-          ><span>{{ group?.membersID.length }}人</span>
+          ><span>{{ group?.memberIds.length }}人</span>
           <n-tag :bordered="false" size="small">{{ group.score ?? 0 }}</n-tag>
         </n-space>
         <n-avatar-group v-if="enableAvatar" :max="5" :options="membersAvatar" :size="remToPx(2)">

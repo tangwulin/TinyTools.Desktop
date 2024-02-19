@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { PropType } from 'vue'
-import { Rate } from '../../../types/rate'
+import { Rate } from '../../types/rate'
 
 defineProps({
   rate: {

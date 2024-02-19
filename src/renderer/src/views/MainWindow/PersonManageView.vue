@@ -4,10 +4,7 @@ import {
   PersonAdd20Filled as PersonAddIcon
 } from '@vicons/fluent'
 import { File as FileIcon, PlaylistAdd, TableImport as ImportIcon } from '@vicons/tabler'
-import { asyncComputed, useElementSize } from '@vueuse/core'
-import { from, useObservable } from '@vueuse/rxjs'
-import deepcopy from 'deepcopy'
-import { liveQuery } from 'dexie'
+import { useElementSize } from '@vueuse/core'
 import {
   DataTableBaseColumn,
   DataTableFilterState,
@@ -21,16 +18,20 @@ import {
   useMessage
 } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { Component, computed, h, Ref, ref } from 'vue'
+import { Component, computed, h, ref } from 'vue'
 import { useRoute } from 'vue-router'
 import * as XLSX from 'xlsx'
 
 // @ts-ignore:2307
 import personXlsx from '../../assets/xlsx/person.xlsx'
-
-import db from '../../db'
+import { getDynamicGroupList } from '../../services/DBServices/Group'
+import {
+  addPersons,
+  deletePerson,
+  getDynamicPersonList,
+  updatePerson
+} from '../../services/DBServices/Person'
 import { useSettingStore } from '../../stores/setting'
-import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { getAvatar } from '../../utils/avatarUtil'
 import downloadAnyFile from '../../utils/downloadAnyFile'
@@ -41,19 +42,10 @@ const route = useRoute()
 const settingStore = useSettingStore()
 const { enableFallbackAvatar } = storeToRefs(settingStore)
 
-const loading = asyncComputed(() => persons.value.length === 0, true)
+const loading = ref(true)
 
-const persons = useObservable(
-  from(
-    liveQuery(() =>
-      db.persons.toArray().then((result) => {
-        loading.value = false
-        return result
-      })
-    )
-  )
-) as Readonly<Ref<Person[]>>
-const groups = useObservable(from(liveQuery(() => db.groups.toArray()))) as Readonly<Ref<Group[]>>
+const persons = getDynamicPersonList({ loading })
+const groups = getDynamicGroupList()
 
 const el = ref(null)
 
@@ -89,7 +81,7 @@ const multiAddForm = ref<{
 
 const message = useMessage()
 
-const sexes = [
+const genders = [
   { label: '男', value: 1 },
   { label: '女', value: 2 },
   { label: '未填写', value: 9 }
@@ -102,24 +94,7 @@ const editHandler = (row: Person) => {
 }
 
 const deleteHandler = (row: Person) => {
-  db.transaction('rw', db.persons, db.scoreHistories, db.seatTable, async () => {
-    await db.scoreHistories
-      .where('ownerId')
-      .equals(row.id as number)
-      .delete()
-    const seatTable = await db.seatTable.toArray()
-    const locationIndex = seatTable.find((item) => item.data?.ownerId === row.id)?.locationIndex
-    if (locationIndex) {
-      await db.seatTable
-        .where('locationIndex')
-        .equals(locationIndex as number)
-        .modify((item) => {
-          item.type = 'empty'
-          item.data = undefined
-        })
-    }
-    await db.persons.delete(row.id as number)
-  })
+  deletePerson(row.id as number)
     .then(() => {
       message.success('删除成功')
     })
@@ -225,7 +200,7 @@ const createColumns = (edit: (row: Person) => void, del: (row: Person) => void) 
       render(row: Person) {
         const groupTags = groups.value
           ?.map((item) =>
-            item.membersID
+            item.memberIds
               // .map((member) => member.id)
               .flat()
               .includes(row.id as number)
@@ -298,29 +273,48 @@ const addPerson = () => {
   console.log('添加了这' + multiAddForm.value.names.length + '个人：' + multiAddForm.value.names)
 
   const newPerson = multiAddForm.value.names.map((name) => new Person(name, 9, ''))
-  db.persons.bulkPut(newPerson)
-
-  message.success('添加成功，共添加了' + multiAddForm.value.names.length + '个')
-
-  showAddModal.value = false
-  // 为何这里不用给为新添加的人员分配座位？
-  // 理论上在有人员变动的情况下座位数量和人员数量必不可能继续相等
-  // 哪怕你是删了一个人再添加一个人，也会导致座位数量和人员数量不相等（删了人会删座位）
-  // 所以当再次到座位页面时将会重新分配座位
-  multiAddForm.value.names = []
-  multiAddForm.value.input = ''
+  addPersons(newPerson)
+    .then(() => {
+      // 为何这里不用给为新添加的人员分配座位？
+      // 理论上在有人员变动的情况下座位数量和人员数量必不可能继续相等
+      // 哪怕你是删了一个人再添加一个人，也会导致座位数量和人员数量不相等（删了人会删座位）
+      // 所以当再次到座位页面时将会重新分配座位
+      message.success('添加成功，共添加了' + multiAddForm.value.names.length + '个')
+      showAddModal.value = false
+      multiAddForm.value.names = []
+      multiAddForm.value.input = ''
+    })
+    .catch((e) => {
+      message.error('添加失败')
+      message.error(JSON.stringify(e))
+    })
 }
 
 const handler = () => {
-  try {
-    db.persons.put(deepcopy(formValue.value))
-    // 这里不分配座位，因为人员变动时座位数量和人员数量必不可能继续相等
-    message.success(isEdit.value ? '编辑成功' : '添加成功')
-  } catch (e) {
-    message.error('保存失败')
-    message.error(JSON.stringify(e))
+  if (isEdit.value) {
+    updatePerson(formValue.value.id as number, formValue.value)
+      .then(() => {
+        message.success('修改成功')
+        showAddModal.value = false
+        formValue.value = new Person('', 9, '')
+        isEdit.value = false
+      })
+      .catch((e) => {
+        message.error('修改失败')
+        message.error(JSON.stringify(e))
+      })
+  } else {
+    addPersons([formValue.value])
+      .then(() => {
+        message.success('添加成功')
+        showAddModal.value = false
+        formValue.value = new Person('', 9, '')
+      })
+      .catch((e) => {
+        message.error('添加失败')
+        message.error(JSON.stringify(e))
+      })
   }
-  showAddModal.value = false
 }
 
 interface UploadInfo {
@@ -354,9 +348,19 @@ const parseExcel = async (uploadFileInfo: UploadInfo) => {
   if (personsFromExcel.length === 0) {
     message.error('未检测到任何人员信息，请检查文件格式是否正确')
   } else {
-    db.persons.bulkPut(personsFromExcel)
-    message.success('导入成功')
-    showImportModal.value = false
+    // db.persons.bulkPut(personsFromExcel)
+    // message.success('导入成功')
+    // showImportModal.value = false
+
+    addPersons(personsFromExcel)
+      .then(() => {
+        message.success('导入成功')
+        showImportModal.value = false
+      })
+      .catch((e) => {
+        message.error('导入失败')
+        message.error(JSON.stringify(e))
+      })
   }
 }
 
@@ -491,7 +495,7 @@ const pasteAvatarLink = async () => {
             <n-form-item label="性别（可选）" path="sex">
               <n-radio-group v-model:value="formValue.genderCode">
                 <n-space>
-                  <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
+                  <n-radio v-for="sex in genders" :key="sex.value" :value="sex.value">
                     {{ sex.label }}
                   </n-radio>
                 </n-space>

@@ -17,7 +17,7 @@ import { AppDatabase } from '../../db'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
-import { ScoreHistory } from '../../types/scoreHistory'
+import { RateHistory } from '../../types/rateHistory'
 import { getAvatar } from '../../utils/avatarUtil'
 import { remToPx } from '../../utils/styleUtil'
 
@@ -55,8 +55,8 @@ const groupPromise = db.groups.toArray().then((res) => {
   percentage.value += 12
 })
 
-const scoreHistories = ref<ScoreHistory[]>([])
-const scoreHistoryPromise = db.scoreHistories.toArray().then((res) => {
+const scoreHistories = ref<RateHistory[]>([])
+const scoreHistoryPromise = db.rateHistories.toArray().then((res) => {
   scoreHistories.value = res
   percentage.value += 12
 })

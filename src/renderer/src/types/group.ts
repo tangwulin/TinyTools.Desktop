@@ -2,7 +2,7 @@ export class Group {
   id?: number
   name: string
   description: string
-  membersID: number[] = []
+  memberIds: number[] = []
   avatar: string
   score: number = 0
 
@@ -10,13 +10,13 @@ export class Group {
     name: string,
     description: string,
     avatar: string,
-    membersID?: number[],
+    memberIds?: number[],
     id?: number
   ) {
     this.name = name
     this.description = description
     this.avatar = avatar
-    this.membersID = membersID ?? []
+    this.memberIds = memberIds ?? []
     if (id) this.id = id
   }
 }

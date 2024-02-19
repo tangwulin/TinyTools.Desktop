@@ -1,4 +1,4 @@
-export class ScoreHistory {
+export class RateHistory {
   timestamp: number
   score: number
   description: string

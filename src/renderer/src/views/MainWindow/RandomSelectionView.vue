@@ -5,15 +5,14 @@ import { computed, nextTick, ref, watch } from 'vue'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
 import groupVideo from '../../assets/video/十连出金.mp4'
 import singleVideo from '../../assets/video/单抽出金.mp4'
-import { AppDatabase } from '../../db'
+import db from '../../db'
 import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
 import { selectSomething } from '../../utils/arrayUtil'
 import { getAvatar } from '../../utils/avatarUtil'
 import EntityItem from '../../components/EntityItem.vue'
-import RaffleModeSelect from './RandomSelectionView/RaffleModeSelect.vue'
+import RaffleModeSelect from '../../components/RandomSelectionView/RaffleModeSelect.vue'
 
-const db = AppDatabase.getInstance()
 const message = useMessage()
 
 const settingStore = useSettingStore()

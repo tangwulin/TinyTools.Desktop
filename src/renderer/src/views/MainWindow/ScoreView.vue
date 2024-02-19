@@ -7,16 +7,19 @@ import {
 } from '@vicons/material'
 import { ReportAnalytics as ReportIcon } from '@vicons/tabler'
 import { useElementSize } from '@vueuse/core/index'
-import { from, useObservable } from '@vueuse/rxjs'
 import deepcopy from 'deepcopy'
-import { liveQuery } from 'dexie'
 import { DataTableColumns, NButton, NCard, NForm, NModal, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { computed, h, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
 import AddGroup from '../../components/AddGroup.vue'
+import EntityItem from '../../components/EntityItem.vue'
 import GroupItem from '../../components/GroupItem.vue'
-import { AppDatabase } from '../../db'
+import db from '../../db'
+import { getDynamicGroupList } from '../../services/DBServices/Group'
+import { getDynamicPersonList } from '../../services/DBServices/Person'
+import { addRate, getDynamicRateList, updateRate } from '../../services/DBServices/Rate'
+import { getDynamicRateHistoriesList } from '../../services/DBServices/RateHistories'
 import { useGeneralStore } from '../../stores/general'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
@@ -25,10 +28,7 @@ import { Rate } from '../../types/rate'
 import { getAvatar } from '../../utils/avatarUtil'
 
 import { remToPx } from '../../utils/styleUtil'
-import EntityItem from '../../components/EntityItem.vue'
-import RateItem from './ScoreView/RateItem.vue'
-
-const db = AppDatabase.getInstance()
+import RateItem from '../../components/ScoreView/RateItem.vue'
 
 const route = useRoute()
 
@@ -37,25 +37,13 @@ const { enableAvatar } = storeToRefs(settingStore)
 const generalStore = useGeneralStore()
 const { lastScoreType } = storeToRefs(generalStore)
 
-const loading = ref(true)
+const persons = getDynamicPersonList()
 
-const persons = ref<Person[]>([])
-const personsPromise = db.persons.toArray().then((result) => {
-  persons.value = result as Person[]
-})
+const groups = getDynamicGroupList()
 
-const groups = ref<Group[]>([])
-const groupsPromise = db.groups.toArray().then((result) => {
-  groups.value = result as Group[]
-})
+const rates = getDynamicRateList()
 
-const rates = useObservable(from(liveQuery(() => db.rates.toArray())))
-
-const scoreHistories = useObservable(from(liveQuery(() => db.scoreHistories.toArray())))
-
-Promise.all([personsPromise, groupsPromise]).then(() => {
-  loading.value = false
-})
+const scoreHistories = getDynamicRateHistoriesList()
 
 const showModal = ref(false)
 const current = ref<Person | Group | null>(null)
@@ -80,9 +68,11 @@ const tableHeight = computed(() => height.value - remToPx(10))
 
 const handler = () => {
   if (!isEdit.value) {
-    db.rates.add({ ...formData.value, id: undefined })
+    // db.rates.add({ ...formData.value, id: undefined })
+    addRate(formData.value)
   } else {
-    db.rates.update(formData.value.id as number, formData.value)
+    // db.rates.update(formData.value.id as number, formData.value)
+    updateRate(formData.value.id as number, formData.value)
   }
   message.success(`${isEdit ? '编辑成功' : '添加成功'}`)
   showEditModal.value = false
@@ -110,7 +100,7 @@ const scoreHandler = (rate: Rate) => {
       break
   }
 
-  db.scoreHistories.add({
+  db.rateHistories.add({
     description: rate.name,
     timestamp: Date.now(),
     ownerId: current.value.id as number,
@@ -126,7 +116,7 @@ function undoHandler() {
   // const x = { ...scoreHistories.value[scoreHistories.value?.length - 1] }
   const x = scoreHistories.value?.at(-1)
   // scoreHistories.value = scoreHistories.value.filter((item) => item.time !== x.time)
-  db.scoreHistories.delete(x?.timestamp as number)
+  db.rateHistories.delete(x?.timestamp as number)
   switch (x?.ownerType) {
     case 'group': {
       const group = groups.value.find((item) => item.id === x.ownerId) as Group
@@ -148,7 +138,7 @@ function undoHandler() {
 }
 
 const createAvatars = (item: Group) => {
-  const members = persons.value.filter((p) => item.membersID.includes(p.id as number))
+  const members = persons.value.filter((p) => item.memberIds.includes(p.id as number))
   return members.map((p) => ({ name: p.name, src: getAvatar(p) }))
 }
 
