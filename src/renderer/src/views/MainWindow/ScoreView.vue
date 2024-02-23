@@ -25,7 +25,7 @@ import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { Rate } from '../../types/rate'
-import { getAvatar } from '../../utils/avatarUtil'
+import { getAvatar } from '../../services/AvatarService'
 
 import { remToPx } from '../../utils/styleUtil'
 import RateItem from '../../components/ScoreView/RateItem.vue'

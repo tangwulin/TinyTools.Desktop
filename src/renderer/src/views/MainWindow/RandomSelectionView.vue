@@ -9,7 +9,7 @@ import db from '../../db'
 import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
 import { selectSomething } from '../../utils/arrayUtil'
-import { getAvatar } from '../../utils/avatarUtil'
+import { getAvatar } from '../../services/AvatarService'
 import EntityItem from '../../components/EntityItem.vue'
 import RaffleModeSelect from '../../components/RandomSelectionView/RaffleModeSelect.vue'
 

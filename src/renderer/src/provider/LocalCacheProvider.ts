@@ -11,9 +11,18 @@ try {
 }
 
 export class LocalCacheProvider implements CacheProvider {
+  cacheMap: Map<string, string> = new Map()
   get = async (key: string) => {
     if (isElectron) {
-      return (await electron.ipcRenderer.invoke('getCache', key)) as Promise<string | undefined>
+      const value = this.cacheMap.get(key)
+      if (value) {
+        return value
+      }
+      const result = (await electron.ipcRenderer.invoke('getCache', key)) as string | undefined
+      if (result) {
+        this.cacheMap.set(key, result)
+      }
+      return result
     }
     return new Promise<void>((_, reject) => reject('Not implemented'))
   }

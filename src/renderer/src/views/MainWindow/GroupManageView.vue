@@ -14,7 +14,7 @@ import { getDynamicPersonList } from '../../services/DBServices/Person'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
-import { getAvatar } from '../../utils/avatarUtil'
+import { getAvatar } from '../../services/AvatarService'
 
 const db = AppDatabase.getInstance()
 

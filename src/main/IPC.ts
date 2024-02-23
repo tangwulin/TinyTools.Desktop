@@ -1,7 +1,7 @@
 import { is } from '@electron-toolkit/utils'
 import { app, ipcMain } from 'electron'
 import { join } from 'path'
-import { getFileIconByCache } from './utils/fsUtil'
+import { getFileIconByCache } from './utils/FSUtil'
 
 export function registerIPC() {
   ipcMain.on('relaunchApp', () => {

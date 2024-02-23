@@ -5,6 +5,8 @@ import { ref, watch } from 'vue'
 import { useSettingStore } from '../../../stores/setting'
 import { getAvatarUrls } from '../../../utils/avatarUtil'
 import EntityItem from '../../../components/EntityItem.vue'
+import { getAvatarUrls } from '../../../services/AvatarService'
+import { useSettingStore } from '../../../stores/setting'
 
 const message = useMessage()
 

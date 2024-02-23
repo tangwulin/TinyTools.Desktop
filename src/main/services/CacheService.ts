@@ -2,7 +2,7 @@ import { ipcMain } from 'electron'
 import fs from 'fs'
 import path from 'path'
 import { downloadFile } from '../utils/Downloader'
-import { fileExists } from '../utils/fsUtil'
+import { fileExists } from '../utils/FSUtil'
 
 export class CacheService {
   cachePath: string

@@ -5,7 +5,7 @@ import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
-import { LocalCacheProvider } from '../../../Provider/LocalCacheProvider'
+import { LocalCacheProvider } from '../../../provider/LocalCacheProvider'
 import { createCache } from '../../../services/CacheService'
 import { useSettingStore } from '../../../stores/setting'
 

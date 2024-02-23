@@ -33,7 +33,7 @@ import {
 } from '../../services/DBServices/Person'
 import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
-import { getAvatar } from '../../utils/avatarUtil'
+import { getAvatar } from '../../services/AvatarService'
 import downloadAnyFile from '../../utils/downloadAnyFile'
 import { remToPx } from '../../utils/styleUtil'
 

@@ -18,7 +18,7 @@ import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { RateHistory } from '../../types/rateHistory'
-import { getAvatar } from '../../utils/avatarUtil'
+import { getAvatar } from '../../services/AvatarService'
 import { remToPx } from '../../utils/styleUtil'
 
 const router = useRouter()
