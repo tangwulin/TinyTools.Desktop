@@ -6,7 +6,7 @@ import path, { join } from 'path'
 import icon from '../../resources/icon.png?asset'
 import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 import { registerIPC } from './IPC'
-import { launchCacheService } from './Services/CacheService'
+import { launchCacheService } from './services/CacheService'
 
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null

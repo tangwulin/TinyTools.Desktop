@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+import { asyncComputed } from '@vueuse/core'
 import { useDialog, useNotification } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { h, ref, watch } from 'vue'
+import { h, ref } from 'vue'
 import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
 import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
 import { getCharacterKey, getCharacterSupportLanguages } from '../../../services/ArknightsUIService'
@@ -48,12 +49,13 @@ const genders = [
 
 const keyword = ref('')
 const selectedSex = ref(1)
-const selectedAvatar = ref(getAvatarUrls(1, [2])) //这里只需要明日方舟的头像
-const changeHandler = () => {
-  selectedAvatar.value = getAvatarUrls(selectedSex.value, [2]).filter((item) =>
-    item.description.includes(keyword.value)
-  )
-}
+const selectedAvatar = asyncComputed(
+  () =>
+    getAvatarUrls(selectedSex.value, [2]).then((res) =>
+      res.filter((item) => item.description.includes(keyword.value))
+    ),
+  []
+)
 
 const clickHandler = (name: string) => {
   dialog.warning({
@@ -74,7 +76,7 @@ const clickHandler = (name: string) => {
       getCharacterSupportLanguages(key).then((res) => {
         const unSupportVoiceLang = !res.voice.includes(selectedCharacterVoiceLang.value)
         const unSupportDialogLang = !res.dialog.includes(selectedCharacterDialogLang.value)
-        const content = [] as any
+        const content = [] as any[]
         if (unSupportVoiceLang || unSupportDialogLang) {
           if (unSupportVoiceLang) {
             content.push(
@@ -143,8 +145,6 @@ const clickHandler = (name: string) => {
     }
   })
 }
-
-watch(keyword, changeHandler)
 </script>
 
 <template>
@@ -179,7 +179,7 @@ watch(keyword, changeHandler)
       <n-input v-model:value="keyword" placeholder="搜索" type="text" clearable />
       <n-space>
         <span>筛选</span>
-        <n-radio-group v-model:value="selectedSex" @change="changeHandler">
+        <n-radio-group v-model:value="selectedSex">
           <n-space>
             <n-radio v-for="gender in genders" :key="gender.value" :value="gender.value">
               {{ gender.label }}

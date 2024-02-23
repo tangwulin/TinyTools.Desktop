@@ -1,7 +1,7 @@
 import { CacheProvider } from '../interface/CacheProvider'
 
 export const createCache = (provider: CacheProvider) => {
-  return (url: string) => {
+  return async (url: string) => {
     return provider.get(url).then((data) => {
       if (data) {
         return data

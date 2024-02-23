@@ -1,9 +1,8 @@
 <script lang="ts" setup>
+import { asyncComputed } from '@vueuse/core'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { ref, watch } from 'vue'
-import { useSettingStore } from '../../../stores/setting'
-import { getAvatarUrls } from '../../../utils/avatarUtil'
+import { ref } from 'vue'
 import EntityItem from '../../../components/EntityItem.vue'
 import { getAvatarUrls } from '../../../services/AvatarService'
 import { useSettingStore } from '../../../stores/setting'
@@ -27,13 +26,7 @@ const genders = [
 ] //此处参考了GB/T 2261.1-2003
 
 const selectedSex = ref(1)
-const selectedAvatar = ref(getAvatarUrls(1, avatarWorks.value))
-const changeHandler = () => {
-  selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value).filter((item) =>
-    item.description.includes(value.value)
-  )
-}
-
+const selectedAvatar = asyncComputed(() => getAvatarUrls(selectedSex.value, avatarWorks.value), [])
 const value = ref('')
 const writeClipboard = (x) => {
   navigator.clipboard
@@ -45,9 +38,6 @@ const writeClipboard = (x) => {
       message.error('请授予剪贴板权限！')
     })
 }
-
-watch(avatarWorks, changeHandler)
-watch(value, changeHandler)
 </script>
 
 <template>
@@ -77,7 +67,7 @@ watch(value, changeHandler)
       <n-collapse>
         <n-input v-model:value="value" placeholder="搜索" type="text" />
         <n-collapse-item :title="`头像列表 共${selectedAvatar.length}个 点击头像可复制链接`">
-          <n-radio-group v-model:value="selectedSex" @change="changeHandler">
+          <n-radio-group v-model:value="selectedSex">
             <n-space>
               <n-radio v-for="gender in genders" :key="gender.value" :value="gender.value">
                 {{ gender.label }}
