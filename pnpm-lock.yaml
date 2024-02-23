@@ -53,6 +53,9 @@ dependencies:
   lodash-es:
     specifier: ^4.17.21
     version: 4.17.21
+  nodejs-file-downloader:
+    specifier: ^4.12.1
+    version: 4.12.1
   parallax-js:
     specifier: ^3.1.0
     version: 3.1.0
@@ -990,7 +993,7 @@ packages:
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
     dependencies:
       cross-spawn: 7.0.3
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       is-glob: 4.0.3
       open: 9.1.0
       picocolors: 1.0.0
@@ -1763,7 +1766,7 @@ packages:
     dependencies:
       eslint: 8.55.0
       eslint-config-prettier: 8.10.0(eslint@8.55.0)
-      eslint-plugin-prettier: 5.0.0(eslint-data-prettier@8.10.0)(eslint@8.55.0)(prettier@3.1.0)
+      eslint-plugin-prettier: 5.0.0(eslint-config-prettier@8.10.0)(eslint@8.55.0)(prettier@3.1.0)
       prettier: 3.1.0
     transitivePeerDependencies:
       - '@types/eslint'
@@ -3449,7 +3452,7 @@ packages:
     dependencies:
       array-union: 2.1.0
       dir-glob: 3.0.1
-      fast-glob: 3.3.1
+      fast-glob: 3.3.2
       ignore: 5.2.4
       merge2: 1.4.1
       slash: 3.0.0
@@ -4197,6 +4200,18 @@ packages:
     resolution: {integrity: sha512-y10wOWt8yZpqXmOgRo77WaHEmhYQYGNA6y421PKsKYWEK8aW+cqAphborZDhqfyKrbZEN92CN1X2KbafY2s7Yw==}
     dev: true
 
+  /nodejs-file-downloader@4.12.1:
+    resolution: {integrity: sha512-LpfCTNhh805AlLnJnzt1PuEj+RmbrccbAQZ6hBRw2e6QPVR0Qntuo6qqyvPHG5s77/0w0IEKgRAD4nbSnr/X4w==}
+    dependencies:
+      follow-redirects: 1.15.3
+      https-proxy-agent: 5.0.1
+      mime-types: 2.1.35
+      sanitize-filename: 1.6.3
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+    dev: false
+
   /normalize-path@3.0.0:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
@@ -4829,7 +4844,6 @@ packages:
     resolution: {integrity: sha512-y/52Mcy7aw3gRm7IrcGDFx/bCk4AhRh2eI9luHOQM86nZsqwiRkkq2GekHXBBD+SmPidc8i2PqtYZl+pWJ8Oeg==}
     dependencies:
       truncate-utf8-bytes: 1.0.2
-    dev: true
 
   /sass@1.70.0:
     resolution: {integrity: sha512-uUxNQ3zAHeAx5nRFskBnrWzDUJrrvpCPD5FNAoRvTi0WwremlheES3tg+56PaVtCs5QDRX5CBLxxKMDJMEa1WQ==}
@@ -5204,7 +5218,6 @@ packages:
     resolution: {integrity: sha512-95Pu1QXQvruGEhv62XCMO3Mm90GscOCClvrIUwCM0PYOXK3kaF3l3sIHxx71ThJfcbM2O5Au6SO3AWCSEfW4mQ==}
     dependencies:
       utf8-byte-length: 1.0.4
-    dev: true
 
   /ts-api-utils@1.0.3(typescript@5.3.2):
     resolution: {integrity: sha512-wNMeqtMz5NtwpT/UZGY5alT+VoKdSsOOP/kqHFcUW1P/VRhH2wJ48+DN2WwUliNbQ976ETwDL0Ifd2VVvgonvg==}
@@ -5451,7 +5464,6 @@ packages:
 
   /utf8-byte-length@1.0.4:
     resolution: {integrity: sha512-4+wkEYLBbWxqTahEsWrhxepcoVOJ+1z5PGIjPZxRkytcdSUaNjIjBM7Xn8E+pdSuV7SzvWovBFA54FO0JSoqhA==}
-    dev: true
 
   /util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}

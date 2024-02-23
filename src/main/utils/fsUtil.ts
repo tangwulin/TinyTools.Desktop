@@ -77,3 +77,15 @@ export const isPicture = (ext: string) => {
     '.heic'
   ].includes(ext.toLowerCase())
 }
+
+export async function fileExists(filePath: string) {
+  try {
+    await fs.promises.access(filePath)
+    return true
+  } catch (error: any) {
+    if (error.code === 'ENOENT') {
+      return false
+    }
+    throw error
+  }
+}

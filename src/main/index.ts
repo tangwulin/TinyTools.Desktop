@@ -5,7 +5,8 @@ import { NsisUpdater } from 'electron-updater'
 import path, { join } from 'path'
 import icon from '../../resources/icon.png?asset'
 import { createGiteeUpdaterOptions } from './gitee-updater-ts'
-import { getFileIconByCache } from './utils/fsUtil'
+import { registerIPC } from './IPC'
+import { launchCacheService } from './Services/CacheService'
 
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
@@ -233,6 +234,8 @@ app.whenReady().then(() => {
 
   createMainWindow()
   createTray()
+  registerIPC()
+  launchCacheService()
   createUpdater()
 
   // Default open or close DevTools by F12 in development
@@ -245,23 +248,6 @@ app.whenReady().then(() => {
     if (dockWindow) {
       dockWindow.close()
       dockWindow = null
-    }
-  })
-
-  ipcMain.on('relaunchApp', () => {
-    app.relaunch()
-    app.exit()
-  })
-
-  ipcMain.handle('getThumbnail', async (_, ...args) => {
-    return getFileIconByCache(args[0])
-  })
-
-  ipcMain.handle('getRendererPath', () => {
-    if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-      return process.env['ELECTRON_RENDERER_URL']
-    } else {
-      return join(__dirname, '../renderer/')
     }
   })
 

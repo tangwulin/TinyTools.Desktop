@@ -5,6 +5,8 @@ import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
+import { LocalCacheProvider } from '../../../Provider/LocalCacheProvider'
+import { createCache } from '../../../services/CacheService'
 import { useSettingStore } from '../../../stores/setting'
 
 const db = AppDatabase.getInstance()
@@ -22,6 +24,12 @@ const confirm = ref('')
 
 let isElectron: boolean
 const electron = window.electron as ElectronAPI
+
+const imageSrc = ref('')
+const cache = createCache(new LocalCacheProvider())
+cache('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png').then((res) => {
+  imageSrc.value = res
+})
 
 try {
   isElectron = !!window.electron
@@ -153,6 +161,10 @@ const throwError = () => {
     <n-space class="items-center">
       <p>手动抛出错误</p>
       <n-button round type="primary" @click="throwError">抛出测试错误</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>缓存测试</p>
+      <n-image :src="imageSrc" />
     </n-space>
   </n-space>
 </template>
