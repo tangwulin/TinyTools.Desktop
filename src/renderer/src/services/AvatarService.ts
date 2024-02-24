@@ -1,6 +1,6 @@
 import { storeToRefs } from 'pinia'
 import avatarConfig from '../data/avatars.json'
-import { LocalCacheProvider } from '../provider/LocalCacheProvider'
+import { LocalCacheProvider } from '../providers/LocalCacheProvider'
 import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'

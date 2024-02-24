@@ -78,7 +78,7 @@ export const isPicture = (ext: string) => {
   ].includes(ext.toLowerCase())
 }
 
-export async function fileExists(filePath: string) {
+export async function exists(filePath: string) {
   try {
     await fs.promises.access(filePath)
     return true

@@ -18,6 +18,10 @@ export class LocalCacheProvider implements CacheProvider {
       if (value) {
         return value
       }
+      //目前没解决这里的问题
+      if (key.startsWith('https://api.kivo.wiki/assets/images/students/')) {
+        return key
+      }
       const result = (await electron.ipcRenderer.invoke('getCache', key)) as string | undefined
       if (result) {
         this.cacheMap.set(key, result)

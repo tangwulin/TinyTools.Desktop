@@ -7,6 +7,7 @@ import icon from '../../resources/icon.png?asset'
 import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 import { registerIPC } from './IPC'
 import { launchCacheService } from './services/CacheService'
+import { launchDownloader } from './utils/Downloader'
 
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
@@ -235,6 +236,7 @@ app.whenReady().then(() => {
   createMainWindow()
   createTray()
   registerIPC()
+  launchDownloader()
   launchCacheService()
   createUpdater()
 

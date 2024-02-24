@@ -1,7 +1,7 @@
 import type { CustomPublishOptions, UpdateInfo } from 'builder-util-runtime'
 import { ResolvedUpdateFileInfo } from 'electron-updater'
 import { BaseUpdater } from 'electron-updater/out/BaseUpdater'
-import { Provider, resolveFiles } from 'electron-updater/out/providers/Provider'
+import { Provider, resolveFiles } from 'electron-updater/out/providers/Provider.js'
 import * as yaml from 'js-yaml'
 
 function findSuitableRelease(releases: any[], allowPrerelease: boolean): any {

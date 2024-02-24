@@ -5,7 +5,7 @@ import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
-import { LocalCacheProvider } from '../../../provider/LocalCacheProvider'
+import { LocalCacheProvider } from '../../../providers/LocalCacheProvider'
 import { createCache } from '../../../services/CacheService'
 import { useSettingStore } from '../../../stores/setting'
 
@@ -94,6 +94,12 @@ const getThumbnail = async () => {
 
 const throwError = () => {
   throw new Error('测试错误')
+}
+const getCacheTasks = async () => {
+  const result = await electron.ipcRenderer.invoke('getCacheTasks')
+  console.log(result)
+  message.success('获取成功！')
+  message.info('结果：' + JSON.stringify(result))
 }
 </script>
 
