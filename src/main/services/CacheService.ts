@@ -1,4 +1,4 @@
-import { ipcMain } from 'electron'
+import { app, ipcMain } from 'electron'
 import fs from 'fs'
 import path from 'path'
 import { addDownloadTask } from '../utils/Downloader'
@@ -39,7 +39,8 @@ export class CacheService {
 }
 
 export function launchCacheService() {
-  const cacheInst = new CacheService(path.join(__dirname, '../../cache'), 10 * 1024 * 1024 * 1024) //10GB
+  //当前应用的目录
+  const cacheInst = new CacheService(path.join(app.getAppPath(), 'cache'), 10 * 1024 * 1024 * 1024) //10GB
 
   ipcMain.handle('getCache', async (_, key) => {
     return await cacheInst.getCache(key)

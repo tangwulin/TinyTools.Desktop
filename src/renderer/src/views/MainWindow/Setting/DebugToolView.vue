@@ -95,12 +95,12 @@ const getThumbnail = async () => {
 const throwError = () => {
   throw new Error('测试错误')
 }
-const getCacheTasks = async () => {
-  const result = await electron.ipcRenderer.invoke('getCacheTasks')
-  console.log(result)
-  message.success('获取成功！')
-  message.info('结果：' + JSON.stringify(result))
-}
+// const getCacheTasks = async () => {
+//   const result = await electron.ipcRenderer.invoke('getCacheTasks')
+//   console.log(result)
+//   message.success('获取成功！')
+//   message.info('结果：' + JSON.stringify(result))
+// }
 </script>
 
 <template>

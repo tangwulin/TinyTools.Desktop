@@ -1,10 +1,11 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
 import * as Sentry from '@sentry/electron'
 import { app, BrowserWindow, ipcMain, Menu, protocol, screen, shell, Tray } from 'electron'
-import { NsisUpdater } from 'electron-updater'
+// import { createGiteeUpdaterOptions } from './gitee-updater-ts'
+import { autoUpdater } from 'electron-updater'
+// import { NsisUpdater } from 'electron-updater'
 import path, { join } from 'path'
 import icon from '../../resources/icon.png?asset'
-import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 import { registerIPC } from './IPC'
 import { launchCacheService } from './services/CacheService'
 import { launchDownloader } from './utils/Downloader'
@@ -17,6 +18,12 @@ if (app.isPackaged) {
     dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744'
   })
 }
+
+// if (!app.isPackaged) {
+//   Object.defineProperty(app, 'isPackaged', {
+//     get: () => true
+//   })
+// }
 
 // 将日志在渲染进程里面打印出来
 function printUpdaterMessage(arg) {
@@ -95,36 +102,38 @@ const createTray = () => {
   tray.on('click', () => (mainWindow ? mainWindow.show() : createMainWindow()))
 }
 
-const createUpdater = () => {
-  const updaterOptions = createGiteeUpdaterOptions({
-    repo: 'twl12138/TinyTools.Desktop',
-    updateManifest: 'latest.yml'
-  })
+const launchUpdater = () => {
+  // const updaterOptions = createGiteeUpdaterOptions({
+  //   repo: 'twl12138/TinyTools.Desktop',
+  //   updateManifest: 'latest.yml'
+  // })
 
-  const updater = new NsisUpdater(updaterOptions)
+  // const autoUpdater = new NsisUpdater(updaterOptions)
 
   // 配置提供更新的程序，及build中配置的url
-  // autoUpdater.setFeedURL("oss://xxx")
+  autoUpdater.setFeedURL(
+    'https://example.com/auto-updates'
+  )
   // 是否自动更新，如果为true，当可以更新时(update-available)自动执行更新下载。
-  updater.autoDownload = false
+  autoUpdater.autoDownload = false
 
   // 1. 在渲染进程里触发获取更新，开始进行更新流程。 (根据具体需求)
   ipcMain.on('checkForUpdates', () => {
-    updater.checkForUpdates()
+    autoUpdater.checkForUpdates()
   })
 
-  updater.on('error', function (error) {
+  autoUpdater.on('error', function (error) {
     printUpdaterMessage('error')
     if (mainWindow) mainWindow.webContents.send('updateError', error)
   })
 
   // 2. 开始检查是否有更新
-  updater.on('checking-for-update', function () {
+  autoUpdater.on('checking-for-update', function () {
     printUpdaterMessage('checking')
   })
 
   // 3. 有更新时触发
-  updater.on('update-available', function (info) {
+  autoUpdater.on('update-available', function (info) {
     printUpdaterMessage('updateAvailable')
     // 4. 告诉渲染进程有更新，info包含新版本信息
     if (mainWindow) mainWindow.webContents.send('updateAvailable', info)
@@ -132,26 +141,26 @@ const createUpdater = () => {
 
   // 7. 收到确认更新提示，执行下载
   ipcMain.on('confirmUpdate', () => {
-    updater.downloadUpdate()
+    autoUpdater.downloadUpdate()
   })
 
-  updater.on('update-not-available', () => {
+  autoUpdater.on('update-not-available', () => {
     printUpdaterMessage('updateNotAvailable')
   })
 
   // 8. 下载进度，包含进度百分比、下载速度、已下载字节、总字节等
-  // ps: 调试时，想重复更新，会因为缓存导致该事件不执行，下载直接完成，可找到C:\Users\40551\AppData\Local\xxx-updater\pending下的缓存文件将其删除（这是我本地的路径）
-  updater.on('download-progress', function (progressObj) {
+  // ps: 调试时，想重复更新，会因为缓存导致该事件不执行，下载直接完成，可找到C:\Users\40551\AppData\Local\xxx-autoUpdater\pending下的缓存文件将其删除（这是我本地的路径）
+  autoUpdater.on('download-progress', function (progressObj) {
     printUpdaterMessage('downloadProgress')
     if (mainWindow) mainWindow.webContents.send('downloadProgress', progressObj)
   })
 
   // 10. 下载完成，告诉渲染进程，是否立即执行更新安装操作
-  updater.on('update-downloaded', function () {
+  autoUpdater.on('update-downloaded', function () {
     if (mainWindow) mainWindow.webContents.send('updateDownloaded')
     // 12. 立即更新安装
     ipcMain.on('updateNow', () => {
-      updater.quitAndInstall()
+      autoUpdater.quitAndInstall()
     })
   })
 }
@@ -238,7 +247,7 @@ app.whenReady().then(() => {
   registerIPC()
   launchDownloader()
   launchCacheService()
-  createUpdater()
+  launchUpdater()
 
   // Default open or close DevTools by F12 in development
   // and ignore CommandOrControl + R in production.
@@ -266,9 +275,9 @@ app.whenReady().then(() => {
 // for applications and their menu bar to stay active until the user quits
 // explicitly with Cmd + Q.
 app.on('window-all-closed', () => {
-  // if (process.platform !== 'darwin') {
-  //   app.quit()
-  // }
+  if (process.platform !== 'darwin') {
+    app.quit()
+  }
 })
 
 // In this file you can include the rest of your app's specific main process
