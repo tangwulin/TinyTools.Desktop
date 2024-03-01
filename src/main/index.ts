@@ -109,11 +109,9 @@ const launchUpdater = () => {
   // })
 
   // const autoUpdater = new NsisUpdater(updaterOptions)
-
+  const feedUrl = import.meta.env.VITE_UPDATE_URL
   // 配置提供更新的程序，及build中配置的url
-  autoUpdater.setFeedURL(
-    'https://example.com/auto-updates'
-  )
+  autoUpdater.setFeedURL(feedUrl)
   // 是否自动更新，如果为true，当可以更新时(update-available)自动执行更新下载。
   autoUpdater.autoDownload = false
 
