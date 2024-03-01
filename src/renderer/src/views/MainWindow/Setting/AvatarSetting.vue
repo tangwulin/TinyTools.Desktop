@@ -2,7 +2,7 @@
 import { asyncComputed } from '@vueuse/core'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import EntityItem from '../../../components/EntityItem.vue'
 import { getAvatarUrls } from '../../../services/AvatarService'
 import { useSettingStore } from '../../../stores/setting'
@@ -26,8 +26,9 @@ const genders = [
 ] //此处参考了GB/T 2261.1-2003
 
 const selectedSex = ref(1)
-const selectedAvatar = asyncComputed(() => getAvatarUrls(selectedSex.value, avatarWorks.value), [])
 const value = ref('')
+const selectedAvatar = asyncComputed(() => getAvatarUrls(selectedSex.value, avatarWorks.value), [])
+
 const writeClipboard = (x) => {
   navigator.clipboard
     .writeText(x)
@@ -38,6 +39,11 @@ const writeClipboard = (x) => {
       message.error('请授予剪贴板权限！')
     })
 }
+watch(value, async () => {
+  selectedAvatar.value = await getAvatarUrls(selectedSex.value, avatarWorks.value).then((res) =>
+    res.filter((item) => item.description.includes(value.value))
+  )
+})
 </script>
 
 <template>
