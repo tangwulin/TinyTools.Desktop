@@ -1,7 +1,7 @@
 import { sentryVitePlugin } from '@sentry/vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import { execSync } from 'child_process'
-import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
+import { defineConfig, externalizeDepsPlugin, splitVendorChunkPlugin } from 'electron-vite'
 import { resolve } from 'path'
 import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
@@ -51,6 +51,7 @@ export default ({ mode }) => {
         }
       },
       plugins: [
+        splitVendorChunkPlugin(),
         vue(),
         AutoImport({
           imports: [
