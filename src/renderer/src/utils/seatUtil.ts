@@ -284,37 +284,39 @@ export const calcNewSeatBySideToMiddleAlgorithm = (originSeatTable: SeatTableIte
 export const genSeatTable = (seats: Seat[]) => {
   const result: SeatTableItem[] = []
   for (let i = 0; i < seats.length; i++) {
-    result.push(new SeatTableItem('seat', seats[i]))
-    if ((i + 1) % 2 === 0 && (i + 1) % 8 !== 0) result.push(new SeatTableItem('aisle'))
+    result.push({ type: 'seat', data: seats[i] })
+    if ((i + 1) % 2 === 0 && (i + 1) % 8 !== 0) result.push({ type: 'aisle' })
   }
 
   if (result.length % 11 !== 0) {
     switch ((11 - (result.length % 11)) % 3) {
       case 1:
-        result.push(new SeatTableItem('empty'))
+        result.push({ type: 'empty' })
         break
       case 2:
-        result.push(new SeatTableItem('empty'))
-        result.push(new SeatTableItem('empty'))
+        result.push({ type: 'empty' })
+        result.push({ type: 'empty' })
         break
     }
 
     if (result.length % 11 !== 0) {
       const times = Math.floor((11 - (result.length % 11)) / 3)
       for (let i = 0; i < times; i++) {
-        result.push(new SeatTableItem('aisle'))
-        result.push(new SeatTableItem('empty'))
-        result.push(new SeatTableItem('empty'))
+        result.push({ type: 'aisle' })
+        result.push({ type: 'empty' })
+        result.push({ type: 'empty' })
       }
     }
   }
-  return result.map((item, index) => new SeatTableItem(item.type, item.data, index))
+  return result.map((item, index) => ({ ...item, locationIndex: index }) as SeatTableItem)
 }
 
 export const reGenSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
   const seatTableRemovedMissingPerson = seatTable.map((item) => {
     if (item.type === 'seat') {
-      if (seats.every((x) => x.personId !== item.data?.personId)) item.setEmpty()
+      if (seats.every((x) => x.personId !== item.data?.personId)) {
+        item = { locationIndex: item.locationIndex, type: 'empty' }
+      }
     }
     return item
   })
@@ -333,18 +335,18 @@ export const reGenSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
       //需要添加的座位数量大于空位数量，需要添加新行
       const rowCountToAdd = Math.ceil((seatCountForAdd - emptyCountInTable) / 8)
       const rowTemplate = [
-        new SeatTableItem('empty'),
-        new SeatTableItem('empty'),
-        new SeatTableItem('aisle'),
-        new SeatTableItem('empty'),
-        new SeatTableItem('empty'),
-        new SeatTableItem('aisle'),
-        new SeatTableItem('empty'),
-        new SeatTableItem('empty'),
-        new SeatTableItem('aisle'),
-        new SeatTableItem('empty'),
-        new SeatTableItem('empty')
-      ]
+        { type: 'empty' },
+        { type: 'empty' },
+        { type: 'aisle' },
+        { type: 'empty' },
+        { type: 'empty' },
+        { type: 'aisle' },
+        { type: 'empty' },
+        { type: 'empty' },
+        { type: 'aisle' },
+        { type: 'empty' },
+        { type: 'empty' }
+      ] as SeatTableItem[]
       for (let i = 0; i < rowCountToAdd; i++) {
         result.push(...rowTemplate)
       }
@@ -354,12 +356,16 @@ export const reGenSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
     )
 
     for (const seat of seatsToAdd) {
-      result.find((x) => x.type === 'empty')?.setSeat(seat)
+      const target = result.find((x) => x.type === 'empty')
+      if (target) {
+        target.type = 'seat'
+        target.data = seat
+      }
     }
   }
   //理论上需要写一个删除空余座位的逻辑，但是需要最后一行的位置全部为空才能删除，所以暂时不写
 
-  return result.map((item, index) => new SeatTableItem(item.type, item.data, index))
+  return result.map((item, index) => ({ ...item, locationIndex: index }) as SeatTableItem)
 }
 
 export const getSeatsFromSeatTable = (seatTable: SeatTableItem[]) => {
@@ -373,9 +379,9 @@ export const updateSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
   if (seatsCountInTable !== seatsCountInSeats)
     throw new Error('updateSeatTable error: seatsCountInTable !== seatsCountInSeats')
   for (const item of result) {
-    if (item.type === 'seat') item.setSeat(seats.shift() as Seat)
+    if (item.type === 'seat') item.data = seats.shift() as Seat
   }
-  return result.map((item, index) => new SeatTableItem(item.type, item.data, index))
+  return result.map((item, index) => ({ ...item, locationIndex: index }) as SeatTableItem)
 }
 
 //TODO:让真随机计算座位的实现支持权重等特性
@@ -427,7 +433,8 @@ export const calcNewSeatByAssignMenAndWomenTogetherAlgorithm = (
   //把最终能够组对的拼起来打乱
   const allPairs = shuffle([...pairs, ...remainPairs])
 
-  /*处理最后一排存在的没有同桌的情况
+  /*
+   *处理最后一排存在的没有同桌的情况
    *不管三七二十一直接添加最后的那个人可能会导致最后一排的某桌与要求不符
    */
   const lastRow = seatTable.slice(-11).filter((item) => item.type !== 'aisle')

@@ -82,8 +82,8 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
     if (item.type !== 'seat') return item
     else {
       const person = persons.value.find((person) => person.id === item.data?.personId)
-      if (person) item.setDisplayName(person.name)
-      else item.setDisplayName('Error')
+      if (person) (item.data as Seat).displayName = person.name
+      else (item.data as Seat).displayName = 'Error'
       return item
     }
   })

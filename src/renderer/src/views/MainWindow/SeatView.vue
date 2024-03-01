@@ -119,8 +119,8 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
     if (item.type !== 'seat') return item
     else {
       const person = persons.value.find((person) => person.id === item.data?.personId)
-      if (person) item.setDisplayName(person.name)
-      else item.setDisplayName('Error')
+      if (person) (item.data as Seat).displayName = person.name
+      else (item.data as Seat).displayName = 'Error'
       return item
     }
   })
@@ -176,18 +176,13 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
     if (i < series.length) {
       //去除所有座位的颜色
       seatTable.value = seatTable.value.map((item) => {
-        item.removeColor()
+        ;(item.data as Seat).color = undefined
         return item
-      })
-
-      //给当前座位上色
-      seatTable.value[series[i]].setColor('#ADF7B6')
-
-      //重新添加displayName
-      seatTable.value[series[i]].setDisplayName(
-        persons.value.find((item) => item.id === seatTable.value[series[i]].data?.personId)?.name ??
-          'Error'
-      )
+      }) //给当前座位上色
+      ;(seatTable.value[series[i]].data as Seat).color = '#ADF7B6' //重新添加displayName
+      ;(seatTable.value[series[i]].data as Seat).displayName =
+        persons.value.find((item) => item.id === (seatTable.value[series[i]].data as Seat).personId)
+          ?.name ?? 'Error'
       i++
     } else {
       pauseBgm()
@@ -195,8 +190,8 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
 
       //去除所有座位的颜色
       seatTable.value = seatTable.value.map((item) => {
-        item.removeColor()
-        return item
+        ;(item.data as Seat).color = undefined
+        return item as SeatTableItem
       })
       db.seatTable.bulkPut(deepcopy(seatTable.value))
       message.success('抽选完成')

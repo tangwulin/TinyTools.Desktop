@@ -6,7 +6,8 @@ export const deleteSomeoneByIdFromAllSeats = async (ownerId: number) =>
     await db.seatTable
       .filter((seat) => seat.data?.personId === ownerId)
       .modify((seat) => {
-        seat.setEmpty()
+        seat.type = 'empty'
+        seat.data = undefined
       })
   })
 
@@ -16,4 +17,7 @@ export const rewriteWholeSeatTable = async (newSeatTable: SeatTableItem[]) =>
     await db.seatTable.bulkAdd(newSeatTable)
   })
 
-export const getSeatTable = async () => db.seatTable.toArray()
+export const getSeatTable = async () => await db.seatTable.toArray()
+
+export const addSeatTable = async (seatTable: SeatTableItem) => await db.seatTable.add(seatTable)
+export const addSeatTables = async (seatTables: SeatTableItem[]) => await db.seatTable.bulkAdd(seatTables)
