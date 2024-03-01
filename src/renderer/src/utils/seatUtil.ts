@@ -1,4 +1,5 @@
 import { shuffle } from 'lodash-es'
+import { Person } from '../types/person'
 import { Seat } from '../types/seat'
 import { SeatTableItem } from '../types/SeatTableItem'
 
@@ -384,5 +385,105 @@ export const calcNewSeatByRealRandom = (seatTable: SeatTableItem[]) => {
     return item
   })
 
+  return updateSeatTable(seatTable, newSeats)
+}
+
+export const calcNewSeatByAssignMenAndWomenTogetherAlgorithm = (
+  seatTable: SeatTableItem[],
+  personList: Person[]
+) => {
+  //分离出男和女
+  const males = shuffle(personList.filter((item) => item.genderCode === 1))
+  const females = shuffle(personList.filter((item) => item.genderCode === 2))
+
+  //计算能组多少对
+  const pairsAmount = Math.min(males.length, females.length)
+  const pairs = [] as [number, number][]
+
+  //组队
+  for (let i = 0; i < pairsAmount; i++) {
+    const thisTimePair = shuffle([males.shift()?.id, females.shift()?.id]) as [number, number]
+    pairs.push(thisTimePair)
+  }
+
+  //那些没有组上队的人
+  const remainPeople = shuffle(
+    personList.filter((item) => !pairs.flat().includes(item.id as number))
+  )
+
+  //随机挑一个人让TA没有同桌
+  let luckyOne = null as Person | null
+  if (remainPeople.length % 2 !== 0) {
+    luckyOne = remainPeople.shift() as Person
+  }
+
+  //把剩下的人组对
+  const remainPairs = [] as [number, number][]
+  const remainPeopleCount = remainPeople.length
+  for (let i = 0; i < remainPeopleCount / 2; i++) {
+    remainPairs.push([remainPeople.shift()?.id as number, remainPeople.shift()?.id as number])
+  }
+
+  //把最终能够组对的拼起来打乱
+  const allPairs = shuffle([...pairs, ...remainPairs])
+
+  /*处理最后一排存在的没有同桌的情况
+   *不管三七二十一直接添加最后的那个人可能会导致最后一排的某桌与要求不符
+   */
+  const lastRow = seatTable.slice(-11).filter((item) => item.type !== 'aisle')
+  const lastRowLayout = [] as ('single' | 'double' | 'nobody')[]
+  const temp = [] as ('seat' | 'aisle' | 'empty')[]
+  for (const item1 of lastRow) {
+    temp.push(item1.type)
+    if (temp.length > 1) {
+      if (temp.every((item) => item === 'seat')) {
+        lastRowLayout.push('double')
+      } else {
+        if (temp.every((item) => item === 'empty')) {
+          lastRowLayout.push('nobody')
+        } else {
+          lastRowLayout.push('single')
+        }
+      }
+      temp.length = 0
+    }
+  }
+
+  const rowAmount = Math.ceil(seatTable.length / 11)
+  const newSeats = allPairs
+    .slice(0, 4 * (rowAmount - 1))
+    .flat()
+    .map(
+      (item, index) =>
+        new Seat(personList.find((p) => p.id === item)?.name as string, index, undefined, item)
+    ) as Seat[]
+  allPairs.splice(0, 4 * (rowAmount - 1))
+  for (const layout of lastRowLayout) {
+    if (layout === 'single') {
+      newSeats.push(
+        new Seat(
+          personList.find((p) => p.id === luckyOne?.id)?.name as string,
+          newSeats.length,
+          undefined,
+          luckyOne?.id
+        )
+      )
+    }
+    if (layout === 'double') {
+      const thisPair = allPairs.shift() as [number, number]
+      const startIndex = newSeats.length
+      newSeats.push(
+        ...thisPair.map(
+          (item, index) =>
+            new Seat(
+              personList.find((p) => p.id === item)?.name as string,
+              startIndex + index,
+              undefined,
+              item
+            )
+        )
+      )
+    }
+  }
   return updateSeatTable(seatTable, newSeats)
 }

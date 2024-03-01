@@ -20,6 +20,11 @@
       "label": "相对公平",
       "value": 4,
       "description": "通过对前几次结果的分析来决定这一次分配的位置"
+    },
+    {
+      "label": "男女混坐",
+      "value": 5,
+      "description": "顾名思义"
     }
   ]
 }

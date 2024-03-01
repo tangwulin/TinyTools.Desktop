@@ -18,6 +18,7 @@ import { Seat } from '../../types/seat'
 import { SeatHistory } from '../../types/seatHistory'
 import { SeatTableItem } from '../../types/SeatTableItem'
 import {
+  calcNewSeatByAssignMenAndWomenTogetherAlgorithm,
   calcNewSeatByCorrectionAlgorithm,
   calcNewSeatByRealRandom,
   calcNewSeatBySideToMiddleAlgorithm,
@@ -254,6 +255,10 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
         seatHistories.value.at(-3)?.seatTable
       )
       saveHistory(result, '相对公平')
+      break
+    case 5:
+      result = calcNewSeatByAssignMenAndWomenTogetherAlgorithm(seatTable.value, persons.value)
+      saveHistory(result, '男女混坐')
       break
     default:
       message.error('抽选模式异常')
