@@ -7,6 +7,8 @@ import { DynamicListConfig, getDynamicList } from '../../utils/DBUtil'
 export const getDynamicSeatHistoryList = <E>(config?: DynamicListConfig<SeatHistory, E>) =>
   getDynamicList(db.seatHistories, config)
 
+export const getSeatHistoryList = async () => await db.seatHistories.toArray()
+
 export const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
   if (type === '手动更改') {
     db.seatHistories

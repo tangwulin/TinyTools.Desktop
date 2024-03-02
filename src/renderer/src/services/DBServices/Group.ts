@@ -9,6 +9,7 @@ export const getDynamicGroupList = <E>(config?: DynamicListConfig<Group, E>) =>
 export const getGroup = async (id: number) => await db.groups.get(id)
 
 export const addGroup = async (group: Group) => await db.groups.add(group)
+export const addGroups = async (groups: Group[]) => await db.groups.bulkAdd(groups)
 
 export const updateGroup = async (id: number, group: Group) => await db.groups.update(id, group)
 

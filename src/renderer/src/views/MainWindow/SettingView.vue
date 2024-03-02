@@ -6,6 +6,7 @@ import {
   Person20Regular as PersonIcon,
   Settings16Regular as SettingIcon
 } from '@vicons/fluent'
+import { Database as DataIcon } from '@vicons/tabler'
 import { NIcon } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { h, ref } from 'vue'
@@ -111,6 +112,20 @@ const settingOptions = [
         icon: renderIcon(MusicPlayIcon)
       }
     ]
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'dataSetting'
+          }
+        },
+        { default: () => '数据管理' }
+      ),
+    key: 'dataSetting',
+    icon: renderIcon(DataIcon)
   },
   {
     label: () =>

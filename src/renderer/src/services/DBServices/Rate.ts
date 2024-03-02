@@ -7,6 +7,7 @@ export const getDynamicRateList = <E>(config?: DynamicListConfig<Rate, E>) =>
   getDynamicList(db.rates, config)
 
 export const addRate = async (rate: Rate) => await db.rates.add(rate)
+export const addRates = async (rates: Rate[]) => await db.rates.bulkAdd(rates)
 
 export const updateRate = async (id: number, rate: Rate) => await db.rates.update(id, rate)
 export const getRate = async (id: number) => await db.rates.get(id)

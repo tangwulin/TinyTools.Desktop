@@ -115,6 +115,11 @@ const routes: RouteRecordRaw[] = [
             path: '/setting/debug',
             name: 'debugTool',
             component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
+          },
+          {
+            path: '/setting/data',
+            name: 'dataSetting',
+            component: () => import('../views/MainWindow/Setting/DataSettingView.vue')
           }
         ]
       }

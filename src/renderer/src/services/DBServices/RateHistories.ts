@@ -2,6 +2,12 @@ import db from '../../db'
 import { RateHistory } from '../../types/rateHistory'
 import { DynamicListConfig, getDynamicList } from '../../utils/DBUtil'
 
+export const getRateHistoryList = async () => await db.rateHistories.toArray()
+
+export const getRateHistory = async (id: number) => await db.rateHistories.get(id)
+
+export const addSeatHistories = async (rateHistories: RateHistory[]) => await db.rateHistories.bulkAdd(rateHistories)
+
 /**
  * 删除指定 ownerId 的所有 rateHistories
  * (外层事务需要将db.rateHistories加入作用域)
