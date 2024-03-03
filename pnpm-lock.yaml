@@ -11,12 +11,12 @@ dependencies:
   '@electron-toolkit/utils':
     specifier: ^3.0.0
     version: 3.0.0(electron@22.3.27)
-  '@lucky-canvas/vue':
-    specifier: ^0.1.11
-    version: 0.1.11(vue@3.4.19)
   '@sentry/electron':
     specifier: ^4.18.0
     version: 4.18.0
+  '@sentry/vue':
+    specifier: ^7.104.0
+    version: 7.104.0(vue@3.4.19)
   '@vueuse/core':
     specifier: ^10.8.0
     version: 10.8.0(vue@3.4.19)
@@ -32,9 +32,6 @@ dependencies:
   dexie:
     specifier: ^3.2.5
     version: 3.2.5(karma@6.4.2)
-  echarts:
-    specifier: ^5.5.0
-    version: 5.5.0
   electron-updater:
     specifier: ^6.1.8
     version: 6.1.8
@@ -88,6 +85,9 @@ devDependencies:
   '@electron-toolkit/tsconfig':
     specifier: ^1.0.1
     version: 1.0.1(@types/node@20.11.20)
+  '@lucky-canvas/vue':
+    specifier: ^0.1.11
+    version: 0.1.11(vue@3.4.19)
   '@rushstack/eslint-patch':
     specifier: ^1.7.2
     version: 1.7.2
@@ -139,6 +139,9 @@ devDependencies:
   axios:
     specifier: ^1.6.7
     version: 1.6.7
+  echarts:
+    specifier: ^5.5.0
+    version: 5.5.0
   electron:
     specifier: ^22.3.27
     version: 22.3.27
@@ -964,7 +967,7 @@ packages:
       lucky-canvas: 1.7.27
       vue: 3.4.19(typescript@5.3.3)
       vue-demi: 0.7.5(@vue/composition-api@1.7.2)(vue@3.4.19)
-    dev: false
+    dev: true
 
   /@malept/cross-spawn-promise@1.1.1:
     resolution: {integrity: sha512-RTBGWL5FWQcg9orDOCcp4LvItNzUPcyEU9bwaeJX0rJ1IQxzucC48Y0/sQLp/g6t99IQgAlGIaesJS+gTn7tVQ==}
@@ -1171,6 +1174,15 @@ packages:
       '@sentry/utils': 7.101.0
     dev: false
 
+  /@sentry-internal/feedback@7.104.0:
+    resolution: {integrity: sha512-+OWqm+X9ZfEQQmxVoZsc9lpzd85pabAT+bEj57StRMTnfdRbD9TippS20nCD9N2Ql5v2/41NfiPONMejGbnOwg==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@sentry/core': 7.104.0
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
+    dev: false
+
   /@sentry-internal/replay-canvas@7.101.0:
     resolution: {integrity: sha512-fiz4kPpz/j6ZaD+vOcUXuO1HqD49djs4QwyTsRwCCi77EKZOGAaijpqWckDWyZs0dOOnbGGGC5x3o+CfTJcjKA==}
     engines: {node: '>=12'}
@@ -1181,6 +1193,16 @@ packages:
       '@sentry/utils': 7.101.0
     dev: false
 
+  /@sentry-internal/replay-canvas@7.104.0:
+    resolution: {integrity: sha512-gfdnkFIpxAveKNghkvRCqv+hSiBkxYVoyFZLTvUPuM9Cmvmket1/PpnuWMC2jNtCEewG3gxkPDd4EaT9oa1HZQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@sentry/core': 7.104.0
+      '@sentry/replay': 7.104.0
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
+    dev: false
+
   /@sentry-internal/tracing@7.101.0:
     resolution: {integrity: sha512-rp9oOLQs6vMuzvAnAHRRCNu5Z0o/ZVRI3WPYedxpdMWKD1Z3G9o+0joP+ZIUqHsamWWYiIgPqXgL9AK6AWjFRg==}
     engines: {node: '>=8'}
@@ -1188,6 +1210,15 @@ packages:
       '@sentry/core': 7.101.0
       '@sentry/types': 7.101.0
       '@sentry/utils': 7.101.0
+    dev: false
+
+  /@sentry-internal/tracing@7.104.0:
+    resolution: {integrity: sha512-2z7OijM1J5ndJUiJJElC3iH9qb/Eb8eYm2v8oJhM8WVdc5uCKfrQuYHNgGOnmY2FOCfEUlTmMQGpDw7DJ67L5w==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry/core': 7.104.0
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
     dev: false
 
   /@sentry/babel-plugin-component-annotate@2.14.2:
@@ -1206,6 +1237,19 @@ packages:
       '@sentry/replay': 7.101.0
       '@sentry/types': 7.101.0
       '@sentry/utils': 7.101.0
+    dev: false
+
+  /@sentry/browser@7.104.0:
+    resolution: {integrity: sha512-HsqO+mr1SowGoP0VbuWrQ2DZT0t5PLomy7LEYa6+4lbOemnY+5YV2NSwBTKbjYysvKipSwaRtPhXrsXsMaz8Bg==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry-internal/feedback': 7.104.0
+      '@sentry-internal/replay-canvas': 7.104.0
+      '@sentry-internal/tracing': 7.104.0
+      '@sentry/core': 7.104.0
+      '@sentry/replay': 7.104.0
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
     dev: false
 
   /@sentry/bundler-plugin-core@2.14.2:
@@ -1319,6 +1363,14 @@ packages:
       '@sentry/utils': 7.101.0
     dev: false
 
+  /@sentry/core@7.104.0:
+    resolution: {integrity: sha512-XPndD6IGQGd07/EntvYVzOWQUo/Gd7L3DwYFeEKeBv6ByWjbBNmVZFRhU0GPPsCHKyW9yMU9OO9diLSS4ijsRg==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
+    dev: false
+
   /@sentry/electron@4.18.0:
     resolution: {integrity: sha512-xbMlL7Uv0lC4anmREvgm6N9ELd+/PhhibZ+6AoQQG55DIPOYGamX1wvgH9aB+rBsTgu8mvYIsEelwdHzDOqvkw==}
     dependencies:
@@ -1351,8 +1403,23 @@ packages:
       '@sentry/utils': 7.101.0
     dev: false
 
+  /@sentry/replay@7.104.0:
+    resolution: {integrity: sha512-HmWBr/u+SNeULxCxM8lJb2iqhjizeLGJtuKSShPEguEXIUT4kzdoqLh6wn7BAjiKzhmyjrnBcosR5LUqJtGYZQ==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@sentry-internal/tracing': 7.104.0
+      '@sentry/core': 7.104.0
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
+    dev: false
+
   /@sentry/types@7.101.0:
     resolution: {integrity: sha512-YC+ltO/AlbEyJHjCUYQ4is1HcDT2zSMuLkIAcyQmK7fUdlGT4iR5sfENriY9ZopYHgjPdJKfhI8ohScam7zp/A==}
+    engines: {node: '>=8'}
+    dev: false
+
+  /@sentry/types@7.104.0:
+    resolution: {integrity: sha512-5bs0xe0+GZR4QBm9Nrqw59o0sv3kBtCosrZDVxBru/dQbrfnB+/kVorvuM0rV3+coNITTKcKDegSZmK1d2uOGQ==}
     engines: {node: '>=8'}
     dev: false
 
@@ -1361,6 +1428,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@sentry/types': 7.101.0
+    dev: false
+
+  /@sentry/utils@7.104.0:
+    resolution: {integrity: sha512-ZVg+xZirI9DlOi0NegNVocswdh/8p6QkzlQzDQY2LP2CC6JQdmwi64o0S4rPH4YIHNKQJTpIjduoxeKgd1EO5g==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@sentry/types': 7.104.0
     dev: false
 
   /@sentry/vite-plugin@2.14.2:
@@ -1373,6 +1447,19 @@ packages:
       - encoding
       - supports-color
     dev: true
+
+  /@sentry/vue@7.104.0(vue@3.4.19):
+    resolution: {integrity: sha512-tm8AyMkO1IWuDIaS4DQ67g5PNRSBHNcEGQafv0MQc6pKan5ClI5lolrT83Rg5Huu/jgvZm41h7ssq5nFo8OmUA==}
+    engines: {node: '>=8'}
+    peerDependencies:
+      vue: 2.x || 3.x
+    dependencies:
+      '@sentry/browser': 7.104.0
+      '@sentry/core': 7.104.0
+      '@sentry/types': 7.104.0
+      '@sentry/utils': 7.104.0
+      vue: 3.4.19(typescript@5.3.3)
+    dev: false
 
   /@sindresorhus/is@4.6.0:
     resolution: {integrity: sha512-t09vSN3MdfsyCHoFcTRCH/iUtG7OJ0CsjzB8cjAmKc/va/kIgeDI/TxsigdncE/4be734m0cvIYwNaV4i2XqAw==}
@@ -1763,7 +1850,7 @@ packages:
       vue: '>= 2.5 < 2.7'
     dependencies:
       vue: 3.4.19(typescript@5.3.3)
-    dev: false
+    dev: true
 
   /@vue/devtools-api@6.6.1:
     resolution: {integrity: sha512-LgPscpE3Vs0x96PzSSB4IGVSZXZBZHpfxs+ZA1d+VEPwHdOXowy/Y2CsvCAIFrf+ssVU1pD1jidj505EpUnfbA==}
@@ -2882,7 +2969,6 @@ packages:
     dependencies:
       tslib: 2.3.0
       zrender: 5.5.0
-    dev: false
 
   /ee-first@1.1.1:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
@@ -4183,7 +4269,7 @@ packages:
 
   /lucky-canvas@1.7.27:
     resolution: {integrity: sha512-Ftz6qD+863bI7xijBmZg3dw3cNEc7odPr70EZQcGA14y3TgTAzH65HPosOCd6kKUlMwhntBaHMx3onoj9MtJRQ==}
-    dev: false
+    dev: true
 
   /magic-string@0.27.0:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
@@ -5633,7 +5719,6 @@ packages:
 
   /tslib@2.3.0:
     resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
-    dev: false
 
   /tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
@@ -5952,7 +6037,7 @@ packages:
     dependencies:
       '@vue/composition-api': 1.7.2(vue@3.4.19)
       vue: 3.4.19(typescript@5.3.3)
-    dev: false
+    dev: true
 
   /vue-echarts@6.6.9(echarts@5.5.0)(vue@3.4.19):
     resolution: {integrity: sha512-mojIq3ZvsjabeVmDthhAUDV8Kgf2Rr/X4lV4da7gEFd1fP05gcSJ0j7wa7HQkW5LlFmF2gdCJ8p4Chas6NNIQQ==}
@@ -6226,7 +6311,6 @@ packages:
     resolution: {integrity: sha512-O3MilSi/9mwoovx77m6ROZM7sXShR/O/JIanvzTwjN3FORfLSr81PsUGd7jlaYOeds9d8tw82oP44+3YucVo+w==}
     dependencies:
       tslib: 2.3.0
-    dev: false
 
   '@cdn.sheetjs.com/xlsx-0.20.1/xlsx-0.20.1.tgz':
     resolution: {tarball: https://cdn.sheetjs.com/xlsx-0.20.1/xlsx-0.20.1.tgz}

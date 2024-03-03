@@ -10,15 +10,21 @@ files:
   - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
   - '!cache/*'
+  - '!scripts/*'
+  - '!visualizer_*.html'
+  - '!logo.png'
+  - '!postcss.config.ts'
+  - '!tailwind.config.ts'
+asar: false
 asarUnpack:
   - resources/**
 win:
   executableName: TinyTools.desktop
   icon: build/icons/icon.icns
-#  artifactName: ${name}-${version}-${arch}-setup.${ext}
+  #  artifactName: ${name}-${version}-${arch}-setup.${ext}
   artifactName: TinyTools.Desktop-${version}-${arch}-setup.${ext}
 nsis:
-#  artifactName: ${name}-${version}-${arch}-setup.${ext}
+  #  artifactName: ${name}-${version}-${arch}-setup.${ext}
   artifactName: TinyTools.Desktop-${version}-${arch}-setup.${ext}
   shortcutName: ${productName}
   uninstallDisplayName: ${productName}

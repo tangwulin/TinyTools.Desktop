@@ -31,7 +31,8 @@ preloadList.forEach((file) => {
 })
 
 const gExtension = '.js'
-const gSrcStr = '//# sourceMappingURL=[0-9A-Za-z]*.[0-9A-Za-z]*.js.map'
+// const gSrcStr = '//# sourceMappingURL=[0-9A-Za-z]*.[0-9A-Za-z]*.[0-9A-Za-z]*.[0-9A-Za-z]*.js.map'
+const gSrcStr = '//# sourceMappingURL=[0-9A-Za-z-.]*\\.js\\.map'
 const gReplaceStr = ''
 
 dirContentReplace(rendererPath, gExtension, gSrcStr, gReplaceStr) // 去掉js文件的sourcemap关联
