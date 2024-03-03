@@ -46,7 +46,7 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
       //没有座位表，直接生成
       newSeatTable = genSeatTable(seats)
 
-      db.transaction('rw', db.seatTable, async () => {
+      db.transaction('rw', db.seatTable, db.seatHistories, async () => {
         await db.seatTable.bulkPut(newSeatTable)
         saveHistory(seatTable.value, '初始座位')
       })
@@ -81,9 +81,9 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
   seatTable.value = seatTable.value.map((item) => {
     if (item.type !== 'seat') return item
     else {
-      const person = persons.value.find((person) => person.id === item.data?.ownerId)
-      if (person) item.setDisplayName(person.name)
-      else item.setDisplayName('Error')
+      const person = persons.value.find((person) => person.id === item.data?.personId)
+      if (person) (item.data as Seat).displayName = person.name
+      else (item.data as Seat).displayName = 'Error'
       return item
     }
   })
@@ -91,7 +91,7 @@ Promise.all([personsPromise, seatTablePromise]).then(() => {
 
 const raffleSeatImmediately = (result: SeatTableItem[]) => {
   seatTable.value = result
-  db.transaction('rw', db.seatTable, db.seatHistory, async () => {
+  db.transaction('rw', db.seatTable, db.seatHistories, async () => {
     await db.seatTable.bulkPut(deepcopy(result))
     saveHistory(result, '初始座位')
   })
@@ -100,7 +100,7 @@ const raffleSeatImmediately = (result: SeatTableItem[]) => {
 
 const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
   if (type === '初始座位') {
-    db.seatHistory
+    db.seatHistories
       .orderBy('timestamp')
       .reverse()
       .limit(1)
@@ -111,11 +111,11 @@ const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
             //未发生变化，无需保存
             return
           }
-          db.seatHistory.delete(result.timestamp)
+          db.seatHistories.delete(result.timestamp)
         }
       })
   }
-  db.seatHistory.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
+  db.seatHistories.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
   message.success('已保存本次记录')
 }
 
@@ -170,7 +170,7 @@ const save = async () => {
 
 const dragHandler = debounce(
   () => {
-    db.transaction('rw', db.seatTable, db.seatHistory, async () => {
+    db.transaction('rw', db.seatTable, db.seatHistories, async () => {
       await db.seatTable.bulkPut(deepcopy(seatTable.value))
       saveHistory(seatTable.value, '初始座位')
     })

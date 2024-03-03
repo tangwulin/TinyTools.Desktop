@@ -16,10 +16,31 @@ const routes: RouteRecordRaw[] = [
     name: 'mainWindow',
     redirect: { name: 'seat' },
     children: [
-      { path: '/seat', name: 'seat', component: () => import('../views/MainWindow/SeatView.vue') },
-      // { path: '/lottery', name: 'lottery', component: () => import('../views/MainWindow/LotteryView.vue') },
-      // { path: '/help', name: 'help', component: () => import('../views/MainWindow/HelpView.vue') },
-      // { path: '/debug', name: 'debug', component: () => import('../views/MainWindow/DebugView.vue') },
+      {
+        path: '/dashboard',
+        name: 'dashboard',
+        component: () => import('../views/MainWindow/DashboardView.vue')
+      },
+      {
+        path: '/seat',
+        name: 'seat',
+        component: () => import('../views/MainWindow/SeatView.vue')
+      },
+      {
+        path: '/lottery',
+        name: 'lottery',
+        component: () => import('../views/MainWindow/LotteryView.vue')
+      },
+      // {
+      //   path: '/help',
+      //   name: 'help',
+      //   component: () => import('../views/MainWindow/HelpView.vue')
+      // },
+      // {
+      //   path: '/debug',
+      //   name: 'debug',
+      //   component: () => import('../views/MainWindow/DebugView.vue')
+      // },
       {
         path: '/score',
         name: 'score',
@@ -28,7 +49,7 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/score/report',
         name: 'scoreReport',
-        component: () => import('../views/MainWindow/ScoreReport.vue'),
+        component: () => import('../views/MainWindow/ScoreReportView.vue'),
         children: [
           {
             path: '/score/report/detail',
@@ -40,17 +61,17 @@ const routes: RouteRecordRaw[] = [
       {
         path: '/randomSelection',
         name: 'randomSelection',
-        component: () => import('../views/MainWindow/RandomSelection.vue')
+        component: () => import('../views/MainWindow/RandomSelectionView.vue')
       },
       {
         path: '/personManage',
         name: 'personManage',
-        component: () => import('../views/MainWindow/PersonManage.vue')
+        component: () => import('../views/MainWindow/PersonManageView.vue')
       },
       {
         path: '/groupManage',
         name: 'groupManage',
-        component: () => import('../views/MainWindow/GroupManage.vue')
+        component: () => import('../views/MainWindow/GroupManageView.vue')
       },
       {
         path: '/about',
@@ -94,6 +115,11 @@ const routes: RouteRecordRaw[] = [
             path: '/setting/debug',
             name: 'debugTool',
             component: () => import('../views/MainWindow/Setting/DebugToolView.vue')
+          },
+          {
+            path: '/setting/data',
+            name: 'dataSetting',
+            component: () => import('../views/MainWindow/Setting/DataSettingView.vue')
           }
         ]
       }
@@ -136,6 +162,11 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../views/MainWindow/Setup/SetupDoneView.vue')
       }
     ]
+  },
+  {
+    path: '/afterupdate',
+    name: 'afterupdate',
+    component: () => import('../views/MainWindow/AfterUpdateView.vue')
   },
   {
     path: '/dock',

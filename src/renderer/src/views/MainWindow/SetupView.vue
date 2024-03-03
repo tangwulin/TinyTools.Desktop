@@ -1,17 +1,9 @@
 <script lang="ts" setup>
-import { useObservable } from '@vueuse/rxjs'
-import { from } from '@vueuse/rxjs/index'
-import { liveQuery } from 'dexie'
-import { Ref, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
-import { AppDatabase } from '../../db'
-import { Person } from '../../types/person'
+import { getDynamicPersonList } from '../../services/DBServices/Person'
 
-const db = new AppDatabase()
-
-const persons = useObservable(from(liveQuery(() => db.persons.toArray()))) as Readonly<
-  Ref<Person[]>
->
+const persons = getDynamicPersonList()
 
 const router = useRouter()
 

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { ElectronAPI } from '@electron-toolkit/preload'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import logo from '../../assets/images/logo.png'
@@ -7,6 +8,14 @@ import { useSettingStore } from '../../stores/setting'
 const setting = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(setting)
 
+let isElectron: boolean
+const electron = window.electron as ElectronAPI
+
+try {
+  isElectron = !!window.electron
+} catch (e) {
+  isElectron = false
+}
 /* eslint-disable */
 // noinspection TypeScriptUnresolvedReference
 // @ts-ignore:2304
@@ -37,11 +46,17 @@ const clickHandler = () => {
     if (clickTimes >= 5) message.success('测试功能已开启！请重新启动程序')
     else message.info('测试功能已开启！')
 }
+
+const checkUpdate = () => {
+  if (isElectron) {
+    electron.ipcRenderer.send('checkForUpdates')
+  }
+}
 </script>
 <template>
   <n-scrollbar>
     <div class="flex flex-col items-center h-full pb-2" style="height: 100%">
-      <div class="mb-4 w-3/5 p-4">
+      <div class="w-3/5 p-4">
         <img :src="logo" alt="logo" style="margin: auto" />
       </div>
       <p class="mb-8" @click="clickHandler">TinyTools v{{ version }} Build {{ revision }}</p>
@@ -101,6 +116,15 @@ const clickHandler = () => {
         </p>
         <p>本项目所使用角色头像版权均属于各游戏版权方</p>
       </div>
+      <div class="flex flex-col mt-4">
+        <p>开源项目鸣谢</p>
+        <a href="https://github.com/tusen-ai/naive-ui" target="_blank">Naive-UI</a>
+        <a href="https://github.com/alex8088/electron-vite" target="_blank">electron-vite</a>
+        <a href="https://github.com/qq15725/modern-screenshot" target="_blank">
+          modern-screenshot</a
+        >
+        <a href="https://github.com/lxchapu/arknights" target="_blank">仿明日方舟UI</a>
+      </div>
       <!--      <p>项目地址：</p>-->
       <div class="flex flex-row mt-4">
         <a href="https://github.com/tangwulin/TinyTools.Desktop" target="_blank">
@@ -119,6 +143,7 @@ const clickHandler = () => {
         <!--          />-->
         <!--        </a>-->
       </div>
+      <n-button type="primary" class="mt-4" @click="checkUpdate">检查更新 </n-button>
       <div class="mt-4 text-xs">
         <p class="mt-auto flex">
           Powered By Aurora Studio

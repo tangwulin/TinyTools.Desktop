@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { storeToRefs } from 'pinia'
 import { useRouter } from 'vue-router'
-import ratesConfig from '../../../config/rates.json'
+import ratesConfig from '../../../data/rates.json'
 import { AppDatabase } from '../../../db'
 import { useSettingStore } from '../../../stores/setting'
 import { getDefaultBgm, getDefaultFinalBgm } from '../../../utils/musicUtil'

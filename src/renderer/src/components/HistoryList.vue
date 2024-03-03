@@ -60,7 +60,7 @@ const delHandler = (x: SeatHistory) => {
             @positive-click="rollbackHandler(item)"
           >
             <template #trigger>
-              <n-button type="warning" :disabled="index === 0"> 回滚到此处 </n-button>
+              <n-button :disabled="index === 0" type="warning"> 回滚到此处</n-button>
             </template>
             确定要回滚到此处吗？
           </n-popconfirm>
@@ -70,7 +70,7 @@ const delHandler = (x: SeatHistory) => {
             @positive-click="delHandler(item)"
           >
             <template #trigger>
-              <n-button type="error" :disabled="index === 0"> 删除该记录 </n-button>
+              <n-button :disabled="index === 0" type="error"> 删除该记录</n-button>
             </template>
             确定要删除该记录吗？
           </n-popconfirm>
@@ -80,6 +80,4 @@ const delHandler = (x: SeatHistory) => {
   </n-list>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

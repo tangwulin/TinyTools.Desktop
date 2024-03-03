@@ -1,14 +1,16 @@
 <script lang="ts" setup>
-import { dateZhCN, zhCN } from 'naive-ui'
+import { dateZhCN, NConfigProvider, zhCN } from 'naive-ui'
 </script>
 
 <template>
   <n-config-provider :date-locale="dateZhCN" :locale="zhCN">
-    <n-message-provider>
-      <n-dialog-provider>
-        <router-view />
-      </n-dialog-provider>
-    </n-message-provider>
+    <n-notification-provider>
+      <n-message-provider>
+        <n-dialog-provider>
+          <router-view />
+        </n-dialog-provider>
+      </n-message-provider>
+    </n-notification-provider>
   </n-config-provider>
 </template>
 

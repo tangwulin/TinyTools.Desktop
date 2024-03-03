@@ -1,9 +1,10 @@
 import Dexie from 'dexie'
+import { dbVersion } from './config'
 import { CourseTableItem } from './interface/course'
 import { Group } from './types/group'
 import { Person } from './types/person'
 import { Rate } from './types/rate'
-import { ScoreHistory } from './types/scoreHistory'
+import { RateHistory } from './types/rateHistory'
 import { SeatHistory } from './types/seatHistory'
 import { SeatTableItem } from './types/SeatTableItem'
 
@@ -12,28 +13,28 @@ export class AppDatabase extends Dexie {
 
   persons!: Dexie.Table<Person, number>
   groups!: Dexie.Table<Group, number>
-  seatHistory!: Dexie.Table<SeatHistory, number>
+  seatHistories!: Dexie.Table<SeatHistory, number>
   rates!: Dexie.Table<Rate, number>
-  scoreHistories!: Dexie.Table<ScoreHistory, number>
+  rateHistories!: Dexie.Table<RateHistory, number>
   coursesTable!: Dexie.Table<CourseTableItem, number>
   seatTable!: Dexie.Table<SeatTableItem, number>
 
   constructor() {
     super('AppDatabase')
-    this.version(1).stores({
+    this.version(dbVersion).stores({
       persons: '++id, name, genderCode, number',
-      groups: '++id, name, description, members',
-      seatHistory: 'timestamp, type',
+      groups: '++id, name, description',
+      seatHistories: 'timestamp, type',
       rates: '++id, name, description',
-      scoreHistories: 'timestamp, ownerId',
+      rateHistories: 'timestamp, ownerId',
       coursesTable: '++id',
       seatTable: 'locationIndex, type'
     })
     this.persons.mapToClass(Person)
     this.groups.mapToClass(Group)
-    this.seatHistory.mapToClass(SeatHistory)
+    this.seatHistories.mapToClass(SeatHistory)
     this.rates.mapToClass(Rate)
-    this.scoreHistories.mapToClass(ScoreHistory)
+    this.rateHistories.mapToClass(RateHistory)
     this.seatTable.mapToClass(SeatTableItem)
   }
 

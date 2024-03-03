@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [windows-latest]
+        os: [ windows-latest ]
 
     steps:
       - name: Check out Git repository
@@ -21,7 +21,10 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 20
+
+      - name: Delete Electron China Mirror
+        run: rm ./.npmrc
 
       - name: Install Dependencies
         run: npm install
@@ -34,18 +37,23 @@ jobs:
         if: matrix.os == 'macos-latest'
         run: npm run build:mac
 
-      - name: build-win_x64
+      - name: build-win
         if: matrix.os == 'windows-latest'
         run: npm run build:win_x64
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}
+          VITE_UPDATE_HEADER1: ${{ secrets.VITE_UPDATE_HEADER1 }}
+          VITE_UPDATE_HEADER1_VALUE: ${{ secrets.VITE_UPDATE_HEADER1_VALUE }}
+          VITE_UPDATE_URL: ${{ secrets.VITE_UPDATE_URL }}
 
-      - name: build-win_ia32
-        if: matrix.os == 'windows-latest'
-        run: npm run build:win_ia32
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v3
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
-      - name: release
+      - name: Upload To Github Release Asset
         uses: softprops/action-gh-release@v1
         with:
-          draft: true
           files: |
             dist/*.tar.gz
             dist/*.exe
@@ -59,3 +67,24 @@ jobs:
             dist/*.blockmap
         env:
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Upload to Tencent COS
+        uses: TencentCloud/cos-action@v1
+        with:
+          secret_id: ${{ secrets.TENCENT_CLOUD_SECRET_ID }}
+          secret_key: ${{ secrets.TENCENT_CLOUD_SECRET_KEY }}
+          cos_bucket: ${{ secrets.COS_BUCKET }}
+          cos_region: ${{ secrets.COS_REGION }}
+          local_path: |
+            dist/*.tar.gz
+            dist/*.exe
+            dist/*.zip
+            dist/*.dmg
+            dist/*.AppImage
+            dist/*.snap
+            dist/*.deb
+            dist/*.rpm
+            dist/*.yml
+            dist/*.blockmap
+          remote_path: download/app
+          clean: true

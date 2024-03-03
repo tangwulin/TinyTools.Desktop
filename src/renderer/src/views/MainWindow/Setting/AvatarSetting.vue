@@ -1,10 +1,11 @@
 <script lang="ts" setup>
+import { asyncComputed } from '@vueuse/core'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { ref, watch } from 'vue'
+import EntityItem from '../../../components/EntityItem.vue'
+import { getAvatarUrls } from '../../../services/AvatarService'
 import { useSettingStore } from '../../../stores/setting'
-import { getAvatarUrls } from '../../../utils/avatarUtil'
-import remToPx from '../../../utils/remToPx'
 
 const message = useMessage()
 
@@ -18,21 +19,16 @@ const works = [
   { value: 5, label: '赛马娘' }
 ]
 
-const sexes = [
+const genders = [
   { label: '男', value: 1 },
   { label: '女', value: 2 }
   // { label: '未填写', value: 9 },
 ] //此处参考了GB/T 2261.1-2003
 
 const selectedSex = ref(1)
-const selectedAvatar = ref(getAvatarUrls(1, avatarWorks.value))
-const changeHandler = () => {
-  selectedAvatar.value = getAvatarUrls(selectedSex.value, avatarWorks.value).filter((item) =>
-    item.description.includes(value.value)
-  )
-}
-
 const value = ref('')
+const selectedAvatar = asyncComputed(() => getAvatarUrls(selectedSex.value, avatarWorks.value), [])
+
 const writeClipboard = (x) => {
   navigator.clipboard
     .writeText(x)
@@ -43,9 +39,11 @@ const writeClipboard = (x) => {
       message.error('请授予剪贴板权限！')
     })
 }
-
-watch(avatarWorks, changeHandler)
-watch(value, changeHandler)
+watch(value, async () => {
+  selectedAvatar.value = await getAvatarUrls(selectedSex.value, avatarWorks.value).then((res) =>
+    res.filter((item) => item.description.includes(value.value))
+  )
+})
 </script>
 
 <template>
@@ -75,49 +73,21 @@ watch(value, changeHandler)
       <n-collapse>
         <n-input v-model:value="value" placeholder="搜索" type="text" />
         <n-collapse-item :title="`头像列表 共${selectedAvatar.length}个 点击头像可复制链接`">
-          <n-radio-group v-model:value="selectedSex" @change="changeHandler">
+          <n-radio-group v-model:value="selectedSex">
             <n-space>
-              <n-radio v-for="sex in sexes" :key="sex.value" :value="sex.value">
-                {{ sex.label }}
+              <n-radio v-for="gender in genders" :key="gender.value" :value="gender.value">
+                {{ gender.label }}
               </n-radio>
             </n-space>
           </n-radio-group>
           <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: auto">
-            <div
+            <entity-item
               v-for="(item, index) in selectedAvatar"
               :key="index"
-              style="
-                width: 8rem;
-                height: 8rem;
-                background: #fff;
-                box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.1);
-                border-radius: 1rem;
-                margin: 0.5rem;
-              "
+              :display-name="item.description"
+              :avatar="item.url"
               @click="writeClipboard(item.url)"
-            >
-              <div
-                style="
-                  width: 100%;
-                  height: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: center;
-                  align-items: center;
-                "
-              >
-                <n-avatar
-                  :img-props="{ referrerpolicy: 'no-referrer' }"
-                  :size="remToPx(4)"
-                  :src="item.url"
-                  lazy
-                  object-fit="contain"
-                  round
-                  style="margin-bottom: 0.5rem"
-                />
-                <span>{{ item?.description }}</span>
-              </div>
-            </div>
+            />
           </div>
         </n-collapse-item>
       </n-collapse>

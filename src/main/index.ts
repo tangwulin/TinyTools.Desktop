@@ -1,25 +1,43 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
-import { app, BrowserWindow, ipcMain, Menu, screen, shell, Tray } from 'electron'
-import { NsisUpdater } from 'electron-updater'
-import { join } from 'path'
+import * as Sentry from '@sentry/electron/main'
+import { app, BrowserWindow, ipcMain, Menu, protocol, screen, shell, Tray } from 'electron'
+// import { createGiteeUpdaterOptions } from './gitee-updater-ts'
+import { autoUpdater } from 'electron-updater'
+// import { NsisUpdater } from 'electron-updater'
+import path, { join } from 'path'
 import icon from '../../resources/icon.png?asset'
-import { createGiteeUpdaterOptions } from './gitee-updater-ts'
-import { getFileIconByCache } from './utils/fsUtil'
+import { registerIPC } from './IPC'
+import { launchCacheService } from './services/CacheService'
+import { launchDownloader } from './utils/Downloader'
 
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
 
-const updaterOptions = createGiteeUpdaterOptions({
-  repo: 'twl12138/TinyTools.Desktop',
-  updateManifest: 'alpha.yml'
-})
+if (import.meta.env.PROD) {
+  Sentry.init({
+    dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744'
+  })
+}
 
-const updater = new NsisUpdater(updaterOptions)
+// if (!app.isPackaged) {
+//   Object.defineProperty(app, 'isPackaged', {
+//     get: () => true
+//   })
+// }
 
-function createWindow(): void {
-  // We cannot require the screen module until the app is ready.
-  // const { screen } = require('electron')
+// 将日志在渲染进程里面打印出来
+function printUpdaterMessage(arg) {
+  const message = {
+    error: '更新出错',
+    checking: '正在检查更新',
+    updateAvailable: '检测到新版本',
+    downloadProgress: '下载中',
+    updateNotAvailable: '无新版本'
+  }
+  if (mainWindow) mainWindow.webContents.send('printUpdaterMessage', message[arg] ?? arg)
+}
 
+function createMainWindow(): void {
   // Create a window that fills the screen's available work area.
   const primaryDisplay = screen.getPrimaryDisplay()
   const height = primaryDisplay.size.height
@@ -46,28 +64,9 @@ function createWindow(): void {
     mainWindow?.show()
   })
 
-  // mainWindow.on('close', (e) => {
-  //   e.preventDefault()
-  //   mainWindow.hide()
-  // })
-
-  tray = new Tray(join(__dirname, '../../resources/icon.png'))
-  const contextMenu = Menu.buildFromTemplate([
-    {
-      type: 'normal',
-      label: '打开主界面',
-      click: () => mainWindow?.show()
-    },
-    {
-      type: 'normal',
-      label: '退出',
-      click: () => app.exit()
-    }
-  ])
-  tray.setToolTip('TinyTools.Desktop')
-  tray.setContextMenu(contextMenu)
-
-  tray.on('click', () => mainWindow?.show())
+  mainWindow.on('close', () => {
+    mainWindow = null //把主窗口对象设置为null，方便后续判断主窗口是否存在
+  })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
@@ -83,62 +82,111 @@ function createWindow(): void {
   }
 }
 
+const createTray = () => {
+  tray = new Tray(join(__dirname, '../../resources/icon.png'))
+  const contextMenu = Menu.buildFromTemplate([
+    {
+      type: 'normal',
+      label: '打开主界面',
+      click: () => (mainWindow ? mainWindow.show() : createMainWindow())
+    },
+    {
+      type: 'normal',
+      label: '退出',
+      click: () => app.exit()
+    }
+  ])
+  tray.setToolTip('TinyTools.Desktop')
+  tray.setContextMenu(contextMenu)
+
+  tray.on('click', () => (mainWindow ? mainWindow.show() : createMainWindow()))
+}
+
+const launchUpdater = () => {
+  // const updaterOptions = createGiteeUpdaterOptions({
+  //   repo: 'twl12138/TinyTools.Desktop',
+  //   updateManifest: 'latest.yml'
+  // })
+
+  // const autoUpdater = new NsisUpdater(updaterOptions)
+
+  const header1 = import.meta.env.VITE_UPDATE_HEADER1
+
+  const headers = {}
+  headers[header1] = import.meta.env.VITE_UPDATE_HEADER1_VALUE
+
+  const feedUrl = import.meta.env.VITE_UPDATE_URL
+  // 配置提供更新的程序，及build中配置的url
+  autoUpdater.setFeedURL({
+    provider: 'generic',
+    url: feedUrl,
+    useMultipleRangeRequest: false,
+    requestHeaders: headers
+  })
+  autoUpdater.autoRunAppAfterInstall = true
+  autoUpdater.forceDevUpdateConfig = true
+
+  // 配置请求头
+
+  // 是否自动更新，如果为true，当可以更新时(update-available)自动执行更新下载。
+  autoUpdater.autoDownload = false
+
+  // 1. 在渲染进程里触发获取更新，开始进行更新流程。 (根据具体需求)
+  ipcMain.on('checkForUpdates', () => {
+    autoUpdater.checkForUpdates()
+  })
+
+  autoUpdater.on('error', function (error) {
+    printUpdaterMessage('error')
+    if (mainWindow) mainWindow.webContents.send('updateError', error)
+  })
+
+  // 2. 开始检查是否有更新
+  autoUpdater.on('checking-for-update', function () {
+    printUpdaterMessage('checking')
+  })
+
+  // 3. 有更新时触发
+  autoUpdater.on('update-available', function (info) {
+    printUpdaterMessage('updateAvailable')
+    // 4. 告诉渲染进程有更新，info包含新版本信息
+    if (mainWindow) mainWindow.webContents.send('updateAvailable', info)
+  })
+
+  // 7. 收到确认更新提示，执行下载
+  ipcMain.on('confirmUpdate', () => {
+    autoUpdater.downloadUpdate()
+  })
+
+  autoUpdater.on('update-not-available', () => {
+    printUpdaterMessage('updateNotAvailable')
+  })
+
+  // 8. 下载进度，包含进度百分比、下载速度、已下载字节、总字节等
+  // ps: 调试时，想重复更新，会因为缓存导致该事件不执行，下载直接完成，可找到C:\Users\40551\AppData\Local\xxx-autoUpdater\pending下的缓存文件将其删除（这是我本地的路径）
+  autoUpdater.on('download-progress', function (progressObj) {
+    printUpdaterMessage('downloadProgress')
+    if (mainWindow) mainWindow.webContents.send('downloadProgress', progressObj)
+  })
+
+  // 10. 下载完成，告诉渲染进程，是否立即执行更新安装操作
+  autoUpdater.on('update-downloaded', function () {
+    if (mainWindow) mainWindow.webContents.send('updateDownloaded')
+    // 12. 立即更新安装
+    ipcMain.on('updateNow', () => {
+      autoUpdater.quitAndInstall(false, true)
+    })
+  })
+}
+
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.whenReady().then(() => {
-  // Set app user model id for windows
-  electronApp.setAppUserModelId('com.electron')
-
-  //限制只能开启一个应用(4.0以上版本)
-  const gotTheLock = app.requestSingleInstanceLock()
-  if (!gotTheLock) {
-    app.quit()
-  } else {
-    app.on('second-instance', () => {
-      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
-      if (mainWindow) {
-        if (mainWindow.isMinimized()) mainWindow.restore()
-        mainWindow.focus()
-        mainWindow.show()
-      }
-    })
-  }
-  app.on('browser-window-created', (_, window) => {
-    optimizer.watchWindowShortcuts(window)
-  })
-
-  createWindow()
-
-  // Default open or close DevTools by F12 in development
-  // and ignore CommandOrControl + R in production.
-  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
-
-  let dockWindow = null as BrowserWindow | null
-
-  ipcMain.on('closeDockWindow', () => {
-    if (dockWindow) {
-      dockWindow.close()
-      dockWindow = null
-    }
-  })
-
-  ipcMain.on('relaunchApp', () => {
-    app.relaunch()
-    app.exit()
-  })
-
-  ipcMain.handle('getThumbnail', async (_, ...args) => {
-    return getFileIconByCache(args[0])
-  })
-
-  ipcMain.on('openDockWindow', () => {
+function showDockWindow(dockWindow: BrowserWindow | null) {
+  return () => {
     if (dockWindow) {
       dockWindow.show()
       return
     }
-    // We cannot require the screen module until the app is ready.
-    // const { screen } = require('electron')
 
     // Create a window that fills the screen's available work area.
     const primaryDisplay = screen.getPrimaryDisplay()
@@ -156,6 +204,8 @@ app.whenReady().then(() => {
       movable: true,
       enableLargerThanScreen: false,
       autoHideMenuBar: true,
+      skipTaskbar: app.isPackaged,
+      alwaysOnTop: !app.isPackaged, // 方便开发时调试
       webPreferences: {
         preload: join(__dirname, '../preload/index.js'),
         sandbox: false
@@ -175,12 +225,63 @@ app.whenReady().then(() => {
     dockWindow.on('ready-to-show', () => {
       dockWindow?.show()
     })
+  }
+}
+
+// Some APIs can only be used after this event occurs.
+app.whenReady().then(() => {
+  // Set app user model id for windows
+  electronApp.setAppUserModelId('org.tangwulin.tinytools')
+
+  protocol.registerFileProtocol('atom', (request, callback) => {
+    const url = request.url.substring(7)
+    callback(decodeURI(path.normalize(url)))
   })
+
+  //限制只能开启一个应用(4.0以上版本)
+  const gotTheLock = app.requestSingleInstanceLock()
+  if (!gotTheLock) {
+    app.quit()
+  } else {
+    app.on('second-instance', () => {
+      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
+      if (mainWindow) {
+        if (mainWindow.isMinimized()) mainWindow.restore()
+        mainWindow.focus()
+        mainWindow.show()
+      }
+    })
+  }
+  app.on('browser-window-created', (_, window) => {
+    optimizer.watchWindowShortcuts(window)
+  })
+
+  createMainWindow()
+  createTray()
+  registerIPC()
+  launchDownloader()
+  launchCacheService()
+  launchUpdater()
+
+  // Default open or close DevTools by F12 in development
+  // and ignore CommandOrControl + R in production.
+  // see https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
+
+  let dockWindow = null as BrowserWindow | null
+
+  ipcMain.on('closeDockWindow', () => {
+    if (dockWindow) {
+      dockWindow.close()
+      dockWindow = null
+    }
+  })
+
+  ipcMain.on('openDockWindow', showDockWindow(dockWindow))
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createWindow()
+    if (BrowserWindow.getAllWindows().length === 0) createMainWindow()
   })
 })
 
@@ -193,5 +294,5 @@ app.on('window-all-closed', () => {
   }
 })
 
-// In this file you can include the rest of your app"s specific main process
+// In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.

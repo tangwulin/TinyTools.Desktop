@@ -5,6 +5,10 @@ import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
+import { LocalCacheProvider } from '../../../providers/LocalCacheProvider'
+import backupDB from '../../../services/BackupService'
+import { createCache } from '../../../services/CacheService'
+import { getAppData } from '../../../services/DataService'
 import { useSettingStore } from '../../../stores/setting'
 
 const db = AppDatabase.getInstance()
@@ -22,6 +26,12 @@ const confirm = ref('')
 
 let isElectron: boolean
 const electron = window.electron as ElectronAPI
+
+const imageSrc = ref('')
+const cache = createCache(new LocalCacheProvider())
+cache('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png').then((res) => {
+  imageSrc.value = res
+})
 
 try {
   isElectron = !!window.electron
@@ -82,6 +92,16 @@ const getThumbnail = async () => {
   console.log(result)
   message.success('获取成功！')
   message.info('结果：' + JSON.stringify(result))
+}
+
+const throwError = () => {
+  throw new Error('测试错误')
+}
+
+const testAddBackup = async () => {
+  const data = await getAppData()
+  console.log(data)
+  await backupDB.addBackup(data)
 }
 </script>
 
@@ -145,6 +165,18 @@ const getThumbnail = async () => {
       <p>获取文件缩略图</p>
       <n-input v-model:value="filePath" />
       <n-button round type="primary" @click="getThumbnail">获取</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>手动抛出错误</p>
+      <n-button round type="primary" @click="throwError">抛出测试错误</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>备份测试</p>
+      <n-button round type="primary" @click="testAddBackup">备份测试</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>缓存测试</p>
+      <n-image :src="imageSrc" />
     </n-space>
   </n-space>
 </template>

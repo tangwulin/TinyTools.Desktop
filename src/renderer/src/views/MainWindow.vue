@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { Group as GroupIcon } from '@vicons/carbon'
-// import { ScheduleOutlined as ScheduleIcon } from '@vicons/antd'
+import { type ElectronAPI } from '@electron-toolkit/preload'
+import { Dashboard as DashboardIcon, Group as GroupIcon } from '@vicons/carbon'
 import {
   Info20Regular as InfoIcon,
   Person24Regular as PersonIcon,
@@ -8,13 +8,26 @@ import {
 } from '@vicons/fluent'
 import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
-import { NIcon } from 'naive-ui'
-// import { useSettingStore } from '../stores/setting'
+import { Gift as GiftIcon, Menu2 as MenuIcon } from '@vicons/tabler'
+import { UpdateInfo } from 'builder-util-runtime'
+import { NIcon, useDialog } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { Component, h, ref, watch } from 'vue'
-import { RouterLink } from 'vue-router'
-import logoUrl from '../assets/images/logo.png'
+import { Component, h, onBeforeMount, onMounted, ref, watch } from 'vue'
+import { RouterLink, useRouter } from 'vue-router'
+import backupDB from '../services/BackupService'
+const router = useRouter()
+import { getAppData } from '../services/DataService'
 import { useGeneralStore } from '../stores/general'
+
+let isElectron: boolean
+const electron = window.electron as ElectronAPI
+
+try {
+  isElectron = !!window.electron
+} catch (e) {
+  isElectron = false
+}
+const dialog = useDialog()
 
 const generalStore = useGeneralStore()
 const { lastScoreType } = storeToRefs(generalStore)
@@ -28,6 +41,7 @@ const shortVersion = version?.split('-')[0]
 
 const activeKey = ref(null)
 const collapsed = ref(true)
+const collapsedSlider = ref(false)
 
 const collapsedWithoutAnimation = ref(true)
 watch(
@@ -42,29 +56,49 @@ watch(
         collapsedWithoutAnimation.value = false
       }, 100)
     }
-  }
+  },
+  { deep: true }
 )
 
-function renderIcon(icon: Component) {
-  return () => h(NIcon, null, { default: () => h(icon) })
+function renderIcon(icon: Component, props?: any) {
+  return () => h(NIcon, props, { default: () => h(icon) })
 }
 
 const menuOptions = [
-  // {
-  //   label: () =>
-  //     h(
-  //       RouterLink,
-  //       {
-  //         to: {
-  //           name: 'dashboard'
-  //         }
-  //       },
-  //       { default: () => '数据总览（未完成）' }
-  //     ),
-  //   key: 'dashboard',
-  //   icon: renderIcon(DataIcon),
-  //   show: enableDevelopFeature.value
-  // },
+  {
+    label: () =>
+      h(
+        'div',
+        {
+          onClick: () => {
+            collapsed.value = !collapsed.value
+          },
+          draggable: false
+        },
+        { default: () => (collapsed.value ? '展开' : '收起') }
+      ),
+    key: 'menu',
+    icon: renderIcon(MenuIcon, {
+      onClick: () => {
+        collapsed.value = !collapsed.value
+      }
+    })
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: 'dashboard'
+          },
+          draggable: false
+        },
+        { default: () => '数据总览' }
+      ),
+    key: 'dashboard',
+    icon: renderIcon(DashboardIcon)
+  },
   {
     label: () =>
       h(
@@ -73,7 +107,8 @@ const menuOptions = [
           to: {
             name: 'score',
             query: { type: lastScoreType.value }
-          }
+          },
+          draggable: false
         },
         { default: () => '评分' }
       ),
@@ -87,7 +122,8 @@ const menuOptions = [
         {
           to: {
             name: 'seat'
-          }
+          },
+          draggable: false
         },
         { default: () => '座位抽选' }
       ),
@@ -116,7 +152,8 @@ const menuOptions = [
         {
           to: {
             name: 'randomSelection'
-          }
+          },
+          draggable: false
         },
         { default: () => '随机抽选' }
       ),
@@ -129,8 +166,24 @@ const menuOptions = [
         RouterLink,
         {
           to: {
+            name: 'lottery'
+          },
+          draggable: false
+        },
+        { default: () => '幸运抽奖' }
+      ),
+    key: 'lottery',
+    icon: renderIcon(GiftIcon)
+  },
+  {
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
             name: 'personManage'
-          }
+          },
+          draggable: false
         },
         { default: () => '人员管理' }
       ),
@@ -144,7 +197,8 @@ const menuOptions = [
         {
           to: {
             name: 'groupManage'
-          }
+          },
+          draggable: false
         },
         { default: () => '分组管理' }
       ),
@@ -161,7 +215,8 @@ const footerMenuOptions = [
         {
           to: {
             name: 'about'
-          }
+          },
+          draggable: false
         },
         { default: () => '关于' }
       ),
@@ -175,7 +230,8 @@ const footerMenuOptions = [
         {
           to: {
             name: 'setting'
-          }
+          },
+          draggable: false
         },
         { default: () => '设置' }
       ),
@@ -183,56 +239,144 @@ const footerMenuOptions = [
     icon: renderIcon(SettingIcon)
   }
 ]
+
+onMounted(() => {
+  if (isElectron) {
+    setTimeout(() => {
+      electron.ipcRenderer.send('checkForUpdates')
+    }, 500)
+  }
+})
+
+if (isElectron) {
+  electron.ipcRenderer.on('printUpdaterMessage', (event, data) => {
+    console.log('printUpdaterMessage', event, data)
+  })
+
+  // 5. 收到主进程可更新的消息，做自己的业务逻辑
+  electron.ipcRenderer.on('updateAvailable', (_, info: UpdateInfo) => {
+    dialog.info({
+      closable: false,
+      closeOnEsc: false,
+      maskClosable: false,
+      title: `发现新版本 ${info.version}，是否立即下载？`,
+      content: info.releaseNotes as string,
+      negativeText: '不更新',
+      positiveText: '更新',
+      onPositiveClick: () => {
+        electron.ipcRenderer.send('confirmUpdate')
+      },
+      onNegativeClick: () => {
+        // 不用做什么
+      }
+    })
+  })
+
+  // 6. 点击确认更新
+  // electron.ipcRenderer.send('confirmUpdate')
+
+  // 9. 收到进度信息，做进度条
+  electron.ipcRenderer.on('downloadProgress', (event, data) => {
+    console.log('downloadProgress', event, data)
+    // do sth.
+  })
+
+  // 11. 下载完成，反馈给用户是否立即更新
+  electron.ipcRenderer.on('updateDownloaded', () => {
+    // do sth.
+    dialog.success({
+      closable: false,
+      closeOnEsc: false,
+      maskClosable: false,
+      title: '下载已完成',
+      content: '新版本文件下载完成，是否现在更新？',
+      positiveText: '是',
+      negativeText: '否',
+      onPositiveClick: () => {
+        update()
+      },
+      onNegativeClick: () => {
+        beforeUpdate()
+      }
+    })
+  })
+}
+const beforeUpdate = async () => {
+  const data = await getAppData()
+  await backupDB.addBackup(data)
+}
+
+const update = async () => {
+  await beforeUpdate()
+  localStorage.setItem('updateFlag', String(true))
+  electron.ipcRenderer.send('updateNow')
+}
+
+onBeforeMount(() => {
+  const flag = localStorage.getItem('updateFlag')
+  if (flag === 'true') {
+    router.push({ name: 'afterupdate' })
+  }
+})
 </script>
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
     <n-layout-sider
-      :collapsed="collapsed"
-      :collapsed-width="64"
-      :width="180"
-      bordered
+      :collapsed="collapsedSlider"
+      :collapsed-width="0"
+      :width="collapsedWithoutAnimation ? 64 : 180"
       collapse-mode="width"
       show-trigger
-      @collapse="collapsed = true"
-      @expand="collapsed = false"
+      @collapse="collapsedSlider = true"
+      @expand="collapsedSlider = false"
     >
-      <n-layout class="h-full">
-        <n-layout-header>
-          <div class="flex justify-center items-center bg-gray-100">
-            <img :src="logoUrl" alt="logo" style="width: 60%; min-width: 3rem" />
-          </div>
-        </n-layout-header>
-        <n-layout-content>
-          <n-menu
-            v-model:value="activeKey"
-            :collapsed="collapsed"
-            :collapsed-icon-size="20"
-            :collapsed-width="64"
-            :options="menuOptions"
-          />
-          <!--          <n-divider />-->
-        </n-layout-content>
-        <n-layout-footer position="absolute">
-          <n-menu
-            v-model:value="activeKey"
-            :collapsed="collapsed"
-            :collapsed-icon-size="20"
-            :collapsed-width="64"
-            :options="footerMenuOptions"
-            style="padding: 0"
-          />
-          <n-p
-            depth="3"
-            style="text-align: center; margin: 0 0 0.25rem 0; font-size: 0.75rem; user-select: none"
-          >
-            {{ collapsedWithoutAnimation ? shortVersion : version }}
-          </n-p>
-        </n-layout-footer>
+      <n-layout content-style="height:100vh;width:100%" has-sider>
+        <n-layout-sider
+          :collapsed="collapsed"
+          :collapsed-width="64"
+          :width="180"
+          bordered
+          collapse-mode="width"
+        >
+          <n-layout class="h-full">
+            <n-layout-content>
+              <n-menu
+                v-model:value="activeKey"
+                :collapsed="collapsed"
+                :collapsed-icon-size="20"
+                :collapsed-width="64"
+                :options="menuOptions"
+              />
+              <!--          <n-divider />-->
+            </n-layout-content>
+            <n-layout-footer position="absolute">
+              <n-menu
+                v-model:value="activeKey"
+                :collapsed="collapsed"
+                :collapsed-icon-size="20"
+                :collapsed-width="64"
+                :options="footerMenuOptions"
+                style="padding: 0"
+              />
+              <n-p
+                depth="3"
+                style="
+                  text-align: center;
+                  margin: 0 0 0.25rem 0;
+                  font-size: 0.75rem;
+                  user-select: none;
+                "
+              >
+                {{ collapsedWithoutAnimation ? shortVersion : version }}
+              </n-p>
+            </n-layout-footer>
+          </n-layout>
+        </n-layout-sider>
       </n-layout>
     </n-layout-sider>
 
     <!--下方router-view内内容加css只能在各组件内部加-->
-    <n-layout-content content-style="padding:0.25rem 0.25rem 0 0.25rem">
+    <n-layout-content>
       <router-view />
     </n-layout-content>
   </n-layout>

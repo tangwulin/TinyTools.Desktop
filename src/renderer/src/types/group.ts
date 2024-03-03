@@ -1,18 +1,22 @@
-import { Person } from './person'
-
 export class Group {
   id?: number
   name: string
   description: string
-  members: Person[]
+  memberIds: number[] = []
   avatar: string
   score: number = 0
 
-  constructor(name: string, description: string, avatar: string, members?: Person[], id?: number) {
+  constructor(
+    name: string,
+    description: string,
+    avatar: string,
+    memberIds?: number[],
+    id?: number
+  ) {
     this.name = name
     this.description = description
     this.avatar = avatar
-    this.members = members ?? []
+    this.memberIds = memberIds ?? []
     if (id) this.id = id
   }
 }
