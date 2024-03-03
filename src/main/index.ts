@@ -109,9 +109,25 @@ const launchUpdater = () => {
   // })
 
   // const autoUpdater = new NsisUpdater(updaterOptions)
+
+  const header1 = import.meta.env.VITE_UPDATE_HEADER1
+
+  const headers = {}
+  headers[header1] = import.meta.env.VITE_UPDATE_HEADER1_VALUE
+
   const feedUrl = import.meta.env.VITE_UPDATE_URL
   // 配置提供更新的程序，及build中配置的url
-  autoUpdater.setFeedURL(feedUrl)
+  autoUpdater.setFeedURL({
+    provider: 'generic',
+    url: feedUrl,
+    useMultipleRangeRequest: false,
+    requestHeaders: headers
+  })
+  autoUpdater.autoRunAppAfterInstall = true
+  autoUpdater.forceDevUpdateConfig = true
+
+  // 配置请求头
+
   // 是否自动更新，如果为true，当可以更新时(update-available)自动执行更新下载。
   autoUpdater.autoDownload = false
 
@@ -158,7 +174,7 @@ const launchUpdater = () => {
     if (mainWindow) mainWindow.webContents.send('updateDownloaded')
     // 12. 立即更新安装
     ipcMain.on('updateNow', () => {
-      autoUpdater.quitAndInstall()
+      autoUpdater.quitAndInstall(false, true)
     })
   })
 }
