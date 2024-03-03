@@ -1,8 +1,9 @@
 import { sentryVitePlugin } from '@sentry/vite-plugin'
 import vue from '@vitejs/plugin-vue'
 import { execSync } from 'child_process'
-import { defineConfig, externalizeDepsPlugin, splitVendorChunkPlugin } from 'electron-vite'
+import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
 import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
@@ -19,6 +20,7 @@ export default ({ mode }) => {
         sourcemap: true
       },
       plugins: [
+        visualizer({ filename: 'visualizer_main.html', template: 'treemap' }),
         externalizeDepsPlugin(),
         mode === 'production' || mode === 'prod'
           ? sentryVitePlugin({
@@ -34,6 +36,7 @@ export default ({ mode }) => {
         sourcemap: true
       },
       plugins: [
+        visualizer({ filename: 'visualizer_preload.html', template: 'treemap' }),
         externalizeDepsPlugin(),
         mode === 'production' || mode === 'prod'
           ? sentryVitePlugin({
@@ -51,7 +54,7 @@ export default ({ mode }) => {
         }
       },
       plugins: [
-        splitVendorChunkPlugin(),
+        visualizer({ filename: 'visualizer_renderer.html', template: 'treemap' }),
         vue(),
         AutoImport({
           imports: [
@@ -74,7 +77,12 @@ export default ({ mode }) => {
       assetsInclude: ['**/*.xlsx'],
       build: {
         chunkSizeWarningLimit: 1500,
-        sourcemap: true
+        sourcemap: true,
+        rollupOptions: {
+          output: {
+            format: 'es'
+          }
+        }
       },
       define: {
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
