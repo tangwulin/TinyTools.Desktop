@@ -1,5 +1,5 @@
 import { electronApp, is, optimizer } from '@electron-toolkit/utils'
-import * as Sentry from '@sentry/electron'
+import * as Sentry from '@sentry/electron/main'
 import { app, BrowserWindow, ipcMain, Menu, protocol, screen, shell, Tray } from 'electron'
 // import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 import { autoUpdater } from 'electron-updater'
@@ -13,7 +13,7 @@ import { launchDownloader } from './utils/Downloader'
 let tray = null as Tray | null
 let mainWindow = null as BrowserWindow | null
 
-if (app.isPackaged) {
+if (import.meta.env.PROD) {
   Sentry.init({
     dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744'
   })
