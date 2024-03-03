@@ -143,11 +143,7 @@ const checkUpdate = () => {
         <!--          />-->
         <!--        </a>-->
       </div>
-      <n-button
-        type="primary"
-        class="mt-4"
-        @click="checkUpdate"
-        >检查更新</n-button>
+      <n-button type="primary" class="mt-4" @click="checkUpdate">检查更新 </n-button>
       <div class="mt-4 text-xs">
         <p class="mt-auto flex">
           Powered By Aurora Studio
