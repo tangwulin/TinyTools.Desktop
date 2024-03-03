@@ -10,7 +10,7 @@ import {
 import { use } from 'echarts/core'
 import { CanvasRenderer } from 'echarts/renderers'
 import { storeToRefs } from 'pinia'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, ref, shallowRef, watch } from 'vue'
 import VChart from 'vue-echarts'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../db'
@@ -253,8 +253,8 @@ const handler = (item: Person | Group) => {
   })
 }
 
-const chart1Ref = ref()
-const chart2Ref = ref()
+const chart1Ref = shallowRef()
+const chart2Ref = shallowRef()
 
 const drawCharts = () => {
   chart1Ref.value?.resize()

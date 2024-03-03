@@ -296,7 +296,7 @@ if (isElectron) {
         update()
       },
       onNegativeClick: () => {
-        //do nothing
+        beforeUpdate()
       }
     })
   })
