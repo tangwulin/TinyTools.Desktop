@@ -1,5 +1,8 @@
+import deepcopy from 'deepcopy'
+import { dbVersion, schemaVersion, supportedSchemaVersion } from '../config'
+import db from '../db'
+import { schemaVersion1 } from '../interface/schema'
 import { useSettingStore } from '../stores/setting'
-import { schemaVersion1 } from '../types/schema'
 import { addGroups, getGroupList } from './DBServices/Group'
 import { addPersons, getPersonList } from './DBServices/Person'
 import { addRates, getRateList } from './DBServices/Rate'
@@ -7,15 +10,15 @@ import { addSeatHistories, getRateHistoryList } from './DBServices/RateHistories
 import { getSeatHistoryList } from './DBServices/SeatHistories'
 import { addSeatTables, getSeatTable } from './DBServices/SeatTable'
 
-const settingsStore = useSettingStore()
-
 // @ts-ignore:2304
 const version = __APP_VERSION__ as string
 export const getAppData = async () => {
   const timestamp = Date.now()
-  return {
+  const settingsStore = useSettingStore()
+  return deepcopy({
     version: {
-      schema: 1, //TODO: schema version
+      schema: schemaVersion, //TODO: schema version
+      db: dbVersion, //TODO: db version
       app: version
     },
     timestamp,
@@ -25,12 +28,27 @@ export const getAppData = async () => {
     seatHistories: await getSeatHistoryList(),
     rates: await getRateList(),
     rateHistories: await getRateHistoryList(),
-    config: settingsStore
-  } as schemaVersion1
+    config: {
+      coloringEdgeSeats: settingsStore.coloringEdgeSeats,
+      bgms: settingsStore.bgms,
+      finalBgms: settingsStore.finalBgms,
+      isBGMInitialized: settingsStore.isBGMInitialized,
+      enableBgm: settingsStore.enableBgm,
+      enableFinalBgm: settingsStore.enableFinalBgm,
+      enableFadein: settingsStore.enableFadein,
+      fadeinTime: settingsStore.fadeinTime,
+      enableDocking: settingsStore.enableDocking,
+      enableDevelopFeature: settingsStore.enableDevelopFeature,
+      enableOldToolBar: settingsStore.enableOldToolBar,
+      lotteryMode: settingsStore.lotteryMode,
+      isFirstSetup: settingsStore.isFirstSetup,
+      enableAvatar: settingsStore.enableAvatar,
+      enableFallbackAvatar: settingsStore.enableFallbackAvatar,
+      avatarWorks: settingsStore.avatarWorks
+    }
+  }) as schemaVersion1
 }
-export const importData = async (json: string) => {
-  const supportedSchemaVersion = [1]
-
+export const parseJSON = async (json: string) => {
   let data = null as any
 
   try {
@@ -42,7 +60,10 @@ export const importData = async (json: string) => {
   if (!data) {
     throw new Error('不是有效的JSON文件')
   }
+  await importData(data)
+}
 
+export async function importData(data: any) {
   if (!data.version || !data.version.schema || !data.version.app) {
     throw new Error('不是有效的TinyTools数据文件')
   }
@@ -50,6 +71,10 @@ export const importData = async (json: string) => {
   if (!supportedSchemaVersion.includes(data.version.schema)) {
     throw new Error('不支持的数据文件版本')
   }
+
+  await db.open()
+  await db.delete()
+  await db.open()
 
   if (data.persons && Array.isArray(data.persons)) {
     await addPersons(data.persons)

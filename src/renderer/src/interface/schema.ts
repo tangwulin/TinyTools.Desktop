@@ -2,8 +2,10 @@
  *注意：每个 schema 版本的定义都应该把此时的类型照抄下来，而不是直接引用。
  */
 export interface schemaVersion1 {
+  id?: number
   version: {
     schema: 1
+    db: 1
     app: string
   }
   timestamp: number
@@ -59,26 +61,27 @@ export interface schemaVersion1 {
     description: string
     ownerId: number
     ownerType: 'person' | 'group'
-  }[],
-  config:Config
+  }[]
+  config: Config
 }
+
 interface Config {
-  coloringEdgeSeats: boolean;
-  bgms: Audio[];
-  finalBgms: Audio[];
-  isBGMInitialized: boolean;
-  enableBgm: boolean;
-  enableFinalBgm: boolean;
-  enableFadein: boolean;
-  fadeinTime: number;
-  enableDocking: boolean;
-  enableDevelopFeature: boolean;
-  enableOldToolBar: boolean;
-  lotteryMode: number;
-  isFirstSetup: boolean;
-  enableAvatar: boolean;
-  enableFallbackAvatar: boolean;
-  avatarWorks: number[];
+  coloringEdgeSeats: boolean
+  bgms: Audio[]
+  finalBgms: Audio[]
+  isBGMInitialized: boolean
+  enableBgm: boolean
+  enableFinalBgm: boolean
+  enableFadein: boolean
+  fadeinTime: number
+  enableDocking: boolean
+  enableDevelopFeature: boolean
+  enableOldToolBar: boolean
+  lotteryMode: number
+  isFirstSetup: boolean
+  enableAvatar: boolean
+  enableFallbackAvatar: boolean
+  avatarWorks: number[]
 }
 
 // 原始类型

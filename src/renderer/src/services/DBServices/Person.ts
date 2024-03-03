@@ -24,9 +24,13 @@ export const updatePerson = async (id: number, person: Person) =>
 export const deletePerson = async (id: number) => {
   //TODO: 拆分成多个事务，放在每个数据库的模块中
   await db.transaction('rw', [db.persons, db.groups, db.seatTable, db.rateHistories], async () => {
-    await deleteRateHistoriesByOwnerId(id)
-    await deleteMemberByIdFromAllGroups(id)
-    await deleteSomeoneByIdFromAllSeats(id)
-    await db.persons.delete(id)
+    try {
+      await deleteRateHistoriesByOwnerId(id)
+      await deleteMemberByIdFromAllGroups(id)
+      await deleteSomeoneByIdFromAllSeats(id)
+      await db.persons.delete(id)
+    } catch (e) {
+      console.error(e)
+    }
   })
 }

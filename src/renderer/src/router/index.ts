@@ -164,6 +164,11 @@ const routes: RouteRecordRaw[] = [
     ]
   },
   {
+    path: '/afterupdate',
+    name: 'afterupdate',
+    component: () => import('../views/MainWindow/AfterUpdateView.vue')
+  },
+  {
     path: '/dock',
     name: 'dock',
     component: () => import('../views/DockWindow.vue')

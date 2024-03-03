@@ -1,4 +1,5 @@
 import Dexie from 'dexie'
+import { dbVersion } from './config'
 import { CourseTableItem } from './interface/course'
 import { Group } from './types/group'
 import { Person } from './types/person'
@@ -20,7 +21,7 @@ export class AppDatabase extends Dexie {
 
   constructor() {
     super('AppDatabase')
-    this.version(1).stores({
+    this.version(dbVersion).stores({
       persons: '++id, name, genderCode, number',
       groups: '++id, name, description',
       seatHistories: 'timestamp, type',

@@ -12,8 +12,11 @@ import { Gift as GiftIcon, Menu2 as MenuIcon } from '@vicons/tabler'
 import { UpdateInfo } from 'builder-util-runtime'
 import { NIcon, useDialog } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { Component, h, onMounted, ref, watch } from 'vue'
-import { RouterLink } from 'vue-router'
+import { Component, h, onBeforeMount, onMounted, ref, watch } from 'vue'
+import { RouterLink, useRouter } from 'vue-router'
+import backupDB from '../services/BackupService'
+const router = useRouter()
+import { getAppData } from '../services/DataService'
 import { useGeneralStore } from '../stores/general'
 
 let isElectron: boolean
@@ -290,17 +293,31 @@ if (isElectron) {
       positiveText: '是',
       negativeText: '否',
       onPositiveClick: () => {
-        electron.ipcRenderer.send('updateNow')
+        update()
       },
       onNegativeClick: () => {
         //do nothing
       }
     })
   })
-
-  // 12. 告诉主进程，立即更新
-  // electron.ipcRenderer.send('updateNow')
 }
+const beforeUpdate = async () => {
+  const data = await getAppData()
+  await backupDB.addBackup(data)
+}
+
+const update = async () => {
+  await beforeUpdate()
+  localStorage.setItem('updateFlag', String(true))
+  electron.ipcRenderer.send('updateNow')
+}
+
+onBeforeMount(() => {
+  const flag = localStorage.getItem('updateFlag')
+  if (flag === 'true') {
+    router.push({ name: 'afterupdate' })
+  }
+})
 </script>
 <template>
   <n-layout content-style="height:100vh;width:100%" has-sider>
