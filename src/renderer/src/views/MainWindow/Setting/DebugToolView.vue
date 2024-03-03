@@ -6,7 +6,9 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
 import { LocalCacheProvider } from '../../../providers/LocalCacheProvider'
+import backupDB from '../../../services/BackupService'
 import { createCache } from '../../../services/CacheService'
+import { getAppData } from '../../../services/DataService'
 import { useSettingStore } from '../../../stores/setting'
 
 const db = AppDatabase.getInstance()
@@ -95,12 +97,12 @@ const getThumbnail = async () => {
 const throwError = () => {
   throw new Error('测试错误')
 }
-// const getCacheTasks = async () => {
-//   const result = await electron.ipcRenderer.invoke('getCacheTasks')
-//   console.log(result)
-//   message.success('获取成功！')
-//   message.info('结果：' + JSON.stringify(result))
-// }
+
+const testAddBackup = async () => {
+  const data = await getAppData()
+  console.log(data)
+  await backupDB.addBackup(data)
+}
 </script>
 
 <template>
@@ -167,6 +169,10 @@ const throwError = () => {
     <n-space class="items-center">
       <p>手动抛出错误</p>
       <n-button round type="primary" @click="throwError">抛出测试错误</n-button>
+    </n-space>
+    <n-space class="items-center">
+      <p>备份测试</p>
+      <n-button round type="primary" @click="testAddBackup">备份测试</n-button>
     </n-space>
     <n-space class="items-center">
       <p>缓存测试</p>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { ElectronAPI } from '@electron-toolkit/preload'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import logo from '../../assets/images/logo.png'
@@ -7,6 +8,14 @@ import { useSettingStore } from '../../stores/setting'
 const setting = useSettingStore()
 const { enableDevelopFeature } = storeToRefs(setting)
 
+let isElectron: boolean
+const electron = window.electron as ElectronAPI
+
+try {
+  isElectron = !!window.electron
+} catch (e) {
+  isElectron = false
+}
 /* eslint-disable */
 // noinspection TypeScriptUnresolvedReference
 // @ts-ignore:2304
@@ -36,6 +45,12 @@ const clickHandler = () => {
   if (enableDevelopFeature.value)
     if (clickTimes >= 5) message.success('测试功能已开启！请重新启动程序')
     else message.info('测试功能已开启！')
+}
+
+const checkUpdate = () => {
+  if (isElectron) {
+    electron.ipcRenderer.send('checkForUpdates')
+  }
 }
 </script>
 <template>
@@ -128,6 +143,11 @@ const clickHandler = () => {
         <!--          />-->
         <!--        </a>-->
       </div>
+      <n-button
+        type="primary"
+        class="mt-4"
+        @click="checkUpdate"
+        >检查更新</n-button>
       <div class="mt-4 text-xs">
         <p class="mt-auto flex">
           Powered By Aurora Studio
