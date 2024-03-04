@@ -15,7 +15,6 @@ files:
   - '!logo.png'
   - '!postcss.config.ts'
   - '!tailwind.config.ts'
-asar: false
 asarUnpack:
   - resources/**
 win:
