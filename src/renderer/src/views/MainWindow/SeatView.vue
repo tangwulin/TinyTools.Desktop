@@ -176,6 +176,7 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
     if (i < series.length) {
       //去除所有座位的颜色
       seatTable.value = seatTable.value.map((item) => {
+        if (item.type !== 'seat') return item
         ;(item.data as Seat).color = undefined
         return item
       }) //给当前座位上色
@@ -190,6 +191,7 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
 
       //去除所有座位的颜色
       seatTable.value = seatTable.value.map((item) => {
+        if (item.type !== 'seat') return item
         ;(item.data as Seat).color = undefined
         return item as SeatTableItem
       })
@@ -322,7 +324,6 @@ const rollbackHandler = (x: SeatHistory) => {
   if (isPreview.value) {
     exitPreview()
   }
-  message.error('暂未实现')
   seatTable.value = x.seatTable
   saveHistory(x.seatTable, '回滚而来')
   message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
