@@ -51,6 +51,9 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
+      - name: Remove UNNECESSARY files
+        run: rm dist/win-unpacked -Recurse -Force
+
       - name: Upload To Github Release Asset
         uses: softprops/action-gh-release@v1
         with:
