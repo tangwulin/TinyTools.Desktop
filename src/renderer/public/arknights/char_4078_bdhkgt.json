@@ -1,6 +1,11 @@
 {
   "name": "截云",
   "charaKey": "char_4078_bdhkgt",
+  "images": [
+    "https://prts.wiki/images/5/5b/立绘_截云_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2e/立绘_截云_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d3/立绘_截云_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4078_bdhkgt",
     "中文-普通话": "voice_cn/char_4078_bdhkgt",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/5b/立绘_截云_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_截云_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_截云_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

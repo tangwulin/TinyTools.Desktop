@@ -1,6 +1,11 @@
 {
   "name": "异客",
   "charaKey": "char_472_pasngr",
+  "images": [
+    "https://prts.wiki/images/1/16/立绘_异客_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/3f/立绘_异客_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/74/立绘_异客_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_472_pasngr",
     "中文-普通话": "voice_cn/char_472_pasngr",
@@ -1620,10 +1625,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/16/立绘_异客_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3f/立绘_异客_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/74/立绘_异客_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

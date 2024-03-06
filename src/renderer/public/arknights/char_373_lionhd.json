@@ -1,6 +1,12 @@
 {
   "name": "莱恩哈特",
   "charaKey": "char_373_lionhd",
+  "images": [
+    "https://prts.wiki/images/b/bf/立绘_莱恩哈特_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/61/立绘_莱恩哈特_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f0/立绘_莱恩哈特_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/6f/立绘_莱恩哈特_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_373_lionhd",
     "中文-普通话": "voice_cn/char_373_lionhd"
@@ -916,11 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bf/立绘_莱恩哈特_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/61/立绘_莱恩哈特_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f0/立绘_莱恩哈特_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_莱恩哈特_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

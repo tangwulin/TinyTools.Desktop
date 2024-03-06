@@ -1,6 +1,12 @@
 {
   "name": "史尔特尔",
   "charaKey": "char_350_surtr",
+  "images": [
+    "https://prts.wiki/images/0/0c/立绘_史尔特尔_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2e/立绘_史尔特尔_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/af/立绘_史尔特尔_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/69/立绘_史尔特尔_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_350_surtr",
     "中文-普通话": "voice_cn/char_350_surtr",
@@ -917,11 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/0/0c/立绘_史尔特尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_史尔特尔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/af/立绘_史尔特尔_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/69/立绘_史尔特尔_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

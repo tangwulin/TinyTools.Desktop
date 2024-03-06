@@ -1,6 +1,12 @@
 {
   "name": "可颂",
   "charaKey": "char_201_moeshd",
+  "images": [
+    "https://prts.wiki/images/6/62/立绘_可颂_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/8d/立绘_可颂_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/02/立绘_可颂_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c7/立绘_可颂_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_201_moeshd",
     "中文-普通话": "voice_cn/char_201_moeshd",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/62/立绘_可颂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8d/立绘_可颂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/02/立绘_可颂_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c7/立绘_可颂_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

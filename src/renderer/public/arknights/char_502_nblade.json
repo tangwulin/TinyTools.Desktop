@@ -1,6 +1,9 @@
 {
   "name": "夜刀",
   "charaKey": "char_502_nblade",
+  "images": [
+    "https://prts.wiki/images/a/ad/立绘_夜刀_1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_502_nblade",
     "中文-普通话": "voice_cn/char_502_nblade",
@@ -814,8 +817,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/ad/立绘_夜刀_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

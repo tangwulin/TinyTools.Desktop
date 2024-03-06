@@ -1,6 +1,12 @@
 {
   "name": "蜜蜡",
   "charaKey": "char_344_beewax",
+  "images": [
+    "https://prts.wiki/images/3/3d/立绘_蜜蜡_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2d/立绘_蜜蜡_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b8/立绘_蜜蜡_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/19/立绘_蜜蜡_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_344_beewax",
     "中文-普通话": "voice_cn/char_344_beewax",
@@ -917,11 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/3d/立绘_蜜蜡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2d/立绘_蜜蜡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_蜜蜡_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/19/立绘_蜜蜡_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

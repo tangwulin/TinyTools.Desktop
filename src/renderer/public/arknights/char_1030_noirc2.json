@@ -1,6 +1,7 @@
 {
   "name": "火龙S黑角",
   "charaKey": "char_1030_noirc2",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_1030_noirc2",
     "中文-普通话": "voice_cn/char_1030_noirc2",
@@ -918,9 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d2/立绘_火龙S黑角_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2b/立绘_火龙S黑角_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

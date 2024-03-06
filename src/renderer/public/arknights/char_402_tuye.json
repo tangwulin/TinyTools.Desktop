@@ -1,6 +1,11 @@
 {
   "name": "图耶",
   "charaKey": "char_402_tuye",
+  "images": [
+    "https://prts.wiki/images/8/8a/立绘_图耶_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a9/立绘_图耶_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/cd/立绘_图耶_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_402_tuye",
     "中文-普通话": "voice_cn/char_402_tuye",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/8a/立绘_图耶_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a9/立绘_图耶_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cd/立绘_图耶_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

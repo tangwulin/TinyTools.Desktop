@@ -1,6 +1,11 @@
 {
   "name": "多萝西",
   "charaKey": "char_4048_doroth",
+  "images": [
+    "https://prts.wiki/images/7/7b/立绘_多萝西_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1f/立绘_多萝西_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/ee/立绘_多萝西_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4048_doroth",
     "中文-普通话": "voice_cn/char_4048_doroth",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/7b/立绘_多萝西_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_多萝西_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ee/立绘_多萝西_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

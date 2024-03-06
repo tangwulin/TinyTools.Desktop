@@ -1,6 +1,10 @@
 {
   "name": "琳琅诗怀雅",
   "charaKey": "char_1033_swire2",
+  "images": [
+    "https://prts.wiki/images/a/a1/立绘_琳琅诗怀雅_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0f/立绘_琳琅诗怀雅_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_1033_swire2",
     "中文-普通话": "voice_cn/char_1033_swire2",
@@ -919,9 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/a1/立绘_琳琅诗怀雅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_琳琅诗怀雅_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

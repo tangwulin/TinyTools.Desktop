@@ -1,6 +1,7 @@
 {
   "name": "谜图",
   "charaKey": "char_4017_puzzle",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_4017_puzzle",
     "中文-普通话": "voice_cn/char_4017_puzzle",
@@ -918,10 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/1e/立绘_谜图_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d7/立绘_谜图_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0e/立绘_谜图_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

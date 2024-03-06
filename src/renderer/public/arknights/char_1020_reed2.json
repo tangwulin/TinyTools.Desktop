@@ -1,6 +1,11 @@
 {
   "name": "焰影苇草",
   "charaKey": "char_1020_reed2",
+  "images": [
+    "https://prts.wiki/images/7/7c/立绘_焰影苇草_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d3/立绘_焰影苇草_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/36/立绘_焰影苇草_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_1020_reed2",
     "中文-普通话": "voice_cn/char_1020_reed2",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/7c/立绘_焰影苇草_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_焰影苇草_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/36/立绘_焰影苇草_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

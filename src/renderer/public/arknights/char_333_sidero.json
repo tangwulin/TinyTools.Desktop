@@ -1,6 +1,7 @@
 {
   "name": "铸铁",
   "charaKey": "char_333_sidero",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_333_sidero",
     "中文-普通话": "voice_cn/char_333_sidero",
@@ -917,10 +918,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/16/立绘_铸铁_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/81/立绘_铸铁_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/47/立绘_铸铁_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

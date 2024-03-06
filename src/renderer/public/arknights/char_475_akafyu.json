@@ -1,6 +1,11 @@
 {
   "name": "赤冬",
   "charaKey": "char_475_akafyu",
+  "images": [
+    "https://prts.wiki/images/b/b2/立绘_赤冬_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/07/立绘_赤冬_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/73/立绘_赤冬_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_475_akafyu",
     "中文-普通话": "voice_cn/char_475_akafyu"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/b2/立绘_赤冬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/07/立绘_赤冬_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/73/立绘_赤冬_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

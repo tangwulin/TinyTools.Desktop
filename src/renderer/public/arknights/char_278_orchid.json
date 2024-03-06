@@ -1,6 +1,10 @@
 {
   "name": "梓兰",
   "charaKey": "char_278_orchid",
+  "images": [
+    "https://prts.wiki/images/b/bb/立绘_梓兰_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/21/立绘_梓兰_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_278_orchid",
     "中文-普通话": "voice_cn/char_278_orchid",
@@ -866,9 +870,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bb/立绘_梓兰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/21/立绘_梓兰_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

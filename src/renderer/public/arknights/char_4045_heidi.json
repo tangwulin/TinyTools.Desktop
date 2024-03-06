@@ -1,6 +1,11 @@
 {
   "name": "海蒂",
   "charaKey": "char_4045_heidi",
+  "images": [
+    "https://prts.wiki/images/6/6a/立绘_海蒂_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f7/立绘_海蒂_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2e/立绘_海蒂_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4045_heidi",
     "中文-普通话": "voice_cn/char_4045_heidi",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/6a/立绘_海蒂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f7/立绘_海蒂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_海蒂_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

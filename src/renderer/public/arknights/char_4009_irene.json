@@ -1,6 +1,11 @@
 {
   "name": "艾丽妮",
   "charaKey": "char_4009_irene",
+  "images": [
+    "https://prts.wiki/images/5/55/立绘_艾丽妮_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/40/立绘_艾丽妮_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2e/立绘_艾丽妮_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4009_irene",
     "中文-普通话": "voice_cn/char_4009_irene",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/55/立绘_艾丽妮_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/40/立绘_艾丽妮_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_艾丽妮_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

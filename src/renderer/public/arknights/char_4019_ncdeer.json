@@ -1,6 +1,11 @@
 {
   "name": "九色鹿",
   "charaKey": "char_4019_ncdeer",
+  "images": [
+    "https://prts.wiki/images/5/5e/立绘_九色鹿_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b6/立绘_九色鹿_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/24/立绘_九色鹿_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "联动": "voice_cn/char_4019_ncdeer"
   },
@@ -915,10 +920,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/5e/立绘_九色鹿_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b6/立绘_九色鹿_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_九色鹿_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

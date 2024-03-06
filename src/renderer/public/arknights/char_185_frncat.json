@@ -1,6 +1,11 @@
 {
   "name": "慕斯",
   "charaKey": "char_185_frncat",
+  "images": [
+    "https://prts.wiki/images/c/c5/立绘_慕斯_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d3/立绘_慕斯_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/52/立绘_慕斯_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_185_frncat",
     "中文-普通话": "voice_cn/char_185_frncat",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c5/立绘_慕斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_慕斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/52/立绘_慕斯_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

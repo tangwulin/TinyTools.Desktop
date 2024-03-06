@@ -1,6 +1,10 @@
 {
   "name": "玫拉",
   "charaKey": "char_4006_melnte",
+  "images": [
+    "https://prts.wiki/images/c/c3/立绘_玫拉_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fc/立绘_玫拉_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4006_melnte",
     "中文-普通话": "voice_cn/char_4006_melnte",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c3/立绘_玫拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_玫拉_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

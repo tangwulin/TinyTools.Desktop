@@ -1,6 +1,11 @@
 {
   "name": "深靛",
   "charaKey": "char_469_indigo",
+  "images": [
+    "https://prts.wiki/images/a/a1/立绘_深靛_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/09/立绘_深靛_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9e/立绘_深靛_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_469_indigo",
     "中文-普通话": "voice_cn/char_469_indigo"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/a1/立绘_深靛_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/09/立绘_深靛_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9e/立绘_深靛_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

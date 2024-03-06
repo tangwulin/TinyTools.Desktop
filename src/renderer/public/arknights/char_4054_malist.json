@@ -1,6 +1,11 @@
 {
   "name": "至简",
   "charaKey": "char_4054_malist",
+  "images": [
+    "https://prts.wiki/images/d/d5/立绘_至简_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fb/立绘_至简_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/ff/立绘_至简_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4054_malist",
     "中文-普通话": "voice_cn/char_4054_malist",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d5/立绘_至简_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fb/立绘_至简_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/ff/立绘_至简_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

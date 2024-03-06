@@ -1,6 +1,10 @@
 {
   "name": "贝娜",
   "charaKey": "char_369_bena",
+  "images": [
+    "https://prts.wiki/images/f/f5/立绘_贝娜_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b1/立绘_贝娜_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_369_bena",
     "中文-普通话": "voice_cn/char_369_bena"
@@ -916,9 +920,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f5/立绘_贝娜_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b1/立绘_贝娜_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

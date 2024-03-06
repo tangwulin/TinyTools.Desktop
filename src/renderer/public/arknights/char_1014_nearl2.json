@@ -1,6 +1,11 @@
 {
   "name": "耀骑士临光",
   "charaKey": "char_1014_nearl2",
+  "images": [
+    "https://prts.wiki/images/9/91/立绘_耀骑士临光_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/ec/立绘_耀骑士临光_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/5d/立绘_耀骑士临光_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_1014_nearl2",
     "中文-普通话": "voice_cn/char_1014_nearl2",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/91/立绘_耀骑士临光_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ec/立绘_耀骑士临光_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5d/立绘_耀骑士临光_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

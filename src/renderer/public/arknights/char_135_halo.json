@@ -1,6 +1,11 @@
 {
   "name": "星源",
   "charaKey": "char_135_halo",
+  "images": [
+    "https://prts.wiki/images/a/ad/立绘_星源_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/5f/立绘_星源_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/65/立绘_星源_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_135_halo",
     "中文-普通话": "voice_cn/char_135_halo",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/ad/立绘_星源_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5f/立绘_星源_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/65/立绘_星源_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "酸糖",
   "charaKey": "char_366_acdrop",
+  "images": [
+    "https://prts.wiki/images/b/bd/立绘_酸糖_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2e/立绘_酸糖_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/3d/立绘_酸糖_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_366_acdrop",
     "中文-普通话": "voice_cn/char_366_acdrop",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bd/立绘_酸糖_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_酸糖_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_酸糖_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

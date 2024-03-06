@@ -1,6 +1,7 @@
 {
   "name": "羽毛笔",
   "charaKey": "char_421_crow",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_421_crow",
     "中文-普通话": "voice_cn/char_421_crow"
@@ -916,10 +917,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/37/立绘_羽毛笔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/be/立绘_羽毛笔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/be/立绘_羽毛笔_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

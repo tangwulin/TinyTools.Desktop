@@ -1,6 +1,10 @@
 {
   "name": "摩根",
   "charaKey": "char_154_morgan",
+  "images": [
+    "https://prts.wiki/images/5/59/立绘_摩根_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d1/立绘_摩根_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_154_morgan",
     "中文-普通话": "voice_cn/char_154_morgan",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/59/立绘_摩根_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d1/立绘_摩根_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

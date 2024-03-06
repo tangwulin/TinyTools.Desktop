@@ -1,6 +1,10 @@
 {
   "name": "铎铃",
   "charaKey": "char_4083_chimes",
+  "images": [
+    "https://prts.wiki/images/9/96/立绘_铎铃_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/36/立绘_铎铃_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4083_chimes",
     "中文-普通话": "voice_cn/char_4083_chimes",
@@ -918,9 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/96/立绘_铎铃_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/36/立绘_铎铃_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

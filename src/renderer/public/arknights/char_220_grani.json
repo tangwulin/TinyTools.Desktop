@@ -1,6 +1,11 @@
 {
   "name": "格拉尼",
   "charaKey": "char_220_grani",
+  "images": [
+    "https://prts.wiki/images/c/c4/立绘_格拉尼_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/22/立绘_格拉尼_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/10/立绘_格拉尼_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_220_grani",
     "中文-普通话": "voice_cn/char_220_grani",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c4/立绘_格拉尼_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_格拉尼_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/10/立绘_格拉尼_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

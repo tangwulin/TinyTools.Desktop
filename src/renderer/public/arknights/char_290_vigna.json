@@ -1,6 +1,12 @@
 {
   "name": "红豆",
   "charaKey": "char_290_vigna",
+  "images": [
+    "https://prts.wiki/images/7/70/立绘_红豆_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/26/立绘_红豆_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/df/立绘_红豆_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d7/立绘_红豆_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_290_vigna",
     "中文-普通话": "voice_cn/char_290_vigna",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/70/立绘_红豆_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/26/立绘_红豆_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/df/立绘_红豆_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d7/立绘_红豆_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

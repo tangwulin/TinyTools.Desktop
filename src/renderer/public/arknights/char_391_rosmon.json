@@ -1,6 +1,11 @@
 {
   "name": "迷迭香",
   "charaKey": "char_391_rosmon",
+  "images": [
+    "https://prts.wiki/images/5/59/立绘_迷迭香_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/07/立绘_迷迭香_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/ba/立绘_迷迭香_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_391_rosmon",
     "中文-普通话": "voice_cn/char_391_rosmon",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/59/立绘_迷迭香_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/07/立绘_迷迭香_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/ba/立绘_迷迭香_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,9 @@
 {
   "name": "THRM-EX",
   "charaKey": "char_376_therex",
+  "images": [
+    "https://prts.wiki/images/8/8a/立绘_THRM-EX_1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_376_therex",
     "中文-普通话": "voice_cn/char_376_therex"
@@ -812,8 +815,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/8a/立绘_THRM-EX_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

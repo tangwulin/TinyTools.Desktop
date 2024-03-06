@@ -1,6 +1,11 @@
 {
   "name": "赫拉格",
   "charaKey": "char_188_helage",
+  "images": [
+    "https://prts.wiki/images/4/48/立绘_赫拉格_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/10/立绘_赫拉格_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/8c/立绘_赫拉格_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_188_helage",
     "中文-普通话": "voice_cn/char_188_helage",
@@ -919,10 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/48/立绘_赫拉格_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/10/立绘_赫拉格_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8c/立绘_赫拉格_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

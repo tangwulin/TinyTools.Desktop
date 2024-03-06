@@ -1,6 +1,12 @@
 {
   "name": "蜜莓",
   "charaKey": "char_449_glider",
+  "images": [
+    "https://prts.wiki/images/f/f3/立绘_蜜莓_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fa/立绘_蜜莓_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/73/立绘_蜜莓_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/6d/立绘_蜜莓_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_449_glider",
     "中文-普通话": "voice_cn/char_449_glider",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f3/立绘_蜜莓_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fa/立绘_蜜莓_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/73/立绘_蜜莓_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6d/立绘_蜜莓_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

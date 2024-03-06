@@ -1,6 +1,11 @@
 {
   "name": "战车",
   "charaKey": "char_459_tachak",
+  "images": [
+    "https://prts.wiki/images/7/7b/立绘_战车_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/33/立绘_战车_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f1/立绘_战车_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "联动": "voice/char_459_tachak"
   },
@@ -915,10 +920,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/7b/立绘_战车_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/33/立绘_战车_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f1/立绘_战车_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

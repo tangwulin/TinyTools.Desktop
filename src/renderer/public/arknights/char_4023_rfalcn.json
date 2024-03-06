@@ -1,6 +1,10 @@
 {
   "name": "红隼",
   "charaKey": "char_4023_rfalcn",
+  "images": [
+    "https://prts.wiki/images/9/94/立绘_红隼_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/19/立绘_红隼_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4023_rfalcn",
     "中文-普通话": "voice_cn/char_4023_rfalcn"
@@ -496,9 +500,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/94/立绘_红隼_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/19/立绘_红隼_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

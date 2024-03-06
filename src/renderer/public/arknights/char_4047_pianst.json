@@ -1,6 +1,11 @@
 {
   "name": "车尔尼",
   "charaKey": "char_4047_pianst",
+  "images": [
+    "https://prts.wiki/images/8/8a/立绘_车尔尼_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/6e/立绘_车尔尼_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/87/立绘_车尔尼_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4047_pianst",
     "中文-普通话": "voice_cn/char_4047_pianst",
@@ -919,10 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/8a/立绘_车尔尼_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6e/立绘_车尔尼_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_车尔尼_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

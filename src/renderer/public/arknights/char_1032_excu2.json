@@ -1,6 +1,10 @@
 {
   "name": "圣约送葬人",
   "charaKey": "char_1032_excu2",
+  "images": [
+    "https://prts.wiki/images/7/71/立绘_圣约送葬人_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/94/立绘_圣约送葬人_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_1032_excu2",
     "中文-普通话": "voice_cn/char_1032_excu2",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/71/立绘_圣约送葬人_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/94/立绘_圣约送葬人_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

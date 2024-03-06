@@ -1,6 +1,11 @@
 {
   "name": "幽灵鲨",
   "charaKey": "char_143_ghost",
+  "images": [
+    "https://prts.wiki/images/5/50/立绘_幽灵鲨_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d3/立绘_幽灵鲨_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/08/立绘_幽灵鲨_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_143_ghost",
     "中文-普通话": "voice_cn/char_143_ghost",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/50/立绘_幽灵鲨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_幽灵鲨_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/08/立绘_幽灵鲨_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "凯尔希",
   "charaKey": "char_003_kalts",
+  "images": [
+    "https://prts.wiki/images/7/72/立绘_凯尔希_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/65/立绘_凯尔希_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0f/立绘_凯尔希_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_003_kalts",
     "中文-普通话": "voice_cn/char_003_kalts",
@@ -1482,10 +1487,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/72/立绘_凯尔希_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/65/立绘_凯尔希_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_凯尔希_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

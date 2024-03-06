@@ -1,6 +1,11 @@
 {
   "name": "乌有",
   "charaKey": "char_455_nothin",
+  "images": [
+    "https://prts.wiki/images/b/bb/立绘_乌有_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/68/立绘_乌有_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2f/立绘_乌有_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_455_nothin",
     "中文-普通话": "voice_cn/char_455_nothin",
@@ -1198,10 +1203,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bb/立绘_乌有_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/68/立绘_乌有_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2f/立绘_乌有_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

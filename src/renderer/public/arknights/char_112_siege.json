@@ -1,6 +1,12 @@
 {
   "name": "推进之王",
   "charaKey": "char_112_siege",
+  "images": [
+    "https://prts.wiki/images/6/6f/立绘_推进之王_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/dd/立绘_推进之王_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c1/立绘_推进之王_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/bd/立绘_推进之王_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_112_siege",
     "中文-普通话": "voice_cn/char_112_siege",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/6f/立绘_推进之王_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/dd/立绘_推进之王_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c1/立绘_推进之王_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bd/立绘_推进之王_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

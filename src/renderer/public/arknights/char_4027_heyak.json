@@ -1,6 +1,10 @@
 {
   "name": "霍尔海雅",
   "charaKey": "char_4027_heyak",
+  "images": [
+    "https://prts.wiki/images/4/4f/立绘_霍尔海雅_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/27/立绘_霍尔海雅_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4027_heyak",
     "中文-普通话": "voice_cn/char_4027_heyak",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4f/立绘_霍尔海雅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/27/立绘_霍尔海雅_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

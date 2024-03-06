@@ -1,6 +1,11 @@
 {
   "name": "灰毫",
   "charaKey": "char_431_ashlok",
+  "images": [
+    "https://prts.wiki/images/e/ea/立绘_灰毫_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/37/立绘_灰毫_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/dc/立绘_灰毫_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_431_ashlok",
     "中文-普通话": "voice_cn/char_431_ashlok",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/ea/立绘_灰毫_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/37/立绘_灰毫_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/dc/立绘_灰毫_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

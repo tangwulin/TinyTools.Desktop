@@ -1,6 +1,12 @@
 {
   "name": "讯使",
   "charaKey": "char_198_blackd",
+  "images": [
+    "https://prts.wiki/images/1/16/立绘_讯使_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/cf/立绘_讯使_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/39/立绘_讯使_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/7e/立绘_讯使_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_198_blackd",
     "中文-普通话": "voice_cn/char_198_blackd",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/16/立绘_讯使_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cf/立绘_讯使_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/39/立绘_讯使_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7e/立绘_讯使_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

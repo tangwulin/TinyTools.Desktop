@@ -1,6 +1,10 @@
 {
   "name": "克洛丝",
   "charaKey": "char_124_kroos",
+  "images": [
+    "https://prts.wiki/images/b/ba/立绘_克洛丝_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/ab/立绘_克洛丝_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_124_kroos",
     "中文-普通话": "voice_cn/char_124_kroos",
@@ -840,9 +844,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/ba/立绘_克洛丝_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ab/立绘_克洛丝_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

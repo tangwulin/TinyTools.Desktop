@@ -1,6 +1,11 @@
 {
   "name": "闪灵",
   "charaKey": "char_147_shining",
+  "images": [
+    "https://prts.wiki/images/e/e9/立绘_闪灵_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c7/立绘_闪灵_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/50/立绘_闪灵_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_147_shining",
     "中文-普通话": "voice_cn/char_147_shining",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/e9/立绘_闪灵_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c7/立绘_闪灵_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/50/立绘_闪灵_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

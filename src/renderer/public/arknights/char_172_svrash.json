@@ -1,6 +1,12 @@
 {
   "name": "银灰",
   "charaKey": "char_172_svrash",
+  "images": [
+    "https://prts.wiki/images/0/03/立绘_银灰_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/5f/立绘_银灰_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2d/立绘_银灰_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/3d/立绘_银灰_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_172_svrash",
     "中文-普通话": "voice_cn/char_172_svrash",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/0/03/立绘_银灰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5f/立绘_银灰_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2d/立绘_银灰_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_银灰_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

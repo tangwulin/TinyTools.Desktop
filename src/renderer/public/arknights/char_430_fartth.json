@@ -1,6 +1,11 @@
 {
   "name": "远牙",
   "charaKey": "char_430_fartth",
+  "images": [
+    "https://prts.wiki/images/d/d6/立绘_远牙_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/24/立绘_远牙_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9d/立绘_远牙_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_430_fartth",
     "中文-普通话": "voice_cn/char_430_fartth",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d6/立绘_远牙_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_远牙_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9d/立绘_远牙_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

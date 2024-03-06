@@ -1,6 +1,12 @@
 {
   "name": "崖心",
   "charaKey": "char_173_slchan",
+  "images": [
+    "https://prts.wiki/images/a/a7/立绘_崖心_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/da/立绘_崖心_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0d/立绘_崖心_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a0/立绘_崖心_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_173_slchan",
     "中文-普通话": "voice_cn/char_173_slchan",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/a7/立绘_崖心_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/da/立绘_崖心_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0d/立绘_崖心_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a0/立绘_崖心_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

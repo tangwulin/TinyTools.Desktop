@@ -1,6 +1,11 @@
 {
   "name": "卡达",
   "charaKey": "char_328_cammou",
+  "images": [
+    "https://prts.wiki/images/1/1a/立绘_卡达_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b8/立绘_卡达_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b5/立绘_卡达_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_328_cammou",
     "中文-普通话": "voice_cn/char_328_cammou",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/1a/立绘_卡达_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_卡达_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b5/立绘_卡达_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

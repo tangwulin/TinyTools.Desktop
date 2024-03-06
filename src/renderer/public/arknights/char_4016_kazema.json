@@ -1,6 +1,11 @@
 {
   "name": "风丸",
   "charaKey": "char_4016_kazema",
+  "images": [
+    "https://prts.wiki/images/8/88/立绘_风丸_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b8/立绘_风丸_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fd/立绘_风丸_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4016_kazema",
     "中文-普通话": "voice_cn/char_4016_kazema",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/88/立绘_风丸_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_风丸_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fd/立绘_风丸_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

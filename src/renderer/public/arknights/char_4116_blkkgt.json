@@ -1,6 +1,10 @@
 {
   "name": "锏",
   "charaKey": "char_4116_blkkgt",
+  "images": [
+    "https://prts.wiki/images/5/58/立绘_锏_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/95/立绘_锏_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4116_blkkgt",
     "中文-普通话": "voice_cn/char_4116_blkkgt"
@@ -496,9 +500,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/58/立绘_锏_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/95/立绘_锏_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

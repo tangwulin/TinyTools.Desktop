@@ -1,6 +1,11 @@
 {
   "name": "灵知",
   "charaKey": "char_206_gnosis",
+  "images": [
+    "https://prts.wiki/images/4/4b/立绘_灵知_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/09/立绘_灵知_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9c/立绘_灵知_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_206_gnosis",
     "中文-普通话": "voice_cn/char_206_gnosis",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4b/立绘_灵知_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/09/立绘_灵知_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9c/立绘_灵知_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

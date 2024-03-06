@@ -1,6 +1,11 @@
 {
   "name": "苇草",
   "charaKey": "char_261_sddrag",
+  "images": [
+    "https://prts.wiki/images/0/0a/立绘_苇草_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/59/立绘_苇草_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/8a/立绘_苇草_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_261_sddrag",
     "中文-普通话": "voice_cn/char_261_sddrag",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/0/0a/立绘_苇草_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/59/立绘_苇草_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8a/立绘_苇草_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "艾雅法拉",
   "charaKey": "char_180_amgoat",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_180_amgoat",
     "中文-普通话": "voice_cn/char_180_amgoat",
@@ -918,10 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c0/立绘_艾雅法拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/21/立绘_艾雅法拉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e8/立绘_艾雅法拉_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "流明",
   "charaKey": "char_4042_lumen",
+  "images": [
+    "https://prts.wiki/images/9/96/立绘_流明_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/ae/立绘_流明_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1e/立绘_流明_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4042_lumen",
     "中文-普通话": "voice_cn/char_4042_lumen",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/96/立绘_流明_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ae/立绘_流明_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1e/立绘_流明_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

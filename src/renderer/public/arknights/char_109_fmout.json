@@ -1,6 +1,11 @@
 {
   "name": "远山",
   "charaKey": "char_109_fmout",
+  "images": [
+    "https://prts.wiki/images/4/4a/立绘_远山_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f3/立绘_远山_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/71/立绘_远山_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_109_fmout",
     "中文-普通话": "voice_cn/char_109_fmout",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4a/立绘_远山_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f3/立绘_远山_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/71/立绘_远山_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

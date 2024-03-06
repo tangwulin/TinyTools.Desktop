@@ -1,6 +1,9 @@
 {
   "name": "12F",
   "charaKey": "char_009_12fce",
+  "images": [
+    "https://prts.wiki/images/6/61/立绘_12F_1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_009_12fce",
     "中文-普通话": "voice_cn/char_009_12fce",
@@ -814,8 +817,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/61/立绘_12F_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

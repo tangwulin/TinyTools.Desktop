@@ -1,6 +1,10 @@
 {
   "name": "炎熔",
   "charaKey": "char_121_lava",
+  "images": [
+    "https://prts.wiki/images/8/80/立绘_炎熔_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/cb/立绘_炎熔_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_121_lava",
     "中文-普通话": "voice_cn/char_121_lava",
@@ -814,9 +818,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/80/立绘_炎熔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cb/立绘_炎熔_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

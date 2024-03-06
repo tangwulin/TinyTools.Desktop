@@ -1,6 +1,10 @@
 {
   "name": "黍",
   "charaKey": "char_2025_shu",
+  "images": [
+    "https://prts.wiki/images/7/7e/立绘_黍_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/cf/立绘_黍_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_2025_shu",
     "中文-普通话": "voice_cn/char_2025_shu",
@@ -637,9 +641,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/7e/立绘_黍_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cf/立绘_黍_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

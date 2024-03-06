@@ -1,6 +1,11 @@
 {
   "name": "猎蜂",
   "charaKey": "char_137_brownb",
+  "images": [
+    "https://prts.wiki/images/f/f8/立绘_猎蜂_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/de/立绘_猎蜂_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a6/立绘_猎蜂_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_137_brownb",
     "中文-普通话": "voice_cn/char_137_brownb",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f8/立绘_猎蜂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/de/立绘_猎蜂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a6/立绘_猎蜂_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

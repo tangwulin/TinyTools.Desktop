@@ -1,6 +1,11 @@
 {
   "name": "煌",
   "charaKey": "char_017_huang",
+  "images": [
+    "https://prts.wiki/images/3/38/立绘_煌_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/40/立绘_煌_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/97/立绘_煌_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_017_huang",
     "中文-普通话": "voice_cn/char_017_huang",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/38/立绘_煌_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/40/立绘_煌_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/97/立绘_煌_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

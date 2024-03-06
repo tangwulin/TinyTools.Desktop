@@ -1,6 +1,11 @@
 {
   "name": "芙兰卡",
   "charaKey": "char_106_franka",
+  "images": [
+    "https://prts.wiki/images/6/6c/立绘_芙兰卡_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/50/立绘_芙兰卡_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f5/立绘_芙兰卡_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_106_franka",
     "中文-普通话": "voice_cn/char_106_franka",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/6c/立绘_芙兰卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/50/立绘_芙兰卡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f5/立绘_芙兰卡_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

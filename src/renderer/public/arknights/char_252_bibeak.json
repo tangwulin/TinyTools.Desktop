@@ -1,6 +1,11 @@
 {
   "name": "柏喙",
   "charaKey": "char_252_bibeak",
+  "images": [
+    "https://prts.wiki/images/4/4e/立绘_柏喙_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2d/立绘_柏喙_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/7e/立绘_柏喙_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_252_bibeak",
     "中文-普通话": "voice_cn/char_252_bibeak",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4e/立绘_柏喙_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2d/立绘_柏喙_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7e/立绘_柏喙_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

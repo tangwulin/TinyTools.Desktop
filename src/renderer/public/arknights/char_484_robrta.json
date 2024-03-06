@@ -1,6 +1,12 @@
 {
   "name": "罗比菈塔",
   "charaKey": "char_484_robrta",
+  "images": [
+    "https://prts.wiki/images/9/9d/立绘_罗比菈塔_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c4/立绘_罗比菈塔_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9e/立绘_罗比菈塔_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/69/立绘_罗比菈塔_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_484_robrta",
     "中文-普通话": "voice_cn/char_484_robrta",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/9d/立绘_罗比菈塔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c4/立绘_罗比菈塔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9e/立绘_罗比菈塔_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/69/立绘_罗比菈塔_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

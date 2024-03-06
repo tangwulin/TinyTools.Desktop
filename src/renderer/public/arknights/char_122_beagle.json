@@ -1,6 +1,10 @@
 {
   "name": "米格鲁",
   "charaKey": "char_122_beagle",
+  "images": [
+    "https://prts.wiki/images/4/44/立绘_米格鲁_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d3/立绘_米格鲁_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_122_beagle",
     "中文-普通话": "voice_cn/char_122_beagle",
@@ -814,9 +818,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/44/立绘_米格鲁_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_米格鲁_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

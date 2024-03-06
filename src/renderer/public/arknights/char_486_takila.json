@@ -1,6 +1,11 @@
 {
   "name": "龙舌兰",
   "charaKey": "char_486_takila",
+  "images": [
+    "https://prts.wiki/images/4/41/立绘_龙舌兰_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/87/立绘_龙舌兰_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/89/立绘_龙舌兰_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_486_takila",
     "中文-普通话": "voice_cn/char_486_takila"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/41/立绘_龙舌兰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_龙舌兰_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/89/立绘_龙舌兰_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,12 @@
 {
   "name": "卡涅利安",
   "charaKey": "char_426_billro",
+  "images": [
+    "https://prts.wiki/images/d/d0/立绘_卡涅利安_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/ee/立绘_卡涅利安_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/02/立绘_卡涅利安_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c7/立绘_卡涅利安_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_426_billro",
     "中文-普通话": "voice_cn/char_426_billro"
@@ -916,11 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d0/立绘_卡涅利安_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ee/立绘_卡涅利安_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/02/立绘_卡涅利安_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c7/立绘_卡涅利安_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

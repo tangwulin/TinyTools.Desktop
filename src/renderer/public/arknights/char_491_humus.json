@@ -1,6 +1,10 @@
 {
   "name": "休谟斯",
   "charaKey": "char_491_humus",
+  "images": [
+    "https://prts.wiki/images/2/29/立绘_休谟斯_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/7f/立绘_休谟斯_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_491_humus",
     "中文-普通话": "voice_cn/char_491_humus",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/29/立绘_休谟斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7f/立绘_休谟斯_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

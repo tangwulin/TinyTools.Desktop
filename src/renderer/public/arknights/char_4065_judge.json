@@ -1,6 +1,11 @@
 {
   "name": "斥罪",
   "charaKey": "char_4065_judge",
+  "images": [
+    "https://prts.wiki/images/7/79/立绘_斥罪_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1a/立绘_斥罪_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/3d/立绘_斥罪_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4065_judge",
     "中文-普通话": "voice_cn/char_4065_judge",
@@ -1059,10 +1064,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/79/立绘_斥罪_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1a/立绘_斥罪_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_斥罪_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

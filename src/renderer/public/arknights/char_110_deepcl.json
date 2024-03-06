@@ -1,6 +1,11 @@
 {
   "name": "深海色",
   "charaKey": "char_110_deepcl",
+  "images": [
+    "https://prts.wiki/images/5/52/立绘_深海色_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/7c/立绘_深海色_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/df/立绘_深海色_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_110_deepcl",
     "中文-普通话": "voice_cn/char_110_deepcl",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/52/立绘_深海色_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7c/立绘_深海色_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/df/立绘_深海色_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

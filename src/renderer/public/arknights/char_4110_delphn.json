@@ -1,6 +1,10 @@
 {
   "name": "戴菲恩",
   "charaKey": "char_4110_delphn",
+  "images": [
+    "https://prts.wiki/images/b/bc/立绘_戴菲恩_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a4/立绘_戴菲恩_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4110_delphn",
     "中文-普通话": "voice_cn/char_4110_delphn"
@@ -496,9 +500,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bc/立绘_戴菲恩_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a4/立绘_戴菲恩_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

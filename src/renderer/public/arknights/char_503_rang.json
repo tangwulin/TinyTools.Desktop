@@ -1,6 +1,9 @@
 {
   "name": "巡林者",
   "charaKey": "char_503_rang",
+  "images": [
+    "https://prts.wiki/images/c/c8/立绘_巡林者_1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_503_rang",
     "中文-普通话": "voice_cn/char_503_rang",
@@ -762,8 +765,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c8/立绘_巡林者_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

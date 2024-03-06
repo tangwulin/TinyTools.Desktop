@@ -1,6 +1,11 @@
 {
   "name": "蛇屠箱",
   "charaKey": "char_150_snakek",
+  "images": [
+    "https://prts.wiki/images/c/c7/立绘_蛇屠箱_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/eb/立绘_蛇屠箱_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/08/立绘_蛇屠箱_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_150_snakek",
     "中文-普通话": "voice_cn/char_150_snakek",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c7/立绘_蛇屠箱_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/eb/立绘_蛇屠箱_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/08/立绘_蛇屠箱_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

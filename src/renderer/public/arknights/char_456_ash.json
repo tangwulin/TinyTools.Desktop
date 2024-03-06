@@ -1,6 +1,11 @@
 {
   "name": "灰烬",
   "charaKey": "char_456_ash",
+  "images": [
+    "https://prts.wiki/images/3/37/立绘_灰烬_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/28/立绘_灰烬_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/22/立绘_灰烬_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "联动": "voice/char_456_ash"
   },
@@ -915,10 +920,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/37/立绘_灰烬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/28/立绘_灰烬_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_灰烬_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

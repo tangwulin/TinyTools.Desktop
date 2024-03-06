@@ -1,6 +1,12 @@
 {
   "name": "和弦",
   "charaKey": "char_297_hamoni",
+  "images": [
+    "https://prts.wiki/images/9/99/立绘_和弦_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/59/立绘_和弦_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/4c/立绘_和弦_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/83/立绘_和弦_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_297_hamoni",
     "中文-普通话": "voice_cn/char_297_hamoni",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/99/立绘_和弦_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/59/立绘_和弦_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4c/立绘_和弦_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/83/立绘_和弦_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "杜宾",
   "charaKey": "char_130_doberm",
+  "images": [
+    "https://prts.wiki/images/2/25/立绘_杜宾_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/e8/立绘_杜宾_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/5c/立绘_杜宾_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_130_doberm",
     "中文-普通话": "voice_cn/char_130_doberm",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/25/立绘_杜宾_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e8/立绘_杜宾_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5c/立绘_杜宾_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

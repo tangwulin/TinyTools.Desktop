@@ -1,6 +1,7 @@
 {
   "name": "铅踝",
   "charaKey": "char_4062_totter",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_4062_totter",
     "中文-普通话": "voice_cn/char_4062_totter",
@@ -918,9 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/42/立绘_铅踝_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c7/立绘_铅踝_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

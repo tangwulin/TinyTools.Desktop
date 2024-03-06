@@ -1,6 +1,10 @@
 {
   "name": "隐现",
   "charaKey": "char_498_inside",
+  "images": [
+    "https://prts.wiki/images/b/bf/立绘_隐现_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d6/立绘_隐现_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_498_inside",
     "中文-普通话": "voice_cn/char_498_inside",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bf/立绘_隐现_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d6/立绘_隐现_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

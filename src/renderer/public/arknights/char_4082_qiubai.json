@@ -1,6 +1,7 @@
 {
   "name": "仇白",
   "charaKey": "char_4082_qiubai",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_4082_qiubai",
     "中文-普通话": "voice_cn/char_4082_qiubai",
@@ -918,10 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/60/立绘_仇白_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4e/立绘_仇白_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d8/立绘_仇白_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

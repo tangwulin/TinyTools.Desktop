@@ -1,6 +1,11 @@
 {
   "name": "菲亚梅塔",
   "charaKey": "char_300_phenxi",
+  "images": [
+    "https://prts.wiki/images/9/9c/立绘_菲亚梅塔_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/47/立绘_菲亚梅塔_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/16/立绘_菲亚梅塔_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_300_phenxi",
     "中文-普通话": "voice_cn/char_300_phenxi",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/9c/立绘_菲亚梅塔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/47/立绘_菲亚梅塔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/16/立绘_菲亚梅塔_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

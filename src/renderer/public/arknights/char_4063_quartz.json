@@ -1,6 +1,10 @@
 {
   "name": "石英",
   "charaKey": "char_4063_quartz",
+  "images": [
+    "https://prts.wiki/images/d/da/立绘_石英_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/78/立绘_石英_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4063_quartz",
     "中文-普通话": "voice_cn/char_4063_quartz",
@@ -918,9 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/da/立绘_石英_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/78/立绘_石英_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

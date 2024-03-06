@@ -1,6 +1,12 @@
 {
   "name": "薄绿",
   "charaKey": "char_388_mint",
+  "images": [
+    "https://prts.wiki/images/d/d8/立绘_薄绿_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/20/立绘_薄绿_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/e4/立绘_薄绿_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/62/立绘_薄绿_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_388_mint",
     "中文-普通话": "voice_cn/char_388_mint",
@@ -917,11 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d8/立绘_薄绿_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/20/立绘_薄绿_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e4/立绘_薄绿_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/62/立绘_薄绿_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "蓝毒",
   "charaKey": "char_129_bluep",
+  "images": [
+    "https://prts.wiki/images/6/66/立绘_蓝毒_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/36/立绘_蓝毒_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/ea/立绘_蓝毒_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_129_bluep",
     "中文-普通话": "voice_cn/char_129_bluep",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/66/立绘_蓝毒_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/36/立绘_蓝毒_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ea/立绘_蓝毒_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

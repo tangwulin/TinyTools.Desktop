@@ -1,6 +1,12 @@
 {
   "name": "夏栎",
   "charaKey": "char_492_quercu",
+  "images": [
+    "https://prts.wiki/images/4/4d/立绘_夏栎_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/02/立绘_夏栎_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/bc/立绘_夏栎_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a3/立绘_夏栎_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_492_quercu",
     "中文-普通话": "voice_cn/char_492_quercu",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4d/立绘_夏栎_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/02/立绘_夏栎_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bc/立绘_夏栎_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a3/立绘_夏栎_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

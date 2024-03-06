@@ -1,6 +1,10 @@
 {
   "name": "芬",
   "charaKey": "char_123_fang",
+  "images": [
+    "https://prts.wiki/images/a/af/立绘_芬_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/de/立绘_芬_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_123_fang",
     "中文-普通话": "voice_cn/char_123_fang",
@@ -814,9 +818,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/af/立绘_芬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/de/立绘_芬_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

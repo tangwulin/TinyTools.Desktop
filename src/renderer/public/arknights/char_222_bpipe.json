@@ -1,6 +1,12 @@
 {
   "name": "风笛",
   "charaKey": "char_222_bpipe",
+  "images": [
+    "https://prts.wiki/images/5/5e/立绘_风笛_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9d/立绘_风笛_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d8/立绘_风笛_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/73/立绘_风笛_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_222_bpipe",
     "中文-普通话": "voice_cn/char_222_bpipe"
@@ -916,11 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/5e/立绘_风笛_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9d/立绘_风笛_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d8/立绘_风笛_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/73/立绘_风笛_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

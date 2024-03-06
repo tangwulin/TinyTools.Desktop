@@ -1,6 +1,10 @@
 {
   "name": "熔泉",
   "charaKey": "char_363_toddi",
+  "images": [
+    "https://prts.wiki/images/1/14/立绘_熔泉_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b9/立绘_熔泉_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_363_toddi",
     "中文-普通话": "voice_cn/char_363_toddi"
@@ -916,9 +920,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/14/立绘_熔泉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b9/立绘_熔泉_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

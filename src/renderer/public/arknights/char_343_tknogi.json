@@ -1,6 +1,12 @@
 {
   "name": "月禾",
   "charaKey": "char_343_tknogi",
+  "images": [
+    "https://prts.wiki/images/8/8f/立绘_月禾_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/22/立绘_月禾_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/34/立绘_月禾_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9b/立绘_月禾_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_343_tknogi",
     "中文-普通话": "voice_cn/char_343_tknogi",
@@ -917,11 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/8f/立绘_月禾_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_月禾_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/34/立绘_月禾_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9b/立绘_月禾_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

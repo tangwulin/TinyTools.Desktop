@@ -1,6 +1,13 @@
 {
   "name": "杰西卡",
   "charaKey": "char_235_jesica",
+  "images": [
+    "https://prts.wiki/images/9/96/立绘_杰西卡_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/3b/立绘_杰西卡_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c2/立绘_杰西卡_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a6/立绘_杰西卡_skin2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/44/立绘_杰西卡_skin3.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_235_jesica",
     "中文-普通话": "voice_cn/char_235_jesica",
@@ -918,12 +925,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/96/立绘_杰西卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3b/立绘_杰西卡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c2/立绘_杰西卡_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a6/立绘_杰西卡_skin2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/44/立绘_杰西卡_skin3.png?image_process=format,webp/quality,Q_90"
   ]
 }

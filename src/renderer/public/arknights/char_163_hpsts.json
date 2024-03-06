@@ -1,6 +1,10 @@
 {
   "name": "火神",
   "charaKey": "char_163_hpsts",
+  "images": [
+    "https://prts.wiki/images/9/92/立绘_火神_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/03/立绘_火神_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_163_hpsts",
     "中文-普通话": "voice_cn/char_163_hpsts",
@@ -917,9 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/92/立绘_火神_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/03/立绘_火神_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

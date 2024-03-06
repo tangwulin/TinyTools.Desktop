@@ -1,6 +1,12 @@
 {
   "name": "极境",
   "charaKey": "char_401_elysm",
+  "images": [
+    "https://prts.wiki/images/5/5a/立绘_极境_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/40/立绘_极境_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0a/立绘_极境_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/68/立绘_极境_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_401_elysm",
     "中文-普通话": "voice_cn/char_401_elysm",
@@ -917,11 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/5a/立绘_极境_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/40/立绘_极境_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0a/立绘_极境_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/68/立绘_极境_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

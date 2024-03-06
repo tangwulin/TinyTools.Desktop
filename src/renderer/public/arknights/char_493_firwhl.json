@@ -1,6 +1,10 @@
 {
   "name": "火哨",
   "charaKey": "char_493_firwhl",
+  "images": [
+    "https://prts.wiki/images/7/78/立绘_火哨_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b3/立绘_火哨_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_493_firwhl",
     "中文-普通话": "voice_cn/char_493_firwhl",
@@ -918,9 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/78/立绘_火哨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b3/立绘_火哨_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

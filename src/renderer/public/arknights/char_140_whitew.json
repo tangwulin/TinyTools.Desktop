@@ -1,6 +1,11 @@
 {
   "name": "拉普兰德",
   "charaKey": "char_140_whitew",
+  "images": [
+    "https://prts.wiki/images/7/75/立绘_拉普兰德_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fe/立绘_拉普兰德_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/11/立绘_拉普兰德_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_140_whitew",
     "中文-普通话": "voice_cn/char_140_whitew",
@@ -1059,10 +1064,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/75/立绘_拉普兰德_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fe/立绘_拉普兰德_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/11/立绘_拉普兰德_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

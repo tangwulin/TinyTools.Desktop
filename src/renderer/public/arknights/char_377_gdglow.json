@@ -1,6 +1,12 @@
 {
   "name": "澄闪",
   "charaKey": "char_377_gdglow",
+  "images": [
+    "https://prts.wiki/images/4/46/立绘_澄闪_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d0/立绘_澄闪_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/ea/立绘_澄闪_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b6/立绘_澄闪_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_377_gdglow",
     "中文-普通话": "voice_cn/char_377_gdglow",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/46/立绘_澄闪_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d0/立绘_澄闪_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ea/立绘_澄闪_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b6/立绘_澄闪_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "清流",
   "charaKey": "char_385_finlpp",
+  "images": [
+    "https://prts.wiki/images/f/f3/立绘_清流_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/48/立绘_清流_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9b/立绘_清流_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_385_finlpp",
     "中文-普通话": "voice_cn/char_385_finlpp",
@@ -917,9 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f3/立绘_清流_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/48/立绘_清流_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "卡夫卡",
   "charaKey": "char_214_kafka",
+  "images": [
+    "https://prts.wiki/images/e/ef/立绘_卡夫卡_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a1/立绘_卡夫卡_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2e/立绘_卡夫卡_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_214_kafka",
     "中文-普通话": "voice_cn/char_214_kafka",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/ef/立绘_卡夫卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a1/立绘_卡夫卡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_卡夫卡_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

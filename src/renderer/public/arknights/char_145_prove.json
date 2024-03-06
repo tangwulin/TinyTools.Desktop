@@ -1,6 +1,12 @@
 {
   "name": "普罗旺斯",
   "charaKey": "char_145_prove",
+  "images": [
+    "https://prts.wiki/images/c/c4/立绘_普罗旺斯_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/94/立绘_普罗旺斯_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/71/立绘_普罗旺斯_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1a/立绘_普罗旺斯_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_145_prove",
     "中文-普通话": "voice_cn/char_145_prove",
@@ -917,11 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c4/立绘_普罗旺斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/94/立绘_普罗旺斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/71/立绘_普罗旺斯_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1a/立绘_普罗旺斯_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

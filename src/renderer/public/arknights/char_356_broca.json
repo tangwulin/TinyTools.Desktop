@@ -1,6 +1,11 @@
 {
   "name": "布洛卡",
   "charaKey": "char_356_broca",
+  "images": [
+    "https://prts.wiki/images/1/1c/立绘_布洛卡_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fb/立绘_布洛卡_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/b3/立绘_布洛卡_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_356_broca",
     "中文-普通话": "voice_cn/char_356_broca",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/1c/立绘_布洛卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fb/立绘_布洛卡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b3/立绘_布洛卡_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

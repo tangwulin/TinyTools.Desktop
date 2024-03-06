@@ -1,6 +1,11 @@
 {
   "name": "鸿雪",
   "charaKey": "char_4055_bgsnow",
+  "images": [
+    "https://prts.wiki/images/5/54/立绘_鸿雪_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0f/立绘_鸿雪_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9d/立绘_鸿雪_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4055_bgsnow",
     "中文-普通话": "voice_cn/char_4055_bgsnow",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/54/立绘_鸿雪_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_鸿雪_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9d/立绘_鸿雪_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

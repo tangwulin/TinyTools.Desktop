@@ -1,6 +1,12 @@
 {
   "name": "华法琳",
   "charaKey": "char_171_bldsk",
+  "images": [
+    "https://prts.wiki/images/e/ee/立绘_华法琳_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/77/立绘_华法琳_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/24/立绘_华法琳_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/7e/立绘_华法琳_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_171_bldsk",
     "中文-普通话": "voice_cn/char_171_bldsk",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/ee/立绘_华法琳_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/77/立绘_华法琳_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_华法琳_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7e/立绘_华法琳_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

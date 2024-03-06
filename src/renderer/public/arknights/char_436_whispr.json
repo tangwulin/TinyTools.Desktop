@@ -1,6 +1,12 @@
 {
   "name": "絮雨",
   "charaKey": "char_436_whispr",
+  "images": [
+    "https://prts.wiki/images/3/38/立绘_絮雨_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/87/立绘_絮雨_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fc/立绘_絮雨_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/6e/立绘_絮雨_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_436_whispr",
     "中文-普通话": "voice_cn/char_436_whispr"
@@ -916,11 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/38/立绘_絮雨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_絮雨_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_絮雨_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6e/立绘_絮雨_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

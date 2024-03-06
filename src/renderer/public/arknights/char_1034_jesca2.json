@@ -1,6 +1,10 @@
 {
   "name": "涤火杰西卡",
   "charaKey": "char_1034_jesca2",
+  "images": [
+    "https://prts.wiki/images/3/3b/立绘_涤火杰西卡_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fc/立绘_涤火杰西卡_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_1034_jesca2",
     "中文-普通话": "voice_cn/char_1034_jesca2",
@@ -497,9 +501,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/3b/立绘_涤火杰西卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_涤火杰西卡_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

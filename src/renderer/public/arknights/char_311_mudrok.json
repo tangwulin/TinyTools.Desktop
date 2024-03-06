@@ -1,6 +1,12 @@
 {
   "name": "泥岩",
   "charaKey": "char_311_mudrok",
+  "images": [
+    "https://prts.wiki/images/8/80/立绘_泥岩_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/72/立绘_泥岩_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/28/立绘_泥岩_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0f/立绘_泥岩_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_311_mudrok",
     "中文-普通话": "voice_cn/char_311_mudrok",
@@ -920,11 +926,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/80/立绘_泥岩_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/72/立绘_泥岩_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/28/立绘_泥岩_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_泥岩_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

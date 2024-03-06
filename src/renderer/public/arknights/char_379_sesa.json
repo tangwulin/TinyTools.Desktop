@@ -1,6 +1,10 @@
 {
   "name": "慑砂",
   "charaKey": "char_379_sesa",
+  "images": [
+    "https://prts.wiki/images/0/0b/立绘_慑砂_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/99/立绘_慑砂_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_379_sesa",
     "中文-普通话": "voice_cn/char_379_sesa",
@@ -917,9 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/0/0b/立绘_慑砂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/99/立绘_慑砂_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

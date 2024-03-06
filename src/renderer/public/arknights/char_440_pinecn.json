@@ -1,6 +1,11 @@
 {
   "name": "松果",
   "charaKey": "char_440_pinecn",
+  "images": [
+    "https://prts.wiki/images/d/de/立绘_松果_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/24/立绘_松果_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/e2/立绘_松果_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_440_pinecn",
     "中文-普通话": "voice_cn/char_440_pinecn"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/de/立绘_松果_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_松果_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e2/立绘_松果_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

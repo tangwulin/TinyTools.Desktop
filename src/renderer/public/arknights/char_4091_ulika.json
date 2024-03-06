@@ -1,6 +1,9 @@
 {
   "name": "U-Official",
   "charaKey": "char_4091_ulika",
+  "images": [
+    "https://prts.wiki/images/7/74/立绘_U-Official_1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4091_ulika",
     "中文-普通话": "voice_cn/char_4091_ulika"
@@ -440,8 +443,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/74/立绘_U-Official_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

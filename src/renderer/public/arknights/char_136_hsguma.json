@@ -1,6 +1,11 @@
 {
   "name": "星熊",
   "charaKey": "char_136_hsguma",
+  "images": [
+    "https://prts.wiki/images/d/d4/立绘_星熊_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/0a/立绘_星熊_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/7/71/立绘_星熊_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_136_hsguma",
     "中文-普通话": "voice_cn/char_136_hsguma",
@@ -1199,10 +1204,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d4/立绘_星熊_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0a/立绘_星熊_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/71/立绘_星熊_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

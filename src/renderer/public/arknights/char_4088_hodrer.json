@@ -1,6 +1,10 @@
 {
   "name": "赫德雷",
   "charaKey": "char_4088_hodrer",
+  "images": [
+    "https://prts.wiki/images/5/51/立绘_赫德雷_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1d/立绘_赫德雷_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4088_hodrer",
     "中文-普通话": "voice_cn/char_4088_hodrer"
@@ -496,9 +500,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/51/立绘_赫德雷_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1d/立绘_赫德雷_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

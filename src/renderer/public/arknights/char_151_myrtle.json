@@ -1,6 +1,12 @@
 {
   "name": "桃金娘",
   "charaKey": "char_151_myrtle",
+  "images": [
+    "https://prts.wiki/images/4/42/立绘_桃金娘_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/dc/立绘_桃金娘_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/b/bb/立绘_桃金娘_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/96/立绘_桃金娘_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_151_myrtle",
     "中文-普通话": "voice_cn/char_151_myrtle",
@@ -892,11 +898,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/42/立绘_桃金娘_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/dc/立绘_桃金娘_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bb/立绘_桃金娘_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/96/立绘_桃金娘_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

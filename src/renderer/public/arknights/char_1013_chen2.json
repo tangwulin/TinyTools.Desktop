@@ -1,6 +1,7 @@
 {
   "name": "假日威龙陈",
   "charaKey": "char_1013_chen2",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_1013_chen2",
     "中文-普通话": "voice_cn/char_1013_chen2",
@@ -1199,10 +1200,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/b9/立绘_假日威龙陈_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4e/立绘_假日威龙陈_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f2/立绘_假日威龙陈_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

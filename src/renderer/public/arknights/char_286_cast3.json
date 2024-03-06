@@ -1,6 +1,10 @@
 {
   "name": "Castle-3",
   "charaKey": "char_286_cast3",
+  "images": [
+    "https://prts.wiki/images/9/95/立绘_Castle-3_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/e4/立绘_Castle-3_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_286_cast3",
     "中文-普通话": "voice_cn/char_286_cast3",
@@ -813,9 +817,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/95/立绘_Castle-3_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e4/立绘_Castle-3_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

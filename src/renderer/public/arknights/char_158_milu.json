@@ -1,6 +1,12 @@
 {
   "name": "守林人",
   "charaKey": "char_158_milu",
+  "images": [
+    "https://prts.wiki/images/1/1f/立绘_守林人_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/4c/立绘_守林人_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/4c/立绘_守林人_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/11/立绘_守林人_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_158_milu",
     "中文-普通话": "voice_cn/char_158_milu",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/1f/立绘_守林人_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4c/立绘_守林人_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4c/立绘_守林人_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/11/立绘_守林人_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

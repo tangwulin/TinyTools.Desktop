@@ -1,6 +1,13 @@
 {
   "name": "星极",
   "charaKey": "char_274_astesi",
+  "images": [
+    "https://prts.wiki/images/b/bb/立绘_星极_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/13/立绘_星极_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/44/立绘_星极_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1d/立绘_星极_skin2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a4/立绘_星极_skin3.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_274_astesi",
     "中文-普通话": "voice_cn/char_274_astesi"
@@ -916,12 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bb/立绘_星极_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/13/立绘_星极_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/44/立绘_星极_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1d/立绘_星极_skin2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a4/立绘_星极_skin3.png?image_process=format,webp/quality,Q_90"
   ]
 }

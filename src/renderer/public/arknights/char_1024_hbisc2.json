@@ -1,6 +1,10 @@
 {
   "name": "濯尘芙蓉",
   "charaKey": "char_1024_hbisc2",
+  "images": [
+    "https://prts.wiki/images/d/dc/立绘_濯尘芙蓉_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d2/立绘_濯尘芙蓉_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_1024_hbisc2",
     "中文-普通话": "voice_cn/char_1024_hbisc2",
@@ -918,9 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/dc/立绘_濯尘芙蓉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d2/立绘_濯尘芙蓉_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

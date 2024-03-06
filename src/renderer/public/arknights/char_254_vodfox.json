@@ -1,6 +1,7 @@
 {
   "name": "巫恋",
   "charaKey": "char_254_vodfox",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_254_vodfox",
     "中文-普通话": "voice_cn/char_254_vodfox",
@@ -917,10 +918,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/e3/立绘_巫恋_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/65/立绘_巫恋_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/19/立绘_巫恋_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,11 @@
 {
   "name": "白面鸮",
   "charaKey": "char_128_plosis",
+  "images": [
+    "https://prts.wiki/images/a/ac/立绘_白面鸮_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a2/立绘_白面鸮_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/31/立绘_白面鸮_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_128_plosis",
     "中文-普通话": "voice_cn/char_128_plosis",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/ac/立绘_白面鸮_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a2/立绘_白面鸮_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/31/立绘_白面鸮_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

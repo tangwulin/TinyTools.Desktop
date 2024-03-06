@@ -1,6 +1,11 @@
 {
   "name": "槐琥",
   "charaKey": "char_243_waaifu",
+  "images": [
+    "https://prts.wiki/images/a/ae/立绘_槐琥_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/ae/立绘_槐琥_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/06/立绘_槐琥_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_243_waaifu",
     "中文-普通话": "voice_cn/char_243_waaifu",
@@ -1058,10 +1063,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/ae/立绘_槐琥_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ae/立绘_槐琥_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/06/立绘_槐琥_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

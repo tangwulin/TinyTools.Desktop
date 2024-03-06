@@ -1,6 +1,11 @@
 {
   "name": "埃拉托",
   "charaKey": "char_4043_erato",
+  "images": [
+    "https://prts.wiki/images/f/f2/立绘_埃拉托_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/53/立绘_埃拉托_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c6/立绘_埃拉托_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4043_erato",
     "中文-普通话": "voice_cn/char_4043_erato",
@@ -917,10 +922,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f2/立绘_埃拉托_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/53/立绘_埃拉托_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c6/立绘_埃拉托_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

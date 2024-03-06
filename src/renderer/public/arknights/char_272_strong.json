@@ -1,6 +1,11 @@
 {
   "name": "孑",
   "charaKey": "char_272_strong",
+  "images": [
+    "https://prts.wiki/images/3/37/立绘_孑_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/a/a3/立绘_孑_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/83/立绘_孑_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_272_strong",
     "中文-普通话": "voice_cn/char_272_strong"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/37/立绘_孑_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a3/立绘_孑_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/83/立绘_孑_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "name": "傀影",
   "charaKey": "char_250_phatom",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_250_phatom",
     "中文-普通话": "voice_cn/char_250_phatom",
@@ -918,11 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/32/立绘_傀影_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_傀影_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_傀影_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e8/立绘_傀影_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

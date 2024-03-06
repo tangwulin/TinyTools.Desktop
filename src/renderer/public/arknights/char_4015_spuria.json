@@ -1,6 +1,10 @@
 {
   "name": "空构",
   "charaKey": "char_4015_spuria",
+  "images": [
+    "https://prts.wiki/images/2/2d/立绘_空构_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/24/立绘_空构_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_4015_spuria",
     "中文-普通话": "voice_cn/char_4015_spuria",
@@ -778,9 +782,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/2d/立绘_空构_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_空构_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

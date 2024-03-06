@@ -1,6 +1,10 @@
 {
   "name": "缠丸",
   "charaKey": "char_289_gyuki",
+  "images": [
+    "https://prts.wiki/images/1/11/立绘_缠丸_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/22/立绘_缠丸_2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_289_gyuki",
     "中文-普通话": "voice_cn/char_289_gyuki",
@@ -917,9 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/11/立绘_缠丸_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_缠丸_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

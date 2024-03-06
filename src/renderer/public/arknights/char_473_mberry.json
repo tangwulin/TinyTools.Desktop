@@ -1,6 +1,7 @@
 {
   "name": "桑葚",
   "charaKey": "char_473_mberry",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_473_mberry",
     "中文-普通话": "voice_cn/char_473_mberry",
@@ -1199,11 +1200,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/21/立绘_桑葚_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d6/立绘_桑葚_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/ff/立绘_桑葚_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/67/立绘_桑葚_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

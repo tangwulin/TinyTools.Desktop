@@ -1,6 +1,11 @@
 {
   "name": "送葬人",
   "charaKey": "char_279_excu",
+  "images": [
+    "https://prts.wiki/images/7/76/立绘_送葬人_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/fa/立绘_送葬人_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/99/立绘_送葬人_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_279_excu",
     "中文-普通话": "voice_cn/char_279_excu",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/76/立绘_送葬人_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fa/立绘_送葬人_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/99/立绘_送葬人_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

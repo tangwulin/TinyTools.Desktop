@@ -1,6 +1,12 @@
 {
   "name": "伊芙利特",
   "charaKey": "char_134_ifrit",
+  "images": [
+    "https://prts.wiki/images/5/53/立绘_伊芙利特_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f2/立绘_伊芙利特_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/3/3d/立绘_伊芙利特_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/06/立绘_伊芙利特_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_134_ifrit",
     "中文-普通话": "voice_cn/char_134_ifrit",
@@ -918,11 +924,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/53/立绘_伊芙利特_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f2/立绘_伊芙利特_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_伊芙利特_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/06/立绘_伊芙利特_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

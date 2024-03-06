@@ -1,6 +1,11 @@
 {
   "name": "格雷伊",
   "charaKey": "char_253_greyy",
+  "images": [
+    "https://prts.wiki/images/9/93/立绘_格雷伊_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/56/立绘_格雷伊_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/8/86/立绘_格雷伊_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_253_greyy",
     "中文-普通话": "voice_cn/char_253_greyy",
@@ -918,10 +923,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/93/立绘_格雷伊_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/56/立绘_格雷伊_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/86/立绘_格雷伊_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

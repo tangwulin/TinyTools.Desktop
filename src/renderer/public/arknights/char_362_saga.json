@@ -1,6 +1,11 @@
 {
   "name": "嵯峨",
   "charaKey": "char_362_saga",
+  "images": [
+    "https://prts.wiki/images/4/40/立绘_嵯峨_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/9/9c/立绘_嵯峨_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/2d/立绘_嵯峨_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_362_saga",
     "中文-普通话": "voice_cn/char_362_saga"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/40/立绘_嵯峨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9c/立绘_嵯峨_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2d/立绘_嵯峨_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

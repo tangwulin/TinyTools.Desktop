@@ -1,6 +1,11 @@
 {
   "name": "歌蕾蒂娅",
   "charaKey": "char_474_glady",
+  "images": [
+    "https://prts.wiki/images/8/84/立绘_歌蕾蒂娅_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/61/立绘_歌蕾蒂娅_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/f9/立绘_歌蕾蒂娅_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": {
     "日语": "voice/char_474_glady",
     "中文-普通话": "voice_cn/char_474_glady"
@@ -916,10 +921,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/84/立绘_歌蕾蒂娅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/61/立绘_歌蕾蒂娅_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f9/立绘_歌蕾蒂娅_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

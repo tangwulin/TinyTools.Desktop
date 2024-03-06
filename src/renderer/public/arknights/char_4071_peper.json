@@ -1,6 +1,7 @@
 {
   "name": "明椒",
   "charaKey": "char_4071_peper",
+  "images": [],
   "voiceBase": {
     "日语": "voice/char_4071_peper",
     "中文-普通话": "voice_cn/char_4071_peper",
@@ -918,10 +919,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/94/立绘_明椒_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6e/立绘_明椒_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e7/立绘_明椒_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }
