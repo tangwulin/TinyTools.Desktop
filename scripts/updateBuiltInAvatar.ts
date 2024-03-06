@@ -184,10 +184,7 @@ const updateBlueArchive = async (config: { blackList: string[] }) => {
     })
 }
 
-const updateStarRail = async (
-  page: Page,
-  config: { webUrl: string; blackList: string[] }
-) => {
+const updateStarRail = async (page: Page, config: { webUrl: string; blackList: string[] }) => {
   await page.setViewport({ width: 1080, height: 1024 })
   console.log(config.webUrl)
   await page.goto(config.webUrl)
@@ -197,11 +194,15 @@ const updateStarRail = async (
     return el.map((item) => {
       return {
         description: item.querySelector('td:nth-child(2) > a').innerHTML,
-        url: item.querySelector('td:nth-child(1) > a > img').getAttribute('src'),
+        url: decodeURI(item.querySelector('td:nth-child(1) > a > img').getAttribute('src')),
         gender: item.querySelector('td:nth-child(6)').innerHTML.trim()
       }
     })
   })
+
+  const index = result.findIndex((item) => item.description === '托帕&amp;账账')
+  result[index].url =
+    'https://patchwiki.biligame.com/images/sr/thumb/c/c4/06fupomr900c72ymsn6pgq8m4c077r7.png/60px-托帕&账账.png'
 
   const male = []
   const female = []
