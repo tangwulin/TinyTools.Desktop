@@ -1,11 +1,13 @@
 <script lang="ts" setup>
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
+import { KeyboardArrowDownRound as ArrowDownIcon } from '@vicons/material'
 import deepcopy from 'deepcopy'
-import { debounce, shuffle } from 'lodash-es'
+import { chunk, debounce, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { nextTick, onMounted, onUnmounted, ref, toRaw } from 'vue'
+import * as XLSX from 'xlsx'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import SeatTable from '../../components/SeatTable.vue'
 import raffleConfig from '../../data/raffleModes.json'
@@ -333,7 +335,26 @@ const delHandler = (x: SeatHistory) => {
   db.seatHistories.delete(x.timestamp)
   message.success('删除成功')
 }
-const save = async () => {
+
+const saveMethods = [
+  { label: '保存为图片', key: 'saveAsPng' },
+  { label: '保存为Excel', key: 'saveAsXlsx' }
+]
+
+const handleSave = (key: string) => {
+  switch (key) {
+    case 'saveAsPng':
+      saveAsPng()
+      break
+    case 'saveAsXlsx':
+      saveAsXlsx()
+      break
+    default:
+      message.error('保存方法异常')
+      break
+  }
+}
+const saveAsPng = async () => {
   loading.value = true
   let msgReactive = message.create('正在生成图片……', {
     type: 'loading',
@@ -357,7 +378,7 @@ const save = async () => {
   domToPng(target, options)
     .then((dataUrl) => {
       const link = document.createElement('a')
-      link.download = 'seat-' + currentDate.value + '-' + currentTime.value + '.png'
+      link.download = '座位表-' + currentDate.value + '-' + currentTime.value + '.png'
       link.href = dataUrl
       link.click()
     })
@@ -371,6 +392,24 @@ const save = async () => {
         msgReactive = null
       }, 3000)
     })
+}
+
+const saveAsXlsx = () => {
+  const data = deepcopy(seatTable.value).filter((item) => item.type !== 'aisle')
+  const names = data.map((item) => item.data?.displayName ?? '')
+  const table = chunk(names, 8).map((row, rowIndex) => {
+    const thisRow = {}
+    thisRow['行数'] = `第${rowIndex + 1}行`
+    for (let i = 0; i < row.length; i++) {
+      const rowName = `第${i + 1}列`
+      thisRow[rowName] = row[i]
+    }
+    return thisRow
+  })
+  const worksheet = XLSX.utils.json_to_sheet(table)
+  const workbook = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(workbook, worksheet, '座位表')
+  XLSX.writeFile(workbook, '座位表-' + currentDate.value + '-' + currentTime.value + '.xlsx')
 }
 
 const play = (option: Audio) => {
@@ -497,7 +536,16 @@ const dragHandler = debounce(
             </n-icon>
           </template>
         </n-button>
-        <n-button :disabled="loading || isPreview" @click="save">保存图片</n-button>
+        <n-button :disabled="loading || isPreview" @click="saveAsPng">保存</n-button>
+        <n-dropdown trigger="click" :options="saveMethods" @select="handleSave">
+          <n-button :disabled="loading || isPreview" icon-placement="right" class="p-1">
+            <template #icon>
+              <n-icon>
+                <ArrowDownIcon />
+              </n-icon>
+            </template>
+          </n-button>
+        </n-dropdown>
         <n-switch v-model:value="reverse">
           <template #checked> 老师视角</template>
           <template #unchecked> 学生视角</template>
