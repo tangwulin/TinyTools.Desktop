@@ -9,11 +9,11 @@ const stopwatch = performance.now()
 updateBuiltInAvatar().then(() => {
   console.log(avatars)
   console.log(`耗时：${(performance.now() - stopwatch) / 1000}秒`)
-  fs.writeFileSync('./src/renderer/src/data/avatars.json', JSON.stringify(avatars))
+  fs.writeFileSync('./src/renderer/src/data/avatars.json', JSON.stringify(avatars, null, 2))
 })
 
 async function updateBuiltInAvatar() {
-  const browser = await puppeteer.launch({ headless: 'new' })
+  const browser = await puppeteer.launch({ headless: false })
   await Promise.all([
     updateGenshin(await browser.newPage(), {
       webUrl: 'https://wiki.biligame.com/ys/%E8%A7%92%E8%89%B2',
@@ -25,7 +25,10 @@ async function updateBuiltInAvatar() {
       blackList: []
     }),
     updateBlueArchive({ blackList: [] }),
-    updateStarRail(),
+    updateStarRail(await browser.newPage(), {
+      webUrl: 'https://wiki.biligame.com/sr/%E8%A7%92%E8%89%B2%E7%AD%9B%E9%80%89',
+      blackList: []
+    }),
     updateUmamusume(await browser.newPage(), {
       webUrl: 'https://wiki.biligame.com/umamusume/%E8%B5%9B%E9%A9%AC%E5%A8%98%E4%B8%80%E8%A7%88',
       blackList: []
@@ -89,12 +92,13 @@ const updateGenshin = async (
   )
 
   console.log(result)
-  console.log(genderResult)
 
+  const genderMap = new Map(genderResult.map((item) => [item.description, item.gender]))
+  console.log(genderMap)
   const male = []
   const female = []
   result.forEach((item) => {
-    switch (genderResult.find((x) => x.description === item.description)?.gender) {
+    switch (genderMap.get(item.description)) {
       case '男':
         male.push(item)
         break
@@ -170,7 +174,7 @@ const updateBlueArchive = async (config: { blackList: string[] }) => {
           const description = `${item.family_name}${item.given_name}${
             item.skin.length > 0 ? `(${item.skin})` : ''
           }`
-          return { description, url: `https:${item.avatar}` }
+          return { description, url: decodeURI(`https:${item.avatar}`) }
         })
         .filter((item) => !config.blackList.includes(item.description))
       if (female.length === 0) {
@@ -180,170 +184,42 @@ const updateBlueArchive = async (config: { blackList: string[] }) => {
     })
 }
 
-const updateStarRail = async () => {
-  //这个没有找到现成的给机器区分性别的方法，先手动吧（
-  avatars['starRail'] = {
-    male: [
-      {
-        description: '银枝',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0d/CharacterIcon_1302.webp'
-      },
-      {
-        description: '丹恒•饮月',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/43/CharacterIcon_1213.webp'
-      },
-      {
-        description: '卢卡',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/c/c3/CharacterIcon_1111.webp'
-      },
-      {
-        description: '景元',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/7/7a/CharacterIcon_1204.webp'
-      },
-      {
-        description: '刃',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0d/CharacterIcon_1205.webp'
-      },
-      {
-        description: '罗刹',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2c/CharacterIcon_1203.webp'
-      },
-      {
-        description: '瓦尔特',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f9/CharacterIcon_1004.webp'
-      },
-      {
-        description: '杰帕德',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/c/ce/CharacterIcon_1104.webp'
-      },
-      {
-        description: '丹恒',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0f/CharacterIcon_1002.webp'
-      },
-      {
-        description: '阿兰',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/5/59/CharacterIcon_1008.webp'
-      },
-      {
-        description: '桑博',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/1/10/CharacterIcon_1108.webp'
+const updateStarRail = async (
+  page: Page,
+  config: { webUrl: string; blackList: string[] }
+) => {
+  await page.setViewport({ width: 1080, height: 1024 })
+  console.log(config.webUrl)
+  await page.goto(config.webUrl)
+  await page.waitForSelector('#CardSelectTr > tbody > tr:nth-child(45)')
+
+  const result = await page.$$eval('#CardSelectTr > tbody > tr', (el) => {
+    return el.map((item) => {
+      return {
+        description: item.querySelector('td:nth-child(2) > a').innerHTML,
+        url: item.querySelector('td:nth-child(1) > a > img').getAttribute('src'),
+        gender: item.querySelector('td:nth-child(6)').innerHTML.trim()
       }
-    ],
-    female: [
-      {
-        description: '寒鸦',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f6/CharacterIcon_1215.webp'
-      },
-      {
-        description: '藿藿',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/dc/CharacterIcon_1217.webp'
-      },
-      {
-        description: '托帕&账账',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/4c/CharacterIcon_1112.webp'
-      },
-      {
-        description: '桂乃芬',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/0b/CharacterIcon_1210.webp'
-      },
-      {
-        description: '镜流',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/97/CharacterIcon_1212.webp'
-      },
-      {
-        description: '符玄',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d7/CharacterIcon_1208.webp'
-      },
-      {
-        description: '玲可',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/49/CharacterIcon_1110.webp'
-      },
-      {
-        description: '卡芙卡',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a1/CharacterIcon_1005.webp'
-      },
-      {
-        description: '驭空',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1207.webp'
-      },
-      {
-        description: '银狼',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/95/CharacterIcon_1006.webp'
-      },
-      {
-        description: '希儿',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/3/32/CharacterIcon_1102.webp'
-      },
-      {
-        description: '姬子',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d0/CharacterIcon_1003.webp'
-      },
-      {
-        description: '布洛妮娅',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/a7/CharacterIcon_1101.webp'
-      },
-      {
-        description: '克拉拉',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/e/e2/CharacterIcon_1107.webp'
-      },
-      {
-        description: '彦卿',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/4/41/CharacterIcon_1209.webp'
-      },
-      {
-        description: '白露',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/01/CharacterIcon_1211.webp'
-      },
-      {
-        description: '开拓者',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/c/c2/CharacterIcon_8002.webp'
-      },
-      {
-        description: '开拓者',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/a/ab/CharacterIcon_8004.webp'
-      },
-      {
-        description: '三月七',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/8/84/CharacterIcon_1001.webp'
-      },
-      {
-        description: '艾丝妲',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/2f/CharacterIcon_1009.webp'
-      },
-      {
-        description: '黑塔',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/0/00/CharacterIcon_1013.webp'
-      },
-      {
-        description: '希露瓦',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f6/CharacterIcon_1103.webp'
-      },
-      {
-        description: '娜塔莎',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/9/92/CharacterIcon_1105.webp'
-      },
-      {
-        description: '佩拉',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/d/d2/CharacterIcon_1106.webp'
-      },
-      {
-        description: '虎克',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/1/11/CharacterIcon_1109.webp'
-      },
-      {
-        description: '青雀',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/f/f8/CharacterIcon_1201.webp'
-      },
-      {
-        description: '停云',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/2/20/CharacterIcon_1202.webp'
-      },
-      {
-        description: '素裳',
-        url: 'https://huiji-public.huijistatic.com/starrail/uploads/7/71/CharacterIcon_1206.webp'
-      }
-    ]
-  }
+    })
+  })
+
+  const male = []
+  const female = []
+  result.forEach((item) => {
+    switch (item.gender) {
+      case '男':
+        male.push({ description: item.description, url: item.url })
+        break
+      case '女':
+        female.push({ description: item.description, url: item.url })
+        break
+      default:
+        break
+    }
+  })
+  console.log(male, female)
+  avatars['starRail'] = { male, female }
+  await page.close()
 }
 
 const updateUmamusume = async (page: Page, config: { webUrl: string; blackList: string[] }) => {
