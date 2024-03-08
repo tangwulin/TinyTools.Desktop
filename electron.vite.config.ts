@@ -17,7 +17,8 @@ export default ({ mode }) => {
   return defineConfig({
     main: {
       build: {
-        sourcemap: true
+        sourcemap: true,
+        minify: 'terser'
       },
       plugins: [
         visualizer({ filename: 'visualizer_main.html', template: 'treemap' }),
@@ -33,7 +34,8 @@ export default ({ mode }) => {
 
     preload: {
       build: {
-        sourcemap: true
+        sourcemap: true,
+        minify: 'terser'
       },
       plugins: [
         visualizer({ filename: 'visualizer_preload.html', template: 'treemap' }),
@@ -82,7 +84,8 @@ export default ({ mode }) => {
           output: {
             format: 'es'
           }
-        }
+        },
+        minify: 'terser'
       },
       define: {
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
