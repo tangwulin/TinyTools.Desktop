@@ -235,6 +235,7 @@ const raffleSeatGacha = (result: SeatTableItem[]) => {
 
 const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
   let result = [] as SeatTableItem[]
+  pauseBgm()
   switch (lotteryMode.value) {
     case 1:
       result = calcNewSeatByRealRandom(seatTable.value)
