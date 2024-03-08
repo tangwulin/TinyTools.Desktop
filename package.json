@@ -62,7 +62,7 @@
     "dexie": "^3.2.5",
     "echarts": "^5.5.0",
     "electron": "^22.3.27",
-    "electron-builder": "^24.12.0",
+    "electron-builder": "^24.13.3",
     "electron-vite": "^2.0.0",
     "eslint": "^8.57.0",
     "eslint-plugin-vue": "^9.22.0",
