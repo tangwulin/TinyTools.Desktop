@@ -6,11 +6,20 @@
     "https://prts.wiki/images/6/6e/立绘_苏苏洛_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/7/7c/立绘_苏苏洛_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_298_susuro",
-    "中文-普通话": "voice_cn/char_298_susuro",
-    "韩语": "voice_kr/char_298_susuro"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_298_susuro"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_298_susuro"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_298_susuro"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

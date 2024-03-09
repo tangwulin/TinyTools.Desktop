@@ -7,11 +7,24 @@
     "https://prts.wiki/images/d/d7/立绘_黑_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/6/6c/立绘_黑_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_340_shwaz",
-    "中文-普通话": "voice_cn/char_340_shwaz",
-    "韩语": "voice_kr/char_340_shwaz"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_340_shwaz"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_340_shwaz"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_340_shwaz"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_340_shwaz"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -27,7 +40,7 @@
         },
         {
           "language": "英文",
-          "content": "I made an itinerary. You can confirm with me anytime."
+          "content": "I've noted down your schedule. You can confirm with me anytime."
         },
         {
           "language": "韩文",
@@ -53,7 +66,7 @@
         },
         {
           "language": "英文",
-          "content": "When it's time to shed blood, do not send Lady Ceylon to do it, send someone who lives amongst the shadows."
+          "content": "If it's about making someone bleed, do not send Lady Ceylon to the task. Let those who live amongst the shadow take it over, like me."
         },
         {
           "language": "韩文",
@@ -79,7 +92,7 @@
         },
         {
           "language": "英文",
-          "content": "I won't tell you any of Lady Ceylon's secrets. Of course, I won't tell anyone your secrets either."
+          "content": "I won't tell you anything more about Lady Ceylon. And of course, others won't learn anything more about you from me."
         },
         {
           "language": "韩文",
@@ -105,7 +118,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm a bodyguard and it's my duty to protect you, Doctor, not to be your chat buddy. If you want to talk, find someone else and stop turning to me like Lady Ceylon does."
+          "content": "I'm your bodyguard, Doctor. My duty is to protect you, not chat with you. If you want to talk, please stop turning to me like Lady Ceylon does and find someone else."
         },
         {
           "language": "韩文",
@@ -131,7 +144,7 @@
         },
         {
           "language": "英文",
-          "content": "My expertise? Killing and protecting people. Oh, and making tea. Don't be so shocked. After all, Lady Ceylon is... Anyway, I'm good at that."
+          "content": "My expertise? Killing targets, guarding people, and... making tea. Don't be so shocked. After all, the tea Lady Ceylon makes is… Anyway, I'm good at that."
         },
         {
           "language": "韩文",
@@ -157,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Based on the danger involved in the missions to date, Doctor, I believe, in addition to my protection, you should learn self-defense. Otherwise, even I can't guarantee your safety."
+          "content": "Doctor, based on the danger involved in the missions to date, I believe you need to learn self-defense in addition to my protection. Otherwise, even I can't guarantee your safety."
         },
         {
           "language": "韩文",
@@ -183,7 +196,7 @@
         },
         {
           "language": "英文",
-          "content": "There's no turning back once you got blood on your hands, Doctor. I don't want you to go down that road, so leave the dirty stuff to me."
+          "content": "Once you've got blood on your hands, there's no turning back… Doctor, I do not wish you to go down the same road as mine. So leave the dirty works to me."
         },
         {
           "language": "韩文",
@@ -209,7 +222,7 @@
         },
         {
           "language": "英文",
-          "content": "You want to hear my revenge story? You won't be able to sleep at night, Doctor. But I do have this strange urge to tell you. Why don't we hit the bar, because it's a long story..."
+          "content": "You want to hear my revenge story? You won't be able to sleep at night, Doctor. But… somehow I do have this strange urge to tell you. Well then, let's hit the bar. This story will take a while."
         },
         {
           "language": "韩文",
@@ -235,7 +248,7 @@
         },
         {
           "language": "英文",
-          "content": "Sinners always get what they deserve, I know that. But let's say I'd be more than just a killer had I met Lady Ceylon and you sooner. It's still not too late for me? Do you really mean that, Doctor?"
+          "content": "Sinners always get what they deserve, I know that. But I do wonder sometimes that... if I could have met Lady Ceylon and you sooner, maybe I'd be more than just a killer. It's still not too late for me? Do you really mean that, Doctor?"
         },
         {
           "language": "韩文",
@@ -287,7 +300,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm Schwarz, Lady Ceylon's personal bodyguard, here to join Rhodes Island with her. If at all possible, please send me with her on any missions."
+          "content": "I'm Schwarz, Lady Ceylon's personal bodyguard, here to join Rhodes Island with her. If at all possible, please assign me to accompany her."
         },
         {
           "language": "韩文",
@@ -313,7 +326,7 @@
         },
         {
           "language": "英文",
-          "content": "Rhodes Island is teeming with monsters. I can only hope to learn to battle like them."
+          "content": "I see that Rhodes Island is teeming with war monsters. I can only try to learn their way of battle."
         },
         {
           "language": "韩文",
@@ -339,7 +352,7 @@
         },
         {
           "language": "英文",
-          "content": "Now I understand why Rhodes Island wanted me. You're looking for something a hundred times crazier than anything I ever did."
+          "content": "Now I understand why Rhodes Island wanted me. Your vision is a hundred times crazier than anything I ever did."
         },
         {
           "language": "韩文",
@@ -365,7 +378,7 @@
         },
         {
           "language": "英文",
-          "content": "Reawaken my past? Sounds good. Maybe you can absolve the evil we did in battle. Please, cleanse me."
+          "content": "Reawaken my memories? I'm fine with it. Maybe you can tame the evil inside us when on battlefields. Please, tame it for us."
         },
         {
           "language": "韩文",
@@ -391,7 +404,7 @@
         },
         {
           "language": "英文",
-          "content": "Mission? Got it."
+          "content": "A mission? Got it"
         },
         {
           "language": "韩文",
@@ -469,7 +482,7 @@
         },
         {
           "language": "英文",
-          "content": "Kill them all."
+          "content": "None will escape."
         },
         {
           "language": "韩文",
@@ -547,7 +560,7 @@
         },
         {
           "language": "英文",
-          "content": "This is a good spot."
+          "content": "A solid position."
         },
         {
           "language": "韩文",
@@ -599,7 +612,7 @@
         },
         {
           "language": "英文",
-          "content": "I see you..."
+          "content": "I've got you in my sight."
         },
         {
           "language": "韩文",
@@ -625,7 +638,7 @@
         },
         {
           "language": "英文",
-          "content": "Too obvious."
+          "content": "Way too obvious."
         },
         {
           "language": "韩文",
@@ -651,7 +664,7 @@
         },
         {
           "language": "英文",
-          "content": "Is that all?"
+          "content": "Unworthy of my shots."
         },
         {
           "language": "韩文",
@@ -677,7 +690,7 @@
         },
         {
           "language": "英文",
-          "content": "Lady Ceylon may be merciful, but I am not."
+          "content": "Lady Ceylon may have mercy. I do not."
         },
         {
           "language": "韩文",
@@ -703,7 +716,7 @@
         },
         {
           "language": "英文",
-          "content": "You should lead this dangerous mission from someplace as far away from the battlefield as possible, Doctor."
+          "content": "Doctor, in a dangerous mission like this, you'd better give you command from as far as possible."
         },
         {
           "language": "韩文",
@@ -833,7 +846,7 @@
         },
         {
           "language": "英文",
-          "content": "Watch out for accidental discharge, Doctor."
+          "content": "...?! Please, Doctor, I don't want you to hurt yourself."
         },
         {
           "language": "韩文",
@@ -859,7 +872,7 @@
         },
         {
           "language": "英文",
-          "content": "Anything wrong, Doctor?"
+          "content": "Doctor, I suppose everything's fine?"
         },
         {
           "language": "韩文",
@@ -911,7 +924,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't let your guard down, even on base, Doctor."
+          "content": "Don't let your guard down even on base, Doctor."
         },
         {
           "language": "韩文",

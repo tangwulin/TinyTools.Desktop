@@ -6,11 +6,20 @@
     "https://prts.wiki/images/a/a5/立绘_石棉_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/0/0a/立绘_石棉_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_378_asbest",
-    "中文-普通话": "voice_cn/char_378_asbest",
-    "韩语": "voice_kr/char_378_asbest"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_378_asbest"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_378_asbest"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_378_asbest"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

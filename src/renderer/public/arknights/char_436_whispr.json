@@ -7,10 +7,16 @@
     "https://prts.wiki/images/f/fc/立绘_絮雨_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/6/6e/立绘_絮雨_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_436_whispr",
-    "中文-普通话": "voice_cn/char_436_whispr"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_436_whispr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_436_whispr"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

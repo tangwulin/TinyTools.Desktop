@@ -6,12 +6,24 @@
     "https://prts.wiki/images/7/77/立绘_白金_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/a/af/立绘_白金_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_204_platnm",
-    "中文-普通话": "voice_cn/char_204_platnm",
-    "韩语": "voice_kr/char_204_platnm",
-    "英语": "voice_en/char_204_platnm"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_204_platnm"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_204_platnm"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_204_platnm"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_204_platnm"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

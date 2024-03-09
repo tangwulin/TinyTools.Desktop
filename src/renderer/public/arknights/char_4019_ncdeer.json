@@ -6,9 +6,12 @@
     "https://prts.wiki/images/b/b6/立绘_九色鹿_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/24/立绘_九色鹿_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "联动": "voice_cn/char_4019_ncdeer"
-  },
+  "voiceBase": [
+    {
+      "language": "联动",
+      "base": "voice_cn/char_4019_ncdeer"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

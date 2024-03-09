@@ -7,13 +7,28 @@
     "https://prts.wiki/images/2/20/立绘_食铁兽_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/f/fa/立绘_食铁兽_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_241_panda",
-    "中文-普通话": "voice_cn/char_241_panda",
-    "中文-方言": "voice_custom/char_241_panda_cn_topolect",
-    "韩语": "voice_kr/char_241_panda",
-    "英语": "voice_en/char_241_panda"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_241_panda"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_241_panda"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_241_panda_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_241_panda"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_241_panda"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

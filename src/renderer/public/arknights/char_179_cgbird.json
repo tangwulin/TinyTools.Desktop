@@ -6,12 +6,24 @@
     "https://prts.wiki/images/b/b3/立绘_夜莺_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/d/d5/立绘_夜莺_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_179_cgbird",
-    "中文-普通话": "voice_cn/char_179_cgbird",
-    "韩语": "voice_kr/char_179_cgbird",
-    "英语": "voice_en/char_179_cgbird"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_179_cgbird"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_179_cgbird"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_179_cgbird"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_179_cgbird"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

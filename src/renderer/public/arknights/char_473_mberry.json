@@ -1,14 +1,34 @@
 {
   "name": "桑葚",
   "charaKey": "char_473_mberry",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_473_mberry",
-    "中文-普通话": "voice_cn/char_473_mberry",
-    "中文-方言": "voice_custom/char_473_mberry_cn_topolect",
-    "韩语": "voice_kr/char_473_mberry",
-    "英语": "voice_en/char_473_mberry"
-  },
+  "images": [
+    "https://prts.wiki/images/2/21/立绘_桑葚_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/d/d6/立绘_桑葚_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/f/ff/立绘_桑葚_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/67/立绘_桑葚_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_473_mberry"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_473_mberry"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_473_mberry_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_473_mberry"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_473_mberry"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

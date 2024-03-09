@@ -6,12 +6,24 @@
     "https://prts.wiki/images/d/d3/立绘_焰影苇草_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/3/36/立绘_焰影苇草_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_1020_reed2",
-    "中文-普通话": "voice_cn/char_1020_reed2",
-    "韩语": "voice_kr/char_1020_reed2",
-    "英语": "voice_en/char_1020_reed2"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1020_reed2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1020_reed2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1020_reed2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1020_reed2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,12 +6,24 @@
     "https://prts.wiki/images/f/fb/立绘_至简_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/f/ff/立绘_至简_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4054_malist",
-    "中文-普通话": "voice_cn/char_4054_malist",
-    "韩语": "voice_kr/char_4054_malist",
-    "英语": "voice_en/char_4054_malist"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4054_malist"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4054_malist"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4054_malist"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4054_malist"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

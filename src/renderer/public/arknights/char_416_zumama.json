@@ -6,11 +6,20 @@
     "https://prts.wiki/images/6/6c/立绘_森蚺_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/6/69/立绘_森蚺_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_416_zumama",
-    "中文-普通话": "voice_cn/char_416_zumama",
-    "韩语": "voice_kr/char_416_zumama"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_416_zumama"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_416_zumama"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_416_zumama"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

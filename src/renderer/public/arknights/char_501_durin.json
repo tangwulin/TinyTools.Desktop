@@ -1,13 +1,27 @@
 {
   "name": "杜林",
   "charaKey": "char_501_durin",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_501_durin",
-    "中文-普通话": "voice_cn/char_501_durin",
-    "韩语": "voice_kr/char_501_durin",
-    "英语": "voice_en/char_501_durin"
-  },
+  "images": [
+    "https://prts.wiki/images/f/f7/立绘_杜林_1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_501_durin"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_501_durin"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_501_durin"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_501_durin"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

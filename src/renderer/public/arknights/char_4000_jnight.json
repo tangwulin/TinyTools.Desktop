@@ -5,12 +5,24 @@
     "https://prts.wiki/images/e/e2/立绘_正义骑士号_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/9f/立绘_正义骑士号_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4000_jnight",
-    "中文-普通话": "voice_cn/char_4000_jnight",
-    "韩语": "voice_kr/char_4000_jnight",
-    "英语": "voice_en/char_4000_jnight"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4000_jnight"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4000_jnight"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4000_jnight"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4000_jnight"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,12 +6,24 @@
     "https://prts.wiki/images/c/c7/立绘_闪灵_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/5/50/立绘_闪灵_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_147_shining",
-    "中文-普通话": "voice_cn/char_147_shining",
-    "韩语": "voice_kr/char_147_shining",
-    "英语": "voice_en/char_147_shining"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_147_shining"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_147_shining"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_147_shining"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_147_shining"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

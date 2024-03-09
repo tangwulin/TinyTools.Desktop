@@ -6,12 +6,24 @@
     "https://prts.wiki/images/2/24/立绘_远牙_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/9d/立绘_远牙_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_430_fartth",
-    "中文-普通话": "voice_cn/char_430_fartth",
-    "韩语": "voice_kr/char_430_fartth",
-    "英语": "voice_en/char_430_fartth"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_430_fartth"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_430_fartth"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_430_fartth"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_430_fartth"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

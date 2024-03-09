@@ -6,10 +6,16 @@
     "https://prts.wiki/images/4/46/立绘_空弦_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/8/81/立绘_空弦_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_332_archet",
-    "中文-普通话": "voice_cn/char_332_archet"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_332_archet"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_332_archet"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

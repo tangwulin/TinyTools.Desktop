@@ -7,12 +7,24 @@
     "https://prts.wiki/images/4/4c/立绘_和弦_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/8/83/立绘_和弦_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_297_hamoni",
-    "中文-普通话": "voice_cn/char_297_hamoni",
-    "韩语": "voice_kr/char_297_hamoni",
-    "英语": "voice_en/char_297_hamoni"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_297_hamoni"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_297_hamoni"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_297_hamoni"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_297_hamoni"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

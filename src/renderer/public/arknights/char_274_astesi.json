@@ -8,10 +8,20 @@
     "https://prts.wiki/images/1/1d/立绘_星极_skin2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/a/a4/立绘_星极_skin3.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_274_astesi",
-    "中文-普通话": "voice_cn/char_274_astesi"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_274_astesi"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_274_astesi"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_274_astesi"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -27,7 +37,7 @@
         },
         {
           "language": "英文",
-          "content": "The work schedule is out for you to follow."
+          "content": "I drew up the work schedule for you. Please kindly follow."
         },
         {
           "language": "韩文",
@@ -53,7 +63,7 @@
         },
         {
           "language": "英文",
-          "content": "How to make an astrolabe is a secret, but as you said, anything can be had for a price. And you will know the secret if the price is right."
+          "content": "How to make a celestial globe is a secret, but as we know, anything can be on the table for a fair price. I'd be happy to reveal my trick of the trade as long as your price is right."
         },
         {
           "language": "韩文",
@@ -79,7 +89,7 @@
         },
         {
           "language": "英文",
-          "content": "Observing the stars everyday makes my neck sore. Wonder if the medics would have any suggestions for that... What, Warfarin is the physician on duty today? Uh, I'll check again another day."
+          "content": "Observing the stars everyday makes my neck sore. Wonder if the medics would have any suggestions for that... What, Miss. Warfarin is the physician on duty today? Um... I'll check again another day."
         },
         {
           "language": "韩文",
@@ -105,7 +115,7 @@
         },
         {
           "language": "英文",
-          "content": "Astrology is divining the future from celestial alignments. It's not quite augury, but with same result. So, would you like to try? It's free."
+          "content": "Astrology is learning about the present and the future from celestial alignments. It's not quite divination, but with the same result. So, would you like to give it a try, Doctor? It's free of charge!"
         },
         {
           "language": "韩文",
@@ -131,7 +141,7 @@
         },
         {
           "language": "英文",
-          "content": "'Convergent DNA among blood relatives... Hmm, resonance and concurrency within Originium formation...' Now this is some occult stuff. I can't make heads or tails of it... Doctor, would you be able to take some time to explain this report to me?"
+          "content": "'Similar genes, among blood relatives, causes, uh, reverberations of Originium...' I can barely understand a word in this work of an occultist. Doctor, Can you interpret the medical report for me?"
         },
         {
           "language": "韩文",
@@ -157,7 +167,7 @@
         },
         {
           "language": "英文",
-          "content": "Ever since my Oripathic infection, the stars have diminished their responses to me. I must find a way to reverse it before I lose all my power. Can you help me, Doctor?"
+          "content": "Ever since my Oripathic infection, the stars have diminished their responses to me. I must find a way to reverse it before I lose all my power. Otherwise I'l… Could you help me, Doctor?"
         },
         {
           "language": "韩文",
@@ -209,7 +219,7 @@
         },
         {
           "language": "英文",
-          "content": "Sometimes, I envy Sta... No, she's Astgenne now. She has everything I'm missing. That must be it, Doctor. We relied on each other because we complement each other, that's why we're sisters."
+          "content": "Sometimes, I envy Astgenne... Ah, guess I should call her Elena now. She has everything I'm missing... But like you said, Doctor, we relied on each other because we complement each other, that's why we're sisters."
         },
         {
           "language": "韩文",
@@ -235,7 +245,7 @@
         },
         {
           "language": "英文",
-          "content": "The night is over and the stars are about to fade. If this is the end of everything, I should start doing something meaningful. Such as? Well, do you mind me waking you up every morning, Doctor?"
+          "content": "As the nights bid us farewell, so do the starlights fade and quell. If this is the end that awaits us ahead, I should be picking up something more meaningful to do. Such as? Umm... Doctor, do you mind me waking you up every morning?"
         },
         {
           "language": "韩文",
@@ -261,7 +271,7 @@
         },
         {
           "language": "英文",
-          "content": "Tea is ready. Time to relax."
+          "content": "The tea's ready, Doctor. Time for a little break."
         },
         {
           "language": "韩文",
@@ -339,7 +349,7 @@
         },
         {
           "language": "英文",
-          "content": "Promotion medal? It's exquisite, I shall keep it safe."
+          "content": "A promotion medal? How exquisite. I'll treasure it well."
         },
         {
           "language": "韩文",
@@ -365,7 +375,7 @@
         },
         {
           "language": "英文",
-          "content": "Stars are witnesses to the past."
+          "content": "Stars shine bright, bearing witness of our past nights."
         },
         {
           "language": "韩文",
@@ -443,7 +453,7 @@
         },
         {
           "language": "英文",
-          "content": "I know there's no turning back."
+          "content": "There's no turning back now."
         },
         {
           "language": "韩文",
@@ -495,7 +505,7 @@
         },
         {
           "language": "英文",
-          "content": "Ready to move."
+          "content": "Ready for action."
         },
         {
           "language": "韩文",
@@ -625,7 +635,7 @@
         },
         {
           "language": "英文",
-          "content": "Lend me your wings, birds among the stars!"
+          "content": "Lend me your wings, avians among the stars!"
         },
         {
           "language": "韩文",
@@ -651,7 +661,7 @@
         },
         {
           "language": "英文",
-          "content": "It is futile for you to struggle."
+          "content": "The serpent has brought about your end."
         },
         {
           "language": "韩文",
@@ -703,7 +713,7 @@
         },
         {
           "language": "英文",
-          "content": "This is 'our' power, unreproducible even by the stars..."
+          "content": "So this is 'our' power, a power even the stars failed to foresee..."
         },
         {
           "language": "韩文",
@@ -729,7 +739,7 @@
         },
         {
           "language": "英文",
-          "content": "Fantastic effort, Doctor. You should turn in early."
+          "content": "Fantastic results, Doctor. But don't overwork yourself, be sure to rest up well."
         },
         {
           "language": "韩文",
@@ -755,7 +765,7 @@
         },
         {
           "language": "英文",
-          "content": "Will the result improve if I put in more effort?"
+          "content": "If I put in more effort, maybe the outcome could be better…"
         },
         {
           "language": "韩文",
@@ -781,7 +791,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm very tired, but it's not time to quit yet..."
+          "content": "I'm dead on my feet... but it's not time to quit yet"
         },
         {
           "language": "韩文",
@@ -807,7 +817,7 @@
         },
         {
           "language": "英文",
-          "content": "Let me see... No, how the furniture are arranged won't attract any unwanted spirits."
+          "content": "Let me see... Yes, the layout's good. The furniture won't attract any unwanted spirits this way."
         },
         {
           "language": "韩文",
@@ -833,7 +843,7 @@
         },
         {
           "language": "英文",
-          "content": "Wait, hold it!"
+          "content": "W-Wait!"
         },
         {
           "language": "韩文",
@@ -859,7 +869,7 @@
         },
         {
           "language": "英文",
-          "content": "Why, is there something on my face?"
+          "content": "W-What's that... something on my face?"
         },
         {
           "language": "韩文",

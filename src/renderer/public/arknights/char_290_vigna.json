@@ -7,12 +7,24 @@
     "https://prts.wiki/images/d/df/立绘_红豆_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/d/d7/立绘_红豆_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_290_vigna",
-    "中文-普通话": "voice_cn/char_290_vigna",
-    "韩语": "voice_kr/char_290_vigna",
-    "英语": "voice_en/char_290_vigna"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_290_vigna"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_290_vigna"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_290_vigna"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_290_vigna"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -28,7 +40,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, hey! I'm watching a rock concert, Doctor! Stop blocking the TV! I just missed the best part thanks to you!"
+          "content": "Hey, hey! I'm watching a rock concert, Doctor! Stop blocking the TV! Just missed the best part thanks to you!"
         },
         {
           "language": "韩文",
@@ -314,7 +326,7 @@
         },
         {
           "language": "英文",
-          "content": "You gotta be willing to sweat a lot to keep up the battle tempo, (is that right)?"
+          "content": "You gotta be willing to sweat a lot to keep up the battle tempo!"
         },
         {
           "language": "韩文",
@@ -730,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "You all deserve a commendation from me, oh, but not you, Doctor, not yet! Your job's not finished until I see everyone back home safe and sound~"
+          "content": "You all deserve a commendation from me, oh, but not you, Doctor, not yet! Your job's not finished until I see everyone back home safe and sound."
         },
         {
           "language": "韩文",

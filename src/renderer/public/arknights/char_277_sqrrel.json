@@ -1,17 +1,25 @@
 {
   "name": "阿消",
   "charaKey": "char_277_sqrrel",
-  "images": [
-    "https://prts.wiki/images/c/c6/立绘_阿消_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e1/立绘_阿消_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/52/立绘_阿消_skin1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_277_sqrrel"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_277_sqrrel"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_277_sqrrel"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_277_sqrrel"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_277_sqrrel",
-    "中文-普通话": "voice_cn/char_277_sqrrel",
-    "韩语": "voice_kr/char_277_sqrrel",
-    "英语": "voice_en/char_277_sqrrel"
-  },
   "voiceList": [
     {
       "title": "任命助理",

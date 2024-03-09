@@ -6,13 +6,28 @@
     "https://prts.wiki/images/6/6e/立绘_车尔尼_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/8/87/立绘_车尔尼_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4047_pianst",
-    "中文-普通话": "voice_cn/char_4047_pianst",
-    "韩语": "voice_kr/char_4047_pianst",
-    "英语": "voice_en/char_4047_pianst",
-    "德语": "voice_custom/char_4047_pianst"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4047_pianst"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4047_pianst"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4047_pianst"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4047_pianst"
+    },
+    {
+      "language": "德语",
+      "base": "voice_custom/char_4047_pianst"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

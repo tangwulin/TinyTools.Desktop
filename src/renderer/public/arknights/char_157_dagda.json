@@ -1,13 +1,28 @@
 {
   "name": "达格达",
   "charaKey": "char_157_dagda",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_157_dagda",
-    "中文-普通话": "voice_cn/char_157_dagda",
-    "韩语": "voice_kr/char_157_dagda",
-    "英语": "voice_en/char_157_dagda"
-  },
+  "images": [
+    "https://prts.wiki/images/c/c8/立绘_达格达_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/6/65/立绘_达格达_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_157_dagda"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_157_dagda"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_157_dagda"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_157_dagda"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

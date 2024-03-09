@@ -6,14 +6,32 @@
     "https://prts.wiki/images/f/f0/立绘_玛恩纳_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/c0/立绘_玛恩纳_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4064_mlynar",
-    "中文-普通话": "voice_cn/char_4064_mlynar",
-    "韩语": "voice_kr/char_4064_mlynar",
-    "英语": "voice_en/char_4064_mlynar",
-    "中文-普通话(远路)": "voice_cn/char_4064_mlynar_epoque__28",
-    "日语(远路)": "voice/char_4064_mlynar_epoque__28"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4064_mlynar"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4064_mlynar"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4064_mlynar"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4064_mlynar"
+    },
+    {
+      "language": "中文-普通话(远路)",
+      "base": "voice_cn/char_4064_mlynar_epoque__28"
+    },
+    {
+      "language": "日语(远路)",
+      "base": "voice/char_4064_mlynar_epoque__28"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

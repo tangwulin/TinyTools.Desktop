@@ -5,10 +5,16 @@
     "https://prts.wiki/images/e/e7/立绘_折光_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/c2/立绘_折光_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_499_kaitou",
-    "中文-普通话": "voice_cn/char_499_kaitou"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_499_kaitou"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_499_kaitou"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -1,13 +1,29 @@
 {
   "name": "白铁",
   "charaKey": "char_4072_ironmn",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_4072_ironmn",
-    "中文-普通话": "voice_cn/char_4072_ironmn",
-    "韩语": "voice_kr/char_4072_ironmn",
-    "英语": "voice_en/char_4072_ironmn"
-  },
+  "images": [
+    "https://prts.wiki/images/2/28/立绘_白铁_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/1/1b/立绘_白铁_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/eb/立绘_白铁_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4072_ironmn"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4072_ironmn"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4072_ironmn"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4072_ironmn"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

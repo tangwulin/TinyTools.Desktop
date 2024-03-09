@@ -6,12 +6,24 @@
     "https://prts.wiki/images/0/05/立绘_初雪_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/f/f9/立绘_初雪_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_174_slbell",
-    "中文-普通话": "voice_cn/char_174_slbell",
-    "韩语": "voice_kr/char_174_slbell",
-    "英语": "voice_en/char_174_slbell"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_174_slbell"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_174_slbell"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_174_slbell"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_174_slbell"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,12 +6,24 @@
     "https://prts.wiki/images/b/b6/立绘_伊桑_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/e/ec/立绘_伊桑_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_355_ethan",
-    "中文-普通话": "voice_cn/char_355_ethan",
-    "韩语": "voice_kr/char_355_ethan",
-    "英语": "voice_en/char_355_ethan"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_355_ethan"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_355_ethan"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_355_ethan"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_355_ethan"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -27,7 +39,7 @@
         },
         {
           "language": "英文",
-          "content": "Yo, Doctor! Is it time for my shift? Hmm? I suddenly popped up out of nowhere? No way, I just left the office."
+          "content": "Yo, Doctor! Is it time for my shift? Hmm? I suddenly popped up out of nowhere? Nope, just got here."
         },
         {
           "language": "韩文",
@@ -53,7 +65,7 @@
         },
         {
           "language": "英文",
-          "content": "My last job was with Reunion. Haven't I said that a bunch of times? Hey, aren't I voluntarily helping you with background checks and whatnot? Look, I wasn't involved with anything back when I was with Reunion, so I don't even have any guilt I'd like to wash away."
+          "content": "C'mon, man, I worked with you on my background check. And I told you a million times: My last job was with Reunion, sure. But I wasn't mixed up in any of the criminal stuff. No guilt here!"
         },
         {
           "language": "韩文",
@@ -79,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "If there's anything I really hated about Reunion, it was the food! Of course it was the food! The staple food for my team was a piece of blackened hardtack that was as tough as a rock. I had to throw it in a pot and simmer it into a stew before I could stomach that stuff."
+          "content": "If there's one thing I really hated about Reunion, it was the food! If you can even call it food… My team mostly got by on rock-hard black bread. I had to throw it in a pot and simmer it into stew every time. Those people were just brutal on their stomachs."
         },
         {
           "language": "韩文",
@@ -105,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "You should have run into Reunion's 'Wraith' ops a few times before, right? I used to work there. I was tasked with conducting investigations and whatnot, but I never really did anything. When I was bored, I took out bets on who would get discovered the least. When I think back on it, I was basically bullying people."
+          "content": "You must've run into Reunion's 'Wraith' guys a whole bunch of times, right? I was one of those. They sent me to scout stuff, never did any fighting. I used to place bets on who would or wouldn't get seen as a way to deal with the boredom. Thinking back, I guess that was kind of rough on the other guys."
         },
         {
           "language": "韩文",
@@ -131,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "What did I do before joining the Reunion Movement? Well, I was always hiding from those Infected hunters, but because of my sneaky little power here, they never found me, haha.... But, no matter how much I hid, I couldn't really do anything to actually help the Infected."
+          "content": "What did I do before I joined Reunion? I was playing hide n' seek with the Infected hunters, duh. With my sneaky little power here, they went home empty-handed every time, haha… But all I could do was hide. And that wasn't gonna help change things for the Infected."
         },
         {
           "language": "韩文",
@@ -157,7 +169,7 @@
         },
         {
           "language": "英文",
-          "content": "In the beginning, I would hide in the underground. I used to want to help out the Infected people, but over time, I turned a little sour, I guess. Fortunately, I'm back to being sweet again. What do I mean by that? You're asking that again? Just give it a rest already."
+          "content": "I joined up with the underground because I wanted to help other Infected. But over time, I got jaded, then I stopped being a good guy... Well, at least my hands are 'clean' again. What do I mean by that? Hehe, that's enough questions, friend. Never you mind."
         },
         {
           "language": "韩文",
@@ -183,7 +195,7 @@
         },
         {
           "language": "英文",
-          "content": "Camouflage Arts are very complicated! First you gotta get to know the materials and get a feel for these gadgets. Memorize the shape of each wall crack and the color of the soil and wood. If you don't, you'll be exposed and they'll get you easy."
+          "content": "Look, camouflage Arts are really complicated! First, you gotta actually know the compisition and texture of your surroundings. Then, you memorize the shape of every crack in the wall, and all the colors of all the soil and every tree. If you don't have those down, even your nerves will get you popping out, and then it's only a matter of time until you're made."
         },
         {
           "language": "韩文",
@@ -209,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "You were the only one in the office, but the snacks disappeared as soon as you turned your head? Umm, tell you what. I understand. I'll make sure to catch the culprit, mhm."
+          "content": "You were the only one in the office, and your snacks disappeared as soon as you turned your head? Wow, that's weird. Why don't you leave it to me? I'll solve this mystery and bring the thief right to you. Yep."
         },
         {
           "language": "韩文",
@@ -235,7 +247,7 @@
         },
         {
           "language": "英文",
-          "content": "So, this is the layout of the mission location? Ah, I see. Wow, you're really something. Your strategies are always so effective, no wonder why Reunion got their asses handed to them every time. All right, I'll get going now!"
+          "content": "So this is a map of the operating area? Let's see… Wow, you're really something. Your strategies are so clever, no wonder Reunion always got their asses handed to them. Okay, I'm moving out!"
         },
         {
           "language": "韩文",
@@ -261,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh? I didn't lock the door?"
+          "content": "Hm? The door isn't locked?"
         },
         {
           "language": "韩文",
@@ -287,7 +299,7 @@
         },
         {
           "language": "英文",
-          "content": "You're asking where I am? I'm right in front of you! You can call me Ethan. You're asking me what happened just now? Haha, I can't answer that yet!"
+          "content": "Where am I? Right in front of you! You can call me Ethan. How did I get in here? Haha! Can't answer that one yet."
         },
         {
           "language": "韩文",
@@ -313,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "Where am I? But, I'm right here! Look at the security camera, top left on this screen. Top left corner!"
+          "content": "Where was I? C'mon! Right over there! Look at the top left of screen. Top left corner!"
         },
         {
           "language": "韩文",
@@ -365,7 +377,7 @@
         },
         {
           "language": "英文",
-          "content": "Yo, Doctor. Make sure to remember the little guys, especially me. I could die in battle somewhere and nobody would even realize I'm gone. So please, I'm trusting you to remember where I am!"
+          "content": "Yo, Doctor. Make sure you remember the little guys like me. I could die in some battle somewhere and nobody would even know I was gone. So please, remember where I am!"
         },
         {
           "language": "韩文",
@@ -391,7 +403,7 @@
         },
         {
           "language": "英文",
-          "content": "You said that wall just moved right in front of your eyes? Haha, you've gotta be exaggerating, right?"
+          "content": "The wall moved, right before your eyes? Naw, you're exaggerating, definitely."
         },
         {
           "language": "韩文",
@@ -443,7 +455,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't panic, even if you realize you're the only one left on the team!"
+          "content": "Don't panic if you suddenly notice a missing squadmate."
         },
         {
           "language": "韩文",
@@ -469,7 +481,7 @@
         },
         {
           "language": "英文",
-          "content": "Is it time to fight? Let me hide first!"
+          "content": "Time to fight? I gotta hide first!"
         },
         {
           "language": "韩文",
@@ -495,7 +507,7 @@
         },
         {
           "language": "英文",
-          "content": "Right here, right here!"
+          "content": "Hey, over here!"
         },
         {
           "language": "韩文",
@@ -547,7 +559,7 @@
         },
         {
           "language": "英文",
-          "content": "Coming, coming."
+          "content": "Let's dance."
         },
         {
           "language": "韩文",
@@ -573,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "Right here is fine"
+          "content": "Good spot here."
         },
         {
           "language": "韩文",
@@ -625,7 +637,7 @@
         },
         {
           "language": "英文",
-          "content": "Violence won't solve all your problems, but taking care of you isn't a problem either!"
+          "content": "Violence can't solve all your problems, but it can solve you!"
         },
         {
           "language": "韩文",
@@ -651,7 +663,7 @@
         },
         {
           "language": "英文",
-          "content": "Can't see me!"
+          "content": "Haha, you can't see me!"
         },
         {
           "language": "韩文",
@@ -677,7 +689,7 @@
         },
         {
           "language": "英文",
-          "content": "Are you about to faint?"
+          "content": "Feel like you're gonna faint?"
         },
         {
           "language": "韩文",
@@ -755,7 +767,7 @@
         },
         {
           "language": "英文",
-          "content": "So what if they got away. Let 'em go."
+          "content": "So what if they got away. Just let 'em go."
         },
         {
           "language": "韩文",
@@ -859,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, want to go take a stroll?"
+          "content": "Hey, wanna go for a stroll?"
         },
         {
           "language": "韩文",
@@ -911,7 +923,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey Doctor, you look like you're in a nice mood. Did something good happen?"
+          "content": "Hey, Doctor, somebody looks happy. Did something good happen?"
         },
         {
           "language": "韩文",

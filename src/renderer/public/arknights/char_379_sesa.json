@@ -5,11 +5,20 @@
     "https://prts.wiki/images/0/0b/立绘_慑砂_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/99/立绘_慑砂_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_379_sesa",
-    "中文-普通话": "voice_cn/char_379_sesa",
-    "韩语": "voice_kr/char_379_sesa"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_379_sesa"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_379_sesa"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_379_sesa"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

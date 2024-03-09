@@ -5,11 +5,20 @@
     "https://prts.wiki/images/1/11/立绘_缠丸_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/22/立绘_缠丸_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_289_gyuki",
-    "中文-普通话": "voice_cn/char_289_gyuki",
-    "韩语": "voice_kr/char_289_gyuki"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_289_gyuki"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_289_gyuki"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_289_gyuki"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

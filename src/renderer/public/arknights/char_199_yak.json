@@ -1,17 +1,25 @@
 {
   "name": "角峰",
   "charaKey": "char_199_yak",
-  "images": [
-    "https://prts.wiki/images/6/6c/立绘_角峰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/47/立绘_角峰_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cb/立绘_角峰_skin1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_199_yak"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_199_yak"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_199_yak"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_199_yak"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_199_yak",
-    "中文-普通话": "voice_cn/char_199_yak",
-    "韩语": "voice_kr/char_199_yak",
-    "英语": "voice_en/char_199_yak"
-  },
   "voiceList": [
     {
       "title": "任命助理",

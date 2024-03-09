@@ -5,9 +5,12 @@
     "https://prts.wiki/images/d/df/立绘_闪击_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/96/立绘_闪击_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "联动": "voice/char_457_blitz"
-  },
+  "voiceBase": [
+    {
+      "language": "联动",
+      "base": "voice/char_457_blitz"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,13 +6,28 @@
     "https://prts.wiki/images/3/30/立绘_真理_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/7/7a/立绘_真理_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_195_glassb",
-    "中文-普通话": "voice_cn/char_195_glassb",
-    "韩语": "voice_kr/char_195_glassb",
-    "英语": "voice_en/char_195_glassb",
-    "俄语": "voice_custom/char_195_glassb"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_195_glassb"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_195_glassb"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_195_glassb"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_195_glassb"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_195_glassb"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,10 +6,16 @@
     "https://prts.wiki/images/2/2e/立绘_瑕光_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/4/43/立绘_瑕光_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_423_blemsh",
-    "中文-普通话": "voice_cn/char_423_blemsh"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_423_blemsh"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_423_blemsh"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

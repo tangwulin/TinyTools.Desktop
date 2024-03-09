@@ -5,12 +5,24 @@
     "https://prts.wiki/images/a/a0/立绘_夜烟_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/0/08/立绘_夜烟_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_141_nights",
-    "中文-普通话": "voice_cn/char_141_nights",
-    "韩语": "voice_kr/char_141_nights",
-    "英语": "voice_en/char_141_nights"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_141_nights"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_141_nights"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_141_nights"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_141_nights"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

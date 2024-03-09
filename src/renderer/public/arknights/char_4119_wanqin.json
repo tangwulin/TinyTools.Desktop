@@ -5,10 +5,16 @@
     "https://prts.wiki/images/7/76/立绘_万顷_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/9e/立绘_万顷_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4119_wanqin",
-    "中文-普通话": "voice_cn/char_4119_wanqin"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4119_wanqin"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4119_wanqin"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

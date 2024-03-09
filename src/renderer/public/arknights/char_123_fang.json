@@ -5,12 +5,24 @@
     "https://prts.wiki/images/a/af/立绘_芬_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/d/de/立绘_芬_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_123_fang",
-    "中文-普通话": "voice_cn/char_123_fang",
-    "韩语": "voice_kr/char_123_fang",
-    "英语": "voice_en/char_123_fang"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_123_fang"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_123_fang"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_123_fang"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_123_fang"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

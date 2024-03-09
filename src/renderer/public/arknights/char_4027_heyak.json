@@ -5,12 +5,24 @@
     "https://prts.wiki/images/4/4f/立绘_霍尔海雅_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/27/立绘_霍尔海雅_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4027_heyak",
-    "中文-普通话": "voice_cn/char_4027_heyak",
-    "韩语": "voice_kr/char_4027_heyak",
-    "英语": "voice_en/char_4027_heyak"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4027_heyak"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4027_heyak"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4027_heyak"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4027_heyak"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -26,7 +38,7 @@
         },
         {
           "language": "英文",
-          "content": "Here. Two Minoan Mists, freshly brewed... I'll have to behave myself, Doctor, since I'm your assistant now. The next time you choke on my strangling tail after getting me mad, I'll make sure you can at least find some solace in my feathers."
+          "content": "Here, two Minoan Mists, freshly brewed... I'll have to behave myself, Doctor, since I'm your assistant now. The next time you choke on my strangling tail after getting me mad, I'll make sure you can at least find some solace in my feathers."
         },
         {
           "language": "韩文",
@@ -48,7 +60,7 @@
         },
         {
           "language": "英文",
-          "content": "Immoral scientist, disloyal mercenary, double-crossing spy... yes, that's all me. Rules are what bar you from working to your full efficiency, darling, and you must learn to break them. That being said, I'm sure you have more to share with me for what little time we have alone together, <i>other</i> than the rules of Rhodes Island, I suppose?"
+          "content": "Immoral scientist, disloyal mercenary, double-crossing spy... Yes, that's all me. Rules are what bar you from working to your full efficiency, darling, and you must learn to break them. That being said, I'm sure you have more to share with me for what little time we have alone together, other than the rules of Rhodes Island, I suppose?"
         },
         {
           "language": "韩文",
@@ -70,7 +82,7 @@
         },
         {
           "language": "英文",
-          "content": "As senior consultant to Rhodes Island, I'd love to have more time to study the archives and collections of this ship. Meet my coworkers? You see the flow of history and soundless order in those objects. Tell me. What's worth seeing in people?"
+          "content": "As senior consultant to Rhodes Island, I'd love to have more time to study the archives and collections of this ship. Meet my coworkers? You see the flow of history and soundless order in those objects. Tell me, what's worth seeing in people?"
         },
         {
           "language": "韩文",
@@ -92,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "'Reflect the truth and glimpse the future'? Most astrologists got started just to steal a peek at their own doom. But when Kristen tore open the skies over Trimounts, she debunked astrology as the silly fabrication it is. And that's more interesting than the practice itself."
+          "content": "'Reflect the truth and glimpse the future'? Most astrologers got started just to steal a peek at their own doom. But when Kristen tore open the skies over Trimounts, she debunked astrology as the silly fabrication it is. And that's more interesting than the practice itself."
         },
         {
           "language": "韩文",
@@ -136,7 +148,7 @@
         },
         {
           "language": "英文",
-          "content": "Our story? Feathers wet by dew from the trees, tails sweeping past decrepit pillars; thus, knowledge was passed on through generations. We embrace the ever-expanding unknown, and walk toward madness... I don't want to lose my mind, of course, but if that's what it takes to change this ridiculous fate, then I'll do it gladly."
+          "content": "Our story? Feathers wet by dew from the trees, tails sweeping past decrepit pillars. Thus, knowledge was passed on through generations. We embrace the ever-expanding unknown, and walk toward madness... I don't want to lose my mind, of course. But if that's what it takes to change this ridiculous fate, then I'll do it gladly."
         },
         {
           "language": "韩文",
@@ -158,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, were you—avoiding me? I just wanted to show you a newly-excavated ruin I found. Oh? What's that? Why do I keep bothering you? Oh, my. Shouldn't you do some soul-searching, and ask why <i>you</i>... are the only one I'm bothering?"
+          "content": "Doctor, were you… avoiding me? I just wanted to show you a newly-excavated ruin I found. What's that? Why do I keep bothering you? Oh my, shouldn't you do some soul-searching and ask why <i>you</i> are the only one I'm bothering?"
         },
         {
           "language": "韩文",
@@ -180,7 +192,7 @@
         },
         {
           "language": "英文",
-          "content": "I saw you with Muelsyse at the mall in Trimounts. Oh, that Elf surely knows how to work her charm, doesn't she? I could use some assistance from you as well, but my approaches are different... Look down now. My tail will gladly learn the way <i>through</i> your heart, unless you accept my offer."
+          "content": "I saw you with Muelsyse at the mall in Trimounts. That elf surely knows how to work her charm, doesn't she? I could use some assistance from you as well, but my 'approaches' are different. Look down now, my tail will gladly learn the way <i>through</i> your heart, unless you accept my offer."
         },
         {
           "language": "韩文",
@@ -202,7 +214,7 @@
         },
         {
           "language": "英文",
-          "content": "Tell me, Doctor, how does it feel to lose your memory? I couldn't bear to see a great library reduced to ashes in a fire, but a librarian fool enough to only brush the dust off the shelves pains me even more. Who's sadder, you or me?"
+          "content": "Tell me, Doctor, how does it feel to lose your memory? I couldn't bear to see a great library reduced to ashes in a fire. But a librarian fool enough to only brush the dust off the shelves pains me even more. Who's sadder, you or me?"
         },
         {
           "language": "韩文",
@@ -268,7 +280,7 @@
         },
         {
           "language": "英文",
-          "content": "...Are we done yet?"
+          "content": "Are we done yet?"
         },
         {
           "language": "韩文",
@@ -290,7 +302,7 @@
         },
         {
           "language": "英文",
-          "content": "Congratulations. You've earned yourself a promotion from me too. This time, I brewed four Minoan Mists... Oh, do they really punch you that hard? Stay sober now—if you know what's good for you."
+          "content": "Congratulations. You've earned yourself a promotion from me too. This time, I brewed four Minoan Mists... do they really punch you that hard? Stay sober now, if you know what's good for you."
         },
         {
           "language": "韩文",
@@ -444,7 +456,7 @@
         },
         {
           "language": "英文",
-          "content": "My, my. Are you sure you want to treat me as a mercenary?"
+          "content": "My, my...Are you sure you want to treat me as a mercenary?"
         },
         {
           "language": "韩文",
@@ -466,7 +478,7 @@
         },
         {
           "language": "英文",
-          "content": "Such ruthlessness. I said I don't like getting my feathers wet."
+          "content": "Such ruthlessness! I said I don't like getting my feathers wet."
         },
         {
           "language": "韩文",
@@ -488,7 +500,7 @@
         },
         {
           "language": "英文",
-          "content": "How rude. Didn't I tell you not to get dust on my tail?"
+          "content": "How rude~ Didn't I tell you not to get dust on my tail?"
         },
         {
           "language": "韩文",
@@ -554,7 +566,7 @@
         },
         {
           "language": "英文",
-          "content": "Oh, your Arts aren't working? How can that be?"
+          "content": "Oh, your Arts aren't working. How can that be?"
         },
         {
           "language": "韩文",
@@ -598,7 +610,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, your performance reminds me of a bunch of unfounded legends—but now, I believe in them. Legends, no more."
+          "content": "Doctor, your performance reminds me of a bunch of unfounded legends. But now, I believe in them. Legends no more."
         },
         {
           "language": "韩文",
@@ -620,7 +632,7 @@
         },
         {
           "language": "英文",
-          "content": "Are you... waiting for a compliment?"
+          "content": "Are you… waiting for a compliment?"
         },
         {
           "language": "韩文",
@@ -686,7 +698,7 @@
         },
         {
           "language": "英文",
-          "content": "Excuse me. Are we accommodating a mercenary here, or is this how Rhodes Island welcomes their senior consultant? *chuckle* Just kidding."
+          "content": "Excuse me, are we accommodating a mercenary here, or is this how Rhodes Island welcomes their senior consultant...? Heh, Just kidding."
         },
         {
           "language": "韩文",
@@ -708,7 +720,7 @@
         },
         {
           "language": "英文",
-          "content": "What? Here to challenge Siestan iced tea? Or a Minoan Mist?"
+          "content": "What, here to challenge Siestan Iced Tea? Or, Minoan Mist?"
         },
         {
           "language": "韩文",
@@ -730,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "Careful! These are rare documents. How did I get them? Relax, not by following procedure, I assure you. What? You want to interrogate me?"
+          "content": "Careful! These are rare documents. How did I get them? Relax, not by following procedure, I assure you. What, you wanna interrogate me?"
         },
         {
           "language": "韩文",
@@ -774,7 +786,7 @@
         },
         {
           "language": "英文",
-          "content": "Well, if it isn't the Doctor... what a coincidence, us bumping into each other."
+          "content": "Well, if it isn't the Doctor… What a coincidence, us bumping into each other."
         },
         {
           "language": "韩文",

@@ -6,11 +6,20 @@
     "https://prts.wiki/images/0/0e/立绘_杰克_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/ca/立绘_杰克_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_347_jaksel",
-    "中文-普通话": "voice_cn/char_347_jaksel",
-    "韩语": "voice_kr/char_347_jaksel"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_347_jaksel"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_347_jaksel"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_347_jaksel"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

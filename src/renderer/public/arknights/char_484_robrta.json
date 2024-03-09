@@ -1,18 +1,25 @@
 {
   "name": "罗比菈塔",
   "charaKey": "char_484_robrta",
-  "images": [
-    "https://prts.wiki/images/9/9d/立绘_罗比菈塔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c4/立绘_罗比菈塔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9e/立绘_罗比菈塔_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/69/立绘_罗比菈塔_skin2.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_484_robrta"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_484_robrta"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_484_robrta"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_484_robrta"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_484_robrta",
-    "中文-普通话": "voice_cn/char_484_robrta",
-    "韩语": "voice_kr/char_484_robrta",
-    "英语": "voice_en/char_484_robrta"
-  },
   "voiceList": [
     {
       "title": "任命助理",

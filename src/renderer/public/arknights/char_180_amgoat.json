@@ -1,13 +1,29 @@
 {
   "name": "艾雅法拉",
   "charaKey": "char_180_amgoat",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_180_amgoat",
-    "中文-普通话": "voice_cn/char_180_amgoat",
-    "韩语": "voice_kr/char_180_amgoat",
-    "英语": "voice_en/char_180_amgoat"
-  },
+  "images": [
+    "https://prts.wiki/images/c/c0/立绘_艾雅法拉_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/2/21/立绘_艾雅法拉_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/e8/立绘_艾雅法拉_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_180_amgoat"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_180_amgoat"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_180_amgoat"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_180_amgoat"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

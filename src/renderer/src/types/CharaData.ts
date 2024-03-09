@@ -2,7 +2,7 @@ export type CharaData = {
   name: string
   charaKey: string
   images: string[]
-  voiceBase: { [key: string]: string }
+  voiceBase: { language: string; base: string }[]
   voiceList: {
     title: string
     filename: string

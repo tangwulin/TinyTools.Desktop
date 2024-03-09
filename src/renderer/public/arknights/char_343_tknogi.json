@@ -7,11 +7,20 @@
     "https://prts.wiki/images/3/34/立绘_月禾_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/9b/立绘_月禾_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_343_tknogi",
-    "中文-普通话": "voice_cn/char_343_tknogi",
-    "韩语": "voice_kr/char_343_tknogi"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_343_tknogi"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_343_tknogi"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_343_tknogi"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

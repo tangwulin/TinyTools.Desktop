@@ -5,12 +5,24 @@
     "https://prts.wiki/images/a/a8/立绘_苍苔_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/a/a6/立绘_苍苔_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4106_bryota",
-    "中文-普通话": "voice_cn/char_4106_bryota",
-    "韩语": "voice_kr/char_4106_bryota",
-    "英语": "voice_en/char_4106_bryota"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4106_bryota"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4106_bryota"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4106_bryota"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4106_bryota"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

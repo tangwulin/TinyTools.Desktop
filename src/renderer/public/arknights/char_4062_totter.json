@@ -1,13 +1,28 @@
 {
   "name": "铅踝",
   "charaKey": "char_4062_totter",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_4062_totter",
-    "中文-普通话": "voice_cn/char_4062_totter",
-    "韩语": "voice_kr/char_4062_totter",
-    "英语": "voice_en/char_4062_totter"
-  },
+  "images": [
+    "https://prts.wiki/images/4/42/立绘_铅踝_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/c7/立绘_铅踝_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4062_totter"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4062_totter"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4062_totter"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4062_totter"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

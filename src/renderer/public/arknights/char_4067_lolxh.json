@@ -5,12 +5,24 @@
     "https://prts.wiki/images/5/5b/立绘_罗小黑_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/8/88/立绘_罗小黑_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语(猫形态)": "voice/char_4067_lolxh",
-    "中文-普通话(猫形态)": "voice_cn/char_4067_lolxh",
-    "中文-普通话": "voice_cn/char_4067_lolxh__1",
-    "日语": "voice/char_4067_lolxh__1"
-  },
+  "voiceBase": [
+    {
+      "language": "日语(猫形态)",
+      "base": "voice/char_4067_lolxh"
+    },
+    {
+      "language": "中文-普通话(猫形态)",
+      "base": "voice_cn/char_4067_lolxh"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4067_lolxh__1"
+    },
+    {
+      "language": "日语",
+      "base": "voice/char_4067_lolxh__1"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

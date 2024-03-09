@@ -6,11 +6,20 @@
     "https://prts.wiki/images/b/b8/立绘_卡达_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/b/b5/立绘_卡达_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_328_cammou",
-    "中文-普通话": "voice_cn/char_328_cammou",
-    "韩语": "voice_kr/char_328_cammou"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_328_cammou"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_328_cammou"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_328_cammou"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,12 +6,24 @@
     "https://prts.wiki/images/5/5f/立绘_星源_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/6/65/立绘_星源_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_135_halo",
-    "中文-普通话": "voice_cn/char_135_halo",
-    "韩语": "voice_kr/char_135_halo",
-    "英语": "voice_en/char_135_halo"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_135_halo"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_135_halo"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_135_halo"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_135_halo"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -1,10 +1,8 @@
 import { storeToRefs } from 'pinia'
 import avatarConfig from '../data/avatars.json'
-import { LocalCacheProvider } from '../providers/LocalCacheProvider'
 import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'
-import { createCache } from './CacheService'
 
 const genshin = avatarConfig['genshin']
 const arknights = avatarConfig['arknights']
@@ -12,8 +10,6 @@ const starRail = avatarConfig['starRail']
 const blueArchive = avatarConfig['blueArchive']
 // noinspection SpellCheckingInspection
 const umamusume = avatarConfig['umamusume']
-
-const cache = createCache(new LocalCacheProvider())
 
 function generateHash(input: string) {
   let hash = 0
@@ -85,7 +81,7 @@ export const getAvatarUrls: (
   await Promise.all(
     result.map(async (item) => {
       return {
-        url: await cache(item.url),
+        url: item.url,
         description: item.description
       }
     })

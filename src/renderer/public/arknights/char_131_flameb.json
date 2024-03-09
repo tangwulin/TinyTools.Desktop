@@ -7,11 +7,20 @@
     "https://prts.wiki/images/b/bc/立绘_炎客_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/3/33/立绘_炎客_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_131_flameb",
-    "中文-普通话": "voice_cn/char_131_flameb",
-    "英语": "voice_en/char_131_flameb"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_131_flameb"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_131_flameb"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_131_flameb"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

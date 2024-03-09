@@ -5,12 +5,24 @@
     "https://prts.wiki/images/8/80/立绘_炎熔_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/cb/立绘_炎熔_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_121_lava",
-    "中文-普通话": "voice_cn/char_121_lava",
-    "韩语": "voice_kr/char_121_lava",
-    "英语": "voice_en/char_121_lava"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_121_lava"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_121_lava"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_121_lava"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_121_lava"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

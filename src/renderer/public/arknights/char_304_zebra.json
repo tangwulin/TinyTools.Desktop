@@ -6,10 +6,16 @@
     "https://prts.wiki/images/4/45/立绘_暴雨_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/6/64/立绘_暴雨_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_304_zebra",
-    "中文-普通话": "voice_cn/char_304_zebra"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_304_zebra"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_304_zebra"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

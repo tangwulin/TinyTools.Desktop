@@ -5,12 +5,24 @@
     "https://prts.wiki/images/2/24/立绘_缪尔赛思_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/c7/立绘_缪尔赛思_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_249_mlyss",
-    "中文-普通话": "voice_cn/char_249_mlyss",
-    "韩语": "voice_kr/char_249_mlyss",
-    "英语": "voice_en/char_249_mlyss"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_249_mlyss"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_249_mlyss"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_249_mlyss"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_249_mlyss"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -26,7 +38,7 @@
         },
         {
           "language": "英文",
-          "content": "So you're saying I have the right to decide your schedule and itinerary? Which means, whatever I write in this memo book, Doctor, you've gotta do. Wowie! Too late for regrets now, heehee~"
+          "content": "So you're saying I have the right to decide your schedule and itinerary? Which means, whatever I write in this memo book, Doctor, you've gotta do. Wowie! Too late for regrets now, heehee."
         },
         {
           "language": "韩文",
@@ -48,7 +60,7 @@
         },
         {
           "language": "英文",
-          "content": "Ecology's about filling some dirt, putting some plants and animals on it, then making a profound study about the cyclic relationships between individual species and biocommunities. With the help of innovative research, we can improve the ecosphere or even forge a brand-new... Well, someone clearly knows it all, because that's an unadorable look you're giving me. Alrighty, let's change topics."
+          "content": "Ecology's about filling some dirt, putting some plants and animals on it, then making a profound study about the cyclic relationships between individuals, species, and biocommunities. With the help of innovative research, we can improve the ecosphere or even forge a brand-new... Well, someone clearly knows it all, because that's an unadorable look you're giving me. Alrighty, let's change topics."
         },
         {
           "language": "韩文",
@@ -70,7 +82,7 @@
         },
         {
           "language": "英文",
-          "content": "I want you to come with me next time I go clothes shopping. The thing is, I don't really understand fashion stuff so much, and I wanna hear your ideas. What, you don't either? Sure! If you've got opinions, and I've got opinions, then we can do swapsies. Plus I get to see you wearing something else for once."
+          "content": "I want <i>you</i> to come with me next time I go clothes shopping. The thing is, I don't really understand fashion stuff so much, and I wanna hear your ideas. What, you don't either? Sure! If you've got opinions, and I've got opinions, then we can do swapsies. Plus, I get to see you wearing something else for once."
         },
         {
           "language": "韩文",
@@ -92,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "Are your lips kind of dry there...? Yeah, they look a little chapped. You need more water on the regular. *sigh* Alright, you can have my chapstick, and then we're even again once you buy me a new stick. This is the only brand I use, and it's gotta be peppermint flavor. Dooon't get the wrong one. Okay?"
+          "content": "Are your lips kind of dry there...? Yeah, they look a little chapped. You need more water on the regular. Alright, you can have my chapstick, and then we're even again once you buy me a new stick. This is the only brand I use, and it's gotta be peppermint flavor. Don't get the wrong one. Okay?"
         },
         {
           "language": "韩文",
@@ -114,7 +126,7 @@
         },
         {
           "language": "英文",
-          "content": "Looking back on it, it's like Rhine was just founded yesterday. The stuff we fought over at that time was a total one-eighty compared to now. Heheh, good memories. Doctor, do you still remember when Rhodes Island was new on its feet? No? That's fine—you'll remember with enough time."
+          "content": "Looking back on it, it's like Rhine was just founded yesterday. The stuff we fought over at that time is a total one-eighty compared to now. Heheh, good memories… Doctor, Do you still remember when Rhodes Island was new on its feet? No? That's fine, you'll remember with enough time."
         },
         {
           "language": "韩文",
@@ -136,7 +148,7 @@
         },
         {
           "language": "英文",
-          "content": "Here I am, dewdrop landed on a leaf, but we'll be baked away in the sun soon enough. Oh, don't let it end here. We could melt together, dew filling leaf's veins, and make our grand return to the land... Um, that's about dew, okay? Like, it's just dew that wants to—ahh, nnn... *sigh*..."
+          "content": "Here I am, dewdrop landed on a leaf, but we'll be baked away in the sun soon enough. Oh, don't let it end here. We could melt together, dew filling leaf's veins, and make our grand return to the land... um, that's about dew, okay? Like, it's just dew that wants to—um... Mmm..."
         },
         {
           "language": "韩文",
@@ -158,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Has Magallan been good recently? Oh, still out exploring? Hasn't said when she gets back yet? Aw, okay... I've still got the crystals she sent me last time, out in cold storage. Any interest in this stuff? Well, well! I see you have a good hobby. Come on, let's crack open your horizons."
+          "content": "Has Magallan been good recently? Oh, still out exploring? Hasn't said when she gets back yet? Aw, okay... I've still got the crystals she sent me last time, out in cold storage. Any interest in this stuff? Well, well, I see you have a good hobby. Come on, let's crack open your horizons."
         },
         {
           "language": "韩文",
@@ -312,7 +324,7 @@
         },
         {
           "language": "英文",
-          "content": "Dew gets turned to vapor, and everything in it vanishes without a trace. Will I ever see showers of blessing? Will I ever meet my people again, and know them anew?"
+          "content": "Dew gets turned to vapor, and everything in it vanishes without a trace. Will I ever see showers of blessing? Will I ever meet my people again and know them anew?"
         },
         {
           "language": "韩文",
@@ -422,7 +434,7 @@
         },
         {
           "language": "英文",
-          "content": "Hiya~."
+          "content": "Hiya."
         },
         {
           "language": "韩文",
@@ -488,7 +500,7 @@
         },
         {
           "language": "英文",
-          "content": "Easy peasy."
+          "content": "Easy-peasy."
         },
         {
           "language": "韩文",
@@ -510,7 +522,7 @@
         },
         {
           "language": "英文",
-          "content": "Shaped like water."
+          "content": "Shape like water."
         },
         {
           "language": "韩文",
@@ -620,7 +632,7 @@
         },
         {
           "language": "英文",
-          "content": "Job's done. Be sure to rest up now."
+          "content": "Job's done, be sure to rest up now."
         },
         {
           "language": "韩文",
@@ -730,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "If anything's bothering you, put it to one side for now. Try this out, 'Citrus Storm.'"
+          "content": "If anything's bothering you, put it to one side for now. Here, try this out, 'Orange Storm'."
         },
         {
           "language": "韩文",
@@ -774,7 +786,7 @@
         },
         {
           "language": "英文",
-          "content": "Hiya~. How about a little chat before you get to work?"
+          "content": "Hiya! How about a little chat before you get to work?"
         },
         {
           "language": "韩文",

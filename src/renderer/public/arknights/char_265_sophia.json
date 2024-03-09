@@ -6,11 +6,20 @@
     "https://prts.wiki/images/4/4a/立绘_鞭刃_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/5/51/立绘_鞭刃_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_265_sophia",
-    "中文-普通话": "voice_cn/char_265_sophia",
-    "韩语": "voice_kr/char_265_sophia"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_265_sophia"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_265_sophia"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_265_sophia"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

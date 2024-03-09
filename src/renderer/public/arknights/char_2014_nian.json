@@ -6,13 +6,28 @@
     "https://prts.wiki/images/1/15/立绘_年_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/6/6f/立绘_年_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_2014_nian",
-    "中文-普通话": "voice_cn/char_2014_nian",
-    "中文-方言": "voice_custom/char_2014_nian_cn_topolect",
-    "韩语": "voice_kr/char_2014_nian",
-    "英语": "voice_en/char_2014_nian"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_2014_nian"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_2014_nian"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_2014_nian_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_2014_nian"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_2014_nian"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,10 +6,16 @@
     "https://prts.wiki/images/4/49/立绘_燧石_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/d/d7/立绘_燧石_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_415_flint",
-    "中文-普通话": "voice_cn/char_415_flint"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_415_flint"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_415_flint"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

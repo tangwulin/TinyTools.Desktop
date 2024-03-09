@@ -6,12 +6,24 @@
     "https://prts.wiki/images/1/1f/立绘_多萝西_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/e/ee/立绘_多萝西_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4048_doroth",
-    "中文-普通话": "voice_cn/char_4048_doroth",
-    "韩语": "voice_kr/char_4048_doroth",
-    "英语": "voice_en/char_4048_doroth"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4048_doroth"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4048_doroth"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4048_doroth"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4048_doroth"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -5,11 +5,20 @@
     "https://prts.wiki/images/3/39/立绘_泡泡_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/4/49/立绘_泡泡_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_381_bubble",
-    "中文-普通话": "voice_cn/char_381_bubble",
-    "韩语": "voice_kr/char_381_bubble"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_381_bubble"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_381_bubble"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_381_bubble"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,13 +6,28 @@
     "https://prts.wiki/images/e/ef/立绘_黑键_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/24/立绘_黑键_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4046_ebnhlz",
-    "中文-普通话": "voice_cn/char_4046_ebnhlz",
-    "韩语": "voice_kr/char_4046_ebnhlz",
-    "英语": "voice_en/char_4046_ebnhlz",
-    "德语": "voice_custom/char_4046_ebnhlz"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4046_ebnhlz"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4046_ebnhlz"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4046_ebnhlz"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4046_ebnhlz"
+    },
+    {
+      "language": "德语",
+      "base": "voice_custom/char_4046_ebnhlz"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

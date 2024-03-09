@@ -6,12 +6,24 @@
     "https://prts.wiki/images/7/78/立绘_但书_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/4/44/立绘_但书_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4032_provs",
-    "中文-普通话": "voice_cn/char_4032_provs",
-    "韩语": "voice_kr/char_4032_provs",
-    "英语": "voice_en/char_4032_provs"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4032_provs"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4032_provs"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4032_provs"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4032_provs"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

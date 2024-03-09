@@ -6,12 +6,24 @@
     "https://prts.wiki/images/7/78/立绘_洛洛_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/0/0a/立绘_洛洛_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4040_rockr",
-    "中文-普通话": "voice_cn/char_4040_rockr",
-    "韩语": "voice_kr/char_4040_rockr",
-    "英语": "voice_en/char_4040_rockr"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4040_rockr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4040_rockr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4040_rockr"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4040_rockr"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

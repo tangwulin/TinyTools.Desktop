@@ -6,11 +6,20 @@
     "https://prts.wiki/images/7/77/立绘_四月_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/1/12/立绘_四月_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_365_aprl",
-    "中文-普通话": "voice_cn/char_365_aprl",
-    "韩语": "voice_kr/char_365_aprl"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_365_aprl"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_365_aprl"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_365_aprl"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

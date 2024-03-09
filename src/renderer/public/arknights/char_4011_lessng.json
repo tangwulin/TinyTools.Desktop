@@ -5,11 +5,20 @@
     "https://prts.wiki/images/a/ad/立绘_止颂_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/1/11/立绘_止颂_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4011_lessng",
-    "中文-普通话": "voice_cn/char_4011_lessng",
-    "德语": "voice_custom/char_4011_lessng"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4011_lessng"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4011_lessng"
+    },
+    {
+      "language": "德语",
+      "base": "voice_custom/char_4011_lessng"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

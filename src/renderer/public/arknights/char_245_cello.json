@@ -5,10 +5,16 @@
     "https://prts.wiki/images/2/28/立绘_塑心_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/b/b2/立绘_塑心_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_245_cello",
-    "中文-普通话": "voice_cn/char_245_cello"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_245_cello"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_245_cello"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

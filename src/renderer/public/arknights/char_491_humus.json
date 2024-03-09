@@ -5,12 +5,24 @@
     "https://prts.wiki/images/2/29/立绘_休谟斯_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/7/7f/立绘_休谟斯_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_491_humus",
-    "中文-普通话": "voice_cn/char_491_humus",
-    "韩语": "voice_kr/char_491_humus",
-    "英语": "voice_en/char_491_humus"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_491_humus"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_491_humus"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_491_humus"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_491_humus"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -26,7 +38,7 @@
         },
         {
           "language": "英文",
-          "content": "Can I have this printer that's written off? And that pile of paper, why did you dump it all in the shredder? You can still write on the back!"
+          "content": "Can I have this printer that's written off? And my gosh, how could you dump that whole pile of paper in the shredder? You can still write on the back!"
         },
         {
           "language": "韩文",
@@ -48,7 +60,7 @@
         },
         {
           "language": "英文",
-          "content": "Stay back. I just finished work, so I'm all sweaty. What do you need? If it's nothing serious, you head on out first. I'll wash up and get a change of clothes, then I'll come talk to you."
+          "content": "Whoa whoa, Stay back. I just finished work, so I'm all sweaty. You need something? If it's not urgent, just go back to your office. Let me wash up and get a change of clothes, then I'll come talk to you."
         },
         {
           "language": "韩文",
@@ -70,7 +82,7 @@
         },
         {
           "language": "英文",
-          "content": "What do you think? I made everything I'm wearing by myself. Yeah, it looks like crap, but it's sturdy. Anyway, forget all that. You see this sickle? I tore a door off a huge car to make it. I've used it for years, and it's good as new."
+          "content": "Hahaha, Check me out! I made this whole outfit by myself. Yeah, it looks like crap, but it's sturdy! And you see this sickle? I tore a door off a huge car to make it. I've used it for years, and it's good as new."
         },
         {
           "language": "韩文",
@@ -92,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "I made the electric cooker I've got in my room out of an old space heater. I made that space heater out of an old TV. As for the TV, I put that together from the parts of a broken bread maker. Where did I get the bread maker? Oh, I modded an electric cooker I scavenged."
+          "content": "See that electric cooker of mine? I made it out of an old heater. And my space heater there, I made it out of an old TV. And As for the TV here, I put that together from the parts of a broken bread maker. Where did I get this bread maker? Aha, I modded an electric cooker I scavenged."
         },
         {
           "language": "韩文",
@@ -114,7 +126,7 @@
         },
         {
           "language": "英文",
-          "content": "The Pioneer guys are different from us. They get to wander around. Not us. Once you come to the disposal plant, you're staying forever. Think you can run? Not happening. Where would you even run? Nothing but wasteland out there. You've at least got a chance if you stay inside."
+          "content": "The Pioneer guys are different from us. They get to wander around. Not us. Once you come to the disposal plant, you're staying forever. Think you can run? Not happening, my friend. Look at your supplies, how far could you go? There's nothing but wasteland for miles. Your only shot at survival is staying inside."
         },
         {
           "language": "韩文",
@@ -136,7 +148,7 @@
         },
         {
           "language": "英文",
-          "content": "*sigh* You have no idea how heartless those snobs are. They dump just about anyone in the disposal plant. Kids barely old enough to work, old folks in bad health. I can't stand it, but there's not much I can do other than making sure they get fed alongside me."
+          "content": "You have no idea how heartless those snobs are. They dump just about anyone in the disposal plant. Kids barely old enough to work, old folks in bad health. I can't stand it, but there's not much I can do other than making sure they get fed alongside me."
         },
         {
           "language": "韩文",
@@ -158,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, remember that printer I took off your hands? I fixed it. Keep an eye on the thermometer up top when you use it. If it goes over the threshold, it could blow."
+          "content": "Doctor, remember that printer I took off your hands? Here, I fixed it. Oh, but keep an eye on the thermometer up top when you use it. If it goes over the threshold, it could explode."
         },
         {
           "language": "韩文",
@@ -180,7 +192,7 @@
         },
         {
           "language": "英文",
-          "content": "Yeah, Doctor, I've got a temper, and I can't just sit by and watch bad things happen. In the end, I made the wrong enemies, and got thrown in the disposal plant. A whole decade came and went in the blink of an eye, like a nightmare. But I don't regret it one bit now that I'm awake. I'll keep my temper and make no compromises."
+          "content": "Yeah, Doctor, I've got a temper, and I can't just sit by and watch bad things happen. In the end, I made the wrong enemies, and got thrown in the disposal plant. A whole decade came and went in the blink of an eye, like a nightmare... But now the dream's gone, and I'm awake! I don't regret it one bit. I'll keep my temper and make no compromises."
         },
         {
           "language": "韩文",
@@ -202,7 +214,7 @@
         },
         {
           "language": "英文",
-          "content": "Ever since we were kids, if folks like us wanted to eat, we had to count on the scraps the snobs let slip from on high. But that doesn't fill your stomach. It might be obvious, but some folks end up stealing. That's not something anyone should do, I know. But if there was another way, who would go to that step?"
+          "content": "Ever since we were kids, if folks like us wanted to eat, we had to count on the scraps the snobs let slip from on high. Sadly, that's not enough to fill your stomach. So some folks end up stealing, naturally. That's not something anyone should do, I know. But if there was another way, why would you need to steal?"
         },
         {
           "language": "韩文",
@@ -224,7 +236,7 @@
         },
         {
           "language": "英文",
-          "content": "Whatever it is, it can wait until tomorrow. There's unlimited steak at the canteen today, I'd better get over there right away!"
+          "content": "Whatever it is, it can wait until tomorrow! There's unlimited steak at the canteen today, I'd better get over there right away!"
         },
         {
           "language": "韩文",
@@ -246,7 +258,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, Rhodes Island has done so much for me, I have nothing but appreciation for you. If you need something from me, just say the word. I'll do whatever it takes to make it happen!"
+          "content": "Doctor, Rhodes Island has done so much for me. What can I say except thank you? If you need anything, just say the word. I'll do whatever it takes to make it happen!"
         },
         {
           "language": "韩文",
@@ -378,7 +390,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, hold up! Don't just rush in ahead, you punks!"
+          "content": "Stop right there, you little cubs! Don't just rush in ahead!"
         },
         {
           "language": "韩文",
@@ -400,7 +412,7 @@
         },
         {
           "language": "英文",
-          "content": "If you're going to come up on me like that, you can't blame me for what happens next."
+          "content": "You come at me like that, you can't blame me for what happens next."
         },
         {
           "language": "韩文",
@@ -466,7 +478,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh? You didn't call me here to pick locks?!"
+          "content": "Huh? I thought you wanted me here to fix a lock!"
         },
         {
           "language": "韩文",
@@ -510,7 +522,7 @@
         },
         {
           "language": "英文",
-          "content": "Hmph, taking me on by yourself? Bold."
+          "content": "A one-on-one? Tough guy, huh."
         },
         {
           "language": "韩文",
@@ -532,7 +544,7 @@
         },
         {
           "language": "英文",
-          "content": "What, you think I'd be scared just 'cause you've got a bunch of guys here to grind me down?"
+          "content": "What, you think you're gonna grind me down with numbers?"
         },
         {
           "language": "韩文",
@@ -554,7 +566,7 @@
         },
         {
           "language": "英文",
-          "content": "Dammit. There's more of you?"
+          "content": "There's more of you? Ugh, what a day."
         },
         {
           "language": "韩文",
@@ -576,7 +588,7 @@
         },
         {
           "language": "英文",
-          "content": "Argh, screw it. Bring it, all of you!"
+          "content": "Arghhhh screw it! Bring it on, all of you!"
         },
         {
           "language": "韩文",
@@ -620,7 +632,7 @@
         },
         {
           "language": "英文",
-          "content": "They got away, but they left behind some pretty good stuff."
+          "content": "No enemies in sight. But I'm sure they left behind some pretty good stuff."
         },
         {
           "language": "韩文",
@@ -642,7 +654,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't chase them. Just let them be. They got beat that bad, they aren't about to make anything of themselves."
+          "content": "No, no, don't chase them. Just let them be. They got beaten so bad, they won't be causing trouble for a <i>long</i> while."
         },
         {
           "language": "韩文",
@@ -664,7 +676,7 @@
         },
         {
           "language": "英文",
-          "content": "This is nothing special. You're bound to lose some of your fights. Go home, wash your face. Life goes on tomorrow."
+          "content": "Relax, nobody wins every fight. Go home, wash your face. Life goes on."
         },
         {
           "language": "韩文",
@@ -686,7 +698,7 @@
         },
         {
           "language": "英文",
-          "content": "I can't get used to how soft this bed is. You got anything firmer? That's what I like."
+          "content": "Man, this bed is too soft. I just can't fall asleep. Could you give me something firmer? That's how I like it."
         },
         {
           "language": "韩文",
@@ -708,7 +720,7 @@
         },
         {
           "language": "英文",
-          "content": "You need any help? I'm your man."
+          "content": "Hm? Need some help? I'm your man."
         },
         {
           "language": "韩文",
@@ -774,7 +786,7 @@
         },
         {
           "language": "英文",
-          "content": "Be sure to eat right, no matter how busy you are."
+          "content": "No matter how busy you are, be sure to eat right, Doctor."
         },
         {
           "language": "韩文",

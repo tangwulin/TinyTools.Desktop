@@ -1,18 +1,29 @@
 {
   "name": "古米",
   "charaKey": "char_196_sunbr",
-  "images": [
-    "https://prts.wiki/images/1/16/立绘_古米_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_古米_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fd/立绘_古米_skin1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_196_sunbr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_196_sunbr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_196_sunbr"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_196_sunbr"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_196_sunbr"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_196_sunbr",
-    "中文-普通话": "voice_cn/char_196_sunbr",
-    "韩语": "voice_kr/char_196_sunbr",
-    "英语": "voice_en/char_196_sunbr",
-    "俄语": "voice_custom/char_196_sunbr"
-  },
   "voiceList": [
     {
       "title": "任命助理",

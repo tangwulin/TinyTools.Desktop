@@ -1,16 +1,21 @@
 {
   "name": "特米米",
   "charaKey": "char_411_tomimi",
-  "images": [
-    "https://prts.wiki/images/0/0a/立绘_特米米_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/af/立绘_特米米_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0b/立绘_特米米_skin1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_411_tomimi"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_411_tomimi"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_411_tomimi"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_411_tomimi",
-    "中文-普通话": "voice_cn/char_411_tomimi",
-    "韩语": "voice_kr/char_411_tomimi"
-  },
   "voiceList": [
     {
       "title": "任命助理",

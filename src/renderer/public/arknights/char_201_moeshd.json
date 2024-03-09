@@ -7,12 +7,24 @@
     "https://prts.wiki/images/0/02/立绘_可颂_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/c7/立绘_可颂_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_201_moeshd",
-    "中文-普通话": "voice_cn/char_201_moeshd",
-    "韩语": "voice_kr/char_201_moeshd",
-    "英语": "voice_en/char_201_moeshd"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_201_moeshd"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_201_moeshd"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_201_moeshd"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_201_moeshd"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

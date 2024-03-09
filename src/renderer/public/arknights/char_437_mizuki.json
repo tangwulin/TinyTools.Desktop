@@ -1,11 +1,21 @@
 {
   "name": "水月",
   "charaKey": "char_437_mizuki",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_437_mizuki",
-    "中文-普通话": "voice_cn/char_437_mizuki"
-  },
+  "images": [
+    "https://prts.wiki/images/c/c9/立绘_水月_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/09/立绘_水月_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/0/05/立绘_水月_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_437_mizuki"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_437_mizuki"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

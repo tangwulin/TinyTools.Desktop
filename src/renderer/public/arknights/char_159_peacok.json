@@ -6,11 +6,24 @@
     "https://prts.wiki/images/d/d9/立绘_断罪者_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/a/ad/立绘_断罪者_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_159_peacok",
-    "中文-普通话": "voice_cn/char_159_peacok",
-    "韩语": "voice_kr/char_159_peacok"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_159_peacok"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_159_peacok"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_159_peacok"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_159_peacok"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -26,7 +39,7 @@
         },
         {
           "language": "英文",
-          "content": "Since you summoned me, you must be eager to feast your eyes upon my elegant dancing form, right? ...Uh, help move the luggage? I didn't come here to do manual labor!"
+          "content": "Since you summoned me, you must be eager to feast your eyes upon my elegant dancing form, right? Uh...? Help you move the luggage...? Hey! I didn't come here to do manual labor!"
         },
         {
           "language": "韩文",
@@ -52,7 +65,7 @@
         },
         {
           "language": "英文",
-          "content": "You're such a weak and ineffectual leader! What's up with that? I'd convict you if not for the sorrowful tears Amiya would then shed."
+          "content": "You're such a weak and ineffectual leader! How could you be so fragile? If it wasn't for the sorrowful tears Amiya would then shed, I'd convict you right here, right now!"
         },
         {
           "language": "韩文",
@@ -78,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "You don't even know how to convict a criminal? Listen up, the art of conviction is an assassination technique created by the first Conviction through combining traditional dance moves with ancient fighting techniques! I am his third-generation successor!"
+          "content": "You don't even know what conviction is? Now prick up your ears! The art of conviction is an assassination technique created by the first Conviction master, who combined traditional dance moves with ancient fighting techniques. And now, standing before you is his third-generation successor!"
         },
         {
           "language": "韩文",
@@ -104,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "Conviction is not some barbaric fighting technique. It is an artform through which beauty and ideals are poured through the fist and delivered straight into the heart! Now you know!"
+          "content": "Conviction is not some barbaric fighting technique! It's an artform where beauty and ideals are poured into the fist, then delivered through the fist straight into the heart! Now you know!"
         },
         {
           "language": "韩文",
@@ -156,7 +169,7 @@
         },
         {
           "language": "英文",
-          "content": "If you don't even feel the overwhelming pressure radiating from my perfect, classic artwork-like image, then you do not deserve to be on the same team as your savior! Ughhh! Con! Viction!"
+          "content": "Do you not revere in awe my aestheticly perfect image and overwhelming pressure? Then you're unworthy of your place on the same team as your savior! Ughhh! Con! Viction!"
         },
         {
           "language": "韩文",
@@ -182,7 +195,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm actually someone infected with Oripathy, an incurable disease?! Curses... is this my destiny? Is this the fate of all who wield the Conviction Punch? Hey, why are you all looking away! I'm clearly telling you a sad story!"
+          "content": "I'm actually someone infected with Oripathy, an incurable disease?! Curses... is this my destiny? Is this the fate of all who wield the Conviction Punch? Hey, why are you looking away?! I'm clearly telling you a sad story!"
         },
         {
           "language": "韩文",
@@ -234,7 +247,7 @@
         },
         {
           "language": "英文",
-          "content": "You don't even have the gumption to answer the easiest of Conviction's dilemmas! You have no artistic talent! Take this! Conviction - Second Style!"
+          "content": "You don't even have the gumption to answer the easiest of Conviction's dilemmas! You have no artistic talent! Taaaaake this! Conviction - Second Style!"
         },
         {
           "language": "韩文",
@@ -260,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "...Hoo! Hah! Wait, that's not right, that's not what's supposed to happen. Let's try this again..."
+          "content": "...Hoo! Hah! No, wait, wrong move. Let's try again!"
         },
         {
           "language": "韩文",
@@ -286,7 +299,7 @@
         },
         {
           "language": "英文",
-          "content": "I am Conviction. I shall use this name, with all the faith it entails, as my code name. You ask what my talents are? I am a master of the deadly and beautiful art of conviction! Need I say more?"
+          "content": "I am Conviction. I shall use this name, with all the faith it entails, as my code name. You ask what my talents are? I'm a master of the deadly and beautiful art of conviction! Now shiver in reverence!"
         },
         {
           "language": "韩文",
@@ -338,7 +351,7 @@
         },
         {
           "language": "英文",
-          "content": "Ahaha, a promotion! The day when Conviction's hidden powers are released is not far away!"
+          "content": "Ahaha, a promotion! I can see the day when Conviction's hidden powers roar across the lands!"
         },
         {
           "language": "韩文",
@@ -364,7 +377,7 @@
         },
         {
           "language": "英文",
-          "content": "This sensation... it feels as if my artistic accomplishments have deepened, but also like something is being created within my body...!"
+          "content": "This sensation... it feels as if my artistic accomplishments have deepened, but also like something is welling up inside me...!"
         },
         {
           "language": "韩文",
@@ -416,7 +429,7 @@
         },
         {
           "language": "英文",
-          "content": "At last, conviction time is here!"
+          "content": "At last, your conviction arrives!"
         },
         {
           "language": "韩文",
@@ -442,7 +455,7 @@
         },
         {
           "language": "英文",
-          "content": "The hour of judgment is nigh!"
+          "content": "Your judgement is nigh!"
         },
         {
           "language": "韩文",
@@ -494,7 +507,7 @@
         },
         {
           "language": "英文",
-          "content": "Setting out immediately!"
+          "content": "On my way!"
         },
         {
           "language": "韩文",
@@ -546,7 +559,7 @@
         },
         {
           "language": "英文",
-          "content": "Hup!"
+          "content": "Here I stand!"
         },
         {
           "language": "韩文",
@@ -572,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "Is this fellow good enough to be my opponent?"
+          "content": "You think you're a worthy opponent?"
         },
         {
           "language": "韩文",
@@ -598,7 +611,7 @@
         },
         {
           "language": "英文",
-          "content": "Conviction!"
+          "content": "Con—vict!"
         },
         {
           "language": "韩文",
@@ -624,7 +637,7 @@
         },
         {
           "language": "英文",
-          "content": "Hooaahh!"
+          "content": "Haah!"
         },
         {
           "language": "韩文",
@@ -650,7 +663,7 @@
         },
         {
           "language": "英文",
-          "content": "Haah!"
+          "content": "Hmph!"
         },
         {
           "language": "韩文",
@@ -676,7 +689,7 @@
         },
         {
           "language": "英文",
-          "content": "Back up!!"
+          "content": "Back down!"
         },
         {
           "language": "韩文",
@@ -702,7 +715,7 @@
         },
         {
           "language": "英文",
-          "content": "Defeat your enemies and claim the crown... This is the doctrine of Conviction!"
+          "content": "History is written by the winners… This is the doctrine of Conviction!"
         },
         {
           "language": "韩文",
@@ -754,7 +767,7 @@
         },
         {
           "language": "英文",
-          "content": "It's fine, it's fine. It might not be the most elegant victory, but at least we got the job done."
+          "content": "It's fine. This victory might not be the most gorgeous, but it'll still serve us well."
         },
         {
           "language": "韩文",
@@ -780,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "Ugh... the magnificent Conviction must never allow such a blunder..."
+          "content": "Ugh... the magnificent Conviction must never allow such a blunder…"
         },
         {
           "language": "韩文",
@@ -806,7 +819,7 @@
         },
         {
           "language": "英文",
-          "content": "It's going to be hard to give this room a dose of Conviction~"
+          "content": "It's going to be another dilemma for me to convict this room…"
         },
         {
           "language": "韩文",
@@ -858,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "Woahh! What are you trying to do this time! I won't let you tease me as you please!"
+          "content": "Woahh! What are you trying to do this time! I'll teach you to behave!"
         },
         {
           "language": "韩文",

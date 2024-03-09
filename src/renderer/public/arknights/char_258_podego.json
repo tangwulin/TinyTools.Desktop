@@ -6,11 +6,20 @@
     "https://prts.wiki/images/2/2c/立绘_波登可_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/20/立绘_波登可_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_258_podego",
-    "中文-普通话": "voice_cn/char_258_podego",
-    "韩语": "voice_kr/char_258_podego"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_258_podego"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_258_podego"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_258_podego"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

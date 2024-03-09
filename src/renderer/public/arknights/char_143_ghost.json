@@ -6,12 +6,24 @@
     "https://prts.wiki/images/d/d3/立绘_幽灵鲨_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/0/08/立绘_幽灵鲨_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_143_ghost",
-    "中文-普通话": "voice_cn/char_143_ghost",
-    "韩语": "voice_kr/char_143_ghost",
-    "英语": "voice_en/char_143_ghost"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_143_ghost"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_143_ghost"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_143_ghost"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_143_ghost"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

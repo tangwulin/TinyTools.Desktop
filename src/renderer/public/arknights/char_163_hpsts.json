@@ -5,11 +5,20 @@
     "https://prts.wiki/images/9/92/立绘_火神_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/0/03/立绘_火神_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_163_hpsts",
-    "中文-普通话": "voice_cn/char_163_hpsts",
-    "韩语": "voice_kr/char_163_hpsts"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_163_hpsts"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_163_hpsts"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_163_hpsts"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

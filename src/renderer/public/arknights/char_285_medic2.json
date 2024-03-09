@@ -5,11 +5,20 @@
     "https://prts.wiki/images/8/8e/立绘_Lancet-2_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/25/立绘_Lancet-2_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_285_medic2",
-    "中文-普通话": "voice_cn/char_285_medic2",
-    "韩语": "voice_kr/char_285_medic2"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_285_medic2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_285_medic2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_285_medic2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

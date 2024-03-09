@@ -6,11 +6,20 @@
     "https://prts.wiki/images/0/07/立绘_迷迭香_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/b/ba/立绘_迷迭香_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_391_rosmon",
-    "中文-普通话": "voice_cn/char_391_rosmon",
-    "韩语": "voice_kr/char_391_rosmon"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_391_rosmon"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_391_rosmon"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_391_rosmon"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

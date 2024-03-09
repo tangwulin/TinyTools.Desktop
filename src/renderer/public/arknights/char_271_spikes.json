@@ -7,11 +7,20 @@
     "https://prts.wiki/images/f/ff/立绘_芳汀_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/f/fd/立绘_芳汀_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_271_spikes",
-    "中文-普通话": "voice_cn/char_271_spikes",
-    "韩语": "voice_kr/char_271_spikes"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_271_spikes"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_271_spikes"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_271_spikes"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

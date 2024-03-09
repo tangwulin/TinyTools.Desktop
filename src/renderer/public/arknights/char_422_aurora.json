@@ -6,12 +6,24 @@
     "https://prts.wiki/images/d/da/立绘_极光_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/e/e1/立绘_极光_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_422_aurora",
-    "中文-普通话": "voice_cn/char_422_aurora",
-    "韩语": "voice_kr/char_422_aurora",
-    "英语": "voice_en/char_422_aurora"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_422_aurora"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_422_aurora"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_422_aurora"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_422_aurora"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

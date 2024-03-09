@@ -6,13 +6,28 @@
     "https://prts.wiki/images/f/fe/立绘_拉普兰德_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/1/11/立绘_拉普兰德_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_140_whitew",
-    "中文-普通话": "voice_cn/char_140_whitew",
-    "韩语": "voice_kr/char_140_whitew",
-    "英语": "voice_en/char_140_whitew",
-    "意大利语": "voice_custom/char_140_whitew_ita"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_140_whitew"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_140_whitew"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_140_whitew"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_140_whitew"
+    },
+    {
+      "language": "意大利语",
+      "base": "voice_custom/char_140_whitew_ita"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

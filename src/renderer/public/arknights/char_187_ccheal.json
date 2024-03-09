@@ -1,17 +1,25 @@
 {
   "name": "嘉维尔",
   "charaKey": "char_187_ccheal",
-  "images": [
-    "https://prts.wiki/images/f/f0/立绘_嘉维尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3a/立绘_嘉维尔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/94/立绘_嘉维尔_skin1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_187_ccheal"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_187_ccheal"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_187_ccheal"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_187_ccheal"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_187_ccheal",
-    "中文-普通话": "voice_cn/char_187_ccheal",
-    "韩语": "voice_kr/char_187_ccheal",
-    "英语": "voice_en/char_187_ccheal"
-  },
   "voiceList": [
     {
       "title": "任命助理",

@@ -5,12 +5,24 @@
     "https://prts.wiki/images/b/b9/立绘_芙蓉_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/9f/立绘_芙蓉_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_120_hibisc",
-    "中文-普通话": "voice_cn/char_120_hibisc",
-    "韩语": "voice_kr/char_120_hibisc",
-    "英语": "voice_en/char_120_hibisc"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_120_hibisc"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_120_hibisc"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_120_hibisc"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_120_hibisc"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

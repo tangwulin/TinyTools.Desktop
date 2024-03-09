@@ -5,12 +5,24 @@
     "https://prts.wiki/images/0/07/立绘_伊内丝_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/3/35/立绘_伊内丝_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4087_ines",
-    "中文-普通话": "voice_cn/char_4087_ines",
-    "韩语": "voice_kr/char_4087_ines",
-    "英语": "voice_en/char_4087_ines"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4087_ines"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4087_ines"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4087_ines"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4087_ines"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -70,7 +82,7 @@
         },
         {
           "language": "英文",
-          "content": "There was one who hoped to flee the war, but only ended up sinking deeper and deeper into its quagmire. Pathetic, isn't it? But that's exactly how we live. We either give up and resign ourselves to death, or... we kill this very way of life."
+          "content": "There was one who hoped to flee the war, but only ended up sinking deeper and deeper into its quagmire. Heh, Pathetic, isn't it? But that's exactly how we live. We either give up and resign ourselves to death, or... we kill this very way of life."
         },
         {
           "language": "韩文",
@@ -92,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "Your eyes aren't deceiving you. Yes, it's a sewing kit. A needle drinks as much blood as a sword, in the hands of a merc. Besides... it's a tall order to look decent on the battlefield, and a smart cookie like you should know that well, right?"
+          "content": "Your eyes aren't deceiving you. Yes, it's a sewing kit. A needle drinks as much blood as a sword, in the hands of a merc. Besides… it's a tall order to look decent on battlefield, and a smart cookie like you should know that well, right?"
         },
         {
           "language": "韩文",
@@ -136,7 +148,7 @@
         },
         {
           "language": "英文",
-          "content": "'For all the people to fall into peaceful slumber?' Not half bad for a fancy dream of yours. I only hope people could have a chance to struggle on, in the face of war of death, and perhaps after that, some energy left over to hold a grudge. <i>That</i> is why I'm signing this agreement with Babel... with you, Rhodes Island."
+          "content": "For all the people to fall into peaceful slumber?' Not half bad for a fancy dream of yours. I only hope people could have a chance to struggle on in the face of war and death, and perhaps after that, some energy leftover to hold a grude. <i>That</i> is why I'm signing this agreement with Babel… with you, Rhodes Island."
         },
         {
           "language": "韩文",
@@ -158,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Those faint lights out the window... they're campfires in the wilderness. W says I like campfires? Heh, that's because the shadows under the fire don't lie. I see myself in them."
+          "content": "Those faint lights out the window... They're campfires in the wilderness. W says I like campfires? Hehe, that's because the shadows under the fire don't lie. I see myself in them."
         },
         {
           "language": "韩文",
@@ -180,7 +192,7 @@
         },
         {
           "language": "英文",
-          "content": "A merc who lived her life staring death in the face, but chose to die for a pipe dream in the end... Sounds like a bad joke, doesn't it? But if you had to make sense of it, the merc probably hopes her death could be more than a sneaky battlefield tactic. That's all."
+          "content": "A merc who lived her life staring death in the face, but chose to die for a pipe dream in the end… Sounds like a bad joke, doesn't it? But if you had to make sense of it, the merc probably hopes her death could be more than a sneaky battlefield tactic. That's all."
         },
         {
           "language": "韩文",
@@ -246,7 +258,7 @@
         },
         {
           "language": "英文",
-          "content": "Ascalon should've showed you my files. Messenger... or mercenary, you ask? Doesn't matter. All you need to know is that I'm not after your life for now, 'Doctor.'"
+          "content": "Ascalon showed you my files. Messenger or mercenary, you ask? Doesn't matter. I'm not after your life for now , 'Doctor.'"
         },
         {
           "language": "韩文",
@@ -268,7 +280,7 @@
         },
         {
           "language": "英文",
-          "content": "...Are you sure I need to watch these? Back in Kazdel, you used to lead <i>my</i> people."
+          "content": "Are you sure I need to watch these? Back in Kazdel, you used to lead <i>my</i> people."
         },
         {
           "language": "韩文",
@@ -290,7 +302,7 @@
         },
         {
           "language": "英文",
-          "content": "Great. Even in the middle of a war, you people still insist on these goddamn ceremonies."
+          "content": "Hmph, great. Even in the middle of a war, you people still insist on these goddamned ceremonies."
         },
         {
           "language": "韩文",
@@ -334,7 +346,7 @@
         },
         {
           "language": "英文",
-          "content": "Getting this crew together wasn't easy. You'd better make them count."
+          "content": "Getting this crew together wasn't easy. You better make them count."
         },
         {
           "language": "韩文",
@@ -576,7 +588,7 @@
         },
         {
           "language": "英文",
-          "content": "I will sink your corpse into shadow, and no one will find it."
+          "content": "I will sink your corpse into shadow. No one will find it."
         },
         {
           "language": "韩文",
@@ -620,7 +632,7 @@
         },
         {
           "language": "英文",
-          "content": "Take a breather, and tally up your losses. Nothing worth celebrating here. We might be dead in a second or two."
+          "content": "Take a breather and tally up your losses. Nothing worth celebrating here, we might be dead in a second or two."
         },
         {
           "language": "韩文",
@@ -664,7 +676,7 @@
         },
         {
           "language": "英文",
-          "content": "...An arm, an eye, or maybe something else. More than enough to trade for a few enemy heads. Or, would you rather bear the price of failure? Ugh, suit yourself."
+          "content": "...An arm, an eye, or maybe something else. More than enough to trade for a few enemy heads. Or, would you rather bear the price of failure? Tch, suit yourself."
         },
         {
           "language": "韩文",

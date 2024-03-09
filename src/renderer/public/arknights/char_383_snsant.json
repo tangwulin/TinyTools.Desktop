@@ -6,12 +6,24 @@
     "https://prts.wiki/images/2/24/立绘_雪雉_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/e/e0/立绘_雪雉_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_383_snsant",
-    "中文-普通话": "voice_cn/char_383_snsant",
-    "中文-方言": "voice_custom/char_383_snsant_cn_topolect",
-    "韩语": "voice_kr/char_383_snsant"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_383_snsant"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_383_snsant"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_383_snsant_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_383_snsant"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

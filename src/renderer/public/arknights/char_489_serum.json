@@ -5,12 +5,24 @@
     "https://prts.wiki/images/f/f2/立绘_蚀清_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/2b/立绘_蚀清_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_489_serum",
-    "中文-普通话": "voice_cn/char_489_serum",
-    "韩语": "voice_kr/char_489_serum",
-    "英语": "voice_en/char_489_serum"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_489_serum"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_489_serum"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_489_serum"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_489_serum"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

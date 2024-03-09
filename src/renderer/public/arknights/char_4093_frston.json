@@ -4,12 +4,24 @@
   "images": [
     "https://prts.wiki/images/4/46/立绘_Friston-3_1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_4093_frston",
-    "中文-普通话": "voice_cn/char_4093_frston",
-    "韩语": "voice_kr/char_4093_frston",
-    "英语": "voice_en/char_4093_frston"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4093_frston"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4093_frston"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4093_frston"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4093_frston"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -25,7 +37,7 @@
         },
         {
           "language": "英文",
-          "content": "If I become your assistant, Closure won't be able to touch me anymore, yes? I'm aware of her extreme interest in me. But those ridiculous modifications, are such an insult to a scientist, even... in my current form, I won't allow it."
+          "content": "If I become your assistant, Closure won't be able to touch me anymore, yes? I'm aware of her extreme interest in me, but her planned modifications on my body are both ridiculous and unacceptable. They're an insult to a scientist, and I won't allow it even in my current form."
         },
         {
           "language": "韩文",
@@ -47,7 +59,7 @@
         },
         {
           "language": "英文",
-          "content": "Why would humanity grow horns and tails? This stage of biological evolution is past my parameters of understanding... I know tens of thousands of years have passed— Kal'tsit has mentioned this countless times. I will need a bit more time to formulate my deduction."
+          "content": "Why would humanity grow horns and tails? This stage of biological evolution is past my parameters of understanding... I know tens of thousands of years have passed— Kal'tsit has mentioned this countless times. Hmm, I will need a bit more time to formulate my deduction."
         },
         {
           "language": "韩文",
@@ -91,7 +103,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's stop here for today, Doctor. I have to go over to Kal'tsit's office, she's probably needlessly burning the midnight oil again. Trudging on for thousands of years in service of what she feels is her mission, just to stop what exactly? It would be better to get more sleep."
+          "content": "Let's stop here for today, Doctor. I have to go over to Kal'tsit's office. She must be needlessly burning the midnight oil again. A soul, driven by her sheer sense of mission to trudge on for tens of thousands of years, just to stop what exactly? It would be better for her to get more sleep."
         },
         {
           "language": "韩文",
@@ -113,7 +125,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, don't look at me the same way you do Castle-3 and the others. They are very... cute, but my robot body is just like your hood, merely... a sort of costume... a style. I know who I am, and thus you and I are alike."
+          "content": "Doctor, don't look at me the same way you do Castle-3 and the others. They are very... cute. But my robot body is just like your hood, merely a sort of costume... a style. I know who I am, and thus you and I are more alike."
         },
         {
           "language": "韩文",
@@ -135,7 +147,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm not arrogant, but I am angry at your ignorance and lack of self-awareness, angry at your self-righteousness. Yes, I've lost all my knowledge, so you can take this anger as merely a 'result' of my 'calculations,' and a very clear result at that."
+          "content": "I'm not arrogant, but I am angry at your ignorance and lack of self-awareness, angry at your self-righteousness, all of you. Yes, I've lost all my knowledge, so you can take this anger as merely a 'result' of my 'calculations,' and a very clear result at that."
         },
         {
           "language": "韩文",
@@ -201,7 +213,7 @@
         },
         {
           "language": "英文",
-          "content": "Hello there, I am Friston. That's right, just 'Friston,' not a 'Friston-3' or whatever. I am not a replica, and very much less a reproduction of a replica. I hope you understand."
+          "content": "Hello there, I am Friston. That's right, just 'Friston,' not 'Friston-3' or whatever. I am not a replica, and very much less a reproduction of a replica. I hope you understand."
         },
         {
           "language": "韩文",
@@ -267,7 +279,7 @@
         },
         {
           "language": "英文",
-          "content": "Am I to lead everyone and find a new direction...? Alright."
+          "content": "Am I to lead everyone and find a new direction...? Very well, I won't let them down this time."
         },
         {
           "language": "韩文",
@@ -355,7 +367,7 @@
         },
         {
           "language": "英文",
-          "content": "I am naturally capable of more than THRM-EX and the others. I will stand on the front lines."
+          "content": "I am naturally capable of more than THRM-EX and the others. I will shield them on the front line."
         },
         {
           "language": "韩文",
@@ -421,7 +433,7 @@
         },
         {
           "language": "英文",
-          "content": "Are you all... staring at my expression display?"
+          "content": "Are you all staring at my expression doodle?"
         },
         {
           "language": "韩文",
@@ -443,7 +455,7 @@
         },
         {
           "language": "英文",
-          "content": "I have taken photos of all your behaviors."
+          "content": "Your behaviors have been recorded and archived."
         },
         {
           "language": "韩文",
@@ -465,7 +477,7 @@
         },
         {
           "language": "英文",
-          "content": "Take me to your leader! I want to talk!"
+          "content": "Where's your leader? I need to talk!"
         },
         {
           "language": "韩文",
@@ -487,7 +499,7 @@
         },
         {
           "language": "英文",
-          "content": "Such... ugly creatures."
+          "content": "What a disgrace... these ugly creatures."
         },
         {
           "language": "韩文",
@@ -553,7 +565,7 @@
         },
         {
           "language": "英文",
-          "content": "An odyssey will always have nigh-avoidable accidents, even if you plan ahead, and though they may be painful to accept... what else can I possibly do but accept them?"
+          "content": "An odyssey will always have nigh-avoidable accidents, and a plan might always go wrong. They may be painful to accept... but what else can I do except accept them?"
         },
         {
           "language": "韩文",
@@ -575,7 +587,7 @@
         },
         {
           "language": "英文",
-          "content": "If the worst possible outcome isn't as bad as turning into something like me, then there is nothing to be afraid of. Doctor, you should evacuate first, and leave the rest to me."
+          "content": "If the worst possible outcome is turning into something like me, then there is nothing to be afraid of. Doctor, you should evacuate first, and leave the rest to me."
         },
         {
           "language": "韩文",
@@ -619,7 +631,7 @@
         },
         {
           "language": "英文",
-          "content": "You should have observed the 'anger' expression on my display."
+          "content": "You should have observed my expression doodle. Currently, it's 'anger'."
         },
         {
           "language": "韩文",
@@ -641,7 +653,7 @@
         },
         {
           "language": "英文",
-          "content": "I've taken a photo of you, Doctor. You want to see it? Sorry, but I've already saved it to my archives."
+          "content": "I've taken a photo of you, Doctor. You want to see it? Sorry, I've already saved it to my archives."
         },
         {
           "language": "韩文",
@@ -685,7 +697,7 @@
         },
         {
           "language": "英文",
-          "content": "Hello, Doctor."
+          "content": "How do you do, Docor?"
         },
         {
           "language": "韩文",

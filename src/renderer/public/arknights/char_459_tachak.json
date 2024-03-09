@@ -6,9 +6,12 @@
     "https://prts.wiki/images/3/33/立绘_战车_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/f/f1/立绘_战车_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "联动": "voice/char_459_tachak"
-  },
+  "voiceBase": [
+    {
+      "language": "联动",
+      "base": "voice/char_459_tachak"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

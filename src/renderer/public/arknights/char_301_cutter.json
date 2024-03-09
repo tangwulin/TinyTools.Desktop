@@ -1,12 +1,24 @@
 {
   "name": "刻刀",
   "charaKey": "char_301_cutter",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_301_cutter",
-    "中文-普通话": "voice_cn/char_301_cutter",
-    "韩语": "voice_kr/char_301_cutter"
-  },
+  "images": [
+    "https://prts.wiki/images/5/51/立绘_刻刀_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/e/e8/立绘_刻刀_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_301_cutter"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_301_cutter"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_301_cutter"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

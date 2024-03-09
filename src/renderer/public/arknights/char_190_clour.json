@@ -5,12 +5,24 @@
     "https://prts.wiki/images/3/3d/立绘_红云_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/d/d9/立绘_红云_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_190_clour",
-    "中文-普通话": "voice_cn/char_190_clour",
-    "韩语": "voice_kr/char_190_clour",
-    "英语": "voice_en/char_190_clour"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_190_clour"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_190_clour"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_190_clour"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_190_clour"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

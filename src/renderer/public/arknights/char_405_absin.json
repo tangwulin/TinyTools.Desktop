@@ -6,13 +6,28 @@
     "https://prts.wiki/images/a/a8/立绘_苦艾_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/94/立绘_苦艾_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_405_absin",
-    "中文-普通话": "voice_cn/char_405_absin",
-    "韩语": "voice_kr/char_405_absin",
-    "英语": "voice_en/char_405_absin",
-    "俄语": "voice_custom/char_405_absin"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_405_absin"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_405_absin"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_405_absin"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_405_absin"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_405_absin"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

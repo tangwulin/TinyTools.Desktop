@@ -1,16 +1,21 @@
 {
   "name": "安哲拉",
   "charaKey": "char_218_cuttle",
-  "images": [
-    "https://prts.wiki/images/2/2e/立绘_安哲拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/45/立绘_安哲拉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_安哲拉_skin1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_218_cuttle"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_218_cuttle"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_218_cuttle"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_218_cuttle",
-    "中文-普通话": "voice_cn/char_218_cuttle",
-    "韩语": "voice_kr/char_218_cuttle"
-  },
   "voiceList": [
     {
       "title": "任命助理",

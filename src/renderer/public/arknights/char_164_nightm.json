@@ -6,12 +6,24 @@
     "https://prts.wiki/images/0/0d/立绘_夜魔_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/5/58/立绘_夜魔_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_164_nightm",
-    "中文-普通话": "voice_cn/char_164_nightm",
-    "韩语": "voice_kr/char_164_nightm",
-    "英语": "voice_en/char_164_nightm"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_164_nightm"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_164_nightm"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_164_nightm"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_164_nightm"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -6,12 +6,24 @@
     "https://prts.wiki/images/2/22/立绘_格拉尼_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/1/10/立绘_格拉尼_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_220_grani",
-    "中文-普通话": "voice_cn/char_220_grani",
-    "韩语": "voice_kr/char_220_grani",
-    "英语": "voice_en/char_220_grani"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_220_grani"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_220_grani"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_220_grani"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_220_grani"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -105,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, I might not make it to training on Wednesdays or Fridays... Right, I need to be out there helping the civil corps to keep the peace and catch the bad guys! Wh-what? I have an important mission on Friday?!"
+          "content": "Doctor, I might not make it to training on Wednesdays or Fridays... Right, I need to be out there helping the civil corps to keep the peace and catch the bad guys! Wh-waht? I have an important mission on Friday?!"
         },
         {
           "language": "韩文",
@@ -157,7 +169,7 @@
         },
         {
           "language": "英文",
-          "content": "Time flies, Doctor. We've been working together so long. I will never forget anything we've been through. But we can't stop now! We have to keep striving for that bright future, don't we?"
+          "content": "Time flies, Dcotor. We've been working together so long. I will never forget anything we've been through. But we can't stop now! We have to keep striving for that bright future, don't we?"
         },
         {
           "language": "韩文",

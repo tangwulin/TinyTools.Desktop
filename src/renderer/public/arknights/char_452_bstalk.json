@@ -6,11 +6,20 @@
     "https://prts.wiki/images/8/87/立绘_豆苗_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/5/58/立绘_豆苗_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_452_bstalk",
-    "中文-普通话": "voice_cn/char_452_bstalk",
-    "韩语": "voice_kr/char_452_bstalk"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_452_bstalk"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_452_bstalk"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_452_bstalk"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

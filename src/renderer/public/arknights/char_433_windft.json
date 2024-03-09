@@ -5,12 +5,24 @@
     "https://prts.wiki/images/0/05/立绘_掠风_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/5/5d/立绘_掠风_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_433_windft",
-    "中文-普通话": "voice_cn/char_433_windft",
-    "韩语": "voice_kr/char_433_windft",
-    "英语": "voice_en/char_433_windft"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_433_windft"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_433_windft"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_433_windft"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_433_windft"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

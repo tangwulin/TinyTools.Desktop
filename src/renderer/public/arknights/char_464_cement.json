@@ -5,12 +5,24 @@
     "https://prts.wiki/images/8/8f/立绘_洋灰_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/9/99/立绘_洋灰_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_464_cement",
-    "中文-普通话": "voice_cn/char_464_cement",
-    "韩语": "voice_kr/char_464_cement",
-    "英语": "voice_en/char_464_cement"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_464_cement"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_464_cement"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_464_cement"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_464_cement"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -26,7 +38,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, don't stay cooped up in your office all the time. Why don't you come down to the mines with me one of these days?"
+          "content": "Don't stay cooped up in your office all the time, Doki. Why don't you come down to the mines with me one of these days?"
         },
         {
           "language": "韩文",
@@ -48,7 +60,7 @@
         },
         {
           "language": "英文",
-          "content": "Smells like mold in here. Should be something in the bottom left drawer. I've got a sharp nose... You know, Doctor? You should really deal with those old documents on time. If you just leave them piled in the corner like that, they're gonna get moisture damage."
+          "content": "Something smells moldy. Should be in the bottom left drawer. My nose is never wrong... Well, Doki, You should really deal with those documents before they pile up. If you just leave them like that, they're gonna get damp."
         },
         {
           "language": "韩文",
@@ -70,7 +82,7 @@
         },
         {
           "language": "英文",
-          "content": "My drills are all modded up, they've got twice the impact and improved stability. Plus, they pretty much can't jam. Anyway, I'm a pro when it comes to boring, tunneling, and laying concrete. If you've got any jobs like that, I'm your girl!"
+          "content": "My drills are all souped up. They've got twice the impact, improved stability, and they pretty much can't jam. Anyway, I'm a pro when it comes to boring, tunneling, and laying concrete. If you've got any construction jobs like that, I'm your girl!"
         },
         {
           "language": "韩文",
@@ -92,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "First, you've gotta check all your construction blueprints ahead of time. Second, you disrupt the work without a good reason. Third, you never, ever fall behind on your payments. That's the three principles Shana's Construction Crew uses to decide on projects, Doctor. No exceptions, even for Rhodes Island!"
+          "content": "First, you check construction blueprints ahead of time. Second, you don't disrupt our work without a good reason. Third: You never, ever fall behind on your payments. That's the three principles Shana's Construction Crew uses to decide on projects. No exceptions, Doki, not even for Rhodes Island."
         },
         {
           "language": "韩文",
@@ -114,7 +126,7 @@
         },
         {
           "language": "英文",
-          "content": "Rim Billiton has more prospecting operation platforms than you can count, and we've got no shortage of workers. You gotta be up on the latest tech to get anybody to listen to ya. I work hard to stay current, and I teach what I know to the gang. That's the way I do things... Yeah."
+          "content": "Rim Billiton has more prospecting operation platforms than you can count, with tons of workers running around. You gotta know what you're doing to get anybody to listen to ya. I work hard to refine my skills, and I teach what I know to the gang. That's the way I do things... Yeah."
         },
         {
           "language": "韩文",
@@ -136,7 +148,7 @@
         },
         {
           "language": "英文",
-          "content": "Doesn't matter how quiet things are, we can't compromise on mine safety. Even if you're an Infected, so long as you work the mines, your rights oughta be guaranteed. I'm out here to make Billy mine accidents a thing of the past. At the very least, I make sure my projects stand up to inspection."
+          "content": "We don't compromise on safety, even in barren mines with low output. Infected or not, so long as you work the mines, your rights oughta be guaranteed. I hope we never see another Billy mine accident. At the very least, I always make sure my projects stand up to inspection."
         },
         {
           "language": "韩文",
@@ -158,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, want a lolly? It's just a regular mint one. I always keep some in my pocket. Don't underestimate the power of a lolly, though. When there's dust in the air all around you, the sweetness can really calm you down."
+          "content": "Doctor, want a lolly? It's just a regular mint one. I always keep some in my pocket. Don't underestimate the power of a lolly, though. When there's dusty air all around you, a little sweetness can really calm you down."
         },
         {
           "language": "韩文",
@@ -180,7 +192,7 @@
         },
         {
           "language": "英文",
-          "content": "My dad always said that Columbia's Great Expansion sparked a new age, and Rim Billiton's mineral resources are the lifeblood of the big construction projects all across the land. The taller the building, the more solid the foundations have to be. Workers like us always have something to do, no matter where we are and what kind of jobs we work."
+          "content": "My dad always said that Columbia's Great Expansion marked the start of a new age. Now, the big corps pull in all different countries on big projects. Rim Billiton's ores really shine out there. But you know how things go, the taller the building, the more solid the foundations have to be. That's why the work we do is always meaningful, no matter the task."
         },
         {
           "language": "韩文",
@@ -202,7 +214,7 @@
         },
         {
           "language": "英文",
-          "content": "'A Billy worker never sees the sun.' That's what my friends in the mines always say. There's really nothing but darkness all around for those who work underground. I want to give everyone hope for the future, give them better lives. Easy enough to say, but there's lots of work to do. You'll lend a hand, won't you, Doctor?"
+          "content": "A Billy worker never sees the sun.' That's what my friends in the mines always say. The darkness down there swallows everything, work and life, past and future... I want to give people hope for the future, Doki, give them better lives. Easy enough to say, but there's lots of work to do. You'll lend a hand, won't you, Doki?"
         },
         {
           "language": "韩文",
@@ -224,7 +236,7 @@
         },
         {
           "language": "英文",
-          "content": "If we're off work, we oughta be resting up."
+          "content": "Alright, lads, day's done. Rest up now."
         },
         {
           "language": "韩文",
@@ -246,7 +258,7 @@
         },
         {
           "language": "英文",
-          "content": "Oh, so you're the Doctor everyone's talking about! I'm a new operator with the Engineering Department, and foreman of Shana's Construction Crew out of Rim Billiton! Here's my business card."
+          "content": "Oh, so you're the Doctor everyone's talking about! I'm new in Engineering; foreman of Shana's Construction Crew out of Rim Billiton! Here's my business card."
         },
         {
           "language": "韩文",
@@ -268,7 +280,7 @@
         },
         {
           "language": "英文",
-          "content": "If the mines just provided workers with data loggers, it would save us so much hassle."
+          "content": "Nah yeah… If the mines just provided workers with recorders, it would save us so much hassle."
         },
         {
           "language": "韩文",
@@ -290,7 +302,7 @@
         },
         {
           "language": "英文",
-          "content": "I thought it was a joke when I got a new contract from HR. Not only did my pay go up, I get even more benefits... Thanks, Doctor!"
+          "content": "I thought it was a joke when I got a new contract from HR. Not only did my pay go up, I get even more benefits... Thanks, Doki!"
         },
         {
           "language": "韩文",
@@ -312,7 +324,7 @@
         },
         {
           "language": "英文",
-          "content": "If I ever get the chance, I want to go check out Columbia, see the Great Expansion with my own eyes and how their workers are different from ours in Rim Billiton... Doctor, Rhodes Island works with a lot of big companies, right?"
+          "content": "If I ever get the chance, I want to go check out Columbia, see the Great Expansion with my own eyes and how their workers are different from ours in Rim Billiton... Doki, Rhodes Island works with a lot of big companies, right?"
         },
         {
           "language": "韩文",
@@ -334,7 +346,7 @@
         },
         {
           "language": "英文",
-          "content": "Work, work!"
+          "content": "Work, work! Hop to it now!"
         },
         {
           "language": "韩文",
@@ -400,7 +412,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh? Why is my drill stuck?!"
+          "content": "Ah! Why is my drill stuck?!"
         },
         {
           "language": "韩文",
@@ -422,7 +434,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm... What's that smell?"
+          "content": "Hm…? What's that smell?"
         },
         {
           "language": "韩文",
@@ -444,7 +456,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, you just show up as scheduled and see what we've got done."
+          "content": "Relax, Doki, just show up at completion time."
         },
         {
           "language": "韩文",
@@ -488,7 +500,7 @@
         },
         {
           "language": "英文",
-          "content": "Make sure your holes aren't off by more than two centimeters when you're drilling."
+          "content": "Remember, max deviation for each drill hole is two centimeters!"
         },
         {
           "language": "韩文",
@@ -510,7 +522,7 @@
         },
         {
           "language": "英文",
-          "content": "Stay focused when you're operating the boring machine!"
+          "content": "Oi! Stay focused when you're running that boring machine!"
         },
         {
           "language": "韩文",
@@ -532,7 +544,7 @@
         },
         {
           "language": "英文",
-          "content": "You'll go blind looking into a miner's lamp that's triple bright!"
+          "content": "A triple bright miner's lamp could make ya go blind!"
         },
         {
           "language": "韩文",
@@ -576,7 +588,7 @@
         },
         {
           "language": "英文",
-          "content": "Dig! Dig! Dig!"
+          "content": "Dig! Diiig! Diiiiiiig!"
         },
         {
           "language": "韩文",
@@ -598,7 +610,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor! We... We just wrapped up a huge project!"
+          "content": "Doki! We… We just wrapped up a huge project!"
         },
         {
           "language": "韩文",
@@ -620,7 +632,7 @@
         },
         {
           "language": "英文",
-          "content": "When worker safety is on the line, you can't get sloppy."
+          "content": "When worker safety's on the line, you can't slip up for even a single second."
         },
         {
           "language": "韩文",
@@ -664,7 +676,7 @@
         },
         {
           "language": "英文",
-          "content": "Oh, never you mind. Follow-up work is part of construction, too. Just leave it to me to take care of the reinforcement, Doctor. Don't worry."
+          "content": "Don't be glum, chum. Follow-up work is part of construction, too. Just leave it to me to take care of the reinforcement. Cheer up, Doki."
         },
         {
           "language": "韩文",
@@ -686,7 +698,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm, if Rhodes Island needs your dorms rebuilt, think you might hire Shana's Construction Crew? Hehe..."
+          "content": "Let's say Rhodes Island needs some dorms rebuilt, think you might hire Shana's Construction Crew? Hehe…"
         },
         {
           "language": "韩文",
@@ -708,7 +720,7 @@
         },
         {
           "language": "英文",
-          "content": "Oh, it's you, Doctor. Sorry, I didn't notice over the sound of the drill."
+          "content": "Eeek! Oh, it's you, Doki. Sorry, didn't notice you over the sound of the drill."
         },
         {
           "language": "韩文",
@@ -730,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, can you hold this shield for me? Careful now, it's heavy. The inside there? That's concrete, baby."
+          "content": "Doki, can you hold this shield for me? Careful now, it's heavy. The inside there? That's concrete, baby."
         },
         {
           "language": "韩文",
@@ -774,7 +786,7 @@
         },
         {
           "language": "英文",
-          "content": "Here, Doctor. A mint."
+          "content": "Hey, Doki! Here, a mint for ya."
         },
         {
           "language": "韩文",

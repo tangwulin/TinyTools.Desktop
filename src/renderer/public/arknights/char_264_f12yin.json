@@ -1,11 +1,22 @@
 {
   "name": "山",
   "charaKey": "char_264_f12yin",
-  "images": [],
-  "voiceBase": {
-    "日语": "voice/char_264_f12yin",
-    "中文-普通话": "voice_cn/char_264_f12yin"
-  },
+  "images": [
+    "https://prts.wiki/images/7/74/立绘_山_1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/c/cf/立绘_山_2.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/4/4c/立绘_山_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://prts.wiki/images/5/5b/立绘_山_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_264_f12yin"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_264_f12yin"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

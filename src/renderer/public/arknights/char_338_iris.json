@@ -6,10 +6,16 @@
     "https://prts.wiki/images/e/ef/立绘_爱丽丝_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/c0/立绘_爱丽丝_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_338_iris",
-    "中文-普通话": "voice_cn/char_338_iris"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_338_iris"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_338_iris"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

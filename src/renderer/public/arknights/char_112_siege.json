@@ -7,12 +7,24 @@
     "https://prts.wiki/images/c/c1/立绘_推进之王_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/b/bd/立绘_推进之王_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_112_siege",
-    "中文-普通话": "voice_cn/char_112_siege",
-    "韩语": "voice_kr/char_112_siege",
-    "英语": "voice_en/char_112_siege"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_112_siege"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_112_siege"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_112_siege"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_112_siege"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

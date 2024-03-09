@@ -7,12 +7,28 @@
     "https://prts.wiki/images/7/76/立绘_阿_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/a/a7/立绘_阿_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_225_haak",
-    "中文-普通话": "voice_cn/char_225_haak",
-    "中文-方言": "voice_custom/char_225_haak_cn_topolect",
-    "韩语": "voice_kr/char_225_haak"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_225_haak"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_225_haak"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_225_haak_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_225_haak"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_225_haak"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -88,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "Lemme guess, Hung's still tellin' you to watch out around me, ain't he? Oh, just to 'look after me,' huh? Yeah, that sounds like him all right. But listen, my dude, I know your type. You're like me and just wanna do whatever you want, right? Then you can just ignore that guy and we can do whatever fun stuff we want instead."
+          "content": "Lemme guess, Hung's still tellin' you to watch out around me, ain't he? Oh, just to 'look after me'? Yeah, that sounds like him all right. But listen, Boss, I know your type. You're like me, and you just wanna do whatever you want, right? Then just ignore that guy. We can do whatever fun stuff we like."
         },
         {
           "language": "韩文",
@@ -118,7 +134,7 @@
         },
         {
           "language": "英文",
-          "content": "Yeah, I develop new drugs, do surgery, and nurture bacteria cultures, but those are all just fun hobbies to me. And don't call me a doctor, you got no reason to. I don't go 'round saving people's lives, y'know, I just 'save' people by teaching them the value of their lives. All I can really do is prevent 'em from dying."
+          "content": "Yeah, I develop new drugs, do surgery, and nurture bacteria cultures, but those are all just fun hobbies to me. Doc. Aak? Nah, don't call me that. I don't save anyone, 'cuz I can't teach them the value of their lives. All I can do is just prevent 'em from dying."
         },
         {
           "language": "韩文",
@@ -148,7 +164,7 @@
         },
         {
           "language": "英文",
-          "content": "The medical department guys are askin' for me? Tell 'em to stop. I don't dig those oh-so-professional physicians. They firmly believe that being a doctor's this noble job and are content with just saving lives... And everything comes crashing down when that faith of theirs is shattered. I've seen that happen time and time again. Honestly, it's kinda sad."
+          "content": "The medical department guys are askin' for me? Man, give me a break. I don't dig those professional physicians. They firmly believe that being a doctor's this noble job, and are content with saving more lives... before everything just comes crashing down when their faith got shattered. I've seen that happen time and time again. Honestly, it makes me sad."
         },
         {
           "language": "韩文",
@@ -178,7 +194,7 @@
         },
         {
           "language": "英文",
-          "content": "Rhodes Island is pretty decent, or more accurately, it's just what I'd hoped. People are dyin' in the world right as we speak. There are doctors cooped up in labs, only workin' to cure diseases rather than prevent 'em. Hardly anyone gets it, but you people actually do. Keep up the good stuff!"
+          "content": "I don't dislike Rhodes Island. Instead, I think you guys are doing your job just fine. People are dyin' in the world right as we speak, and with all those doctors cooping up in labs, waiting for patients to knock on their clinics' doors, diseases ain't rid themselves of these lands. Hardly anyone gets it, but you people seem to have it in mind... Keep up the good stuff, will ya?"
         },
         {
           "language": "韩文",
@@ -208,7 +224,7 @@
         },
         {
           "language": "英文",
-          "content": "Me, a sociopath? You got it all wrong, my dude. Everyone's got their own hardships to deal with, and I know that. Nobody wants to suffer, but what's the point of medicine if the bastards causing suffering are still around? Is medicine gonna save those people who're being murdered? Doctors in suits are not the saviors that Terra needs, my dude."
+          "content": "Me, a cynic? You got me wrong, my dude. I simply pity all the people on this land. Everyone's got their own hardships to deal with, and I know that. But what's the point of curing pains and sufferings when we can't cure their source? What medicine saves a man who's being murdered? Terra doesn't need more doctors in suits, my dude."
         },
         {
           "language": "韩文",
@@ -238,7 +254,7 @@
         },
         {
           "language": "英文",
-          "content": "My pops was an amazing doctor, and he was all about saving people's lives. But his colleagues laughed at him, shunned him, and framed him for malpractice, and that's how he wound up racing down a nasty new path in life. But y'know, stuff like that ain't so unusual, really. I'll admit though, what happened to him really changed my own life."
+          "content": "My pops was an amazing doctor, and he was all about saving people's lives. But his colleagues slandered him, sidelined him, and framed him. That's how he ended up as a underground doctor, the nastiest among the wicked. Stuff like that ain't so unusual, but I'll admit, what happened to him really changed my own life."
         },
         {
           "language": "韩文",
@@ -268,7 +284,7 @@
         },
         {
           "language": "英文",
-          "content": "Have Waai Fu and Hung left? Really? Aight, I'm gonna hang out in your office for a while then. Y'know, if anyone can make the world a better place, it's gotta be people like them. You, meanwhile... Well, who knows, maybe you can be my right hand?"
+          "content": "Have Waai Fu and Hung left? Really? Aight, I'm gonna hang out in your office for a while then. Y'know, if anyone can make this land a better place, it's gotta be people like them. You, meanwhile... Well, guess we are simply two peas in a pod, aren't we?"
         },
         {
           "language": "韩文",
@@ -298,7 +314,7 @@
         },
         {
           "language": "英文",
-          "content": "What's up? Feelin' tired? Then how about testing this new compound I made? Free of charge, of course!"
+          "content": "Aha! You Feelin' tired? Then come try this new compound I made! Free of charge, of course!"
         },
         {
           "language": "韩文",
@@ -328,7 +344,7 @@
         },
         {
           "language": "英文",
-          "content": "So you're the Doctor, eh? Nice to meet'cha. My name's Aak. That's right, two A's with a K. Anyway, I'm here 'cause someone at the agency said Rhodes Island needed me. I'm just askin' to make sure here, but does the phrase 'medical mishap' put you off?"
+          "content": "So you're the Doctor, eh? Nice to meet'cha. My name's Aak. That's right, two A's with a K. Anyway, I'm here 'cause the agency got some business here at Rhodes Island. A quick question before we start: does the phrase 'medical mishap' put you off?"
         },
         {
           "language": "韩文",
@@ -388,7 +404,7 @@
         },
         {
           "language": "英文",
-          "content": "A promotion? That's almost too good to be true, man. Those agency guys really HAVE been exploiting me all along!"
+          "content": "A promotion? Almost too good to be true, man. I knew my agency has been exploiting me all along!"
         },
         {
           "language": "韩文",
@@ -418,7 +434,7 @@
         },
         {
           "language": "英文",
-          "content": "Honestly, I dunno if I'm helpful or not. The way I see it, you've gotta be nice to be helpful, and I'm not blind to how people perceive me. But in any case, if you ever get sick, I've got you covered."
+          "content": "Honestly, I dunno if I'm helpful or not. The way I see it, you've gotta be nice to be helpful, and I'm not blind to how people perceive me. But in any case, if you ever get sick, you know who to call."
         },
         {
           "language": "韩文",
@@ -448,7 +464,7 @@
         },
         {
           "language": "英文",
-          "content": "We goin' on a mission? Let's do it."
+          "content": "We goin' on a mission? Sure, let's do it."
         },
         {
           "language": "韩文",
@@ -538,7 +554,7 @@
         },
         {
           "language": "英文",
-          "content": "Simmer down, guys. With me on your team, none of you's gonna die even if you want to."
+          "content": "Relax, guys. You just can't die with me by your side."
         },
         {
           "language": "韩文",
@@ -568,7 +584,7 @@
         },
         {
           "language": "英文",
-          "content": "My treatment is not for the squeamish!"
+          "content": "When prescribing, I always go double-down on the dosage."
         },
         {
           "language": "韩文",
@@ -598,7 +614,7 @@
         },
         {
           "language": "英文",
-          "content": "The battlefield ain't for me, but I can't pass up on some fun treatment."
+          "content": "I ain't one for battle, but treating peole is so much fun!"
         },
         {
           "language": "韩文",
@@ -658,7 +674,7 @@
         },
         {
           "language": "英文",
-          "content": "You've gotta dose in moderation, 'else it's gonna hurt when you really need it."
+          "content": "Learn to treat yourself with kindness, or regret when sickness treats you."
         },
         {
           "language": "韩文",
@@ -688,7 +704,7 @@
         },
         {
           "language": "英文",
-          "content": "All lives are equal... With the exception of yours!"
+          "content": "All lives are equal... while yours is a deviation."
         },
         {
           "language": "韩文",
@@ -718,7 +734,7 @@
         },
         {
           "language": "英文",
-          "content": "Try my meds and you'll see how crazy they are."
+          "content": "Just take the shot. You will be <i>amazed</i>."
         },
         {
           "language": "韩文",
@@ -748,7 +764,7 @@
         },
         {
           "language": "英文",
-          "content": "Looks like my meds have the ability to reform bad guys!"
+          "content": "My potion might give the bad guys a new leaf to turn over!"
         },
         {
           "language": "韩文",
@@ -778,7 +794,7 @@
         },
         {
           "language": "英文",
-          "content": "Medicine is like Pandora's box: once you open it, there's no goin' back!"
+          "content": "Medicine, a box you wish you've never opened!"
         },
         {
           "language": "韩文",
@@ -808,7 +824,7 @@
         },
         {
           "language": "英文",
-          "content": "I doubt I can make the world a better place on my own. But with your talent, we can at least stop it from gettin' any worse."
+          "content": "I doubt I can make the world a better place on my own, but at least I can stop it from gettin' any worse with your help."
         },
         {
           "language": "韩文",
@@ -838,7 +854,7 @@
         },
         {
           "language": "英文",
-          "content": "Capturing our enemies and experimenting on 'em doesn't violate any ethics as long as nobody catches us doin' it. Relaaax."
+          "content": "Could we capture some enemies for a little experimenting? It's not violating ethics as long as no one sees it. Not a chance? Aww."
         },
         {
           "language": "韩文",
@@ -868,7 +884,7 @@
         },
         {
           "language": "英文",
-          "content": "Aren't you a real humanitarian, just letting 'em get away like that?"
+          "content": "Letting 'em get away like that? You are a saint."
         },
         {
           "language": "韩文",
@@ -928,7 +944,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's see here, which of these rooms is my new lab?"
+          "content": "Now, now, let's see. Which of these rooms is my new lab?"
         },
         {
           "language": "韩文",
@@ -958,7 +974,7 @@
         },
         {
           "language": "英文",
-          "content": "Yeah, what?"
+          "content": "Ah?"
         },
         {
           "language": "韩文",

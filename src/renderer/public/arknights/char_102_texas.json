@@ -7,13 +7,28 @@
     "https://prts.wiki/images/1/1f/立绘_德克萨斯_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/2b/立绘_德克萨斯_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_102_texas",
-    "中文-普通话": "voice_cn/char_102_texas",
-    "韩语": "voice_kr/char_102_texas",
-    "英语": "voice_en/char_102_texas",
-    "意大利语": "voice_custom/char_102_texas_ita"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_102_texas"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_102_texas"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_102_texas"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_102_texas"
+    },
+    {
+      "language": "意大利语",
+      "base": "voice_custom/char_102_texas_ita"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

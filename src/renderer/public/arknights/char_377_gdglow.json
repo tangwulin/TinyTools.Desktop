@@ -7,12 +7,24 @@
     "https://prts.wiki/images/e/ea/立绘_澄闪_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/b/b6/立绘_澄闪_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_377_gdglow",
-    "中文-普通话": "voice_cn/char_377_gdglow",
-    "韩语": "voice_kr/char_377_gdglow",
-    "英语": "voice_en/char_377_gdglow"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_377_gdglow"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_377_gdglow"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_377_gdglow"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_377_gdglow"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

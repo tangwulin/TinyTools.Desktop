@@ -9,12 +9,24 @@
     "https://prts.wiki/images/3/3f/立绘_阿米娅_skin2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/1/1d/立绘_阿米娅_skin3.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_002_amiya",
-    "中文-普通话": "voice_cn/char_002_amiya",
-    "韩语": "voice_kr/char_002_amiya",
-    "英语": "voice_en/char_002_amiya"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_002_amiya"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_002_amiya"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_002_amiya"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_002_amiya"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

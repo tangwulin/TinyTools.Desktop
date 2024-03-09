@@ -7,12 +7,24 @@
     "https://prts.wiki/images/0/0d/立绘_塞雷娅_skin1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/c/c1/立绘_塞雷娅_skin2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_202_demkni",
-    "中文-普通话": "voice_cn/char_202_demkni",
-    "韩语": "voice_kr/char_202_demkni",
-    "英语": "voice_en/char_202_demkni"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_202_demkni"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_202_demkni"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_202_demkni"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_202_demkni"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

@@ -5,12 +5,24 @@
     "https://prts.wiki/images/7/78/立绘_火哨_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/b/b3/立绘_火哨_2.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_493_firwhl",
-    "中文-普通话": "voice_cn/char_493_firwhl",
-    "韩语": "voice_kr/char_493_firwhl",
-    "英语": "voice_en/char_493_firwhl"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_493_firwhl"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_493_firwhl"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_493_firwhl"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_493_firwhl"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

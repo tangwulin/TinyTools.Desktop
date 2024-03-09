@@ -5,12 +5,24 @@
     "https://prts.wiki/images/9/94/立绘_安德切尔_1.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/2/22/立绘_安德切尔_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_211_adnach",
-    "中文-普通话": "voice_cn/char_211_adnach",
-    "韩语": "voice_kr/char_211_adnach",
-    "英语": "voice_en/char_211_adnach"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_211_adnach"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_211_adnach"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_211_adnach"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_211_adnach"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",

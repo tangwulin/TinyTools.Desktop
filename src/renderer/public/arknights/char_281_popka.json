@@ -1,14 +1,25 @@
 {
   "name": "泡普卡",
   "charaKey": "char_281_popka",
-  "images": [
-    "https://prts.wiki/images/5/5d/立绘_泡普卡_1.png?image_process=format,webp/quality,Q_90"
+  "images": [],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_281_popka"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_281_popka"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_281_popka"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_281_popka"
+    }
   ],
-  "voiceBase": {
-    "日语": "voice/char_281_popka",
-    "中文-普通话": "voice_cn/char_281_popka",
-    "韩语": "voice_kr/char_281_popka"
-  },
   "voiceList": [
     {
       "title": "任命助理",
@@ -50,7 +61,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, need a break? I made you some tea, and Miss Orchid made cookies. Here you go, Doctor... Feel better!"
+          "content": "Doctor, do you need a break? I made you some tea, and Miss Orchid made cookies. Here, hope you like them… And, umm... Cheer up!"
         },
         {
           "language": "韩文",
@@ -76,7 +87,7 @@
         },
         {
           "language": "英文",
-          "content": "Why is everyone in Team A6 always fighting...? If they keep arguing all the time, they can't be friends... Fighting is bad. I'll have to teach them that..."
+          "content": "Why is everyone in Team A6 always fighting with each other...? If things keep going like this, we can't be a team anymore... Fighting is bad. I must make them understand!"
         },
         {
           "language": "韩文",
@@ -102,7 +113,7 @@
         },
         {
           "language": "英文",
-          "content": "The gear on my chainsaw that makes the 'vrrrr' sound is kinda loose... That's weird. I don't remember using it lately...?"
+          "content": "The gear on my chainsaw is kinda loose, the one that makes the 'vrrrr' sound ... But I don't remember using it lately. Weird..."
         },
         {
           "language": "韩文",
@@ -128,7 +139,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, is Team A6 finally getting along...? Ermm... I really hope they are... As long as they don't fight, I can stay here with you..."
+          "content": "Doctor, is Team A6 getting along well...? That's really some good news. Peace is the best... As long as they don't fight, nothing will bother me while I stay with you…"
         },
         {
           "language": "韩文",
@@ -180,7 +191,7 @@
         },
         {
           "language": "英文",
-          "content": "Um, Doc-Doctor, did I just pass out...? Um, why is everyone lying on the floor? Miss Catapult? Mr. Midnight? Mr. Spot? Why are you all slashed up? Why is Miss Orchid like that...?"
+          "content": "Um, Doc-Doctor, did I just pass out...? Um, why is everyone lying on the floor? Miss Catapult? Mr. Midnight? Mr. Spot? Why do you all have bruises on your face? And Miss Orchid too..."
         },
         {
           "language": "韩文",
@@ -206,7 +217,7 @@
         },
         {
           "language": "英文",
-          "content": "I have a special ability? And it's super strong? When I want to stop my friends from fighting, I use my power, and lose control, and then forget everything that happened...? Wow, okay, I get it now. Right! I can't let this power go to waste!"
+          "content": "I'm actually super strong? You say I lost control over my power, when I wanted to stop my friends from fighting each other? That's why I don't remember anything...? Okay, I think I get it! Umm... right, I will put my power to good use!"
         },
         {
           "language": "韩文",
@@ -232,7 +243,7 @@
         },
         {
           "language": "英文",
-          "content": "Aaaah! I broke the cup... Errmm... I'm in trouble when the Doctor wakes up..."
+          "content": "Aaaah! The cup! I didn't control my grip... Errmm... I'm in trouble when the Doctor wakes up..."
         },
         {
           "language": "韩文",
@@ -258,7 +269,7 @@
         },
         {
           "language": "英文",
-          "content": "Popukar from Operation Reserve Team A6, reporting in. Um, my teammates in A6 are always arguing. I'm sure you worry about them, Doctor... But I know what to do..."
+          "content": "Popukar from Operation Reserve Team A6, reporting in. I'm sorry my teammates are always fighting each other, Doctor… But don't worry, I know what to do."
         },
         {
           "language": "韩文",
@@ -284,7 +295,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, Doctor, is the girl in the video... me?"
+          "content": "Umm, Doctor, is the girl in the video... me?"
         },
         {
           "language": "韩文",
@@ -362,7 +373,7 @@
         },
         {
           "language": "英文",
-          "content": "Ummm... I really don't know anything about tactics or strategies or anything..."
+          "content": "B-But... I really don't know anything about tactics or strategies or anything…"
         },
         {
           "language": "韩文",
@@ -414,7 +425,7 @@
         },
         {
           "language": "英文",
-          "content": "Miss Orchid, don't worry... I'll can do it."
+          "content": "Miss Orchid, don't worry... I'll be fine."
         },
         {
           "language": "韩文",
@@ -492,7 +503,7 @@
         },
         {
           "language": "英文",
-          "content": "I want to stop fighting."
+          "content": "I want to stop this fight."
         },
         {
           "language": "韩文",
@@ -518,7 +529,7 @@
         },
         {
           "language": "英文",
-          "content": "Stop arguiiing!"
+          "content": "Please stop arguiiing!"
         },
         {
           "language": "韩文",
@@ -544,7 +555,7 @@
         },
         {
           "language": "英文",
-          "content": "Be good and don't move..."
+          "content": "Be good and don't move."
         },
         {
           "language": "韩文",
@@ -570,7 +581,7 @@
         },
         {
           "language": "英文",
-          "content": "Chainsaw got mad..."
+          "content": "Chainsaw got mad…"
         },
         {
           "language": "韩文",
@@ -596,7 +607,7 @@
         },
         {
           "language": "英文",
-          "content": "Mr. Midnight, come back here... Miss Orchid is watching you..."
+          "content": "Mr. Midnight, come back here... Miss Orchid is staring at you…"
         },
         {
           "language": "韩文",
@@ -622,7 +633,7 @@
         },
         {
           "language": "英文",
-          "content": "So you're done fighting, right...?"
+          "content": "Can everyone have a good peaceful talk, now...?"
         },
         {
           "language": "韩文",
@@ -648,7 +659,7 @@
         },
         {
           "language": "英文",
-          "content": "Errrmm... Doctor, here, I made tea... Doctor, are you tired?"
+          "content": "Doctor… Doctor…? Here, I made some tea. You must be tired."
         },
         {
           "language": "韩文",
@@ -674,7 +685,7 @@
         },
         {
           "language": "英文",
-          "content": "Oww... It hurts... They hit me..."
+          "content": "**A painful groan** I'm… injured…? It hurts…"
         },
         {
           "language": "韩文",
@@ -752,7 +763,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, headpats..."
+          "content": "Doctor, headpats…"
         },
         {
           "language": "韩文",

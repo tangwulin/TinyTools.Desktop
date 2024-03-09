@@ -6,14 +6,32 @@
     "https://prts.wiki/images/3/3f/立绘_异客_2.png?image_process=format,webp/quality,Q_90",
     "https://prts.wiki/images/7/74/立绘_异客_skin1.png?image_process=format,webp/quality,Q_90"
   ],
-  "voiceBase": {
-    "日语": "voice/char_472_pasngr",
-    "中文-普通话": "voice_cn/char_472_pasngr",
-    "韩语": "voice_kr/char_472_pasngr",
-    "中文-普通话(今昔须臾之梦)": "voice_cn/char_472_pasngr_epoque__17",
-    "日语(今昔须臾之梦)": "voice/char_472_pasngr_epoque__17",
-    "韩语(今昔须臾之梦)": "voice_kr/char_472_pasngr_epoque__17"
-  },
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_472_pasngr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_472_pasngr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_472_pasngr"
+    },
+    {
+      "language": "中文-普通话(今昔须臾之梦)",
+      "base": "voice_cn/char_472_pasngr_epoque__17"
+    },
+    {
+      "language": "日语(今昔须臾之梦)",
+      "base": "voice/char_472_pasngr_epoque__17"
+    },
+    {
+      "language": "韩语(今昔须臾之梦)",
+      "base": "voice_kr/char_472_pasngr_epoque__17"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
