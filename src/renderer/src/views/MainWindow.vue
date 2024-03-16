@@ -10,14 +10,17 @@ import { DiceOutline as DiceIcon } from '@vicons/ionicons5'
 import { ChairAltOutlined as ChairIcon, ScoreboardOutlined as ScoreIcon } from '@vicons/material'
 import { Gift as GiftIcon, Menu2 as MenuIcon } from '@vicons/tabler'
 import { UpdateInfo } from 'builder-util-runtime'
-import { NIcon, useDialog } from 'naive-ui'
+import { NIcon, NotificationReactive, NProgress, useDialog, useNotification } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { Component, h, onBeforeMount, onMounted, ref, watch } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import backupDB from '../services/BackupService'
-const router = useRouter()
 import { getAppData } from '../services/DataService'
 import { useGeneralStore } from '../stores/general'
+import eventBus from '../utils/eventBus'
+import { formatBytes } from '../utils/formatUtils'
+
+const router = useRouter()
 
 let isElectron: boolean
 const electron = window.electron as ElectronAPI
@@ -42,6 +45,9 @@ const shortVersion = version?.split('-')[0]
 const activeKey = ref(null)
 const collapsed = ref(true)
 const collapsedSlider = ref(false)
+
+const updateNotificationRef = ref<NotificationReactive | null>(null)
+const notification = useNotification()
 
 const collapsedWithoutAnimation = ref(true)
 watch(
@@ -249,8 +255,8 @@ onMounted(() => {
 })
 
 if (isElectron) {
-  electron.ipcRenderer.on('printUpdaterMessage', (event, data) => {
-    console.log('printUpdaterMessage', event, data)
+  electron.ipcRenderer.on('printUpdaterMessage', (_, data) => {
+    console.log('printUpdaterMessage', data)
   })
 
   // 5. 收到主进程可更新的消息，做自己的业务逻辑
@@ -265,6 +271,7 @@ if (isElectron) {
       positiveText: '更新',
       onPositiveClick: () => {
         electron.ipcRenderer.send('confirmUpdate')
+        createUpdateNotification()
       },
       onNegativeClick: () => {
         // 不用做什么
@@ -272,13 +279,51 @@ if (isElectron) {
     })
   })
 
+  function createUpdateNotification() {
+    updateNotificationRef.value = notification.create({
+      title: '更新中',
+      content: getUpdateNotificationContent({
+        total: 0,
+        delta: 0,
+        transferred: 0,
+        percent: 0,
+        bytesPerSecond: 0
+      }),
+      type: 'info',
+      duration: 0
+    })
+  }
+
+  electron.ipcRenderer.on('confirmUpdate', () => {})
+
+  eventBus.on('createUpdateNotification', () => {
+    createUpdateNotification()
+  })
+
   // 6. 点击确认更新
   // electron.ipcRenderer.send('confirmUpdate')
 
   // 9. 收到进度信息，做进度条
-  electron.ipcRenderer.on('downloadProgress', (event, data) => {
-    console.log('downloadProgress', event, data)
-    // do sth.
+  electron.ipcRenderer.on('downloadProgress', (_, data) => {
+    console.log('downloadProgress', data)
+    if (updateNotificationRef.value) {
+      updateNotificationRef.value.content = getUpdateNotificationContent(data)
+      if (data.percent === 100) {
+        updateNotificationRef.value.type = 'success'
+        updateNotificationRef.value.title = '下载完成'
+      }
+    }
+  })
+
+  eventBus.on('downloadProgress', (data) => {
+    console.log('downloadProgress', data)
+    if (updateNotificationRef.value) {
+      updateNotificationRef.value.content = getUpdateNotificationContent(data)
+      if (data.percent === 100) {
+        updateNotificationRef.value.type = 'success'
+        updateNotificationRef.value.title = '下载完成'
+      }
+    }
   })
 
   // 11. 下载完成，反馈给用户是否立即更新
@@ -304,6 +349,31 @@ if (isElectron) {
 const beforeUpdate = async () => {
   const data = await getAppData()
   await backupDB.addBackup(data)
+}
+
+interface UpdateProgressData {
+  total: number
+  delta: number
+  transferred: number
+  percent: number
+  bytesPerSecond: number
+}
+
+const getUpdateNotificationContent = (data: UpdateProgressData) => {
+  return () =>
+    h('div', null, [
+      h(
+        'p',
+        null,
+        `正在下载更新文件（共${formatBytes(data.total)}，当前速度${formatBytes(data.bytesPerSecond)}/s，已下载${formatBytes(data.transferred)}），请耐心等待...`
+      ),
+      h(NProgress, {
+        percentage: Math.floor(data.percent),
+        type: 'line',
+        processing: true,
+        indicatorPlacement: 'inside'
+      })
+    ])
 }
 
 const update = async () => {
