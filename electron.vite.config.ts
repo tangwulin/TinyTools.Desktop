@@ -77,12 +77,7 @@ export default ({ mode }) => {
       assetsInclude: ['**/*.xlsx'],
       build: {
         chunkSizeWarningLimit: 1500,
-        sourcemap: true,
-        rollupOptions: {
-          output: {
-            format: 'es'
-          }
-        }
+        sourcemap: true
       },
       define: {
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),

@@ -469,6 +469,9 @@ const dragHandler = debounce(
     db.transaction('rw', db.seatTable, db.seatHistories, async () => {
       await db.seatTable.bulkPut(deepcopy(seatTable.value))
       saveHistory(seatTable.value, '手动更改')
+    }).catch((err) => {
+      console.log(err)
+      message.error('保存失败')
     })
   },
   100,

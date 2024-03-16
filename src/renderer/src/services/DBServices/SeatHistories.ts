@@ -33,7 +33,14 @@ export const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => 
             })
         }
       })
+      .catch((e) => {
+        console.error(e)
+      })
   } else {
-    db.seatHistories.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
+    db.seatHistories
+      .add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
+      .catch((e) => {
+        console.error(e)
+      })
   }
 }

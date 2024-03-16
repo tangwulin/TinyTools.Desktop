@@ -5,7 +5,9 @@ import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
+import { LocalCacheProvider } from '../../../providers/LocalCacheProvider'
 import backupDB from '../../../services/BackupService'
+import { createCache } from '../../../services/CacheService'
 import { getAppData } from '../../../services/DataService'
 import { useSettingStore } from '../../../stores/setting'
 
@@ -26,6 +28,10 @@ let isElectron: boolean
 const electron = window.electron as ElectronAPI
 
 const imageSrc = ref('')
+const cache = createCache(new LocalCacheProvider())
+cache('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png').then((res) => {
+  imageSrc.value = res
+})
 
 try {
   isElectron = !!window.electron

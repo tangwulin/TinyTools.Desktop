@@ -7,11 +7,9 @@ export const useArknightsUIStore = defineStore(
     const selectedCharacterKey = ref('char_124_kroos') //当前选中的角色Key
 
     const selectedCharacterImageIndex = ref(0) //当前选中的立绘索引
-    const shouldUseOnlineImage = ref(true) //是否加载在线图片
     const shouldShowFullSizeImage = ref(false) //是否加载原图（仅限在线图片）
 
     const selectedCharacterVoiceLang = ref('日语') //当前选中的语音语种
-    const shouldUseOnlineVoice = ref(true) //是否加载在线语音
 
     const selectedCharacterDialogLang = ref('中文') //当前选中的对话语种
 
@@ -36,10 +34,8 @@ export const useArknightsUIStore = defineStore(
     return {
       selectedCharacterKey,
       selectedCharacterImageIndex,
-      shouldUseOnlineImage,
       shouldShowFullSizeImage,
       selectedCharacterVoiceLang,
-      shouldUseOnlineVoice,
       selectedCharacterDialogLang,
       user,
       asset,
