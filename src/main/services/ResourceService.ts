@@ -1,3 +1,1 @@
-export const launchResourceService = () => {
-
-}
+export const launchResourceService = () => {}

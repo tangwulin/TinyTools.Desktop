@@ -1,5 +1,3 @@
-
-
 export function formatBytes(bytes: number) {
   const units = ['B', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
   let i = 0
@@ -8,5 +6,4 @@ export function formatBytes(bytes: number) {
     i++
   }
   return `${bytes.toFixed(2)} ${units[i]}`
-
 }

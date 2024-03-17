@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { PropType } from 'vue'
 import { Group } from '../types/group'
 import { remToPx } from '../utils/styleUtil'

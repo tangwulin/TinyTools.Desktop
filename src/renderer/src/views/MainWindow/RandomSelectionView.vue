@@ -5,13 +5,13 @@ import { computed, nextTick, ref, watch } from 'vue'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
 import groupVideo from '../../assets/video/十连出金.mp4'
 import singleVideo from '../../assets/video/单抽出金.mp4'
+import EntityItem from '../../components/EntityItem.vue'
+import RaffleModeSelect from '../../components/RandomSelectionView/RaffleModeSelect.vue'
 import db from '../../db'
+import { getAvatar } from '../../services/AvatarService'
 import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
 import { selectSomething } from '../../utils/arrayUtil'
-import { getAvatar } from '../../services/AvatarService'
-import EntityItem from '../../components/EntityItem.vue'
-import RaffleModeSelect from '../../components/RandomSelectionView/RaffleModeSelect.vue'
 
 const message = useMessage()
 
@@ -148,10 +148,10 @@ watch(
             <EntityItem
               v-for="item in selectedPerson"
               :key="item.id"
-              :display-name="item.name"
-              size="large"
               :avatar="getAvatar(item)"
+              :display-name="item.name"
               :enable-avatar="enableAvatar"
+              size="large"
             />
           </div>
         </n-layout>
@@ -255,7 +255,7 @@ watch(
   </n-modal>
 
   <!--  视频Modal  <-->
-  <n-modal v-model:show="playingVideo" transform-origin="center" :mask-closable="false">
+  <n-modal v-model:show="playingVideo" :mask-closable="false" transform-origin="center">
     <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
   </n-modal>
 </template>

@@ -84,8 +84,8 @@ watch(value, async () => {
             <entity-item
               v-for="(item, index) in selectedAvatar"
               :key="index"
-              :display-name="item.description"
               :avatar="item.url"
+              :display-name="item.description"
               @click="writeClipboard(item.url)"
             />
           </div>

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { LuckyWheel } from '@lucky-canvas/vue'
 import { DragHandleRound as HandleIcon } from '@vicons/material'
 import { useEventListener, useWindowSize } from '@vueuse/core'
@@ -189,9 +189,9 @@ const cancelLottery = () => {
 <template>
   <n-layout id="lotteryView">
     <n-layout-content
+      content-style="height: 100%;display:flex;flex-direction:column;align-content:center;justify-items:center"
       position="absolute"
       style="height: 100%"
-      content-style="height: 100%;display:flex;flex-direction:column;align-content:center;justify-items:center"
     >
       <span style="font-size: 2rem; margin: 0.5rem auto 1.5rem">幸运抽奖</span>
       <div id="spin">
@@ -199,15 +199,15 @@ const cancelLottery = () => {
           v-if="spinPrizeList?.length > 0"
           :key="spinKey"
           ref="spinRef"
-          style="margin: auto"
-          width="40vw"
-          height="40vw"
-          :prizes="spinPrizeList"
           :blocks="blocks"
           :buttons="buttons"
           :default-style="spinStyle"
-          @start="startCallback"
+          :prizes="spinPrizeList"
+          height="40vw"
+          style="margin: auto"
+          width="40vw"
           @end="endCallback"
+          @start="startCallback"
         />
         <n-p v-else depth="3" style="font-size: 2rem; margin: auto"> 请先设置奖项</n-p>
       </div>
@@ -253,8 +253,8 @@ const cancelLottery = () => {
             <span>背景色</span>
             <n-color-picker
               v-model:value="element.backgroundColor"
-              style="width: 6rem; margin-top: 0.3rem"
               :show-alpha="false"
+              style="width: 6rem; margin-top: 0.3rem"
             />
             <n-button type="error" @click="prizeList.splice(prizeList.indexOf(element), 1)"
               >删除
@@ -286,7 +286,7 @@ const cancelLottery = () => {
     >
       <n-space direction="vertical">
         <n-button type="primary" @click="exportPrize">导出奖项设置</n-button>
-        <n-upload accept=".json" :on-before-upload="importPrize">
+        <n-upload :on-before-upload="importPrize" accept=".json">
           <n-button type="primary">导入奖项设置</n-button>
         </n-upload>
       </n-space>

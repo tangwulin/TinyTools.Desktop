@@ -176,7 +176,7 @@ const clickHandler = (name: string) => {
       title="更换干员"
       @close="showArchive = false"
     >
-      <n-input v-model:value="keyword" placeholder="搜索" type="text" clearable />
+      <n-input v-model:value="keyword" clearable placeholder="搜索" type="text" />
       <n-space>
         <span>筛选</span>
         <n-radio-group v-model:value="selectedSex">
@@ -193,8 +193,8 @@ const clickHandler = (name: string) => {
           <entity-item
             v-for="(item, index) in selectedAvatar"
             :key="index"
-            :display-name="item.description"
             :avatar="item.url"
+            :display-name="item.description"
             @click="clickHandler(item.description)"
           />
         </div>

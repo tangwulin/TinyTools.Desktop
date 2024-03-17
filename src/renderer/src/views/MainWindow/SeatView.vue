@@ -541,8 +541,8 @@ const dragHandler = debounce(
           </template>
         </n-button>
         <n-button :disabled="loading || isPreview" @click="saveAsPng">保存</n-button>
-        <n-dropdown trigger="click" :options="saveMethods" @select="handleSave">
-          <n-button :disabled="loading || isPreview" icon-placement="right" class="p-1">
+        <n-dropdown :options="saveMethods" trigger="click" @select="handleSave">
+          <n-button :disabled="loading || isPreview" class="p-1" icon-placement="right">
             <template #icon>
               <n-icon>
                 <ArrowDownIcon />
@@ -576,7 +576,7 @@ const dragHandler = debounce(
     </div>
 
     <!--  视频Modal  <-->
-    <n-modal v-model:show="playingVideo" transform-origin="center" :mask-closable="false">
+    <n-modal v-model:show="playingVideo" :mask-closable="false" transform-origin="center">
       <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
     </n-modal>
 

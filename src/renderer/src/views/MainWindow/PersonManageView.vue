@@ -24,6 +24,7 @@ import * as XLSX from 'xlsx'
 
 // @ts-ignore:2307
 import personXlsx from '../../assets/xlsx/person.xlsx'
+import { getAvatar } from '../../services/AvatarService'
 import { getDynamicGroupList } from '../../services/DBServices/Group'
 import {
   addPersons,
@@ -33,7 +34,6 @@ import {
 } from '../../services/DBServices/Person'
 import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
-import { getAvatar } from '../../services/AvatarService'
 import downloadAnyFile from '../../utils/downloadAnyFile'
 import { remToPx } from '../../utils/styleUtil'
 

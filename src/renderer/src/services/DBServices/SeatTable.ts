@@ -20,4 +20,5 @@ export const rewriteWholeSeatTable = async (newSeatTable: SeatTableItem[]) =>
 export const getSeatTable = async () => await db.seatTable.toArray()
 
 export const addSeatTable = async (seatTable: SeatTableItem) => await db.seatTable.add(seatTable)
-export const addSeatTables = async (seatTables: SeatTableItem[]) => await db.seatTable.bulkAdd(seatTables)
+export const addSeatTables = async (seatTables: SeatTableItem[]) =>
+  await db.seatTable.bulkAdd(seatTables)

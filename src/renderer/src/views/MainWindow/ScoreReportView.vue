@@ -14,11 +14,11 @@ import { computed, onMounted, ref, shallowRef, watch } from 'vue'
 import VChart from 'vue-echarts'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../db'
+import { getAvatar } from '../../services/AvatarService'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { RateHistory } from '../../types/rateHistory'
-import { getAvatar } from '../../services/AvatarService'
 import { remToPx } from '../../utils/styleUtil'
 
 const router = useRouter()
