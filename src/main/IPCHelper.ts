@@ -1,9 +1,10 @@
 import { is } from '@electron-toolkit/utils'
-import { app, ipcMain } from 'electron'
+import { app, BrowserWindow, ipcMain } from 'electron'
 import { join } from 'path'
 import { getFileIconByCache } from './utils/FSUtil'
+import { showDockWindow } from './Window'
 
-export function registerIPC() {
+export function registerIPC(dockWindow: BrowserWindow | null) {
   ipcMain.on('relaunchApp', () => {
     app.relaunch()
     app.exit()
@@ -20,4 +21,13 @@ export function registerIPC() {
       return join(__dirname, '../renderer/')
     }
   })
+
+  ipcMain.on('closeDockWindow', () => {
+    if (dockWindow) {
+      dockWindow.close()
+      dockWindow = null
+    }
+  })
+
+  ipcMain.on('openDockWindow', showDockWindow(dockWindow))
 }
