@@ -3,9 +3,7 @@ import { createAlova } from 'alova'
 import GlobalFetch from 'alova/GlobalFetch'
 import VueHook from 'alova/vue'
 import characterList from '../data/arknightsCharacterList.json'
-import { LocalCacheProvider } from '../providers/LocalCacheProvider'
 import { CharaData } from '../types/CharaData'
-import { createCache } from './CacheService'
 
 type CharaNameAndKey = {
   name: string
@@ -28,8 +26,6 @@ const apiInst = createAlova({
   responded: (response) => response.json()
 })
 
-const cacheInst = createCache(new LocalCacheProvider())
-
 export const getCharacterInfo = (characterKey: string) =>
   apiInst.Get<CharaData>(`./arknights/${characterKey}.json`)
 
@@ -44,22 +40,16 @@ export const getCharacterVoice = async (
   dialogLang: string
 ) => {
   return getCharacterInfo(characterKey).then((res) => {
-    const voiceBase = `https://torappu.prts.wiki/assets/audio/${res.voiceBase[voiceLang]}`
-    return Promise.all(
-      res.voiceList
-        .map(async (v) => ({
-          title: v.title,
-          detail: v.text.find((t) => t.language === dialogLang)?.content,
-          audio: await cacheInst(`${voiceBase}/${v.filename.toLowerCase()}`)
-        }))
-        .map((res) => {
-          return res
-        })
-    )
+    const voiceBase = `https://torappu.prts.wiki/assets/audio/${res.voiceBase.find((item) => item.language === voiceLang)?.base}`
+    return res.voiceList.map((v) => ({
+      title: v.title,
+      detail: v.text.find((t) => t.language === dialogLang)?.content,
+      audio: `${voiceBase}/${v.filename.toLowerCase()}`
+    }))
   })
 }
 
-export const getCharacterSupportLanguages = (characterKey: string) => {
+export const getCharacterSupportLanguages = async (characterKey: string) => {
   return getCharacterInfo(characterKey).then((res) => {
     return {
       voice: res.voiceBase.map((item) => item.language),
