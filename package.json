@@ -26,9 +26,14 @@
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.0",
     "@electron-toolkit/utils": "^3.0.0",
+    "@fastify/cors": "^9.0.1",
     "@sentry/electron": "^4.20.0",
     "electron-updater": "^6.1.8",
-    "extract-file-icon-fix": "^0.3.3"
+    "extract-file-icon-fix": "^0.3.3",
+    "fastify": "^4.26.2",
+    "getport": "^0.1.0",
+    "pino": "^8.19.0",
+    "pino-pretty": "^10.3.1"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config": "^1.0.2",
@@ -38,6 +43,7 @@
     "@rushstack/eslint-patch": "^1.7.2",
     "@sentry/vite-plugin": "^2.14.3",
     "@sentry/vue": "^7.106.0",
+    "@tomjs/electron-devtools-installer": "^2.1.1",
     "@types/howler": "^2.2.11",
     "@types/node": "^20.11.25",
     "@types/parallax-js": "^3.1.3",

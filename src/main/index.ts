@@ -1,12 +1,10 @@
-import { electronApp, is, optimizer } from '@electron-toolkit/utils'
+import { electronApp, optimizer } from '@electron-toolkit/utils'
 import * as Sentry from '@sentry/electron/main'
-import { app, BrowserWindow, ipcMain, Menu, protocol, screen, shell, Tray } from 'electron'
+import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-installer'
+import { app, BrowserWindow, protocol, Tray } from 'electron'
 // import { createGiteeUpdaterOptions } from './gitee-updater-ts'
-import { autoUpdater } from 'electron-updater'
 // import { NsisUpdater } from 'electron-updater'
-import path, { join } from 'path'
-import icon from '../../resources/icon.png?asset'
-import { registerIPC } from './IPC'
+import path from 'path'
 import { registerIPC } from './IPCHelper'
 import { launchCacheService } from './services/CacheService'
 import { launchResourceService } from './services/ResourceService'
@@ -41,6 +39,13 @@ if (import.meta.env.PROD) {
 app.whenReady().then(() => {
   // Set app user model id for windows
   electronApp.setAppUserModelId('org.tangwulin.tinytools')
+
+  if (import.meta.env.DEV) {
+    // Install Vue Devtools
+    installExtension(VUEJS_DEVTOOLS)
+      .then((ext) => logger.debug(`Added Extension: ${ext}`))
+      .catch((err) => logger.error('An error occurred: ', err))
+  }
 
   protocol.registerFileProtocol('atom', (request, callback) => {
     const url = request.url.substring(7)
