@@ -2,7 +2,7 @@
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
 import { KeyboardArrowDownRound as ArrowDownIcon } from '@vicons/material'
 import deepcopy from 'deepcopy'
-import { chunk, debounce, shuffle } from 'lodash-es'
+import { chunk, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
@@ -466,21 +466,33 @@ const playFinalBgm = () => {
   play(bgm)
 }
 
-const dragHandler = debounce(
-  () => {
-    db.transaction('rw', db.seatTable, db.seatHistories, async () => {
-      await db.seatTable.bulkPut(deepcopy(seatTable.value))
+// const dragHandler = debounce(
+//   () => {
+//     db.transaction('rw', db.seatTable, db.seatHistories, async () => {
+//       await db.seatTable.bulkPut(deepcopy(seatTable.value))
+//       saveHistory(seatTable.value, '手动更改')
+//     }).catch((err) => {
+//       console.log(err)
+//       message.error('保存失败')
+//     })
+//   },
+//   100,
+//   {
+//     maxWait: 2000
+//   }
+// )
+
+const dragHandler = () => {
+  db.seatTable
+    .bulkPut(deepcopy(seatTable.value))
+    .then(() => {
       saveHistory(seatTable.value, '手动更改')
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log(err)
       message.error('保存失败')
     })
-  },
-  100,
-  {
-    maxWait: 2000
-  }
-)
+}
 </script>
 
 <template>
