@@ -16,7 +16,6 @@ export class CacheService {
   }
 
   getPath(url: string) {
-    logger.info('getPath', url)
     const removeQuery = url.split('?')[0]
     const removeProtocol = removeQuery.replace(/^(https?|ftp):\/\//i, '')
     return (this.cachePath + '\\' + removeProtocol).replace(/\//g, String.raw`\/`[0])
