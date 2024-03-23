@@ -416,7 +416,6 @@ const saveAsXlsx = () => {
 
 const play = (option: Audio) => {
   const player = document.getElementById('player') as HTMLAudioElement
-  // player.src = option.url
   player.src = caching(option.url)
   player.currentTime = option.offset
   if (option.name) {

@@ -16,9 +16,12 @@ export class CacheService {
   }
 
   getPath(url: string) {
-    const removeQuery = url.split('?')[0]
-    const removeProtocol = removeQuery.replace(/^(https?|ftp):\/\//i, '')
-    return (this.cachePath + '\\' + removeProtocol).replace(/\//g, String.raw`\/`[0])
+    const { host, pathname, searchParams } = new URL(url)
+    const paths = decodeURI(pathname).split('/')
+    const lastIndex = paths.length - 1
+    paths[lastIndex] = searchParams.toString() + '&' + paths[lastIndex]
+    const filename = host + paths.join('\\')
+    return path.join(this.cachePath, filename)
   }
 
   async getCache(key: string) {
