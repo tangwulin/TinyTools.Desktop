@@ -19,10 +19,6 @@ export class CacheService {
     logger.info('getPath', url)
     const removeQuery = url.split('?')[0]
     const removeProtocol = removeQuery.replace(/^(https?|ftp):\/\//i, '')
-    logger.info(
-      'getPath',
-      (this.cachePath + '\\' + removeProtocol).replace(/\//g, String.raw`\/`[0])
-    )
     return (this.cachePath + '\\' + removeProtocol).replace(/\//g, String.raw`\/`[0])
   }
 
@@ -57,10 +53,4 @@ export function launchCacheService() {
     const cache = await cacheService.getCache(url)
     return new Response(null, { status: 302, headers: { location: encodeURI(cache ?? url) } })
   })
-
-  // protocol.registerFileProtocol('cache', async (request, callback) => {
-  //   const url = new URL(request.url).searchParams.get('url') ?? ''
-  //   const cache = await cacheService.getCache(url)
-  //   callback(cache ? decodeURI(cache) : url)
-  // })
 }
