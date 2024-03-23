@@ -3,29 +3,29 @@ import { Person } from '../types/person'
 import { Seat } from '../types/seat'
 import { SeatTableItem } from '../types/SeatTableItem'
 
-function calcDistance(x: Seat, y: Seat): number
-function calcDistance(x: unknown, y: unknown) {
-  const xIndex = typeof x === 'number' ? x : (x as Seat).locationIndex
-  const yIndex = typeof y === 'number' ? y : (y as Seat).locationIndex
-  const xRow = Math.ceil(xIndex / 8)
-  const yRow = Math.ceil(yIndex / 8)
-  const xCol = xIndex % 8
-  const yCol = yIndex % 8
-  return Math.max(Math.abs(xRow - yRow), Math.abs(xCol - yCol))
-}
-
-const calcWeightByDistance = (distance: number) => {
-  switch (distance) {
-    case 0:
-      return -10
-    case 1:
-      return -5
-    case 2:
-      return -2
-    default:
-      return distance
-  }
-}
+// function calcDistance(x: Seat, y: Seat): number
+// function calcDistance(x: unknown, y: unknown) {
+//   const xIndex = typeof x === 'number' ? x : (x as Seat).locationIndex
+//   const yIndex = typeof y === 'number' ? y : (y as Seat).locationIndex
+//   const xRow = Math.ceil(xIndex / 8)
+//   const yRow = Math.ceil(yIndex / 8)
+//   const xCol = xIndex % 8
+//   const yCol = yIndex % 8
+//   return Math.max(Math.abs(xRow - yRow), Math.abs(xCol - yCol))
+// }
+//
+// const calcWeightByDistance = (distance: number) => {
+//   switch (distance) {
+//     case 0:
+//       return -10
+//     case 1:
+//       return -5
+//     case 2:
+//       return -2
+//     default:
+//       return distance
+//   }
+// }
 
 // const calcWeightByGender = (x: OldSeat, y: OldSeat) => (x.owner.genderCode === y.owner.genderCode ? 0 : 1)
 
@@ -141,7 +141,11 @@ export const calcWeightByCorrectionAlgorithm = (
     weight[i] = 0
 
     //远离原位置
-    weight[i] += calcWeightByDistance(calcDistance(originSeats[i], item))
+    //不远离了，这个实测是有严重问题的
+    // weight[i] += calcWeightByDistance(calcDistance(originSeats[i], item))
+
+    //在同权重区域内选择一个
+    weight[i] += Math.random()
 
     //排除原位置
     if (originSeats[i].personId === item.personId) {
