@@ -1,18 +1,12 @@
-import { app, BrowserWindow } from 'electron'
+import { app } from 'electron'
+import { focusMainWindow } from '../Window'
 
-export function SingleInstanceCheck(window: BrowserWindow | null) {
+export function SingleInstanceCheck() {
   //限制只能开启一个应用(4.0以上版本)
   const gotTheLock = app.requestSingleInstanceLock()
   if (!gotTheLock) {
     app.quit()
   } else {
-    app.on('second-instance', () => {
-      // 当运行第二个实例时,将会聚焦到mainWindow这个窗口
-      if (window) {
-        if (window.isMinimized()) window.restore()
-        window.focus()
-        window.show()
-      }
-    })
+    app.on('second-instance', () => focusMainWindow())
   }
 }

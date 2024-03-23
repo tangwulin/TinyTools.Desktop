@@ -12,6 +12,7 @@ import videoSrc from '../../assets/video/单抽出金.mp4'
 import SeatTable from '../../components/SeatTable.vue'
 import raffleConfig from '../../data/raffleModes.json'
 import db from '../../db'
+import { caching } from '../../services/CacheService'
 import { getDynamicSeatHistoryList, saveHistory } from '../../services/DBServices/SeatHistories'
 import { useSettingStore } from '../../stores/setting'
 import { Audio } from '../../types/audio'
@@ -415,7 +416,8 @@ const saveAsXlsx = () => {
 
 const play = (option: Audio) => {
   const player = document.getElementById('player') as HTMLAudioElement
-  player.src = option.url
+  // player.src = option.url
+  player.src = caching(option.url)
   player.currentTime = option.offset
   if (option.name) {
     message.info('正在播放：' + option.name)

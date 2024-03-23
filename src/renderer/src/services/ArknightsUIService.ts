@@ -4,6 +4,7 @@ import GlobalFetch from 'alova/GlobalFetch'
 import VueHook from 'alova/vue'
 import characterList from '../data/arknightsCharacterList.json'
 import { CharaData } from '../types/CharaData'
+import { caching } from './CacheService'
 
 type CharaNameAndKey = {
   name: string
@@ -44,7 +45,8 @@ export const getCharacterVoice = async (
     return res.voiceList.map((v) => ({
       title: v.title,
       detail: v.text.find((t) => t.language === dialogLang)?.content,
-      audio: `${voiceBase}/${v.filename.toLowerCase()}`
+      // audio: `${voiceBase}/${v.filename.toLowerCase()}`
+      audio: caching(`${voiceBase}/${v.filename.toLowerCase()}`)
     }))
   })
 }

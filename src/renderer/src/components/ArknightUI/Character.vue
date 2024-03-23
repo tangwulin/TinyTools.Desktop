@@ -2,6 +2,7 @@
 import { asyncComputed } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
 import { getCharacterInfo } from '../../services/ArknightsUIService'
+import { caching } from '../../services/CacheService'
 import { useArknightsUIStore } from '../../stores/arknightsUI'
 
 const arknightsUIStore = useArknightsUIStore()
@@ -10,7 +11,7 @@ const { selectedCharacterKey, selectedCharacterImageIndex } = storeToRefs(arknig
 
 const characterImage = asyncComputed(async () => {
   const res = await getCharacterInfo(selectedCharacterKey.value)
-  return res.images[selectedCharacterImageIndex.value]
+  return caching(res.images[selectedCharacterImageIndex.value])
 })
 
 defineEmits<{

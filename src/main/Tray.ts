@@ -1,14 +1,14 @@
-import { app, BrowserWindow, Menu, Tray } from 'electron'
+import { app, Menu, Tray } from 'electron'
 import { join } from 'path'
-import { createMainWindow } from './Window'
+import { showOrCreateMainWindow } from './Window'
 
-export const createTray = (tray: Tray | null, window: BrowserWindow | null) => {
-  tray = new Tray(join(__dirname, '../../resources/icon.png'))
+export const createTray = () => {
+  const tray = new Tray(join(__dirname, '../../resources/icon.png'))
   const contextMenu = Menu.buildFromTemplate([
     {
       type: 'normal',
       label: '打开主界面',
-      click: () => (window ? window.show() : createMainWindow(window))
+      click: () => showOrCreateMainWindow
     },
     {
       type: 'normal',
@@ -19,5 +19,5 @@ export const createTray = (tray: Tray | null, window: BrowserWindow | null) => {
   tray.setToolTip('TinyTools.Desktop')
   tray.setContextMenu(contextMenu)
 
-  tray.on('click', () => (window ? window.show() : createMainWindow(window)))
+  tray.on('click', () => showOrCreateMainWindow())
 }

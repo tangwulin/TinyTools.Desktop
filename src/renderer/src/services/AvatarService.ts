@@ -3,6 +3,7 @@ import avatarConfig from '../data/avatars.json'
 import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'
+import { caching } from './CacheService'
 
 const genshin = avatarConfig['genshin']
 const arknights = avatarConfig['arknights']
@@ -112,5 +113,5 @@ export const getAvatar = (
       urls = male.concat(female)
       break
   }
-  return urls[selectAvatar(sn, urls.length)]?.url ?? null
+  return caching(urls[selectAvatar(sn, urls.length)]?.url) ?? null
 }

@@ -1,27 +1,18 @@
 import { electronApp, optimizer } from '@electron-toolkit/utils'
 import * as Sentry from '@sentry/electron/main'
 import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-installer'
-import { app, BrowserWindow, protocol, Tray } from 'electron'
+import { app, BrowserWindow, protocol } from 'electron'
+import path from 'path'
 // import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 // import { NsisUpdater } from 'electron-updater'
-import path from 'path'
 import { registerIPC } from './IPCHelper'
+import logger from './Logger'
 import { launchCacheService } from './services/CacheService'
-import { launchResourceService } from './services/ResourceService'
 import { createTray } from './Tray'
 import { launchUpdater } from './UpdaterHelper'
 import { launchDownloader } from './utils/Downloader'
 import { SingleInstanceCheck } from './utils/SingleInstanceCheck'
-import { createMainWindow } from './Window'
-import { logger } from './Logger'
-
-let tray = null as Tray | null
-let mainWindow = null as BrowserWindow | null
-let dockWindow = null as BrowserWindow | null
-
-tray = null
-mainWindow = null
-dockWindow = null
+import { showOrCreateMainWindow } from './Window'
 
 if (import.meta.env.PROD) {
   Sentry.init({
@@ -35,6 +26,13 @@ if (import.meta.env.PROD) {
 //   })
 // }
 
+protocol.registerSchemesAsPrivileged([
+  {
+    scheme: 'cache',
+    privileges: { standard: true, secure: true, supportFetchAPI: true }
+  }
+])
+
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   // Set app user model id for windows
@@ -43,7 +41,7 @@ app.whenReady().then(() => {
   if (import.meta.env.DEV) {
     // Install Vue Devtools
     installExtension(VUEJS_DEVTOOLS)
-      .then((ext) => logger.debug(`Added Extension: ${ext}`))
+      .then((ext) => logger.debug(`Added Extension: ${ext.name}`))
       .catch((err) => logger.error('An error occurred: ', err))
   }
 
@@ -52,7 +50,7 @@ app.whenReady().then(() => {
     callback(decodeURI(path.normalize(url)))
   })
 
-  SingleInstanceCheck(mainWindow)
+  SingleInstanceCheck()
 
   // Default open or close DevTools by F12 in development
   // and ignore CommandOrControl + R in production.
@@ -61,18 +59,17 @@ app.whenReady().then(() => {
     optimizer.watchWindowShortcuts(window)
   })
 
-  createMainWindow(mainWindow)
-  createTray(tray, mainWindow)
-  registerIPC(dockWindow)
+  showOrCreateMainWindow()
+  createTray()
+  registerIPC()
   launchDownloader()
   launchCacheService()
-  launchUpdater(mainWindow, logger)
-  launchResourceService()
+  launchUpdater()
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (BrowserWindow.getAllWindows().length === 0) createMainWindow(mainWindow)
+    if (BrowserWindow.getAllWindows().length === 0) showOrCreateMainWindow()
   })
 })
 

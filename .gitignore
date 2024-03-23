@@ -12,3 +12,4 @@ out
 .env.sentry-build-plugin
 /cache/
 visualizer_*.html
+/log/
