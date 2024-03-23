@@ -1,5 +1,6 @@
 import fs from 'fs'
 import Downloader from 'nodejs-file-downloader'
+import logger from '../Logger'
 
 import { exists } from './FSUtil'
 
@@ -42,7 +43,7 @@ class DownloaderManager {
           this.startDownload() // 下载完成后尝试启动新的下载任务
         })
         .catch((error) => {
-          console.error(`Error downloading file: ${error}`)
+          logger.error(`Error downloading file: ${error}`)
           this.runningTasks--
           this.startDownload() // 下载失败时尝试启动新的下载任务
         })
@@ -59,11 +60,11 @@ class DownloaderManager {
       fileName
     })
     try {
-      console.log('Start download', encodeURI(url))
+      logger.info(`Start download ${encodeURI(url)}`)
       await downloader.download()
-      console.log('Download success', url)
+      logger.info(`Download success ${encodeURI(url)}`)
     } catch (e) {
-      console.error('Download failed', e)
+      logger.error(`Download failed ${encodeURI(url)}`)
     }
   }
 }

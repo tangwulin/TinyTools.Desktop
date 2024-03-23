@@ -1,10 +1,9 @@
 import { storeToRefs } from 'pinia'
 import avatarConfig from '../data/avatars.json'
-import { LocalCacheProvider } from '../providers/LocalCacheProvider'
 import { useSettingStore } from '../stores/setting'
 import { Group } from '../types/group'
 import { Person } from '../types/person'
-import { createCache } from './CacheService'
+import { caching } from './CacheService'
 
 const genshin = avatarConfig['genshin']
 const arknights = avatarConfig['arknights']
@@ -12,8 +11,6 @@ const starRail = avatarConfig['starRail']
 const blueArchive = avatarConfig['blueArchive']
 // noinspection SpellCheckingInspection
 const umamusume = avatarConfig['umamusume']
-
-const cache = createCache(new LocalCacheProvider())
 
 function generateHash(input: string) {
   let hash = 0
@@ -28,10 +25,7 @@ function generateHash(input: string) {
  * @param sex number 性别,1:男,2:女
  * @param works number[] 作品
  */
-export const getAvatarUrls: (
-  sex: number,
-  works: number[]
-) => Promise<{ url: string; description: string }[]> = async (sex: number, works: number[]) => {
+export const getAvatarUrls = (sex: number, works: number[]) => {
   let result: {
     url: string
     description: string
@@ -82,17 +76,7 @@ export const getAvatarUrls: (
     default:
       break
   }
-  await Promise.all(
-    result.map(async (item) => {
-      return {
-        url: await cache(item.url),
-        description: item.description
-      }
-    })
-  ).then((res) => {
-    result = res
-  })
-  return result
+  return result.map((item) => ({ url: caching(item.url), description: item.description }))
 }
 
 function selectAvatar(studentId: string, avatarCount: number) {
@@ -103,8 +87,8 @@ function selectAvatar(studentId: string, avatarCount: number) {
 const setting = useSettingStore()
 const { enableFallbackAvatar, avatarWorks } = storeToRefs(setting)
 
-const male = await getAvatarUrls(1, avatarWorks.value)
-const female = await getAvatarUrls(2, avatarWorks.value)
+const male = getAvatarUrls(1, avatarWorks.value)
+const female = getAvatarUrls(2, avatarWorks.value)
 
 export const getAvatar = (
   item: Person | Group | { number: string } | { name: string; id?: number }

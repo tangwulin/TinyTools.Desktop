@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { asyncComputed } from '@vueuse/core'
 import { useDialog, useNotification } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { h, ref } from 'vue'
+import { computed, h, ref } from 'vue'
 import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
 import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
 import { getCharacterKey, getCharacterSupportLanguages } from '../../../services/ArknightsUIService'
@@ -49,12 +48,9 @@ const genders = [
 
 const keyword = ref('')
 const selectedSex = ref(1)
-const selectedAvatar = asyncComputed(
-  () =>
-    getAvatarUrls(selectedSex.value, [2]).then((res) =>
-      res.filter((item) => item.description.includes(keyword.value))
-    ),
-  []
+
+const selectedAvatar = computed(() =>
+  getAvatarUrls(selectedSex.value, [2]).filter((item) => item.description.includes(keyword.value))
 )
 
 const clickHandler = (name: string) => {

@@ -2,7 +2,7 @@
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
 import { KeyboardArrowDownRound as ArrowDownIcon } from '@vicons/material'
 import deepcopy from 'deepcopy'
-import { chunk, debounce, shuffle } from 'lodash-es'
+import { chunk, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
 import { MessageReactive, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
@@ -12,6 +12,7 @@ import videoSrc from '../../assets/video/单抽出金.mp4'
 import SeatTable from '../../components/SeatTable.vue'
 import raffleConfig from '../../data/raffleModes.json'
 import db from '../../db'
+import { caching } from '../../services/CacheService'
 import { getDynamicSeatHistoryList, saveHistory } from '../../services/DBServices/SeatHistories'
 import { useSettingStore } from '../../stores/setting'
 import { Audio } from '../../types/audio'
@@ -415,7 +416,7 @@ const saveAsXlsx = () => {
 
 const play = (option: Audio) => {
   const player = document.getElementById('player') as HTMLAudioElement
-  player.src = option.url
+  player.src = caching(option.url)
   player.currentTime = option.offset
   if (option.name) {
     message.info('正在播放：' + option.name)
@@ -464,21 +465,33 @@ const playFinalBgm = () => {
   play(bgm)
 }
 
-const dragHandler = debounce(
-  () => {
-    db.transaction('rw', db.seatTable, db.seatHistories, async () => {
-      await db.seatTable.bulkPut(deepcopy(seatTable.value))
+// const dragHandler = debounce(
+//   () => {
+//     db.transaction('rw', db.seatTable, db.seatHistories, async () => {
+//       await db.seatTable.bulkPut(deepcopy(seatTable.value))
+//       saveHistory(seatTable.value, '手动更改')
+//     }).catch((err) => {
+//       console.log(err)
+//       message.error('保存失败')
+//     })
+//   },
+//   100,
+//   {
+//     maxWait: 2000
+//   }
+// )
+
+const dragHandler = () => {
+  db.seatTable
+    .bulkPut(deepcopy(seatTable.value))
+    .then(() => {
       saveHistory(seatTable.value, '手动更改')
-    }).catch((err) => {
+    })
+    .catch((err) => {
       console.log(err)
       message.error('保存失败')
     })
-  },
-  100,
-  {
-    maxWait: 2000
-  }
-)
+}
 </script>
 
 <template>

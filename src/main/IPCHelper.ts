@@ -2,6 +2,7 @@ import { is } from '@electron-toolkit/utils'
 import { app, ipcMain } from 'electron'
 import { join } from 'path'
 import { getFileIconByCache } from './utils/FSUtil'
+import { closeDockWindow, showOrCreateDockWindow } from './Window'
 
 export function registerIPC() {
   ipcMain.on('relaunchApp', () => {
@@ -20,4 +21,10 @@ export function registerIPC() {
       return join(__dirname, '../renderer/')
     }
   })
+
+  ipcMain.on('closeDockWindow', () => {
+    closeDockWindow()
+  })
+
+  ipcMain.on('openDockWindow', () => showOrCreateDockWindow())
 }
