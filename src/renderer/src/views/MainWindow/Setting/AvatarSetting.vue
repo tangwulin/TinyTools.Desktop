@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { asyncComputed } from '@vueuse/core'
 import { useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import EntityItem from '../../../components/EntityItem.vue'
 import { getAvatarUrls } from '../../../services/AvatarService'
 import { useSettingStore } from '../../../stores/setting'
@@ -27,7 +26,8 @@ const genders = [
 
 const selectedSex = ref(1)
 const value = ref('')
-const selectedAvatar = asyncComputed(() => getAvatarUrls(selectedSex.value, avatarWorks.value), [])
+
+const selectedAvatar = computed(() => getAvatarUrls(selectedSex.value, avatarWorks.value).filter((item) => item.description.includes(value.value)))
 
 const writeClipboard = (x) => {
   navigator.clipboard
@@ -39,11 +39,6 @@ const writeClipboard = (x) => {
       message.error('请授予剪贴板权限！')
     })
 }
-watch(value, async () => {
-  selectedAvatar.value = await getAvatarUrls(selectedSex.value, avatarWorks.value).then((res) =>
-    res.filter((item) => item.description.includes(value.value))
-  )
-})
 </script>
 
 <template>
