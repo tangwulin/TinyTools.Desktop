@@ -76,7 +76,7 @@ export const getAvatarUrls = (sex: number, works: number[]) => {
     default:
       break
   }
-  return result
+  return result.map((item) => ({ url: caching(item.url), description: item.description }))
 }
 
 function selectAvatar(studentId: string, avatarCount: number) {
@@ -113,5 +113,5 @@ export const getAvatar = (
       urls = male.concat(female)
       break
   }
-  return caching(urls[selectAvatar(sn, urls.length)]?.url) ?? null
+  return urls[selectAvatar(sn, urls.length)]?.url ?? null
 }
