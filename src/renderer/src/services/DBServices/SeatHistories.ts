@@ -35,6 +35,7 @@ export const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => 
       })
       .catch((e) => {
         console.error(e)
+        throw e
       })
   } else {
     db.seatHistories

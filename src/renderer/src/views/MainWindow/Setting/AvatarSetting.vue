@@ -27,7 +27,11 @@ const genders = [
 const selectedSex = ref(1)
 const value = ref('')
 
-const selectedAvatar = computed(() => getAvatarUrls(selectedSex.value, avatarWorks.value).filter((item) => item.description.includes(value.value)))
+const selectedAvatar = computed(() =>
+  getAvatarUrls(selectedSex.value, avatarWorks.value).filter((item) =>
+    item.description.includes(value.value)
+  )
+)
 
 const writeClipboard = (x) => {
   navigator.clipboard

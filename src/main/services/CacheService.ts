@@ -17,11 +17,17 @@ export class CacheService {
 
   getPath(url: string) {
     const { host, pathname, searchParams } = new URL(url)
-    const paths = decodeURI(pathname).split('/')
-    const lastIndex = paths.length - 1
-    paths[lastIndex] = searchParams.toString() + '&' + paths[lastIndex]
-    const filename = host + paths.join('\\')
-    return path.join(this.cachePath, filename)
+    // const paths = decodeURI(pathname).split('/')
+    // const lastIndex = paths.length - 1
+    // paths[lastIndex] = searchParams.toString() + '&' + paths[lastIndex]
+    // const filename = host + paths.join('\\')
+    // return path.join(this.cachePath, filename)
+    return path.join(
+      this.cachePath,
+      host,
+      decodeURI(pathname).replace(' ', '#') +
+        (searchParams.toString() ? '#' + searchParams.toString() : '')
+    )
   }
 
   async getCache(key: string) {
@@ -46,12 +52,13 @@ export class CacheService {
 
 export function launchCacheService() {
   const cacheService = new CacheService(
-    path.join(app.getPath('temp'), 'cache'),
+    path.join(app.getPath('temp'), 'tinytools-cache'),
     10 * 1024 * 1024 * 1024
   ) // 10GB
 
   protocol.handle('cache', async (request) => {
-    const url = new URL(request.url).searchParams.get('url') ?? ''
+    const url = decodeURIComponent(new URL(request.url).searchParams.get('url') ?? '')
+    if (!url) return new Response(null, { status: 400 })
     const cache = await cacheService.getCache(url)
     return new Response(null, { status: 302, headers: { location: encodeURI(cache ?? url) } })
   })
