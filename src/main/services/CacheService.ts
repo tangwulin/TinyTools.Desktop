@@ -56,10 +56,18 @@ export function launchCacheService() {
     10 * 1024 * 1024 * 1024
   ) // 10GB
 
-  protocol.handle('cache', async (request) => {
+  protocol.registerHttpProtocol('cache', (request, callback) => {
     const url = decodeURIComponent(new URL(request.url).searchParams.get('url') ?? '')
-    if (!url) return new Response(null, { status: 400 })
-    const cache = await cacheService.getCache(url)
-    return new Response(null, { status: 302, headers: { location: encodeURI(cache ?? url) } })
+    if (!url) return callback({ statusCode: 400 })
+    cacheService.getCache(url).then((cache) => {
+      callback({ statusCode: 302, headers: { location: cache ?? url } })
+    })
   })
+
+  // protocol.handle('cache', async (request) => {
+  //   const url = decodeURIComponent(new URL(request.url).searchParams.get('url') ?? '')
+  //   if (!url) return new Response(null, { status: 400 })
+  //   const cache = await cacheService.getCache(url)
+  //   return new Response(null, { status: 302, headers: { location: encodeURI(cache ?? url) } })
+  // })
 }
