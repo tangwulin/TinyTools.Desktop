@@ -7,6 +7,7 @@ import { visualizer } from 'rollup-plugin-visualizer'
 import AutoImport from 'unplugin-auto-import/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import Components from 'unplugin-vue-components/vite'
+import Inspect from 'vite-plugin-inspect'
 
 const revision = execSync('git rev-parse HEAD').toString().trim().substring(0, 7)
 const githubSHA = execSync('git rev-parse HEAD').toString().trim().toString()
@@ -17,7 +18,8 @@ export default ({ mode }) => {
   return defineConfig({
     main: {
       build: {
-        sourcemap: true
+        sourcemap: true,
+        target: 'node16'
       },
       plugins: [
         visualizer({ filename: 'visualizer_main.html', template: 'treemap' }),
@@ -33,7 +35,8 @@ export default ({ mode }) => {
 
     preload: {
       build: {
-        sourcemap: true
+        sourcemap: true,
+        target: 'node16'
       },
       plugins: [
         visualizer({ filename: 'visualizer_preload.html', template: 'treemap' }),
@@ -54,6 +57,7 @@ export default ({ mode }) => {
         }
       },
       plugins: [
+        Inspect(),
         visualizer({ filename: 'visualizer_renderer.html', template: 'treemap' }),
         vue(),
         AutoImport({
@@ -77,7 +81,8 @@ export default ({ mode }) => {
       assetsInclude: ['**/*.xlsx'],
       build: {
         chunkSizeWarningLimit: 1500,
-        sourcemap: true
+        sourcemap: true,
+        target: 'es2022'
       },
       define: {
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),

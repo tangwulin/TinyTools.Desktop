@@ -6,6 +6,7 @@
     "src/preload/**/*"
   ],
   "compilerOptions": {
+    "target": "ES2022",
     "composite": true,
     "types": [
       "electron-vite/node"
