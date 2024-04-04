@@ -30,10 +30,11 @@ import {
   reGenSeatTable,
   updateSeatTable
 } from '../../utils/seatUtil'
+import genderPreferences from '../../data/genderPreference.json'
 
 const setting = useSettingStore()
 
-const { enableBgm, enableFinalBgm, enableFadein, fadeinTime, bgms, finalBgms } =
+const { enableBgm, enableFinalBgm, enableFadein, fadeinTime, bgms, finalBgms, genderPreference } =
   storeToRefs(setting)
 
 const bgmList = shuffle(toRaw(bgms.value))
@@ -246,11 +247,15 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
       message.error('尚未从V3移植')
       break
     case 3:
-      result = calcNewSeatBySideToMiddleAlgorithm(seatTable.value)
+      result = calcNewSeatBySideToMiddleAlgorithm(seatTable.value, persons.value, {
+        genderPreference: genderPreference.value
+      })
       saveHistory(result, '两边到中间')
       break
     case 4:
       result = calcNewSeatByCorrectionAlgorithm(
+        persons.value,
+        { genderPreference: genderPreference.value },
         seatTable.value,
         seatHistories.value.at(-2)?.seatTable,
         seatHistories.value.at(-3)?.seatTable
@@ -529,6 +534,18 @@ const dragHandler = () => {
             </n-p>
           </template>
           <span>{{ raffleModes.find((item) => item.value === lotteryMode)?.description }}</span>
+        </n-popover>
+        <n-popover>
+          <template #trigger>
+            <n-p depth="3"
+              >性别偏好：{{
+                genderPreferences.find((item) => item.key === genderPreference)?.label
+              }}</n-p
+            >
+          </template>
+          <span>{{
+            genderPreferences.find((item) => item.key === genderPreference)?.description
+          }}</span>
         </n-popover>
       </n-space>
       <n-button-group class="mt-2">

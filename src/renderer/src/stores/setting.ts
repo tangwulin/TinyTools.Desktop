@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
+import { GenderPreference } from '../enum/GenderPreference'
 import { Audio } from '../types/audio'
 
 export const useSettingStore = defineStore(
@@ -22,6 +23,7 @@ export const useSettingStore = defineStore(
     const enableOldToolBar = ref<boolean>(false)
 
     const lotteryMode = ref<number>(4)
+    const genderPreference = ref<GenderPreference>(GenderPreference.None)
 
     const isFirstSetup = ref<boolean>(true)
 
@@ -41,6 +43,7 @@ export const useSettingStore = defineStore(
       enableDevelopFeature,
       enableOldToolBar,
       lotteryMode,
+      genderPreference,
       isFirstSetup,
       enableAvatar,
       enableFallbackAvatar,

@@ -1,0 +1,17 @@
+[
+  {
+    "key": "none",
+    "label": "顺其自然",
+    "description": "一桌人可能性别一样，也可能不一样。"
+  },
+  {
+    "key": "together",
+    "label": "男女搭配",
+    "description": "男女一起坐。"
+  },
+  {
+    "key": "apart",
+    "label": "男女分桌",
+    "description": "男女分开坐。"
+  }
+]
