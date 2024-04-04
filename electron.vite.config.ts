@@ -27,7 +27,8 @@ export default ({ mode }) => {
         mode === 'production' || mode === 'prod'
           ? sentryVitePlugin({
               org: 'aurora-studio',
-              project: 'electron'
+              project: 'electron',
+              authToken: process.env.SENTRY_AUTH_TOKEN
             })
           : undefined
       ]
@@ -44,7 +45,8 @@ export default ({ mode }) => {
         mode === 'production' || mode === 'prod'
           ? sentryVitePlugin({
               org: 'aurora-studio',
-              project: 'electron'
+              project: 'electron',
+              authToken: process.env.SENTRY_AUTH_TOKEN
             })
           : undefined
       ]
@@ -74,7 +76,8 @@ export default ({ mode }) => {
         mode === 'production' || mode === 'prod'
           ? sentryVitePlugin({
               org: 'aurora-studio',
-              project: 'electron'
+              project: 'electron',
+              authToken: process.env.SENTRY_AUTH_TOKEN
             })
           : undefined
       ],
