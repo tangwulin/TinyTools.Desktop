@@ -1,3 +1,5 @@
+@import './font_1720959_vm243hswiya.css';
+
 @font-face {
   font-family: 'Bender';
   src: url('../fonts/Bender.otf');
@@ -30,16 +32,3 @@
   src: url('../fonts/NovecentoSansWide-Normal.otf');
   font-weight: 300;
 }
-
-/*@font-face {
-  font-family: 'SourceHanSans';
-  src: url('../fonts/SourceHanSansCN-Regular.otf');
-}
-
-@font-face {
-  font-family: 'SourceHanSans';
-  src: url('../fonts/SourceHanSansCN-Light.otf');
-  font-weight: 300;
-}*/
-
-@import './font_1720959_vm243hswiya.css';
