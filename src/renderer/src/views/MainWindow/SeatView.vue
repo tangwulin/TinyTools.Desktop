@@ -240,7 +240,9 @@ const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', t
   pauseBgm()
   switch (lotteryMode.value) {
     case 1:
-      result = calcNewSeatByRealRandom(seatTable.value)
+      result = calcNewSeatByRealRandom(seatTable.value, persons.value, {
+        genderPreference: genderPreference.value
+      })
       saveHistory(result, '平等')
       break
     case 2:
@@ -540,8 +542,8 @@ const dragHandler = () => {
             <n-p depth="3"
               >性别偏好：{{
                 genderPreferences.find((item) => item.key === genderPreference)?.label
-              }}</n-p
-            >
+              }}
+            </n-p>
           </template>
           <span>{{
             genderPreferences.find((item) => item.key === genderPreference)?.description
