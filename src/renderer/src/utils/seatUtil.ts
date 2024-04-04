@@ -285,27 +285,44 @@ function calcSeatByWeight(
       moveSomeoneToRemainStudents2(bestStudent1)
     }
 
-    do {
-      const bestStudent = maxBy(remainStudents, (o) => o.weightSeries[i])
-      if (!bestStudent) break
-      if (
-        judgeGenderPreference(
-          options.genderPreference,
-          flag ? bestStudent1.gender : bestStudent2.gender,
-          bestStudent.gender
-        )
-      ) {
-        result[i + (flag ? 1 : 0)] = allSeat.find(
-          (item) => item.personId === bestStudent.ownerId
-        ) as Seat
-        removeSomeoneFromRemainStudents(bestStudent)
-        beforeNext()
-        break
-      } else {
-        //如果性别不符合要求，那么就把这个人先剔除出去
-        moveSomeoneToRemainStudents2(bestStudent)
-      }
-    } while (result[i + (flag ? 1 : 0)] === null)
+    //在剩下的符合性别偏好的人中找到最适合的人
+    const currentGender = flag ? bestStudent1.gender : bestStudent2.gender
+    const bestStudent = maxBy(
+      remainStudents.filter((item) =>
+        judgeGenderPreference(options.genderPreference, item.gender, currentGender)
+      ),
+      (o) => o.weightSeries[i]
+    )
+    if (bestStudent) {
+      result[i + (flag ? 1 : 0)] = allSeat.find(
+        (item) => item.personId === bestStudent.ownerId
+      ) as Seat
+      removeSomeoneFromRemainStudents(bestStudent)
+      beforeNext()
+      continue
+    }
+
+    // do {
+    //   const bestStudent = maxBy(remainStudents, (o) => o.weightSeries[i])
+    //   if (!bestStudent) break
+    //   if (
+    //     judgeGenderPreference(
+    //       options.genderPreference,
+    //       flag ? bestStudent1.gender : bestStudent2.gender,
+    //       bestStudent.gender
+    //     )
+    //   ) {
+    //     result[i + (flag ? 1 : 0)] = allSeat.find(
+    //       (item) => item.personId === bestStudent.ownerId
+    //     ) as Seat
+    //     removeSomeoneFromRemainStudents(bestStudent)
+    //     beforeNext()
+    //     break
+    //   } else {
+    //     //如果性别不符合要求，那么就把这个人先剔除出去
+    //     moveSomeoneToRemainStudents2(bestStudent)
+    //   }
+    // } while (result[i + (flag ? 1 : 0)] === null)
 
     //如果还是没有找到符合要求的人，那么就取remainStudents2的第一个
     if (result[i + (flag ? 1 : 0)] === null) {
@@ -517,14 +534,22 @@ export const updateSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
   return result.map((item, index) => ({ ...item, locationIndex: index }) as SeatTableItem)
 }
 
-//TODO:让真随机计算座位的实现支持权重等特性
-export const calcNewSeatByRealRandom = (seatTable: SeatTableItem[]) => {
-  const newSeats = shuffle(getSeatsFromSeatTable(seatTable)).map((item, index) => {
-    item.locationIndex = index
-    return item
+export const calcNewSeatByRealRandom = (
+  seatTable: SeatTableItem[],
+  personList: Person[],
+  options: {
+    genderPreference: GenderPreference
+  }
+) => {
+  const originalSeats = getSeatsFromSeatTable(seatTable)
+  const seatsWeights = originalSeats.map(() => {
+    return new Array(originalSeats.length).fill(0).map(() => Math.random())
   })
 
-  return updateSeatTable(seatTable, newSeats)
+  const weightMatches = matchPersonAndWeights(seatsWeights, originalSeats, personList)
+  const result = calcSeatByWeight(weightMatches, originalSeats, options)
+
+  return updateSeatTable(seatTable, result)
 }
 
 export const calcNewSeatByAssignMenAndWomenTogetherAlgorithm = (
