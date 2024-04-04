@@ -213,7 +213,9 @@ const raffleSeatFeint = (result: SeatTableItem[], times: number) => {
   let i = 1
   const timer = setInterval(() => {
     if (i < times) {
-      seatTable.value = calcNewSeatByRealRandom(seatTable.value)
+      seatTable.value = calcNewSeatByRealRandom(seatTable.value, persons.value, {
+        genderPreference: genderPreference.value
+      })
       i++
     } else {
       pauseBgm()
