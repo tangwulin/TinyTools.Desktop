@@ -52,7 +52,7 @@ const raffleModes = config['raffleModes']
         </n-space>
       </n-radio-group>
       <n-p depth="3">
-        {{ genderPreferenceConfig.find((item) => item.label === genderPreference)?.description }}
+        {{ genderPreferenceConfig.find((item) => item.key === genderPreference)?.description }}
       </n-p>
     </n-space>
   </n-space>
