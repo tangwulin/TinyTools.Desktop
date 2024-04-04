@@ -18,7 +18,7 @@
     {
       "name": "Tunak Tunak Tun",
       "url": "https://music.163.com/song/media/outer/url?id=1303214808.mp3",
-      "offset": 3
+      "offset": 29.8
     },
     {
       "name": "阳光彩虹小白鸡",
@@ -34,6 +34,11 @@
       "name": "Usagi Flap",
       "url": "https://music.163.com/song/media/outer/url?id=2059973927.mp3",
       "offset": 0
+    },
+    {
+      "name": "Connected Sky",
+      "url": "https://music.163.com/song/media/outer/url?id=2093257379.mp3",
+      "offset": 13.5
     }
   ],
   "finalBgm": [
