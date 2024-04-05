@@ -46,10 +46,29 @@ export function showOrCreateMainWindow(): void {
     return { action: 'deny' }
   })
 
+  let times = 1
+
+  function loadDev() {
+    mainWindow!
+      .loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#/')
+      .then(() => console.log('loadURL'))
+      .catch(() => {
+        if (times > 5) {
+          console.log('loadURL failed, try to reload the main window')
+          closeMainWindow()
+          showOrCreateMainWindow()
+        } else {
+          console.log(`retry loadURL:${times}`)
+          times++
+          loadDev()
+        }
+      })
+  }
+
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#/')
+    loadDev()
   } else {
     mainWindow.loadFile(join(__dirname, '../renderer/index.html'))
   }
