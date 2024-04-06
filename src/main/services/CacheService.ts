@@ -63,7 +63,6 @@ export function launchCacheService() {
       callback({ statusCode: 302, headers: { location: cache ?? url } })
     })
   })
-
   // protocol.handle('cache', async (request) => {
   //   const url = decodeURIComponent(new URL(request.url).searchParams.get('url') ?? '')
   //   if (!url) return new Response(null, { status: 400 })

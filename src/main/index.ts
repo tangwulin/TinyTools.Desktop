@@ -1,8 +1,8 @@
 import { electronApp, optimizer } from '@electron-toolkit/utils'
 import * as Sentry from '@sentry/electron/main'
 import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-installer'
-import { app, BrowserWindow, protocol } from 'electron'
-import path from 'path'
+import { app, BrowserWindow } from 'electron'
+import { registerCustomProtocol, registerPrivateProtocol } from './CustomProtocol'
 // import { createGiteeUpdaterOptions } from './gitee-updater-ts'
 // import { NsisUpdater } from 'electron-updater'
 import { registerIPC } from './IPCHelper'
@@ -25,13 +25,7 @@ if (import.meta.env.PROD) {
 //     get: () => true
 //   })
 // }
-
-protocol.registerSchemesAsPrivileged([
-  {
-    scheme: 'cache',
-    privileges: { standard: true, secure: true, supportFetchAPI: true }
-  }
-])
+registerPrivateProtocol()
 
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
@@ -45,11 +39,7 @@ app.whenReady().then(() => {
       .catch((err) => logger.error('An error occurred: ', err))
   }
 
-  protocol.registerFileProtocol('atom', (request, callback) => {
-    const url = request.url.substring(7)
-    callback(decodeURI(path.normalize(url)))
-  })
-
+  registerCustomProtocol()
   SingleInstanceCheck()
 
   // Default open or close DevTools by F12 in development
