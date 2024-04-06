@@ -1,5 +1,71 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { Stats } from 'node:fs'
+import { ref } from 'vue'
+import type { ElectronAPI } from '@electron-toolkit/preload'
 
-<template></template>
+let isElectron: boolean
+const electron = window.electron as ElectronAPI
 
-<style scoped></style>
+try {
+  isElectron = !!window.electron
+} catch (e) {
+  isElectron = false
+}
+
+const list = ref<
+  {
+    name: string
+    path: string
+    stats: Stats
+    thumbnail: string
+  }[]
+>([])
+const getFileList = async () => {
+  if (!isElectron) {
+    console.error('Not in electron')
+    return
+  }
+  electron.ipcRenderer
+    .invoke('getFileList', ['D:\\Users\\34986\\OneDrive - tangwulin\\桌面'])
+    .then(async (res) => {
+      list.value = res.map((item) => {
+        return {
+          ...item,
+          thumbnail: 'filethumbnail://' + item.path
+        }
+      })
+    })
+}
+getFileList()
+</script>
+
+<template>
+  <n-scrollbar style="height: calc(100vh - 1rem)">
+    <div class="grid grid-cols-6">
+      <div
+        v-for="file in list"
+        :key="file.name"
+        class="file-item flex flex-col"
+        style="aspect-ratio: 1"
+      >
+        <img :src="file.thumbnail" :alt="file.name" class="file-thumbnail" loading="lazy" />
+        <n-ellipsis
+          style="font-size: 0.5rem; margin: 0.25rem"
+          expand-trigger="click"
+          line-clamp="1"
+          :tooltip="false"
+        >
+          {{ file.name }}
+        </n-ellipsis>
+      </div>
+    </div>
+  </n-scrollbar>
+</template>
+
+<style scoped>
+.file-thumbnail {
+  object-fit: scale-down;
+  aspect-ratio: 1;
+  padding: 0.5rem;
+}
+</style>
