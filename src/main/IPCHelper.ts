@@ -1,7 +1,7 @@
 import { is } from '@electron-toolkit/utils'
 import { app, ipcMain } from 'electron'
 import { join } from 'path'
-import { getFileIconByCache } from './utils/FSUtil'
+import { getFileThumbnailByCache, getFilesAndFoldersInDir } from './utils/FSUtil'
 import { closeDockWindow, showOrCreateDockWindow } from './Window'
 
 export function registerIPC() {
@@ -11,7 +11,7 @@ export function registerIPC() {
   })
 
   ipcMain.handle('getThumbnail', async (_, ...args) => {
-    return getFileIconByCache(args[0])
+    return getFileThumbnailByCache(args[0])
   })
 
   ipcMain.handle('getRendererPath', () => {
@@ -27,4 +27,8 @@ export function registerIPC() {
   })
 
   ipcMain.on('openDockWindow', () => showOrCreateDockWindow())
+
+  ipcMain.handle('getFileList', async (_, [path]) => {
+    return getFilesAndFoldersInDir(path)
+  })
 }
