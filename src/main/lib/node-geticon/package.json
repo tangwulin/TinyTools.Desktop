@@ -1,17 +1,43 @@
 {
   "name": "node-geticon",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "install": "cmake-js compile",
-    "build-dev": "cmake-js build -D"
+  "description": "Get associated file icon",
+  "version": "0.1.0",
+  "author": "lightwing,tangwulin",
+  "bugs": {
+    "url": "https://github.com/tangwulin/extract-file-icon/issues"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "homepage": "https://github.com/tangwulin/extract-file-icon",
+  "keywords": [
+    "file",
+    "icon",
+    "windows",
+    "extract"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tangwulin/extract-file-icon.git"
+  },
+  "scripts": {
+    "install": "npm run rebuild",
+    "rebuild": "node-gyp rebuild",
+    "build": "tsc -p .",
+    "watch": "tsc --watch -p .",
+    "prepublishOnly": "npm run build && npm run rebuild"
+  },
   "dependencies": {
-    "cmake-js": "^7.3.0",
     "node-addon-api": "^8.0.0"
-  }
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.95",
+    "eslint": "^9.0.0",
+    "node-gyp": "^9.4.0",
+    "typescript": "5.4.4"
+  },
+  "files": [
+    "lib/",
+    "dist/",
+    "binding.gyp"
+  ]
 }

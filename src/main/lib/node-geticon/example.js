@@ -3,7 +3,7 @@
     geticon.getThumbnail(path: String, mime: String): ArrayBuffer
 */
 
-const geticon = require('./index');
+const geticon = require('./dist/index')
 const fs = require('node:fs');
 geticon.init();
 let result = geticon.getThumbnail("I:\\node-geticon-example\\你好.pptx", "image/png")
