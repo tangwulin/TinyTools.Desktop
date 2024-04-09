@@ -1,7 +1,7 @@
-import geticon from 'node-geticon'
+import getIcon from 'node-geticon'
 import logger from '../Logger'
 ;(() => {
-  geticon.init()
+  getIcon.init(false)
   logger.info('geticon init')
 })()
 
@@ -12,7 +12,7 @@ export const getThumbnail = async (
 ): Promise<Buffer> => {
   return new Promise((resolve, reject) => {
     try {
-      const iconBuffer = Buffer.from(geticon.getThumbnail(filePath, format))
+      const iconBuffer = getIcon.getThumbnail(filePath, format)
       if (iconBuffer.length === 0) {
         reject('Failed to get thumbnail')
       }
