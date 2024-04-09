@@ -13,7 +13,7 @@ files:
   - '!scripts/*'
   - '!visualizer_*.html'
   - '!logo.png'
-  - '!postcss.config.ts'
+  - '!postcss.config.js'
   - '!tailwind.config.ts'
 asarUnpack:
   - resources/**
