@@ -54,14 +54,15 @@ export function showOrCreateMainWindow(): void {
   function loadDev() {
     mainWindow!
       .loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#/')
-      .then(() => console.log('loadURL'))
+      .then(() => logger.info('main window loaded'))
       .catch(() => {
         if (times > 5) {
-          console.log('loadURL failed, try to reload the main window')
+          logger.error('loadURL failed, try to reload the main window')
           closeMainWindow()
           showOrCreateMainWindow()
         } else {
-          console.log(`retry loadURL:${times}`)
+          // console.log(`retry loadURL:${times}`)
+          logger.error(`retry load main window:${times}`)
           times++
           loadDev()
         }
@@ -134,14 +135,16 @@ export function showOrCreateDockWindow() {
   function loadDev() {
     dockWindow!
       .loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#/dock')
-      .then(() => console.log('dock window loaded'))
+      .then(() => logger.info('dock window loaded'))
       .catch(() => {
         if (times > 5) {
-          console.log('loadURL failed, try to reload the dock window')
+          // console.log('loadURL failed, try to reload the dock window')
+          logger.error('loadURL failed, try to reload the dock window')
           closeDockWindow()
           showOrCreateDockWindow()
         } else {
-          console.log(`retry load dock window:${times}`)
+          // console.log(`retry load dock window:${times}`)
+          logger.error(`retry load dock window:${times}`)
           times++
           loadDev()
         }
