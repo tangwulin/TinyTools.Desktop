@@ -29,7 +29,7 @@ const delHandler = (x: SeatHistory) => {
 <template>
   <n-list>
     <n-scrollbar style="max-height: 100%">
-      <n-list-item v-for="(item, index) in history" :key="item.timestamp">
+      <n-list-item v-for="item in history" :key="item.timestamp">
         <n-popover
           id="popover"
           placement="left"
@@ -54,26 +54,8 @@ const delHandler = (x: SeatHistory) => {
           </div>
         </n-popover>
         <template #suffix>
-          <n-popconfirm
-            :negative-text="'取消'"
-            :positive-text="'确认'"
-            @positive-click="rollbackHandler(item)"
-          >
-            <template #trigger>
-              <n-button :disabled="index === 0" type="warning"> 回滚到此处</n-button>
-            </template>
-            确定要回滚到此处吗？
-          </n-popconfirm>
-          <n-popconfirm
-            :negative-text="'取消'"
-            :positive-text="'确认'"
-            @positive-click="delHandler(item)"
-          >
-            <template #trigger>
-              <n-button :disabled="index === 0" type="error"> 删除该记录</n-button>
-            </template>
-            确定要删除该记录吗？
-          </n-popconfirm>
+          <n-button type="warning" @click="rollbackHandler(item)"> 回滚到此处</n-button>
+          <n-button type="error" @click="delHandler(item)"> 删除该记录</n-button>
         </template>
       </n-list-item>
     </n-scrollbar>

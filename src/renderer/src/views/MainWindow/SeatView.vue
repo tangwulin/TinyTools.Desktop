@@ -4,12 +4,13 @@ import { KeyboardArrowDownRound as ArrowDownIcon } from '@vicons/material'
 import deepcopy from 'deepcopy'
 import { chunk, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
-import { MessageReactive, useMessage } from 'naive-ui'
+import { MessageReactive, useDialog, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { nextTick, onMounted, onUnmounted, ref, toRaw } from 'vue'
 import * as XLSX from 'xlsx'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import SeatTable from '../../components/SeatTable.vue'
+import genderPreferences from '../../data/genderPreference.json'
 import raffleConfig from '../../data/raffleModes.json'
 import db from '../../db'
 import { caching } from '../../services/CacheService'
@@ -30,9 +31,9 @@ import {
   reGenSeatTable,
   updateSeatTable
 } from '../../utils/seatUtil'
-import genderPreferences from '../../data/genderPreference.json'
 
 const setting = useSettingStore()
+const dialog = useDialog()
 
 const { enableBgm, enableFinalBgm, enableFadein, fadeinTime, bgms, finalBgms, genderPreference } =
   storeToRefs(setting)
@@ -301,10 +302,14 @@ const playVideo = () => {
   nextTick(() => {
     const videoElement = document.querySelector('video')
     if (videoElement) {
-      videoElement.addEventListener('ended', () => {
-        playingVideo.value = false
-        message.success('抽选完成')
-      })
+      videoElement.addEventListener(
+        'ended',
+        () => {
+          playingVideo.value = false
+          message.success('抽选完成')
+        },
+        { once: true }
+      )
     }
   })
 }
@@ -334,17 +339,66 @@ const rollbackHandler = (x: SeatHistory) => {
     message.error('请先等待抽选完成后再进行回滚操作')
     return
   }
-  if (isPreview.value) {
-    exitPreview()
+  dialog.warning({
+    title: '回滚前确',
+    content:
+      `你确定要回滚到${new Date(x.timestamp).toLocaleString()}吗？` +
+      '这会删除这条记录之后的所有记录！',
+    positiveText: '确定',
+    negativeText: '不确定',
+    onPositiveClick: () => {
+      rollback()
+    },
+    onNegativeClick: () => {
+      message.info('已取消回滚')
+    }
+  })
+
+  async function rollback() {
+    if (isPreview.value) {
+      exitPreview()
+    }
+    seatTable.value = x.seatTable
+    await db
+      .transaction('rw', [db.seatTable, db.seatHistories], async () => {
+        await db.seatTable.bulkPut(deepcopy(x.seatTable))
+        await db.seatHistories.where('timestamp').above(x.timestamp).delete()
+      })
+      .then(() => {
+        message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
+      })
+      .catch((err) => {
+        console.error(err)
+        message.error('回滚失败')
+      })
   }
-  seatTable.value = x.seatTable
-  saveHistory(x.seatTable, '回滚而来')
-  message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
 }
 
 const delHandler = (x: SeatHistory) => {
-  db.seatHistories.delete(x.timestamp)
-  message.success('删除成功')
+  dialog.warning({
+    title: '删除前确',
+    content: `你确定要删除${new Date(x.timestamp).toLocaleString()}的记录吗？`,
+    positiveText: '确定',
+    negativeText: '不确定',
+    onPositiveClick: () => {
+      del()
+    },
+    onNegativeClick: () => {
+      message.info('已取消删除')
+    }
+  })
+
+  async function del() {
+    await db.seatHistories
+      .delete(x.timestamp)
+      .then(() => {
+        message.success('删除成功')
+      })
+      .catch((err) => {
+        console.error(err)
+        message.error('删除失败')
+      })
+  }
 }
 
 const saveMethods = [
