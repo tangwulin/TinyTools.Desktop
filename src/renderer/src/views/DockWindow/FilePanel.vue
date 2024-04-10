@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+import type { ElectronAPI } from '@electron-toolkit/preload'
 import { Stats } from 'node:fs'
 import { ref } from 'vue'
-import type { ElectronAPI } from '@electron-toolkit/preload'
 
 let isElectron: boolean
 const electron = window.electron as ElectronAPI
@@ -48,12 +48,12 @@ getFileList()
         class="file-item flex flex-col"
         style="aspect-ratio: 1"
       >
-        <img :src="file.thumbnail" :alt="file.name" class="file-thumbnail" loading="lazy" />
+        <img :alt="file.name" :src="file.thumbnail" class="file-thumbnail" loading="lazy" />
         <n-ellipsis
-          style="font-size: 0.5rem; margin: 0.25rem"
+          :tooltip="false"
           expand-trigger="click"
           line-clamp="1"
-          :tooltip="false"
+          style="font-size: 0.5rem; margin: 0.25rem"
         >
           {{ file.name }}
         </n-ellipsis>

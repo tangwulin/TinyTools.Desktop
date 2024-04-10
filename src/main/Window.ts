@@ -132,6 +132,7 @@ export function showOrCreateDockWindow() {
   })
 
   let times = 1
+
   function loadDev() {
     dockWindow!
       .loadURL(process.env['ELECTRON_RENDERER_URL'] + '/#/dock')

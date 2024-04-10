@@ -2,8 +2,8 @@
 import { storeToRefs } from 'pinia'
 
 import EqualityOrEquity from '../../../assets/images/equality_or_equity.png'
-import config from '../../../data/raffleModes.json'
 import genderPreferenceConfig from '../../../data/genderPreference.json'
+import config from '../../../data/raffleModes.json'
 import { useSettingStore } from '../../../stores/setting'
 
 const setting = useSettingStore()

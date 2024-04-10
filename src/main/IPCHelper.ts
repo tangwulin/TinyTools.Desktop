@@ -1,7 +1,7 @@
 import { is } from '@electron-toolkit/utils'
 import { app, ipcMain } from 'electron'
 import { join } from 'path'
-import { getFileThumbnailByCache, getFilesAndFoldersInDir } from './utils/FSUtil'
+import { getFilesAndFoldersInDir, getFileThumbnailByCache } from './utils/FSUtil'
 import { closeDockWindow, showOrCreateDockWindow } from './Window'
 
 export function registerIPC() {

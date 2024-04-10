@@ -1,10 +1,10 @@
 <script lang="ts" setup>
 import { asyncComputed } from '@vueuse/core'
 import { storeToRefs } from 'pinia'
+import { watch } from 'vue'
 import { getCharacterInfo } from '../../services/ArknightsUIService'
 import { caching } from '../../services/CacheService'
 import { useArknightsUIStore } from '../../stores/arknightsUI'
-import { watch } from 'vue'
 
 const arknightsUIStore = useArknightsUIStore()
 
