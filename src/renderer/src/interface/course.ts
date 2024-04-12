@@ -1,5 +1,5 @@
 export interface CourseTableItem {
-  id?: number
+  order: number
   time: { start: { hour: number; minute: number }; end: { hour: number; minute: number } }
   mon: string
   tue: string

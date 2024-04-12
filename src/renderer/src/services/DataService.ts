@@ -1,7 +1,10 @@
 import deepcopy from 'deepcopy'
+import { storeToRefs } from 'pinia'
+import { toRaw } from 'vue'
 import { dbVersion, schemaVersion, supportedSchemaVersion } from '../config'
 import db from '../db'
-import { schemaVersion1 } from '../interface/schema'
+import { schemaVersion1, schemaVersion2 } from '../interface/schema'
+import { useCourseStore } from '../stores/course'
 import { useSettingStore } from '../stores/setting'
 import { addGroups, getGroupList } from './DBServices/Group'
 import { addPersons, getPersonList } from './DBServices/Person'
@@ -10,6 +13,8 @@ import { addSeatHistories, getRateHistoryList } from './DBServices/RateHistories
 import { getSeatHistoryList } from './DBServices/SeatHistories'
 import { addSeatTables, getSeatTable } from './DBServices/SeatTable'
 
+const courseStore = useCourseStore()
+const { coursesTable } = storeToRefs(courseStore)
 // @ts-ignore:2304
 const version = __APP_VERSION__ as string
 export const getAppData = async () => {
@@ -45,8 +50,9 @@ export const getAppData = async () => {
       enableAvatar: settingsStore.enableAvatar,
       enableFallbackAvatar: settingsStore.enableFallbackAvatar,
       avatarWorks: settingsStore.avatarWorks
-    }
-  }) as schemaVersion1
+    },
+    courses: toRaw(coursesTable.value)
+  }) as schemaVersion2
 }
 export const parseJSON = async (json: string) => {
   let data = null as any
@@ -110,5 +116,18 @@ export async function importData(data: any) {
     await addSeatHistories(data.rateHistories)
   } else {
     throw new Error('数据文件中没有评分历史信息或者评分历史信息格式错误')
+  }
+
+  if (data.courses && Array.isArray(data.courses)) {
+    courseStore.updateCourseTable(data.courses)
+  } else {
+    throw new Error('数据文件中没有课程表信息或者课程表信息格式错误')
+  }
+
+  if (data.config) {
+    const settingsStore = useSettingStore()
+    settingsStore.updateSettings(data.config)
+  } else {
+    throw new Error('数据文件中没有配置信息或者配置信息格式错误')
   }
 }
