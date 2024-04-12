@@ -6,7 +6,7 @@ export const getRateHistoryList = async () => await db.rateHistories.toArray()
 
 export const getRateHistory = async (id: number) => await db.rateHistories.get(id)
 
-export const addSeatHistories = async (rateHistories: RateHistory[]) =>
+export const addRateHistories = async (rateHistories: RateHistory[]) =>
   await db.rateHistories.bulkAdd(rateHistories)
 
 /**

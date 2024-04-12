@@ -9,6 +9,9 @@ export const getDynamicSeatHistoryList = <E>(config?: DynamicListConfig<SeatHist
 
 export const getSeatHistoryList = async () => await db.seatHistories.toArray()
 
+export const addSeatHistories = async (seatHistories: SeatHistory[]) =>
+  await db.seatHistories.bulkAdd(seatHistories)
+
 export const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
   if (type === '手动更改') {
     db.seatHistories

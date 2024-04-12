@@ -9,8 +9,8 @@ import { useSettingStore } from '../stores/setting'
 import { addGroups, getGroupList } from './DBServices/Group'
 import { addPersons, getPersonList } from './DBServices/Person'
 import { addRates, getRateList } from './DBServices/Rate'
-import { addSeatHistories, getRateHistoryList } from './DBServices/RateHistories'
-import { getSeatHistoryList } from './DBServices/SeatHistories'
+import { addRateHistories, getRateHistoryList } from './DBServices/RateHistories'
+import { addSeatHistories, getSeatHistoryList } from './DBServices/SeatHistories'
 import { addSeatTables, getSeatTable } from './DBServices/SeatTable'
 
 const courseStore = useCourseStore()
@@ -34,7 +34,6 @@ export const getAppData = async () => {
     rates: await getRateList(),
     rateHistories: await getRateHistoryList(),
     config: {
-      coloringEdgeSeats: settingsStore.coloringEdgeSeats,
       bgms: settingsStore.bgms,
       finalBgms: settingsStore.finalBgms,
       isBGMInitialized: settingsStore.isBGMInitialized,
@@ -55,7 +54,7 @@ export const getAppData = async () => {
   }) as schemaVersion2
 }
 export const parseJSON = async (json: string) => {
-  let data = null as any
+  let data = null
 
   try {
     data = JSON.parse(json)
@@ -135,7 +134,7 @@ export async function importData(data: schemaVersion2) {
   }
 
   if (data.rateHistories && Array.isArray(data.rateHistories)) {
-    await addSeatHistories(data.rateHistories)
+    await addRateHistories(data.rateHistories)
   } else {
     throw new Error('数据文件中没有评分历史信息或者评分历史信息格式错误')
   }

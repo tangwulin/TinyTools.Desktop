@@ -1,12 +1,13 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import { GenderPreference } from '../enum/GenderPreference'
+import { schemaVersion2 } from '../interface/schema'
 import { Audio } from '../types/audio'
 
 export const useSettingStore = defineStore(
   'setting',
   () => {
-    const coloringEdgeSeats = ref<boolean>(false)
+    // const coloringEdgeSeats = ref<boolean>(false)
     //TODO:把bgm配置移到db里
     const bgms = ref<Audio[]>([])
     const finalBgms = ref<Audio[]>([])
@@ -51,7 +52,7 @@ export const useSettingStore = defineStore(
     }
 
     return {
-      coloringEdgeSeats,
+      // coloringEdgeSeats,
       bgms,
       finalBgms,
       isBGMInitialized,
