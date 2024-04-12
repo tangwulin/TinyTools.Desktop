@@ -13,11 +13,11 @@ import { addRateHistories, getRateHistoryList } from './DBServices/RateHistories
 import { addSeatHistories, getSeatHistoryList } from './DBServices/SeatHistories'
 import { addSeatTables, getSeatTable } from './DBServices/SeatTable'
 
-const courseStore = useCourseStore()
-const { coursesTable } = storeToRefs(courseStore)
 // @ts-ignore:2304
 const version = __APP_VERSION__ as string
 export const getAppData = async () => {
+  const courseStore = useCourseStore()
+  const { coursesTable } = storeToRefs(courseStore)
   const timestamp = Date.now()
   const settingsStore = useSettingStore()
   return deepcopy({
@@ -91,6 +91,7 @@ function schemeV1ToSchemaV2(data: schemaVersion1): schemaVersion2 {
 }
 
 export async function importData(data: schemaVersion2) {
+  const courseStore = useCourseStore()
   if (!data.version || !data.version.schema || !data.version.app) {
     throw new Error('不是有效的TinyTools数据文件')
   }
