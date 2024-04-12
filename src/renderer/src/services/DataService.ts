@@ -66,10 +66,32 @@ export const parseJSON = async (json: string) => {
   if (!data) {
     throw new Error('不是有效的JSON文件')
   }
-  await importData(data)
+  await importData(updateSchemaVersion(data))
 }
 
-export async function importData(data: any) {
+function updateSchemaVersion(data: schemaVersion1 | schemaVersion2): schemaVersion2 {
+  if (data.version.schema === 1) {
+    return updateSchemaVersion(schemeV1ToSchemaV2(data as schemaVersion1))
+  }
+  if (data.version.schema === 2) {
+    return data as schemaVersion2
+  }
+  throw new Error('不支持的数据文件版本')
+}
+
+function schemeV1ToSchemaV2(data: schemaVersion1): schemaVersion2 {
+  return {
+    ...data,
+    courses: [],
+    version: {
+      schema: 2,
+      db: 2,
+      app: data.version.app
+    }
+  } as schemaVersion2 //v1到v2没有修改，只是增加了设置和课程表字段
+}
+
+export async function importData(data: schemaVersion2) {
   if (!data.version || !data.version.schema || !data.version.app) {
     throw new Error('不是有效的TinyTools数据文件')
   }
