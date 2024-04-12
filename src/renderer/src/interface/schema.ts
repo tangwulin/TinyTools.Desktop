@@ -62,26 +62,34 @@ export interface schemaVersion1 {
     ownerId: number
     ownerType: 'person' | 'group'
   }[]
-  config: Config
-}
-
-interface Config {
-  coloringEdgeSeats: boolean
-  bgms: Audio[]
-  finalBgms: Audio[]
-  isBGMInitialized: boolean
-  enableBgm: boolean
-  enableFinalBgm: boolean
-  enableFadein: boolean
-  fadeinTime: number
-  enableDocking: boolean
-  enableDevelopFeature: boolean
-  enableOldToolBar: boolean
-  lotteryMode: number
-  isFirstSetup: boolean
-  enableAvatar: boolean
-  enableFallbackAvatar: boolean
-  avatarWorks: number[]
+  config: {
+    coloringEdgeSeats: boolean
+    bgms: {
+      name: string
+      url: string
+      offset: number
+      uniqueId: string
+    }[]
+    finalBgms: {
+      name: string
+      url: string
+      offset: number
+      uniqueId: string
+    }[]
+    isBGMInitialized: boolean
+    enableBgm: boolean
+    enableFinalBgm: boolean
+    enableFadein: boolean
+    fadeinTime: number
+    enableDocking: boolean
+    enableDevelopFeature: boolean
+    enableOldToolBar: boolean
+    lotteryMode: number
+    isFirstSetup: boolean
+    enableAvatar: boolean
+    enableFallbackAvatar: boolean
+    avatarWorks: number[]
+  }
 }
 
 export interface schemaVersion2 {
