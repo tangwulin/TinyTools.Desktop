@@ -6,6 +6,12 @@ export const useCourseStore = defineStore(
   'course',
   () => {
     const coursesTable = ref<CourseTableItem[]>([])
+    const startWeek = ref(1)
+    const speIndexOnStart = ref(0)
+    const specialDay = ref(6)
+
+    const thisCourse = ref<string>('')
+    const nextCourse = ref<string>('')
 
     function updateCourseTable(
       courses: {
@@ -29,7 +35,12 @@ export const useCourseStore = defineStore(
 
     return {
       coursesTable,
-      updateCourseTable
+      updateCourseTable,
+      startWeek,
+      speIndexOnStart,
+      specialDay,
+      thisCourse,
+      nextCourse
     }
   },
   { persist: true }
