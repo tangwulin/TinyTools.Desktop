@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { NButton, useMessage } from 'naive-ui'
+import { NButton, type TransferOption, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
+import PinyinMatch from 'pinyin-match'
 import { computed, nextTick, ref, watch } from 'vue'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
 import groupVideo from '../../assets/video/十连出金.mp4'
@@ -104,10 +105,19 @@ function createValues(x: Person[]) {
   return x.map((item) => item.id as number)
 }
 
+function filter(pattern: string, option: TransferOption) {
+  if (pattern === '') return true
+  return !!PinyinMatch.match(option.label, pattern)
+}
+
 db.persons
   .toArray()
   .then((result) => {
-    persons.value = result
+    persons.value = result.sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, {
+        numeric: true
+      })
+    )
   })
   .then(() => {
     options1.value = createOptions(persons.value)
@@ -247,6 +257,10 @@ watch(
               :options="options1"
               class="pr-3"
               source-filterable
+              source-filter-placeholder="可输入拼音进行模糊查找"
+              target-filterable
+              target-filter-placeholder="可输入拼音进行模糊查找"
+              :filter="filter"
             />
           </n-collapse-item>
         </n-collapse>
