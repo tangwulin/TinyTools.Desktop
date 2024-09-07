@@ -129,7 +129,7 @@ const clearHandler = () => {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="course in coursesTable" :key="course.id">
+          <tr v-for="course in coursesTable" :key="course.order">
             <td>
               {{ course.time.start.hour }}:{{ course.time.start.minute }} -
               {{ course.time.end.hour }}:{{ course.time.end.minute }}
