@@ -2,8 +2,9 @@
   "name": "惊蛰",
   "charaKey": "char_306_leizi",
   "images": [
-    "https://prts.wiki/images/9/9f/立绘_惊蛰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cf/立绘_惊蛰_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/9f/%E7%AB%8B%E7%BB%98_%E6%83%8A%E8%9B%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cf/%E7%AB%8B%E7%BB%98_%E6%83%8A%E8%9B%B0_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b4/%E7%AB%8B%E7%BB%98_%E6%83%8A%E8%9B%B0_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -905,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "一年之计在于春——就算还没到春天，新年伊始，你难道就打算这样慵懒度日吗？放假也该做一些磨砺自己的事情，三天打鳞两天晒网，很容易让人懈怠的！喂，你再偷懒，这些文件就要被我批完了！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -927,6 +954,32 @@
         {
           "language": "繁体中文",
           "content": "勿要懈怠，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我调查的疑案还没有得出一个结果，我尚不能毫无保留地信任罗德岛。但是在这里停留的日子，我见识过了仁心仁术的医者，英勇不屈的义士。纵然信念不同，我也应当尊敬你们的付出与努力。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,10 +2,10 @@
   "name": "讯使",
   "charaKey": "char_198_blackd",
   "images": [
-    "https://prts.wiki/images/1/16/立绘_讯使_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cf/立绘_讯使_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/39/立绘_讯使_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7e/立绘_讯使_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/1/16/%E7%AB%8B%E7%BB%98_%E8%AE%AF%E4%BD%BF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cf/%E7%AB%8B%E7%BB%98_%E8%AE%AF%E4%BD%BF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/39/%E7%AB%8B%E7%BB%98_%E8%AE%AF%E4%BD%BF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7e/%E7%AB%8B%E7%BB%98_%E8%AE%AF%E4%BD%BF_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，在下为您带来了谢拉格庆祝新年时会吃的食物。现在还热乎着，您尝一尝？......这么合您胃口吗？别、别吃这么多啊！兽肉没那么好消化的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "隨時為您效勞。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "银灰老板选择与罗德岛合作，在下相信他的选择。而在罗德岛度过这段日子后，在下相信银灰老板，现在也同样相信着您。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

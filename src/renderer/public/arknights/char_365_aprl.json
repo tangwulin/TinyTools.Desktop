@@ -2,9 +2,9 @@
   "name": "四月",
   "charaKey": "char_365_aprl",
   "images": [
-    "https://prts.wiki/images/2/2c/立绘_四月_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/77/立绘_四月_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/12/立绘_四月_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/2/2c/%E7%AB%8B%E7%BB%98_%E5%9B%9B%E6%9C%88_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/77/%E7%AB%8B%E7%BB%98_%E5%9B%9B%E6%9C%88_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/12/%E7%AB%8B%E7%BB%98_%E5%9B%9B%E6%9C%88_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -18,6 +18,10 @@
     {
       "language": "韩语",
       "base": "voice_kr/char_365_aprl"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_365_aprl"
     }
   ],
   "voiceList": [
@@ -61,7 +65,7 @@
         },
         {
           "language": "英文",
-          "content": "Ahhh... A hot shower every day is amazing... After I got infected and had to move, it was really hard for me to find a hot shower. And the food here is so clean. Oh, I love Rhodes Island~"
+          "content": "Ahhh... A hot shower every day is a blessing... After I got infected and had to move all over the place, it was hard for me to take a hot shower. Besides, the food here is decent. Oh, I just love Rhodes Island!"
         },
         {
           "language": "韩文",
@@ -87,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "'April'? 'April' is a song about spring. The lyrics are about the feeling of lying on the grass on a warm spring day, looking up at the sky and thinking about stuff. You wanna hear it? I'm sure you'll love it~"
+          "content": "'April'? 'April' is a song about spring. The lyrics describe the feeling of lying on the grass on a warm spring day, looking up at the sky and letting your mind wander. Wanna hear it, Doctor? I'm sure you'll love it."
         },
         {
           "language": "韩文",
@@ -113,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, where's my lip gloss...? Oh, I remember. I lent it to Rope. Hm? Oh, because I was gonna teach her to do makeup. She's got a good foundation, so she'll be super cute after some sprucing up."
+          "content": "Strange, where's my lip gloss...? Oh, right. I lent it to Rope. Nah yeah, I was gonna teach her to do makeup. She's a fine looking girl. I bet she'll be even cuter after a little sprucing up."
         },
         {
           "language": "韩文",
@@ -139,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "Back in Rim Billiton, the company promised a pension for the Infected, but you only get scraps in the end, and there's no jobs... Good thing I decided to try Rhodes Island as soon as I saw the ad. You treat me like a human being here."
+          "content": "Back in Rim Billiton, the companies promise a pension for the Infected, but you only get scraps in the end. And it's hard to find a job... Good thing I decided to try Rhodes Island as soon as I saw the ad. I feel appreciated around here."
         },
         {
           "language": "韩文",
@@ -165,7 +169,7 @@
         },
         {
           "language": "英文",
-          "content": "After I got infected, people started asking me like 'what's an Infected wearing such bright colors for' and 'what's an Infected listening to music for'... I always just tell them: 'Because I wanna.'"
+          "content": "After I got infected, people started asking me things like 'what's an Infected wearing such bright colors for' and 'what's an Infected listening to music for'... And my answer's always the same: 'It's what I like.'"
         },
         {
           "language": "韩文",
@@ -191,7 +195,7 @@
         },
         {
           "language": "英文",
-          "content": "Back in Rim Billiton, I was a professional hunter. I had to keep animals away from the city and sometimes escort company people. But after I got Oripathy, I lost my job and had to hunt on my own for a living. It was real rough..."
+          "content": "Back in Rim Billiton, I was a professional hunter. I had to keep the beasts away from the city and sometimes escort company people. But… after I got Oripathy, I lost my job and had to hunt on my own for a living. It was real rough…"
         },
         {
           "language": "韩文",
@@ -217,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "My parents died in a mining accident when I was little, and I grew up on a company pension, so I was always real grateful to the company. I figured getting Oripathy was my own dumb fault... But that's not really what happened, is it, Doctor?"
+          "content": "My parents died in a mining accident when I was little, and I grew up on a company pension, so I was always real grateful to the company. I figured getting Oripathy was my own dumb fault... But there's more to it than that, isn't there, Doctor?"
         },
         {
           "language": "韩文",
@@ -295,7 +299,7 @@
         },
         {
           "language": "英文",
-          "content": "Rhodes Island has such great stuff, and they treat you so good... Oh, sorry, Doctor, I'm just a little shocked. My codename is April. Yeah, it's the name of my favorite song."
+          "content": "Gosh, Rhodes Island has great pay and benefits… Oh, sorry, Doctor, I'm just a little shocked. My codename is April. Nah yeah, it's the name of my favorite song."
         },
         {
           "language": "韩文",
@@ -321,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "The pros are amazing..."
+          "content": "Wow, the professionals here are really something."
         },
         {
           "language": "韩文",
@@ -347,7 +351,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh? A raise...? Oh, it's not that I'm disappointed, I'm thrilled. It's just been a long, long time since anyone told me I was doing a good job."
+          "content": "Wha? A raise...? Oh, it's not that I'm disappointed, I'm stoked! It's just been a long, long time since anyone told me I was doing a good job."
         },
         {
           "language": "韩文",
@@ -373,7 +377,7 @@
         },
         {
           "language": "英文",
-          "content": "Back in Rim Billiton, I liked to sit on the roof and listen to my music while I watched the whole city go by. Now, I can see even more from the bridge of Rhodes Island. There was a silver lining to me getting sick, huh, Doctor?"
+          "content": "Back in Rim Billiton, I liked to sit on the roof and listen to my music while I watched the whole city go by. Now, I can see even more from the bridge of Rhodes Island. I'd call that a silver lining after getting infected, Doctor."
         },
         {
           "language": "韩文",
@@ -399,7 +403,7 @@
         },
         {
           "language": "英文",
-          "content": "Heyo~"
+          "content": "All righty!"
         },
         {
           "language": "韩文",
@@ -425,7 +429,7 @@
         },
         {
           "language": "英文",
-          "content": "Come with me, everybody!"
+          "content": "Follow close now, everyone!"
         },
         {
           "language": "韩文",
@@ -477,7 +481,7 @@
         },
         {
           "language": "英文",
-          "content": "Earphones in, let's get started~"
+          "content": "Earphones on, let's get started!"
         },
         {
           "language": "韩文",
@@ -503,7 +507,7 @@
         },
         {
           "language": "英文",
-          "content": "My bow is ready~"
+          "content": "My bow is ready!"
         },
         {
           "language": "韩文",
@@ -555,7 +559,7 @@
         },
         {
           "language": "英文",
-          "content": "Nice visibility~"
+          "content": "Nice visibility."
         },
         {
           "language": "韩文",
@@ -581,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "Leave it to me~"
+          "content": "Leave it to me."
         },
         {
           "language": "韩文",
@@ -607,7 +611,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's get some fast music going."
+          "content": "Let's put on some Billy Bounce."
         },
         {
           "language": "韩文",
@@ -659,7 +663,7 @@
         },
         {
           "language": "英文",
-          "content": "I've got a lock on you~"
+          "content": "I've got a lock on you."
         },
         {
           "language": "韩文",
@@ -711,7 +715,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, how would you like to relax with some music?"
+          "content": "Such a tough battle! Doctor, need some slow music to calm your nerves?"
         },
         {
           "language": "韩文",
@@ -737,7 +741,7 @@
         },
         {
           "language": "英文",
-          "content": "Didn't miss a single one~"
+          "content": "Didn't miss a single one."
         },
         {
           "language": "韩文",
@@ -789,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, I'll cover you!"
+          "content": "Doctor, go, I'll cover you!"
         },
         {
           "language": "韩文",
@@ -815,7 +819,7 @@
         },
         {
           "language": "英文",
-          "content": "I've been around Rhodes Island a couple times and I think it's really big."
+          "content": "No matter how much I wander around Rhodes Island, it still feels so big."
         },
         {
           "language": "韩文",
@@ -867,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "The Doctor should be in the office, right?"
+          "content": "Hmm, the Doctor should be in the office right now..."
         },
         {
           "language": "韩文",
@@ -906,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "往年这个时候，我可能正在荒野上，一个人靠着篝火取暖。看到远处城市里升起烟花，就知道新年到了。虽然也很刺激，但还是更喜欢和大家一起跨年呢。新年快乐博士，新的一年也请多关照啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -928,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，要聽歌嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "虽然成为了感染者，但我的打猎本领可没有半点生疏，原来的公司因为矿石病而开除我，其实是他们的损失吧。现在能加入罗德岛，我还是很幸运的呀。我也希望更多的感染者，能和我一样幸运。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

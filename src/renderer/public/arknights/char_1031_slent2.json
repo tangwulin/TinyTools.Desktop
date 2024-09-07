@@ -2,8 +2,9 @@
   "name": "淬羽赫默",
   "charaKey": "char_1031_slent2",
   "images": [
-    "https://prts.wiki/images/b/b4/立绘_淬羽赫默_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4f/立绘_淬羽赫默_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/b4/%E7%AB%8B%E7%BB%98_%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4f/%E7%AB%8B%E7%BB%98_%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/19/%E7%AB%8B%E7%BB%98_%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -192,7 +193,7 @@
         },
         {
           "language": "英文",
-          "content": "Yes, Doctor? No, I'm no longer restricting Ifrit from seeing Saria. Honestly, on the contrary, I hope they see more of each other now. Ifrit is grown up, after all. And more importantly, her presence will remind Saria that, not all prices are numbers, and reports do not remove scars."
+          "content": "Yes, Doctor? No, I'm no longer restricting Ifrit from seeing Saria. Honestly, on the contrary, I hope they see more of each other now. Ifrit is grown up, after all. And more importantly, her presence will remind Saria that,  not all prices are numbers, and reports do not remove scars."
         },
         {
           "language": "韩文",
@@ -773,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我猜是伊芙利特派你来的，是吗？她为了让我放下工作可真是煞费苦心，净给我捣乱，还威胁要烧掉我的实验报告，你已经是她的第三个使者了......好吧，今天的工作就到此为止，走吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -791,6 +814,28 @@
         {
           "language": "韩文",
           "content": "박사, 커피 한 잔 어때?"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "当我刚进入莱茵时，科研是我的一切。“炎魔事件”后，伊芙利特和她的矿石病是我的一切。而现在，我知道了越来越多的东西，我想做的事也越来越多。但是，博士，我们最终会在同一个终点重逢的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

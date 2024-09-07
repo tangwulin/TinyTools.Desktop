@@ -2,9 +2,9 @@
   "name": "流明",
   "charaKey": "char_4042_lumen",
   "images": [
-    "https://prts.wiki/images/9/96/立绘_流明_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ae/立绘_流明_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1e/立绘_流明_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/96/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%8E_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ae/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%8E_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1e/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%8E_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "以前我还在当护工的时候，每当跨年，大家就会互相交换礼物，送上新年的祝福。如今虽然换了个工作环境，但我还是希望能够保留这个小小的传统。博士，来年您也一定会......平安幸福。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，需要我給您按按肩嗎？我的理療技術可是廣受好評哦。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "说出来挺不好意思的，博士，若是有一天，我能成为像您这样的人......不，还是算了吧，能成为罗德岛的一员，能陪在您的身边，我的理想就已经实现了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

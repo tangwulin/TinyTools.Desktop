@@ -2,9 +2,9 @@
   "name": "风丸",
   "charaKey": "char_4016_kazema",
   "images": [
-    "https://prts.wiki/images/8/88/立绘_风丸_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_风丸_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fd/立绘_风丸_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/88/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E4%B8%B8_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b8/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E4%B8%B8_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fd/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E4%B8%B8_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年到了，还请容我为您献上诚挚的祝福，博士。只是有点感慨啦，时间竟然成了属于自己的东西，放在以前，我肯定对如何支配它毫无头绪，不过现在，我很清楚自己要为什么而努力。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "你好啊，博士~"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "从忍者变成白领，现在又是伪装了身份的情报探查人员，不知道我下一份工作会是什么呢。啊，博士，不是说我要离开罗德岛啦！我是在想，人这一生很多转变都是始料未及，我们都做好眼下的事吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,10 @@
   "name": "提丰",
   "charaKey": "char_2012_typhon",
   "images": [
-    "https://prts.wiki/images/8/8e/立绘_提丰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9f/立绘_提丰_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/01/立绘_提丰_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/8e/%E7%AB%8B%E7%BB%98_%E6%8F%90%E4%B8%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9f/%E7%AB%8B%E7%BB%98_%E6%8F%90%E4%B8%B0_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/01/%E7%AB%8B%E7%BB%98_%E6%8F%90%E4%B8%B0_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/30/%E7%AB%8B%E7%BB%98_%E6%8F%90%E4%B8%B0_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -774,6 +775,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "唔，现在庆祝这个节日的人越来越多了。你们这里也有宴会吗？焰火呢？都有？看来我来对了。我自己去看看有什么没见过的活动，不用你招待我了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -792,6 +815,28 @@
         {
           "language": "韩文",
           "content": "안녕, 박사. 어디 갔었어? 길을 잃었던 건 아니지?"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "清点猎物是个好习惯，因为狩猎是不会有尽头的。我看到你们战胜了许多对手，拯救了许多生灵，做得好。但是你们想从这片大地上彻底赶走你们的敌人？不行，想要一劳永逸是不对的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

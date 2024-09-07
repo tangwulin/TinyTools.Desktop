@@ -2,10 +2,10 @@
   "name": "可颂",
   "charaKey": "char_201_moeshd",
   "images": [
-    "https://prts.wiki/images/6/62/立绘_可颂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8d/立绘_可颂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/02/立绘_可颂_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c7/立绘_可颂_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/62/%E7%AB%8B%E7%BB%98_%E5%8F%AF%E9%A2%82_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8d/%E7%AB%8B%E7%BB%98_%E5%8F%AF%E9%A2%82_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/02/%E7%AB%8B%E7%BB%98_%E5%8F%AF%E9%A2%82_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c7/%E7%AB%8B%E7%BB%98_%E5%8F%AF%E9%A2%82_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老板新年快乐！企鹅物流今年的生意也请您多多关照！我的锤头和盾牌永远为您的货物保驾护航！哈哈，如果您信任我的话，也欢迎绕过大帝直接派任务给我哟！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "老闆~歡迎光臨！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "面对数不清的麻烦，顾虑太多也没法做得更好。做事情更需要一往无前的气势而非精良的装备！在这方面罗德岛和企鹅物流倒是很像，所以我们的合作才能这么顺利嘛！老板，祝我们继续合作愉快！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

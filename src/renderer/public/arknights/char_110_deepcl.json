@@ -2,9 +2,9 @@
   "name": "深海色",
   "charaKey": "char_110_deepcl",
   "images": [
-    "https://prts.wiki/images/5/52/立绘_深海色_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7c/立绘_深海色_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/df/立绘_深海色_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/52/%E7%AB%8B%E7%BB%98_%E6%B7%B1%E6%B5%B7%E8%89%B2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7c/%E7%AB%8B%E7%BB%98_%E6%B7%B1%E6%B5%B7%E8%89%B2_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/df/%E7%AB%8B%E7%BB%98_%E6%B7%B1%E6%B5%B7%E8%89%B2_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好，博士。博士问新年在我眼中是什么颜色的吗？嗯......食物的香气、干员们的笑脸、饱含着心意的礼物......温暖的、柔软的姜黄？很新奇的感受呢，让我把这一切都画下来吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "早上好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天是什么日子？啊啊，原来是这样。我的“助手”看起来也一起加入进去了呢，那么，让它们为罗德岛创作出一幅更美丽的作品吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

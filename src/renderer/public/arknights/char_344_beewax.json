@@ -2,10 +2,10 @@
   "name": "蜜蜡",
   "charaKey": "char_344_beewax",
   "images": [
-    "https://prts.wiki/images/3/3d/立绘_蜜蜡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2d/立绘_蜜蜡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_蜜蜡_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/19/立绘_蜜蜡_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%9C%A1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2d/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%9C%A1_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b8/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%9C%A1_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/19/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%9C%A1_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -907,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。因为今天是重要的节日，所以我很早就做好了角的保养，亲近的人都可以来碰一碰......啊，你感觉不出来它保养得很好吗？嗯，没关系，你没有长角，不怪你。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -929,6 +955,32 @@
         {
           "language": "繁体中文",
           "content": "博士，我在等你呢。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "直到现在，我也没有搞清楚姐姐究竟在做什么，不过跟着罗德岛走了这么久，倒是亲眼见到了许多和杂志照片一样的风景。等回到部族之中时，我应该也能更加清晰地看到神灵给了我们怎样的祝福吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

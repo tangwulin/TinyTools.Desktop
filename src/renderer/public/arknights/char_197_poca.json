@@ -2,9 +2,9 @@
   "name": "早露",
   "charaKey": "char_197_poca",
   "images": [
-    "https://prts.wiki/images/6/6f/立绘_早露_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_早露_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d0/立绘_早露_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/6f/%E7%AB%8B%E7%BB%98_%E6%97%A9%E9%9C%B2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/87/%E7%AB%8B%E7%BB%98_%E6%97%A9%E9%9C%B2_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d0/%E7%AB%8B%E7%BB%98_%E6%97%A9%E9%9C%B2_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -277,7 +277,7 @@
         },
         {
           "language": "英文",
-          "content": "The Doctor is asleep... Looks kind of cute."
+          "content": "The Doctor is asleep...  Looks kind of cute."
         },
         {
           "language": "韩文",
@@ -914,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。今天真是匆忙呢，不过能为宴会出一份力，我很开心。希望我准备的插花和甜点能令大家满意。对了，今晚我会和自治团的各位举办一个小小的私人聚会，也欢迎博士来参加哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -936,6 +962,32 @@
         {
           "language": "繁体中文",
           "content": "博士，見到你真高興。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我可能永远都无法摆脱那场噩梦的纠缠。但在来到罗德岛后，我逐渐有了直面它的勇气。自治团的各位，还有博士，都陪伴着我，指引着我......总有一天，我可以真正开始自己的新生活吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

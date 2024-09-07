@@ -1,7 +1,11 @@
 {
   "name": "特米米",
   "charaKey": "char_411_tomimi",
-  "images": [],
+  "images": [
+    "https://media.prts.wiki/0/0a/%E7%AB%8B%E7%BB%98_%E7%89%B9%E7%B1%B3%E7%B1%B3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/af/%E7%AB%8B%E7%BB%98_%E7%89%B9%E7%B1%B3%E7%B1%B3_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0b/%E7%AB%8B%E7%BB%98_%E7%89%B9%E7%B1%B3%E7%B1%B3_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": [
     {
       "language": "日语",
@@ -902,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "放假的话，是不是就可以休息了？呼啊——嘉维尔在哪里啊，博士您见到她了吗？今天没有事情做，当然要和嘉维尔待在一起啦！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -924,6 +954,32 @@
         {
           "language": "繁体中文",
           "content": "唔唔，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我在幸运箱里抽到了张纸条，上面写每天对植物说五个好词，它就会长得更好。这个盆栽，让我来试试！尾巴、背包、烧烤、好梦......嘉维尔。嘿嘿......博士！为什么笑我？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "波登可",
   "charaKey": "char_258_podego",
   "images": [
-    "https://prts.wiki/images/5/56/立绘_波登可_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2c/立绘_波登可_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/20/立绘_波登可_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/56/%E7%AB%8B%E7%BB%98_%E6%B3%A2%E7%99%BB%E5%8F%AF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2c/%E7%AB%8B%E7%BB%98_%E6%B3%A2%E7%99%BB%E5%8F%AF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/20/%E7%AB%8B%E7%BB%98_%E6%B3%A2%E7%99%BB%E5%8F%AF_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -906,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在老家，这个时候许多花都已经凋谢了，但是想到春天很快就要到来，心里又充满了希望。博士，我们去温室里找一找在新的一年开的第一朵花吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -928,6 +954,32 @@
         {
           "language": "繁体中文",
           "content": "博士，你好啊！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "跟着罗德岛走过了许多地方，是不是也算将花香散播到大地各处了呢？嘿嘿......虽然和莱娜姐姐比起来，我还有许多不成熟的地方，但我会尽力让罗德岛变成一个更温馨的地方！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

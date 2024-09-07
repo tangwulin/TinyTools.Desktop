@@ -2,10 +2,10 @@
   "name": "守林人",
   "charaKey": "char_158_milu",
   "images": [
-    "https://prts.wiki/images/1/1f/立绘_守林人_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4c/立绘_守林人_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4c/立绘_守林人_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/11/立绘_守林人_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/1/1f/%E7%AB%8B%E7%BB%98_%E5%AE%88%E6%9E%97%E4%BA%BA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4c/%E7%AB%8B%E7%BB%98_%E5%AE%88%E6%9E%97%E4%BA%BA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4c/%E7%AB%8B%E7%BB%98_%E5%AE%88%E6%9E%97%E4%BA%BA_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/11/%E7%AB%8B%E7%BB%98_%E5%AE%88%E6%9E%97%E4%BA%BA_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？虽然有些太过吵闹，但是之前在森林里，我们也有这样的日子......我们一起围着篝火唱歌，用藤条编织手串互相赠送......博士想听我们当地的那些歌吗？我还记得它们。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "嗯？博士啊。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天是一个有点吵闹的节日，我会找个安静的地方待着。博士就和陨星她们好好玩吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

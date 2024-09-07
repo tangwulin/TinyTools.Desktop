@@ -2,10 +2,10 @@
   "name": "红豆",
   "charaKey": "char_290_vigna",
   "images": [
-    "https://prts.wiki/images/7/70/立绘_红豆_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/26/立绘_红豆_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/df/立绘_红豆_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d7/立绘_红豆_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/70/%E7%AB%8B%E7%BB%98_%E7%BA%A2%E8%B1%86_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/26/%E7%AB%8B%E7%BB%98_%E7%BA%A2%E8%B1%86_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/df/%E7%AB%8B%E7%BB%98_%E7%BA%A2%E8%B1%86_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d7/%E7%AB%8B%E7%BB%98_%E7%BA%A2%E8%B1%86_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士！新年快乐！怎么样，你也很期待今年的新年演唱会对不对？偷偷告诉你，结尾可是有我的吉他独奏哦！罗德岛上会乐器的干员越来越多了，以后这里的音乐会也可以像汐斯塔音乐节那样热闹吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "有事嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在罗德岛的生活就像摇滚乐一样。偶尔有低沉的鼓点，但旋律永远是令人心潮澎湃的！就让我用这把吉他把糟糕的事情扫荡一空吧！啊，我是说用音乐啦，不是直接用吉他砸......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

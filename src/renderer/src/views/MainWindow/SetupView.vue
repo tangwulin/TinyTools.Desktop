@@ -20,8 +20,9 @@ watch(current, () => {
       router.push({ name: 'setup schedule' })
       break
     case 4:
+      router.push({ name: 'setup pptpath' })
       // router.push({ name: "setup workSchedule" });
-      router.push({ name: 'setup done' }) //后面的功能还没做好，先跳过去
+      // router.push({ name: 'setup done' }) //后面的功能还没做好，先跳过去
       break
     case 5:
       router.push({ name: 'setup done' })
@@ -49,12 +50,13 @@ watch(current, () => {
               <n-step title="添加人员" />
               <n-step title="分配座位" />
               <n-step title="导入课程表" />
+              <n-step title="设置课件位置" />
               <!--        <n-step title="导入值日表" />-->
               <n-step title="完成" />
             </n-steps>
             <n-space justify="end" style="width: 12rem">
               <n-button v-if="current > 1" @click="current--">上一步</n-button>
-              <n-button v-if="current < 4" :disabled="!(persons?.length !== 0)" @click="current++">
+              <n-button v-if="current < 5" :disabled="!(persons?.length !== 0)" @click="current++">
                 <!--          {{ current === 4 ? "完成" : "下一步" }}-->
                 下一步
               </n-button>

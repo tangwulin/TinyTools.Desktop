@@ -2,9 +2,9 @@
   "name": "煌",
   "charaKey": "char_017_huang",
   "images": [
-    "https://prts.wiki/images/3/38/立绘_煌_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/40/立绘_煌_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/97/立绘_煌_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/38/%E7%AB%8B%E7%BB%98_%E7%85%8C_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/40/%E7%AB%8B%E7%BB%98_%E7%85%8C_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/97/%E7%AB%8B%E7%BB%98_%E7%85%8C_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -143,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "Amiya is one of the most talented fighters I've ever met. She keeps a clear head in any situation, and her Arts are enough to scare even me. You know, Doctor, I can't help but wonder, how did she get so good at fighting, as young as she is? Honestly, I wish she was picking up joyful, happy experiences, not the combat kind."
+          "content": "Amiya is one of the most talented fighters I've ever met. She keeps a clear head in any situation, and her Arts are enough to scare even me.  You know, Doctor, I can't help but wonder, how did she get so good at fighting, as young as she is? Honestly, I wish she was picking up joyful, happy experiences, not the combat kind."
         },
         {
           "language": "韩文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "借过！——是你啊博士，新年快乐，等我先把这三箱饮料送去餐厅，然后帮他们搬个电影放映机，啊，还有几个办公室要装饰......然后我再来找你！欸，阿米娅过去了，还得把她抓去量身高！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，我們什麼時候出任務呢？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "虽然我没有那种夸张的源石技艺，但看这一年的任务总结，我还是参与了不少硬仗的嘛，也确实救到了很多感染者......担心自己的身体？担心什么，我的体能训练数据一直在上升欸。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

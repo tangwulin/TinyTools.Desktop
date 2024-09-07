@@ -58,13 +58,23 @@ const handler = (fast: boolean) => {
   if (fast) {
     const player = document.querySelector('audio')
     if (player) player.play()
-    const interval = setInterval(() => {
-      selectedPerson.value = selectSomething(list, number.value).slice()
-      //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
-    }, 250)
-    setTimeout(() => {
-      clearInterval(interval)
-    }, 3000)
+    // const interval = setInterval(() => {
+    //   selectedPerson.value = selectSomething(list, number.value).slice()
+    //   //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
+    // }, 250)
+    // setTimeout(() => {
+    //   clearInterval(interval)
+    // }, 3000)
+    const startTime = Date.now()
+    let time = startTime
+    selectedPerson.value = selectSomething(list, number.value).slice()
+    requestAnimationFrame(function f() {
+      if (Date.now() - time >= 250) {
+        selectedPerson.value = selectSomething(list, number.value).slice()
+        time = Date.now()
+      }
+      if (Date.now() - startTime <= 3000) requestAnimationFrame(() => f())
+    })
   } else {
     playingVideo.value = true
     nextTick(() => {

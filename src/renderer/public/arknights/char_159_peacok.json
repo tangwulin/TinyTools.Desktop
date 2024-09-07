@@ -2,9 +2,9 @@
   "name": "断罪者",
   "charaKey": "char_159_peacok",
   "images": [
-    "https://prts.wiki/images/e/e2/立绘_断罪者_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d9/立绘_断罪者_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ad/立绘_断罪者_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/e/e2/%E7%AB%8B%E7%BB%98_%E6%96%AD%E7%BD%AA%E8%80%85_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d9/%E7%AB%8B%E7%BB%98_%E6%96%AD%E7%BD%AA%E8%80%85_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ad/%E7%AB%8B%E7%BB%98_%E6%96%AD%E7%BD%AA%E8%80%85_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新！年！快！乐！我将为罗德岛带来最富有艺术气息的舞蹈，屏气凝神地欣赏吧！各位都将接受来自我华丽拳法的洗礼，并且获得新生！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "哦！這不是博士嗎！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "与不理解艺术的人相比，曲解艺术的人更让人觉得可恶！失望，太失望了！那只企鹅的音乐居然能获得如此多的崇拜者，居然还能获得第一！那场比赛的承办者是谁？断！罪！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,10 +2,10 @@
   "name": "莱恩哈特",
   "charaKey": "char_373_lionhd",
   "images": [
-    "https://prts.wiki/images/b/bf/立绘_莱恩哈特_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/61/立绘_莱恩哈特_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f0/立绘_莱恩哈特_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_莱恩哈特_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/bf/%E7%AB%8B%E7%BB%98_%E8%8E%B1%E6%81%A9%E5%93%88%E7%89%B9_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/61/%E7%AB%8B%E7%BB%98_%E8%8E%B1%E6%81%A9%E5%93%88%E7%89%B9_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f0/%E7%AB%8B%E7%BB%98_%E8%8E%B1%E6%81%A9%E5%93%88%E7%89%B9_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6f/%E7%AB%8B%E7%BB%98_%E8%8E%B1%E6%81%A9%E5%93%88%E7%89%B9_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -19,6 +19,10 @@
     {
       "language": "韩语",
       "base": "voice_kr/char_373_lionhd"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_373_lionhd"
     }
   ],
   "voiceList": [
@@ -36,7 +40,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm? Doctor, did you want to have a chat with me to stave off the boredom? Or, did you have something interesting you must tell me?"
+          "content": "Hey Doctor, what can I help you with today? Have a chat to stave off the boredom? Or, did you have something interesting to tell me?"
         },
         {
           "language": "韩文",
@@ -62,7 +66,7 @@
         },
         {
           "language": "英文",
-          "content": "Was that Savage who just passed by in the hallway? Back when the autonomous county was established, and later when it reached a cooperation agreement with Rim Billiton, her exploits were no less impressive than mine, you know?"
+          "content": "Was that Savage who just passed by in the corridor? She's really something, you know. Back when the Autonomous Prefecture was established, and later when it reached a cooperation agreement with Rim Billiton, her exploits were no less impressive than mine."
         },
         {
           "language": "韩文",
@@ -88,7 +92,7 @@
         },
         {
           "language": "英文",
-          "content": "You know, some places have really problematic stereotypes about us Cautus. Why do they call me timid when I'm just good at avoiding danger? As a matter of fact, isn't it more accurate to say that only those who've delved deep into danger can become masters of avoiding it?"
+          "content": "You know, some places have really problematic stereotypes about us Cautuses. Why do they call me timid when I'm just good at avoiding danger? As a matter of fact, only he who's delved deep into danger can be a master of avoiding it. Don't you agree?"
         },
         {
           "language": "韩文",
@@ -114,7 +118,7 @@
         },
         {
           "language": "英文",
-          "content": "C'mon, I've been taking my medications like I'm supposed to, but the little lass from the Medical Department who's taking care of me is a bit too uptight, I just can't help but to play pranks on her. You should help her loosen up a bit. Oh, but don't tell that to the other medics."
+          "content": "C'mon, I've been a good boy. I'm getting all my regular checkups, taking my medicine, doing everything I'm supposed to. It's just the Medical lass is so uptight when she's recording my details. I can't help but play a prank or two, just so she'll loosen up a bit. Hehe. Oh, but don't tell that to the other medics."
         },
         {
           "language": "韩文",
@@ -140,7 +144,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, my buddy, Rhodes Island doesn't have a mandatory dress code, so there's no need for you to wear the same old rags all the time. Look at what I'm wearing - this store's got some pretty tasteful stuff, so how about I help you pick out a new look?"
+          "content": "Doctor, mate, Rhodes Island doesn't have a dress code, so there's no need for you to wear the same old rags all the time... Take a look over here. See what I'm wearing? I know a store's with some pretty tasteful stuff, so how about I help you pick out a new look?"
         },
         {
           "language": "韩文",
@@ -166,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm actually pretty fond of Rhodes Island. Unlike those bigwigs who can't stop preaching and proselytizing their greatness, everyone here's just trying to achieve their goals and work together to keep this ship sailing. Just like the folks at Rim Billiton."
+          "content": "I'm actually pretty fond of Rhodes Island. Unlike those bigwigs who can't stop preaching about their greatness, everyone here's just trying to achieve their goals and working together to keep this ship sailing. Just like the folks in Rim Billiton."
         },
         {
           "language": "韩文",
@@ -192,7 +196,7 @@
         },
         {
           "language": "英文",
-          "content": "The one in my hand? It's a standard-issue Rim Billiton blaster that I modified. Before it was modified, it also used to be an Originium-powered focus for Casters. Hmm... Doctor, you're not thinking that using brute force alone to smash open a rock is the most efficient method, are you?"
+          "content": "The one in my hand? It's a standard-issue Billy blaster that I modified. Before I got my hands on it, it also used to be an Originium-powered focus for Casters. Hmm... Doctor, you're not thinking that smashing rocks with brute force would be efficient, are you?"
         },
         {
           "language": "韩文",
@@ -218,7 +222,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, are you also interested in hearing about the Eureka Incident? I'm not sure there are any secrets left, since there are maybe a dozen pretty good books and documentaries out there. But maybe it'd be better if I could write something more detailed about how I rescued those hostages. Yeah, I dismantled a lot of those cages after all."
+          "content": "Ah, so you're also interested in the Eureka Incident, Doctor? It's not like there's any secrets left untold, since any of the books or documentaries worth their salt tell pretty much the whole story. But... I wish they had some more details on how I rescued those hostages. Nah yeah, I dismantled a lot of those cages after all."
         },
         {
           "language": "韩文",
@@ -244,7 +248,7 @@
         },
         {
           "language": "英文",
-          "content": "It's not uncommon for mining teams to hire Catastrophe Messengers to accompany them. For example, I was born on a mining ship and was always interested in technical books, so I was basically just applying what I already knew. But Doctor, where'd you get your knowledge from? I don't think I've seen any relevant literature here."
+          "content": "It's common for mining teams to hire Catastrophe Messengers. Since I was born on a mining ship and was always interested in technical books, being a Catastrophe Messenger means basically applying what I already knew. But Doctor, where'd you get your knowledge from? I don't see any relevant literature here..."
         },
         {
           "language": "韩文",
@@ -296,7 +300,7 @@
         },
         {
           "language": "英文",
-          "content": "Leonhardt, Catastrophe Messenger. Doctor, I don't know if you might've heard of me before... No? Ah, it's better that way. Seems like I won't have to tell the entire story again like I had to when that lady from the HR Department cornered me."
+          "content": "Leonhardt, Catastrophe Messenger. Doctor, you may have heard of me... No? Ah well~ it's better that way. Seems I won't have to tell the whole story again, like I did when that HR lady cornered me."
         },
         {
           "language": "韩文",
@@ -348,7 +352,7 @@
         },
         {
           "language": "英文",
-          "content": "Promotion? Sure, sure... Huh? It doesn't even come with some sort of exclusive, blinged-out elite uniform? C'mon, even a small piece of jewelry would be fine. No? Aww..."
+          "content": "Promotion? Haha, great! Wait a second. It doesn't come with some sort of exclusive, blinged-out elite uniform? C'mon, even a small ornament would be nice. No? Aww…"
         },
         {
           "language": "韩文",
@@ -374,7 +378,7 @@
         },
         {
           "language": "英文",
-          "content": "The road that Rhodes Island has chosen to take is much bumpier than that of us Catastrophe Messengers, but you don't seem to have any intent on stopping. I suppose I'll have to sacrifice some of my entertainment time to help you clear the road then?"
+          "content": "The road that Rhodes Island's chosen is much bumpier than that of us Catastrophe Messengers, but you don't seem to have any intent on stopping. Well, I suppose I'll have to sacrifice some of my leisure time to help you clear the road then?"
         },
         {
           "language": "韩文",
@@ -400,7 +404,7 @@
         },
         {
           "language": "英文",
-          "content": "It's my turn! Huh? The mission this time is to go fight someone?"
+          "content": "Mission time~! Let's see… Oh, it's a fight today!"
         },
         {
           "language": "韩文",
@@ -426,7 +430,7 @@
         },
         {
           "language": "英文",
-          "content": "You want me to lead the team? Mm, sure. That can be done, piece of cake."
+          "content": "You want me to lead the team? Mmmm… Alright. Leave it to me."
         },
         {
           "language": "韩文",
@@ -452,7 +456,7 @@
         },
         {
           "language": "英文",
-          "content": "So this is the route to the objective goal... Can I take a shortcut?"
+          "content": "So this is the route to the objective... Can I take a shortcut?"
         },
         {
           "language": "韩文",
@@ -478,7 +482,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's see if our enemies have anything going for them besides their numbers."
+          "content": "Let's see if our enemies have anything to offer besides numbers."
         },
         {
           "language": "韩文",
@@ -504,7 +508,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh? Where, where? Ehh?"
+          "content": "Hm? Which direction? Where?"
         },
         {
           "language": "韩文",
@@ -556,7 +560,7 @@
         },
         {
           "language": "英文",
-          "content": "Woo! It's finally my turn!"
+          "content": "Woo~ It's finally my turn!"
         },
         {
           "language": "韩文",
@@ -582,7 +586,7 @@
         },
         {
           "language": "英文",
-          "content": "Lure more enemies into this ring, then leave the rest to me!"
+          "content": "Lure some more enemies into the ring, then leave the rest to me!"
         },
         {
           "language": "韩文",
@@ -608,7 +612,7 @@
         },
         {
           "language": "英文",
-          "content": "Who said the tip of a spear is only good for stabbing people?"
+          "content": "Who says a spear is only good for stabbing people?"
         },
         {
           "language": "韩文",
@@ -634,7 +638,7 @@
         },
         {
           "language": "英文",
-          "content": "Relying on your armor will only make you vulnerable."
+          "content": "Relying on your armor will only leave you vulnerable."
         },
         {
           "language": "韩文",
@@ -660,7 +664,7 @@
         },
         {
           "language": "英文",
-          "content": "Oh~ Strength in numbers, huh... Is that what you were banking on?"
+          "content": "Strength in numbers, huh? Is that what you were banking on?"
         },
         {
           "language": "韩文",
@@ -712,7 +716,7 @@
         },
         {
           "language": "英文",
-          "content": "Bam! All right, another mighty enemy laid low. Now, let's do what we agreed on and have you treat yourself, Doctor. Wanna go visit a local market with me on our next stop?"
+          "content": "Bam! Another mighty enemy laid low. Alright, Doctor, let's have you treat yourself like we agreed before. You and me, we're gonna visit a market at our next stop."
         },
         {
           "language": "韩文",
@@ -764,7 +768,7 @@
         },
         {
           "language": "英文",
-          "content": "Cleaning up stragglers isn't really my strong suit, so if you don't find someone to send after them, you're going to lose points off your combat evaluation~"
+          "content": "Cleaning up stragglers isn't really my strong suit. You oughta find someone to send after them right away, before you lose points off your combat evaluation."
         },
         {
           "language": "韩文",
@@ -816,7 +820,7 @@
         },
         {
           "language": "英文",
-          "content": "Wanna head down to the Procurement Department to take a look at the new outfits? How about it?"
+          "content": "Maybe I should go to Procurement to check out the new outfits? Or maybe not?"
         },
         {
           "language": "韩文",
@@ -842,7 +846,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm? Need me?"
+          "content": "Hm? Need me for something?"
         },
         {
           "language": "韩文",
@@ -868,7 +872,7 @@
         },
         {
           "language": "英文",
-          "content": "What's the matter, did you want to take me out for a walk?"
+          "content": "What's the matter, you wanna take me out for a walk?"
         },
         {
           "language": "韩文",
@@ -907,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "又是新的一年了啊。小时候每到这个年份的数字翻过去的日子，船上的大人们总喜欢摸着孩子们的头，关切地问“长高了没有呀”，我不怎么喜欢这套......哎？哎、哎？博士，不准摸啦！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -929,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "喲，博士，今天的活忙完啦？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "矿船上的前辈说“每艘船都藏着一个故事”，那么罗德岛不可告人——开玩笑啦，别把我当商业间谍啊！不过就算有什么秘密，我也愿意相信博士啦。在需要让我知道的时候，博士也会信任我，对吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

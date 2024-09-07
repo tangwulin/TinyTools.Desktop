@@ -2,8 +2,9 @@
   "name": "赫德雷",
   "charaKey": "char_4088_hodrer",
   "images": [
-    "https://prts.wiki/images/5/51/立绘_赫德雷_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1d/立绘_赫德雷_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/51/%E7%AB%8B%E7%BB%98_%E8%B5%AB%E5%BE%B7%E9%9B%B7_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1d/%E7%AB%8B%E7%BB%98_%E8%B5%AB%E5%BE%B7%E9%9B%B7_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ed/%E7%AB%8B%E7%BB%98_%E8%B5%AB%E5%BE%B7%E9%9B%B7_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -13,6 +14,14 @@
     {
       "language": "中文-普通话",
       "base": "voice_cn/char_4088_hodrer"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4088_hodrer"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4088_hodrer"
     }
   ],
   "voiceList": [
@@ -26,7 +35,15 @@
         },
         {
           "language": "日文",
-          "content": "この歴史書が半分しか記されていない理由が？まだくすぶっている戦争がページを埋めるのを待っているのさ、死に急ぐサルカズの隊列はせいぜい脚注にしかならんだろうなぁ。ドクター、思うことがあれば遠慮なく言ってくれ、お前ならこの歴史により独創的な評価が下せるかもしれない。"
+          "content": "この歴史書が半分しか記されていない理由か？まだくすぶっている戦争がページを埋めるのを待っているのさ。死に急ぐサルカズの隊列はせいぜい脚注にしかならんだろうな。ドクター、思うことがあれば遠慮なく言ってくれ。お前ならこの歴史に、より独創的な評価が下せるかもしれない。"
+        },
+        {
+          "language": "英文",
+          "content": "Why is this history book only half-written? Because it is waiting to be filled with the wars yet to come. Those Sarkaz who march off to their deaths will be nothing but footnotes. Speak your mind, Doctor. You might just as well leave behind some unique commentary on this segment of history."
+        },
+        {
+          "language": "韩文",
+          "content": "이 역사책은 왜 절반만 기록되어 있냐고? 그야, 앞으로 일어날 전쟁의 기록들이 자신의 빈칸을 채워 주기만을 기다리고 있기 때문이지. 죽음을 향해 발걸음을 재촉하는 그 살카즈들도 기껏해야 각주에 등장하는 정도일 거다. 박사, 하고 싶은 말이 있으면 주저 없이 말하도록. 어쩌면 너는 이 역사에 조금 더 독창적인 평가를 내릴 수 있을지도 모르겠군"
         }
       ]
     },
@@ -40,7 +57,15 @@
         },
         {
           "language": "日文",
-          "content": "スカウトは俺が殺した、剣で心臓を一突きだったよ。だが、あれはあくまで俺たちの間で交わされた取引の一環に過ぎない、傭兵の俺たちに値踏みできないものなどないんだ。へ、あの取引で何よりも不公平なのは、俺が生き続けなければならないという点だなぁ。"
+          "content": "Scoutは俺が殺した。剣で心臓をひと突きだったよ。だが、あれはあくまで俺たちの間で交わされた「取引」の一環に過ぎない。傭兵の俺たちに、値踏みできないものなどないんだ。フッ、あの取引でなによりも不公平なのは、俺が生き続けなければならないという点だな。"
+        },
+        {
+          "language": "英文",
+          "content": "I was the one who killed Scout. We made a 'transaction,' then I jammed my sword through through his heart. Mercenaries like us could put a price on anything. Hmph, the most unfair part of the deal was that I had to keep on living."
+        },
+        {
+          "language": "韩文",
+          "content": "그래, 스카우트는 내가 죽였어. 내가 칼로 그의 심장을 찔렀지. 하지만 그건 어디까지나 우리 사이에 오고 간 '거래'의 일부분일 뿐이야. 우리 같은 용병에게 있어, 값을 매길 수 없는 건 이 세상에 존재하지 않으니까. 하, 이 거래에서 가장 불공평한 점은, 난 계속해서 살아가야 한다는 점이겠지."
         }
       ]
     },
@@ -54,7 +79,15 @@
         },
         {
           "language": "日文",
-          "content": "泥沼から逃れようと足搔く哀れなやつ、そうだなぁ、イネスの言う通りだ。しかしその泥沼の中心部に身を置いてみたら、逃げ場などないことを痛感させられたよ。普通のサルカズには憎しみで凝り固まった勝利に身を捧げる以外に、選択肢がないんだ…だが、本来そうあるべきではないはずだ。俺は絶対に、俺たちの自由な未来は諦めない。"
+          "content": "泥沼から逃れようと足掻く哀れな奴？そうだな、イネスの言う通りだ。しかしその泥沼の中心部に身を置いてみたら、逃げ場などないことを痛感させられたよ。普通のサルカズには、憎しみで凝り固まった勝利に身を捧げる以外に選択肢はないんだ……だが、本来そうあるべきではないはずだ。俺は絶対に、俺たちの自由な未来を諦めない。"
+        },
+        {
+          "language": "英文",
+          "content": "A pathetic soul looking to crawl up out of the quagmire? Ines is right. Still, when the mire wanted to drag me under, I realized there was no escape. For most Sarkaz, they'd find only hatred-borne victories to swallow when they're hungry for revenge. But I refuse to believe it's the way it should be, and I won't stop finding for us a true path to freedom."
+        },
+        {
+          "language": "韩文",
+          "content": "수렁에서 벗어나기 위해 발버둥치던 불쌍한 녀석? 그래, 이네스 말이 맞아. 수렁 한가운데에 있고 나서야, 더 이상 도망칠 곳 따윈 없다는 걸 뼈저리게 깨달았지. 증오로 굳어진 승리에 목숨을 바치는 것 외에 평범한 살카즈에겐 별다른 선택지가 없어…… 하지만 그렇다고 해도, 난 우리의 자유로운 미래를 위해 포기하지 않을 생각이다."
         }
       ]
     },
@@ -68,7 +101,15 @@
         },
         {
           "language": "日文",
-          "content": "子供のごろ、よく母親にサルカズ文字を教わったものだ、母がよく手にいった『クィロンの遠征』という本と、誰かの血で滲んだインクがよく印象に残っているよ。母は鉱石病で死んだが、あの本はきっと擦り切れて無くなるまで、俺たちの涙や希望を載せておいてくれるんだろうなぁ。"
+          "content": "子どもの頃、よく母親にサルカズ文字を教わったものだ。母がよく手にしていた『クイロンの遠征』という本と、誰かの血で滲んだインクがよく印象に残っているよ。母は鉱石病で死んだが、あの本はきっと擦り切れてなくなるまで、俺たちの涙や希望を載せておいてくれるんだろうな。"
+        },
+        {
+          "language": "英文",
+          "content": "When I was young, my mother taught me to read and write Sarkaz. I still remember that volume of 'Qui'lon's Expedition' she kept on her, its ink smudged with some guy's blood... She died of Oripathy. As for the book, it's gonna carry our hopes and tears, until time wears it out."
+        },
+        {
+          "language": "韩文",
+          "content": "어렸을 때, 어머니는 내게 살카즈 문자를 가르쳐 주시곤 했지. 지금도 어머니 손에 들린 《콜람의 원정대》라는 책과 누군가의 피로 얼룩진 잉크가 기억이 나는군. 어머니는 광석병으로 돌아가셨지만, 그 책만큼은 닳아서 없어질 때까지 우리의 눈물과 희망을 담고 있을 거다."
         }
       ]
     },
@@ -82,7 +123,15 @@
         },
         {
           "language": "日文",
-          "content": "獄中では、隣に収容された年寄りのフェリーンの学者と論じ合って、時間を潰していたなぁ、だかヴィクトリアの文明がカズデルよりも進んでいることを、彼が証明するところでいつも話を止まっていたよ。サルカズの看守に処刑されて、結局その持論も証明されず仕舞いだったが、それで俺の勝ちだと喜べるはずもない。"
+          "content": "獄中では、隣に収容されていた年寄りのフェリーンの学者と論じ合って時間を潰していたな。だが、ヴィクトリアの文明がカズデルよりも進んでいることを彼が証明するところでいつも話が止まっていたよ。サルカズの看守に処刑されて、結局その持論も証明されずじまいだったが、それで俺の勝ちだと喜べるはずもない。"
+        },
+        {
+          "language": "英文",
+          "content": "While I was in prison, I liked to kill time by debating a scholar, an old Feline in the next cell over. Our conversations usually ended with him trying to prove that Victoria was more civilized than Kazdel. Eventually, he failed to prove it before the Sarkaz guards executed him. I should say it's not something I feel happy about."
+        },
+        {
+          "language": "韩文",
+          "content": "감옥에 있었을 땐, 옆방에 수감된 늙은 필라인 학자와 논쟁을 벌이며 시간을 때우곤 했어. 하지만 이야기는 늘 그가 빅토리아의 문명이 카즈델보다 앞서 있다는 걸 증명하려는 부분에서 멈췄지. 살카즈 위병에게 처형당하기 전까지도 그는 자신의 생각을 증명하지 못했지만, 그걸 내 승리로 간주하고 기뻐할 순 없더군."
         }
       ]
     },
@@ -96,7 +145,15 @@
         },
         {
           "language": "日文",
-          "content": "集めていたサルカズの歴史書はもうほとんど無くしたよ、焼けて灰になろうか、作戦中にごみとして捨てられようか、そんなもの誰も気にしないからなぁ。だが、幸か不幸か、俺たちが歴史を記しておけるのは、本に限ったことじゃない。"
+          "content": "集めていたサルカズの歴史書はもうほとんど失くしたよ。焼けて灰になろうが、作戦中にゴミとして捨てられようが、そんなもの誰も気にしないからな。だが……幸か不幸か、俺たちが歴史を記しておけるのは、本に限ったことじゃない。"
+        },
+        {
+          "language": "英文",
+          "content": "Most of the Sarkaz history books I collected have been lost. Whether burned to ash or cast aside in action like worthless scraps, their whereabouts hardly piqued anyone else's curiosity. But... for better or for worse, we have other ways to remember history."
+        },
+        {
+          "language": "韩文",
+          "content": "내가 수집하던 살카즈 역사책들은 이제 대부분 사라지고 없어. 불에 타서 잿더미가 되기도, 작전 도중 다른 이들에 의해 쓰레기처럼 버려지기도 했지. 그런 역사책따위 아무도 신경 쓰지 않으니까. 하지만…… 불행인지 다행인지, 우리가 역사를 기록하는 방식은 책뿐만이 아니야."
         }
       ]
     },
@@ -110,7 +167,15 @@
         },
         {
           "language": "日文",
-          "content": "いや…何もしてないが、は、まあいい、図書室で借りた「実務経理入門」を読んでいただけだ。イネスは店をやるなら代金と釣り計算さえできればいいと言っていたが、正にその通りだったよ。いや、別にむだにはならんだろう、何にせよ、ちょっと考えてみただけだ。　"
+          "content": "っ……いや、何もしてないが……はぁ、まあいい。図書室で借りた『実務経理入門』を読んでいただけだ。イネスは店をやるなら代金と釣りの計算さえできればいいと言っていたが、まさにその通りだったよ……いや、別に無駄にはならんだろう。何にせよ……ちょっと考えてみただけだ。"
+        },
+        {
+          "language": "英文",
+          "content": "No, it's nothing... Fine, 'Introduction to Accounting Practice,' borrowed it from the library. Ines says that all you need to know to open a shop is how to collect money and give change, and now I'm a little surprised to find out she's right. Well, I won't call this a waste of effort. At the very least...there's no harm in having some idle thoughts."
+        },
+        {
+          "language": "韩文",
+          "content": "아니, 이건, 별 거 아니고…… 하아, 그래. 《실무 회계 입문》이라는 책을 도서실에서 빌려 읽고 있었다. 이네스가 가게를 열려면 돈 받는 거랑 거스름돈 계산만 할 줄 알면 된다고 했는데, 그 말이 진짜였을 줄이야. 뭐, 어쨌든 헛수고는 아니겠지. 나도 그냥…… 생각만 해 본 것뿐이다."
         }
       ]
     },
@@ -124,7 +189,15 @@
         },
         {
           "language": "日文",
-          "content": "このジャガイモの塩焼きを作ったのは誰だとおもう？Wだよ。意外だったか？あいつはイネス以上に調理を任されることが多かったからだ。案外いけるから、一つどうだ。殺戮の専門家にならなければ傭兵は務まらんが、それを極めたければ他を全て手放すしかないんだ。人間の行動力にも限界というものがあるのでなぁ。"
+          "content": "このじゃがいもの塩焼きを作ったのは誰だと思う？Wだよ。意外だったか？あいつはイネス以上に調理を任されることが多かったからな。案外イケるから一つどうだ。殺戮の専門家にならなければ傭兵は務まらんが、それを極めたければ他をすべて手放すしかないんだ。人間の行動力にも限界というものがあるのでな。"
+        },
+        {
+          "language": "英文",
+          "content": "Can you guess who made these salted potatoes? W, Yeah. Hard to believe, huh? She actually cooks a lot more than Ines does. Try one, they're not bad. Mercenaries are good at taking lives, but there's a limit to one's energy. To hone our craft, we have to set aside everything else."
+        },
+        {
+          "language": "韩文",
+          "content": "이 소금 감자구이를 만든 사람이 누구인지 알겠나? W다. 의외라고? 그 녀석이 이네스보다 요리를 더 자주 했었지. 한번 먹어 봐, 나쁘지 않을 거다. 용병으로 살아남기 위해선 살육의 전문가가 되어야 하지만, 인간의 행동력에도 한계는 있는 법이지. 이 길을 걷기로 선택한 이상, 다른 모든 걸 내려놓을 뿐이야."
         }
       ]
     },
@@ -138,7 +211,15 @@
         },
         {
           "language": "日文",
-          "content": "昔のお前？俺から何も言うつもりはないぞ。忘却もある種の幸運だからな、過去のお前の良し悪しを揶揄しているわけではないし、記憶を失ったところで本当に全てをやり直せるわけでもない。だが、人はやり直しに期待を寄せたくなるものだ、過去の出来事に対しても、人に対してもなぁ。"
+          "content": "昔のお前？俺からは何も言うつもりはないぞ。忘却もある種の幸運だからな。過去のお前の善し悪しを揶揄しているわけではないし、記憶を失ったところで本当にすべてをやり直せるわけでもない。だが、人は「やり直し」に期待を寄せたくなるものだ。過去の出来事に対しても、人に対してもな。"
+        },
+        {
+          "language": "英文",
+          "content": "What were you like back then? My lips are sealed, Doctor. Oftentimes, getting to forget is a gift. Make no mistake, I'm not suggesting you were a good person or some kind of bastard. People always expect things to 'return to the way they were,' whether it's about circumstances or people. However, amnesia won't give anyone a clean restart of life."
+        },
+        {
+          "language": "韩文",
+          "content": "과거의 너? 난 별로 하고 싶은 말이 없다만. 망각도 어떤 의미에선 행운이거든. 난 과거의 네가 좋은 사람이었는지 나쁜 사람이었는지를 암시하려는 게 아니야. 게다가 기억을 잃었다고 모든 걸 처음부터 다시 시작할 수 있는 것도 아니지 않나. 그런데도 사람들은 언제나 '다시 시작'하는 것에 대해 기대감을 가지고 있지. 과거의 일이든, 사람 관계든 말이야."
         }
       ]
     },
@@ -152,7 +233,15 @@
         },
         {
           "language": "日文",
-          "content": "隔世の感を禁じ得ない…白いカーテンが揺れるあの部屋はもうどこにもないんだ。"
+          "content": "隔世の感を禁じ得ない……白いカーテンが揺れるあの部屋はもうどこにもないんだな。"
+        },
+        {
+          "language": "英文",
+          "content": "Seems like a lifetime ago...  Only that room with the swaying white curtains is long gone."
+        },
+        {
+          "language": "韩文",
+          "content": "이런 게 바로 격세지감이라는 건가…… 하얀 커튼이 휘날리던 그 방은 이제 어디에도 없는 모양이군."
         }
       ]
     },
@@ -166,7 +255,15 @@
         },
         {
           "language": "日文",
-          "content": "懐かしい場所だな、ドクター。この依頼の詳細は別に気にしないが、報酬については、賞金以外に、もっといい考えがある。"
+          "content": "懐かしい場所だな、ドクター。この依頼の詳細は別に気にしないが、報酬については、賞金以外にもっといい考えがある。"
+        },
+        {
+          "language": "英文",
+          "content": "A nostalgic place, Doctor. As for this commission of yours, I trust we can both set aside its details for the moment. I do have some other ideas on the rewards, though, beyond the bounty itself."
+        },
+        {
+          "language": "韩文",
+          "content": "옛 생각이 나는 장소로군, 박사. 이 의뢰의 자세한 내용은 아무래도 상관없지만, 보수에 관해선 돈 말고도 더 좋은 생각이 있는데, 들어 보겠나?"
         }
       ]
     },
@@ -180,7 +277,15 @@
         },
         {
           "language": "日文",
-          "content": "これはロドスが改良した訓練方法か？あ、大半のものとってはこのほうが安全だろうが、俺はもっと直接的なやり方のほうがしっくり来る。"
+          "content": "これはロドスが改良した訓練方法か？ああ、大半の者にとってはこの方が安全だろうが、俺はもっと直接的なやり方の方がしっくりくる。"
+        },
+        {
+          "language": "英文",
+          "content": "Is this your upgraded training regimen? Hmm, it's definitely safer for the masses, but I'd do better with something more direct."
+        },
+        {
+          "language": "韩文",
+          "content": "이게 로도스 아일랜드에서 개선한 훈련 방법인가? 그래. 대부분의 사람들에겐 이 편이 더 안전하겠지만, 난 좀 더 직접적인 방식을 선호한다."
         }
       ]
     },
@@ -194,7 +299,15 @@
         },
         {
           "language": "日文",
-          "content": "俺にこんなものは不要だ、ドクター。もしどうしても見返りを与えたいのなら…都合のいい時に、ロドスの子供たちに授業をさせてもらえないか？いや、戦争史などではない、俺は子供たちに…サルカズの田舎民謡を教えてやりたいんだ。"
+          "content": "俺にこんなものは不要だ、ドクター。もしどうしても見返りを与えたいのなら……都合のいい時に、ロドスの子供たちに授業をさせてもらえないか？いや、戦争史などではない。俺は子供たちに……サルカズの田舎民謡を教えてやりたいんだ。"
+        },
+        {
+          "language": "英文",
+          "content": "I don't need these, Doctor. But if you insist on some sort of reward... you think I could teach a class to the children here in my free time? No, not to teach military history. I just want to share with them... some Sarkaz folk songs."
+        },
+        {
+          "language": "韩文",
+          "content": "박사, 내게 이런 건 필요하지 않아. 그럼에도 내게 보답을 하고 싶은 거라면…… 혹시 시간 날 때 내가 로도스 아일랜드 아이들에게 어떤 수업을 하는 걸 허락해주지 않겠나? 아니, 전쟁사 수업 같은 게 아니다. 난 아이들에게…… 살카즈의 시골 민요를 가르쳐 주고 싶다."
         }
       ]
     },
@@ -208,7 +321,15 @@
         },
         {
           "language": "日文",
-          "content": "勲章や称号は何か重要な役割を背負わなければならないのだと、人を錯覚させる。そしてその錯覚はしばしば破滅を招く原因になるんだ。エリート、リーダー、君主…そういった称号はいくらでもあるが、もしかすると、魔王もそのひとつかもしれないなぁ。"
+          "content": "勲章や称号は、何か重要な役割を背負わなければならないのだと人を錯覚させる。そしてその錯覚は、しばしば破滅を招く原因になるんだ。「エリート」「リーダー」「君主」、そういった称号はいくらでもあるが……もしかすると、「魔王」もその一つかもしれないな。"
+        },
+        {
+          "language": "英文",
+          "content": "Medals and titles give people an illusion of some kind of irreplaceable responsibility. Most times, though, it begets nothing but ruination. That's true for 'elite,' 'leader,' 'king'... and even 'the Lord of Fiends.'"
+        },
+        {
+          "language": "韩文",
+          "content": "메달이나 칭호는 마치 중요한 책임을 짊어지고 있는 듯한 착각을 불러일으키지. 그리고 그 착각은 종종 파멸의 원인이 되기도 한다. '정예', '리더', '군주', 어쩌면, '마왕'도…… 그러한 칭호 중 하나일지도 모르겠군."
         }
       ]
     },
@@ -223,6 +344,14 @@
         {
           "language": "日文",
           "content": "争いが避けられないのなら、すぐに終わらせるのが慈悲だろう。"
+        },
+        {
+          "language": "英文",
+          "content": "If conflict is unavoidable, a swift end is a form of mercy."
+        },
+        {
+          "language": "韩文",
+          "content": "피할 수 없는 싸움이라면, 빠르게 끝내는 것이 자비일 테지."
         }
       ]
     },
@@ -236,7 +365,15 @@
         },
         {
           "language": "日文",
-          "content": "暫定的なものと約束してくれ、こう言う役割には興味ないんだ。"
+          "content": "暫定的なものと約束してくれ。こういう役割には興味ないんだ。"
+        },
+        {
+          "language": "英文",
+          "content": "I only hope this is temporary. It's not really my thing."
+        },
+        {
+          "language": "韩文",
+          "content": "이러한 역할은 일시적인 거라고 약속해줬으면 좋겠군. 별로 흥미가 없어서 말이야."
         }
       ]
     },
@@ -251,6 +388,14 @@
         {
           "language": "日文",
           "content": "余燼が俺たちの痕跡を覆い隠してくれるさ。"
+        },
+        {
+          "language": "英文",
+          "content": "Embers will hide our footsteps."
+        },
+        {
+          "language": "韩文",
+          "content": "잿더미가 우리의 흔적을 덮어줄 것이다."
         }
       ]
     },
@@ -264,7 +409,15 @@
         },
         {
           "language": "日文",
-          "content": "戦争はいつまでも変わらないなぁ。"
+          "content": "……戦争はいつまでも変わらないな。"
+        },
+        {
+          "language": "英文",
+          "content": "...War never changes."
+        },
+        {
+          "language": "韩文",
+          "content": "……전쟁은 변하지 않는군."
         }
       ]
     },
@@ -279,6 +432,14 @@
         {
           "language": "日文",
           "content": "自ら下した決断を疑うな。"
+        },
+        {
+          "language": "英文",
+          "content": "Don't doubt your own judgment."
+        },
+        {
+          "language": "韩文",
+          "content": "네 결정을 의심하지 마라."
         }
       ]
     },
@@ -293,6 +454,14 @@
         {
           "language": "日文",
           "content": "いいチャンスだ。"
+        },
+        {
+          "language": "英文",
+          "content": "Seize the moment."
+        },
+        {
+          "language": "韩文",
+          "content": "좋은 기회로군."
         }
       ]
     },
@@ -307,6 +476,14 @@
         {
           "language": "日文",
           "content": "依頼内容は承知した。"
+        },
+        {
+          "language": "英文",
+          "content": "Order acknowledged."
+        },
+        {
+          "language": "韩文",
+          "content": "의뢰 내용은 확인했다."
         }
       ]
     },
@@ -321,6 +498,14 @@
         {
           "language": "日文",
           "content": "慣れ親しんだ戦場だ。"
+        },
+        {
+          "language": "英文",
+          "content": "Same battlefield, different day."
+        },
+        {
+          "language": "韩文",
+          "content": "익숙한 전장이군."
         }
       ]
     },
@@ -335,6 +520,14 @@
         {
           "language": "日文",
           "content": "憎悪がお前の視野を奪う。"
+        },
+        {
+          "language": "英文",
+          "content": "Eyes blind by hatred."
+        },
+        {
+          "language": "韩文",
+          "content": "증오가 네 눈을 가릴 것이다."
         }
       ]
     },
@@ -349,6 +542,14 @@
         {
           "language": "日文",
           "content": "余燼がその目を曇らせる。"
+        },
+        {
+          "language": "英文",
+          "content": "Sense deprived by ember."
+        },
+        {
+          "language": "韩文",
+          "content": "잿더미에 눈이 멀지어다."
         }
       ]
     },
@@ -362,7 +563,15 @@
         },
         {
           "language": "日文",
-          "content": "見渡す限り戦場だ、どこに逃げるつもりだ。"
+          "content": "見渡す限り戦場だ。どこに逃げるつもりだ？"
+        },
+        {
+          "language": "英文",
+          "content": "The battlefield's all around you. Where do you think you're running?"
+        },
+        {
+          "language": "韩文",
+          "content": "보이는 족족 전장일 텐데, 어디로 도망칠 셈이지?"
         }
       ]
     },
@@ -376,7 +585,15 @@
         },
         {
           "language": "日文",
-          "content": "もういい、終わりにしよう。"
+          "content": "もういい。終わりにしよう。"
+        },
+        {
+          "language": "英文",
+          "content": "Enough. Time to end this."
+        },
+        {
+          "language": "韩文",
+          "content": "여기까지 하지, 끝낼 시간이다."
         }
       ]
     },
@@ -390,7 +607,15 @@
         },
         {
           "language": "日文",
-          "content": "たった一度の快勝では局面を覆すことなどできないが、一時の安らぎが得られる、お前も一息ついたらどうだ？"
+          "content": "たった一度の快勝では局面を覆すことなどできないが、ひとときの安らぎは得られる。お前も一息ついたらどうだ。"
+        },
+        {
+          "language": "英文",
+          "content": "One great victory isn't enough to tip the balance, but it can buy you a moment of respite. You may catch a breath now."
+        },
+        {
+          "language": "韩文",
+          "content": "단 한 번의 승리로 형세를 뒤집을 수는 없지만, 적어도 한숨 돌릴 시간 정도는 벌었겠지. 그러니 너도 잠시 쉬는 게 어떻겠나, 박사."
         }
       ]
     },
@@ -404,7 +629,15 @@
         },
         {
           "language": "日文",
-          "content": "俺たちが消し去ろうとしているものを思えば、たった一度の軍事的な勝利に意味などない。これはあくまで道すがら解決せざるを得ない面倒ことの一つというだけだ。"
+          "content": "俺たちが消し去ろうとしているものを思えば、たった一度の軍事的な勝利に意味などない。これはあくまで、道すがら解決せざるを得ない面倒事の一つというだけだ。"
+        },
+        {
+          "language": "英文",
+          "content": "A single military victory means nothing in the face of what we're putting a stop to.  This is just a nuisance we've cleared aside."
+        },
+        {
+          "language": "韩文",
+          "content": "우리가 목표하는 바를 생각하면, 지금 이 한 번의 승리엔 큰 의미가 없을 테지. 우린 단지 처리해야만 하는 일을 처리했을 뿐이다."
         }
       ]
     },
@@ -418,7 +651,15 @@
         },
         {
           "language": "日文",
-          "content": "そう落ち込むな、ドクター、俺たちが味方についているんだ。逃げた連中についても、俺が片付いておくから安心してくれ。"
+          "content": "そう落ち込むな、ドクター。俺たちが味方に付いているんだ。逃げた連中についても、俺が片付けておくから安心してくれ。"
+        },
+        {
+          "language": "英文",
+          "content": "Why the long face, Doctor? Our heads are still sitting on our shoulders. As for them, don't worry, I'll take care of that for you."
+        },
+        {
+          "language": "韩文",
+          "content": "그렇게 낙담하지 말도록, 박사. 지금 넌 우리와 함께 이곳에 있지 않나. 도망친 녀석들이라면 내가 알아서 처리할 테니, 안심해라."
         }
       ]
     },
@@ -432,7 +673,15 @@
         },
         {
           "language": "日文",
-          "content": "お前の首を付け狙うやつが減るのも悪いことじゃないだろう。"
+          "content": "お前の首を付け狙う奴が減るのも、悪いことじゃないだろう？"
+        },
+        {
+          "language": "英文",
+          "content": "Less guys on your case isn't such a bad thing, is it?"
+        },
+        {
+          "language": "韩文",
+          "content": "네 목을 노리는 놈이 줄어드는 것도 나쁘지 않은 결과인 것 같은데, 안 그런가?"
         }
       ]
     },
@@ -446,7 +695,15 @@
         },
         {
           "language": "日文",
-          "content": "イネスとW…二人もここにいるのか？"
+          "content": "イネスとW……二人もここにいるのか？"
+        },
+        {
+          "language": "英文",
+          "content": "Ines and W? They're here too?"
+        },
+        {
+          "language": "韩文",
+          "content": "이네스와 W…… 그 둘도 여기에 있나?"
         }
       ]
     },
@@ -460,7 +717,15 @@
         },
         {
           "language": "日文",
-          "content": "これ以上…何を確かめようとしてるんだ？"
+          "content": "これ以上……何を確かめようとしてるんだ？"
+        },
+        {
+          "language": "英文",
+          "content": "You… Anything else you want to know?"
+        },
+        {
+          "language": "韩文",
+          "content": "넌…… 대체 뭘 더 확인하고 싶은 거지?"
         }
       ]
     },
@@ -474,7 +739,15 @@
         },
         {
           "language": "日文",
-          "content": "悪いが、無駄話に付き合う暇はない…遊び相手が欲しいならWに聞いてみろう。うん？お前も追い出されたのか？"
+          "content": "悪いが無駄話に付き合う暇はない……遊び相手が欲しいならWに聞いてみろ。ん？お前も追い出されたのか。"
+        },
+        {
+          "language": "英文",
+          "content": "I don't have time for small talk. If you want fun and games, go look for W. Huh, so I'm not the only one who just got kicked out."
+        },
+        {
+          "language": "韩文",
+          "content": "미안하지만 잡담이나 나눌 시간은 없다…… 심심한 거라면 W라도 찾아가보던가. 음? 너도 쫓겨난 건가."
         }
       ]
     },
@@ -489,6 +762,36 @@
         {
           "language": "日文",
           "content": "アークナイツ。"
+        },
+        {
+          "language": "英文",
+          "content": "Arknights."
+        },
+        {
+          "language": "韩文",
+          "content": "명일방주."
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年聚会上的爆炸？看来你们给了W一个放纵自己的完美借口。唉，我会去处理的......把伊内丝也叫上，她不能总挑这种时候躲清静，让我一个人收拾残局。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     },
@@ -502,7 +805,37 @@
         },
         {
           "language": "日文",
-          "content": "おっと、いったのか？少し考えことをしていた…未来について。"
+          "content": "おっと、いたのか。少し、考え事をしていた……未来について。"
+        },
+        {
+          "language": "英文",
+          "content": "Didn't see you there. I was just... thinking about the future."
+        },
+        {
+          "language": "韩文",
+          "content": "아, 거기 있었나. 그저 잠깐…… 미래에 대해서 생각하고 있었다."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "巴别塔曾经是航行在废墟中的萨卡兹理想乡，殿下以为她失败了，但你们证明，这条道路还没有走到尽头......我真心期待着你最后会带我们看到什么，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

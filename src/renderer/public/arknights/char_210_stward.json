@@ -2,8 +2,8 @@
   "name": "史都华德",
   "charaKey": "char_210_stward",
   "images": [
-    "https://prts.wiki/images/4/44/立绘_史都华德_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fe/立绘_史都华德_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/4/44/%E7%AB%8B%E7%BB%98_%E5%8F%B2%E9%83%BD%E5%8D%8E%E5%BE%B7_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fe/%E7%AB%8B%E7%BB%98_%E5%8F%B2%E9%83%BD%E5%8D%8E%E5%BE%B7_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -805,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "每年这个时候，谢拉格都会下大雪。将过去一年全部埋在厚厚的积雪下面，新的一年也就开始了。有机会的话，真想请博士去看看呢。当然，雪天的野外很危险，请让我为您带路。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -827,6 +853,32 @@
         {
           "language": "繁体中文",
           "content": "請多關照，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "如果没有来到罗德岛的话，就没有机会继续学习源石技艺，更重要的是，就不会认识A4行动组的大家。我知道这一切是多么地来之不易，我一定会珍惜的。博士，今后也请您多多关照！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

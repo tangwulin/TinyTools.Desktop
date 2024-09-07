@@ -2,10 +2,10 @@
   "name": "阿",
   "charaKey": "char_225_haak",
   "images": [
-    "https://prts.wiki/images/6/67/立绘_阿_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ac/立绘_阿_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/76/立绘_阿_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a7/立绘_阿_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/67/%E7%AB%8B%E7%BB%98_%E9%98%BF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ac/%E7%AB%8B%E7%BB%98_%E9%98%BF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/76/%E7%AB%8B%E7%BB%98_%E9%98%BF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a7/%E7%AB%8B%E7%BB%98_%E9%98%BF_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -1051,6 +1051,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐啊，老板。吽刚炒了几个菜，尝了没有？我倒不怎么在意过节，吵吵闹闹，又没什么用，不如在这里坐着吹吹风。不过，要吃糖水吗？我从餐桌上拿的，味道还真不错。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "新年快乐啊，老板。吽刚刚炒了几个菜，有冇试过？其实我对过节没什么兴趣，嘈喧巴闭，浪费时间，还不如坐在这里吹吹风。不过，食唔食糖水啊？我从餐桌拿过来的，又真系几好食㗎。"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1077,6 +1107,36 @@
         {
           "language": "中文-方言",
           "content": "老板，今日身体几好吗？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "很重要吗？我倒不是真的很在意自己到底要成为一个什么样的人，只是槐琥姐和吽他们好像总是在期待着什么，罗德岛又比我想的要好那么一点，我当然愿意跟着你们继续做。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "好重要吗？我其实不太在意自己究竟要成为一个怎样的人，只不过槐琥姐和吽他们好像总是在期待什么，而罗德岛又好过我当初想的那么一点，那么我当然愿意跟着你们做下去。"
         }
       ]
     }

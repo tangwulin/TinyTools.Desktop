@@ -2,9 +2,9 @@
   "name": "格拉尼",
   "charaKey": "char_220_grani",
   "images": [
-    "https://prts.wiki/images/c/c4/立绘_格拉尼_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_格拉尼_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/10/立绘_格拉尼_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/c/c4/%E7%AB%8B%E7%BB%98_%E6%A0%BC%E6%8B%89%E5%B0%BC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/22/%E7%AB%8B%E7%BB%98_%E6%A0%BC%E6%8B%89%E5%B0%BC_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/10/%E7%AB%8B%E7%BB%98_%E6%A0%BC%E6%8B%89%E5%B0%BC_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士！我们也奋战了一年了呢，罗德岛的各位身上的那股劲，足以支撑我做更多让这片大地变好的事情！但话又说回来，不吃饱肚子可是不行的，你们在吃什么这么香？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "你好，博士！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "这把长枪陪伴我很久了，很多人都说我无法最大限度地发掘它的潜能。但是博士，我手中的长枪所能及的范围，我希望是正义所在的地方，只要坚信自己是在为正义而战，我就不会输给任何人。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

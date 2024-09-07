@@ -2,8 +2,8 @@
   "name": "芬",
   "charaKey": "char_123_fang",
   "images": [
-    "https://prts.wiki/images/a/af/立绘_芬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/de/立绘_芬_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/a/af/%E7%AB%8B%E7%BB%98_%E8%8A%AC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/de/%E7%AB%8B%E7%BB%98_%E8%8A%AC_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -805,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士，我们小队准备去聚餐，正准备去邀请杜宾老师，您也一起来吗？我也还有一些战斗上的问题......啊，抱歉，已经是节日了，我不应该再提工作的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -827,6 +853,32 @@
         {
           "language": "繁体中文",
           "content": "我隨時都可以，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "按照既定目标，我已经完成了要做的所有训练，小队的其他人也在杜宾老师的训练下进步了很多，我们在战斗方面已经磨合得越来越好。博士，我会成为更好的队长的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

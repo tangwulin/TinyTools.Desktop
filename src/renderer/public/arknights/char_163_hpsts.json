@@ -2,8 +2,8 @@
   "name": "火神",
   "charaKey": "char_163_hpsts",
   "images": [
-    "https://prts.wiki/images/9/92/立绘_火神_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/03/立绘_火神_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/92/%E7%AB%8B%E7%BB%98_%E7%81%AB%E7%A5%9E_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/03/%E7%AB%8B%E7%BB%98_%E7%81%AB%E7%A5%9E_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -905,6 +905,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。稍等一下，我正在处理锻炉，干我们这行的有个习惯，新年燃起的炉火一定要旺盛，只有这样，打造出的装备才会好用。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -927,6 +953,32 @@
         {
           "language": "繁体中文",
           "content": "早安，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛里喜爱武器的人越来越多了，我之前已经习惯了一个人，现在他们几个经常跑到我这里来......也挺有趣的，我不讨厌这种热闹，有时候还会觉得，也许再多几个也不是坏事。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

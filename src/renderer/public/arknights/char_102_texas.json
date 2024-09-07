@@ -2,10 +2,10 @@
   "name": "德克萨斯",
   "charaKey": "char_102_texas",
   "images": [
-    "https://prts.wiki/images/f/fc/立绘_德克萨斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_德克萨斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_德克萨斯_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2b/立绘_德克萨斯_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1f/%E7%AB%8B%E7%BB%98_%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2b/%E7%AB%8B%E7%BB%98_%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -1051,6 +1051,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，我正要把这些东西拿给能天使，她说今晚要开一个大派对，庆祝自己的业绩没有垫底。可颂刚才还在搬自己进的那一大批货，现在应该是摆摊去了。空的新歌听了么？我挺喜欢的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "Felice anno nuovo. Oggi fa freddo, se solo nevicasse...voglio che nevichi? Forse sì. Mi piace vedere il mondo coperto di neve e avvolto nel silenzio."
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1077,6 +1107,36 @@
         {
           "language": "意大利文",
           "content": "Giorno."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛这样的纪念日挺好的，这是我刚才拿的几颗酒心巧克力，朗姆酒苦杏仁味的，味道不错，尝尝看吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "Gli anniversari a Rhodes Island sono fantastici. Tieni, ho preso queste palline di cioccolato ripiene di liquore, rum e mandorla, deliziose, provane."
         }
       ]
     }

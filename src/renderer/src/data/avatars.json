@@ -4,899 +4,1019 @@
     "female": [
       {
         "description": "小鸟游星野",
-        "url": "https://api.kivo.wiki/assets/images/students/小鸟游 星野/avatar.png"
+        "url": "https://static.kivo.fun/images/students/小鸟游 星野/avatar.png"
+      },
+      {
+        "description": "小鸟游星野(临战)",
+        "url": "https://static.kivo.fun/images/students/小鸟游 星野/临战/avatar.png"
       },
       {
         "description": "小鸟游星野(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/小鸟游 星野/泳装/avatar.png"
+        "url": "https://static.kivo.fun/images/students/小鸟游 星野/泳装/avatar.png"
       },
       {
         "description": "砂狼白子",
-        "url": "https://api.kivo.wiki/assets/images/students/砂狼 白子/avatar.png"
+        "url": "https://static.kivo.fun/images/students/砂狼 白子/avatar.png"
       },
       {
         "description": "砂狼白子(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/砂狼 白子/泳装/avatar.png"
+        "url": "https://static.kivo.fun/images/students/砂狼 白子/泳装/avatar.png"
       },
       {
         "description": "砂狼白子(骑行服)",
-        "url": "https://api.kivo.wiki/assets/images/students/砂狼 白子/单车/avatar.png"
+        "url": "https://static.kivo.fun/images/students/砂狼 白子/单车/avatar.png"
+      },
+      {
+        "description": "砂狼白子*恐怖",
+        "url": "https://static.kivo.fun/images/students/砂狼 白子*恐怖/original/avatar.png"
       },
       {
         "description": "奥空绫音",
-        "url": "https://api.kivo.wiki/assets/images/students/奥空 绫音/avatar.png"
+        "url": "https://static.kivo.fun/images/students/奥空 绫音/avatar.png"
       },
       {
         "description": "奥空绫音(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/奥空 绫音/泳装/avatar.png"
+        "url": "https://static.kivo.fun/images/students/奥空 绫音/泳装/avatar.png"
       },
       {
         "description": "黑见芹香",
-        "url": "https://api.kivo.wiki/assets/images/students/黑见 芹香/avatar.png"
+        "url": "https://static.kivo.fun/images/students/黑见 芹香/avatar.png"
       },
       {
         "description": "黑见芹香(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/黑见 芹香/正月/avatar.png"
-      },
-      {
-        "description": "十六夜野宫",
-        "url": "https://api.kivo.wiki/assets/images/students/十六夜 野宫/avatar.png"
-      },
-      {
-        "description": "十六夜野宫(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/十六夜 野宫/泳装/avatar.png"
-      },
-      {
-        "description": "仲正一花",
-        "url": "https://api.kivo.wiki/assets/images/students/一花/avatar.png"
-      },
-      {
-        "description": "杏山和纱",
-        "url": "https://api.kivo.wiki/assets/images/students/杏山 和纱/avatar.png"
-      },
-      {
-        "description": "柚鸟夏",
-        "url": "https://api.kivo.wiki/assets/images/students/柚鸟 夏/avatar.png"
-      },
-      {
-        "description": "伊原木好美",
-        "url": "https://api.kivo.wiki/assets/images/students/伊原木 好美/avatar.png"
-      },
-      {
-        "description": "下江小春",
-        "url": "https://api.kivo.wiki/assets/images/students/下江 小春/avatar.png"
-      },
-      {
-        "description": "下江小春(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/下江 小春/泳装/avatar.png"
-      },
-      {
-        "description": "圆堂志美子",
-        "url": "https://api.kivo.wiki/assets/images/students/圆堂 志美子/avatar.png"
-      },
-      {
-        "description": "古关忧",
-        "url": "https://api.kivo.wiki/assets/images/students/古关 忧/avatar.png"
-      },
-      {
-        "description": "古关忧(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/古关 忧/泳装/avatar.png"
-      },
-      {
-        "description": "若叶日向",
-        "url": "https://api.kivo.wiki/assets/images/students/若叶 日向/avatar.png"
-      },
-      {
-        "description": "若叶日向(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/若叶 日向/泳装/avatar.png"
-      },
-      {
-        "description": "阿慈谷日富美",
-        "url": "https://api.kivo.wiki/assets/images/students/阿慈谷 日富美/avatar.png"
-      },
-      {
-        "description": "阿慈谷日富美(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/阿慈谷 日富美/泳装/avatar.png"
-      },
-      {
-        "description": "圣园未花",
-        "url": "https://api.kivo.wiki/assets/images/students/圣园未花/avatar.png"
-      },
-      {
-        "description": "白洲梓",
-        "url": "https://api.kivo.wiki/assets/images/students/白洲梓/avatar.png"
-      },
-      {
-        "description": "白洲梓(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/白洲 梓/泳装/avatar.png"
-      },
-      {
-        "description": "歌住樱子",
-        "url": "https://api.kivo.wiki/assets/images/students/歌住 樱子/avatar.png"
-      },
-      {
-        "description": "桐藤渚",
-        "url": "https://api.kivo.wiki/assets/images/students/桐藤 渚/avatar.png"
-      },
-      {
-        "description": "栗村爱莉",
-        "url": "https://api.kivo.wiki/assets/images/students/栗村 爱莉/avatar.png"
-      },
-      {
-        "description": "伊落玛丽",
-        "url": "https://api.kivo.wiki/assets/images/students/伊落 玛丽/avatar.png"
-      },
-      {
-        "description": "伊落玛丽(体育服)",
-        "url": "https://api.kivo.wiki/assets/images/students/伊落 玛丽/体育服/avatar.png"
-      },
-      {
-        "description": "宇泽玲纱",
-        "url": "https://api.kivo.wiki/assets/images/students/宇泽 玲纱/avatar.png"
-      },
-      {
-        "description": "静山真白",
-        "url": "https://api.kivo.wiki/assets/images/students/静山 真白/avatar.png"
-      },
-      {
-        "description": "静山真白(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/静山 真白/泳装/avatar.png"
-      },
-      {
-        "description": "苍森美弥",
-        "url": "https://api.kivo.wiki/assets/images/students/苍森 美弥/avatar.png"
-      },
-      {
-        "description": "浦和花子",
-        "url": "https://api.kivo.wiki/assets/images/students/浦和 花子/avatar.png"
-      },
-      {
-        "description": "浦和花子(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/浦和 花子/泳装/avatar.png"
-      },
-      {
-        "description": "朝颜花江",
-        "url": "https://api.kivo.wiki/assets/images/students/朝颜 花江/avatar.png"
-      },
-      {
-        "description": "朝颜花江(圣诞节)",
-        "url": "https://api.kivo.wiki/assets/images/students/朝颜 花江/圣诞节/avatar.png"
-      },
-      {
-        "description": "鹫见芹娜",
-        "url": "https://api.kivo.wiki/assets/images/students/鹫见 芹娜/avatar.png"
-      },
-      {
-        "description": "鹫见芹娜(圣诞节)",
-        "url": "https://api.kivo.wiki/assets/images/students/鹫见 芹娜/圣诞节/avatar.png"
-      },
-      {
-        "description": "羽川莲见",
-        "url": "https://api.kivo.wiki/assets/images/students/羽川 莲见/avatar.png"
-      },
-      {
-        "description": "羽川莲见(体育服)",
-        "url": "https://api.kivo.wiki/assets/images/students/羽川 莲见/体育服/avatar.png"
-      },
-      {
-        "description": "守月铃美",
-        "url": "https://api.kivo.wiki/assets/images/students/守月 铃美/avatar.png"
-      },
-      {
-        "description": "剑先鹤城",
-        "url": "https://api.kivo.wiki/assets/images/students/剑先 鹤城/avatar.png"
-      },
-      {
-        "description": "剑先鹤城(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/剑先 鹤城/泳装/avatar.png"
-      },
-      {
-        "description": "天雨亚子",
-        "url": "https://api.kivo.wiki/assets/images/students/天雨 亚子/avatar.png"
-      },
-      {
-        "description": "天雨亚子(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/天雨 亚子/礼服/avatar.png"
-      },
-      {
-        "description": "枣伊吕波",
-        "url": "https://api.kivo.wiki/assets/images/students/枣 伊吕波/avatar.png"
-      },
-      {
-        "description": "丹花伊吹",
-        "url": "https://api.kivo.wiki/assets/images/students/丹花 伊吹/avatar.png"
-      },
-      {
-        "description": "银镜伊织",
-        "url": "https://api.kivo.wiki/assets/images/students/银镜 伊织/avatar.png"
-      },
-      {
-        "description": "银镜伊织(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/银镜 伊织/泳装/avatar.png"
-      },
-      {
-        "description": "鬼方佳代子",
-        "url": "https://api.kivo.wiki/assets/images/students/鬼方 佳代子/avatar.png"
-      },
-      {
-        "description": "鬼方佳代子(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/鬼方 佳代子/正月/avatar.png"
-      },
-      {
-        "description": "鬼方佳代子(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/鬼方 佳代子/礼服/avatar.png"
-      },
-      {
-        "description": "火宫千夏",
-        "url": "https://api.kivo.wiki/assets/images/students/火宫 千夏/avatar.png"
-      },
-      {
-        "description": "火宫千夏(温泉)",
-        "url": "https://api.kivo.wiki/assets/images/students/火宫 千夏/温泉/avatar.png"
-      },
-      {
-        "description": "下仓惠",
-        "url": "https://api.kivo.wiki/assets/images/students/下仓 惠/avatar.png"
-      },
-      {
-        "description": "空崎日奈",
-        "url": "https://api.kivo.wiki/assets/images/students/空崎 日奈/avatar.png"
-      },
-      {
-        "description": "空崎日奈(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/空崎 日奈/泳装/avatar.png"
-      },
-      {
-        "description": "空崎日奈(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/空崎 日奈/礼服/avatar.png"
-      },
-      {
-        "description": "鳄渊明里",
-        "url": "https://api.kivo.wiki/assets/images/students/鳄渊 明里/avatar.png"
-      },
-      {
-        "description": "鳄渊明里(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/鳄渊 明里/正月/avatar.png"
-      },
-      {
-        "description": "黑馆晴奈",
-        "url": "https://api.kivo.wiki/assets/images/students/黑馆 晴奈/avatar.png"
-      },
-      {
-        "description": "黑馆晴奈(体育服)",
-        "url": "https://api.kivo.wiki/assets/images/students/黑馆 晴奈/体操服/avatar.png"
-      },
-      {
-        "description": "黑馆晴奈(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/黑馆 晴奈/正月/avatar.png"
-      },
-      {
-        "description": "牛牧朱莉",
-        "url": "https://api.kivo.wiki/assets/images/students/牛牧 茱莉/avatar.png"
-      },
-      {
-        "description": "爱清枫香",
-        "url": "https://api.kivo.wiki/assets/images/students/爱清 枫香/avatar.png"
-      },
-      {
-        "description": "爱清枫香(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/爱清 枫香/正月/avatar.png"
-      },
-      {
-        "description": "狮子堂泉",
-        "url": "https://api.kivo.wiki/assets/images/students/狮子堂 泉/avatar.png"
-      },
-      {
-        "description": "狮子堂泉(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/狮子堂 泉/泳装/avatar.png"
-      },
-      {
-        "description": "冰室濑名",
-        "url": "https://api.kivo.wiki/assets/images/students/冰室濑名/avatar.png"
-      },
-      {
-        "description": "羽沼真琴",
-        "url": "https://api.kivo.wiki/assets/images/students/羽沼 真琴/avatar.png"
-      },
-      {
-        "description": "浅黄睦月",
-        "url": "https://api.kivo.wiki/assets/images/students/浅黄 睦月/avatar.png"
-      },
-      {
-        "description": "浅黄睦月(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/浅黄 睦月/正月/avatar.png"
-      },
-      {
-        "description": "赤司纯子",
-        "url": "https://api.kivo.wiki/assets/images/students/赤司 纯子/avatar.png"
-      },
-      {
-        "description": "赤司纯子(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/赤司 纯子/正月/avatar.png"
-      },
-      {
-        "description": "伊草遥香",
-        "url": "https://api.kivo.wiki/assets/images/students/伊草 春香/avatar.png"
-      },
-      {
-        "description": "伊草遥香(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/伊草 遥香/正月/avatar.png"
-      },
-      {
-        "description": "陆八魔阿露",
-        "url": "https://api.kivo.wiki/assets/images/students/陆八魔 阿露/avatar.png"
-      },
-      {
-        "description": "陆八魔阿露(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/陆八魔 阿露/正月/avatar.png"
-      },
-      {
-        "description": "陆八魔阿露(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/陆八魔 阿露/礼服/avatar.png"
-      },
-      {
-        "description": "鬼怒川霞",
-        "url": "https://api.kivo.wiki/assets/images/students/霞/avatar.png"
-      },
-      {
-        "description": "早濑优香",
-        "url": "https://api.kivo.wiki/assets/images/students/早瀬 优香/avatar.png"
-      },
-      {
-        "description": "早濑优香(体育服)",
-        "url": "https://api.kivo.wiki/assets/images/students/早濑 优香/avatar.png"
-      },
-      {
-        "description": "各务千寻",
-        "url": "https://api.kivo.wiki/assets/images/students/各务千寻/avatar.png"
-      },
-      {
-        "description": "猫塚响",
-        "url": "https://api.kivo.wiki/assets/images/students/猫冢 响/avatar.png"
-      },
-      {
-        "description": "猫塚响(应援团)",
-        "url": "https://api.kivo.wiki/assets/images/students/猫塚 响/avatar.png"
-      },
-      {
-        "description": "乙花堇",
-        "url": "https://api.kivo.wiki/assets/images/students/乙花 堇/avatar.png"
-      },
-      {
-        "description": "美甘妮禄",
-        "url": "https://api.kivo.wiki/assets/images/students/美甘 尼禄/avatar.png"
-      },
-      {
-        "description": "美甘妮禄(兔女郎)",
-        "url": "https://api.kivo.wiki/assets/images/students/美甘 尼禄/兔女郎/avatar.png"
-      },
-      {
-        "description": "音濑小玉",
-        "url": "https://api.kivo.wiki/assets/images/students/音濑 小玉/avatar.png"
-      },
-      {
-        "description": "音濑小玉(露营)",
-        "url": "https://api.kivo.wiki/assets/images/students/音濑 小玉/露营/avatar.png"
-      },
-      {
-        "description": "黑崎小雪",
-        "url": "https://api.kivo.wiki/assets/images/students/黑崎 小雪/avatar.png"
-      },
-      {
-        "description": "丰见小鸟",
-        "url": "https://api.kivo.wiki/assets/images/students/丰见 小鸟/avatar.png"
-      },
-      {
-        "description": "丰见小鸟(应援团)",
-        "url": "https://api.kivo.wiki/assets/images/students/丰见 小鸟/应援团/avatar.png"
-      },
-      {
-        "description": "明星日鞠",
-        "url": "https://api.kivo.wiki/assets/images/students/明星 日鞠/avatar.png"
-      },
-      {
-        "description": "飞鸟马时",
-        "url": "https://api.kivo.wiki/assets/images/students/飞鸟马 时/avatar.png"
-      },
-      {
-        "description": "飞鸟马时(兔女郎)",
-        "url": "https://api.kivo.wiki/assets/images/students/飞鸟马 时/兔女郎/avatar.png"
-      },
-      {
-        "description": "一之濑明日奈",
-        "url": "https://api.kivo.wiki/assets/images/students/一之瀬 明日奈/avatar.png"
-      },
-      {
-        "description": "一之濑明日奈(兔女郎)",
-        "url": "https://api.kivo.wiki/assets/images/students/一之濑 明日奈/兔女郎/avatar.png"
-      },
-      {
-        "description": "小钩晴",
-        "url": "https://api.kivo.wiki/assets/images/students/小钩 晴/avatar.png"
-      },
-      {
-        "description": "小钩晴(露营)",
-        "url": "https://api.kivo.wiki/assets/images/students/小钩 晴/露营/avatar.png"
-      },
-      {
-        "description": "花冈柚子",
-        "url": "https://api.kivo.wiki/assets/images/students/花冈 柚子/avatar.png"
-      },
-      {
-        "description": "花冈柚子(女仆)",
-        "url": "https://api.kivo.wiki/assets/images/students/花冈 柚子/女仆/avatar.png"
-      },
-      {
-        "description": "才羽桃井",
-        "url": "https://api.kivo.wiki/assets/images/students/才羽桃井/avatar.png"
-      },
-      {
-        "description": "白石歌原",
-        "url": "https://api.kivo.wiki/assets/images/students/白石 歌原/avatar.png"
-      },
-      {
-        "description": "白石歌原(应援团)",
-        "url": "https://api.kivo.wiki/assets/images/students/白石 歌原/应援团/avatar.png"
-      },
-      {
-        "description": "天童爱丽丝",
-        "url": "https://api.kivo.wiki/assets/images/students/天童 爱丽丝/avatar.png"
-      },
-      {
-        "description": "天童爱丽丝(女仆)",
-        "url": "https://api.kivo.wiki/assets/images/students/天童 爱丽丝/女仆/avatar.png"
-      },
-      {
-        "description": "小涂真纪",
-        "url": "https://api.kivo.wiki/assets/images/students/小涂 真纪/avatar.png"
-      },
-      {
-        "description": "才羽绿",
-        "url": "https://api.kivo.wiki/assets/images/students/才羽绿/avatar.png"
-      },
-      {
-        "description": "和泉元艾米",
-        "url": "https://api.kivo.wiki/assets/images/students/和泉元 艾米/avatar.png"
-      },
-      {
-        "description": "和泉元艾米(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/和泉元 艾米/泳装/avatar.png"
-      },
-      {
-        "description": "角楯花凛",
-        "url": "https://api.kivo.wiki/assets/images/students/角楯 花凛/avatar.png"
-      },
-      {
-        "description": "角楯花凛(兔女郎)",
-        "url": "https://api.kivo.wiki/assets/images/students/角楯 花凛/兔女郎/avatar.png"
-      },
-      {
-        "description": "室笠茜",
-        "url": "https://api.kivo.wiki/assets/images/students/室笠 茜/avatar.png"
-      },
-      {
-        "description": "室笠茜(兔女郎)",
-        "url": "https://api.kivo.wiki/assets/images/students/室笠 茜/兔女郎/avatar.png"
-      },
-      {
-        "description": "生盐诺亚",
-        "url": "https://api.kivo.wiki/assets/images/students/生盐 诺亚/avatar.png"
-      },
-      {
-        "description": "连河切里诺",
-        "url": "https://api.kivo.wiki/assets/images/students/连河 切里诺/avatar.png"
-      },
-      {
-        "description": "连河切里诺(温泉)",
-        "url": "https://api.kivo.wiki/assets/images/students/连河 切利诺/温泉/avatar.png"
-      },
-      {
-        "description": "天见和香",
-        "url": "https://api.kivo.wiki/assets/images/students/天见 和香/avatar.png"
-      },
-      {
-        "description": "天见和香(温泉)",
-        "url": "https://api.kivo.wiki/assets/images/students/天见 和香/温泉/avatar.png"
-      },
-      {
-        "description": "安守实梨",
-        "url": "https://api.kivo.wiki/assets/images/students/安守 未乃里/avatar.png"
-      },
-      {
-        "description": "间宵时雨",
-        "url": "https://api.kivo.wiki/assets/images/students/间宵 时雨/avatar.png"
-      },
-      {
-        "description": "间宵时雨(温泉)",
-        "url": "https://api.kivo.wiki/assets/images/students/间宵 时雨/温泉/avatar.png"
-      },
-      {
-        "description": "佐城智惠",
-        "url": "https://api.kivo.wiki/assets/images/students/佐城 智惠/avatar.png"
-      },
-      {
-        "description": "姬木梅露",
-        "url": "https://api.kivo.wiki/assets/images/students/姬木 爱瑠/avatar.png"
-      },
-      {
-        "description": "池仓玛丽娜",
-        "url": "https://api.kivo.wiki/assets/images/students/池仓 玛利娜/avatar.png"
-      },
-      {
-        "description": "秋泉红叶",
-        "url": "https://api.kivo.wiki/assets/images/students/秋泉 红叶/avatar.png"
-      },
-      {
-        "description": "近卫南",
-        "url": "https://api.kivo.wiki/assets/images/students/佐藤 南/avatar.png"
-      },
-      {
-        "description": "春原心奈",
-        "url": "https://api.kivo.wiki/assets/images/students/春原心奈/avatar.png"
-      },
-      {
-        "description": "朱城留美",
-        "url": "https://api.kivo.wiki/assets/images/students/朱城 留美/avatar.png"
-      },
-      {
-        "description": "春原瞬",
-        "url": "https://api.kivo.wiki/assets/images/students/春原 瞬/avatar.png"
-      },
-      {
-        "description": "春原瞬(幼女)",
-        "url": "https://api.kivo.wiki/assets/images/students/春原 瞬/幼女/avatar.png"
-      },
-      {
-        "description": "药子纱绫",
-        "url": "https://api.kivo.wiki/assets/images/students/药子 纱绫/avatar.png"
-      },
-      {
-        "description": "药子纱绫(私服)",
-        "url": "https://api.kivo.wiki/assets/images/students/药子 纱绫/私服/avatar.png"
-      },
-      {
-        "description": "尾刃叶渚",
-        "url": "https://api.kivo.wiki/assets/images/students/尾刃 叶渚/avatar.png"
-      },
-      {
-        "description": "合欢垣吹雪",
-        "url": "https://api.kivo.wiki/assets/images/students/合欢垣 吹雪/avatar.png"
-      },
-      {
-        "description": "中务桐乃",
-        "url": "https://api.kivo.wiki/assets/images/students/中务 桐乃/avatar.png"
-      },
-      {
-        "description": "和乐千世",
-        "url": "https://api.kivo.wiki/assets/images/students/和乐 千世/avatar.png"
-      },
-      {
-        "description": "和乐千世(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/和乐 千世/泳装/avatar.png"
-      },
-      {
-        "description": "水羽弥守",
-        "url": "https://api.kivo.wiki/assets/images/students/水羽弥守/avatar.png"
-      },
-      {
-        "description": "水羽弥守(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/水羽 弥守/泳装/avatar.png"
-      },
-      {
-        "description": "大野月咏",
-        "url": "https://api.kivo.wiki/assets/images/students/大野 月咏/avatar.png"
-      },
-      {
-        "description": "桑上果穗",
-        "url": "https://api.kivo.wiki/assets/images/students/桑上 果穗/avatar.png"
-      },
-      {
-        "description": "勇美枫",
-        "url": "https://api.kivo.wiki/assets/images/students/勇美 枫/avatar.png"
-      },
-      {
-        "description": "桐生桔梗",
-        "url": "https://api.kivo.wiki/assets/images/students/桐生 桔梗/avatar.png"
-      },
-      {
-        "description": "春日椿",
-        "url": "https://api.kivo.wiki/assets/images/students/春日 椿/avatar.png"
-      },
-      {
-        "description": "久田泉奈",
-        "url": "https://api.kivo.wiki/assets/images/students/久田 泉奈/avatar.png"
-      },
-      {
-        "description": "久田泉奈(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/久田 泉奈/泳装/avatar.png"
-      },
-      {
-        "description": "千鸟满",
-        "url": "https://api.kivo.wiki/assets/images/students/千鸟 满/avatar.png"
-      },
-      {
-        "description": "勘解由小路紫",
-        "url": "https://api.kivo.wiki/assets/images/students/勘解由小路 紫/avatar.png"
-      },
-      {
-        "description": "狐坂若藻",
-        "url": "https://api.kivo.wiki/assets/images/students/狐坂若藻/avatar.png"
-      },
-      {
-        "description": "狐坂若藻(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/狐坂 若藻/avatar.png"
-      },
-      {
-        "description": "不破莲华",
-        "url": "https://api.kivo.wiki/assets/images/students/不破 莲华/avatar.png"
-      },
-      {
-        "description": "朝比奈菲娜",
-        "url": "https://api.kivo.wiki/assets/images/students/朝比奈 菲娜/avatar.png"
-      },
-      {
-        "description": "河和静子",
-        "url": "https://api.kivo.wiki/assets/images/students/河和 静子/avatar.png"
-      },
-      {
-        "description": "河和静子(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/河和 静子/泳装/avatar.png"
-      },
-      {
-        "description": "秤亚津子",
-        "url": "https://api.kivo.wiki/assets/images/students/秤 亚津子/avatar.png"
-      },
-      {
-        "description": "槌永日和",
-        "url": "https://api.kivo.wiki/assets/images/students/槌永 日和/avatar.png"
-      },
-      {
-        "description": "锭前纱织",
-        "url": "https://api.kivo.wiki/assets/images/students/锭前 纱织/avatar.png"
-      },
-      {
-        "description": "戒野美咲",
-        "url": "https://api.kivo.wiki/assets/images/students/戒野 美咲/avatar.png"
-      },
-      {
-        "description": "空井咲",
-        "url": "https://api.kivo.wiki/assets/images/students/空井咲/avatar.png"
-      },
-      {
-        "description": "空井咲(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/空井 咲/泳装/avatar.png"
-      },
-      {
-        "description": "月雪宫子",
-        "url": "https://api.kivo.wiki/assets/images/students/月雪宫子/avatar.png"
-      },
-      {
-        "description": "月雪宫子(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/月雪 宫子/泳装/avatar.png"
-      },
-      {
-        "description": "霞泽美游",
-        "url": "https://api.kivo.wiki/assets/images/students/霞泽美游/avatar.png"
-      },
-      {
-        "description": "霞泽美游(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/霞泽 美游/泳装/avatar.png"
-      },
-      {
-        "description": "风仓萌绘",
-        "url": "https://api.kivo.wiki/assets/images/students/风仓萌绘/avatar.png"
-      },
-      {
-        "description": "初音未来",
-        "url": "https://api.kivo.wiki/assets/images/students/初音 未来/avatar.png"
-      },
-      {
-        "description": "食蜂操祈",
-        "url": "https://api.kivo.wiki/assets/images/students/食蜂 操祈/avatar.png"
-      },
-      {
-        "description": "佐天泪子",
-        "url": "https://api.kivo.wiki/assets/images/students/佐天 泪子/avatar.png"
-      },
-      {
-        "description": "御坂美琴",
-        "url": "https://api.kivo.wiki/assets/images/students/御坂 美琴/avatar.png"
-      },
-      {
-        "description": "小鸟游星野(昔日)",
-        "url": "https://api.kivo.wiki/assets/images/students/小鸟游 星野/昔日/avatar.png"
-      },
-      {
-        "description": "梦",
-        "url": "https://api.kivo.wiki/assets/images/students/梦/avatar.png"
+        "url": "https://static.kivo.fun/images/students/黑见 芹香/正月/avatar.png"
       },
       {
         "description": "黑见芹香(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/黑见 芹香/泳装/avatar.png"
+        "url": "https://static.kivo.fun/images/students/黑见 芹香/泳装/avatar.png"
       },
       {
-        "description": "百合园圣娅",
-        "url": "https://api.kivo.wiki/assets/images/students/百合园 圣娅/avatar.png"
+        "description": "十六夜野宫",
+        "url": "https://static.kivo.fun/images/students/十六夜 野宫/avatar.png"
       },
       {
-        "description": "狮子堂泉(正月)",
-        "url": "https://api.kivo.wiki/assets/images/students/狮子堂 泉/正月/avatar.png"
+        "description": "十六夜野宫(泳装)",
+        "url": "https://static.kivo.fun/images/students/十六夜 野宫/泳装/avatar.png"
       },
       {
-        "description": "皐月",
-        "url": "https://api.kivo.wiki/assets/images/students/皐月/avatar.png"
+        "description": "仲正一花",
+        "url": "https://static.kivo.fun/images/students/仲正 一花/original/avatar.png"
       },
       {
-        "description": "浅黄睦月(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/浅黄 睦月/礼服/avatar.png"
+        "description": "杏山和纱",
+        "url": "https://static.kivo.fun/images/students/杏山 和纱/avatar.png"
       },
       {
-        "description": "浅黄睦月(西装)",
-        "url": "https://api.kivo.wiki/assets/images/students/浅黄 睦月/西装/avatar.png"
+        "description": "杏山和纱(乐队)",
+        "url": "https://static.kivo.fun/images/students/杏山 和纱/乐队/avatar.png"
       },
       {
-        "description": "旗见绘里香",
-        "url": "https://api.kivo.wiki/assets/images/students/旗见 艾丽卡/avatar.png"
+        "description": "柚鸟夏",
+        "url": "https://static.kivo.fun/images/students/柚鸟 夏/avatar.png"
       },
       {
-        "description": "绮良",
-        "url": "https://api.kivo.wiki/assets/images/students/琪拉拉/avatar.png"
+        "description": "伊原木好美",
+        "url": "https://static.kivo.fun/images/students/伊原木 好美/avatar.png"
       },
       {
-        "description": "伊草遥香(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/伊草 遥香/礼服/avatar.png"
+        "description": "伊原木好美(乐队)",
+        "url": "https://static.kivo.fun/images/students/伊原木 好美/乐队/avatar.png"
       },
       {
-        "description": "伊草遥香(西装)",
-        "url": "https://api.kivo.wiki/assets/images/students/伊草 遥香/西装/avatar.png"
+        "description": "下江小春",
+        "url": "https://static.kivo.fun/images/students/下江 小春/avatar.png"
       },
       {
-        "description": "各务千寻(露营)",
-        "url": "https://api.kivo.wiki/assets/images/students/各务 千寻/露营/avatar.png"
+        "description": "下江小春(泳装)",
+        "url": "https://static.kivo.fun/images/students/下江 小春/泳装/avatar.png"
       },
       {
-        "description": "黑崎小雪(兔女郎)",
-        "url": "https://api.kivo.wiki/assets/images/students/黑崎 小雪/兔女郎/avatar.png"
+        "description": "圆堂志美子",
+        "url": "https://static.kivo.fun/images/students/圆堂 志美子/avatar.png"
+      },
+      {
+        "description": "古关忧",
+        "url": "https://static.kivo.fun/images/students/古关 忧/avatar.png"
+      },
+      {
+        "description": "古关忧(泳装)",
+        "url": "https://static.kivo.fun/images/students/古关 忧/泳装/avatar.png"
+      },
+      {
+        "description": "若叶日向",
+        "url": "https://static.kivo.fun/images/students/若叶 日向/avatar.png"
+      },
+      {
+        "description": "若叶日向(泳装)",
+        "url": "https://static.kivo.fun/images/students/若叶 日向/泳装/avatar.png"
+      },
+      {
+        "description": "阿慈谷日富美",
+        "url": "https://static.kivo.fun/images/students/阿慈谷 日富美/avatar.png"
+      },
+      {
+        "description": "阿慈谷日富美(泳装)",
+        "url": "https://static.kivo.fun/images/students/阿慈谷 日富美/泳装/avatar.png"
+      },
+      {
+        "description": "圣园未花",
+        "url": "https://static.kivo.fun/images/students/圣园未花/avatar.png"
+      },
+      {
+        "description": "白洲梓",
+        "url": "https://static.kivo.fun/images/students/白洲梓/avatar.png"
+      },
+      {
+        "description": "白洲梓(泳装)",
+        "url": "https://static.kivo.fun/images/students/白洲 梓/泳装/avatar.png"
+      },
+      {
+        "description": "歌住樱子",
+        "url": "https://static.kivo.fun/images/students/歌住 樱子/avatar.png"
+      },
+      {
+        "description": "桐藤渚",
+        "url": "https://static.kivo.fun/images/students/桐藤 渚/avatar.png"
+      },
+      {
+        "description": "栗村爱莉",
+        "url": "https://static.kivo.fun/images/students/栗村 爱莉/avatar.png"
+      },
+      {
+        "description": "栗村爱莉(乐队)",
+        "url": "https://static.kivo.fun/images/students/栗村 爱莉/乐队/avatar.png"
+      },
+      {
+        "description": "伊落玛丽",
+        "url": "https://static.kivo.fun/images/students/伊落 玛丽/avatar.png"
+      },
+      {
+        "description": "伊落玛丽(体育服)",
+        "url": "https://static.kivo.fun/images/students/伊落 玛丽/体育服/avatar.png"
+      },
+      {
+        "description": "宇泽玲纱",
+        "url": "https://static.kivo.fun/images/students/宇泽 玲纱/avatar.png"
+      },
+      {
+        "description": "静山真白",
+        "url": "https://static.kivo.fun/images/students/静山 真白/avatar.png"
+      },
+      {
+        "description": "静山真白(泳装)",
+        "url": "https://static.kivo.fun/images/students/静山 真白/泳装/avatar.png"
+      },
+      {
+        "description": "苍森美弥",
+        "url": "https://static.kivo.fun/images/students/苍森 美弥/avatar.png"
+      },
+      {
+        "description": "浦和花子",
+        "url": "https://static.kivo.fun/images/students/浦和 花子/avatar.png"
+      },
+      {
+        "description": "浦和花子(泳装)",
+        "url": "https://static.kivo.fun/images/students/浦和 花子/泳装/avatar.png"
+      },
+      {
+        "description": "朝颜花江",
+        "url": "https://static.kivo.fun/images/students/朝颜 花江/avatar.png"
+      },
+      {
+        "description": "朝颜花江(圣诞节)",
+        "url": "https://static.kivo.fun/images/students/朝颜 花江/圣诞节/avatar.png"
+      },
+      {
+        "description": "鹫见芹娜",
+        "url": "https://static.kivo.fun/images/students/鹫见 芹娜/avatar.png"
+      },
+      {
+        "description": "鹫见芹娜(圣诞节)",
+        "url": "https://static.kivo.fun/images/students/鹫见 芹娜/圣诞节/avatar.png"
+      },
+      {
+        "description": "羽川莲见",
+        "url": "https://static.kivo.fun/images/students/羽川 莲见/avatar.png"
+      },
+      {
+        "description": "羽川莲见(体育服)",
+        "url": "https://static.kivo.fun/images/students/羽川 莲见/体育服/avatar.png"
+      },
+      {
+        "description": "守月铃美",
+        "url": "https://static.kivo.fun/images/students/守月 铃美/avatar.png"
+      },
+      {
+        "description": "剑先鹤城",
+        "url": "https://static.kivo.fun/images/students/剑先 鹤城/avatar.png"
+      },
+      {
+        "description": "剑先鹤城(泳装)",
+        "url": "https://static.kivo.fun/images/students/剑先 鹤城/泳装/avatar.png"
+      },
+      {
+        "description": "天雨亚子",
+        "url": "https://static.kivo.fun/images/students/天雨 亚子/avatar.png"
+      },
+      {
+        "description": "天雨亚子(礼服)",
+        "url": "https://static.kivo.fun/images/students/天雨 亚子/礼服/avatar.png"
+      },
+      {
+        "description": "枣伊吕波",
+        "url": "https://static.kivo.fun/images/students/枣 伊吕波/avatar.png"
+      },
+      {
+        "description": "丹花伊吹",
+        "url": "https://static.kivo.fun/images/students/丹花 伊吹/avatar.png"
+      },
+      {
+        "description": "银镜伊织",
+        "url": "https://static.kivo.fun/images/students/银镜 伊织/avatar.png"
+      },
+      {
+        "description": "银镜伊织(泳装)",
+        "url": "https://static.kivo.fun/images/students/银镜 伊织/泳装/avatar.png"
+      },
+      {
+        "description": "鬼方佳代子",
+        "url": "https://static.kivo.fun/images/students/鬼方 佳代子/avatar.png"
+      },
+      {
+        "description": "鬼方佳代子(正月)",
+        "url": "https://static.kivo.fun/images/students/鬼方 佳代子/正月/avatar.png"
+      },
+      {
+        "description": "鬼方佳代子(礼服)",
+        "url": "https://static.kivo.fun/images/students/鬼方 佳代子/礼服/avatar.png"
+      },
+      {
+        "description": "火宫千夏",
+        "url": "https://static.kivo.fun/images/students/火宫 千夏/avatar.png"
+      },
+      {
+        "description": "火宫千夏(温泉)",
+        "url": "https://static.kivo.fun/images/students/火宫 千夏/温泉/avatar.png"
+      },
+      {
+        "description": "下仓惠",
+        "url": "https://static.kivo.fun/images/students/下仓 惠/avatar.png"
+      },
+      {
+        "description": "空崎日奈",
+        "url": "https://static.kivo.fun/images/students/空崎 日奈/avatar.png"
+      },
+      {
+        "description": "空崎日奈(泳装)",
+        "url": "https://static.kivo.fun/images/students/空崎 日奈/泳装/avatar.png"
+      },
+      {
+        "description": "空崎日奈(礼服)",
+        "url": "https://static.kivo.fun/images/students/空崎 日奈/礼服/avatar.png"
+      },
+      {
+        "description": "鳄渊明里",
+        "url": "https://static.kivo.fun/images/students/鳄渊 明里/avatar.png"
+      },
+      {
+        "description": "鳄渊明里(正月)",
+        "url": "https://static.kivo.fun/images/students/鳄渊 明里/正月/avatar.png"
+      },
+      {
+        "description": "黑馆晴奈",
+        "url": "https://static.kivo.fun/images/students/黑馆 晴奈/avatar.png"
+      },
+      {
+        "description": "黑馆晴奈(体育服)",
+        "url": "https://static.kivo.fun/images/students/黑馆 晴奈/体育服/avatar.png"
+      },
+      {
+        "description": "黑馆晴奈(正月)",
+        "url": "https://static.kivo.fun/images/students/黑馆 晴奈/正月/avatar.png"
+      },
+      {
+        "description": "牛牧朱莉",
+        "url": "https://static.kivo.fun/images/students/牛牧 茱莉/avatar.png"
+      },
+      {
+        "description": "爱清枫香",
+        "url": "https://static.kivo.fun/images/students/爱清 枫香/avatar.png"
+      },
+      {
+        "description": "爱清枫香(正月)",
+        "url": "https://static.kivo.fun/images/students/爱清 枫香/正月/avatar.png"
+      },
+      {
+        "description": "狮子堂泉",
+        "url": "https://static.kivo.fun/images/students/狮子堂 泉/avatar.png"
+      },
+      {
+        "description": "狮子堂泉(泳装)",
+        "url": "https://static.kivo.fun/images/students/狮子堂 泉/泳装/avatar.png"
+      },
+      {
+        "description": "冰室濑名",
+        "url": "https://static.kivo.fun/images/students/冰室濑名/avatar.png"
+      },
+      {
+        "description": "羽沼真琴",
+        "url": "https://static.kivo.fun/images/students/羽沼 真琴/avatar.png"
+      },
+      {
+        "description": "浅黄睦月",
+        "url": "https://static.kivo.fun/images/students/浅黄 睦月/avatar.png"
+      },
+      {
+        "description": "浅黄睦月(正月)",
+        "url": "https://static.kivo.fun/images/students/浅黄 睦月/正月/avatar.png"
+      },
+      {
+        "description": "赤司纯子",
+        "url": "https://static.kivo.fun/images/students/赤司 纯子/avatar.png"
+      },
+      {
+        "description": "赤司纯子(正月)",
+        "url": "https://static.kivo.fun/images/students/赤司 纯子/正月/avatar.png"
+      },
+      {
+        "description": "夜樱绮良",
+        "url": "https://static.kivo.fun/images/students/夜樱 绮良/avatar.png"
+      },
+      {
+        "description": "伊草遥香",
+        "url": "https://static.kivo.fun/images/students/伊草 春香/avatar.png"
+      },
+      {
+        "description": "伊草遥香(正月)",
+        "url": "https://static.kivo.fun/images/students/伊草 遥香/正月/avatar.png"
+      },
+      {
+        "description": "陆八魔阿露",
+        "url": "https://static.kivo.fun/images/students/陆八魔 阿露/avatar.png"
+      },
+      {
+        "description": "陆八魔阿露(正月)",
+        "url": "https://static.kivo.fun/images/students/陆八魔 阿露/正月/avatar.png"
+      },
+      {
+        "description": "陆八魔阿露(礼服)",
+        "url": "https://static.kivo.fun/images/students/陆八魔 阿露/礼服/avatar.png"
+      },
+      {
+        "description": "鬼怒川霞",
+        "url": "https://static.kivo.fun/images/students/鬼怒川 霞/original/avatar.png"
+      },
+      {
+        "description": "早濑优香",
+        "url": "https://static.kivo.fun/images/students/早瀬 优香/avatar.png"
+      },
+      {
+        "description": "早濑优香(体育服)",
+        "url": "https://static.kivo.fun/images/students/早濑 优香/avatar.png"
+      },
+      {
+        "description": "各务千寻",
+        "url": "https://static.kivo.fun/images/students/各务千寻/avatar.png"
+      },
+      {
+        "description": "猫冢响",
+        "url": "https://static.kivo.fun/images/students/猫冢 响/avatar.png"
+      },
+      {
+        "description": "猫冢响(应援团)",
+        "url": "https://static.kivo.fun/images/students/猫塚 响/avatar.png"
+      },
+      {
+        "description": "乙花堇",
+        "url": "https://static.kivo.fun/images/students/乙花 堇/avatar.png"
+      },
+      {
+        "description": "美甘妮禄",
+        "url": "https://static.kivo.fun/images/students/美甘 尼禄/avatar.png"
+      },
+      {
+        "description": "美甘妮禄(兔女郎)",
+        "url": "https://static.kivo.fun/images/students/美甘 尼禄/兔女郎/avatar.png"
+      },
+      {
+        "description": "音濑小玉",
+        "url": "https://static.kivo.fun/images/students/音濑 小玉/avatar.png"
+      },
+      {
+        "description": "音濑小玉(露营)",
+        "url": "https://static.kivo.fun/images/students/音濑 小玉/露营/avatar.png"
+      },
+      {
+        "description": "黑崎小雪",
+        "url": "https://static.kivo.fun/images/students/黑崎 小雪/avatar.png"
+      },
+      {
+        "description": "丰见小鸟",
+        "url": "https://static.kivo.fun/images/students/丰见 小鸟/avatar.png"
+      },
+      {
+        "description": "丰见小鸟(应援团)",
+        "url": "https://static.kivo.fun/images/students/丰见 小鸟/应援团/avatar.png"
+      },
+      {
+        "description": "明星日鞠",
+        "url": "https://static.kivo.fun/images/students/明星 日鞠/avatar.png"
+      },
+      {
+        "description": "飞鸟马时",
+        "url": "https://static.kivo.fun/images/students/飞鸟马 时/avatar.png"
+      },
+      {
+        "description": "飞鸟马时(兔女郎)",
+        "url": "https://static.kivo.fun/images/students/飞鸟马 时/兔女郎/avatar.png"
+      },
+      {
+        "description": "一之濑明日奈",
+        "url": "https://static.kivo.fun/images/students/一之瀬 明日奈/avatar.png"
+      },
+      {
+        "description": "一之濑明日奈(兔女郎)",
+        "url": "https://static.kivo.fun/images/students/一之濑 明日奈/兔女郎/avatar.png"
+      },
+      {
+        "description": "小钩晴",
+        "url": "https://static.kivo.fun/images/students/小钩 晴/avatar.png"
+      },
+      {
+        "description": "小钩晴(露营)",
+        "url": "https://static.kivo.fun/images/students/小钩 晴/露营/avatar.png"
+      },
+      {
+        "description": "花冈柚子",
+        "url": "https://static.kivo.fun/images/students/花冈 柚子/avatar.png"
+      },
+      {
+        "description": "花冈柚子(女仆)",
+        "url": "https://static.kivo.fun/images/students/花冈 柚子/女仆/avatar.png"
+      },
+      {
+        "description": "才羽桃井",
+        "url": "https://static.kivo.fun/images/students/才羽桃井/avatar.png"
       },
       {
         "description": "才羽桃井(女仆)",
-        "url": "https://api.kivo.wiki/assets/images/students/才羽 桃井/女仆/avatar.png"
+        "url": "https://static.kivo.fun/images/students/才羽 桃井/女仆/avatar.png"
       },
       {
-        "description": "小涂真纪(露营)",
-        "url": "https://api.kivo.wiki/assets/images/students/小涂 真纪/露营/avatar.png"
+        "description": "白石歌原",
+        "url": "https://static.kivo.fun/images/students/白石 歌原/avatar.png"
+      },
+      {
+        "description": "白石歌原(应援团)",
+        "url": "https://static.kivo.fun/images/students/白石 歌原/应援团/avatar.png"
+      },
+      {
+        "description": "天童爱丽丝",
+        "url": "https://static.kivo.fun/images/students/天童 爱丽丝/avatar.png"
+      },
+      {
+        "description": "天童爱丽丝(女仆)",
+        "url": "https://static.kivo.fun/images/students/天童 爱丽丝/女仆/avatar.png"
+      },
+      {
+        "description": "小涂真纪",
+        "url": "https://static.kivo.fun/images/students/小涂 真纪/avatar.png"
+      },
+      {
+        "description": "才羽绿",
+        "url": "https://static.kivo.fun/images/students/才羽绿/avatar.png"
       },
       {
         "description": "才羽绿(女仆)",
-        "url": "https://api.kivo.wiki/assets/images/students/才羽 绿/女仆/avatar.png"
+        "url": "https://static.kivo.fun/images/students/才羽 绿/女仆/avatar.png"
       },
       {
-        "description": "调月莉音",
-        "url": "https://api.kivo.wiki/assets/images/students/莉音/avatar.png"
+        "description": "和泉元艾米",
+        "url": "https://static.kivo.fun/images/students/和泉元 艾米/avatar.png"
       },
       {
-        "description": "野正莱依",
-        "url": "https://api.kivo.wiki/assets/images/students/玲/avatar.png"
+        "description": "和泉元艾米(泳装)",
+        "url": "https://static.kivo.fun/images/students/和泉元 艾米/泳装/avatar.png"
       },
       {
-        "description": "荒槇八云",
-        "url": "https://api.kivo.wiki/assets/images/students/八云/avatar.png"
+        "description": "角楯花凛",
+        "url": "https://static.kivo.fun/images/students/角楯 花凛/avatar.png"
       },
       {
-        "description": "姬木梅露(温泉)",
-        "url": "https://api.kivo.wiki/assets/images/students/姬木 爱瑠/温泉/avatar.png"
+        "description": "角楯花凛(兔女郎)",
+        "url": "https://static.kivo.fun/images/students/角楯 花凛/兔女郎/avatar.png"
       },
       {
-        "description": "三善贵音",
-        "url": "https://api.kivo.wiki/assets/images/students/三善 贵音/avatar.png"
+        "description": "室笠茜",
+        "url": "https://static.kivo.fun/images/students/室笠 茜/avatar.png"
       },
       {
-        "description": "鹿山丽情",
-        "url": "https://api.kivo.wiki/assets/images/students/鹿山 丽情/avatar.png"
+        "description": "室笠茜(兔女郎)",
+        "url": "https://static.kivo.fun/images/students/室笠 茜/兔女郎/avatar.png"
       },
       {
-        "description": "凛华",
-        "url": "https://api.kivo.wiki/assets/images/students/凛华/avatar.png"
+        "description": "生盐诺亚",
+        "url": "https://static.kivo.fun/images/students/生盐 诺亚/avatar.png"
       },
       {
-        "description": "龙华妃咲",
-        "url": "https://api.kivo.wiki/assets/images/students/龙华 妃咲/avatar.png"
+        "description": "连河切里诺",
+        "url": "https://static.kivo.fun/images/students/连河 切里诺/avatar.png"
       },
       {
-        "description": "申谷海",
-        "url": "https://api.kivo.wiki/assets/images/students/申谷 廻/avatar.png"
+        "description": "连河切里诺(温泉)",
+        "url": "https://static.kivo.fun/images/students/连河 切利诺/温泉/avatar.png"
       },
       {
-        "description": "裴（CBT）",
-        "url": "https://api.kivo.wiki/assets/images/students/裴/CBT/avatar.png"
+        "description": "天见和香",
+        "url": "https://static.kivo.fun/images/students/天见 和香/avatar.png"
       },
       {
-        "description": "御稜名草",
-        "url": "https://api.kivo.wiki/assets/images/students/御稜 名草/avatar.png"
+        "description": "天见和香(温泉)",
+        "url": "https://static.kivo.fun/images/students/天见 和香/温泉/avatar.png"
       },
       {
-        "description": "天地尼娅",
-        "url": "https://api.kivo.wiki/assets/images/students/天地 尼娅/avatar.png"
+        "description": "安守实梨",
+        "url": "https://static.kivo.fun/images/students/安守 未乃里/avatar.png"
       },
       {
-        "description": "新",
-        "url": "https://api.kivo.wiki/assets/images/students/新/avatar.png"
+        "description": "间宵时雨",
+        "url": "https://static.kivo.fun/images/students/间宵 时雨/avatar.png"
       },
       {
-        "description": "箭吹棕榈",
-        "url": "https://api.kivo.wiki/assets/images/students/箭吹 棕榈/avatar.png"
+        "description": "间宵时雨(温泉)",
+        "url": "https://static.kivo.fun/images/students/间宵 时雨/温泉/avatar.png"
       },
       {
-        "description": "海夏",
-        "url": "https://api.kivo.wiki/assets/images/students/海夏/avatar.png"
+        "description": "佐城智惠",
+        "url": "https://static.kivo.fun/images/students/佐城 智惠/avatar.png"
       },
       {
-        "description": "葛叶",
-        "url": "https://api.kivo.wiki/assets/images/students/葛叶/avatar.png"
+        "description": "佐城智惠(旗袍)",
+        "url": "https://static.kivo.fun/images/students/佐城 智惠/旗袍/avatar.png"
       },
       {
-        "description": "虞美人",
-        "url": "https://api.kivo.wiki/assets/images/students/虞美人/avatar.png"
+        "description": "姬木梅露",
+        "url": "https://static.kivo.fun/images/students/姬木 梅露/original/avatar.png"
       },
       {
-        "description": "锭前纱织(礼服)",
-        "url": "https://api.kivo.wiki/assets/images/students/锭前 纱织/礼服/avatar.png"
+        "description": "池仓玛丽娜",
+        "url": "https://static.kivo.fun/images/students/池仓 玛利娜/avatar.png"
       },
       {
-        "description": "妮可",
-        "url": "https://api.kivo.wiki/assets/images/students/妮可/avatar.png"
+        "description": "池仓玛丽娜(旗袍)",
+        "url": "https://static.kivo.fun/images/students/池仓 玛丽娜/旗袍/avatar.png"
       },
       {
-        "description": "胡桃",
-        "url": "https://api.kivo.wiki/assets/images/students/胡桃/avatar.png"
+        "description": "秋泉红叶",
+        "url": "https://static.kivo.fun/images/students/秋泉 红叶/original/avatar.png"
+      },
+      {
+        "description": "近卫南",
+        "url": "https://static.kivo.fun/images/students/佐藤 南/avatar.png"
+      },
+      {
+        "description": "春原心奈",
+        "url": "https://static.kivo.fun/images/students/春原心奈/avatar.png"
+      },
+      {
+        "description": "朱城留美",
+        "url": "https://static.kivo.fun/images/students/朱城 留美/avatar.png"
+      },
+      {
+        "description": "春原瞬",
+        "url": "https://static.kivo.fun/images/students/春原 瞬/avatar.png"
+      },
+      {
+        "description": "春原瞬(幼女)",
+        "url": "https://static.kivo.fun/images/students/春原 瞬/幼女/avatar.png"
+      },
+      {
+        "description": "药子纱绫",
+        "url": "https://static.kivo.fun/images/students/药子 纱绫/avatar.png"
+      },
+      {
+        "description": "药子纱绫(私服)",
+        "url": "https://static.kivo.fun/images/students/药子 纱绫/私服/avatar.png"
+      },
+      {
+        "description": "尾刃叶渚",
+        "url": "https://static.kivo.fun/images/students/尾刃 叶渚/avatar.png"
+      },
+      {
+        "description": "尾刃叶渚(泳装)",
+        "url": "https://static.kivo.fun/images/students/尾刃 叶渚/泳装/avatar.png"
+      },
+      {
+        "description": "合欢垣吹雪",
+        "url": "https://static.kivo.fun/images/students/合欢垣 吹雪/avatar.png"
+      },
+      {
+        "description": "合欢垣吹雪(泳装)",
+        "url": "https://static.kivo.fun/images/students/合欢垣 吹雪/泳装/avatar.png"
+      },
+      {
+        "description": "中务桐乃",
+        "url": "https://static.kivo.fun/images/students/中务 桐乃/avatar.png"
+      },
+      {
+        "description": "中务桐乃(泳装)",
+        "url": "https://static.kivo.fun/images/students/中务 桐乃/泳装/avatar.png"
+      },
+      {
+        "description": "和乐千世",
+        "url": "https://static.kivo.fun/images/students/和乐 千世/avatar.png"
+      },
+      {
+        "description": "和乐千世(泳装)",
+        "url": "https://static.kivo.fun/images/students/和乐 千世/泳装/avatar.png"
+      },
+      {
+        "description": "水羽弥守",
+        "url": "https://static.kivo.fun/images/students/水羽弥守/avatar.png"
+      },
+      {
+        "description": "水羽弥守(泳装)",
+        "url": "https://static.kivo.fun/images/students/水羽 弥守/泳装/avatar.png"
+      },
+      {
+        "description": "大野月咏",
+        "url": "https://static.kivo.fun/images/students/大野 月咏/avatar.png"
+      },
+      {
+        "description": "桑上果穗",
+        "url": "https://static.kivo.fun/images/students/桑上 果穗/avatar.png"
+      },
+      {
+        "description": "勇美枫",
+        "url": "https://static.kivo.fun/images/students/勇美 枫/avatar.png"
+      },
+      {
+        "description": "桐生桔梗",
+        "url": "https://static.kivo.fun/images/students/桐生 桔梗/avatar.png"
+      },
+      {
+        "description": "春日椿",
+        "url": "https://static.kivo.fun/images/students/春日 椿/avatar.png"
+      },
+      {
+        "description": "春日椿(导游)",
+        "url": "https://static.kivo.fun/images/students/春日 椿/导游/avatar.png"
+      },
+      {
+        "description": "久田泉奈",
+        "url": "https://static.kivo.fun/images/students/久田 泉奈/avatar.png"
+      },
+      {
+        "description": "久田泉奈(泳装)",
+        "url": "https://static.kivo.fun/images/students/久田 泉奈/泳装/avatar.png"
+      },
+      {
+        "description": "里滨海夏",
+        "url": "https://static.kivo.fun/images/students/里浜 海夏/avatar.png"
+      },
+      {
+        "description": "千鸟满",
+        "url": "https://static.kivo.fun/images/students/千鸟 满/avatar.png"
+      },
+      {
+        "description": "勘解由小路紫",
+        "url": "https://static.kivo.fun/images/students/勘解由小路 紫/avatar.png"
+      },
+      {
+        "description": "狐坂若藻",
+        "url": "https://static.kivo.fun/images/students/狐坂若藻/avatar.png"
+      },
+      {
+        "description": "狐坂若藻(泳装)",
+        "url": "https://static.kivo.fun/images/students/狐坂 若藻/avatar.png"
+      },
+      {
+        "description": "不破莲华",
+        "url": "https://static.kivo.fun/images/students/不破 莲华/avatar.png"
+      },
+      {
+        "description": "朝比奈菲娜",
+        "url": "https://static.kivo.fun/images/students/朝比奈 菲娜/avatar.png"
+      },
+      {
+        "description": "河和静子",
+        "url": "https://static.kivo.fun/images/students/河和 静子/avatar.png"
+      },
+      {
+        "description": "河和静子(泳装)",
+        "url": "https://static.kivo.fun/images/students/河和 静子/泳装/avatar.png"
+      },
+      {
+        "description": "秤亚津子",
+        "url": "https://static.kivo.fun/images/students/秤 亚津子/avatar.png"
+      },
+      {
+        "description": "秤亚津子(泳装)",
+        "url": "https://static.kivo.fun/images/students/秤 亚津子/泳装/avatar.png"
+      },
+      {
+        "description": "槌永日和",
+        "url": "https://static.kivo.fun/images/students/槌永 日和/avatar.png"
+      },
+      {
+        "description": "槌永日和(泳装)",
+        "url": "https://static.kivo.fun/images/students/槌永 日和/泳装/avatar.png"
+      },
+      {
+        "description": "锭前纱织",
+        "url": "https://static.kivo.fun/images/students/锭前 纱织/avatar.png"
+      },
+      {
+        "description": "锭前纱织(泳装)",
+        "url": "https://static.kivo.fun/images/students/锭前 纱织/泳装/avatar.png"
+      },
+      {
+        "description": "戒野美咲",
+        "url": "https://static.kivo.fun/images/students/戒野 美咲/avatar.png"
+      },
+      {
+        "description": "空井咲",
+        "url": "https://static.kivo.fun/images/students/空井咲/avatar.png"
+      },
+      {
+        "description": "空井咲(泳装)",
+        "url": "https://static.kivo.fun/images/students/空井 咲/泳装/avatar.png"
+      },
+      {
+        "description": "月雪宫子",
+        "url": "https://static.kivo.fun/images/students/月雪宫子/avatar.png"
+      },
+      {
+        "description": "月雪宫子(泳装)",
+        "url": "https://static.kivo.fun/images/students/月雪 宫子/泳装/avatar.png"
+      },
+      {
+        "description": "霞泽美游",
+        "url": "https://static.kivo.fun/images/students/霞泽美游/avatar.png"
+      },
+      {
+        "description": "霞泽美游(泳装)",
+        "url": "https://static.kivo.fun/images/students/霞泽 美游/泳装/avatar.png"
+      },
+      {
+        "description": "风仓萌绘",
+        "url": "https://static.kivo.fun/images/students/风仓萌绘/avatar.png"
       },
       {
         "description": "风仓萌绘(泳装)",
-        "url": "https://api.kivo.wiki/assets/images/students/风仓 萌绘/泳装/avatar.png"
+        "url": "https://static.kivo.fun/images/students/风仓 萌绘/泳装/avatar.png"
+      },
+      {
+        "description": "初音未来",
+        "url": "https://static.kivo.fun/images/students/初音 未来/avatar.png"
+      },
+      {
+        "description": "食蜂操祈",
+        "url": "https://static.kivo.fun/images/students/食蜂 操祈/avatar.png"
+      },
+      {
+        "description": "佐天泪子",
+        "url": "https://static.kivo.fun/images/students/佐天 泪子/avatar.png"
+      },
+      {
+        "description": "御坂美琴",
+        "url": "https://static.kivo.fun/images/students/御坂 美琴/avatar.png"
+      },
+      {
+        "description": "微笑教授",
+        "url": "https://static.kivo.fun/images/students/ 笑面教授/original/avatar.png"
+      },
+      {
+        "description": "栗滨明美",
+        "url": "https://static.kivo.fun/images/students/栗滨 明美/original/avatar.png"
+      },
+      {
+        "description": "小鸟游星野(昔日)",
+        "url": "https://static.kivo.fun/images/students/小鸟游 星野/昔日/avatar.png"
+      },
+      {
+        "description": "栀子梦",
+        "url": "https://static.kivo.fun/images/students/梦/avatar.png"
+      },
+      {
+        "description": "百合园圣娅",
+        "url": "https://static.kivo.fun/images/students/百合园 圣娅/avatar.png"
+      },
+      {
+        "description": "柚鸟夏(乐队)",
+        "url": "https://static.kivo.fun/images/students/柚鸟 夏/乐队/avatar.png"
+      },
+      {
+        "description": "「雷帝」",
+        "url": "https://static.kivo.fun/images/students/ 「雷帝」/original/avatar.png"
+      },
+      {
+        "description": "元宫千明",
+        "url": "https://static.kivo.fun/images/students/千秋/avatar.png"
+      },
+      {
+        "description": "狮子堂泉(正月)",
+        "url": "https://static.kivo.fun/images/students/狮子堂 泉/正月/avatar.png"
+      },
+      {
+        "description": "京极皐月",
+        "url": "https://static.kivo.fun/images/students/皐月/avatar.png"
+      },
+      {
+        "description": "浅黄睦月(礼服)",
+        "url": "https://static.kivo.fun/images/students/浅黄 睦月/礼服/avatar.png"
+      },
+      {
+        "description": "浅黄睦月(西装)",
+        "url": "https://static.kivo.fun/images/students/浅黄 睦月/西装/avatar.png"
+      },
+      {
+        "description": "旗见绘里香",
+        "url": "https://static.kivo.fun/images/students/旗见 艾丽卡/avatar.png"
+      },
+      {
+        "description": "伊草遥香(礼服)",
+        "url": "https://static.kivo.fun/images/students/伊草 遥香/礼服/avatar.png"
+      },
+      {
+        "description": "伊草遥香(西装)",
+        "url": "https://static.kivo.fun/images/students/伊草 遥香/西装/avatar.png"
+      },
+      {
+        "description": "各务千寻(露营)",
+        "url": "https://static.kivo.fun/images/students/各务 千寻/露营/avatar.png"
+      },
+      {
+        "description": "黑崎小雪(兔女郎)",
+        "url": "https://static.kivo.fun/images/students/黑崎 小雪/兔女郎/avatar.png"
+      },
+      {
+        "description": "小涂真纪(露营)",
+        "url": "https://static.kivo.fun/images/students/小涂 真纪/露营/avatar.png"
+      },
+      {
+        "description": "调月莉音",
+        "url": "https://static.kivo.fun/images/students/莉音/avatar.png"
+      },
+      {
+        "description": "野正莱依",
+        "url": "https://static.kivo.fun/images/students/玲/avatar.png"
+      },
+      {
+        "description": "荒槇八云",
+        "url": "https://static.kivo.fun/images/students/八云/avatar.png"
+      },
+      {
+        "description": "连河切里诺(旗袍)",
+        "url": "https://static.kivo.fun/images/students/连河 切里诺/original/avatar.png"
+      },
+      {
+        "description": "姬木梅露(温泉)",
+        "url": "https://static.kivo.fun/images/students/姬木 爱瑠/温泉/avatar.png"
+      },
+      {
+        "description": "三善贵音",
+        "url": "https://static.kivo.fun/images/students/三善 贵音/avatar.png"
+      },
+      {
+        "description": "鹿山丽情",
+        "url": "https://static.kivo.fun/images/students/鹿山 丽情/avatar.png"
+      },
+      {
+        "description": "凛华",
+        "url": "https://static.kivo.fun/images/students/凛华/avatar.png"
+      },
+      {
+        "description": "龙华妃咲",
+        "url": "https://static.kivo.fun/images/students/龙华 妃咲/avatar.png"
+      },
+      {
+        "description": "申谷海",
+        "url": "https://static.kivo.fun/images/students/申谷 廻/avatar.png"
+      },
+      {
+        "description": "裴（CBT）",
+        "url": "https://static.kivo.fun/images/students/裴/CBT/avatar.png"
+      },
+      {
+        "description": "漆原辉夜",
+        "url": "https://static.kivo.fun/images/students/漆原 辉夜/original/avatar.png"
+      },
+      {
+        "description": "心华",
+        "url": "https://static.kivo.fun/images/students/ 木乃香/original/avatar.png"
+      },
+      {
+        "description": "御稜名草",
+        "url": "https://static.kivo.fun/images/students/御稜 名草/avatar.png"
+      },
+      {
+        "description": "天地尼娅",
+        "url": "https://static.kivo.fun/images/students/天地 尼娅/avatar.png"
+      },
+      {
+        "description": "新",
+        "url": "https://static.kivo.fun/images/students/新/avatar.png"
+      },
+      {
+        "description": "勇美枫(导游)",
+        "url": "https://static.kivo.fun/images/students/勇美 枫/导游/avatar.png"
+      },
+      {
+        "description": "箭吹棕榈",
+        "url": "https://static.kivo.fun/images/students/箭吹 棕榈/avatar.png"
+      },
+      {
+        "description": "朝比奈菲娜(导游)",
+        "url": "https://static.kivo.fun/images/students/朝比奈 菲娜/导游/avatar.png"
+      },
+      {
+        "description": "葛叶",
+        "url": "https://static.kivo.fun/images/students/葛叶/avatar.png"
+      },
+      {
+        "description": "虞美人",
+        "url": "https://static.kivo.fun/images/students/虞美人/avatar.png"
+      },
+      {
+        "description": "锭前纱织(礼服)",
+        "url": "https://static.kivo.fun/images/students/锭前 纱织/礼服/avatar.png"
+      },
+      {
+        "description": "戒野美咲(泳装)",
+        "url": "https://static.kivo.fun/images/students/戒野 美咲/泳装/avatar.png"
+      },
+      {
+        "description": "妮可",
+        "url": "https://static.kivo.fun/images/students/妮可/avatar.png"
+      },
+      {
+        "description": "胡桃",
+        "url": "https://static.kivo.fun/images/students/胡桃/avatar.png"
       },
       {
         "description": "七度雪乃",
-        "url": "https://api.kivo.wiki/assets/images/students/七度 雪乃/avatar.png"
+        "url": "https://static.kivo.fun/images/students/七度 雪乃/avatar.png"
       },
       {
         "description": "音葵",
-        "url": "https://api.kivo.wiki/assets/images/students/音葵/avatar.png"
+        "url": "https://static.kivo.fun/images/students/音葵/avatar.png"
       },
       {
-        "description": "舞",
-        "url": "https://api.kivo.wiki/assets/images/students/舞/avatar.png"
+        "description": "风卷舞",
+        "url": "https://static.kivo.fun/images/students/舞/avatar.png"
       },
       {
         "description": "川流诗乃",
-        "url": "https://api.kivo.wiki/assets/images/students/川流 诗乃/avatar.png"
+        "url": "https://static.kivo.fun/images/students/川流 诗乃/avatar.png"
       },
       {
         "description": "奈央（CBT）",
-        "url": "https://api.kivo.wiki/assets/images/students/奈央/CBT/avatar.png"
+        "url": "https://static.kivo.fun/images/students/奈央/CBT/avatar.png"
       },
       {
         "description": "康娜（CBT）",
-        "url": "https://api.kivo.wiki/assets/images/students/Kanna/CBT/avatar.png"
+        "url": "https://static.kivo.fun/images/students/Kanna/CBT/avatar.png"
       },
       {
         "description": "由加利（CBT）",
-        "url": "https://api.kivo.wiki/assets/images/students/由加利/CBT/avatar.png"
+        "url": "https://static.kivo.fun/images/students/由加利/CBT/avatar.png"
       },
       {
         "description": "米莉亚（CBT）",
-        "url": "https://api.kivo.wiki/assets/images/students/米莉亚/CBT/avatar.png"
+        "url": "https://static.kivo.fun/images/students/米莉亚/CBT/avatar.png"
+      },
+      {
+        "description": "椎名纺",
+        "url": "https://static.kivo.fun/images/students/䌷/avatar.png"
       },
       {
         "description": "露音（CBT）",
-        "url": "https://api.kivo.wiki/assets/images/students/露音/CBT/avatar.png"
+        "url": "https://static.kivo.fun/images/students/露音/CBT/avatar.png"
       },
       {
-        "description": "和驹风兰舞",
-        "url": "https://api.kivo.wiki/assets/images/students/兰舞/avatar.png"
+        "description": "河驹风兰舞",
+        "url": "https://static.kivo.fun/images/students/兰舞/avatar.png"
+      },
+      {
+        "description": "河驹风兰舞(泳装)",
+        "url": "https://static.kivo.fun/images/students/河驹风 兰舞/泳装/avatar.png"
+      },
+      {
+        "description": "橘光",
+        "url": "https://static.kivo.fun/images/students/海兰德双子A/avatar.jpg"
+      },
+      {
+        "description": "朝雾周防",
+        "url": "https://static.kivo.fun/images/students/朝雾 周防/avatar.png"
+      },
+      {
+        "description": "橘望",
+        "url": "https://static.kivo.fun/images/students/海兰德双子B/avatar.jpg"
       },
       {
         "description": "清澄晶",
-        "url": "https://api.kivo.wiki/assets/images/students/清澄 晶/avatar.png"
+        "url": "https://static.kivo.fun/images/students/清澄 晶/avatar.png"
       }
     ]
   },
@@ -1124,6 +1244,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/4/46/4shyrsmzi8qga6kqvp8rwads0vrjba6.png/100px-Chr_icon_1030_103002_01.png"
       },
       {
+        "description": "【Yummy Dreamy Fairy】米浴",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/2/2f/ctsbo9a1p71705wq2cvj4571hhjgkib.png/100px-Chr_icon_1030_103003_01.png"
+      },
+      {
         "description": "艾尼斯风神",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/d/d6/grr55i21i3k7x4zepgpxd5sx038o8is.png/100px-Chr_icon_1031_103101_01.png"
       },
@@ -1134,6 +1258,10 @@
       {
         "description": "【Lunatic Lab】爱丽速子",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/6/6a/o5ab8v294zknryej3bowpmuzahdpp04.png/100px-Chr_icon_1032_103202_01.png"
+      },
+      {
+        "description": "【Σ Experiment】爱丽速子",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/0/07/egm8c5rn0m4b09vlq76i4j9nocnqpvu.png/100px-Chr_icon_1032_103203_01.png"
       },
       {
         "description": "爱慕织姬",
@@ -1152,6 +1280,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/9/9f/25jlpir74nf08surdjmfeoe6081shgu.png/100px-Chr_icon_1035_103502_01.png"
       },
       {
+        "description": "【Glorious Coat】胜利奖券",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/c/ca/r6r8x063o3kbz6qf85cx66ob8nrmgl2.png/100px-Chr_icon_1035_103503_01.png"
+      },
+      {
         "description": "空中神宫",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/9/99/afd1z7hknmbwkl4iz3vhkzyv2cbe7gi.png/100px-Chr_icon_1036_103601_01.png"
       },
@@ -1166,6 +1298,10 @@
       {
         "description": "【コレクト・ショコラティエ】荣进闪耀",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/0/01/j4r8lbtr2e24kfw00jjm7s9jojc0eof.png/100px-Chr_icon_1037_103702_01.png"
+      },
+      {
+        "description": "【Reines Plätschern】荣进闪耀",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/3/37/lqzmcsfhq3vbrl63g2ga328q4s1ek6c.png/100px-Chr_icon_1037_103703_01.png"
       },
       {
         "description": "真机伶",
@@ -1208,8 +1344,16 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/1/12/9hxqri25y9qihyim1ipxi0ap1qksqaa.png/100px-Chr_icon_1044_104401_01.png"
       },
       {
+        "description": "【リアライズ・ルーン】东商变革",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/0/08/pme3vi6awqf5pckwaqk5o91n0ew998q.png/100px-Chr_icon_1044_104402_01.png"
+      },
+      {
         "description": "【シフォンリボンマミー】超级小海湾",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/e/e7/k7fviw2onzw853hyyvlmjgfccigln30.png/100px-Chr_icon_1045_104502_01.png"
+      },
+      {
+        "description": "【慈雨華影】超级小海湾",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/1/1f/a992nd4cw4lwryieg6fhm9lngek2c6a.png/100px-Chr_icon_1045_104503_01.png"
       },
       {
         "description": "醒目飞鹰",
@@ -1222,6 +1366,10 @@
       {
         "description": "荒漠英雄",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/1/1f/exdyiv3wlj61d5lsv0p6ni9buxr41km.png/100px-Chr_icon_1047_104701_01.png"
+      },
+      {
+        "description": "【Inlaid Stories】荒漠英雄",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/9/99/7vsznkrjztnz9shpdqspisf3cg5zxl7.png/100px-Chr_icon_1047_104702_01.png"
       },
       {
         "description": "东瀛佐敦",
@@ -1304,6 +1452,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/7/77/6fpzxzbvb6p0389vb4fvx1o22nuoygw.png/100px-Chr_icon_1061_106102_01.png"
       },
       {
+        "description": "【Evergreen Identity】帝王光辉",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/7/78/rpg215rzi22iqjib0lcr8423cbya16z.png/100px-Chr_icon_1061_106103_01.png"
+      },
+      {
         "description": "【ブルー・タービュランス】待兼诗歌剧",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/c/cf/dksnlbskkfdaqcfauo30qyjpadrj4rk.png/100px-Chr_icon_1062_106202_01.png"
       },
@@ -1318,6 +1470,10 @@
       {
         "description": "大拓太阳神",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/5/5b/tlicih76lx147birzj6nhsfbb2musg9.png/100px-Chr_icon_1065_106501_01.png"
+      },
+      {
+        "description": "【Joyful Jamboree!】大拓太阳神",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/b/b7/e53viac10irmjqg5vh7vr11jv9jqbf3.png/100px-Chr_icon_1065_106502_01.png"
       },
       {
         "description": "里见光钻",
@@ -1368,6 +1524,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/5/5b/q5din7qegraqkzpeqok6n1ftxg4tuqs.png/100px-Chr_icon_1072_107201_01.png"
       },
       {
+        "description": "【黒将Zen】八重无敌",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/7/78/7isrcdqh8e8gs6yqghzmkydq01io3o3.png/100px-Chr_icon_1072_107202_01.png"
+      },
+      {
         "description": "目白光明",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/3/3d/s983wgl7q0cclfuqhbmrtnou8y9ckye.png/100px-Chr_icon_1074_107401_01.png"
       },
@@ -1388,11 +1548,19 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/1/14/r4oe6dz6w03wwey738ocgr376vnq3uw.png/100px-Chr_icon_1078_107801_01.png"
       },
       {
+        "description": "创升",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/8/8e/r40ujyf20ediri7o5yxqk9bmz0j6sk9.png/100px-Chr_icon_1080_108001_01.png"
+      },
+      {
+        "description": "北方飞翔",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/8/8c/tsm252lcnqrqifhrhhwpeywllubktxv.png/100px-Chr_icon_1082_108201_01.png"
+      },
+      {
         "description": "吉兆",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/1/14/4xm4ww9jk385x0qtjhzpm7fh6iyyphl.png/100px-Chr_icon_1083_108301_01.png"
       },
       {
-        "description": "【Jetblack Automaton】シンボリクリスエス",
+        "description": "【Jetblack Automaton】吉兆",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/8/82/iy2sc1613b2fxxditqwcj1qmwwyis7z.png/100px-Chr_icon_1083_108302_01.png"
       },
       {
@@ -1402,6 +1570,10 @@
       {
         "description": "第一红宝石",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/2/25/2yu11t47hkyi7mbwb0tsof6qzq2y6yp.png/100px-Chr_icon_1085_108501_01.png"
+      },
+      {
+        "description": "【Flowing Blue】第一红宝石",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/3/3a/3kzlebtemjx3iwo5v177du1g9elwr8b.png/100px-Chr_icon_1085_108502_01.png"
       },
       {
         "description": "目白高峰",
@@ -1428,6 +1600,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/8/88/1ssa5cwaua1hubjj9rpiusr2u9z2h95.png/100px-Chr_icon_1093_109301_01.png"
       },
       {
+        "description": "森林宝穴",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/5/53/2k7mwmnalcfyvvadrz2c4555da690t3.png/100px-Chr_icon_1094_109401_01.png"
+      },
+      {
         "description": "小林历奇",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/c/c1/cubqidbgc4hml4tfob74vibwdrirmtl.png/100px-Chr_icon_1098_109801_01.png"
       },
@@ -1436,8 +1612,16 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/b/bb/99cqj8522z6pxeuuyqykdrozgnmocsp.png/100px-Chr_icon_1099_109901_01.png"
       },
       {
+        "description": "【パステルマリン・ロコドル】北港火山",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/5/54/b110pcg38quvuqj02a6sv7oizjgmriy.png/100px-Chr_icon_1099_109902_01.png"
+      },
+      {
         "description": "奇锐骏",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/1/12/6kkenjdmgix43noamdz1vzcmkdcyf85.png/100px-Chr_icon_1100_110001_01.png"
+      },
+      {
+        "description": "万籁争鸣",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/7/70/sfnc8294bsdwdp3pvf9acg9zi6w9t0g.png/100px-Chr_icon_1102_110201_01.png"
       },
       {
         "description": "葛城王牌",
@@ -1446,6 +1630,10 @@
       {
         "description": "新宇宙",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/e/e8/906duo40f95i0awsj2dt3g497a9afft.png/100px-Chr_icon_1105_110501_01.png"
+      },
+      {
+        "description": "【Like “ZEER”】新宇宙",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/5/58/klv5q3ywq6sxvd6sz3t4wtd9wc8gh2v.png/100px-Chr_icon_1105_110502_01.png"
       },
       {
         "description": "菱钻奇宝",
@@ -1458,92 +1646,148 @@
       {
         "description": "大鸣大放",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/2/2c/o9f0lo9o0a0sia02znnop52t3e81sa7.png/100px-Chr_icon_1108_110801_01.png"
+      },
+      {
+        "description": "莱茵力量",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/3/3a/83q4gk6uw2f80if4rea7mcmf98eb8dl.png/100px-Chr_icon_1109_110901_01.png"
+      },
+      {
+        "description": "贵妇人",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/e/e7/eoiwfwqduvakap66kqr5vampejutuwq.png/100px-Chr_icon_1116_111601_01.png"
+      },
+      {
+        "description": "梦之旅",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/3/31/f9w8jn4edx00c43oq87yl4r3m7tv51d.png/100px-Chr_icon_1119_111901_01.png"
+      },
+      {
+        "description": "金镇之光",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/a/a2/18xyv70l1dm0jkw2jep8wf5puycmt62.png/100px-Chr_icon_1120_112001_01.png"
       }
     ]
   },
   "starRail": {
     "male": [
       {
+        "description": "椒丘",
+        "url": "https://patchwiki.biligame.com/images/sr/e/e0/qaochn30qkct2gzvcop1l7galoy9d63.png"
+      },
+      {
+        "description": "波提欧",
+        "url": "https://patchwiki.biligame.com/images/sr/d/da/5wtfcz4garqrmk9k3jbq0vc5x45lgu3.png"
+      },
+      {
+        "description": "砂金",
+        "url": "https://patchwiki.biligame.com/images/sr/8/81/b88dlc8dr8gocikr1x7gpfke3m2n0q0.png"
+      },
+      {
+        "description": "加拉赫",
+        "url": "https://patchwiki.biligame.com/images/sr/4/45/635ho4kx5ge6epx3bkn6pzp3mbsvezk.png"
+      },
+      {
         "description": "米沙",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/b/b4/0oxd8z3m1pe5mdu6uc6hv4cshamankm.png/60px-米沙.png"
+        "url": "https://patchwiki.biligame.com/images/sr/b/b4/kdjdbpwwvnyrrtap9bv06svosz0z4a3.png"
       },
       {
         "description": "真理医生",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/e/e8/qvg0nhlfw8qsaz4pjdqiofgb8di3ngv.png/60px-真理医生.png"
+        "url": "https://patchwiki.biligame.com/images/sr/e/e8/2vsc3pe7c2e1jly7wm2idvz6t2m31d8.png"
       },
       {
         "description": "银枝",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/d/d8/25koyev56amcbvilazmtmclya7yorh5.png/60px-银枝.png"
+        "url": "https://patchwiki.biligame.com/images/sr/d/d8/mygr5talpfik1ukgmnhgr5c7jc6fq6x.png"
       },
       {
         "description": "丹恒•饮月",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/5/5e/jx9s48qhgcydxiw608oowmbf4pokw3g.png/60px-丹恒•饮月.png"
+        "url": "https://patchwiki.biligame.com/images/sr/5/5e/hdu1w3gwyaqtfi8ztdu3f13kjfta8rh.png"
       },
       {
         "description": "卢卡",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/3/3a/p12qkd10ugjkhchm4f34q3j2imxh323.png/60px-卢卡.png"
+        "url": "https://patchwiki.biligame.com/images/sr/3/3a/1v8w1pnhdt212dis6d8n3tw4xbm4rss.png"
       },
       {
         "description": "刃",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/4c/7onmk24fqdgau93wsjx8qr8th1ahgds.png/60px-刃.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/4c/h32p7jlxyi00coj1ya4so5ggjbw1g8w.png"
       },
       {
         "description": "罗刹",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/2/25/n99awhmntcqvogdvksf0kl4x78dv77t.png/60px-罗刹.png"
+        "url": "https://patchwiki.biligame.com/images/sr/2/25/mk44uvm6gfnven3tuq7rlzm5oz7acvw.png"
       },
       {
         "description": "景元",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/1/11/lpefcuvh9gfjtdzl6wmawud5xttjhmc.png/60px-景元.png"
+        "url": "https://patchwiki.biligame.com/images/sr/1/11/0s6m58osylvmhiqxpqbqlinww9sxvl0.png"
       },
       {
         "description": "彦卿",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/a/ae/0c14dse3xrfje2sv7575qvhr11prgby.png/60px-彦卿.png"
+        "url": "https://patchwiki.biligame.com/images/sr/a/ae/djikoabpbw89yl881mro4h626bpyu9l.png"
       },
       {
         "description": "杰帕德",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/1/13/7ov0bzo5i63usvzxt5n7087z4lynce3.png/60px-杰帕德.png"
+        "url": "https://patchwiki.biligame.com/images/sr/1/13/2zxkngp1isezm45f07zi5uz4pgev3vd.png"
       },
       {
         "description": "瓦尔特",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/8/87/f50frnxnzqgx3lrnqz2f4hjzrlqcfae.png/60px-瓦尔特.png"
+        "url": "https://patchwiki.biligame.com/images/sr/8/87/54l5z1oah8mtzujm4ceha0sn121mpv7.png"
       },
       {
         "description": "阿兰",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/e/e3/148pd2d35ftfz0rn22iu3pv39vzhd0a.png/60px-阿兰.png"
+        "url": "https://patchwiki.biligame.com/images/sr/e/e3/h92y0hgibbww0f4ayg9xsc9lkkrbm1t.png"
       },
       {
         "description": "桑博",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/4f/ewaef9roe613lgrqz0cwmz7wui75ln9.png/60px-桑博.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/4f/o084kh5szvjt4c9pg2u5u0djj3qg8xt.png"
       },
       {
         "description": "丹恒",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/5/50/r7lbqq30n9x4tc9t84z0a1jru1wl8ho.png/60px-丹恒.png"
+        "url": "https://patchwiki.biligame.com/images/sr/5/50/dy9w38du3j7gr0bwmkdapzx7v2yq9xu.png"
       }
     ],
     "female": [
       {
+        "description": "云璃",
+        "url": "https://patchwiki.biligame.com/images/sr/d/d9/q1kzn8lehteph6x95tlyzjzf9re3ek8.png"
+      },
+      {
+        "description": "三月七•巡猎",
+        "url": "https://patchwiki.biligame.com/images/sr/e/e6/0it2w9hehfp8wqqa2nopfvdk4aj68um.png"
+      },
+      {
+        "description": "翡翠",
+        "url": "https://patchwiki.biligame.com/images/sr/e/ec/4er3t2hcgkmytigzjj4ralmhbn0gwf6.png"
+      },
+      {
+        "description": "流萤",
+        "url": "https://patchwiki.biligame.com/images/sr/6/6e/loo8cnidyavnbgut84xmcgth6vdl5a0.png"
+      },
+      {
+        "description": "知更鸟",
+        "url": "https://patchwiki.biligame.com/images/sr/4/45/mcybqtbsmow098ik7nu1dq1jmef7bmc.png"
+      },
+      {
+        "description": "黄泉",
+        "url": "https://patchwiki.biligame.com/images/sr/e/e8/7s1eiyi9q7kjk4ow4wcov33bjiokhwx.png"
+      },
+      {
         "description": "花火",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/9/90/o5noo1t924ab8a246rqhwymia9wjzme.png/60px-花火.png"
+        "url": "https://patchwiki.biligame.com/images/sr/9/90/jf5yte1ote51iepifi8i75wifww5ybe.png"
       },
       {
         "description": "黑天鹅",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/b/b8/660mwtozc1se2rk3cuqyz6fegarrrx1.png/60px-黑天鹅.png"
+        "url": "https://patchwiki.biligame.com/images/sr/b/b8/qrev74l35vj8n7kwpcpr8ud9b41ni1a.png"
       },
       {
         "description": "阮•梅",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/7/7e/pv7j3qorhg8vioxa5m9ys5kl7wly7ep.png/60px-阮•梅.png"
+        "url": "https://patchwiki.biligame.com/images/sr/7/7e/4fr0z14ln8pzcws5dwd7jee4s0g0u66.png"
       },
       {
         "description": "雪衣",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/3/3e/0hexm6hqss9tz2jlk72xstu2wekrv28.png/60px-雪衣.png"
+        "url": "https://patchwiki.biligame.com/images/sr/3/3e/hybs1m6az92iylukqp98bhmwzwdmkru.png"
       },
       {
         "description": "寒鸦",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/2/2a/30onn7takviutzcou54pov7k5yjrn1m.png/60px-寒鸦.png"
+        "url": "https://patchwiki.biligame.com/images/sr/2/2a/4wcmkrfx62ngkpa260kjr20dtjk7ctp.png"
       },
       {
         "description": "藿藿",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/1/18/n7k48ig39p9jqgzfki6ng7avh338n1d.png/60px-藿藿.png"
+        "url": "https://patchwiki.biligame.com/images/sr/1/18/mxyemxhumdaxh5fwuyhhxuvckpujai0.png"
       },
       {
         "description": "托帕&amp;账账",
@@ -1551,1353 +1795,1465 @@
       },
       {
         "description": "桂乃芬",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/1/12/n5bdag071smlkixsx6karq9fb6yckbf.png/60px-桂乃芬.png"
+        "url": "https://patchwiki.biligame.com/images/sr/1/12/atc2i0g1s6acih7zoydpgthv0sxdrii.png"
       },
       {
         "description": "镜流",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/4f/aymc2kbwihnsi8rq1irhy2axaugatmm.png/60px-镜流.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/4f/eroepj7blbgn986vxmq6yupvn8wwgho.png"
       },
       {
         "description": "符玄",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/9/93/4t66mewmti17qteotn6ul16p1624i7b.png/60px-符玄.png"
+        "url": "https://patchwiki.biligame.com/images/sr/9/93/l8whdjtp13zqrhep2pfc4ale839tahz.png"
       },
       {
         "description": "玲可",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/8/82/dji139apt4n3a7rqi4s4aej45obuipx.png/60px-玲可.png"
+        "url": "https://patchwiki.biligame.com/images/sr/8/82/01xva2wa5fwbvlcbq3gfe8r2g8jpq2z.png"
       },
       {
         "description": "卡芙卡",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/f/fe/swjc15h5lekheoa1g15hi2kcm3mi7u6.png/60px-卡芙卡.png"
+        "url": "https://patchwiki.biligame.com/images/sr/f/fe/dohx45e24wwx133a7ys68qtz1hy0mav.png"
       },
       {
         "description": "驭空",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/44/6w0m2kw039zwln71dmmt7dpcwlao24c.png/60px-驭空.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/44/3n1jlyek8fscf4peqpttg615pvamwj0.png"
       },
       {
         "description": "银狼",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/6/6a/r7w07iajvrc1u9tb50p69vfr9jiwu2x.png/60px-银狼.png"
+        "url": "https://patchwiki.biligame.com/images/sr/6/6a/fy5jpy31k53qtntk0aetrjq9ior9gs2.png"
       },
       {
         "description": "白露",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/e/e9/pehh3rxcf1oxy0iq2srxdrhvpgn67n1.png/60px-白露.png"
+        "url": "https://patchwiki.biligame.com/images/sr/e/e9/8o1y9m2cxem13m623px85i0kpcec8f5.png"
       },
       {
         "description": "姬子",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/7/73/cx1pu6pl7h4z5b5e86fxmb2gfyqewr9.png/60px-姬子.png"
+        "url": "https://patchwiki.biligame.com/images/sr/7/73/gbf9yt1fk2878nc3hmvdv1kodx49ieg.png"
       },
       {
         "description": "克拉拉",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/5/55/mtqvfpbwq1i3wean5yafn1uxuc8y1q5.png/60px-克拉拉.png"
+        "url": "https://patchwiki.biligame.com/images/sr/5/55/57uq8vc3fvs2m34t6ha06rf03343rzn.png"
       },
       {
         "description": "希儿",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/3/38/gv7aarppc4h0n6dgkr05ufcubr2uqoe.png/60px-希儿.png"
+        "url": "https://patchwiki.biligame.com/images/sr/3/38/3ugfna3k4fw7dfo0qipt4lfrctt50x0.png"
       },
       {
         "description": "布洛妮娅",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/c/ca/13zzf7p3j9y25i6vzpfywrreyyigk8k.png/60px-布洛妮娅.png"
+        "url": "https://patchwiki.biligame.com/images/sr/c/ca/agb28atc6hthmiwkqomw4kmtuidzyt9.png"
       },
       {
         "description": "停云",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/4e/rpzk2d0m6xak2n8zdfrdsfb83j6g6c4.png/60px-停云.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/4e/mjwg8u69l0h798rk9hquglyl8vut9fr.png"
       },
       {
         "description": "青雀",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/40/pslaj26ydt1fbwo0b6v4vntsx6p277n.png/60px-青雀.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/40/szkhonn9zbsqwp4fd3g4t88a5mdo94w.png"
       },
       {
         "description": "黑塔",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/2/29/0nxd453fl9jm67heie9vjzbyeu4wzn6.png/60px-黑塔.png"
+        "url": "https://patchwiki.biligame.com/images/sr/2/29/mqe2vm7uhe42uhaw76pvhmnpsjm48s8.png"
       },
       {
         "description": "素裳",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/a/a8/n7v209hum345c945ri82chie3eznvgs.png/60px-素裳.png"
+        "url": "https://patchwiki.biligame.com/images/sr/a/a8/185ah8131wpphlzanol8nz8509jxqhr.png"
       },
       {
         "description": "娜塔莎",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/c/c7/1xc2p3473ga5684ij5efwhh3wu2v8rf.png/60px-娜塔莎.png"
+        "url": "https://patchwiki.biligame.com/images/sr/c/c7/3hdrg1xfrx3rn18f1ynh6rxha3smmyc.png"
       },
       {
         "description": "希露瓦",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/1/19/r7quehglkqmz806zyt5o2zromgkxhet.png/60px-希露瓦.png"
+        "url": "https://patchwiki.biligame.com/images/sr/1/19/algq66demezhksajce9t8s6df8f6qv0.png"
       },
       {
         "description": "佩拉",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/4/48/mk2i7qg75laoenchz4tqdnjht77djd9.png/60px-佩拉.png"
+        "url": "https://patchwiki.biligame.com/images/sr/4/48/0yerfr40s6ls15ousv1pu8clfeeur5j.png"
       },
       {
         "description": "虎克",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/d/d9/36jgn9n5geaymyj8oa6xk2ddr742e6m.png/60px-虎克.png"
+        "url": "https://patchwiki.biligame.com/images/sr/d/d9/cng0jc28j1hikbidgetsoyeq81pp2he.png"
       },
       {
         "description": "三月七",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/6/62/koly05ug18ze5oajxdxdf7sr9r0hiwk.png/60px-三月七.png"
+        "url": "https://patchwiki.biligame.com/images/sr/6/62/bke5waazntxa8nmxz85ix881v4318fv.png"
       },
       {
         "description": "艾丝妲",
-        "url": "https://patchwiki.biligame.com/images/sr/thumb/b/bf/7iarxakbkohbvt7zq75thkko9tb2xyv.png/60px-艾丝妲.png"
+        "url": "https://patchwiki.biligame.com/images/sr/b/bf/st0z27ry91aovv8okirwqtbhwygaex7.png"
       }
     ]
   },
   "arknights": {
     "male": [
       {
+        "description": "莱欧斯",
+        "url": "https://media.prts.wiki/9/9c/头像_莱欧斯.png"
+      },
+      {
+        "description": "齐尔查克",
+        "url": "https://media.prts.wiki/4/42/头像_齐尔查克.png"
+      },
+      {
+        "description": "森西",
+        "url": "https://media.prts.wiki/e/e7/头像_森西.png"
+      },
+      {
+        "description": "衡沙",
+        "url": "https://media.prts.wiki/f/f8/头像_衡沙.png"
+      },
+      {
+        "description": "锡人",
+        "url": "https://media.prts.wiki/a/a1/头像_锡人.png"
+      },
+      {
+        "description": "渡桥",
+        "url": "https://media.prts.wiki/f/fd/头像_渡桥.png"
+      },
+      {
+        "description": "乌尔比安",
+        "url": "https://media.prts.wiki/3/33/头像_乌尔比安.png"
+      },
+      {
+        "description": "逻各斯",
+        "url": "https://media.prts.wiki/4/44/头像_逻各斯.png"
+      },
+      {
+        "description": "奥达",
+        "url": "https://media.prts.wiki/2/29/头像_奥达.png"
+      },
+      {
+        "description": "医生",
+        "url": "https://media.prts.wiki/1/11/头像_医生.png"
+      },
+      {
+        "description": "导火索",
+        "url": "https://media.prts.wiki/7/70/头像_导火索.png"
+      },
+      {
         "description": "左乐",
-        "url": "https://prts.wiki/images/e/e0/头像_左乐.png"
+        "url": "https://media.prts.wiki/e/e0/头像_左乐.png"
       },
       {
         "description": "万顷",
-        "url": "https://prts.wiki/images/a/ad/头像_万顷.png"
+        "url": "https://media.prts.wiki/a/ad/头像_万顷.png"
       },
       {
         "description": "哈洛德",
-        "url": "https://prts.wiki/images/2/22/头像_哈洛德.png"
+        "url": "https://media.prts.wiki/2/22/头像_哈洛德.png"
       },
       {
         "description": "止颂",
-        "url": "https://prts.wiki/images/7/72/头像_止颂.png"
+        "url": "https://media.prts.wiki/7/72/头像_止颂.png"
       },
       {
         "description": "深律",
-        "url": "https://prts.wiki/images/d/d8/头像_深律.png"
+        "url": "https://media.prts.wiki/d/d8/头像_深律.png"
       },
       {
         "description": "折光",
-        "url": "https://prts.wiki/images/c/c2/头像_折光.png"
+        "url": "https://media.prts.wiki/c/c2/头像_折光.png"
       },
       {
         "description": "赫德雷",
-        "url": "https://prts.wiki/images/f/f8/头像_赫德雷.png"
+        "url": "https://media.prts.wiki/f/f8/头像_赫德雷.png"
       },
       {
         "description": "维荻",
-        "url": "https://prts.wiki/images/9/97/头像_维荻.png"
+        "url": "https://media.prts.wiki/9/97/头像_维荻.png"
       },
       {
         "description": "苍苔",
-        "url": "https://prts.wiki/images/9/95/头像_苍苔.png"
+        "url": "https://media.prts.wiki/9/95/头像_苍苔.png"
       },
       {
         "description": "圣约送葬人",
-        "url": "https://prts.wiki/images/7/7e/头像_圣约送葬人.png"
+        "url": "https://media.prts.wiki/7/7e/头像_圣约送葬人.png"
       },
       {
         "description": "隐现",
-        "url": "https://prts.wiki/images/8/85/头像_隐现.png"
+        "url": "https://media.prts.wiki/8/85/头像_隐现.png"
       },
       {
         "description": "Friston-3",
-        "url": "https://prts.wiki/images/c/cf/头像_Friston-3.png"
+        "url": "https://media.prts.wiki/c/cf/头像_Friston-3.png"
       },
       {
         "description": "休谟斯",
-        "url": "https://prts.wiki/images/e/e0/头像_休谟斯.png"
+        "url": "https://media.prts.wiki/e/e0/头像_休谟斯.png"
       },
       {
         "description": "火龙S黑角",
-        "url": "https://prts.wiki/images/8/81/头像_火龙S黑角.png"
+        "url": "https://media.prts.wiki/8/81/头像_火龙S黑角.png"
       },
       {
         "description": "重岳",
-        "url": "https://prts.wiki/images/0/09/头像_重岳.png"
+        "url": "https://media.prts.wiki/0/09/头像_重岳.png"
       },
       {
         "description": "谜图",
-        "url": "https://prts.wiki/images/7/79/头像_谜图.png"
+        "url": "https://media.prts.wiki/7/79/头像_谜图.png"
       },
       {
         "description": "伺夜",
-        "url": "https://prts.wiki/images/d/df/头像_伺夜.png"
+        "url": "https://media.prts.wiki/d/df/头像_伺夜.png"
       },
       {
         "description": "雪绒",
-        "url": "https://prts.wiki/images/8/82/头像_雪绒.png"
+        "url": "https://media.prts.wiki/8/82/头像_雪绒.png"
       },
       {
         "description": "白铁",
-        "url": "https://prts.wiki/images/2/2e/头像_白铁.png"
+        "url": "https://media.prts.wiki/2/2e/头像_白铁.png"
       },
       {
         "description": "铅踝",
-        "url": "https://prts.wiki/images/8/87/头像_铅踝.png"
+        "url": "https://media.prts.wiki/8/87/头像_铅踝.png"
       },
       {
         "description": "罗小黑",
-        "url": "https://prts.wiki/images/5/50/头像_罗小黑.png"
+        "url": "https://media.prts.wiki/5/50/头像_罗小黑.png"
       },
       {
         "description": "玛恩纳",
-        "url": "https://prts.wiki/images/0/08/头像_玛恩纳.png"
+        "url": "https://media.prts.wiki/0/08/头像_玛恩纳.png"
       },
       {
         "description": "至简",
-        "url": "https://prts.wiki/images/9/98/头像_至简.png"
+        "url": "https://media.prts.wiki/9/98/头像_至简.png"
       },
       {
         "description": "承曦格雷伊",
-        "url": "https://prts.wiki/images/e/e2/头像_承曦格雷伊.png"
+        "url": "https://media.prts.wiki/e/e2/头像_承曦格雷伊.png"
       },
       {
         "description": "黑键",
-        "url": "https://prts.wiki/images/1/1e/头像_黑键.png"
+        "url": "https://media.prts.wiki/1/1e/头像_黑键.png"
       },
       {
         "description": "车尔尼",
-        "url": "https://prts.wiki/images/1/1c/头像_车尔尼.png"
+        "url": "https://media.prts.wiki/1/1c/头像_车尔尼.png"
       },
       {
         "description": "流明",
-        "url": "https://prts.wiki/images/7/72/头像_流明.png"
+        "url": "https://media.prts.wiki/7/72/头像_流明.png"
       },
       {
         "description": "掠风",
-        "url": "https://prts.wiki/images/5/5c/头像_掠风.png"
+        "url": "https://media.prts.wiki/5/5c/头像_掠风.png"
       },
       {
         "description": "褐果",
-        "url": "https://prts.wiki/images/5/58/头像_褐果.png"
+        "url": "https://media.prts.wiki/5/58/头像_褐果.png"
       },
       {
         "description": "见行者",
-        "url": "https://prts.wiki/images/d/d2/头像_见行者.png"
+        "url": "https://media.prts.wiki/d/d2/头像_见行者.png"
       },
       {
         "description": "老鲤",
-        "url": "https://prts.wiki/images/e/e5/头像_老鲤.png"
+        "url": "https://media.prts.wiki/e/e5/头像_老鲤.png"
       },
       {
         "description": "暮落",
-        "url": "https://prts.wiki/images/f/fb/头像_暮落.png"
+        "url": "https://media.prts.wiki/f/fb/头像_暮落.png"
       },
       {
         "description": "灵知",
-        "url": "https://prts.wiki/images/9/9f/头像_灵知.png"
+        "url": "https://media.prts.wiki/9/9f/头像_灵知.png"
       },
       {
         "description": "蚀清",
-        "url": "https://prts.wiki/images/7/70/头像_蚀清.png"
+        "url": "https://media.prts.wiki/7/70/头像_蚀清.png"
       },
       {
         "description": "水月",
-        "url": "https://prts.wiki/images/0/05/头像_水月.png"
+        "url": "https://media.prts.wiki/0/05/头像_水月.png"
       },
       {
         "description": "龙舌兰",
-        "url": "https://prts.wiki/images/4/42/头像_龙舌兰.png"
+        "url": "https://media.prts.wiki/4/42/头像_龙舌兰.png"
       },
       {
         "description": "异客",
-        "url": "https://prts.wiki/images/d/d2/头像_异客.png"
+        "url": "https://media.prts.wiki/d/d2/头像_异客.png"
       },
       {
         "description": "闪击",
-        "url": "https://prts.wiki/images/c/c1/头像_闪击.png"
+        "url": "https://media.prts.wiki/c/c1/头像_闪击.png"
       },
       {
         "description": "战车",
-        "url": "https://prts.wiki/images/c/cb/头像_战车.png"
+        "url": "https://media.prts.wiki/c/cb/头像_战车.png"
       },
       {
         "description": "乌有",
-        "url": "https://prts.wiki/images/0/04/头像_乌有.png"
+        "url": "https://media.prts.wiki/0/04/头像_乌有.png"
       },
       {
         "description": "山",
-        "url": "https://prts.wiki/images/e/ec/头像_山.png"
+        "url": "https://media.prts.wiki/e/ec/头像_山.png"
       },
       {
         "description": "奥斯塔",
-        "url": "https://prts.wiki/images/4/49/头像_奥斯塔.png"
+        "url": "https://media.prts.wiki/4/49/头像_奥斯塔.png"
       },
       {
         "description": "芳汀",
-        "url": "https://prts.wiki/images/6/6a/头像_芳汀.png"
+        "url": "https://media.prts.wiki/6/6a/头像_芳汀.png"
       },
       {
         "description": "棘刺",
-        "url": "https://prts.wiki/images/2/2a/头像_棘刺.png"
+        "url": "https://media.prts.wiki/2/2a/头像_棘刺.png"
       },
       {
         "description": "孑",
-        "url": "https://prts.wiki/images/5/54/头像_孑.png"
+        "url": "https://media.prts.wiki/5/54/头像_孑.png"
       },
       {
         "description": "贾维",
-        "url": "https://prts.wiki/images/2/2a/头像_贾维.png"
+        "url": "https://media.prts.wiki/2/2a/头像_贾维.png"
       },
       {
         "description": "断崖",
-        "url": "https://prts.wiki/images/e/ea/头像_断崖.png"
+        "url": "https://media.prts.wiki/e/ea/头像_断崖.png"
       },
       {
         "description": "莱恩哈特",
-        "url": "https://prts.wiki/images/0/03/头像_莱恩哈特.png"
+        "url": "https://media.prts.wiki/0/03/头像_莱恩哈特.png"
       },
       {
         "description": "极境",
-        "url": "https://prts.wiki/images/9/97/头像_极境.png"
+        "url": "https://media.prts.wiki/9/97/头像_极境.png"
       },
       {
         "description": "THRM-EX",
-        "url": "https://prts.wiki/images/d/d8/头像_THRM-EX.png"
+        "url": "https://media.prts.wiki/d/d8/头像_THRM-EX.png"
       },
       {
         "description": "傀影",
-        "url": "https://prts.wiki/images/8/83/头像_傀影.png"
+        "url": "https://media.prts.wiki/8/83/头像_傀影.png"
       },
       {
         "description": "慑砂",
-        "url": "https://prts.wiki/images/e/e7/头像_慑砂.png"
+        "url": "https://media.prts.wiki/e/e7/头像_慑砂.png"
       },
       {
         "description": "阿",
-        "url": "https://prts.wiki/images/3/31/头像_阿.png"
+        "url": "https://media.prts.wiki/3/31/头像_阿.png"
       },
       {
         "description": "吽",
-        "url": "https://prts.wiki/images/4/41/头像_吽.png"
+        "url": "https://media.prts.wiki/4/41/头像_吽.png"
       },
       {
         "description": "布洛卡",
-        "url": "https://prts.wiki/images/0/04/头像_布洛卡.png"
+        "url": "https://media.prts.wiki/0/04/头像_布洛卡.png"
       },
       {
         "description": "拜松",
-        "url": "https://prts.wiki/images/b/b2/头像_拜松.png"
+        "url": "https://media.prts.wiki/b/b2/头像_拜松.png"
       },
       {
         "description": "伊桑",
-        "url": "https://prts.wiki/images/c/c1/头像_伊桑.png"
+        "url": "https://media.prts.wiki/c/c1/头像_伊桑.png"
       },
       {
         "description": "送葬人",
-        "url": "https://prts.wiki/images/d/da/头像_送葬人.png"
+        "url": "https://media.prts.wiki/d/da/头像_送葬人.png"
       },
       {
         "description": "炎客",
-        "url": "https://prts.wiki/images/d/d6/头像_炎客.png"
+        "url": "https://media.prts.wiki/d/d6/头像_炎客.png"
       },
       {
         "description": "赫拉格",
-        "url": "https://prts.wiki/images/c/cd/头像_赫拉格.png"
+        "url": "https://media.prts.wiki/c/cd/头像_赫拉格.png"
       },
       {
         "description": "格雷伊",
-        "url": "https://prts.wiki/images/f/fe/头像_格雷伊.png"
+        "url": "https://media.prts.wiki/f/fe/头像_格雷伊.png"
       },
       {
         "description": "斑点",
-        "url": "https://prts.wiki/images/3/30/头像_斑点.png"
+        "url": "https://media.prts.wiki/3/30/头像_斑点.png"
       },
       {
         "description": "月见夜",
-        "url": "https://prts.wiki/images/b/b7/头像_月见夜.png"
+        "url": "https://media.prts.wiki/b/b7/头像_月见夜.png"
       },
       {
         "description": "银灰",
-        "url": "https://prts.wiki/images/2/27/头像_银灰.png"
+        "url": "https://media.prts.wiki/2/27/头像_银灰.png"
       },
       {
         "description": "角峰",
-        "url": "https://prts.wiki/images/e/e4/头像_角峰.png"
+        "url": "https://media.prts.wiki/e/e4/头像_角峰.png"
       },
       {
         "description": "讯使",
-        "url": "https://prts.wiki/images/2/27/头像_讯使.png"
+        "url": "https://media.prts.wiki/2/27/头像_讯使.png"
       },
       {
         "description": "史都华德",
-        "url": "https://prts.wiki/images/b/b3/头像_史都华德.png"
+        "url": "https://media.prts.wiki/b/b3/头像_史都华德.png"
       },
       {
         "description": "安赛尔",
-        "url": "https://prts.wiki/images/9/94/头像_安赛尔.png"
+        "url": "https://media.prts.wiki/9/94/头像_安赛尔.png"
       },
       {
         "description": "安德切尔",
-        "url": "https://prts.wiki/images/f/f6/头像_安德切尔.png"
+        "url": "https://media.prts.wiki/f/f6/头像_安德切尔.png"
       },
       {
         "description": "12F",
-        "url": "https://prts.wiki/images/b/b7/头像_12F.png"
+        "url": "https://media.prts.wiki/b/b7/头像_12F.png"
       },
       {
         "description": "巡林者",
-        "url": "https://prts.wiki/images/9/93/头像_巡林者.png"
+        "url": "https://media.prts.wiki/9/93/头像_巡林者.png"
       },
       {
         "description": "黑角",
-        "url": "https://prts.wiki/images/f/f1/头像_黑角.png"
+        "url": "https://media.prts.wiki/f/f1/头像_黑角.png"
       },
       {
         "description": "Castle-3",
-        "url": "https://prts.wiki/images/8/82/头像_Castle-3.png"
+        "url": "https://media.prts.wiki/8/82/头像_Castle-3.png"
       }
     ],
     "female": [
       {
+        "description": "玛露西尔",
+        "url": "https://media.prts.wiki/8/84/头像_玛露西尔.png"
+      },
+      {
+        "description": "佩佩",
+        "url": "https://media.prts.wiki/8/85/头像_佩佩.png"
+      },
+      {
+        "description": "娜仁图亚",
+        "url": "https://media.prts.wiki/b/ba/头像_娜仁图亚.png"
+      },
+      {
+        "description": "莎草",
+        "url": "https://media.prts.wiki/3/3d/头像_莎草.png"
+      },
+      {
+        "description": "妮芙",
+        "url": "https://media.prts.wiki/1/1a/头像_妮芙.png"
+      },
+      {
+        "description": "海霓",
+        "url": "https://media.prts.wiki/7/72/头像_海霓.png"
+      },
+      {
+        "description": "深巡",
+        "url": "https://media.prts.wiki/b/bd/头像_深巡.png"
+      },
+      {
+        "description": "阿米娅(医疗)",
+        "url": "https://media.prts.wiki/a/ac/头像_阿米娅(医疗).png"
+      },
+      {
+        "description": "维什戴尔",
+        "url": "https://media.prts.wiki/6/66/头像_维什戴尔.png"
+      },
+      {
+        "description": "魔王",
+        "url": "https://media.prts.wiki/d/de/头像_魔王.png"
+      },
+      {
+        "description": "历阵锐枪芬",
+        "url": "https://media.prts.wiki/5/5a/头像_历阵锐枪芬.png"
+      },
+      {
+        "description": "PhonoR-0",
+        "url": "https://media.prts.wiki/3/3d/头像_PhonoR-0.png"
+      },
+      {
+        "description": "阿斯卡纶",
+        "url": "https://media.prts.wiki/7/76/头像_阿斯卡纶.png"
+      },
+      {
+        "description": "阿罗玛",
+        "url": "https://media.prts.wiki/f/f6/头像_阿罗玛.png"
+      },
+      {
+        "description": "露托",
+        "url": "https://media.prts.wiki/7/77/头像_露托.png"
+      },
+      {
+        "description": "艾拉",
+        "url": "https://media.prts.wiki/2/26/头像_艾拉.png"
+      },
+      {
+        "description": "双月",
+        "url": "https://media.prts.wiki/f/ff/头像_双月.png"
+      },
+      {
         "description": "红隼",
-        "url": "https://prts.wiki/images/4/45/头像_红隼.png"
+        "url": "https://media.prts.wiki/4/45/头像_红隼.png"
       },
       {
         "description": "黍",
-        "url": "https://prts.wiki/images/f/f2/头像_黍.png"
+        "url": "https://media.prts.wiki/f/f2/头像_黍.png"
       },
       {
         "description": "小满",
-        "url": "https://prts.wiki/images/1/1d/头像_小满.png"
+        "url": "https://media.prts.wiki/1/1d/头像_小满.png"
       },
       {
         "description": "莱伊",
-        "url": "https://prts.wiki/images/6/6a/头像_莱伊.png"
+        "url": "https://media.prts.wiki/6/6a/头像_莱伊.png"
       },
       {
         "description": "温米",
-        "url": "https://prts.wiki/images/3/3f/头像_温米.png"
+        "url": "https://media.prts.wiki/3/3f/头像_温米.png"
       },
       {
         "description": "锏",
-        "url": "https://prts.wiki/images/0/0f/头像_锏.png"
+        "url": "https://media.prts.wiki/0/0f/头像_锏.png"
       },
       {
         "description": "烈夏",
-        "url": "https://prts.wiki/images/6/65/头像_烈夏.png"
+        "url": "https://media.prts.wiki/6/65/头像_烈夏.png"
       },
       {
         "description": "塑心",
-        "url": "https://prts.wiki/images/0/05/头像_塑心.png"
+        "url": "https://media.prts.wiki/0/05/头像_塑心.png"
       },
       {
         "description": "薇薇安娜",
-        "url": "https://prts.wiki/images/4/4a/头像_薇薇安娜.png"
+        "url": "https://media.prts.wiki/4/4a/头像_薇薇安娜.png"
       },
       {
         "description": "跃跃",
-        "url": "https://prts.wiki/images/a/aa/头像_跃跃.png"
+        "url": "https://media.prts.wiki/a/aa/头像_跃跃.png"
       },
       {
         "description": "刺玫",
-        "url": "https://prts.wiki/images/c/c6/头像_刺玫.png"
+        "url": "https://media.prts.wiki/c/c6/头像_刺玫.png"
       },
       {
         "description": "戴菲恩",
-        "url": "https://prts.wiki/images/2/28/头像_戴菲恩.png"
+        "url": "https://media.prts.wiki/2/28/头像_戴菲恩.png"
       },
       {
         "description": "涤火杰西卡",
-        "url": "https://prts.wiki/images/1/14/头像_涤火杰西卡.png"
+        "url": "https://media.prts.wiki/1/14/头像_涤火杰西卡.png"
       },
       {
         "description": "杏仁",
-        "url": "https://prts.wiki/images/2/2e/头像_杏仁.png"
+        "url": "https://media.prts.wiki/2/2e/头像_杏仁.png"
       },
       {
         "description": "冰酿",
-        "url": "https://prts.wiki/images/c/cf/头像_冰酿.png"
+        "url": "https://media.prts.wiki/c/cf/头像_冰酿.png"
       },
       {
         "description": "纯烬艾雅法拉",
-        "url": "https://prts.wiki/images/f/f0/头像_纯烬艾雅法拉.png"
+        "url": "https://media.prts.wiki/f/f0/头像_纯烬艾雅法拉.png"
       },
       {
         "description": "琳琅诗怀雅",
-        "url": "https://prts.wiki/images/7/74/头像_琳琅诗怀雅.png"
+        "url": "https://media.prts.wiki/7/74/头像_琳琅诗怀雅.png"
       },
       {
         "description": "青枳",
-        "url": "https://prts.wiki/images/0/0e/头像_青枳.png"
+        "url": "https://media.prts.wiki/0/0e/头像_青枳.png"
       },
       {
         "description": "凛视",
-        "url": "https://prts.wiki/images/e/e3/头像_凛视.png"
+        "url": "https://media.prts.wiki/e/e3/头像_凛视.png"
       },
       {
         "description": "提丰",
-        "url": "https://prts.wiki/images/7/70/头像_提丰.png"
+        "url": "https://media.prts.wiki/7/70/头像_提丰.png"
       },
       {
         "description": "寒檀",
-        "url": "https://prts.wiki/images/c/cd/头像_寒檀.png"
+        "url": "https://media.prts.wiki/c/cd/头像_寒檀.png"
       },
       {
         "description": "空构",
-        "url": "https://prts.wiki/images/d/d1/头像_空构.png"
+        "url": "https://media.prts.wiki/d/d1/头像_空构.png"
       },
       {
         "description": "缪尔赛思",
-        "url": "https://prts.wiki/images/3/3a/头像_缪尔赛思.png"
+        "url": "https://media.prts.wiki/3/3a/头像_缪尔赛思.png"
       },
       {
         "description": "霍尔海雅",
-        "url": "https://prts.wiki/images/9/9e/头像_霍尔海雅.png"
+        "url": "https://media.prts.wiki/9/9e/头像_霍尔海雅.png"
       },
       {
         "description": "淬羽赫默",
-        "url": "https://prts.wiki/images/0/0d/头像_淬羽赫默.png"
+        "url": "https://media.prts.wiki/0/0d/头像_淬羽赫默.png"
       },
       {
         "description": "玫拉",
-        "url": "https://prts.wiki/images/a/ab/头像_玫拉.png"
+        "url": "https://media.prts.wiki/a/ab/头像_玫拉.png"
       },
       {
         "description": "伊内丝",
-        "url": "https://prts.wiki/images/8/8c/头像_伊内丝.png"
+        "url": "https://media.prts.wiki/8/8c/头像_伊内丝.png"
       },
       {
         "description": "洋灰",
-        "url": "https://prts.wiki/images/e/e8/头像_洋灰.png"
+        "url": "https://media.prts.wiki/e/e8/头像_洋灰.png"
       },
       {
         "description": "摩根",
-        "url": "https://prts.wiki/images/f/fe/头像_摩根.png"
+        "url": "https://media.prts.wiki/f/fe/头像_摩根.png"
       },
       {
         "description": "U-Official",
-        "url": "https://prts.wiki/images/4/45/头像_U-Official.png"
+        "url": "https://media.prts.wiki/4/45/头像_U-Official.png"
       },
       {
         "description": "麒麟R夜刀",
-        "url": "https://prts.wiki/images/e/e5/头像_麒麟R夜刀.png"
+        "url": "https://media.prts.wiki/e/e5/头像_麒麟R夜刀.png"
       },
       {
         "description": "仇白",
-        "url": "https://prts.wiki/images/8/8a/头像_仇白.png"
+        "url": "https://media.prts.wiki/8/8a/头像_仇白.png"
       },
       {
         "description": "铎铃",
-        "url": "https://prts.wiki/images/4/4a/头像_铎铃.png"
+        "url": "https://media.prts.wiki/4/4a/头像_铎铃.png"
       },
       {
         "description": "林",
-        "url": "https://prts.wiki/images/a/aa/头像_林.png"
+        "url": "https://media.prts.wiki/a/aa/头像_林.png"
       },
       {
         "description": "火哨",
-        "url": "https://prts.wiki/images/f/fa/头像_火哨.png"
+        "url": "https://media.prts.wiki/f/fa/头像_火哨.png"
       },
       {
         "description": "截云",
-        "url": "https://prts.wiki/images/8/81/头像_截云.png"
+        "url": "https://media.prts.wiki/8/81/头像_截云.png"
       },
       {
         "description": "焰影苇草",
-        "url": "https://prts.wiki/images/9/94/头像_焰影苇草.png"
+        "url": "https://media.prts.wiki/9/94/头像_焰影苇草.png"
       },
       {
         "description": "和弦",
-        "url": "https://prts.wiki/images/e/ed/头像_和弦.png"
+        "url": "https://media.prts.wiki/e/ed/头像_和弦.png"
       },
       {
         "description": "缄默德克萨斯",
-        "url": "https://prts.wiki/images/b/b8/头像_缄默德克萨斯.png"
+        "url": "https://media.prts.wiki/b/b8/头像_缄默德克萨斯.png"
       },
       {
         "description": "斥罪",
-        "url": "https://prts.wiki/images/1/1c/头像_斥罪.png"
+        "url": "https://media.prts.wiki/1/1c/头像_斥罪.png"
       },
       {
         "description": "子月",
-        "url": "https://prts.wiki/images/d/db/头像_子月.png"
+        "url": "https://media.prts.wiki/d/db/头像_子月.png"
       },
       {
         "description": "石英",
-        "url": "https://prts.wiki/images/b/bc/头像_石英.png"
+        "url": "https://media.prts.wiki/b/bc/头像_石英.png"
       },
       {
         "description": "明椒",
-        "url": "https://prts.wiki/images/3/3f/头像_明椒.png"
+        "url": "https://media.prts.wiki/3/3f/头像_明椒.png"
       },
       {
         "description": "达格达",
-        "url": "https://prts.wiki/images/d/dd/头像_达格达.png"
+        "url": "https://media.prts.wiki/d/dd/头像_达格达.png"
       },
       {
         "description": "海沫",
-        "url": "https://prts.wiki/images/6/6c/头像_海沫.png"
+        "url": "https://media.prts.wiki/6/6c/头像_海沫.png"
       },
       {
         "description": "但书",
-        "url": "https://prts.wiki/images/b/b0/头像_但书.png"
+        "url": "https://media.prts.wiki/b/b0/头像_但书.png"
       },
       {
         "description": "百炼嘉维尔",
-        "url": "https://prts.wiki/images/1/1b/头像_百炼嘉维尔.png"
+        "url": "https://media.prts.wiki/1/1b/头像_百炼嘉维尔.png"
       },
       {
         "description": "鸿雪",
-        "url": "https://prts.wiki/images/1/1b/头像_鸿雪.png"
+        "url": "https://media.prts.wiki/1/1b/头像_鸿雪.png"
       },
       {
         "description": "晓歌",
-        "url": "https://prts.wiki/images/1/15/头像_晓歌.png"
+        "url": "https://media.prts.wiki/1/15/头像_晓歌.png"
       },
       {
         "description": "多萝西",
-        "url": "https://prts.wiki/images/4/4f/头像_多萝西.png"
+        "url": "https://media.prts.wiki/4/4f/头像_多萝西.png"
       },
       {
         "description": "星源",
-        "url": "https://prts.wiki/images/4/48/头像_星源.png"
+        "url": "https://media.prts.wiki/4/48/头像_星源.png"
       },
       {
         "description": "濯尘芙蓉",
-        "url": "https://prts.wiki/images/8/8d/头像_濯尘芙蓉.png"
+        "url": "https://media.prts.wiki/8/8d/头像_濯尘芙蓉.png"
       },
       {
         "description": "埃拉托",
-        "url": "https://prts.wiki/images/3/34/头像_埃拉托.png"
+        "url": "https://media.prts.wiki/3/34/头像_埃拉托.png"
       },
       {
         "description": "归溟幽灵鲨",
-        "url": "https://prts.wiki/images/b/be/头像_归溟幽灵鲨.png"
+        "url": "https://media.prts.wiki/b/be/头像_归溟幽灵鲨.png"
       },
       {
         "description": "艾丽妮",
-        "url": "https://prts.wiki/images/5/57/头像_艾丽妮.png"
+        "url": "https://media.prts.wiki/5/57/头像_艾丽妮.png"
       },
       {
         "description": "号角",
-        "url": "https://prts.wiki/images/3/3f/头像_号角.png"
+        "url": "https://media.prts.wiki/3/3f/头像_号角.png"
       },
       {
         "description": "洛洛",
-        "url": "https://prts.wiki/images/d/d4/头像_洛洛.png"
+        "url": "https://media.prts.wiki/d/d4/头像_洛洛.png"
       },
       {
         "description": "海蒂",
-        "url": "https://prts.wiki/images/d/d9/头像_海蒂.png"
+        "url": "https://media.prts.wiki/d/d9/头像_海蒂.png"
       },
       {
         "description": "菲亚梅塔",
-        "url": "https://prts.wiki/images/b/b8/头像_菲亚梅塔.png"
+        "url": "https://media.prts.wiki/b/b8/头像_菲亚梅塔.png"
       },
       {
         "description": "风丸",
-        "url": "https://prts.wiki/images/1/12/头像_风丸.png"
+        "url": "https://media.prts.wiki/1/12/头像_风丸.png"
       },
       {
         "description": "澄闪",
-        "url": "https://prts.wiki/images/a/ab/头像_澄闪.png"
+        "url": "https://media.prts.wiki/a/ab/头像_澄闪.png"
       },
       {
         "description": "夏栎",
-        "url": "https://prts.wiki/images/0/08/头像_夏栎.png"
+        "url": "https://media.prts.wiki/0/08/头像_夏栎.png"
       },
       {
         "description": "令",
-        "url": "https://prts.wiki/images/2/2c/头像_令.png"
+        "url": "https://media.prts.wiki/2/2c/头像_令.png"
       },
       {
         "description": "夜半",
-        "url": "https://prts.wiki/images/a/a1/头像_夜半.png"
+        "url": "https://media.prts.wiki/a/a1/头像_夜半.png"
       },
       {
         "description": "寒芒克洛丝",
-        "url": "https://prts.wiki/images/3/39/头像_寒芒克洛丝.png"
+        "url": "https://media.prts.wiki/3/39/头像_寒芒克洛丝.png"
       },
       {
         "description": "九色鹿",
-        "url": "https://prts.wiki/images/a/ab/头像_九色鹿.png"
+        "url": "https://media.prts.wiki/a/ab/头像_九色鹿.png"
       },
       {
         "description": "极光",
-        "url": "https://prts.wiki/images/4/43/头像_极光.png"
+        "url": "https://media.prts.wiki/4/43/头像_极光.png"
       },
       {
         "description": "耶拉",
-        "url": "https://prts.wiki/images/7/71/头像_耶拉.png"
+        "url": "https://media.prts.wiki/7/71/头像_耶拉.png"
       },
       {
         "description": "耀骑士临光",
-        "url": "https://prts.wiki/images/0/03/头像_耀骑士临光.png"
+        "url": "https://media.prts.wiki/0/03/头像_耀骑士临光.png"
       },
       {
         "description": "焰尾",
-        "url": "https://prts.wiki/images/c/c8/头像_焰尾.png"
+        "url": "https://media.prts.wiki/c/c8/头像_焰尾.png"
       },
       {
         "description": "野鬃",
-        "url": "https://prts.wiki/images/9/9f/头像_野鬃.png"
+        "url": "https://media.prts.wiki/9/9f/头像_野鬃.png"
       },
       {
         "description": "蜜莓",
-        "url": "https://prts.wiki/images/2/29/头像_蜜莓.png"
+        "url": "https://media.prts.wiki/2/29/头像_蜜莓.png"
       },
       {
         "description": "布丁",
-        "url": "https://prts.wiki/images/b/b0/头像_布丁.png"
+        "url": "https://media.prts.wiki/b/b0/头像_布丁.png"
       },
       {
         "description": "正义骑士号",
-        "url": "https://prts.wiki/images/c/c5/头像_正义骑士号.png"
+        "url": "https://media.prts.wiki/c/c5/头像_正义骑士号.png"
       },
       {
         "description": "远牙",
-        "url": "https://prts.wiki/images/a/a1/头像_远牙.png"
+        "url": "https://media.prts.wiki/a/a1/头像_远牙.png"
       },
       {
         "description": "灰毫",
-        "url": "https://prts.wiki/images/2/21/头像_灰毫.png"
+        "url": "https://media.prts.wiki/2/21/头像_灰毫.png"
       },
       {
         "description": "琴柳",
-        "url": "https://prts.wiki/images/9/96/头像_琴柳.png"
+        "url": "https://media.prts.wiki/9/96/头像_琴柳.png"
       },
       {
         "description": "桑葚",
-        "url": "https://prts.wiki/images/0/0f/头像_桑葚.png"
+        "url": "https://media.prts.wiki/0/0f/头像_桑葚.png"
       },
       {
         "description": "罗比菈塔",
-        "url": "https://prts.wiki/images/5/52/头像_罗比菈塔.png"
+        "url": "https://media.prts.wiki/5/52/头像_罗比菈塔.png"
       },
       {
         "description": "假日威龙陈",
-        "url": "https://prts.wiki/images/d/df/头像_假日威龙陈.png"
+        "url": "https://media.prts.wiki/d/df/头像_假日威龙陈.png"
       },
       {
         "description": "羽毛笔",
-        "url": "https://prts.wiki/images/b/b8/头像_羽毛笔.png"
+        "url": "https://media.prts.wiki/b/b8/头像_羽毛笔.png"
       },
       {
         "description": "帕拉斯",
-        "url": "https://prts.wiki/images/a/ad/头像_帕拉斯.png"
+        "url": "https://media.prts.wiki/a/ad/头像_帕拉斯.png"
       },
       {
         "description": "卡涅利安",
-        "url": "https://prts.wiki/images/d/dd/头像_卡涅利安.png"
+        "url": "https://media.prts.wiki/d/dd/头像_卡涅利安.png"
       },
       {
         "description": "绮良",
-        "url": "https://prts.wiki/images/a/a8/头像_绮良.png"
+        "url": "https://media.prts.wiki/a/a8/头像_绮良.png"
       },
       {
         "description": "贝娜",
-        "url": "https://prts.wiki/images/9/95/头像_贝娜.png"
+        "url": "https://media.prts.wiki/9/95/头像_贝娜.png"
       },
       {
         "description": "深靛",
-        "url": "https://prts.wiki/images/9/92/头像_深靛.png"
+        "url": "https://media.prts.wiki/9/92/头像_深靛.png"
       },
       {
         "description": "浊心斯卡蒂",
-        "url": "https://prts.wiki/images/8/80/头像_浊心斯卡蒂.png"
+        "url": "https://media.prts.wiki/8/80/头像_浊心斯卡蒂.png"
       },
       {
         "description": "凯尔希",
-        "url": "https://prts.wiki/images/c/c5/头像_凯尔希.png"
+        "url": "https://media.prts.wiki/c/c5/头像_凯尔希.png"
       },
       {
         "description": "歌蕾蒂娅",
-        "url": "https://prts.wiki/images/0/0d/头像_歌蕾蒂娅.png"
+        "url": "https://media.prts.wiki/0/0d/头像_歌蕾蒂娅.png"
       },
       {
         "description": "赤冬",
-        "url": "https://prts.wiki/images/f/fe/头像_赤冬.png"
+        "url": "https://media.prts.wiki/f/fe/头像_赤冬.png"
       },
       {
         "description": "熔泉",
-        "url": "https://prts.wiki/images/3/34/头像_熔泉.png"
+        "url": "https://media.prts.wiki/3/34/头像_熔泉.png"
       },
       {
         "description": "暴雨",
-        "url": "https://prts.wiki/images/f/f8/头像_暴雨.png"
+        "url": "https://media.prts.wiki/f/f8/头像_暴雨.png"
       },
       {
         "description": "灰烬",
-        "url": "https://prts.wiki/images/6/64/头像_灰烬.png"
+        "url": "https://media.prts.wiki/6/64/头像_灰烬.png"
       },
       {
         "description": "霜华",
-        "url": "https://prts.wiki/images/5/51/头像_霜华.png"
+        "url": "https://media.prts.wiki/5/51/头像_霜华.png"
       },
       {
         "description": "夕",
-        "url": "https://prts.wiki/images/6/6b/头像_夕.png"
+        "url": "https://media.prts.wiki/6/6b/头像_夕.png"
       },
       {
         "description": "嵯峨",
-        "url": "https://prts.wiki/images/6/6d/头像_嵯峨.png"
+        "url": "https://media.prts.wiki/6/6d/头像_嵯峨.png"
       },
       {
         "description": "炎狱炎熔",
-        "url": "https://prts.wiki/images/2/20/头像_炎狱炎熔.png"
+        "url": "https://media.prts.wiki/2/20/头像_炎狱炎熔.png"
       },
       {
         "description": "图耶",
-        "url": "https://prts.wiki/images/9/93/头像_图耶.png"
+        "url": "https://media.prts.wiki/9/93/头像_图耶.png"
       },
       {
         "description": "空弦",
-        "url": "https://prts.wiki/images/b/bb/头像_空弦.png"
+        "url": "https://media.prts.wiki/b/bb/头像_空弦.png"
       },
       {
         "description": "爱丽丝",
-        "url": "https://prts.wiki/images/9/9a/头像_爱丽丝.png"
+        "url": "https://media.prts.wiki/9/9a/头像_爱丽丝.png"
       },
       {
         "description": "豆苗",
-        "url": "https://prts.wiki/images/c/cb/头像_豆苗.png"
+        "url": "https://media.prts.wiki/c/cb/头像_豆苗.png"
       },
       {
         "description": "卡夫卡",
-        "url": "https://prts.wiki/images/8/8d/头像_卡夫卡.png"
+        "url": "https://media.prts.wiki/8/8d/头像_卡夫卡.png"
       },
       {
         "description": "罗宾",
-        "url": "https://prts.wiki/images/1/1f/头像_罗宾.png"
+        "url": "https://media.prts.wiki/1/1f/头像_罗宾.png"
       },
       {
         "description": "松果",
-        "url": "https://prts.wiki/images/5/5e/头像_松果.png"
+        "url": "https://media.prts.wiki/5/5e/头像_松果.png"
       },
       {
         "description": "阿米娅(近卫)",
-        "url": "https://prts.wiki/images/5/5b/头像_阿米娅(近卫).png"
+        "url": "https://media.prts.wiki/5/5b/头像_阿米娅(近卫).png"
       },
       {
         "description": "迷迭香",
-        "url": "https://prts.wiki/images/3/3b/头像_迷迭香.png"
+        "url": "https://media.prts.wiki/3/3b/头像_迷迭香.png"
       },
       {
         "description": "泥岩",
-        "url": "https://prts.wiki/images/0/06/头像_泥岩.png"
+        "url": "https://media.prts.wiki/0/06/头像_泥岩.png"
       },
       {
         "description": "絮雨",
-        "url": "https://prts.wiki/images/3/34/头像_絮雨.png"
+        "url": "https://media.prts.wiki/3/34/头像_絮雨.png"
       },
       {
         "description": "杰克",
-        "url": "https://prts.wiki/images/d/d8/头像_杰克.png"
+        "url": "https://media.prts.wiki/d/d8/头像_杰克.png"
       },
       {
         "description": "瑕光",
-        "url": "https://prts.wiki/images/f/f7/头像_瑕光.png"
+        "url": "https://media.prts.wiki/f/f7/头像_瑕光.png"
       },
       {
         "description": "鞭刃",
-        "url": "https://prts.wiki/images/f/f8/头像_鞭刃.png"
+        "url": "https://media.prts.wiki/f/f8/头像_鞭刃.png"
       },
       {
         "description": "泡泡",
-        "url": "https://prts.wiki/images/2/28/头像_泡泡.png"
+        "url": "https://media.prts.wiki/2/28/头像_泡泡.png"
       },
       {
         "description": "史尔特尔",
-        "url": "https://prts.wiki/images/e/e1/头像_史尔特尔.png"
+        "url": "https://media.prts.wiki/e/e1/头像_史尔特尔.png"
       },
       {
         "description": "四月",
-        "url": "https://prts.wiki/images/d/d3/头像_四月.png"
+        "url": "https://media.prts.wiki/d/d3/头像_四月.png"
       },
       {
         "description": "薄绿",
-        "url": "https://prts.wiki/images/3/30/头像_薄绿.png"
+        "url": "https://media.prts.wiki/3/30/头像_薄绿.png"
       },
       {
         "description": "森蚺",
-        "url": "https://prts.wiki/images/7/74/头像_森蚺.png"
+        "url": "https://media.prts.wiki/7/74/头像_森蚺.png"
       },
       {
         "description": "燧石",
-        "url": "https://prts.wiki/images/a/ac/头像_燧石.png"
+        "url": "https://media.prts.wiki/a/ac/头像_燧石.png"
       },
       {
         "description": "特米米",
-        "url": "https://prts.wiki/images/b/b9/头像_特米米.png"
+        "url": "https://media.prts.wiki/b/b9/头像_特米米.png"
       },
       {
         "description": "酸糖",
-        "url": "https://prts.wiki/images/e/e9/头像_酸糖.png"
+        "url": "https://media.prts.wiki/e/e9/头像_酸糖.png"
       },
       {
         "description": "安哲拉",
-        "url": "https://prts.wiki/images/3/36/头像_安哲拉.png"
+        "url": "https://media.prts.wiki/3/36/头像_安哲拉.png"
       },
       {
         "description": "蜜蜡",
-        "url": "https://prts.wiki/images/1/1d/头像_蜜蜡.png"
+        "url": "https://media.prts.wiki/1/1d/头像_蜜蜡.png"
       },
       {
         "description": "稀音",
-        "url": "https://prts.wiki/images/c/c6/头像_稀音.png"
+        "url": "https://media.prts.wiki/c/c6/头像_稀音.png"
       },
       {
         "description": "铃兰",
-        "url": "https://prts.wiki/images/5/55/头像_铃兰.png"
+        "url": "https://media.prts.wiki/5/55/头像_铃兰.png"
       },
       {
         "description": "亚叶",
-        "url": "https://prts.wiki/images/b/b5/头像_亚叶.png"
+        "url": "https://media.prts.wiki/b/b5/头像_亚叶.png"
       },
       {
         "description": "卡达",
-        "url": "https://prts.wiki/images/4/43/头像_卡达.png"
+        "url": "https://media.prts.wiki/4/43/头像_卡达.png"
       },
       {
         "description": "早露",
-        "url": "https://prts.wiki/images/6/63/头像_早露.png"
+        "url": "https://media.prts.wiki/6/63/头像_早露.png"
       },
       {
         "description": "苦艾",
-        "url": "https://prts.wiki/images/e/e9/头像_苦艾.png"
+        "url": "https://media.prts.wiki/e/e9/头像_苦艾.png"
       },
       {
         "description": "波登可",
-        "url": "https://prts.wiki/images/4/43/头像_波登可.png"
+        "url": "https://media.prts.wiki/4/43/头像_波登可.png"
       },
       {
         "description": "月禾",
-        "url": "https://prts.wiki/images/b/b6/头像_月禾.png"
+        "url": "https://media.prts.wiki/b/b6/头像_月禾.png"
       },
       {
         "description": "石棉",
-        "url": "https://prts.wiki/images/1/18/头像_石棉.png"
+        "url": "https://media.prts.wiki/1/18/头像_石棉.png"
       },
       {
         "description": "W",
-        "url": "https://prts.wiki/images/d/d6/头像_W.png"
+        "url": "https://media.prts.wiki/d/d6/头像_W.png"
       },
       {
         "description": "温蒂",
-        "url": "https://prts.wiki/images/9/93/头像_温蒂.png"
+        "url": "https://media.prts.wiki/9/93/头像_温蒂.png"
       },
       {
         "description": "巫恋",
-        "url": "https://prts.wiki/images/3/36/头像_巫恋.png"
+        "url": "https://media.prts.wiki/3/36/头像_巫恋.png"
       },
       {
         "description": "铸铁",
-        "url": "https://prts.wiki/images/8/84/头像_铸铁.png"
+        "url": "https://media.prts.wiki/8/84/头像_铸铁.png"
       },
       {
         "description": "刻刀",
-        "url": "https://prts.wiki/images/2/2c/头像_刻刀.png"
+        "url": "https://media.prts.wiki/2/2c/头像_刻刀.png"
       },
       {
         "description": "风笛",
-        "url": "https://prts.wiki/images/d/de/头像_风笛.png"
+        "url": "https://media.prts.wiki/d/de/头像_风笛.png"
       },
       {
         "description": "柏喙",
-        "url": "https://prts.wiki/images/2/2f/头像_柏喙.png"
+        "url": "https://media.prts.wiki/2/2f/头像_柏喙.png"
       },
       {
         "description": "宴",
-        "url": "https://prts.wiki/images/f/f4/头像_宴.png"
+        "url": "https://media.prts.wiki/f/f4/头像_宴.png"
       },
       {
         "description": "清流",
-        "url": "https://prts.wiki/images/1/19/头像_清流.png"
+        "url": "https://media.prts.wiki/1/19/头像_清流.png"
       },
       {
         "description": "刻俄柏",
-        "url": "https://prts.wiki/images/4/4a/头像_刻俄柏.png"
+        "url": "https://media.prts.wiki/4/4a/头像_刻俄柏.png"
       },
       {
         "description": "惊蛰",
-        "url": "https://prts.wiki/images/8/81/头像_惊蛰.png"
+        "url": "https://media.prts.wiki/8/81/头像_惊蛰.png"
       },
       {
         "description": "年",
-        "url": "https://prts.wiki/images/9/9c/头像_年.png"
+        "url": "https://media.prts.wiki/9/9c/头像_年.png"
       },
       {
         "description": "雪雉",
-        "url": "https://prts.wiki/images/2/24/头像_雪雉.png"
+        "url": "https://media.prts.wiki/2/24/头像_雪雉.png"
       },
       {
         "description": "煌",
-        "url": "https://prts.wiki/images/3/30/头像_煌.png"
+        "url": "https://media.prts.wiki/3/30/头像_煌.png"
       },
       {
         "description": "灰喉",
-        "url": "https://prts.wiki/images/3/3b/头像_灰喉.png"
+        "url": "https://media.prts.wiki/3/3b/头像_灰喉.png"
       },
       {
         "description": "安比尔",
-        "url": "https://prts.wiki/images/f/ff/头像_安比尔.png"
+        "url": "https://media.prts.wiki/f/ff/头像_安比尔.png"
       },
       {
         "description": "苇草",
-        "url": "https://prts.wiki/images/7/7a/头像_苇草.png"
+        "url": "https://media.prts.wiki/7/7a/头像_苇草.png"
       },
       {
         "description": "莫斯提马",
-        "url": "https://prts.wiki/images/0/0b/头像_莫斯提马.png"
+        "url": "https://media.prts.wiki/0/0b/头像_莫斯提马.png"
       },
       {
         "description": "槐琥",
-        "url": "https://prts.wiki/images/e/ed/头像_槐琥.png"
+        "url": "https://media.prts.wiki/e/ed/头像_槐琥.png"
       },
       {
         "description": "梅",
-        "url": "https://prts.wiki/images/a/ac/头像_梅.png"
+        "url": "https://media.prts.wiki/a/ac/头像_梅.png"
       },
       {
         "description": "微风",
-        "url": "https://prts.wiki/images/a/ad/头像_微风.png"
+        "url": "https://media.prts.wiki/a/ad/头像_微风.png"
       },
       {
         "description": "麦哲伦",
-        "url": "https://prts.wiki/images/4/4d/头像_麦哲伦.png"
+        "url": "https://media.prts.wiki/4/4d/头像_麦哲伦.png"
       },
       {
         "description": "红云",
-        "url": "https://prts.wiki/images/a/af/头像_红云.png"
+        "url": "https://media.prts.wiki/a/af/头像_红云.png"
       },
       {
         "description": "坚雷",
-        "url": "https://prts.wiki/images/a/ab/头像_坚雷.png"
+        "url": "https://media.prts.wiki/a/ab/头像_坚雷.png"
       },
       {
         "description": "星极",
-        "url": "https://prts.wiki/images/e/ee/头像_星极.png"
+        "url": "https://media.prts.wiki/e/ee/头像_星极.png"
       },
       {
         "description": "桃金娘",
-        "url": "https://prts.wiki/images/9/9d/头像_桃金娘.png"
+        "url": "https://media.prts.wiki/9/9d/头像_桃金娘.png"
       },
       {
         "description": "黑",
-        "url": "https://prts.wiki/images/d/d4/头像_黑.png"
+        "url": "https://media.prts.wiki/d/d4/头像_黑.png"
       },
       {
         "description": "格劳克斯",
-        "url": "https://prts.wiki/images/5/53/头像_格劳克斯.png"
+        "url": "https://media.prts.wiki/5/53/头像_格劳克斯.png"
       },
       {
         "description": "锡兰",
-        "url": "https://prts.wiki/images/3/39/头像_锡兰.png"
+        "url": "https://media.prts.wiki/3/39/头像_锡兰.png"
       },
       {
         "description": "苏苏洛",
-        "url": "https://prts.wiki/images/6/63/头像_苏苏洛.png"
+        "url": "https://media.prts.wiki/6/63/头像_苏苏洛.png"
       },
       {
         "description": "陈",
-        "url": "https://prts.wiki/images/c/cf/头像_陈.png"
+        "url": "https://media.prts.wiki/c/cf/头像_陈.png"
       },
       {
         "description": "诗怀雅",
-        "url": "https://prts.wiki/images/5/50/头像_诗怀雅.png"
+        "url": "https://media.prts.wiki/5/50/头像_诗怀雅.png"
       },
       {
         "description": "泡普卡",
-        "url": "https://prts.wiki/images/1/16/头像_泡普卡.png"
+        "url": "https://media.prts.wiki/1/16/头像_泡普卡.png"
       },
       {
         "description": "斯卡蒂",
-        "url": "https://prts.wiki/images/5/53/头像_斯卡蒂.png"
+        "url": "https://media.prts.wiki/5/53/头像_斯卡蒂.png"
       },
       {
         "description": "格拉尼",
-        "url": "https://prts.wiki/images/2/29/头像_格拉尼.png"
+        "url": "https://media.prts.wiki/2/29/头像_格拉尼.png"
       },
       {
         "description": "夜魔",
-        "url": "https://prts.wiki/images/a/a7/头像_夜魔.png"
+        "url": "https://media.prts.wiki/a/a7/头像_夜魔.png"
       },
       {
         "description": "猎蜂",
-        "url": "https://prts.wiki/images/c/c2/头像_猎蜂.png"
+        "url": "https://media.prts.wiki/c/c2/头像_猎蜂.png"
       },
       {
         "description": "空爆",
-        "url": "https://prts.wiki/images/c/cd/头像_空爆.png"
+        "url": "https://media.prts.wiki/c/cd/头像_空爆.png"
       },
       {
         "description": "暴行",
-        "url": "https://prts.wiki/images/3/36/头像_暴行.png"
+        "url": "https://media.prts.wiki/3/36/头像_暴行.png"
       },
       {
         "description": "塞雷娅",
-        "url": "https://prts.wiki/images/e/ee/头像_塞雷娅.png"
+        "url": "https://media.prts.wiki/e/ee/头像_塞雷娅.png"
       },
       {
         "description": "星熊",
-        "url": "https://prts.wiki/images/0/07/头像_星熊.png"
+        "url": "https://media.prts.wiki/0/07/头像_星熊.png"
       },
       {
         "description": "夜莺",
-        "url": "https://prts.wiki/images/6/64/头像_夜莺.png"
+        "url": "https://media.prts.wiki/6/64/头像_夜莺.png"
       },
       {
         "description": "闪灵",
-        "url": "https://prts.wiki/images/5/54/头像_闪灵.png"
+        "url": "https://media.prts.wiki/5/54/头像_闪灵.png"
       },
       {
         "description": "安洁莉娜",
-        "url": "https://prts.wiki/images/c/ca/头像_安洁莉娜.png"
+        "url": "https://media.prts.wiki/c/ca/头像_安洁莉娜.png"
       },
       {
         "description": "艾雅法拉",
-        "url": "https://prts.wiki/images/c/cc/头像_艾雅法拉.png"
+        "url": "https://media.prts.wiki/c/cc/头像_艾雅法拉.png"
       },
       {
         "description": "伊芙利特",
-        "url": "https://prts.wiki/images/e/ed/头像_伊芙利特.png"
+        "url": "https://media.prts.wiki/e/ed/头像_伊芙利特.png"
       },
       {
         "description": "推进之王",
-        "url": "https://prts.wiki/images/b/ba/头像_推进之王.png"
+        "url": "https://media.prts.wiki/b/ba/头像_推进之王.png"
       },
       {
         "description": "能天使",
-        "url": "https://prts.wiki/images/a/ad/头像_能天使.png"
+        "url": "https://media.prts.wiki/a/ad/头像_能天使.png"
       },
       {
         "description": "食铁兽",
-        "url": "https://prts.wiki/images/d/dd/头像_食铁兽.png"
+        "url": "https://media.prts.wiki/d/dd/头像_食铁兽.png"
       },
       {
         "description": "狮蝎",
-        "url": "https://prts.wiki/images/c/c5/头像_狮蝎.png"
+        "url": "https://media.prts.wiki/c/c5/头像_狮蝎.png"
       },
       {
         "description": "空",
-        "url": "https://prts.wiki/images/5/58/头像_空.png"
+        "url": "https://media.prts.wiki/5/58/头像_空.png"
       },
       {
         "description": "真理",
-        "url": "https://prts.wiki/images/e/e6/头像_真理.png"
+        "url": "https://media.prts.wiki/e/e6/头像_真理.png"
       },
       {
         "description": "初雪",
-        "url": "https://prts.wiki/images/d/d7/头像_初雪.png"
+        "url": "https://media.prts.wiki/d/d7/头像_初雪.png"
       },
       {
         "description": "崖心",
-        "url": "https://prts.wiki/images/7/7d/头像_崖心.png"
+        "url": "https://media.prts.wiki/7/7d/头像_崖心.png"
       },
       {
         "description": "守林人",
-        "url": "https://prts.wiki/images/2/27/头像_守林人.png"
+        "url": "https://media.prts.wiki/2/27/头像_守林人.png"
       },
       {
         "description": "普罗旺斯",
-        "url": "https://prts.wiki/images/7/72/头像_普罗旺斯.png"
+        "url": "https://media.prts.wiki/7/72/头像_普罗旺斯.png"
       },
       {
         "description": "火神",
-        "url": "https://prts.wiki/images/f/f1/头像_火神.png"
+        "url": "https://media.prts.wiki/f/f1/头像_火神.png"
       },
       {
         "description": "可颂",
-        "url": "https://prts.wiki/images/a/ab/头像_可颂.png"
+        "url": "https://media.prts.wiki/a/ab/头像_可颂.png"
       },
       {
         "description": "雷蛇",
-        "url": "https://prts.wiki/images/f/f5/头像_雷蛇.png"
+        "url": "https://media.prts.wiki/f/f5/头像_雷蛇.png"
       },
       {
         "description": "红",
-        "url": "https://prts.wiki/images/a/ac/头像_红.png"
+        "url": "https://media.prts.wiki/a/ac/头像_红.png"
       },
       {
         "description": "临光",
-        "url": "https://prts.wiki/images/1/1a/头像_临光.png"
+        "url": "https://media.prts.wiki/1/1a/头像_临光.png"
       },
       {
         "description": "华法琳",
-        "url": "https://prts.wiki/images/3/30/头像_华法琳.png"
+        "url": "https://media.prts.wiki/3/30/头像_华法琳.png"
       },
       {
         "description": "赫默",
-        "url": "https://prts.wiki/images/3/39/头像_赫默.png"
+        "url": "https://media.prts.wiki/3/39/头像_赫默.png"
       },
       {
         "description": "梅尔",
-        "url": "https://prts.wiki/images/0/07/头像_梅尔.png"
+        "url": "https://media.prts.wiki/0/07/头像_梅尔.png"
       },
       {
         "description": "天火",
-        "url": "https://prts.wiki/images/f/fa/头像_天火.png"
+        "url": "https://media.prts.wiki/f/fa/头像_天火.png"
       },
       {
         "description": "阿米娅",
-        "url": "https://prts.wiki/images/3/36/头像_阿米娅.png"
+        "url": "https://media.prts.wiki/3/36/头像_阿米娅.png"
       },
       {
         "description": "陨星",
-        "url": "https://prts.wiki/images/e/ea/头像_陨星.png"
+        "url": "https://media.prts.wiki/e/ea/头像_陨星.png"
       },
       {
         "description": "白金",
-        "url": "https://prts.wiki/images/3/3b/头像_白金.png"
+        "url": "https://media.prts.wiki/3/3b/头像_白金.png"
       },
       {
         "description": "蓝毒",
-        "url": "https://prts.wiki/images/6/63/头像_蓝毒.png"
+        "url": "https://media.prts.wiki/6/63/头像_蓝毒.png"
       },
       {
         "description": "幽灵鲨",
-        "url": "https://prts.wiki/images/2/28/头像_幽灵鲨.png"
+        "url": "https://media.prts.wiki/2/28/头像_幽灵鲨.png"
       },
       {
         "description": "拉普兰德",
-        "url": "https://prts.wiki/images/b/bf/头像_拉普兰德.png"
+        "url": "https://media.prts.wiki/b/bf/头像_拉普兰德.png"
       },
       {
         "description": "因陀罗",
-        "url": "https://prts.wiki/images/f/fe/头像_因陀罗.png"
+        "url": "https://media.prts.wiki/f/fe/头像_因陀罗.png"
       },
       {
         "description": "芙兰卡",
-        "url": "https://prts.wiki/images/2/2b/头像_芙兰卡.png"
+        "url": "https://media.prts.wiki/2/2b/头像_芙兰卡.png"
       },
       {
         "description": "德克萨斯",
-        "url": "https://prts.wiki/images/5/57/头像_德克萨斯.png"
+        "url": "https://media.prts.wiki/5/57/头像_德克萨斯.png"
       },
       {
         "description": "凛冬",
-        "url": "https://prts.wiki/images/c/cd/头像_凛冬.png"
+        "url": "https://media.prts.wiki/c/cd/头像_凛冬.png"
       },
       {
         "description": "白面鸮",
-        "url": "https://prts.wiki/images/8/83/头像_白面鸮.png"
+        "url": "https://media.prts.wiki/8/83/头像_白面鸮.png"
       },
       {
         "description": "阿消",
-        "url": "https://prts.wiki/images/2/2f/头像_阿消.png"
+        "url": "https://media.prts.wiki/2/2f/头像_阿消.png"
       },
       {
         "description": "地灵",
-        "url": "https://prts.wiki/images/5/57/头像_地灵.png"
+        "url": "https://media.prts.wiki/5/57/头像_地灵.png"
       },
       {
         "description": "深海色",
-        "url": "https://prts.wiki/images/d/d1/头像_深海色.png"
+        "url": "https://media.prts.wiki/d/d1/头像_深海色.png"
       },
       {
         "description": "古米",
-        "url": "https://prts.wiki/images/0/07/头像_古米.png"
+        "url": "https://media.prts.wiki/0/07/头像_古米.png"
       },
       {
         "description": "蛇屠箱",
-        "url": "https://prts.wiki/images/0/02/头像_蛇屠箱.png"
+        "url": "https://media.prts.wiki/0/02/头像_蛇屠箱.png"
       },
       {
         "description": "调香师",
-        "url": "https://prts.wiki/images/6/6a/头像_调香师.png"
+        "url": "https://media.prts.wiki/6/6a/头像_调香师.png"
       },
       {
         "description": "嘉维尔",
-        "url": "https://prts.wiki/images/c/cc/头像_嘉维尔.png"
+        "url": "https://media.prts.wiki/c/cc/头像_嘉维尔.png"
       },
       {
         "description": "末药",
-        "url": "https://prts.wiki/images/d/d9/头像_末药.png"
+        "url": "https://media.prts.wiki/d/d9/头像_末药.png"
       },
       {
         "description": "暗索",
-        "url": "https://prts.wiki/images/d/dd/头像_暗索.png"
+        "url": "https://media.prts.wiki/d/dd/头像_暗索.png"
       },
       {
         "description": "砾",
-        "url": "https://prts.wiki/images/c/ce/头像_砾.png"
+        "url": "https://media.prts.wiki/c/ce/头像_砾.png"
       },
       {
         "description": "慕斯",
-        "url": "https://prts.wiki/images/f/fc/头像_慕斯.png"
+        "url": "https://media.prts.wiki/f/fc/头像_慕斯.png"
       },
       {
         "description": "艾丝黛尔",
-        "url": "https://prts.wiki/images/5/57/头像_艾丝黛尔.png"
+        "url": "https://media.prts.wiki/5/57/头像_艾丝黛尔.png"
       },
       {
         "description": "霜叶",
-        "url": "https://prts.wiki/images/2/29/头像_霜叶.png"
+        "url": "https://media.prts.wiki/2/29/头像_霜叶.png"
       },
       {
         "description": "缠丸",
-        "url": "https://prts.wiki/images/1/13/头像_缠丸.png"
+        "url": "https://media.prts.wiki/1/13/头像_缠丸.png"
       },
       {
         "description": "杜宾",
-        "url": "https://prts.wiki/images/a/a1/头像_杜宾.png"
+        "url": "https://media.prts.wiki/a/a1/头像_杜宾.png"
       },
       {
         "description": "红豆",
-        "url": "https://prts.wiki/images/b/bb/头像_红豆.png"
+        "url": "https://media.prts.wiki/b/bb/头像_红豆.png"
       },
       {
         "description": "清道夫",
-        "url": "https://prts.wiki/images/6/63/头像_清道夫.png"
+        "url": "https://media.prts.wiki/6/63/头像_清道夫.png"
       },
       {
         "description": "白雪",
-        "url": "https://prts.wiki/images/b/b4/头像_白雪.png"
+        "url": "https://media.prts.wiki/b/b4/头像_白雪.png"
       },
       {
         "description": "流星",
-        "url": "https://prts.wiki/images/1/14/头像_流星.png"
+        "url": "https://media.prts.wiki/1/14/头像_流星.png"
       },
       {
         "description": "杰西卡",
-        "url": "https://prts.wiki/images/6/63/头像_杰西卡.png"
+        "url": "https://media.prts.wiki/6/63/头像_杰西卡.png"
       },
       {
         "description": "远山",
-        "url": "https://prts.wiki/images/6/63/头像_远山.png"
+        "url": "https://media.prts.wiki/6/63/头像_远山.png"
       },
       {
         "description": "夜烟",
-        "url": "https://prts.wiki/images/5/55/头像_夜烟.png"
+        "url": "https://media.prts.wiki/5/55/头像_夜烟.png"
       },
       {
         "description": "梓兰",
-        "url": "https://prts.wiki/images/8/83/头像_梓兰.png"
+        "url": "https://media.prts.wiki/8/83/头像_梓兰.png"
       },
       {
         "description": "芙蓉",
-        "url": "https://prts.wiki/images/d/d3/头像_芙蓉.png"
+        "url": "https://media.prts.wiki/d/d3/头像_芙蓉.png"
       },
       {
         "description": "炎熔",
-        "url": "https://prts.wiki/images/f/fb/头像_炎熔.png"
+        "url": "https://media.prts.wiki/f/fb/头像_炎熔.png"
       },
       {
         "description": "克洛丝",
-        "url": "https://prts.wiki/images/b/b9/头像_克洛丝.png"
+        "url": "https://media.prts.wiki/b/b9/头像_克洛丝.png"
       },
       {
         "description": "米格鲁",
-        "url": "https://prts.wiki/images/3/32/头像_米格鲁.png"
+        "url": "https://media.prts.wiki/3/32/头像_米格鲁.png"
       },
       {
         "description": "卡缇",
-        "url": "https://prts.wiki/images/8/87/头像_卡缇.png"
+        "url": "https://media.prts.wiki/8/87/头像_卡缇.png"
       },
       {
         "description": "玫兰莎",
-        "url": "https://prts.wiki/images/4/4b/头像_玫兰莎.png"
+        "url": "https://media.prts.wiki/4/4b/头像_玫兰莎.png"
       },
       {
         "description": "翎羽",
-        "url": "https://prts.wiki/images/1/1f/头像_翎羽.png"
+        "url": "https://media.prts.wiki/1/1f/头像_翎羽.png"
       },
       {
         "description": "香草",
-        "url": "https://prts.wiki/images/c/c8/头像_香草.png"
+        "url": "https://media.prts.wiki/c/c8/头像_香草.png"
       },
       {
         "description": "芬",
-        "url": "https://prts.wiki/images/4/41/头像_芬.png"
+        "url": "https://media.prts.wiki/4/41/头像_芬.png"
       },
       {
         "description": "杜林",
-        "url": "https://prts.wiki/images/2/24/头像_杜林.png"
+        "url": "https://media.prts.wiki/2/24/头像_杜林.png"
       },
       {
         "description": "夜刀",
-        "url": "https://prts.wiki/images/b/b2/头像_夜刀.png"
+        "url": "https://media.prts.wiki/b/b2/头像_夜刀.png"
       },
       {
         "description": "Lancet-2",
-        "url": "https://prts.wiki/images/b/b6/头像_Lancet-2.png"
+        "url": "https://media.prts.wiki/b/b6/头像_Lancet-2.png"
       }
     ]
   },
@@ -2972,6 +3328,10 @@
         "url": "https://patchwiki.biligame.com/images/ys/9/90/lwq85ylshqji1oozf7odkv3xlquvttt.png"
       },
       {
+        "description": "赛索斯",
+        "url": "https://patchwiki.biligame.com/images/ys/c/c9/pcpvdp91xt41afueycw2juyj4rv2m63.png"
+      },
+      {
         "description": "嘉明",
         "url": "https://patchwiki.biligame.com/images/ys/a/a0/5vh3a6zfa666wfxshi1rr29zv4g856d.png"
       },
@@ -3012,12 +3372,12 @@
         "url": "https://patchwiki.biligame.com/images/ys/b/bf/bz36kyv7jhk9p3sqk6g3r79a7t5aqa2.png"
       },
       {
-        "description": "重云",
-        "url": "https://patchwiki.biligame.com/images/ys/b/bd/mpnu86qhgs99cbbt35kb09702aqp70i.png"
-      },
-      {
         "description": "凯亚",
         "url": "https://patchwiki.biligame.com/images/ys/d/d5/hyj4s4c0rwh65unllh0emkpdxwf0aq2.png"
+      },
+      {
+        "description": "重云",
+        "url": "https://patchwiki.biligame.com/images/ys/b/bd/mpnu86qhgs99cbbt35kb09702aqp70i.png"
       },
       {
         "description": "空",
@@ -3025,6 +3385,30 @@
       }
     ],
     "female": [
+      {
+        "description": "玛拉妮",
+        "url": "https://patchwiki.biligame.com/images/ys/c/c0/itpnzb7gy571ojwjnkr8936tb6lu0f9.png"
+      },
+      {
+        "description": "艾梅莉埃",
+        "url": "https://patchwiki.biligame.com/images/ys/5/58/evinc7eeqx31q5hge379bo06kgof306.png"
+      },
+      {
+        "description": "希格雯",
+        "url": "https://patchwiki.biligame.com/images/ys/8/82/gfby1q35huyeqq0i8nb4z1v5bhethd8.png"
+      },
+      {
+        "description": "克洛琳德",
+        "url": "https://patchwiki.biligame.com/images/ys/2/2c/edrca2y9y5wvltvmva3ni2cz3c35ffj.png"
+      },
+      {
+        "description": "阿蕾奇诺",
+        "url": "https://patchwiki.biligame.com/images/ys/2/2c/6vhlw45lkuwa9b5aqr86e2bew2ln4jp.png"
+      },
+      {
+        "description": "千织",
+        "url": "https://patchwiki.biligame.com/images/ys/a/a6/4k6rkt55pw85t14akl09o42f800iac7.png"
+      },
       {
         "description": "闲云",
         "url": "https://patchwiki.biligame.com/images/ys/3/33/gn836y6qx7kl0rl98wozgx13thi62nq.png"
@@ -3114,6 +3498,10 @@
         "url": "https://patchwiki.biligame.com/images/ys/0/05/049fpv6jcr66mln0nmbbfgigfrkgrzo.png"
       },
       {
+        "description": "卡齐娜",
+        "url": "https://patchwiki.biligame.com/images/ys/f/f7/rm89ee14ccmaeozqpx20wgdryjv1bue.png"
+      },
+      {
         "description": "夏沃蕾",
         "url": "https://patchwiki.biligame.com/images/ys/1/12/iakce2e672fecwy246beikk283jkxy1.png"
       },
@@ -3190,16 +3578,16 @@
         "url": "https://patchwiki.biligame.com/images/ys/6/61/rhbp5t3iyzpsk2dc34kv18yem0nlmzo.png"
       },
       {
-        "description": "北斗",
-        "url": "https://patchwiki.biligame.com/images/ys/8/8f/eo7y6muz7scr7y3tdp2995zmxe7no46.png"
-      },
-      {
         "description": "菲谢尔",
         "url": "https://patchwiki.biligame.com/images/ys/8/8c/cmlxoc9sfz7nrwmt495351zcj1qd93e.png"
       },
       {
         "description": "丽莎",
         "url": "https://patchwiki.biligame.com/images/ys/8/83/boxpoaln8hyivr555agt2371y3ss8um.png"
+      },
+      {
+        "description": "北斗",
+        "url": "https://patchwiki.biligame.com/images/ys/8/8f/eo7y6muz7scr7y3tdp2995zmxe7no46.png"
       },
       {
         "description": "香菱",

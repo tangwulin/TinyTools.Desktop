@@ -2,9 +2,9 @@
   "name": "麦哲伦",
   "charaKey": "char_248_mgllan",
   "images": [
-    "https://prts.wiki/images/9/93/立绘_麦哲伦_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cf/立绘_麦哲伦_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4f/立绘_麦哲伦_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/93/%E7%AB%8B%E7%BB%98_%E9%BA%A6%E5%93%B2%E4%BC%A6_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cf/%E7%AB%8B%E7%BB%98_%E9%BA%A6%E5%93%B2%E4%BC%A6_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4f/%E7%AB%8B%E7%BB%98_%E9%BA%A6%E5%93%B2%E4%BC%A6_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐博士！因为工作，我已经有一段时间没有和爸爸妈妈一起过节了，不过刚刚已经寄了信还有一些我在极北做的小标本，嘿嘿。而且他们也知道博士呢！我有和爸爸妈妈讲工作里认识的朋友啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "有什麼事嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我有能帮助我进行科研的知识，健康的身体，支持我的父母、朋友们，还有极北，博士，我的人生真的很幸福呢。我还有一个小小的愿望，如果有记载，我希望我的名字终有一天能被写在极北那栏里。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "耀骑士临光",
   "charaKey": "char_1014_nearl2",
   "images": [
-    "https://prts.wiki/images/9/91/立绘_耀骑士临光_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ec/立绘_耀骑士临光_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5d/立绘_耀骑士临光_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/91/%E7%AB%8B%E7%BB%98_%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ec/%E7%AB%8B%E7%BB%98_%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/5d/%E7%AB%8B%E7%BB%98_%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我出现在这里令您意外？是啊，文书事务总会堆积在案头。但在时针开启新的一年的这一刻，我还是希望像这样坐在罗德岛的甲板上，看看仍未被灯火照亮的荒原。新年快乐，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "最近過得還好嗎，博士？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "回到故乡之后，我逐渐遇到了一些向我表示认可的骑士。曾经我执着于孤身一人刺破卡西米尔的长夜，但如今我很荣幸自己有志同道合者可以并肩而行。博士，这一年罗德岛又驶过了哪些地方？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

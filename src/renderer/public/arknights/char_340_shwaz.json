@@ -2,10 +2,10 @@
   "name": "黑",
   "charaKey": "char_340_shwaz",
   "images": [
-    "https://prts.wiki/images/7/7b/立绘_黑_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/db/立绘_黑_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d7/立绘_黑_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6c/立绘_黑_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/7b/%E7%AB%8B%E7%BB%98_%E9%BB%91_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/db/%E7%AB%8B%E7%BB%98_%E9%BB%91_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d7/%E7%AB%8B%E7%BB%98_%E9%BB%91_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6c/%E7%AB%8B%E7%BB%98_%E9%BB%91_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -716,7 +716,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, in a dangerous mission like this, you'd better give you command from as far as possible."
+          "content": "Doctor, in a dangerous mission like this,  you'd better give you command from as far as possible."
         },
         {
           "language": "韩文",
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？我对新年的期待在很小的时候就消失了，但......锡兰小姐喜欢。以前每年年末，我都会去维多利亚接她回家，听她讲留学时的见闻。你要是愿意，待会儿可以过来一起喝杯红茶。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "即使在基地裡，也不要太過鬆懈，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老爷帮助我完成了复仇，带给我一段新的人生，小姐则是教会了我如何看到一个更温柔的大地。而你们，我也十分感谢，罗德岛让小姐坚定了她的目标，我也能更放心地去明确自己战斗的方向。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "多萝西",
   "charaKey": "char_4048_doroth",
   "images": [
-    "https://prts.wiki/images/7/7b/立绘_多萝西_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_多萝西_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ee/立绘_多萝西_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/7b/%E7%AB%8B%E7%BB%98_%E5%A4%9A%E8%90%9D%E8%A5%BF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1f/%E7%AB%8B%E7%BB%98_%E5%A4%9A%E8%90%9D%E8%A5%BF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ee/%E7%AB%8B%E7%BB%98_%E5%A4%9A%E8%90%9D%E8%A5%BF_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -69,7 +69,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사……박사 다음은? 어? 박사가 당신의 코드 네임이야? 미안해, 라인 랩에서는 '박사'라고만 부르면 수백 명이 뒤를 돌아봤을 수도 있거든. 박사, 당신은 로도스 아일랜드에서 분명 특별한 존재인 거겠지."
+          "content": "박사……박사 다음은? 어? 박사가 당신의 코드네임이야? 미안해, 라인 랩에서는 '박사'라고만 부르면 수백 명이 뒤를 돌아봤을 수도 있거든. 박사, 당신은 로도스 아일랜드에서 분명 특별한 존재인 거겠지."
         },
         {
           "language": "繁体中文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。我刚给拓荒者朋友们寄了一批礼物，不知道他们什么时候才能收到......一想到他们还在往前走，我就既担心又庆幸。对了，这份礼物是给你的。你也一直在往前走，不是吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，我正想在附近散散步，要一起嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "无论是感染者还是非感染者，无论源石技艺天赋如何，我希望未来有一天，每个人都能成为自己想成为的那个人。很多人觉得这是痴人说梦，但是......博士，我知道，你和罗德岛会理解。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

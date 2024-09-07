@@ -2,9 +2,9 @@
   "name": "艾拉",
   "charaKey": "char_4123_ela",
   "images": [
-    "https://prts.wiki/images/6/61/立绘_艾拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b7/立绘_艾拉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6a/立绘_艾拉_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/61/%E7%AB%8B%E7%BB%98_%E8%89%BE%E6%8B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b7/%E7%AB%8B%E7%BB%98_%E8%89%BE%E6%8B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6a/%E7%AB%8B%E7%BB%98_%E8%89%BE%E6%8B%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -24,6 +24,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Since you're stuck here sifting through documents, I might as well help you solve a few problems around the office."
         }
       ]
     },
@@ -38,6 +42,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Hitting supply lines does a whole lot more damage than taking out people."
         }
       ]
     },
@@ -52,6 +60,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "If you ask me, your office is on the bland side. Just hit me up if you ever want to mix things up a little."
         }
       ]
     },
@@ -66,6 +78,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "The whole cozy family relationship thing isn't for me."
         }
       ]
     },
@@ -80,6 +96,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "I get a lot more out of talking to strangers than I do from that self-help stick."
         }
       ]
     },
@@ -94,6 +114,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "We define ourselves by symbols, but those symbols can be perverted, reused, reworked, reframed, remade. In a word, stolen. Who are you then?"
         }
       ]
     },
@@ -108,6 +132,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "I don't mind helping you run errands out of combat, but on the battlefield, I need ample room to call the shots."
         }
       ]
     },
@@ -122,6 +150,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "When someone can't find fault with your results and has to resort to nitpicking your attitude, that tells you everything you need to know about them."
         }
       ]
     },
@@ -136,6 +168,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "To call the shots, you need to prove you've got what it takes, and you've certainly done that. So, where are you sending me next?"
         }
       ]
     },
@@ -150,6 +186,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Your workload is clearly excessive, even by the highest standards. Take a rest."
         }
       ]
     },
@@ -164,6 +204,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Codename Ela, member of Team Rainbow. Just give me my objective, then sit back and wait for the good news."
         }
       ]
     },
@@ -178,6 +222,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Picked up a few new tricks."
         }
       ]
     },
@@ -192,6 +240,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "A medal? Thanks. Workmanship's not bad at all as far as decorations go."
         }
       ]
     },
@@ -206,6 +258,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Together, we can shake the very stars from the sky."
         }
       ]
     },
@@ -220,6 +276,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "At least make it challenging."
         }
       ]
     },
@@ -234,6 +294,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Time to show you what I can do."
         }
       ]
     },
@@ -248,6 +312,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "No time to waste."
         }
       ]
     },
@@ -262,6 +330,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "I'll make you regret this."
         }
       ]
     },
@@ -276,6 +348,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "A tooth for a tooth."
         }
       ]
     },
@@ -290,6 +366,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "An eye for an eye."
         }
       ]
     },
@@ -304,6 +384,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "I got this."
         }
       ]
     },
@@ -318,6 +402,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Idziemy."
         }
       ]
     },
@@ -332,6 +420,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Here's a memento."
         }
       ]
     },
@@ -346,6 +438,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "That will slow them down."
         }
       ]
     },
@@ -360,6 +456,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Eat this!"
         }
       ]
     },
@@ -374,6 +474,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Don't move."
         }
       ]
     },
@@ -388,6 +492,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "The end justifies the means."
         }
       ]
     },
@@ -402,6 +510,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "I'm sorry, was I too fast for you?"
         }
       ]
     },
@@ -416,6 +528,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "That's it?"
         }
       ]
     },
@@ -430,6 +546,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Try to keep up."
         }
       ]
     },
@@ -444,6 +564,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "This place isn't half bad."
         }
       ]
     },
@@ -458,6 +582,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Do me a favor, don't talk to me."
         }
       ]
     },
@@ -472,6 +600,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Tell me your story."
         }
       ]
     },
@@ -486,6 +618,28 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Arknights."
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐。我已经准备好迎接更多挑战了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
         }
       ]
     },
@@ -499,6 +653,28 @@
         },
         {
           "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "I'm here."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛是个包容性很强的地方，这一点很重要。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
           "content": ""
         }
       ]

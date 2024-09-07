@@ -2,9 +2,9 @@
   "name": "安比尔",
   "charaKey": "char_302_glaze",
   "images": [
-    "https://prts.wiki/images/3/3e/立绘_安比尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4e/立绘_安比尔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1e/立绘_安比尔_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/3e/%E7%AB%8B%E7%BB%98_%E5%AE%89%E6%AF%94%E5%B0%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4e/%E7%AB%8B%E7%BB%98_%E5%AE%89%E6%AF%94%E5%B0%94_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1e/%E7%AB%8B%E7%BB%98_%E5%AE%89%E6%AF%94%E5%B0%94_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -14,6 +14,14 @@
     {
       "language": "中文-普通话",
       "base": "voice_cn/char_302_glaze"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_302_glaze"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_302_glaze"
     }
   ],
   "voiceList": [
@@ -31,11 +39,11 @@
         },
         {
           "language": "英文",
-          "content": "Any work to do today? If it's not urgent, just push everything back a bit."
+          "content": "Any work today? If it's nothing urgent, let's put it off till later."
         },
         {
           "language": "韩文",
-          "content": "오늘은 뭐 할 거 있어? 급한 거 아니면 다음에 하자."
+          "content": "오늘 뭐 할 거 있어? 급한 거 아니면 우리 다음에 하자."
         },
         {
           "language": "繁体中文",
@@ -57,11 +65,11 @@
         },
         {
           "language": "英文",
-          "content": "I can detect nearby creatures with my Originium Arts, and this auxiliary device can further amplify the effect. Sounds great, huh? That's why the Garrison Team sent me to patrol the city, in case there were any students trying to skip school. They sure know how to put people to use."
+          "content": "My Arts detect nearby creatures, and this auxiliary device even amplifies the ability. Sounds great, right? That's why the Garrison Team sent me to patrol the city, in case any students were trying to climb the walls and skip school. I gotta admit, they sure know how to put people to work."
         },
         {
           "language": "韩文",
-          "content": "난 아츠로 주위 생물을 감지할 수 있는데, 이 기계가 있으면 그 힘을 더 파워업할 수 있어. 장난 아니지? 뭐~ 그래서 호위대에선 순찰 같은 걸 맡게 됐지만… 그래도 수업을 빼먹는 애들을 선도하는 게 일이었으니, 물건은 쓰기 나름이라는 거지."
+          "content": "난 아츠로 주위 생물을 감지할 수 있는데, 이 기계가 있으면 그 힘을 더 파워업할 수 있어. 장난 아니지? 뭐~ 그래서 호위대에선 순찰 같은 걸 맡게 됐어. 담장을 뛰어넘고 수업 째는 애들을 잡아다 선도하는 게 일이었지만…… 그래도 인재를 제대로 알아보고 활용은 한 거지."
         },
         {
           "language": "繁体中文",
@@ -83,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "Just to get this out of the way, this so-called secret of Laterano or whatever? I don't know a single thing about it. I just want to live a leisurely life. The less I know, the better off I'll be, wouldn't you agree?"
+          "content": "Just for the record, the so-called secret of Laterano or whatever? I don't know a single thing about it. I'm just after the easy life. The less I know, the better off I'll be, don't you think?"
         },
         {
           "language": "韩文",
@@ -109,11 +117,11 @@
         },
         {
           "language": "英文",
-          "content": "Hmm? Isn't that person over there from the Notarial Hall? He wanted to make sure I'm 'fulfilling my obligations?' Oh please, I pay my taxes on time every month. Anyway, whether or not that's true, give me a whisper if he's looking for me so I have time to go on a run."
+          "content": "Hmm? Isn't that guy over there from the Notarial Hall...? What? He wants to make sure I'm 'fulfilling my obligations?' Dear Lord! I pay my taxes on time every month, okay? Anyway, just give me a whisper if he's looking for me. I need time to run and hide."
         },
         {
           "language": "韩文",
-          "content": "어라? 저 녀석 혹시 공증인 사무소의…? 내 '의무 이행'을 감시하러 온 거야? 미치겠네 진짜. 매달 제대로 세금도 내고 있잖아. 뭐, 어쨌든 다음에 저 녀석이 오면 도망치기 쉽게 몰래 말해줘."
+          "content": "어라? 저 녀석 혹시 공증소의……? 설마 내 '의무 이행'을 감시하러 온 건가? 미치겠네 진짜. 매달 꼬박꼬박 세금도 제대로 내고 있다고. 뭐, 어쨌든 다음에 저 녀석이 또 오면 도망치기 쉽게 몰래 말해줘."
         },
         {
           "language": "繁体中文",
@@ -135,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "I was bored earlier, so I headed down to the bridge to slack off... Err, I meant, I wanted to take a look at the scenery, but everyone was looking at me like I was getting ready to off somebody. Hey, doesn't that mean people see me as a killer? Like I'd ever want a job like that, way too messy."
+          "content": "I was really bored, so I went down to the bridge to chill out… Err, I mean, I wanted to enjoy the scenery. But everybody was looking at me like I was there to assassinate somebody. Man, they really take me for a killer? As if I'd ever want a job like that. Way too much trouble."
         },
         {
           "language": "韩文",
@@ -161,11 +169,11 @@
         },
         {
           "language": "英文",
-          "content": "In the past, the top brass used to always harp on 'protecting the glory of Laterano with your life,' but I have no interest in that slogan, and I hate how static and immutable life was during that time. Working with you is way better, since you can give me something more practical."
+          "content": "My old brass would always drone on about 'defending the glory of Laterano with your life' and blah blah blah. But that kind of stuff is so boring. I hated how dead-end my life was back then. Working with Rhodes Island is way better. You give me something more practical."
         },
         {
           "language": "韩文",
-          "content": "예전 상사는 \"목숨을 걸고 라테라노의 영광을 지켜라\" 같은 한심한 소리를 항상 했었는데 말이야. 그런 건 털끝만큼도 흥미 없었고, 변하지 않는 생활도 진짜 질렸었어. 역시 로도스 아일랜드가 최고인 거 같아~ 여기 있으면 꽤 실속 있는 걸 얻을 수 있는 거 같아서."
+          "content": "예전 상사는 “목숨을 걸고 라테라노의 영광을 지켜라” 같은 소리를 항상 했었는데, 난 그런 건 털끝만큼도 흥미가 없었어. 변하지 않는 생활도 진짜 질렸고. 역시 로도스 아일랜드가 최고인 거 같아~ 여기에선 꽤 실속 있는 걸 얻을 수 있는 거 같아서 말이지."
         },
         {
           "language": "繁体中文",
@@ -187,11 +195,11 @@
         },
         {
           "language": "英文",
-          "content": "My hair's a bit messy? Oh, seems like I forgot to tidied up after getting out of bed. After all, it's not like I have anything to do today... What a pain in the butt. Anyway, come help me out, is my braid all crooked? It always feels a bit weird to me. You really should have a mirror in your office."
+          "content": "My hair's a little messy? Meh, I forgot to deal with my bed head. It's not like I have a mission today... Aww, this sucks... Can you tell me if my braid is crooked? It feels kinda weird. You really oughta have a mirror in your office, you know."
         },
         {
           "language": "韩文",
-          "content": "머리가 엉망이라고? 아~ 그러고 보니 일어나서 제대로 빗질 않았네. 오늘은 임무도 없고 말이야…… 아~ 귀찮아. 잠깐 옆쪽 좀 봐줘. 묶은 데가 이상한 거 같아. 그보다 말이야~ 집무실에도 거울 정도는 놓자."
+          "content": "머리가 엉망이라고? 아~ 그러고 보니 일어나서 제대로 빗질 않았네. 오늘은 임무도 없고 말이야…… 아~ 귀찮아. 잠깐 여기 좀 봐줘. 삐뚤게 묶이진 않았지? 그보다, 전부터 궁금했었거든~ 집무실에 어떻게 거울 하나 없어. 거울 정도는 놓자, 응?"
         },
         {
           "language": "繁体中文",
@@ -213,11 +221,11 @@
         },
         {
           "language": "英文",
-          "content": "Hey, I have some cake for you. What do you usually do during break? You really should take a lap around the city and get some fresh air, don't you think? As for security, just grab an Operator that can go 'pow pow' on any baddies near you, and you're set."
+          "content": "Here, I got you a cake. So, what do you usually do during your breaks? You really should take a lap around the city, get yourself some fresh air, don't you think? If you're worried about your safety, just grab an operator who can go 'pow pow' on any baddies who pop up, and you're set."
         },
         {
           "language": "韩文",
-          "content": "자, 케이크 갖고 왔어. 아 근데, 쉴 때는 맨날 뭐해? 가끔은 밖에 나가서 돌아다니는 게 좋지 않아? 보디가드 말이지…… 접근해 오는 나쁜 녀석들을 언제든지 '파팍'하고 벌집으로 만들 수 있는 오퍼레이터를 말이야, 근처에서 적당히 붙잡아서 데리고 가면 되잖아. 완벽하지?"
+          "content": "자, 케이크 갖고 왔어. 아 근데, 쉴 때는 보통 뭐해? 가끔은 밖에 나가서 주변 도시를 돌아다녀 보는 게 좋지 않아? 보디가드라면…… 너한테 접근해 오는 나쁜 녀석들을 언제든지 '파팍'하고 벌집으로 만들 수 있는 오퍼레이터를 데리고 가면 되잖아. 완벽하지?"
         },
         {
           "language": "繁体中文",
@@ -239,11 +247,11 @@
         },
         {
           "language": "英文",
-          "content": "Wanna go watch a movie? Our work's just about done anyway. How about that romantic movie about the princess and the wanderer from afar? Wait, I need to hang up my do-not-disturb sign. Wouldn't want someone walking in."
+          "content": "Wanna watch a movie? We're almost done with work anyway. How about... this romance about a princess and a wanderer from afar? Wait, I need to hang up my do-not-disturb sign. Wouldn't want someone walking in with a pile of documents."
         },
         {
           "language": "韩文",
-          "content": "있잖아, 일도 곧 끝나지? 영화라도 보지 않을래? 공주님과 외국에서 온 여행자가 만나는 러브 로맨스라고 광고하던 그거. 아, 잠깐만. 방해 금지 팻말을 문에 걸어놓을게. 방해받으면 못 참을 거 같으니까~"
+          "content": "있잖아, 일도 곧 끝나가는데 영화라도 보지 않을래? 공주와 외국에서 온 여행자의 이러쿵저러쿵 로맨스 영화라고 광고하던 그거 말이야. 아, 잠깐만. 문고리에 방해 금지 팻말 걸어두고 올게. 방해받는 거 딱 싫거든~"
         },
         {
           "language": "繁体中文",
@@ -265,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "...Gotta take advantage of a time like this."
+          "content": "Break time. Now, what should I do...?"
         },
         {
           "language": "韩文",
@@ -291,11 +299,11 @@
         },
         {
           "language": "英文",
-          "content": "Ambriel, sniper, from Laterano... Introductions are a pain in the butt, so that's it. Here, I just opened this pack of chocolate. Break off a stick."
+          "content": "Ambriel, sniper, from Laterano… Alright, that's introductions out of the way before they give me a headache. Here, I just opened this pack of chocolate pretzel sticks. Want one?"
         },
         {
           "language": "韩文",
-          "content": "난 엠브리엘이야. 라테라노 출신의 저격수…… 인데 말이야, 자기소개 같은 건 귀찮으니까 이제 이 정도면 충분하지? 자, 방금 뜯은 초콜릿이야. 뭐, 하나 먹어."
+          "content": "난 엠브리엘이야. 라테라노 출신의 저격수지…… 자기소개 같은 건 정말 귀찮네, 이 정도면 충분하지? 자, 방금 뜯은 초콜릿이야. 너도 한 개 먹던가."
         },
         {
           "language": "繁体中文",
@@ -317,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "How long is this thing... Is there no option to play all of these at once?"
+          "content": "Man, how long is this video…? Is there no option to play all of them at once?"
         },
         {
           "language": "韩文",
@@ -343,11 +351,11 @@
         },
         {
           "language": "英文",
-          "content": "Thanks. Speaking of which, do these promotions come with a salary increase? There's something I've been looking at recently..."
+          "content": "Much obliged. Oh, speaking of which, do these promotions come with a salary increase? There's something I've been looking at…"
         },
         {
           "language": "韩文",
-          "content": "감사함다~ 있잖아, 승진이라면 혹시 급료도 올라? 응, 좀 사고 싶은 게 있어서……"
+          "content": "감사함다~ 있잖아, 승진하면 혹시 월급도 올라? 응, 요즘 좀 사고 싶은 게 있어서……"
         },
         {
           "language": "繁体中文",
@@ -369,11 +377,11 @@
         },
         {
           "language": "英文",
-          "content": "Oh, thank you very much. I've been with Rhodes Island for quite some time now, right? Without realizing it, I've gotten a whole lot out of this, and made some good memories as well."
+          "content": "Thank you very much. I've been with Rhodes Island for a while now, right? Before I knew it, I'd gotten a whole lot out of this, and made some good memories too."
         },
         {
           "language": "韩文",
-          "content": "진짜? 땡큐~! 로도스 아일랜드에 온 지 벌써 그렇게 됐구나~ 여기서는 많은 걸 받았어. 다 멋진 추억이야."
+          "content": "진짜? 땡큐~! 로도스 아일랜드에 온 지도 벌써 그렇게 됐구나~ 난 여기서 정말 많은 걸 얻었어, 그리고 전부 멋진 기억들이야."
         },
         {
           "language": "繁体中文",
@@ -395,7 +403,7 @@
         },
         {
           "language": "英文",
-          "content": "My teammates seem quite capable this time."
+          "content": "Woah, my teammates look pretty capable this time."
         },
         {
           "language": "韩文",
@@ -421,11 +429,11 @@
         },
         {
           "language": "英文",
-          "content": "I'll say this up front. My tactics are a little unorthodox."
+          "content": "Just a heads-up for you, my tactics are a little unorthodox."
         },
         {
           "language": "韩文",
-          "content": "먼저 말해둘게. 내가 좋아하는 전술은 좀 특이하거든."
+          "content": "먼저 말해두는데, 내가 좋아하는 전술은 좀 특이하다?"
         },
         {
           "language": "繁体中文",
@@ -525,11 +533,11 @@
         },
         {
           "language": "英文",
-          "content": "Let me finish this piece first."
+          "content": "Let me finish this choco stick first."
         },
         {
           "language": "韩文",
-          "content": "이 한발이 마지막이니까 조금만 기다려."
+          "content": "조금만 기다려, 이 마지막 막대기마저 먹고."
         },
         {
           "language": "繁体中文",
@@ -551,7 +559,7 @@
         },
         {
           "language": "英文",
-          "content": "Deploying sniper platform."
+          "content": "Sniper platform, deploying~"
         },
         {
           "language": "韩文",
@@ -577,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "Automatically calibrating."
+          "content": "Auto-calibration in progress."
         },
         {
           "language": "韩文",
@@ -603,7 +611,7 @@
         },
         {
           "language": "英文",
-          "content": "Over here."
+          "content": "There you are."
         },
         {
           "language": "韩文",
@@ -629,11 +637,11 @@
         },
         {
           "language": "英文",
-          "content": "You should've hidden yourself better."
+          "content": "Well, well, well, somebody's no good at hiding."
         },
         {
           "language": "韩文",
-          "content": "거기 너, 제대로 안 숨어졌는데."
+          "content": "거기 너, 좀 더 제대로 숨었어야지."
         },
         {
           "language": "繁体中文",
@@ -655,11 +663,11 @@
         },
         {
           "language": "英文",
-          "content": "It's very dangerous out there."
+          "content": "Wide-open spaces are dangerous, y'know."
         },
         {
           "language": "韩文",
-          "content": "밖은 위험하니까."
+          "content": "밖은 위험하다고."
         },
         {
           "language": "繁体中文",
@@ -707,11 +715,11 @@
         },
         {
           "language": "英文",
-          "content": "As expected, Doctor, you're the only one who can consistently achieve results like this!"
+          "content": "You always win big like this, Doctor. You're really something!"
         },
         {
           "language": "韩文",
-          "content": "매번 이렇게 할 수 있다니, 역시 박사야."
+          "content": "매번 이 정도로 할 수 있다니, 역시 박사야."
         },
         {
           "language": "繁体中文",
@@ -733,7 +741,7 @@
         },
         {
           "language": "英文",
-          "content": "Not a single wasted shot - perfect."
+          "content": "Not a single shot wasted - perfect."
         },
         {
           "language": "韩文",
@@ -763,7 +771,7 @@
         },
         {
           "language": "韩文",
-          "content": "뭐 조~금 실수하긴 했지만, 이긴 건 이긴 거지."
+          "content": "뭐 조~금 실수하긴 했지만, 이긴 건 이긴 거지?"
         },
         {
           "language": "繁体中文",
@@ -789,7 +797,7 @@
         },
         {
           "language": "韩文",
-          "content": "언뜻 봐도 적의 수가 늘었어. 총공격 할 태세잖아. 박사, 빨리 철수하자……"
+          "content": "언뜻 봐도 적의 수가 늘고 있잖아, 다시 공격할 태세야. 박사, 빨리 철수하자……"
         },
         {
           "language": "繁体中文",
@@ -811,7 +819,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, it's about time to replenish the cookies in the vending machine."
+          "content": "Doctor! Time to restock the pretzel sticks in the vending machine!"
         },
         {
           "language": "韩文",
@@ -837,7 +845,7 @@
         },
         {
           "language": "英文",
-          "content": "What is it?"
+          "content": "What?"
         },
         {
           "language": "韩文",
@@ -863,11 +871,11 @@
         },
         {
           "language": "英文",
-          "content": "I heard that a new line of clothing just arrived in the Procurement Division? Hehe, Doctor, you simply must take me to see it."
+          "content": "I hear some new clothes came into the store? Doctor, come check 'em out with me!"
         },
         {
           "language": "韩文",
-          "content": "신상 옷이 들어왔다는 거 진짜야? 저기, 박사. 이건 갈 수밖에 없잖아!"
+          "content": "신상 옷 들어왔다는 거 진짜야? 저기, 박사. 이건 갈 수밖에 없잖아! 같이 가자!"
         },
         {
           "language": "繁体中文",
@@ -902,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "欸？你也来这里偷懒啊。喏，坐这吧。坐在舰桥上，看大家在甲板上忙忙碌碌的样子，觉得心情都平静下来了。可今天为什么都没有人呢......啊！原来今天是新年放假吗？！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -924,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "喲。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "你问我在罗德岛找到的“实际的东西”是什么？嗯，当然是每天在舰桥上看不同样子的日落，还有用这把铳做点好事的感觉。挺帅的对不对？嗯，骗你的。不要说这些麻烦事啦，我要去食堂抢布丁吃！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

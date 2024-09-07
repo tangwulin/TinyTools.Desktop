@@ -2,9 +2,9 @@
   "name": "艾雅法拉",
   "charaKey": "char_180_amgoat",
   "images": [
-    "https://prts.wiki/images/c/c0/立绘_艾雅法拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/21/立绘_艾雅法拉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e8/立绘_艾雅法拉_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/c/c0/%E7%AB%8B%E7%BB%98_%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/21/%E7%AB%8B%E7%BB%98_%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e8/%E7%AB%8B%E7%BB%98_%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "前辈，新年快乐！大家都高高兴兴地在准备礼物和装饰呢，还有好多干员来和我说话。虽然有时候听不太清，但是看每个人脸上的表情，肯定都是些温暖的话吧，前辈，您也要接受这份温暖呀。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "前輩，早上好~"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "过去一年承蒙前辈的照顾，能和您在一起真的很开心~关于火山和天灾，我所不知道的还有很多，在我彻底无法进行考察和研究之前，前辈，我会把自己全部的精力都投入到这之中，这样才不会后悔。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

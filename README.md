@@ -106,3 +106,6 @@ pnpm build:linux
 - [Electron-vite](https://github.com/alex8088/electron-vite)
 - [modern-screenshot](https://github.com/qq15725/modern-screenshot)
 - [仿明日方舟UI](https://github.com/lxchapu/arknights)
+
+## 📃 License
+[![FOSSA Status](https://app.fossa.com/api/projects/custom%2B45880%2Fgithub.com%2Ftangwulin%2FTinyTools.Desktop.svg?type=large&issueType=license)](https://app.fossa.com/projects/custom%2B45880%2Fgithub.com%2Ftangwulin%2FTinyTools.Desktop?ref=badge_large&issueType=license)

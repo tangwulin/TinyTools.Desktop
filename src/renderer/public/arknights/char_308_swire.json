@@ -2,9 +2,9 @@
   "name": "诗怀雅",
   "charaKey": "char_308_swire",
   "images": [
-    "https://prts.wiki/images/b/bc/立绘_诗怀雅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_诗怀雅_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b3/立绘_诗怀雅_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/bc/%E7%AB%8B%E7%BB%98_%E8%AF%97%E6%80%80%E9%9B%85_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b8/%E7%AB%8B%E7%BB%98_%E8%AF%97%E6%80%80%E9%9B%85_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b3/%E7%AB%8B%E7%BB%98_%E8%AF%97%E6%80%80%E9%9B%85_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -1186,6 +1186,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好！都在这里聚齐了，挺热闹的啊！我带了点龙门本地小吃......才、才不是专门给你们带的，是我自己要吃！对了，要是陈晖洁来吃，记得让她给我付钱。辛苦费！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "新年好！大家全都在，挺热闹的嘛！我带了点龙门本地小吃来......才、才不是特地带给你们的，是我自己要吃！对了，陈晖洁要来吃的话，记得让她给我钱。辛苦费！"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1216,6 +1250,40 @@
         {
           "language": "繁体中文-方言",
           "content": "嗷嗚，博士！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我当警察算是违背了祖父的意愿，但我认为这是条正确的路，虽然它并不容易。这不单是为了掌握自己的人生，现在，更是为了龙门的未来。喂，别以为只有陈晖洁才会想这些，我要做的还有很多。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "我做警察算是违背了祖父的意愿，但是我认为选这条路是正确的，虽然冇咁好走。这不仅仅是为了掌握自己的人生，现在，更加是为了龙门的未来。喂，你别以为只有陈晖洁懂得想这些，我要做的东西还有很多呢。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
         }
       ]
     }

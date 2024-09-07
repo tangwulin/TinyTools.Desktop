@@ -2,9 +2,9 @@
   "name": "菲亚梅塔",
   "charaKey": "char_300_phenxi",
   "images": [
-    "https://prts.wiki/images/9/9c/立绘_菲亚梅塔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/47/立绘_菲亚梅塔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/16/立绘_菲亚梅塔_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/9c/%E7%AB%8B%E7%BB%98_%E8%8F%B2%E4%BA%9A%E6%A2%85%E5%A1%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/47/%E7%AB%8B%E7%BB%98_%E8%8F%B2%E4%BA%9A%E6%A2%85%E5%A1%94_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/16/%E7%AB%8B%E7%BB%98_%E8%8F%B2%E4%BA%9A%E6%A2%85%E5%A1%94_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "自从我接下监视莫斯提马这个任务，就很少能够安稳停在某处。东奔西走我早就习惯了，但在这种日子里能有个地方暂时休息一会，也不是一件坏事。新年快乐，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "別來無恙。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "“毛绒包包头”？莫斯提马那个混蛋......是之前有个萨科塔小孩不知道黎博利有耳羽，以为我扎了——那个，这话又被一个不该听到的老头子听到了，我顶着这个名字工作了一个月！不许笑！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

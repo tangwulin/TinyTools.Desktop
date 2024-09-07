@@ -2,9 +2,9 @@
   "name": "归溟幽灵鲨",
   "charaKey": "char_1023_ghost2",
   "images": [
-    "https://prts.wiki/images/f/fc/立绘_归溟幽灵鲨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/16/立绘_归溟幽灵鲨_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0d/立绘_归溟幽灵鲨_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E5%BD%92%E6%BA%9F%E5%B9%BD%E7%81%B5%E9%B2%A8_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/16/%E7%AB%8B%E7%BB%98_%E5%BD%92%E6%BA%9F%E5%B9%BD%E7%81%B5%E9%B2%A8_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0d/%E7%AB%8B%E7%BB%98_%E5%BD%92%E6%BA%9F%E5%B9%BD%E7%81%B5%E9%B2%A8_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年宴会？你们苦中作乐的精神确实令人敬佩......当然，我会参加的，入乡随俗，不是吗？到时候再见吧，博士，新年快乐，祝我们离死亡又近了一些。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "但願你能度過有意義的一天，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我能感觉到，过去将我包裹住的疯狂，与你们试图攻克的矿石病有微妙的差别......而有趣的是，即使连我拥有的知识也无法给出一个明确的答案。至少在探明这一点上，我会不吝与你们合作。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

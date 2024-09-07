@@ -2,9 +2,9 @@
   "name": "战车",
   "charaKey": "char_459_tachak",
   "images": [
-    "https://prts.wiki/images/7/7b/立绘_战车_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/33/立绘_战车_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f1/立绘_战车_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/7b/%E7%AB%8B%E7%BB%98_%E6%88%98%E8%BD%A6_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/33/%E7%AB%8B%E7%BB%98_%E6%88%98%E8%BD%A6_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f1/%E7%AB%8B%E7%BB%98_%E6%88%98%E8%BD%A6_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -894,6 +894,32 @@
         {
           "language": "繁体中文",
           "content": "明日方舟。"
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "很高兴我们能见到明天的太阳，同志。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     },

@@ -2,9 +2,9 @@
   "name": "耶拉",
   "charaKey": "char_4013_kjera",
   "images": [
-    "https://prts.wiki/images/0/03/立绘_耶拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/75/立绘_耶拉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/80/立绘_耶拉_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/0/03/%E7%AB%8B%E7%BB%98_%E8%80%B6%E6%8B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/75/%E7%AB%8B%E7%BB%98_%E8%80%B6%E6%8B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/80/%E7%AB%8B%E7%BB%98_%E8%80%B6%E6%8B%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "原来不只是谢拉格，还有许多地方都会庆祝这个节日呀。倒不是觉得奇怪。只是好像刚庆祝过节日，一眨眼就到了下一个节日，真是奇妙呢。不过，有理由开心就是件好事。博士，想吃奶酪火锅吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，昨天晚上睡得好嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "不知不觉，已经跟着恩雅来过这里许多次了呢。我好像也逐渐明白了，为什么恩雅一有空就喜欢往这里跑。这里有这么多有趣、可爱的人，博士，你会带领这艘舰船驶向何方呢？真想见识见识啊。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

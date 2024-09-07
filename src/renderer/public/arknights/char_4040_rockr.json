@@ -2,9 +2,9 @@
   "name": "洛洛",
   "charaKey": "char_4040_rockr",
   "images": [
-    "https://prts.wiki/images/a/a5/立绘_洛洛_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/78/立绘_洛洛_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0a/立绘_洛洛_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/a/a5/%E7%AB%8B%E7%BB%98_%E6%B4%9B%E6%B4%9B_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/78/%E7%AB%8B%E7%BB%98_%E6%B4%9B%E6%B4%9B_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0a/%E7%AB%8B%E7%BB%98_%E6%B4%9B%E6%B4%9B_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士，有什么愿望吗？我的愿望？嗯......我希望，直到我们老去的那一天，每一年的新年都能这样平静地度过。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "早上好，博士，新的一天也要努力工作。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，玩得开心吗？我？嗯，我当然开心，大家都热热闹闹地在一起，没有比这更好的事了。对了，我刚才抽到了奖品，我不需要，你要吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

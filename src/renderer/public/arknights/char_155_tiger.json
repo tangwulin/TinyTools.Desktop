@@ -2,9 +2,9 @@
   "name": "因陀罗",
   "charaKey": "char_155_tiger",
   "images": [
-    "https://prts.wiki/images/d/d4/立绘_因陀罗_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/61/立绘_因陀罗_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cc/立绘_因陀罗_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/d/d4/%E7%AB%8B%E7%BB%98_%E5%9B%A0%E9%99%80%E7%BD%97_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/61/%E7%AB%8B%E7%BB%98_%E5%9B%A0%E9%99%80%E7%BD%97_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cc/%E7%AB%8B%E7%BB%98_%E5%9B%A0%E9%99%80%E7%BD%97_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -147,7 +147,7 @@
         },
         {
           "language": "韩文",
-          "content": "일이든 뭐든, 다 기합이야 기합!"
+          "content": "일이든 뭐든, 다 밀어붙여! 기세를 보여줘야 한다고."
         },
         {
           "language": "繁体中文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "喔！有年终奖金吗？哈哈，也该有我一份吧，都帮你打过那么多次架啦，再怎么说都是同伴了，对吧！走，我请你吃一顿！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "喲！博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "维娜相信罗德岛。所以你下的命令，我会毫不犹豫地去做。但是听好了博士，你必须牢牢记着这种信任的分量。否则，就算用拳头我也要提醒你——不是要和你干架的意思。总之，你要记得我说的话。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

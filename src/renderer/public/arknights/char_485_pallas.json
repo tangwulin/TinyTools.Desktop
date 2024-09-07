@@ -2,10 +2,10 @@
   "name": "帕拉斯",
   "charaKey": "char_485_pallas",
   "images": [
-    "https://prts.wiki/images/e/ef/立绘_帕拉斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ea/立绘_帕拉斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3e/立绘_帕拉斯_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7a/立绘_帕拉斯_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/e/ef/%E7%AB%8B%E7%BB%98_%E5%B8%95%E6%8B%89%E6%96%AF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ea/%E7%AB%8B%E7%BB%98_%E5%B8%95%E6%8B%89%E6%96%AF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/3e/%E7%AB%8B%E7%BB%98_%E5%B8%95%E6%8B%89%E6%96%AF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7a/%E7%AB%8B%E7%BB%98_%E5%B8%95%E6%8B%89%E6%96%AF_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -15,6 +15,14 @@
     {
       "language": "中文-普通话",
       "base": "voice_cn/char_485_pallas"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_485_pallas"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_485_pallas"
     }
   ],
   "voiceList": [
@@ -32,11 +40,11 @@
         },
         {
           "language": "英文",
-          "content": "Become an assistant? If the job is similar to that of a priestess of the Hall of the Twelve Heroes, I shall be fine."
+          "content": "You would have me as your assistant? Well, if the said duty is akin to my last, where I served within the Hall of the Twelve Heroes as its priest, I shall be fine, I assume."
         },
         {
           "language": "韩文",
-          "content": "조수 말입니까? 12영웅의 전당의 제사장과 비슷한 일이라면 아마 도움을 드릴 수 있을 것 같군요."
+          "content": "조수 말입니까? 12영웅의 전당의 제사장과 비슷한 업무라면 아마 도움을 드릴 수 있을 것 같군요."
         },
         {
           "language": "繁体中文",
@@ -58,11 +66,11 @@
         },
         {
           "language": "英文",
-          "content": "Ugh... Ehem, I must not drink, drink so much next time... Ah, Doctor. Why do you sway, so much in your movement today?"
+          "content": "Ugh... Uh… Ehem… I must not drink so much... next time… Ah, Doctor. Why do you stagger and sway, so much in your movement today?"
         },
         {
           "language": "韩文",
-          "content": "으…… 우웁…… 다, 다음엔 적당히 마셔야지…… 어라, 박사 박사님. 왜 그렇게 비틀비틀 걷고 계시나요?"
+          "content": "으…… 우웁…… 다, 다음엔 적당히 마셔야지…… 어머, 박사 박사님. 왜 그렇게 비틀비틀 걷고 계시나요?"
         },
         {
           "language": "繁体中文",
@@ -84,11 +92,11 @@
         },
         {
           "language": "英文",
-          "content": "The city is a grand sight during the festivals. Theatrical performances, sparkling wine, sports competitions... To be frank, I have even once participated in amateur Formula Chariot racing. That chariot was not cheap. I wonder if its fate was being inherited, or if it was simply abandoned after I left."
+          "content": "The city is a grand sight during the festivals. Theatrical performances, sparkling wine, sports competitions... Truth be told, I once joined Formula Chariot racing, competing with my equally unskilled fellows. That chariot was not cheap. I wonder if its fate was inheritance, or if it was simply abandoned after I left?"
         },
         {
           "language": "韩文",
-          "content": "제전이 열리는 시기가 되면 연극에 술, 스포츠 대회로 온 거리가 떠들썩해집니다…… 사실 저도 아마추어 포뮬러 전차 레이스에 참가한 적이 있죠. 제법 값비싼 전차로 꽤 분발했습니다만, 제가 떠난 뒤로 다른 분께 거둬졌는지 버려졌을지, 그 뒤의 운명은 알 방도가 없군요."
+          "content": "제전이 열리는 시기가 되면 연극에 술, 스포츠 대회로 온 거리가 떠들썩해집니다…… 사실 저도 아마추어 포뮬러 전차 레이스에 참가했던 적이 있죠. 제법 값비싼 전차로 꽤 분발했습니다만, 제가 떠난 뒤로 다른 분께 거둬졌는지 버려졌을지, 그 뒤의 운명은 알 방도가 없더군요."
         },
         {
           "language": "繁体中文",
@@ -110,7 +118,7 @@
         },
         {
           "language": "英文",
-          "content": "To think that there were so many like-minded comrades in Rhodes Island. Yes, poetry! War! Freedom! To gather the people's strength from within the torrent of history, and fight to change this world. How exhilarating! These tragic yet extraordinary stories should be immortalized and passed down forevermore."
+          "content": "To think there were so many like-minded souls at Rhodes Island. Ah, poetry, war, freedom! From within the torrent of history, you summon the strength of many to rebel against fate, and undo its blight upon the lands. How exhilarating! These tragic yet extraordinary stories… They should be immortalized, and passed down forevermore."
         },
         {
           "language": "韩文",
@@ -136,11 +144,11 @@
         },
         {
           "language": "英文",
-          "content": "After contracting Oripathy, I moved to a small village at the border of Minos. There was a small ongoing war against the Sargon incursions... In the end, the Minoans were victorious. However, rather than the so-called reality, I would rather wish that it spreads slowly as a story."
+          "content": "After contracting Oripathy, I moved to a small village in the Minoan borderlands. There was a small ongoing war against the Sargon incursions... which ended with the victory of the Minoans. However, I would prefer this story to gradually spread as a tale, rather than live in its so-called reality."
         },
         {
           "language": "韩文",
-          "content": "광석병을 앓게 된 후 저는 미노스 변경의 마을에서 은둔 생활을 했습니다. 하지만 그곳에서는 때마침 사르곤의 침략으로 인해 소규모 방어전이 한창이었죠…… 결국은 미노스인의 승리로 끝났습니다. 하지만 이처럼 단순히 사실이 전해지는 것보단, 그것이 이야기로써 전해지길 바라고 있습니다."
+          "content": "광석병을 앓게 된 후 저는 미노스 변경의 마을에서 은둔 생활을 했습니다. 하지만 그곳에서는 때마침 사르곤의 침략으로 인해 소규모 방어전이 한창이었죠…… 그리고 결국엔 미노스인의 승리로 끝이 났죠. 하지만 이처럼 단순히 사실만 전해지기보단, 그것이 이야기로써 전해지길 바라고 있습니다."
         },
         {
           "language": "繁体中文",
@@ -162,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Simply light the flames of resistance, and it shall burn hot and fierce. Just pass on the story of the 'Goddess of War' to those that dearly wish for liberation! All that I have, is but this infected body of mine, and this unchanging faith."
+          "content": "Simply light the flames of resistance, and they shall burn hot and fierce. For those whose wishes for liberation are so dear, the story of the 'Goddess of War' shall be their flag, a banner under which they will unite in the forthcoming battles. For me, I have naught but this infected body of mine, and this unchanging faith."
         },
         {
           "language": "韩文",
@@ -188,11 +196,11 @@
         },
         {
           "language": "英文",
-          "content": "Is that so. Vulcan, once the champion of weapon forging, is here? This is great news indeed! This weapon in my hand has confounded many a smith, and I have had great difficulty in getting it repaired. Look upon this signature, which belongs to her... Oh? I shouldn't mention it?"
+          "content": "I see... Vulcan, once the champion of weapon forging, is here at Rhodes Island. That is great news indeed! This weapon in my hand has confounded many a smith. But none could restore it to its rightful condition. Here, look upon this signature, that of the very same Vulcan... Hm? I ought to keep it a secret?"
         },
         {
           "language": "韩文",
-          "content": "그렇군요, 과거 무기 주조 챔피온이었던 벌컨 씨가 여기 계시는군요. 듣던 중 반가운 소식입니다! 제 무기는 그 어떤 장인을 찾아가도 새것처럼 수리할 수 없었죠. 하지만 여기 사인을 봐주세요. 이건 그녀의…… 네? 남들이 들으면 안 된다고요?"
+          "content": "그렇군요, 과거 무기 주조 챔피언이었던 벌컨 씨가 여기 계시는군요. 듣던 중 반가운 소식입니다! 제 무기는 그 어떤 장인을 찾아가도 새것처럼 수리할 수 없었죠. 하지만 여기 사인을 봐주세요. 이건 그분의…… 네? 남들이 들으면 안 된다고요?"
         },
         {
           "language": "繁体中文",
@@ -214,7 +222,7 @@
         },
         {
           "language": "英文",
-          "content": "The stories of Minoan heroes... There exist both comedies and tragedies alike. However, the noblest part of the Twelve Heroes is that——Without exception, each and every one of them returned to a simple, ordinary life."
+          "content": "The stories of Minoan heroes… They include both comedy and tragedy alike. However, the noblest aspect of the Twelve Heroes is that——Without exception, each and every one of them returned to a simple, ordinary life."
         },
         {
           "language": "韩文",
@@ -240,11 +248,11 @@
         },
         {
           "language": "英文",
-          "content": "To be oppressed for so long that one becomes numb to it is a most pitiable thing. A heart without hope will not burn with the fires of rage. I would never wish for anyone to face cruelty, but those who aspire to become a warrior must possess a bit of hope, a little spark and a timely opportunity."
+          "content": "To suffer oppression for such a length of time, that their souls have grown numb to it… My heart goes out to those poor souls. Still, a heart without hope cannot burn with the fires of rage. I would never wish for anyone to face cruelty, but if a man is to be a warrior, then he needs a bit of faith, a little spark, and most importantly— a 'start.'"
         },
         {
           "language": "韩文",
-          "content": "기나긴 슬픔에 마음이 마비되고 가엾게도 박해받아온 이들이여, 마음에 희망이 없으면 분노의 불꽃을 피울 수 없습니다. 잔혹한 현실을 직시하라고 강요하지는 않겠습니다. 하지만 용사가 되기 위해서는 하나의 신앙심, 한 조각의 불씨, 그리고 한 줄기의 도화선이 필요할 겁니다."
+          "content": "기나긴 슬픔에 마음이 마비되고 가엾게도 박해받아온 이들이여, 마음에 희망이 없으면 분노의 불꽃을 피울 수 없습니다. 잔혹한 현실을 직시하라고 강요하지는 않겠습니다. 하지만 용사가 되기 위해서는 하나의 신앙심, 한 조각의 불씨, 그리고 한 줄기의 도화선이 필요하죠."
         },
         {
           "language": "繁体中文",
@@ -270,7 +278,7 @@
         },
         {
           "language": "韩文",
-          "content": "선 채로 생각에 잠기는 버릇 때문에, 가끔 다른 분들도 제가 자는 줄 알고 찔러 보시곤 해요."
+          "content": "선 채로 생각에 잠기는 버릇 때문에, 가끔 다른 분들도 제가 자는 줄 알고 찔러 보시곤 한답니다."
         },
         {
           "language": "繁体中文",
@@ -292,11 +300,11 @@
         },
         {
           "language": "英文",
-          "content": "I am the Minoan priestess, Pallas. I shall be convalescing at Rhodes Island for a time... Be that as it may, I hope to enjoy my share of alcohol and theatre, and I yearn even more for battle."
+          "content": "I am Pallas,  priestess of Minos. I shall be convalescing at Rhodes Island for a time… Nevertheless, I hope to enjoy my share of wine and theatre, and I yearn even more for battle."
         },
         {
           "language": "韩文",
-          "content": "미노스에서 온 사제, 팔라스입니다. 앞으로 로도스 아일랜드에서 잠깐 쉬어가도록 하겠습니다…… 라고 말은 했지만, 좋은 술과 연극으로 대접받기를 간절히 바라고 있습니다. 그리고 그 이상으로, 전장을 갈망하고 있죠."
+          "content": "미노스에서 온 사제, 팔라스라고 합니다. 앞으로 로도스 아일랜드에서 잠깐 쉬어가도록 하겠습니다…… 라고 말은 했지만, 좋은 술과 연극으로 대접받기를 간절히 바라고 있습니다. 그리고 그 이상으로, 전장을 갈망하고 있죠."
         },
         {
           "language": "繁体中文",
@@ -318,7 +326,7 @@
         },
         {
           "language": "英文",
-          "content": "To be able to record the acts of the warriors in battle with such realism, what a great convenience it is."
+          "content": "Recording the valiant warriors in battle, and with such realism. What a great convenience it is."
         },
         {
           "language": "韩文",
@@ -344,7 +352,7 @@
         },
         {
           "language": "英文",
-          "content": "Abandoning glory, the hero decided to return to normal life, but could not, due to Oripathy infection? No... It should not be so..."
+          "content": "Abandoning glory, the hero decided to return to normal life, but could not, due to Oripathy infection? No… It should not be so."
         },
         {
           "language": "韩文",
@@ -370,11 +378,11 @@
         },
         {
           "language": "英文",
-          "content": "I am... a believer chasing after the will of the heroes. My weapon shall remain ever sharp and free of rust, to be employed against the forces of injustice and cruelty. My humility shall not be forgotten, and it will remind me of my mission to save others."
+          "content": "I, Pallas of Minos, am a woman of faith, a follower of the will of the heroes. My weapon shall remain ever sharp and free of rust, such that it may strike at the forces of injustice and cruelty. My humility shall not be forgotten, an eternal expression of my duty to salvation and redemption."
         },
         {
           "language": "韩文",
-          "content": "저는…… 영웅들의 의지를 따르는 신자입니다. 이 불평등과 폭거에 저항하는 이 무기를 무뎌지게 할 수는 없어요. 그리고 구제의 사명을 잊지 않기 위해, 항상 겸허하라고 자신에게 되뇌고 있답니다."
+          "content": "저는…… 영웅들의 의지를 따르는 신자입니다. 불평등과 폭거에 저항하는 이 무기를 무뎌지게 할 수는 없어요. 그리고 구제의 사명을 잊지 않기 위해, 항상 겸허하라고 자신에게 되뇌고 있답니다."
         },
         {
           "language": "繁体中文",
@@ -396,7 +404,7 @@
         },
         {
           "language": "英文",
-          "content": "Heroes who promise victory, I shall receive your blessings."
+          "content": "O heroic heralds of victory, I welcome your blessings."
         },
         {
           "language": "韩文",
@@ -422,7 +430,7 @@
         },
         {
           "language": "英文",
-          "content": "I am with you, o great warriors, to fight by your side."
+          "content": "O great warriors, I fight by your side, shoulder to shoulder."
         },
         {
           "language": "韩文",
@@ -448,7 +456,7 @@
         },
         {
           "language": "英文",
-          "content": "The next time you turn your head, it shall be us returning with victory in hand."
+          "content": "The next time you turn your head, you will find us returning, with victory in hand."
         },
         {
           "language": "韩文",
@@ -474,7 +482,7 @@
         },
         {
           "language": "英文",
-          "content": "Fear not, for we shall claim victory over these reckless fellows!"
+          "content": "Fear not, for we shall claim victory over these reckless foes."
         },
         {
           "language": "韩文",
@@ -526,7 +534,7 @@
         },
         {
           "language": "英文",
-          "content": "Come——"
+          "content": "Come—"
         },
         {
           "language": "韩文",
@@ -578,7 +586,7 @@
         },
         {
           "language": "英文",
-          "content": "We need not retreat."
+          "content": "There is no need to retreat."
         },
         {
           "language": "韩文",
@@ -604,7 +612,7 @@
         },
         {
           "language": "英文",
-          "content": "O' heroes, for this greatest faith of ours, please stand on our side."
+          "content": "O heroes, stand together with us, for the paramount power of faith!"
         },
         {
           "language": "韩文",
@@ -630,7 +638,7 @@
         },
         {
           "language": "英文",
-          "content": "Tremble, in the face of true bravery."
+          "content": "Tremble, in the face of ture bravey."
         },
         {
           "language": "韩文",
@@ -656,7 +664,7 @@
         },
         {
           "language": "英文",
-          "content": "Weep, for that worthless faith of yours."
+          "content": "Weep, for that wavering faith of yours."
         },
         {
           "language": "韩文",
@@ -712,7 +720,7 @@
         },
         {
           "language": "韩文",
-          "content": "네, 드디어 이뤄냈군요…… 저는 지금, 지고의 영예와 행복에 휩싸였습니다."
+          "content": "네, 드디어 이뤄냈군요…… 저는 지금, 더할 나위 없는 영예와 행복에 휩싸였습니다."
         },
         {
           "language": "繁体中文",
@@ -734,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "Turn about, o heroes. We have achieved a perfect victory, and it is now time to return and enjoy the fruits of our labors."
+          "content": "Turn about, brave champions. We have achieved a perfect victory, and it is now time to return and enjoy the fruits of our labors."
         },
         {
           "language": "韩文",
@@ -760,7 +768,7 @@
         },
         {
           "language": "英文",
-          "content": "Listen well, the laments have ceased. This calm heralds the arrival of peace and joy."
+          "content": "Listen well, the lamentations have ceased. This calm heralds the arrival of peace and joy."
         },
         {
           "language": "韩文",
@@ -786,7 +794,7 @@
         },
         {
           "language": "英文",
-          "content": "Even though the wars of humanity have no end in sight... At this moment, we have protected our dignity. Leave. Keep your heads held high."
+          "content": "Even though the wars of humanity have no end in sight, we have protected our dignity, for the moment. Leave. Keep your heads held high."
         },
         {
           "language": "韩文",
@@ -812,11 +820,11 @@
         },
         {
           "language": "英文",
-          "content": "My horns are a danger to furniture. I shall be vigilant."
+          "content": "My horns might pose a threat to furniture. I shall be vigilant."
         },
         {
           "language": "韩文",
-          "content": "이 뿔로 가구를 넘어뜨리지 않도록 조심하겠습니다."
+          "content": "이 뿔에 가구가 넘어지지 않도록 조심하겠습니다."
         },
         {
           "language": "繁体中文",
@@ -864,7 +872,7 @@
         },
         {
           "language": "英文",
-          "content": "Shall we go and enjoy ourselves at the Minoan-themed multimedia room event?"
+          "content": "There is a Minoan-themed multimedia room event. Shall we go and see what thrills await?"
         },
         {
           "language": "韩文",
@@ -903,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "又到了新的一年，十二英雄神殿中的圣火也依然在熊熊燃烧吧，只是我再也没有资格去点燃圣火了......不过，我还是可以在罗德岛燃放烟花的吧？这个叫“二踢脚”的，可以在甲板上放吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -920,11 +954,37 @@
         },
         {
           "language": "韩文",
-          "content": "푹 쉬셨습니까, 박사님."
+          "content": "푹 쉬셨나요, 박사님."
         },
         {
           "language": "繁体中文",
           "content": "休息好了嗎，博士？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "无论身在何处，热闹的庆典永远令人心潮澎湃。高歌吧，欢呼吧！让此刻幸福的氛围在笑声中被铭记，明日的愿景应该用美酒来开启——唔，即使是在今天，也要限制我的饮酒量吗......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

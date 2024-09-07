@@ -2,11 +2,11 @@
   "name": "铃兰",
   "charaKey": "char_358_lisa",
   "images": [
-    "https://prts.wiki/images/f/f5/立绘_铃兰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_铃兰_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7c/立绘_铃兰_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e0/立绘_铃兰_skin2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/60/立绘_铃兰_skin3.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/f/f5/%E7%AB%8B%E7%BB%98_%E9%93%83%E5%85%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/87/%E7%AB%8B%E7%BB%98_%E9%93%83%E5%85%B0_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7c/%E7%AB%8B%E7%BB%98_%E9%93%83%E5%85%B0_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e0/%E7%AB%8B%E7%BB%98_%E9%93%83%E5%85%B0_skin2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/60/%E7%AB%8B%E7%BB%98_%E9%93%83%E5%85%B0_skin3.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -908,6 +908,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "啊，新年快乐，博士。这个是我刚刚做的小糕点，还请收下吧。今天要做许多好吃的，厨房那里还需要帮忙，博士就先在这里好好休息，难得的节日，陪陪其他干员前辈们吧，好吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -930,6 +956,32 @@
         {
           "language": "繁体中文",
           "content": "博士，辛苦了。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "......嗯？是博士啊，今天大家都很忙，我现在要去帮阿米娅姐姐打下手喔——我在想什么？我......我在想爸爸和妈妈现在怎么样了。博士，我有机会回家看看吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

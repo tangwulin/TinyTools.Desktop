@@ -2,11 +2,11 @@
   "name": "能天使",
   "charaKey": "char_103_angel",
   "images": [
-    "https://prts.wiki/images/b/bd/立绘_能天使_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/19/立绘_能天使_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/13/立绘_能天使_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/14/立绘_能天使_skin2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/78/立绘_能天使_skin3.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/bd/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/19/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/13/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/14/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_skin2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/78/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_skin3.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -912,6 +912,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐啊，老板！派对就要开始了，业绩决战夜刚刚结束，我没有垫底~！这是您的酒和苹果派，让我们跟着嘻哈的节奏，一起炸了面前这座烟花塔吧~来，三、二、一——嘣！！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -934,6 +960,32 @@
         {
           "language": "繁体中文",
           "content": "喲，老闆！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我们被指引去往不同的方向，以您的力量和智慧，引领我们踏上一段共同的旅程吧。若您守护我们的心从未改变，我们亦会以诚实和热忱之心，为您开辟全新的道路。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

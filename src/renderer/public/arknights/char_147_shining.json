@@ -2,9 +2,9 @@
   "name": "闪灵",
   "charaKey": "char_147_shining",
   "images": [
-    "https://prts.wiki/images/e/e9/立绘_闪灵_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c7/立绘_闪灵_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/50/立绘_闪灵_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/e/e9/%E7%AB%8B%E7%BB%98_%E9%97%AA%E7%81%B5_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c7/%E7%AB%8B%E7%BB%98_%E9%97%AA%E7%81%B5_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/50/%E7%AB%8B%E7%BB%98_%E9%97%AA%E7%81%B5_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -143,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "We Sarkaz combined our inherent Arts affinity with the power of Originium to develop new healing Arts, we've been doing this for quite some time to succour those who drag themselves in the mire."
+          "content": "We Sarkaz combined our inherent Arts affinity with the power of Originium to develop new healing Arts,  we've been doing this for quite some time to succour those who drag themselves in the mire."
         },
         {
           "language": "韩文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "烟花......很好看。曾经只是埋头研究，与死亡对抗，徘徊在战场的我，现在竟能有一刻的闲暇去遥望夜空......生命的起伏，真是令人难以预料。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，今天的感覺怎麼樣？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "混乱仍旧无可阻挡地在这片大地上发生，我能做到的也只是挽救那些受伤的人。罗德岛为我带来的平静是我以往不曾感受过的，只是，博士，路还很遥远，那些最初的理想，我还要继续走下去。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

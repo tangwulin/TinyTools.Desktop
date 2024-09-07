@@ -1,7 +1,11 @@
 {
   "name": "角峰",
   "charaKey": "char_199_yak",
-  "images": [],
+  "images": [
+    "https://media.prts.wiki/6/6c/%E7%AB%8B%E7%BB%98_%E8%A7%92%E5%B3%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/47/%E7%AB%8B%E7%BB%98_%E8%A7%92%E5%B3%B0_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cb/%E7%AB%8B%E7%BB%98_%E8%A7%92%E5%B3%B0_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": [
     {
       "language": "日语",
@@ -117,7 +121,7 @@
         },
         {
           "language": "韩文",
-          "content": "무례한 이야기입니다만, 엔야 님의 몸에 일어난 일은… 정말 안타까웠습니다. 그분께는 더 밝은 미래가 기다리고 있었을 텐데…"
+          "content": "무례한 이야기일 수 있습니다만, 엔야 님께 일어난 일은…… 정말 안타까웠습니다. 그분께는 더 밝은 미래가 기다리고 있었을 텐데……"
         },
         {
           "language": "繁体中文",
@@ -195,7 +199,7 @@
         },
         {
           "language": "韩文",
-          "content": "로도스 아일랜드에선 자극적인 일이 정말 많이 생기는군요. 여기에 비하면, 히라에서의 생활은 무척 평온한 편이었습니다."
+          "content": "로도스 아일랜드의 생활은 매우 흥미롭군요. 이곳에 비하면, 히라에서의 생활은 무척 평온한 편이었습니다."
         },
         {
           "language": "繁体中文",
@@ -247,7 +251,7 @@
         },
         {
           "language": "韩文",
-          "content": "제 주인이신, 실버애쉬 님께서 당신을 높게 평가하고 있는 이유를… 저도 조금은 이해하게 된 것 같습니다."
+          "content": "제 주인이신, 실버애쉬 님께서 당신을 높게 평가하고 있는 이유를…… 저도 조금은 이해하게 된 것 같습니다. 앞으로는 저도 당신의 방패로 삼아 주십시오."
         },
         {
           "language": "繁体中文",
@@ -611,7 +615,7 @@
         },
         {
           "language": "韩文",
-          "content": "인과응보다."
+          "content": "자업자득이다."
         },
         {
           "language": "繁体中文",
@@ -906,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "身为护卫，新年这一天就更不能懈怠，危险不会因为节日而消失，相反，可能会在人们懈怠的时候出现。博士，罗德岛还算安全，但也不要掉以轻心。新年快乐。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -928,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "您好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "雪境之外的事情，其实我并不是那么地了解，我只是履行老爷交给我的职责而已。我想我的见识可能还是太少了，即便只是一个守卫者，我也应当去了解更多的事情，看得更远。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

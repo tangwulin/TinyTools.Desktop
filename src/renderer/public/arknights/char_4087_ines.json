@@ -2,8 +2,9 @@
   "name": "伊内丝",
   "charaKey": "char_4087_ines",
   "images": [
-    "https://prts.wiki/images/0/07/立绘_伊内丝_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/35/立绘_伊内丝_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/0/07/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E5%86%85%E4%B8%9D_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/35/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E5%86%85%E4%B8%9D_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2c/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E5%86%85%E4%B8%9D_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -773,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "......新年聚会？在特定的日子凑在一起，等同于给敌人制造偷袭的机会。我......算了，告诉赫德雷，我会去的。我得看着点W，以免她又做什么蠢事。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -791,6 +814,28 @@
         {
           "language": "韩文",
           "content": "아스카론이 나에게 '호위' 업무를 떠넘겼어. 당분간은 자주 만나게 될 테니까 너무 놀라지 말라고, 박사."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "你们竟然能把这么多形形色色的地雷绑在一起，还能勉勉强强地保持平衡，不让它们被引爆。在这一点上，我不得不由衷佩服。罗德岛远比我所知道的任何佣兵队伍更疯狂。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

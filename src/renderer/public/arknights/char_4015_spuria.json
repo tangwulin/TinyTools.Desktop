@@ -2,8 +2,8 @@
   "name": "空构",
   "charaKey": "char_4015_spuria",
   "images": [
-    "https://prts.wiki/images/2/2d/立绘_空构_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_空构_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/2/2d/%E7%AB%8B%E7%BB%98_%E7%A9%BA%E6%9E%84_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/24/%E7%AB%8B%E7%BB%98_%E7%A9%BA%E6%9E%84_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -126,7 +126,7 @@
         },
         {
           "language": "英文",
-          "content": "Laterano has tons of magazines covering the combat attire of other countries. Their designs seem to have drawn inspiration from a variety of sources, all of which I'd like to try out. Oh, just so you know, I'm more of an order-by-phone kind of girl. I don't go shopping unless I'm invited by some <i>very</i> specific people. So, you gonna ask me out?"
+          "content": "Laterano has tons of magazines covering the combat attire of other countries. Their designs seem to have drawn inspiration from a variety of sources, all of which I'd like to try out. Oh, just so you know, I'm more of an order-by-phone kind of girl. I don't go shopping unless I'm invited by some <i>very</i>  specific people. So, you gonna ask me out?"
         },
         {
           "language": "韩文",
@@ -773,6 +773,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "要是在拉特兰的话，这个时间我应该在协助维持秩序吧。通讯基站还挺容易被爆炸影响的，需要我的技术救急......辛苦？不会吧，所有人都在狂欢的时候，你难道还会有别的情绪？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -791,6 +813,28 @@
         {
           "language": "韩文",
           "content": "안녕, 박사. 드디어 왔구나. 네가 없는 동안, 여기엔 아무 일도 없었어."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "原本我只是想来罗德岛参观一下，学一学技术，没想到竟然留了下来，还帮你们跑了这么多外勤任务，博士，你可真是会指挥人啊。不过，跟着这艘船看了不少拉特兰没有的风景，也还算挺值得的吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

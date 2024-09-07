@@ -2,10 +2,10 @@
   "name": "雷蛇",
   "charaKey": "char_107_liskam",
   "images": [
-    "https://prts.wiki/images/3/39/立绘_雷蛇_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b5/立绘_雷蛇_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_雷蛇_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2c/立绘_雷蛇_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/39/%E7%AB%8B%E7%BB%98_%E9%9B%B7%E8%9B%87_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b5/%E7%AB%8B%E7%BB%98_%E9%9B%B7%E8%9B%87_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E9%9B%B7%E8%9B%87_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2c/%E7%AB%8B%E7%BB%98_%E9%9B%B7%E8%9B%87_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -248,7 +248,7 @@
         },
         {
           "language": "英文",
-          "content": "Franka is telling you about our time at Blacksteel again? Ahhh, for the love of... Just don't believe anything she says, okay?"
+          "content": "Franka is telling you about our time at Blacksteel again?  Ahhh, for the love of... Just don't believe anything she says, okay?"
         },
         {
           "language": "韩文",
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐！博士，芙兰卡说我之前准备的那套说辞太标准化了，没有意思，而且没人会专门提前准备新年贺词的......我也不知道还应该说些什么了，那就单纯地祝您新年快乐好了，新年快乐。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "早上好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "写好了，按照这份计划表进行下去就不会出错，在明年的今天，罗德岛和我都会取得更长足的进步。权限？对，我设置了编辑权限，不然芙兰卡就可能会把她自己的安排也加进去，一团乱麻。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

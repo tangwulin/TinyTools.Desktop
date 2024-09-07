@@ -2,9 +2,9 @@
   "name": "羽毛笔",
   "charaKey": "char_421_crow",
   "images": [
-    "https://prts.wiki/images/3/37/立绘_羽毛笔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/be/立绘_羽毛笔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/be/立绘_羽毛笔_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/37/%E7%AB%8B%E7%BB%98_%E7%BE%BD%E6%AF%9B%E7%AC%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/be/%E7%AB%8B%E7%BB%98_%E7%BE%BD%E6%AF%9B%E7%AC%94_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/be/%E7%AB%8B%E7%BB%98_%E7%BE%BD%E6%AF%9B%E7%AC%94_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -902,6 +902,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年快乐。罗德岛的新年好热闹呀，你看那边，干员们组织了好多项目哦，看上去好有意思。博士，我去玩哪个比较好呢？帮我做个决定吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -924,6 +950,32 @@
         {
           "language": "繁体中文",
           "content": "......咦，博士，你什麼時候到我面前的？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，你在这里呀，我刚刚去帮其他人布置室内装扮了，一整面墙都是我做的哦，这样的纪念日好有趣。博士现在有空吗，我想给你看看我的成果~"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "槐琥",
   "charaKey": "char_243_waaifu",
   "images": [
-    "https://prts.wiki/images/a/ae/立绘_槐琥_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ae/立绘_槐琥_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/06/立绘_槐琥_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/a/ae/%E7%AB%8B%E7%BB%98_%E6%A7%90%E7%90%A5_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ae/%E7%AB%8B%E7%BB%98_%E6%A7%90%E7%90%A5_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/06/%E7%AB%8B%E7%BB%98_%E6%A7%90%E7%90%A5_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -22,6 +22,10 @@
     {
       "language": "韩语",
       "base": "voice_kr/char_243_waaifu"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_243_waaifu"
     }
   ],
   "voiceList": [
@@ -39,7 +43,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, where are you going? Shouldn't you be working? Lunch? Well then, I'm coming along. There's a few things I want to buy, and I can protect you too."
+          "content": "Doctor, where are you going? Shouldn't you be working? Lunch? Well then, I'm coming along. There's a few things I want to buy, and I can also keep a lookout for you."
         },
         {
           "language": "韩文",
@@ -69,7 +73,7 @@
         },
         {
           "language": "英文",
-          "content": "Sorry, Doctor, Rhodes Island is just a part-time job for me. I have to study hard to make sure I have a nice, normal future ahead of me. I am committed to keeping in touch with everyday society."
+          "content": "Sorry, Doctor, Rhodes Island is just a part-time job for me. I have to study hard to make sure I have a nice, normal future ahead of me. If you plan to have me aboard and on 24-hour call… Well, I'll have to ask you reconsider that."
         },
         {
           "language": "韩文",
@@ -129,7 +133,7 @@
         },
         {
           "language": "英文",
-          "content": "Did I ever tell you about my other job? No? Well, I won't. Don't look at me like that, Doctor. There's just not much to say. If my other office worked a tenth as hard as Rhodes Island does, they'd monopolize Lungmen's entire investigations industry."
+          "content": "Did I ever tell you about my other job? No? Well, I won't. Don't look at me like that, Doctor. There's just not much to say. If my other office worked a tenth as hard as Rhodes Island does, they'd probably have become the only detective agency in Lungmen."
         },
         {
           "language": "韩文",
@@ -159,7 +163,7 @@
         },
         {
           "language": "英文",
-          "content": "You wonder where I learned martial arts? Well, I have my nasty old dad and his weird education to thank for that. Not that I resent kung fu. A hero must uphold justice. Martial arts are a part of me."
+          "content": "You wonder where I learned martial arts? Well, I have my old codger and his weird education to thank for that. Not that I resent kung fu. Martial arts should always be a part of me if I hope to uphold justice."
         },
         {
           "language": "韩文",
@@ -189,7 +193,7 @@
         },
         {
           "language": "英文",
-          "content": "Just like the human heart, martial arts have yin and yang, right and wrong. To right those wrongs, to defeat evil, to counter bad kung fu, these are all second nature to me. The world is dark, and someone must stand for justice."
+          "content": "Just like how people value morality, martial arts have yin and yang, right and wrong. To right those wrongs, to defeat evil, to counter bad kung fu, these are all second nature to me. The world is dark, and someone must stand for justice."
         },
         {
           "language": "韩文",
@@ -219,7 +223,7 @@
         },
         {
           "language": "英文",
-          "content": "You think you just saw me? In downtown Lungmen? That may have been me. I just finished class. Hm? You saw me beat down some thugs who were harassing a passerby? And then slipped away before the police arrived? Must have been someone else. Heh heh. Definitely. That's enough about that."
+          "content": "You think you just saw me? In downtown Lungmen? That may have been me. I just finished class. Hm? You saw me beat down some thugs who were harassing a passerby? And then slipped away before the police arrived? Must have been someone else. Heh heh. Definitely. You were just seeing things, that's it."
         },
         {
           "language": "韩文",
@@ -249,7 +253,7 @@
         },
         {
           "language": "英文",
-          "content": "My rotten dad said he had to go find the true meaning of kung fu. I still don't know where he is. Please! What year does he think it is? Find some common sense and learn some responsibility before you get yourself killed. But at least I haven't forgotten what he taught me: 'Martial arts have martial virtue, humans have human kindness.'"
+          "content": "My rotten dad said he had to go find the true meaning of kung fu before he went off, and I still don't know where he is. Please! What year does he think it is? Find some common sense and learn some responsibility before you get yourself killed. But at least I haven't forgotten what he taught me: 'Martial arts have martial virtue, humans have human kindness.'"
         },
         {
           "language": "韩文",
@@ -279,7 +283,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, did any mail come for me? It did? Great. These are my grades... my very important grades! It's been straight A's for me, so far. If I don't work hard enough, I'll end up regretting all the things I wasn't strong enough to do."
+          "content": "Doctor, did any mail come for me? It did? Great. They included my grade report inside... I need them for a lot of things. It's been straight A's for me, so far. If I don't work hard enough, I'll end up regretting all the things I wasn't strong enough to do."
         },
         {
           "language": "韩文",
@@ -339,7 +343,7 @@
         },
         {
           "language": "英文",
-          "content": "Is this Rhodes Island? Nice to meet you. I'm Waai Fu, your new part-timer. Please don't go easy on me. I can handle anything you ask of me."
+          "content": "Is this Rhodes Island? Nice to meet you. I'm Waai Fu, your new part-timer. Please don't go easy on me. I can handle anything you ask of me. Yes, just give me the word."
         },
         {
           "language": "韩文",
@@ -399,7 +403,7 @@
         },
         {
           "language": "英文",
-          "content": "Thank you very much. I won't let you down, Doctor."
+          "content": "Thank you very much, Doctor. You placed your trust in me, and I won't let you down."
         },
         {
           "language": "韩文",
@@ -459,7 +463,7 @@
         },
         {
           "language": "英文",
-          "content": "Is there evil to fight?"
+          "content": "More evil to fight against?"
         },
         {
           "language": "韩文",
@@ -489,7 +493,7 @@
         },
         {
           "language": "英文",
-          "content": "I don't have much experience, but I won't turn down the responsibility."
+          "content": "I have much to learn, but I won't turn down the responsibility."
         },
         {
           "language": "韩文",
@@ -579,7 +583,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey."
+          "content": "Yes!"
         },
         {
           "language": "韩文",
@@ -639,7 +643,7 @@
         },
         {
           "language": "英文",
-          "content": "No other choice."
+          "content": "A last resort."
         },
         {
           "language": "韩文",
@@ -699,7 +703,7 @@
         },
         {
           "language": "英文",
-          "content": "You have turned your backs on society!"
+          "content": "You have crossed the line too far!"
         },
         {
           "language": "韩文",
@@ -759,7 +763,7 @@
         },
         {
           "language": "英文",
-          "content": "Behold, the power of the Song Do Bart Cham style!"
+          "content": "Don't blink! Song Do Bart Cham style!"
         },
         {
           "language": "韩文",
@@ -969,7 +973,7 @@
         },
         {
           "language": "英文",
-          "content": "An ambush...?! Doctor, don't sneak up on me like that. You'll end up in Medical."
+          "content": "An ambush...?! ...Doctor, don't you ever sneak up on me like that again. Now let's get you to Medical first."
         },
         {
           "language": "韩文",
@@ -999,7 +1003,7 @@
         },
         {
           "language": "英文",
-          "content": "You want to go for a walk? I'll go with you. You'll be safe with me."
+          "content": "You want to go for a walk? Sure, let's get going. It's safer to have me with you."
         },
         {
           "language": "韩文",
@@ -1046,6 +1050,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，节日快乐。我，我只是在散步。很久没有吃过吽做的菜了，结果一不小心......抵抗诱惑的确需要强大的意志，我还需要更多锻炼......博士，趁时间还不太晚，我们一起去锻炼吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "博士，节日快乐。我，我只是在散步而已。很久冇尝过吽的手艺了，结果一唔觉意......抵抗诱惑确实是要有强大的意志，我还需要继续锻炼......博士，趁时间还不太晚，一齐去锻炼吧！"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1072,6 +1106,36 @@
         {
           "language": "中文-方言",
           "content": "一唔一齐饮茶啊，博士？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛的工作，对我来说是一次宝贵的实习经历。我学到了很多。但是，我认为自己依然需要更多历练，才能决定自己是否应该留在这里。无论将来怎样，我相信，我和博士都是在为正义而战的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "罗德岛的工作，对我来说是一次宝贵的实习经历。我学到了好多。但是，我认为自己需要更多历练，才能决定自己系唔系应该留在这里。无论将来会怎样，我相信，我同博士都是为了正义而战。"
         }
       ]
     }

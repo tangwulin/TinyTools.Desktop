@@ -2,8 +2,8 @@
   "name": "芙蓉",
   "charaKey": "char_120_hibisc",
   "images": [
-    "https://prts.wiki/images/b/b9/立绘_芙蓉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9f/立绘_芙蓉_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/b9/%E7%AB%8B%E7%BB%98_%E8%8A%99%E8%93%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9f/%E7%AB%8B%E7%BB%98_%E8%8A%99%E8%93%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -805,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新的健康日程表！放心啦放心啦，今天面对这样一桌美味的大餐，我特别准许博士可以吃——一口油炸食物！最多啦！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -827,6 +853,32 @@
         {
           "language": "繁体中文",
           "content": "博士，要不要嘗嘗這個？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "原来今天有庆典啊，我忙得都忘了......不过，只要还有一个伤员，医生就不会休息。何况我还要成为更厉害的医师，我继续去忙了！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

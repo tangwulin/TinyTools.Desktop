@@ -2,8 +2,8 @@
   "name": "斑点",
   "charaKey": "char_284_spot",
   "images": [
-    "https://prts.wiki/images/8/8a/立绘_斑点_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e9/立绘_斑点_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/8a/%E7%AB%8B%E7%BB%98_%E6%96%91%E7%82%B9_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e9/%E7%AB%8B%E7%BB%98_%E6%96%91%E7%82%B9_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -857,6 +857,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新的一年开始了。你要是指望时间能改变些什么，我会劝你别想了。人的改变要付出数十倍于日常的努力，如果做得到，就证明给大家看看吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -879,6 +905,32 @@
         {
           "language": "繁体中文",
           "content": "博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "像我这种人，实在是没法说出“发自内心地认同罗德岛的理念”这种话。保护A6这几个麻烦的家伙，就是我举盾的全部理由了。博士，让我们都适当努力，尽量在麻烦里活下来吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

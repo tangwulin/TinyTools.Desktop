@@ -2,8 +2,8 @@
   "name": "刻刀",
   "charaKey": "char_301_cutter",
   "images": [
-    "https://prts.wiki/images/5/51/立绘_刻刀_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e8/立绘_刻刀_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/51/%E7%AB%8B%E7%BB%98_%E5%88%BB%E5%88%80_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e8/%E7%AB%8B%E7%BB%98_%E5%88%BB%E5%88%80_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -905,6 +905,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新的一年，希望你健康。嗯，要好好过每一天，还要多多晒太阳，总之，在我力所能及的范围内，我会继续关注你的。新年快乐，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -927,6 +953,32 @@
         {
           "language": "繁体中文",
           "content": "啊，博士你來了。今天有哪些工作？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "想要独自做一个维持准则的佣兵，其实还是很困难的。就像没有参照物的话，舰船也会很容易迷失方向。但是在罗德岛，我可以很安心。我相信自己在做正确的事情。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -1,7 +1,11 @@
 {
   "name": "吽",
   "charaKey": "char_226_hmau",
-  "images": [],
+  "images": [
+    "https://media.prts.wiki/e/e4/%E7%AB%8B%E7%BB%98_%E5%90%BD_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e6/%E7%AB%8B%E7%BB%98_%E5%90%BD_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a8/%E7%AB%8B%E7%BB%98_%E5%90%BD_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": [
     {
       "language": "日语",
@@ -1046,6 +1050,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老板，新年好啊！我心情很好？哈哈，那当然，大家聚在一起高高兴兴的，这么喜庆的事，哪能不高兴？这么说来，老板您是不是也能好好歇上一天了？今天我下厨，晚饭可以过来和我们一起吃啊！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "老板，新年好啊！我心情好好？哈哈，那当然，大家聚在一起开开心心，这么喜庆的事，哪有可能不高兴？话说回来，老板你也可以好好休息一天了是吧？今天我下厨，晚上可以和我们一起吃的！"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1072,6 +1106,36 @@
         {
           "language": "中文-方言",
           "content": "老板，早上好啊。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老板，过去一年也让您费心了，阿比上一年也踏实了不少，他能意识到自己究竟要走什么路。槐琥？槐琥早就不需要我怎么担心了。不过，罗德岛好像要办晚会的样子，有没有用得到我的地方？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "老板，过去一年辛苦你了，阿确实踏实过上一年不少，他也算意识到自己要走一条怎样的路了。槐琥？槐琥一早就不用我担心了。不过，罗德岛好像要办晚会，有冇用得到我的地方？"
         }
       ]
     }

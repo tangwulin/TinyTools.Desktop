@@ -2,7 +2,8 @@
   "name": "U-Official",
   "charaKey": "char_4091_ulika",
   "images": [
-    "https://prts.wiki/images/7/74/立绘_U-Official_1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/74/%E7%AB%8B%E7%BB%98_U-Official_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/39/%E7%AB%8B%E7%BB%98_U-Official_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -33,7 +34,15 @@
         },
         {
           "language": "日文",
-          "content": "ここで配信してもいいですか？配信中にたくさんの人に囲まれると、ちょっと怖いから、ドクターの執務室なら安心です、それに今は助手もやってますしね、はは。"
+          "content": "ここで配信してもいいですか？配信中にたくさんの人に囲まれるとちょっと怖いから、ドクターの執務室なら安心です……それに、今は助手もやってますしね、えへへ。"
+        },
+        {
+          "language": "英文",
+          "content": "Can I go live in here? I'm not really comfortable having a whole crowd standing around watching me stream, so I'd feel way more at ease in your office... Besides, I'm your assistant now anyway, heehee."
+        },
+        {
+          "language": "韩文",
+          "content": "여기서 방송을 켜도 될까요? 전 방송할 때 사람들한테 구경당하면 긴장하게 되거든요. 하지만 박사님의 집무실이라면 안심도 되고…… 게다가 지금 전 박사님의 어시스턴트이기도 하잖아요, 헤헤."
         }
       ]
     },
@@ -47,7 +56,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクター、今ふと思ったんですけど、あの放送事故も悪いことばかりじゃなかったです、こんなにたくさんの、私に手を差し伸べてくれる人に逢いましたし、それに、ドクターも、やばい配信消えてない、リスナーのみんなもだよ、みんなが応援してくれたから、私は一番どん底の時期を乗り越えられたんだから。"
+          "content": "ドクター、今ふと思ったんですけど、あの放送事故も悪いことばかりじゃなかったです。こんなにたくさんの、私に手を差し伸べてくれる人に会えましたし、それにドクターも――やばい、配信切れてない――リスナーのみんなもだよ！みんなが応援してくれたから、私はいっちばんどん底の時期を乗り越えられたんだから！"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, I got to thinking that the stream incident might not have been a totally bad thing. After all, I got to know so many nice people ready to lend a helping hand, and you too... Shoot! I forgot to turn off my mic–– Yes, and all of you as well! With your support, I'll break out of this funk!"
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 문득 저번 방송사고도 마냥 나쁜 일만은 아니었던 것 같다는 생각이 들었어요. 제게 손을 내밀어 주는 분들을 이렇게나 많이 만날 수 있었고, 게다가 박사님도! ……망했다, 마이크 끄는 걸 깜빡했잖아! 물론, 시청자 여러분도 마찬가지야! 여러분의 응원 덕분에, 슬럼프를 극복할 수 있었다고!"
         }
       ]
     },
@@ -61,7 +78,15 @@
         },
         {
           "language": "日文",
-          "content": "配信終わった、たっぷりストレス発散するぞ、ゲーム、ドクター、今の配信全然見てなかったんですね、コメントでずっと下手くそって煽られていたんですよ、今週いっぱいゲーム何で触りたくないくらいなんですから、だからこそ普段の練習が必要、あれ、確かにそうかも。"
+          "content": "配信終わった～、たっぷりストレス発散するぞ――ゲーム？ドクター、今の配信全然見てなかったんですね。コメントでずーっと、下手くそって煽られていたんですよ。今週いっぱいゲームなんて触りたくもないぐらいなんですから……だからこそ普段の練習が必要？あれ……確かにそうかも？"
+        },
+        {
+          "language": "英文",
+          "content": "I need to decompress after that stream... Games? Doctor, were you even watching my stream? Chat wouldn't stop making fun of how much I suck. I don't wanna play another game this whole week... And that's why I need to practice every day? Uhh... I guess you have a point there?"
+        },
+        {
+          "language": "韩文",
+          "content": "방송 끝~ 이제 제대로 스트레스 풀어야지. 게임이요? 박사님, 방금 방송 안 보셨구나? 채팅에서 못한다고 얼마나 놀림받았는데요. 이번 주는 게임의 게 자도 듣고 싶지 않을 정도라고요. 실력이 안 좋으니까 평소에 더 연습이 필요한 거라고요? ……어? 그것도 그럴지도?"
         }
       ]
     },
@@ -75,7 +100,15 @@
         },
         {
           "language": "日文",
-          "content": "凹むなぁ、どうして言い間違いの切り抜きがもとの動画を全部足したやつより回ってるの、ったく、今どきのリスナーって本当にわけわからない、見てドクター、私の言い間違いを編集で繋げただけなんですよ、何がそんなに面白いのか、待って、今笑いましたね、絶対に笑ったよね。"
+          "content": "へこむなぁ、どうして言い間違いの切り抜きが、元の動画を全部足したやつより回ってるの？ったく今どきのリスナーって本当に訳分からない……見てドクター、私の言い間違いを編集で繋げただけなんですよ、なにがそんなに面白いのか――待って、今笑いましたね。絶対に笑ったよね！"
+        },
+        {
+          "language": "英文",
+          "content": "Awwgh, it's so frustrating! How come a clip of me tripping over my words gets so many more views than all my VODs combined? I really don't understand viewers these days... Look, Doctor, what's so funny about this compilation of my brain-far—you just laughed, right? You totally laughed just now!"
+        },
+        {
+          "language": "韩文",
+          "content": "어째서 제 말실수 모음 영상의 조회수가 제 다른 영상의 조회수를 다 합친 것보다 높은 걸까요? 너무해요. 요즘 시청자들은 정말 이해하기 어렵다니까요…… 보세요, 박사님. 제 말실수 클립들을 편집한 영상일 뿐인데 이게 뭐가 그렇게 재밌다고…… 잠깐, 지금 웃으신 거죠! 방금 분명히 웃었잖아요!"
         }
       ]
     },
@@ -89,7 +122,15 @@
         },
         {
           "language": "日文",
-          "content": "初めて一人で司会した番組で、早速表彰されてたんですよ、ラキーでしょう、嘘だと思ってます、ほら、ここ見てください、地震発生当時、当該社員は報道スタジオに残り、番組の終了まで職務を全うした、よって、ここに表彰する、初司会からトラブルは、むしろ運が悪い、えっと、うははは、、"
+          "content": "初めて一人で司会した番組で、さっそく表彰されてたんですよ。ラッキーでしょう。嘘だと思ってます？ほら、ここ見てください。「地震発生当時、当該社員は報道スタジオに残り、番組の終了まで職務を全うした。よって、ここに表彰する」！初司会からトラブルはむしろ運が悪い？えっと……あはは。"
+        },
+        {
+          "language": "英文",
+          "content": "I won an award the first time I did a solo show. Pretty lucky, huh? What, don't believe me? Look right here, 'Awarded to the employee who stayed put until the end of the show during an earthquake'! Getting hit by an earthquake hit during your debut sounds unlucky? Ah-Ahaha..."
+        },
+        {
+          "language": "韩文",
+          "content": "처음 단독 MC를 맡은 프로그램에서 상을 받았었어요. 운이 좋았죠. 지금 못 믿으시는 거예요? 여기요, 이걸 보세요. “지진이 발생하였음에도, 해당 사원은 스튜디오에 남아 방송이 끝날 때까지 자신의 본분을 다하였기에, 이 상을 표창한다.”라고 쓰여있잖아요. 첫 방송에 지진이 일어난 건 운이 없는 거 아니냐고요? 그건 뭐, 음…… 하하하……"
         }
       ]
     },
@@ -103,7 +144,15 @@
         },
         {
           "language": "日文",
-          "content": "前の私は、毎日一生懸命仕事をしていました、そうすると給料が増えて、良いものもたくさん買えるから、でも、高いコスメでくまけしする時、たまに涙が出そうになるんです、まあ、涙といえば、テレビ局から解雇された時は、もっと泣きたくなりましたけどね。"
+          "content": "前の私は毎日一生懸命仕事をしていました。そうするとお給料が増えて、いいものもたくさん買えるから。でも、高いコスメでくま消しをする時、たまに涙が出そうになるんです……まっ、涙と言えば、テレビ局から解雇された時はもっと泣きたくなりましたけどね。"
+        },
+        {
+          "language": "英文",
+          "content": "I used to work my butt off every day so I could make more money, then shop more and shop better. But you know, when I use fancy concealer to hide my eye bags, I sometimes wanna cry... Oh, uh, s-speaking of crying, getting fired from the TV station made me want to cry a lot more."
+        },
+        {
+          "language": "韩文",
+          "content": "예전에 전 매일매일 열심히 일만 하면서 지냈어요. 열심히 일을 해야 월급도 오르고 좋은 물건도 살 수 있으니까요. 하지만 비싼 화장품으로 다크서클을 가리다 보면 가끔 눈물이 나더라고요…… 뭐, 눈물 얘기가 나와서 하는 말인데, 방송국에서 해고당했을 때만큼 울고 싶었던 적은 없더라고요."
         }
       ]
     },
@@ -117,7 +166,15 @@
         },
         {
           "language": "日文",
-          "content": "リスナーを前にした時、私が持てる武器って、カメラの角度だけなんです、でも、ドクターは、あなたはただ一人、画面を通さないで、私の配信を見てくれる人なので、誰より特別で、唯一無二のスナーです、うんふん、もっと収益の方でも貢献してくれたらいようことないんですけどね。"
+          "content": "リスナーを前にした時、私が持てる武器ってカメラの角度だけなんです。でもドクターは……あなたはただ一人、画面を通さないで私の配信を見てくれる人なので、誰より特別で、唯一無二のリスナーです――こほん、もっと収益の方でも貢献してくれたら言うことないんですけどね。"
+        },
+        {
+          "language": "英文",
+          "content": "When I get up there to face my audience, the only advantage I have is the angle of my camera. But you, Doctor... You're the only one who watches my stream in person. You're my most special, and most unique audience. Ahem, it would be even nicer if you tossed a little dono my way~"
+        },
+        {
+          "language": "韩文",
+          "content": "시청자들 앞에서 제가 가진 가장 강력한 무기는 바로 카메라 앵글이에요. 하지만 박사님은…… 화면을 통하지 않고 제 방송을 지켜봐 주시는 유일한 분이라, 제겐 박사님이 가장 특별하고 유일무이한 시청자세요. 크흠, 그러니 수익 부분에서도 더 많은 기여를 해 주시면 어떨까 싶은데……"
         }
       ]
     },
@@ -131,7 +188,15 @@
         },
         {
           "language": "日文",
-          "content": "ハロー、ドクターを探しに来たの、全然邪魔なんでしてないよ、本人は寝ちゃってって、私はドクターのインスタントラーメンをかじってるだけだから、あなたも一ついる。"
+          "content": "はろ～、ドクターを探しに来たの？……全然邪魔なんてしてないよ、本人は寝ちゃってて、私はドクターのインスタントラーメンを齧ってるだけだから。あなたも一つ要る？"
+        },
+        {
+          "language": "英文",
+          "content": "Hello. You looking for the Doctor? What? No, no bother at all. The Doctor's fast asleep, and I'm just eating some dry instant noodles. Want a chunk?"
+        },
+        {
+          "language": "韩文",
+          "content": "헬로~ 박사님을 만나러 오셨어요? ……방해라니요, 전혀요. 박사님은 주무시고 계시고, 전 그런 박사님의 라면을 먹고 있었을 뿐인걸요. 하나 드실래요?"
         }
       ]
     },
@@ -145,7 +210,15 @@
         },
         {
           "language": "日文",
-          "content": "やほー、リスナーのみんな、今日も元気かな、みんなのユリ、、 ととと違う違うロドスのおベレータ、ユー·オフィシャル、ただいま着任しました、ドクター！"
+          "content": "やほ～、リスナーのみんな今日も元気かな？みんなのユーリ……っとと、違う違う！ロドスのオペレーター、U-Official、ただいま着任しましたドクター！"
+        },
+        {
+          "language": "英文",
+          "content": "Hello everyone, this is your omnipotent streamer, Eure—Errrr, sorry, scratch that. Rhodes Island operator, U-official! Reporting in, Doctor!"
+        },
+        {
+          "language": "韩文",
+          "content": "야호~ 안녕 시청자 여러분! 난 여러분의 유레…… 가 아니라! 로도스 아일랜드의 오퍼레이터 U-Official, 박사님께 인사드립니다!"
         }
       ]
     },
@@ -160,6 +233,14 @@
         {
           "language": "日文",
           "content": "ドクター、正直言うと、こういう映像をいくら見たところで、私に喧嘩は無理です。"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, I'm not gonna sugarcoat it. No matter how many vids like this I watch, I won't learn how to fight."
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 솔직히 말하면, 이 영상들 아무리 봐도 제가 싸울 수 있을 것 같진 않아요."
         }
       ]
     },
@@ -173,7 +254,15 @@
         },
         {
           "language": "日文",
-          "content": "戦場に？どれかです？私？これってきっと夢だよね。"
+          "content": "戦場に？誰がです？私？これってきっと夢だよね。"
+        },
+        {
+          "language": "英文",
+          "content": "Go to war? Me?! This <i>has</i> to be a dream…"
+        },
+        {
+          "language": "韩文",
+          "content": "전장에요? 누가요? 제가요? 내가 아직 꿈을 꾸고 있나?"
         }
       ]
     },
@@ -187,7 +276,15 @@
         },
         {
           "language": "日文",
-          "content": "一小隊の指揮をするの、おかしな夢だなぁ、はは。"
+          "content": "一小隊の指揮をするの？おかしな夢だなぁ、はは。"
+        },
+        {
+          "language": "英文",
+          "content": "And you're giving me command of the squad to boot? This dream sure is funny, haha..."
+        },
+        {
+          "language": "韩文",
+          "content": "저한테 지휘도 맡기신다고요? 꿈이 참 희한하네, 하하."
         }
       ]
     },
@@ -202,6 +299,14 @@
         {
           "language": "日文",
           "content": "どうせ夢だし、みんなのために敵をまとめて片付けちゃうよ！"
+        },
+        {
+          "language": "英文",
+          "content": "Well, since this is a dream anyway, I will mop up all the enemies for you!"
+        },
+        {
+          "language": "韩文",
+          "content": "어차피 꿈이니까, 모두를 도와 적들을 한꺼번에 쓸어버리겠어!"
         }
       ]
     },
@@ -215,7 +320,15 @@
         },
         {
           "language": "日文",
-          "content": "こっちこないで、私はとても強いんだから、うおお、アチョー、ほら！怖いでしょ？"
+          "content": "こっち来ないで、私はとっても強いんだから！ふっ、はっ！ほら、怖いでしょ？"
+        },
+        {
+          "language": "英文",
+          "content": "Bow down before the true master! Wooooo-wata! Scared now?"
+        },
+        {
+          "language": "韩文",
+          "content": "이쪽으로 오지 마! 나 엄청 강하거든?! 슉, 슈슉! 어때, 완전 무섭지?"
         }
       ]
     },
@@ -229,7 +342,15 @@
         },
         {
           "language": "日文",
-          "content": "スーパーコメで指示が欲しいなぁ？"
+          "content": "スパコメで指示が欲しいな～。"
+        },
+        {
+          "language": "英文",
+          "content": "Heehee, mind sending me the instructions... in a superchat?"
+        },
+        {
+          "language": "韩文",
+          "content": "이왕이면 슈퍼챗으로 지시해 줬으면 좋겠는데~"
         }
       ]
     },
@@ -243,7 +364,15 @@
         },
         {
           "language": "日文",
-          "content": "ライバーの準備や万端、いつでも配信できます！"
+          "content": "ライバーの準備は万端、いつでも配信できます！"
+        },
+        {
+          "language": "英文",
+          "content": "Your streamer is in perfect condition and ready to go live!"
+        },
+        {
+          "language": "韩文",
+          "content": "라이브 컨디션 최고야. 언제든 방송 시작할 수 있어!"
         }
       ]
     },
@@ -257,7 +386,15 @@
         },
         {
           "language": "日文",
-          "content": "深呼吸して、気持ちを落ち着けて..."
+          "content": "深呼吸して……気持ちを落ち着けて……"
+        },
+        {
+          "language": "英文",
+          "content": "Deep breaths... stay calm…"
+        },
+        {
+          "language": "韩文",
+          "content": "심호흡하고…… 평정심을 유지하는 거야……"
         }
       ]
     },
@@ -271,7 +408,15 @@
         },
         {
           "language": "日文",
-          "content": "えっ、配信だと思えばいいんですか？やってみます！"
+          "content": "え？配信だと思えばいいんですか？やってみます！"
+        },
+        {
+          "language": "英文",
+          "content": "Just treat it like a regular stream? I'll try!"
+        },
+        {
+          "language": "韩文",
+          "content": "네? 방송이라고 생각하라고요? 한번 해 볼게요!"
         }
       ]
     },
@@ -285,7 +430,15 @@
         },
         {
           "language": "日文",
-          "content": "マイクテストでーす！みんな聞こえる？"
+          "content": "マイクテストでーす。みんな～、聞こえる？"
+        },
+        {
+          "language": "英文",
+          "content": "Ah, ah, mic check! Can everyone hear me?"
+        },
+        {
+          "language": "韩文",
+          "content": "아아, 마이크 테스트. 여러분~ 잘 들려?"
         }
       ]
     },
@@ -300,6 +453,14 @@
         {
           "language": "日文",
           "content": "言いたいことがあったら、コメントで教えて！"
+        },
+        {
+          "language": "英文",
+          "content": "Let me know what you think in chat!"
+        },
+        {
+          "language": "韩文",
+          "content": "좋은 아이디어 있으면 채팅창으로 알려 줘!"
         }
       ]
     },
@@ -313,7 +474,15 @@
         },
         {
           "language": "日文",
-          "content": "次はコメント読みだよ！"
+          "content": "次はコメント読みだよ～！"
+        },
+        {
+          "language": "英文",
+          "content": "Next up, time to read the comments!"
+        },
+        {
+          "language": "韩文",
+          "content": "이번엔 댓글을 읽어 볼게~!"
         }
       ]
     },
@@ -327,7 +496,15 @@
         },
         {
           "language": "日文",
-          "content": "これかいた人、やりすぎだからブロックするよ、配信出禁！"
+          "content": "これ書いた人、やりすぎだからブロックするよ。配信出禁！"
+        },
+        {
+          "language": "英文",
+          "content": "Dear viewer, for your aggressive behavior, you've been permabaned from the channel! Oh no!"
+        },
+        {
+          "language": "韩文",
+          "content": "이 댓글은 선을 너무 넘었잖아, 밴이야!"
         }
       ]
     },
@@ -341,7 +518,15 @@
         },
         {
           "language": "日文",
-          "content": "戦いは終わったのに、まだ夢から醒めないなぁ、ええ、夢じゃないですか、でも私、無傷ですよ？！"
+          "content": "戦いは終わったのに、まだ夢から覚めないなぁ……ええっ、夢じゃないんですか？でも私、無傷ですよ！？"
+        },
+        {
+          "language": "英文",
+          "content": "The battle's over, so why haven't I woken up from my dream yet... What? This isn't a dream? Then, how come I'm not hurt at all?!"
+        },
+        {
+          "language": "韩文",
+          "content": "전투가 끝났는데 왜 아직도 꿈속이지…… 앗, 꿈이 아니라고요? 그렇지만 저, 상처 하나 없이 멀쩡한데요?!"
         }
       ]
     },
@@ -355,7 +540,15 @@
         },
         {
           "language": "日文",
-          "content": "ふああ、やっと終わった、ゆっくり寝るぞ、もう戦場に行くなんて変な夢みませんように。"
+          "content": "ふぅ～……やっと終わったぁ、ゆっくり寝るぞ。もう戦場に行くなんて変な夢見ませんように……"
+        },
+        {
+          "language": "英文",
+          "content": "Phew, it's finally over... Time to get a good night's sleep. I hope I don't have any more weird dreams about war."
+        },
+        {
+          "language": "韩文",
+          "content": "휴~ 드디어 끝났다…… 이제 마음 놓고 푹 자야지. 전장에 가는 꿈 같은 건 이젠 사양이야……"
         }
       ]
     },
@@ -369,7 +562,15 @@
         },
         {
           "language": "日文",
-          "content": "逃げてた人たち、周りに私の配信をいっぱい進めてね、よろしく！"
+          "content": "逃げてった人たち～、周りに私の配信をいっぱい勧めてね、よろしく！"
+        },
+        {
+          "language": "英文",
+          "content": "Hey you guys running off there, don't forget to tell your friends and family about me. Thank you!"
+        },
+        {
+          "language": "韩文",
+          "content": "지금 도망치는 여러분~ 주변에 내 방송 많이 많이 추천해 줘, 부탁할게!"
         }
       ]
     },
@@ -383,7 +584,15 @@
         },
         {
           "language": "日文",
-          "content": "えうう、これもう放送事故だよね..."
+          "content": "うぅ～、これもう放送事故だよね……"
+        },
+        {
+          "language": "英文",
+          "content": "Waahhh… this is the worst ending to a stream I could've imagined…"
+        },
+        {
+          "language": "韩文",
+          "content": "으으…… 이건 방송사고인데……"
         }
       ]
     },
@@ -397,7 +606,15 @@
         },
         {
           "language": "日文",
-          "content": "ここ、次の配信で背景に使ってもいいですか、駄目、わかりましたよ、他の場所でやりまーす。"
+          "content": "ここ、次の配信で背景に使ってもいいですか？だめ？分かりましたよ、他の場所でやります。"
+        },
+        {
+          "language": "英文",
+          "content": "Can I use this place as the backdrop for my next stream? No? Fine, I'll try someplace else then."
+        },
+        {
+          "language": "韩文",
+          "content": "다음 방송 여기에서 해도 괜찮을까요? 안 된다고요? 알겠어요, 다른 곳에서 할게요."
         }
       ]
     },
@@ -411,7 +628,15 @@
         },
         {
           "language": "日文",
-          "content": "驚かせないでくださいよ、うおー、敵に穴に落とされちゃった、ライフ一個でクリアしないといけなくなるなんて..."
+          "content": "驚かせないでくださいよ――敵に穴に落とされちゃった、ライフ一個でクリアしないといけなくなるなんて……"
+        },
+        {
+          "language": "英文",
+          "content": "Don't jumpscare me like that! A monster just pushed me into the pit, now I have to do a 'no death run'…"
+        },
+        {
+          "language": "韩文",
+          "content": "갑자기 놀래키지 마세요! 아, 박사님 때문에 구멍으로 떨어졌잖아요. 이제 목숨 하나로 클리어해야 된단 말이에요……"
         }
       ]
     },
@@ -425,7 +650,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクター、配信終わりましたよ、甲板へ散歩にでも行きますか？"
+          "content": "ドクター、配信終わりましたよ。甲板へ散歩にでも行きますか？"
+        },
+        {
+          "language": "英文",
+          "content": "I'm done streaming, Doctor. Wanna take a walk around the deck?"
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 방송도 끝났는데 같이 갑판에서 산책이나 하실래요?"
         }
       ]
     },
@@ -440,6 +673,36 @@
         {
           "language": "日文",
           "content": "アークナイツ。"
+        },
+        {
+          "language": "英文",
+          "content": "Arknights."
+        },
+        {
+          "language": "韩文",
+          "content": "명일방주."
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年特别直播，用味觉巡游这片大地，各国美味佳肴——口味的泡面，大盘点！首先是这包谢拉格红烩味的——在、在线人数下降了？！大家别走啊，我开玩笑的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     },
@@ -453,7 +716,37 @@
         },
         {
           "language": "日文",
-          "content": "ドクター、いつも執務室で配信させてくれて、ありがとうね。"
+          "content": "ドクター、いつも執務室で配信させてくれてありがとうね。"
+        },
+        {
+          "language": "英文",
+          "content": "Thanks for letting me stream from your office, Doctor."
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 집무실에서 방송하는 거 허락해 주셔서 정말 감사해요!"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在多索雷斯的时候，电视台也开年会，可我还是来了罗德岛才知道，原来年会也可以这么放松......嗯？是在对我说话？要我去唱首歌？好呀，不瞒你们说，我的音乐品味其实蛮怀旧的哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

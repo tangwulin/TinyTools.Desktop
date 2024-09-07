@@ -2,8 +2,8 @@
   "name": "泡泡",
   "charaKey": "char_381_bubble",
   "images": [
-    "https://prts.wiki/images/3/39/立绘_泡泡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/49/立绘_泡泡_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/39/%E7%AB%8B%E7%BB%98_%E6%B3%A1%E6%B3%A1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/49/%E7%AB%8B%E7%BB%98_%E6%B3%A1%E6%B3%A1_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -905,6 +905,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年！假期！没有作业！好，今天就去挑战小刻！博士，你也不要总是坐着啦，要不要来和我们一起玩对对碰的游戏？很有意思的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -927,6 +953,32 @@
         {
           "language": "繁体中文",
           "content": "博士！"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我要在罗德岛好好锻炼！首先要变得比小刻厉害，接着超过嘉维尔，最终超过火神大姐！然后就可以回家，成为和爸爸一样厉害的勇士了！......博士，到时候，你会想我吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

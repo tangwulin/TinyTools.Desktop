@@ -2,10 +2,10 @@
   "name": "凛冬",
   "charaKey": "char_115_headbr",
   "images": [
-    "https://prts.wiki/images/6/6e/立绘_凛冬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2c/立绘_凛冬_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0a/立绘_凛冬_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bf/立绘_凛冬_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/6e/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2c/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0a/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/bf/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -915,6 +915,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哦，早上好。今天好吵啊。真是，明明都是大人了，怎么还会因为新年这么兴奋......喂，你怎么还坐在这，难道打算在新年的第一天坐在这里度过吗？快跟我出去。我专门买了好多烟花呢。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -937,6 +963,32 @@
         {
           "language": "繁体中文",
           "content": "幹什麼？有事嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛给我们提供了安身之处，这个恩情我一直记得。为了保护其他几个人，也为了“凛冬将军”这个称号，我一定会努力变强。喂，如果你不好好干的话，我可是很快会取代你的。我是认真的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

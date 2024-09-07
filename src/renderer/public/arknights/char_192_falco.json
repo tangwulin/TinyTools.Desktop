@@ -2,7 +2,8 @@
   "name": "翎羽",
   "charaKey": "char_192_falco",
   "images": [
-    "https://prts.wiki/images/8/84/立绘_翎羽_1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/84/%E7%AB%8B%E7%BB%98_%E7%BF%8E%E7%BE%BD_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ae/%E7%AB%8B%E7%BB%98_%E7%BF%8E%E7%BE%BD_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -856,6 +857,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "嘴角要上扬一点，不能皱眉，放松，放松......好，就这样去和大家打招呼吧——欸，博士，您怎么在这......那个，新年快乐！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -878,6 +905,32 @@
         {
           "language": "繁体中文",
           "content": "你好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "曾经有人告诉我，守护拉特兰的荣誉是我唯一的战斗理由。可现在，我有了更多要守护的事物。信念、同伴，还有您。我的枪尖会因此变得更加沉重，但速度绝对不会慢下来。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

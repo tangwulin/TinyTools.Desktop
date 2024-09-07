@@ -2,9 +2,9 @@
   "name": "车尔尼",
   "charaKey": "char_4047_pianst",
   "images": [
-    "https://prts.wiki/images/8/8a/立绘_车尔尼_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6e/立绘_车尔尼_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_车尔尼_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/8a/%E7%AB%8B%E7%BB%98_%E8%BD%A6%E5%B0%94%E5%B0%BC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6e/%E7%AB%8B%E7%BB%98_%E8%BD%A6%E5%B0%94%E5%B0%BC_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/87/%E7%AB%8B%E7%BB%98_%E8%BD%A6%E5%B0%94%E5%B0%BC_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -255,7 +255,7 @@
         },
         {
           "language": "韩文",
-          "content": "과찬이십니다. 수많은 소리들이 기나긴 역사 속에 파묻혀 사라졌지만, 결코 그 소리의 주인들이 재능이 없었던 게 아니었지요. 단지 세상을 너무나도 일찌 떠나 버린 탓에, 사람들이 발걸음을 멈추고 그 천상의 소리를 들을 틈이 없었던 것 뿐이죠. 저는 운이 좋아, 지금까지 살아있을 뿐입니다."
+          "content": "과찬이십니다. 수많은 소리들이 기나긴 역사 속에 파묻혀 사라졌지만, 결코 그 소리의 주인들이 재능이 없었던 게 아니었지요. 단지 세상을 너무나도 일찍 떠나 버린 탓에, 사람들이 발걸음을 멈추고 그 천상의 소리를 들을 틈이 없었던 것 뿐이죠. 저는 운이 좋아, 지금까지 살아있을 뿐입니다."
         },
         {
           "language": "繁体中文",
@@ -333,7 +333,7 @@
         },
         {
           "language": "韩文",
-          "content": "당신의 요구이니만큼 제대로 살펴는 보겠습니다만, 개인적으론 이런 학습 방식을 선호하지는 앖습니다. 타인의 경험이 다른 이에게도 유용한지에 대해선 언제나 의구심만 드는 군요."
+          "content": "당신의 요구이니만큼 제대로 살펴는 보겠습니다만, 개인적으론 이런 학습 방식을 선호하지는 않습니다. 타인의 경험이 다른 이에게도 유용한지에 대해선 언제나 의구심만 드는 군요."
         },
         {
           "language": "繁体中文",
@@ -914,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "请容我拒绝您的演出邀请，再兢兢业业的音乐家，也不愿在这一天工作，何况，这一天的美好已经无需音乐的装点，有行路人的笑声与桌上的碰杯声已经足够了，您觉得呢？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -936,6 +962,32 @@
         {
           "language": "繁体中文",
           "content": "我新作了一首曲子，您想聽聽嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "能够在音乐中起舞，是感染者难得的自由时刻。博士，我若是多创作一些，那些起舞的人是否能多一些，而那些自由的灵魂是否也能多一些？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

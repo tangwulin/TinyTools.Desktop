@@ -2,10 +2,10 @@
   "name": "普罗旺斯",
   "charaKey": "char_145_prove",
   "images": [
-    "https://prts.wiki/images/c/c4/立绘_普罗旺斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/94/立绘_普罗旺斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/71/立绘_普罗旺斯_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1a/立绘_普罗旺斯_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/c/c4/%E7%AB%8B%E7%BB%98_%E6%99%AE%E7%BD%97%E6%97%BA%E6%96%AF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/94/%E7%AB%8B%E7%BB%98_%E6%99%AE%E7%BD%97%E6%97%BA%E6%96%AF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/71/%E7%AB%8B%E7%BB%98_%E6%99%AE%E7%BD%97%E6%97%BA%E6%96%AF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1a/%E7%AB%8B%E7%BB%98_%E6%99%AE%E7%BD%97%E6%97%BA%E6%96%AF_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -768,7 +768,7 @@
         },
         {
           "language": "英文",
-          "content": "Everyone worked hard. Even if we suffered some damage, let's not be discouraged!"
+          "content": "Everyone worked hard. Even if we suffered some damage,  let's not be discouraged!"
         },
         {
           "language": "韩文",
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐博士~我正准备量一下我的尾巴~它好像又长长了一点，博士，帮我一下，捏住尾巴尖尖，再把尺子比在这里......唔唔，数值是......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "啊，博士早上好~"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "阻止天灾仍旧是我无法办到的事情，也许再过十年百年，人们依然无法探寻出行之有效的方法......那么当下我希望的，仍旧是可以救出更多的人。不论是从天灾手里，还是从那些利用天灾的人手里。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

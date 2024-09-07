@@ -2,10 +2,10 @@
   "name": "宴",
   "charaKey": "char_337_utage",
   "images": [
-    "https://prts.wiki/images/d/de/立绘_宴_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/05/立绘_宴_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a6/立绘_宴_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bd/立绘_宴_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/d/de/%E7%AB%8B%E7%BB%98_%E5%AE%B4_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/05/%E7%AB%8B%E7%BB%98_%E5%AE%B4_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a6/%E7%AB%8B%E7%BB%98_%E5%AE%B4_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/bd/%E7%AB%8B%E7%BB%98_%E5%AE%B4_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -907,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "啊，是博士啊。新年好~如你所见，我被困在这被炉里了~要不要一起来待会，很暖和的。来吧，试试看，你不会后悔的~"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -929,6 +955,32 @@
         {
           "language": "繁体中文",
           "content": "早上好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天的宴会真棒啊~要是能天天这样就好了呢。人一旦孤独下来，就很容易开始胡思乱想吧。想要一直保持乐观的状态，其实也是件很费力的事呢。啊，不用在意~还是享受当下的开心最重要！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "卡夫卡",
   "charaKey": "char_214_kafka",
   "images": [
-    "https://prts.wiki/images/e/ef/立绘_卡夫卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a1/立绘_卡夫卡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_卡夫卡_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/e/ef/%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%A4%AB%E5%8D%A1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a1/%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%A4%AB%E5%8D%A1_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E5%8D%A1%E5%A4%AB%E5%8D%A1_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -18,6 +18,10 @@
     {
       "language": "韩语",
       "base": "voice_kr/char_214_kafka"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_214_kafka"
     }
   ],
   "voiceList": [
@@ -35,7 +39,7 @@
         },
         {
           "language": "英文",
-          "content": "You give Kafka the work that needs doing, Doctor, and then I pass it all on... okay. This's just like how underground work goes!"
+          "content": "You give Kafka the work that needs doing, Doctor, and then I pass it all on... okay! This's just like how underground gofering goes!"
         },
         {
           "language": "韩文",
@@ -61,7 +65,7 @@
         },
         {
           "language": "英文",
-          "content": "Seeing as you're my friend now, Doctor, you can ask me for anything. Uh, apart from lending you my shears."
+          "content": "Seeing as you're my friend now, Doctor, you can ask me for anything. Oh, but, apart from lending you my shears."
         },
         {
           "language": "韩文",
@@ -87,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "Rhodes Island's fulla people I never met before. Everywhere I go, I see what I wants. Hm? You're wonderin' WHAT it is I want? Thaaat's a secret, y'know. Seee-cret."
+          "content": "Rhodes Island's fulla all sortsa people I never met before. Everywhere I go, I sees what I wants. Hm? You're wonderin' WHAT it is I want? That's a secret, y'know. Secret."
         },
         {
           "language": "韩文",
@@ -113,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "Hmm... still can't read your eyes. They're calm as a lake... but there'll come a day when I get your number, Doctor, just you wait!"
+          "content": "Hmm... still can't read your eyes. They're calm as a lake... But there'll come a day when I get your number, Doctor, just you wait!"
         },
         {
           "language": "韩文",
@@ -139,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctooor, Silence kicked me out againnn, I just can't take it, sob, sob... huh? I started it by messing up her experiment? Hmm, Silence got to you first... eh-hem, well, I'm just gonna go now!"
+          "content": "Doctor, Silence kicked me out againnn! Hard times for a Kafka, sob, sob... huh? I started it by messing up her experiment? Aw, nerts, Silence got to you first... eh-hem, well, good talking, I'm just gonna mosey on out now!"
         },
         {
           "language": "韩文",
@@ -191,7 +195,7 @@
         },
         {
           "language": "英文",
-          "content": "Story goes, I used to live in a real baaad place, dealing with bad people almost everyday. Then ever since I came here, everyone's been nice with me, givin' me snacks and all! Mm-hm, that's why I like it here at Rhodes Island!"
+          "content": "Story goes, I used to live in a real maaad kinda city, dealing with bad people alla the day. But then I came landship-side, and everyone's been some kinda nice with me, even givin' me snacks and all! Mm-hm, and that's why I like it here at Rhodes Island!"
         },
         {
           "language": "韩文",
@@ -217,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "...Y'know the secrets everyone tries their best to hide? They're like monsters, hidden in the dead shadows, waitin' for their chance. Beautiful... and dangerous. That's exactly why I do my darndest to collect them! Doctor, don't you got anything for my hoard?"
+          "content": "Y'know the secrets everyone tries their best to hide? They're like monsters, hidden in the dead shadows, waitin' for their chance. Beautiful... and dangerous. That's exactly why I do my darndest to collect them! Doctor, don't you got anything for my hoard?"
         },
         {
           "language": "韩文",
@@ -243,7 +247,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, if you've ever got a problem, we can always call my 'friends' from Columbia in to help... though you don't really gotta. One Kafka'll sort out all your troubles head to tail!"
+          "content": "Doctor, if you've ever got a problem, we can always call my 'friends' from Columbia in to help. Though you don't really gotta. One Kafka'll sort out all your troubles head to tail!"
         },
         {
           "language": "韩文",
@@ -269,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "Bet you think I'm goofing off right now, Doctor. But I aiiin't~"
+          "content": "Bet you think I'm goofing off right now, Doctor. But I ain't."
         },
         {
           "language": "韩文",
@@ -295,7 +299,7 @@
         },
         {
           "language": "英文",
-          "content": "What did you need me for...? Wait, not in front of everybody! Just treat me like a normal gardener, okay?"
+          "content": "Whatcha need me for...? Hey, hey, wait, no bean-spilling, not in front of everybody! Just treat me like a normal gardener, okay?"
         },
         {
           "language": "韩文",
@@ -477,7 +481,7 @@
         },
         {
           "language": "英文",
-          "content": "Look at all these naughty li'l saplings. Ain'tcha cute... sit tight and Kafka'll trim ya up~"
+          "content": "Look at all these naughty li'l saplings. Ain'tcha cute... sit tight and Kafka'll trim ya up."
         },
         {
           "language": "韩文",
@@ -503,7 +507,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh?"
+          "content": "Hmm?"
         },
         {
           "language": "韩文",
@@ -529,7 +533,7 @@
         },
         {
           "language": "英文",
-          "content": "Kafka, roger~"
+          "content": "Kafka, roger!"
         },
         {
           "language": "韩文",
@@ -581,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm-hmmm~"
+          "content": "Hm-hmmm."
         },
         {
           "language": "韩文",
@@ -633,7 +637,7 @@
         },
         {
           "language": "英文",
-          "content": "You're all just hedges who know how to walk~"
+          "content": "You're all just hedges who know how to walk."
         },
         {
           "language": "韩文",
@@ -737,7 +741,7 @@
         },
         {
           "language": "英文",
-          "content": "Man, were those enemies pushovers. If I'd known sooner, I woulda messed with 'em some."
+          "content": "Man, were those enemies pushovers. If I'd known sooner, I coulda saved a Kafka some effort."
         },
         {
           "language": "韩文",
@@ -789,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "So I guess I couldn't read their plans in the end, huh."
+          "content": "Whaddaya doing, Kafka... you can read their plans, can't you?"
         },
         {
           "language": "韩文",
@@ -867,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, Kafka here wants to deck out your office with some bonsai. Don'tcha worry, I'll make 'em look real good~"
+          "content": "Doctor, Kafka here wants to deck out your office with some bonsai. Don'tcha worry, I'll make 'em look real good."
         },
         {
           "language": "韩文",
@@ -906,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我们来一起堆雪人吧！首先搓两个大雪球。帽子要稍微圆一点，然后要修出很长的衣摆......看，一个“博士”就做好啦！啊，不过“博士”一个人被放在甲板上，看上去有点可怜呢！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -928,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "今天安排了什麼工作給我嗎，博士？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "来到这里有一段时间了，发现罗德岛各位都是很好的人呢。好人受到欺负，是我最不能容忍的事。博士，如果有什么无法解决的坏人，就来找我吧。我有一些特殊的手段——不用这样？好吧，听你的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

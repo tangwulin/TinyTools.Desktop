@@ -2,8 +2,8 @@
   "name": "火哨",
   "charaKey": "char_493_firwhl",
   "images": [
-    "https://prts.wiki/images/7/78/立绘_火哨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b3/立绘_火哨_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/78/%E7%AB%8B%E7%BB%98_%E7%81%AB%E5%93%A8_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b3/%E7%AB%8B%E7%BB%98_%E7%81%AB%E5%93%A8_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -909,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "稍等，博士，我在整理年度财务报表......好了！听说罗德岛上不少雷姆必拓干员的手艺都不错，一起去尝尝吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -931,6 +957,32 @@
         {
           "language": "繁体中文",
           "content": "你好啊，博士，想不想生把火暖和一下？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "公司债台高筑的时候，我认真考虑过要不要向家里求助，甚至回了趟家，可当他们问我过得如何、缺不缺钱时，我一口咬定自己挺好的。我不后悔这么说，但一想起他们关切的眼神，心里还是不好受。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

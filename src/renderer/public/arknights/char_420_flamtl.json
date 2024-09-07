@@ -2,9 +2,9 @@
   "name": "焰尾",
   "charaKey": "char_420_flamtl",
   "images": [
-    "https://prts.wiki/images/3/3b/立绘_焰尾_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7c/立绘_焰尾_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/42/立绘_焰尾_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/3b/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%B0%BE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7c/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%B0%BE_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/42/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%B0%BE_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "真没想到新年我会在罗德岛度过呢......啊，倒不是怀念在大骑士领的日子，没人会怀念被追杀的日子吧？只是在那高楼的影子里，穷人和感染者们庆祝新年的表情，我至今都还记得。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "早呀，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天真是热闹啊。我看到小灰一直给别人签名，查丝汀娜好像也表演了口琴，艾沃娜和正义骑士还有其他几辆小车玩得很开心。真是很久很久都没有看到大家露出这样的笑容了。谢谢你，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

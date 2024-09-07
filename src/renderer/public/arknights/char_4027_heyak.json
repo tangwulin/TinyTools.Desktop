@@ -2,8 +2,9 @@
   "name": "霍尔海雅",
   "charaKey": "char_4027_heyak",
   "images": [
-    "https://prts.wiki/images/4/4f/立绘_霍尔海雅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/27/立绘_霍尔海雅_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/4/4f/%E7%AB%8B%E7%BB%98_%E9%9C%8D%E5%B0%94%E6%B5%B7%E9%9B%85_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/27/%E7%AB%8B%E7%BB%98_%E9%9C%8D%E5%B0%94%E6%B5%B7%E9%9B%85_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/5c/%E7%AB%8B%E7%BB%98_%E9%9C%8D%E5%B0%94%E6%B5%B7%E9%9B%85_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -170,7 +171,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, were you… avoiding me? I just wanted to show you a newly-excavated ruin I found. What's that? Why do I keep bothering you? Oh my, shouldn't you do some soul-searching and ask why <i>you</i> are the only one I'm bothering?"
+          "content": "Doctor, were you… avoiding me?  I just wanted to show you a newly-excavated ruin I found. What's that? Why do I keep bothering you? Oh my, shouldn't you do some soul-searching and ask why <i>you</i> are the only one I'm bothering?"
         },
         {
           "language": "韩文",
@@ -773,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "历史学界的颁奖典礼？占星研究协会的年会？唔，不想去。和我在一起的时候，不许想那些没意思的事情......今天可是新年欸，你不该直接邀请我跳舞吗？放心，这次我不会用尾巴乱碰你的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -791,6 +814,28 @@
         {
           "language": "韩文",
           "content": "어머, 박사도 여기 있었네…… 그래, 그저 우연이라는 거지?"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，特里蒙的天幕已经恢复如初，但想必没人能忘记它被撕开后的景象。你如何看待这片大地的未来，罗德岛能做什么，我能为你们、为自己做什么？我想知道你的答案。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

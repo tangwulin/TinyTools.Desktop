@@ -2,10 +2,10 @@
   "name": "史尔特尔",
   "charaKey": "char_350_surtr",
   "images": [
-    "https://prts.wiki/images/0/0c/立绘_史尔特尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_史尔特尔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/af/立绘_史尔特尔_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/69/立绘_史尔特尔_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/0/0c/%E7%AB%8B%E7%BB%98_%E5%8F%B2%E5%B0%94%E7%89%B9%E5%B0%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E5%8F%B2%E5%B0%94%E7%89%B9%E5%B0%94_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/af/%E7%AB%8B%E7%BB%98_%E5%8F%B2%E5%B0%94%E7%89%B9%E5%B0%94_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/69/%E7%AB%8B%E7%BB%98_%E5%8F%B2%E5%B0%94%E7%89%B9%E5%B0%94_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -907,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "这个日子总是让我有些烦躁，时间年复一年地过去，我离过去的记忆越来越远......哼，不想这些了。喂，陪我去甲板上走走吧。吹吹冷风，或许可以让我冷静下来。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -929,6 +955,32 @@
         {
           "language": "繁体中文",
           "content": "啊，你在這裡。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我暂时还没有办法找回过去的自己，但是找寻的过程也塑造了现在的自己。在罗德岛待过的这些日子，也是其中重要的一部分。博士，接下来我们还有很长一段时间要共处，尽管相信我的剑吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

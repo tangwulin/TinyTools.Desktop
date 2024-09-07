@@ -2,7 +2,7 @@
   "name": "12F",
   "charaKey": "char_009_12fce",
   "images": [
-    "https://prts.wiki/images/6/61/立绘_12F_1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/61/%E7%AB%8B%E7%BB%98_12F_1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -804,6 +804,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "“在新的一年也能活下去”，这可能是每个佣兵，只敢在心里想着，而不敢说出口的愿望吧。博士，祝您在新的一年里一切平安。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -826,6 +852,32 @@
         {
           "language": "繁体中文",
           "content": "早上好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我只是一个侥幸活下来的人，在罗德岛获得了容身之所。我会献上我的全部力量，也期待着您带领我们走向的结局，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

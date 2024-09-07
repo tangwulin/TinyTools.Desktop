@@ -2,9 +2,9 @@
   "name": "寒檀",
   "charaKey": "char_341_sntlla",
   "images": [
-    "https://prts.wiki/images/7/7a/立绘_寒檀_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/43/立绘_寒檀_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/44/立绘_寒檀_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/7a/%E7%AB%8B%E7%BB%98_%E5%AF%92%E6%AA%80_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/43/%E7%AB%8B%E7%BB%98_%E5%AF%92%E6%AA%80_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/44/%E7%AB%8B%E7%BB%98_%E5%AF%92%E6%AA%80_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -774,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "火焰代表毁灭，却也蕴含着活力与热情。枯败腐朽已被燃尽，红光铺满大地。即使以后面对困难，也请不要忘却今日的炽热。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -792,6 +814,28 @@
         {
           "language": "韩文",
           "content": "저는 당신의 곁에 있답니다."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "许多部落准备离开故土去往南方，许多战士辞别亲人向北进发。萨米人像是要分裂成两支，从此再不相见。我改变不了这一切，我只希望，所有人都能平安无事......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

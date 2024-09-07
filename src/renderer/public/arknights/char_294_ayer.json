@@ -2,9 +2,9 @@
   "name": "断崖",
   "charaKey": "char_294_ayer",
   "images": [
-    "https://prts.wiki/images/1/1b/立绘_断崖_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a6/立绘_断崖_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ed/立绘_断崖_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/1/1b/%E7%AB%8B%E7%BB%98_%E6%96%AD%E5%B4%96_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a6/%E7%AB%8B%E7%BB%98_%E6%96%AD%E5%B4%96_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ed/%E7%AB%8B%E7%BB%98_%E6%96%AD%E5%B4%96_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -906,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "一般来说，今天某个张扬的卡特斯会出去又唱又跳，然后倒在哪里不省人事。嗯......时间差不多，他应该倒下了。我去把他捡回来，然后回房间睡觉。再会，博士，新年快乐。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -928,6 +954,32 @@
         {
           "language": "繁体中文",
           "content": "有事？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今年也存下了不少钱，来罗德岛之后我和莱特的收入都稳定了不少。虽然他没说，但我已经有一阵没给他买过东西了。嗯......继续存着也没什么用处，买点什么呢？博士，有什么好的建议吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

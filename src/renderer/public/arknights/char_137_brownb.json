@@ -2,9 +2,9 @@
   "name": "猎蜂",
   "charaKey": "char_137_brownb",
   "images": [
-    "https://prts.wiki/images/f/f8/立绘_猎蜂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/de/立绘_猎蜂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a6/立绘_猎蜂_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/f/f8/%E7%AB%8B%E7%BB%98_%E7%8C%8E%E8%9C%82_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/de/%E7%AB%8B%E7%BB%98_%E7%8C%8E%E8%9C%82_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a6/%E7%AB%8B%E7%BB%98_%E7%8C%8E%E8%9C%82_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -18,6 +18,10 @@
     {
       "language": "韩语",
       "base": "voice_kr/char_137_brownb"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_137_brownb"
     }
   ],
   "voiceList": [
@@ -87,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "Honey's sweet, but getting it hurts. I went for some the other day and the bees served me up some beating."
+          "content": "Honey's sweet, but getting it hurts. I went for some the other day… They really give me a hard lesson."
         },
         {
           "language": "韩文",
@@ -113,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "My knucklers? They're my precious babies. Wouldn't have racked up all those wins without 'em!"
+          "content": "My knuckles? Haha~ They're my precious babies. Wouldn't have racked up all those wins without 'em!"
         },
         {
           "language": "韩文",
@@ -217,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "My book of names here? Hah, looks like that big brain of yours doesn't know everything. Gotta meet people to fight people, right? I don't want to run out of enemies."
+          "content": "My book of names here? Ah, looks like that big brain of yours doesn't know everything. Gotta meet people to fight people, right? I don't want to run out of enemies."
         },
         {
           "language": "韩文",
@@ -269,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "*Sniff sniff* Smells like grilled fish!"
+          "content": "Smells like grilled fish!"
         },
         {
           "language": "韩文",
@@ -425,7 +429,7 @@
         },
         {
           "language": "英文",
-          "content": "Oooh yeah! Chow's on me after we win this one!"
+          "content": "Chow's on me after we win this one!"
         },
         {
           "language": "韩文",
@@ -581,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "All right, let's do this."
+          "content": "Let's do this."
         },
         {
           "language": "韩文",
@@ -659,7 +663,7 @@
         },
         {
           "language": "英文",
-          "content": "One-two One-two One-two!"
+          "content": "One-two, one-two, one-two!"
         },
         {
           "language": "韩文",
@@ -789,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "Ouch… *Gasp* Where's the Boss? Is the Boss okay?!"
+          "content": "Ouch… Where's the Boss? Is the Boss okay?!"
         },
         {
           "language": "韩文",
@@ -867,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "You brought food? Yeah! You're the best, Boss!"
+          "content": "You brought food? You're the best, Boss!"
         },
         {
           "language": "韩文",
@@ -906,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "嘿嘿嘿嘿......老板！老板你在这啊，我刚和他们喝了蜂蜜！有稳定工资就是好，我都能自己买这么多蜜了，要是之前，我还要自己去采，被蜇可疼了......老板万岁！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -919,7 +949,7 @@
         },
         {
           "language": "英文",
-          "content": "Sup, Boss."
+          "content": "What's up, Boss."
         },
         {
           "language": "韩文",
@@ -928,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "早啊老闆。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛的战斗方式虽然和我之前的不同，但这怎么可能难得倒我呢！而且来这里之后，我才发现原来有这么多人看不起感染者，别担心！老板，有我和我的拳头在，这群人迟早会改变他们的想法！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

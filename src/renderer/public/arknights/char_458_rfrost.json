@@ -2,8 +2,8 @@
   "name": "霜华",
   "charaKey": "char_458_rfrost",
   "images": [
-    "https://prts.wiki/images/8/82/立绘_霜华_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d8/立绘_霜华_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/82/%E7%AB%8B%E7%BB%98_%E9%9C%9C%E5%8D%8E_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d8/%E7%AB%8B%E7%BB%98_%E9%9C%9C%E5%8D%8E_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -694,7 +694,7 @@
       "text": [
         {
           "language": "中文",
-          "content": "无时无刻要有比敌人更万全的准备。"
+          "content": "每时每刻都要有比敌人更万全的准备。"
         },
         {
           "language": "日文",
@@ -893,6 +893,32 @@
         {
           "language": "繁体中文",
           "content": "明日方舟。"
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "需要厨师吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     },

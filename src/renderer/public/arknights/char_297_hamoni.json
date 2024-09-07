@@ -2,10 +2,10 @@
   "name": "和弦",
   "charaKey": "char_297_hamoni",
   "images": [
-    "https://prts.wiki/images/9/99/立绘_和弦_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/59/立绘_和弦_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4c/立绘_和弦_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/83/立绘_和弦_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/9/99/%E7%AB%8B%E7%BB%98_%E5%92%8C%E5%BC%A6_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/59/%E7%AB%8B%E7%BB%98_%E5%92%8C%E5%BC%A6_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4c/%E7%AB%8B%E7%BB%98_%E5%92%8C%E5%BC%A6_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/83/%E7%AB%8B%E7%BB%98_%E5%92%8C%E5%BC%A6_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -911,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "值得庆祝的日子，我来这里是代表某位贵族送出这份礼物。不过看到这幅景象，我倒是想起我还在上学的时候，学校举办庆典，同学们一起跳舞。那个时候......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -933,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "你好，博士。要來一杯茶嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "看来你对你所谋划的未来十分自信。一个乐园，是吗？怀抱这种想法的人，即使是短暂同行，我也仍旧十分好奇你们的终局。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

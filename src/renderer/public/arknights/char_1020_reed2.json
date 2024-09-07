@@ -2,9 +2,10 @@
   "name": "焰影苇草",
   "charaKey": "char_1020_reed2",
   "images": [
-    "https://prts.wiki/images/7/7c/立绘_焰影苇草_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_焰影苇草_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/36/立绘_焰影苇草_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/7/7c/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d3/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/36/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1d/%E7%AB%8B%E7%BB%98_%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我可以坐在这里看焰火吗？嗯，这个节日，我并不想庆祝......但是，听到钟声在荒地上回荡的时候，我为这个夜晚有火光而庆幸。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "嗯，博士。就和過去一樣。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "你们和我不同。深池是一个已有的梦想，那个梦想找到了我，但罗德岛却敢说服人们，去相信难以想象的事情。是罗德岛救了我，我会一直记得。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

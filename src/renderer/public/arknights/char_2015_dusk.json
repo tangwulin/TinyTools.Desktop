@@ -2,9 +2,9 @@
   "name": "夕",
   "charaKey": "char_2015_dusk",
   "images": [
-    "https://prts.wiki/images/6/6a/立绘_夕_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0a/立绘_夕_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/80/立绘_夕_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/6/6a/%E7%AB%8B%E7%BB%98_%E5%A4%95_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0a/%E7%AB%8B%E7%BB%98_%E5%A4%95_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/80/%E7%AB%8B%E7%BB%98_%E5%A4%95_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -1186,6 +1186,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？人这一生已经够短暂了，就好像对着方寸画卷还要仔细分割，想着这一块画什么、那一块画什么，周而复始，生死疲劳。不过也罢，一时欢笑筵宴，也算是一道风景。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "新年？人那一生已经蛮短哉，就好像对着个方寸画卷还要仔细分割，想想那一块画撒、这一块画撒，周而复始，生死疲劳。弗过也算哉，一时欢笑筵宴，也算是一道风景。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1216,6 +1250,40 @@
         {
           "language": "繁体中文-方言",
           "content": "你的名字是撒誒，哦，博士？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我说过，没什么事别叫我出去。一起庆祝？庆祝我被困在这里这么久吗？出去出去，真是......对了，墙上那些装饰是我随手涂上去的，不是因为可露希尔要求才画的。再说一遍，我不接稿。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "我讲过，没啥事体弗要叫我出去。一起庆祝？庆祝我被困在这里那么长时间吗？册起册起，真是......哦，墙上那些装饰是我随便涂上去葛，弗是因为可露希尔的要求才画的。再说一遍，我不接稿。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
         }
       ]
     }

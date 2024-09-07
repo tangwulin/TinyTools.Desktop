@@ -2,8 +2,9 @@
   "name": "玫拉",
   "charaKey": "char_4006_melnte",
   "images": [
-    "https://prts.wiki/images/c/c3/立绘_玫拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_玫拉_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/c/c3/%E7%AB%8B%E7%BB%98_%E7%8E%AB%E6%8B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E7%8E%AB%E6%8B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/82/%E7%AB%8B%E7%BB%98_%E7%8E%AB%E6%8B%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -773,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。需要我用这门炮放个烟花吗？......不是比喻，是真的。它真的有一个烟花模式，第一次交到我手里的时候就有了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -791,6 +814,28 @@
         {
           "language": "韩文",
           "content": "좋은 아침입니다. 꿈도 꾸지 않을 정도로 깊은 수면이 피로 회복에 가장 좋다고 생각하는데, 박사님은 어떠신가요?"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛是个可以让人毫不害羞地述说自己理想的地方，我喜欢这一点。如果能重来的话，我一定不去做什么武器测试员，而是直接来罗德岛......那样，也许我现在已经为自己的理想迈出一步了吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

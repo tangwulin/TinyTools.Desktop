@@ -2,8 +2,9 @@
   "name": "琳琅诗怀雅",
   "charaKey": "char_1033_swire2",
   "images": [
-    "https://prts.wiki/images/a/a1/立绘_琳琅诗怀雅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_琳琅诗怀雅_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/a/a1/%E7%AB%8B%E7%BB%98_%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0f/%E7%AB%8B%E7%BB%98_%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c3/%E7%AB%8B%E7%BB%98_%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -176,7 +177,7 @@
         },
         {
           "language": "韩文",
-          "content": "가족의 기업과는 거리를 두고 있긴 하지만, 개인적인 사업 몇 가지는 아직까지도 경영하고 있어. 이런 방법으로 용문을 더 좋은 곳으로 만들 수 있다면야 굳이 피할 필요는 없잖아. 오히려 해야 할 일을 깨닫고 나니까 할아버지도 별로 무섭지 않게 느껴지는 거 있지? 자신이 두려워했던 힘을 제대로 활용할 수 있을 때 비로소 그 두려움을 이겨냈다고 할 수 있는 건가 봐. 안 그래?"
+          "content": "가족의 기업과는 거리를 두고 있긴 하지만, 개인적인 사업 몇 가지는 아직까지도 경영하고 있어. 이런 방법으로 용문을 더 좋은 곳으로 만들 수 있다면야 굳이 피할 필요는 없잖아. 오히려 해야 할  일을 깨닫고 나니까 할아버지도 별로 무섭지 않게 느껴지는 거 있지? 자신이 두려워했던 힘을 제대로 활용할 수 있을 때 비로소 그 두려움을 이겨냈다고 할 수 있는 건가 봐. 안 그래?"
         },
         {
           "language": "中文-方言",
@@ -250,7 +251,7 @@
         },
         {
           "language": "英文",
-          "content": "Is this the last document you have? Alright! You really kept me waiting this time, but finally, time for supper! I know this new place that's not so bad. It's on me tonigh—Oh, You don't want me spending money? Umm... alright, then it's on you. I know some other places."
+          "content": "Is this the last document you have? Alright! You really kept me waiting this time, but finally, time for supper! I know this new place that's not so bad. It's on me tonigh—Oh, You don't want me spending money?  Umm... alright, then it's on you. I know some other places."
         },
         {
           "language": "韩文",
@@ -913,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好！来得正好，帮我搬一下这些东西。给罗德岛的朋友们准备了一点小礼物，人人都有——哎！当心点，黄金很沉的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "新年好！来得正好，帮我搬一下这些东西。给罗德岛的朋友们准备了一点小礼物，人人都有——唉！当心点，黄金好重的！"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -935,6 +962,32 @@
         {
           "language": "中文-方言",
           "content": "早晨......嗯？就是普通的问候，唔系你以为我会讲咩啊？嗷呜？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "一起上过战场的交情做不了假，反倒是星熊那家伙，明明在意得很，就是要遮遮掩掩的，下次一定拉着她来罗德岛开派对......避嫌？我都已经是局长了，我向谁避嫌？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "一齐上过战场的交情做不了假，反倒是星熊那家伙，明明在意得很，就硬系扭扭拧拧，下次一定拉着她来罗德岛开派对......避嫌？我都已经是局长啦，我向谁避嫌啊？"
         }
       ]
     }

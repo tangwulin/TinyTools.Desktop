@@ -1,7 +1,9 @@
 {
   "name": "泡普卡",
   "charaKey": "char_281_popka",
-  "images": [],
+  "images": [
+    "https://media.prts.wiki/5/5d/%E7%AB%8B%E7%BB%98_%E6%B3%A1%E6%99%AE%E5%8D%A1_1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": [
     {
       "language": "日语",
@@ -261,7 +263,7 @@
       "text": [
         {
           "language": "中文",
-          "content": "行动预备组A6，泡普卡，报道。那个，A6组的大家，总是很吵闹，让博士担心了......泡普卡，知道该怎么做......"
+          "content": "行动预备组A6，泡普卡，报到。那个，A6组的大家，总是很吵闹，让博士担心了......泡普卡，知道该怎么做......"
         },
         {
           "language": "日文",
@@ -802,6 +804,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好，博士。那个......泡普卡在食堂学着做了年糕。软软的，又白白的。大家说，因为泡普卡的力气很大，所以打出来的年糕可好吃了......欸嘿嘿......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -824,6 +852,32 @@
         {
           "language": "繁体中文",
           "content": "博士，今天也和和氣氣的嗎......？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "如果泡普卡再听话一点，再聪明一点，是不是就可以和大家一直在一起了呢？我希望，A6组的大家，能一直像家人一样在一起......博士，帮帮我好吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,7 +2,7 @@
   "name": "香草",
   "charaKey": "char_240_wyvern",
   "images": [
-    "https://prts.wiki/images/a/a0/立绘_香草_1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/a/a0/%E7%AB%8B%E7%BB%98_%E9%A6%99%E8%8D%89_1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -856,6 +856,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐！这么多好吃的，还有晚会，真好啊......在老家的时候，晚上能吃几道菜，完全取决于白天打到了多少猎物。所以为了庆祝新年，一大早就要出去打猎，实在很辛苦......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -878,6 +904,32 @@
         {
           "language": "繁体中文",
           "content": "博士，早。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我来到罗德岛有一段时间了，非常感谢大家对我的帮助，现在我已经很适应这里的生活了。被自动门吓到这种事情再也不会——啊！博士，刚才好像有一个长得像驮兽的机器走过去了......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

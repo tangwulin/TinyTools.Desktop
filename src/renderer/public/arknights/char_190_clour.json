@@ -2,8 +2,8 @@
   "name": "红云",
   "charaKey": "char_190_clour",
   "images": [
-    "https://prts.wiki/images/3/3d/立绘_红云_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d9/立绘_红云_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E7%BA%A2%E4%BA%91_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d9/%E7%AB%8B%E7%BB%98_%E7%BA%A2%E4%BA%91_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -168,7 +168,7 @@
         },
         {
           "language": "英文",
-          "content": "I've been living alone ever since my village was wiped out. So, I… I'm still getting used to being around people... But since you trust me and give me important work, I swear I'll return the favor."
+          "content": "I've been living alone ever since my village was wiped out.  So, I… I'm still getting used to being around people... But since you trust me and give me important work, I swear I'll return the favor."
         },
         {
           "language": "韩文",
@@ -909,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "大家都在庆祝新年啊......在荒野的时候可没有这么安逸的环境，取出一点腌好的肉，再吃几颗储藏的莓果，来庆祝自己又活了一年。或许也不是什么值得庆祝的事吧......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -931,6 +957,32 @@
         {
           "language": "繁体中文",
           "content": "哈，是你啊。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "过去的仇人我一个也没有放过，别人给予我的恩情我也绝不会忘记。那位拉特兰老爷爷已经去世了，但罗德岛还在这里。在剩下的生命里，我清楚战斗的理由。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

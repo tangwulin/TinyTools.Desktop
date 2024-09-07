@@ -2,9 +2,9 @@
   "name": "远牙",
   "charaKey": "char_430_fartth",
   "images": [
-    "https://prts.wiki/images/d/d6/立绘_远牙_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_远牙_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9d/立绘_远牙_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/d/d6/%E7%AB%8B%E7%BB%98_%E8%BF%9C%E7%89%99_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/24/%E7%AB%8B%E7%BB%98_%E8%BF%9C%E7%89%99_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9d/%E7%AB%8B%E7%BB%98_%E8%BF%9C%E7%89%99_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "这里的风声中夹杂着很多杂音。烟花声、杯盘碰撞声和人们庆贺的声音，之前在家乡，每当过节，我的邻居们也是这样吵闹，不过我并不讨厌。新年快乐，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "......別動。頭髮翹起來了，嗯，先別動，我來幫你。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "口笛是从家乡带来的，吹的小调也是邻居们教我的，我知道我已经回不到过去了，但也不是坏事，对吧？就像风不会再吹回它的起源地，但它会凭着最开始的那份力量，越吹越远，去往更高远的地方。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

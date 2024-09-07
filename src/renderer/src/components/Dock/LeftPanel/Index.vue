@@ -34,13 +34,13 @@ function parseTimePairToNumber(time: { hour: number; minute: number }) {
 
 function fetchCourses() {
   //获取当前是几点几分
-  // const now = new Date()
-  // const hour = now.getHours()
-  // const minute = now.getMinutes()
+  const now = new Date()
+  const hour = now.getHours()
+  const minute = now.getMinutes()
 
   //测试用
-  const hour = 10
-  const minute = 40
+  // const hour = 10
+  // const minute = 40
   const nowTime = hour * 100 + minute
 
   //如果当前时间在课程时间内,则找到当前课程

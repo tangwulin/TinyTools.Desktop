@@ -2,9 +2,9 @@
   "name": "白铁",
   "charaKey": "char_4072_ironmn",
   "images": [
-    "https://prts.wiki/images/2/28/立绘_白铁_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1b/立绘_白铁_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/eb/立绘_白铁_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/2/28/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%93%81_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1b/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%93%81_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/eb/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%93%81_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -69,7 +69,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사, 여기 책이 많이 있다고 들었는데, 혹시 몇 권 빌려줄 수 있을까? 꼭 기계랑 관련된 게 아니어도 괜찮아. 난 내가 모르는 분야라면 뭐든 관심이 있거든. 이거 괜찮아 보이는데, 두껍고 화려한 게…… 뭐? 저, 저주가 걸려 있으니까 만지면 안 된다고? 이거, 누가 놓고 간 거야?"
+          "content": "박사, 여기 책이 많이 있다고 들었는데, 혹시 몇 권 빌려줄 수 있을까? 꼭 기계랑 관련된 게 아니어도 괜찮아. 난 내가 모르는 분야라면 뭐든 관심이 있거든. 이거 괜찮아 보이는데, 두껍고 화려한 게…… 뭐? 저, 저주가 걸려 있으니까 만지면 안 된다고? 이거,  누가 놓고 간 거야?"
         },
         {
           "language": "繁体中文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，想喝点什么？姜汁啤酒怎么样......跳舞？哈哈，我的双手在工作的时候有多灵巧，我的双腿在舞会上就有多笨拙。当然，你愿意陪我的话，我可以试试。博士，新年快乐。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，我剛巡邏回來，附近很安全，你可以多休息一會。局勢越是緊張，適度的放鬆就越有必要。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，谢谢你。和罗德岛的友谊让我进一步认清了自己在反抗什么。我们战斗，是为了争取每一个人在自己的城市里自由奔跑的权利。那样的未来同样属于感染者。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

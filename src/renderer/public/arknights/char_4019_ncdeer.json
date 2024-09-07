@@ -2,9 +2,9 @@
   "name": "九色鹿",
   "charaKey": "char_4019_ncdeer",
   "images": [
-    "https://prts.wiki/images/5/5e/立绘_九色鹿_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b6/立绘_九色鹿_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_九色鹿_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/5e/%E7%AB%8B%E7%BB%98_%E4%B9%9D%E8%89%B2%E9%B9%BF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b6/%E7%AB%8B%E7%BB%98_%E4%B9%9D%E8%89%B2%E9%B9%BF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/24/%E7%AB%8B%E7%BB%98_%E4%B9%9D%E8%89%B2%E9%B9%BF_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -894,6 +894,32 @@
         {
           "language": "繁体中文",
           "content": "明日方舟。"
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "听说这是一个团圆的节日呢，祝愿您和罗德岛的大家都能身体安康。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     },

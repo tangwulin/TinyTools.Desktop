@@ -2,9 +2,9 @@
   "name": "截云",
   "charaKey": "char_4078_bdhkgt",
   "images": [
-    "https://prts.wiki/images/5/5b/立绘_截云_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_截云_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_截云_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/5b/%E7%AB%8B%E7%BB%98_%E6%88%AA%E4%BA%91_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E6%88%AA%E4%BA%91_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d3/%E7%AB%8B%E7%BB%98_%E6%88%AA%E4%BA%91_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我们那里的新年，不是一个固定的节日。当春天快要来临时，我们在荒野上发现第一株发芽的植物，就把那一天当作新年的开始。然后我们饮酒，唱歌，庆祝......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，要去外面吹吹風嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "阿纳萨看惯了生老病死，但在罗德岛，我见到的是许多人难以接受的生离死别。或许只有找到那一样放不下的事物，才能找到“家”吧。我好像，有点明白了......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "黑键",
   "charaKey": "char_4046_ebnhlz",
   "images": [
-    "https://prts.wiki/images/8/88/立绘_黑键_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ef/立绘_黑键_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_黑键_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/88/%E7%AB%8B%E7%BB%98_%E9%BB%91%E9%94%AE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ef/%E7%AB%8B%E7%BB%98_%E9%BB%91%E9%94%AE_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/24/%E7%AB%8B%E7%BB%98_%E9%BB%91%E9%94%AE_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -914,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "之所以不去和大家一起庆祝新年，并不是因为什么特别的原因。我只是不适应那种其乐融融的气氛罢了......想请我演奏一曲？还是算了吧，我的音乐与这样的氛围并不相称。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -936,6 +962,32 @@
         {
           "language": "繁体中文",
           "content": "休息得如何，博士？曾經我也喜歡熬夜，直到有一次，我一整夜沒有闔眼，然後劇烈的頭痛持續了一個星期......那真是恐怖的經歷。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在乌提卡的时候，每一天都过得很慢，到了罗德岛以后，一年却就这样无声无息地过去了......觉得时间变快了，这大概就是生活比以前幸福的证明吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

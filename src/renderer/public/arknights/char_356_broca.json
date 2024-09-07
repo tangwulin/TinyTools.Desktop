@@ -1,7 +1,11 @@
 {
   "name": "布洛卡",
   "charaKey": "char_356_broca",
-  "images": [],
+  "images": [
+    "https://media.prts.wiki/1/1c/%E7%AB%8B%E7%BB%98_%E5%B8%83%E6%B4%9B%E5%8D%A1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fb/%E7%AB%8B%E7%BB%98_%E5%B8%83%E6%B4%9B%E5%8D%A1_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b3/%E7%AB%8B%E7%BB%98_%E5%B8%83%E6%B4%9B%E5%8D%A1_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
   "voiceBase": [
     {
       "language": "日语",
@@ -789,7 +793,7 @@
         },
         {
           "language": "韩文",
-          "content": "노력했다면 이제와서 당황해도 어쩔 수 없지. 아오스타도 실수할 때가 있다."
+          "content": "충분히 노력했으니 당황할 필요 없어. 아오스타도 실수할 때가 있으니."
         },
         {
           "language": "繁体中文",
@@ -902,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士......干什么，寄人篱下，这点礼数我还是懂的。而且，和之前在叙拉古相比，这种场面，我想都不敢想，罗德岛挺好的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -924,6 +954,32 @@
         {
           "language": "繁体中文",
           "content": "早。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "没想到在这里遇到了，我刚清理完自己的工具台，最近武器制作的单子还挺多的。我怎么不监督你了？因为目前来看，你似乎没有什么堕落的倾向，更何况我已经认同了你的目标，一起努力吧，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

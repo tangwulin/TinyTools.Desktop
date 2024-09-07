@@ -2,9 +2,9 @@
   "name": "承曦格雷伊",
   "charaKey": "char_1027_greyy2",
   "images": [
-    "https://prts.wiki/images/b/b7/立绘_承曦格雷伊_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/09/立绘_承曦格雷伊_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a0/立绘_承曦格雷伊_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/b7/%E7%AB%8B%E7%BB%98_%E6%89%BF%E6%9B%A6%E6%A0%BC%E9%9B%B7%E4%BC%8A_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/09/%E7%AB%8B%E7%BB%98_%E6%89%BF%E6%9B%A6%E6%A0%BC%E9%9B%B7%E4%BC%8A_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a0/%E7%AB%8B%E7%BB%98_%E6%89%BF%E6%9B%A6%E6%A0%BC%E9%9B%B7%E4%BC%8A_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -403,7 +403,7 @@
         },
         {
           "language": "英文",
-          "content": "A practical field study... in combat? Sure, no problem."
+          "content": "A practical field study... in combat?  Sure, no problem."
         },
         {
           "language": "韩文",
@@ -767,7 +767,7 @@
         },
         {
           "language": "英文",
-          "content": "Effect on target below expectations, risk of potential failure… The re-simulation of both Doctor and PRTS are required for next steps."
+          "content": "Effect on target below expectations, risk of potential failure… The re-simulation of both Doctor and PRTS  are required for next steps."
         },
         {
           "language": "韩文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，晚上要一起去看灯光秀吗？今年的跨年灯光秀是我设计的，保证能让您大饱眼福。啊，用的灯具也都是新研发的节能款，之后我会和工程部一起改装一下，把它们送去偏远的办事处做防灾补给。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士，一切都還順利吧？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "能够学到这么多，做到这么多，那个时候的我根本想都不敢想吧......即便只是那么小的一片火花，如果付诸坚持和努力也能点亮整片夜空......这是罗德岛教会我，最重要的事。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

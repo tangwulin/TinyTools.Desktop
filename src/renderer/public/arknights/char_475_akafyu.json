@@ -2,9 +2,9 @@
   "name": "赤冬",
   "charaKey": "char_475_akafyu",
   "images": [
-    "https://prts.wiki/images/b/b2/立绘_赤冬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/07/立绘_赤冬_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/73/立绘_赤冬_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/b2/%E7%AB%8B%E7%BB%98_%E8%B5%A4%E5%86%AC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/07/%E7%AB%8B%E7%BB%98_%E8%B5%A4%E5%86%AC_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/73/%E7%AB%8B%E7%BB%98_%E8%B5%A4%E5%86%AC_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -906,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好啊，你怎么这个点才起床？我都已经做完训练回来了。新年第一天，在心里想一个愿望，然后用心挥刀一千次，这样就能愿望成真。别管是谁说的，只要你相信，它就是真的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -928,6 +954,32 @@
         {
           "language": "繁体中文",
           "content": "喲，博士，要陪我練劍嗎？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我从来没有问过你，我们是为何而战的，对吧？停，不用告诉我答案。口头上说的话是最不可信的。我只希望你能好好想明白这个问题。只要你带领我们走的路是正道，这柄刀就会斩无不断。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

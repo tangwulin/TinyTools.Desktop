@@ -2,9 +2,9 @@
   "name": "野鬃",
   "charaKey": "char_496_wildmn",
   "images": [
-    "https://prts.wiki/images/b/bc/立绘_野鬃_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4d/立绘_野鬃_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/97/立绘_野鬃_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/b/bc/%E7%AB%8B%E7%BB%98_%E9%87%8E%E9%AC%83_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4d/%E7%AB%8B%E7%BB%98_%E9%87%8E%E9%AC%83_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/97/%E7%AB%8B%E7%BB%98_%E9%87%8E%E9%AC%83_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哈哈，我在休息区的小摊上买了礼花，专门买的纯金色的！让我看看说明书......字好多不看了，博士，给你一个，三、二、一——怎么没响？什么？上边写着生产日期是八年前？！摊主人呢！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "吃過了嗎，博士。想不想嘗嘗正義號做的早餐？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "来罗德岛是索娜的意思，虽然很多事情我没有她想得那么清楚，我的能力也远远不够。但迟早有一天，我要让所有人都看清楚，我做的事情不只是为了证明我自己的实力，还有让他们正视感染者。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

@@ -2,9 +2,9 @@
   "name": "临光",
   "charaKey": "char_148_nearl",
   "images": [
-    "https://prts.wiki/images/e/e4/立绘_临光_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5f/立绘_临光_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/82/立绘_临光_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/e/e4/%E7%AB%8B%E7%BB%98_%E4%B8%B4%E5%85%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/5f/%E7%AB%8B%E7%BB%98_%E4%B8%B4%E5%85%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/82/%E7%AB%8B%E7%BB%98_%E4%B8%B4%E5%85%89_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今晚在大骑士领，那些竞拍到了“烟火权”的企业，会用烟花铺满整个天空；而在荒地上，贫苦的聚落会难得奢侈地烧起柴火取暖。比起让名字出现在新年的烟花里，我更高兴自己曾为人送过薪柴。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "早上好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "当我被封为耀骑士的时候，商业联合会其实并不欣赏我的光芒，所幸后来闪灵和罗德岛都不认为我太过刺眼。以这片大地之广阔，我想即使是太阳的光辉于它而言也一分不多。我愿为之竭尽全力。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

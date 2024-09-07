@@ -2,9 +2,10 @@
   "name": "但书",
   "charaKey": "char_4032_provs",
   "images": [
-    "https://prts.wiki/images/c/c1/立绘_但书_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/78/立绘_但书_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/44/立绘_但书_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/c/c1/%E7%AB%8B%E7%BB%98_%E4%BD%86%E4%B9%A6_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/78/%E7%AB%8B%E7%BB%98_%E4%BD%86%E4%B9%A6_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/44/%E7%AB%8B%E7%BB%98_%E4%BD%86%E4%B9%A6_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cb/%E7%AB%8B%E7%BB%98_%E4%BD%86%E4%B9%A6_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -303,7 +304,7 @@
         },
         {
           "language": "韩文",
-          "content": "처음 뵙겠습니다. 이번에 새로 입사한 법률 고문인, 데슈치입니다. 코드 네임이 필요하다면 '프로바이조'라고 불러 주세요. 먼저 말씀드리자면, 다른 회사들에서 흔히 써먹는 '코드 네임으로 직원의 신분을 애매하게 흐리는 방법'은 제게 통하지 않는답니다."
+          "content": "처음 뵙겠습니다. 이번에 새로 입사한 법률 고문인, 데슈치입니다. 코드네임이 필요하다면 '프로바이조'라고 불러 주세요. 먼저 말씀드리자면, 다른 회사들에서 흔히 써먹는 '코드네임으로 직원의 신분을 애매하게 흐리는 방법'은 제게 통하지 않는답니다."
         },
         {
           "language": "繁体中文",
@@ -910,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "本想在年终的时候买点礼物犒劳一下自己，结果发现自己居然没有存下一分钱。在过去，这可真是无法想象的事......算啦，到了新的一年，也不该总惦记着以前的事了。博士，新年快乐！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +959,32 @@
         {
           "language": "繁体中文",
           "content": "早上好博士，很高興通知您，今天羅德島也沒有陷入法律糾紛呢。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "收治无法被治愈的病人，感觉就像接手明知不可能打赢的官司呢......不过我也相信，唯结果论是不能正确衡量事物的价值的。博士，请继续努力吧。其他讨厌的竞争对手，就交给我来解决。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

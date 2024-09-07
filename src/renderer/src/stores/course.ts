@@ -13,6 +13,8 @@ export const useCourseStore = defineStore(
     const thisCourse = ref<string>('')
     const nextCourse = ref<string>('')
 
+    const pptPath = ref<{ subject: string; path: string }[]>([])
+
     function updateCourseTable(
       courses: {
         time: { start: { hour: number; minute: number }; end: { hour: number; minute: number } }
@@ -40,7 +42,8 @@ export const useCourseStore = defineStore(
       speIndexOnStart,
       specialDay,
       thisCourse,
-      nextCourse
+      nextCourse,
+      pptPath
     }
   },
   { persist: true }

@@ -2,8 +2,8 @@
   "name": "摩根",
   "charaKey": "char_154_morgan",
   "images": [
-    "https://prts.wiki/images/5/59/立绘_摩根_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d1/立绘_摩根_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/59/%E7%AB%8B%E7%BB%98_%E6%91%A9%E6%A0%B9_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d1/%E7%AB%8B%E7%BB%98_%E6%91%A9%E6%A0%B9_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -773,6 +773,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新的一年，希望维娜开开心心，汉娜少惹麻烦，达格达更加自在。对了，博士，我也希望你......嗯，少点工作，多一些自己的时间。这样的话，我就能带你在伦蒂尼姆好好逛逛啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -791,6 +813,28 @@
         {
           "language": "韩文",
           "content": "박사, 또 만나다니, 이런 우연이 다 있네!"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "诺伯特区有很多感染者，他们和失业的水手、老工人，还有我们这种小混混一样，都是伦蒂尼姆不想要的人。而在这里......大家都有平等的工作机会。唉，为什么外面不能和罗德岛一样呢？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

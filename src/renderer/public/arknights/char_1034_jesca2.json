@@ -2,8 +2,8 @@
   "name": "涤火杰西卡",
   "charaKey": "char_1034_jesca2",
   "images": [
-    "https://prts.wiki/images/3/3b/立绘_涤火杰西卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_涤火杰西卡_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/3/3b/%E7%AB%8B%E7%BB%98_%E6%B6%A4%E7%81%AB%E6%9D%B0%E8%A5%BF%E5%8D%A1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E6%B6%A4%E7%81%AB%E6%9D%B0%E8%A5%BF%E5%8D%A1_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -34,7 +34,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクターのご不在時に、デスクにある書類のお片付けをやってみたんですが……恥ずかしいながら、こういう仕事はちっとも上達していないみたいです。"
+          "content": "ドクターのご不在時に、デスクにある書類のお片付けをやってみたんですが……恥ずかしながら、こういう仕事はちっとも上達していないみたいです。"
+        },
+        {
+          "language": "英文",
+          "content": "While you were out, I tried to sort the documents on your desk for you... It shames me to admit it, but... I haven't made much progress when it comes to desk work."
+        },
+        {
+          "language": "韩文",
+          "content": "박사님께서 자리에 안 계실 때, 책상 위의 문서를 정리해 보려고 했는데요…… 말씀드리기 부끄럽지만, 이런 일들은 어찌해도 늘지 않은 것 같네요."
         }
       ]
     },
@@ -48,7 +56,15 @@
         },
         {
           "language": "日文",
-          "content": "部屋に戻る時に、フランカ先輩とリスカム先輩に再会したんです。ずっと会ってなかったのに、話してみたら、全然そんな感じがしなくて……ドクター、も、もしよければ、先輩たちの任務に、私も加えていただけないでしょうか。"
+          "content": "部屋に戻る時に、フランカ先輩とリスカム先輩に再会したんです。ずっと会ってなかったのに、話してみたら全然そんな感じがしなくて……ドクター、も、もしよければ、先輩たちの任務にわたしも加えていただけないでしょうか？"
+        },
+        {
+          "language": "英文",
+          "content": "I ran into Franka and Liskarm on my way to the dorms. Even though I hadn't seen them in so long, we talked like we were never apart... Um, Doctor, do you think, maybe, I c-could apply to serve on missions with them?"
+        },
+        {
+          "language": "韩文",
+          "content": "숙소로 돌아가던 길에 프란카 선배랑 리스캄 선배를 만났어요. 오랜만에 보는 건데도 대화가 그렇게 어색하지 않더라고요…… 박사님, 호, 혹시 괜찮다면, 선배들의 임무에 저도 함께할 수 있을까요?"
         }
       ]
     },
@@ -62,7 +78,15 @@
         },
         {
           "language": "日文",
-          "content": "今はもう昔みたいに懐に余裕はありません。開拓地行きを決めた件で、父と何度も喧嘩になってしまて、それから家族信託からお金を下ろすのはやめたんです。でもまあ、開拓地では自分で稼げますし、少なくとも装備の修理代くらいはどうにかなるので大丈夫ですよ。"
+          "content": "今はもう昔みたいに懐に余裕はありません。開拓地行きを決めた件で、父と何度も喧嘩になってしまって、それから……家族信託からお金を下ろすのはやめたんです。でもまあ……開拓地では自分で稼げますし、少なくとも装備の修理代くらいはどうにかなるので大丈夫ですよ。"
+        },
+        {
+          "language": "英文",
+          "content": "I don't have as much money on hand these days. I argued with my father a lot about pioneering in the barrenlands. And so... I stopped drawing from the family trust fund. But I can still earn some money out there pioneering, at least enough to maintain my equipment."
+        },
+        {
+          "language": "韩文",
+          "content": "이제는 전처럼 지갑 사정이 넉넉하진 않아요, 개척지에 가는 일 때문에 아버지랑 여러 번 다퉜거든요. 그 뒤로는…… 가족 신탁에서 돈을 인출한 적이 없어요. 그래도 괜찮아요, 개척지에서는 스스로 돈을 벌 수 있고, 적어도 장비를 수리할 돈은 아직 있거든요."
         }
       ]
     },
@@ -76,7 +100,15 @@
         },
         {
           "language": "日文",
-          "content": "小さい頃は、家族みんな忙しくしていたので、お家で遊んでくれたのは、定年した祖父だけでした。私を喜ばせるために、軍にいた時の出来事なんかを話してくれて……本当は、いつもフラッシュバックで苦しんでいたのに、それを、面白がしか話して、笑わせてくれたんです。"
+          "content": "小さい頃は家族みんな忙しくしていたので、お家で遊んでくれたのは定年した祖父だけでした。わたしを喜ばせるために、軍にいた時の出来事なんかをお話ししてくれて……本当はいつもフラッシュバックで苦しんでいたのに、それを面白おかしく話して笑わせてくれたんです。"
+        },
+        {
+          "language": "英文",
+          "content": "When I was little, everyone always had so much on their plates. Only my retired grandfather could stay at home with me. He would tell me stories about his time in the army, so that he can cheer me up this way. Even though his past never stopped tormenting him, he was still willing to fluff it into tidy little stories, just to make me smile."
+        },
+        {
+          "language": "韩文",
+          "content": "어릴 적엔, 다른 가족들은 모두 바빠서 은퇴하신 할아버지만이 저랑 같이 있어 주셨어요. 할아버지는 군대에서 있었던 일들을 얘기해 주시면서 절 돌봐주셨는데…… 본인은 늘 그때의 기억 때문에 괴로워하셨으면서 저에겐 그때의 일들을 마치 무용담인 양 꾸며 절 웃게 해주셨어요."
         }
       ]
     },
@@ -90,7 +122,15 @@
         },
         {
           "language": "日文",
-          "content": "以前社交パーティーで、ビクトリアでの戦争の話題になった時、ほんの少し実体験を話したら、場をすっかりしらけさせてしまったことがありました。あの時、やっと理解したんです。BSWの傭兵たちが、人前で安易に自分の話をしないのは、こういう理由なんだって。"
+          "content": "以前社交パーティーでヴィクトリアでの戦争の話題になった時、ほんの少し実体験を話したら、場をすっかりシラけさせてしまったことがありました。あの時やっと理解したんです。BSWの傭兵たちが人前で安易に自分の話をしないのは、こういう理由なんだって。"
+        },
+        {
+          "language": "英文",
+          "content": "There was a soirée a while ago where someone brought up the war in Victoria. I chimed in with my own experiences. Only a few words, but enough to ruin everyone's time. You know, Doctor, that was the moment I finally realized why Blacksteel mercenaries rarely talk about themselves."
+        },
+        {
+          "language": "韩文",
+          "content": "저번에 사교 파티에서 빅토리아의 전쟁 얘기가 나오길래, 제가 직접 겪었던 일들을 살짝 꺼냈더니 분위기가 싸해졌던 적이 있어요. 그제야 전, 왜 블랙스틸의 용병들이 함부로 자기 얘기를 꺼내지 않는지 알게 되었죠."
         }
       ]
     },
@@ -104,7 +144,15 @@
         },
         {
           "language": "日文",
-          "content": "一応席は未だBSWに残っていますが、もう随分の間、傭兵の仕事をしていないんです。いえ、傭兵の道を選んだことは後悔していませんが、何時も何時も何か起きてから駆けつけることしかできないのが嫌になったんです。これからは、最初から何かをお守り抜ければと思っています。"
+          "content": "一応籍はまだBSWに残っていますが、もう随分の間傭兵の仕事をしていないんです。いえ、傭兵の道を選んだことは後悔していませんが、いつもいつも、何か起きてから駆けつけることしかできないのが嫌になったんです。これからは、最初から何かを守り抜ければと思っています。"
+        },
+        {
+          "language": "英文",
+          "content": "I'm nominally still employed by Blacksteel, but it's been a while since I've done any mercenary work. No, it's not that I regret the decision I made back then; I'm just tired of responding to disaster, always one step behind. This time, I want to be there to protect something from the beginning."
+        },
+        {
+          "language": "韩文",
+          "content": "허울뿐이지만 아직 블랙스틸에서의 직함이 남아있어요. 하지만 용병 일을 하지 않은지는 사실 꽤 오래됐죠. 아뇨, 그때의 선택을 후회하는 게 아니라, 그저 비극이 벌어진 뒤에야 뒤늦게 달려가는 그런 상황이 싫어졌을 뿐이에요. 이번에는, 처음부터 뭔가를 지키고 싶어요."
         }
       ]
     },
@@ -118,7 +166,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクター……少しだけ訓練室に付き合ってくださいませんか。訓練の付き添いではなく、えっと……私、訓練室に行くと、色んな新人オペレーターにアドバイスをお願いされるので、一人で皆さんの相手をしていると、ちょっと緊張しちゃって。"
+          "content": "ドクター……少しだけ訓練室に付き合ってくださいませんか？訓練の付き添いではなく、えっと……わたし、訓練室に行くといろんな新人オペレーターにアドバイスをお願いされるので、一人で皆さんの相手をしていると、ちょっと緊張しちゃって。"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor... Would you mind coming to the training room with me? I don't need a spotter, it's just... new operators keep coming to me for advice, and facing them alone makes me feel a— a little nervous."
+        },
+        {
+          "language": "韩文",
+          "content": "박사님…… 혹시 저랑 같이 잠깐 훈련실에 가주실 수 있으실까요? 같이 훈련하자는 건 아니고, 그…… 훈련실에 가면 신입 오퍼레이터분들이 항상 저한테 조언을 구하곤 하는데…… 혼자서는 조금 기, 긴장이 돼서요."
         }
       ]
     },
@@ -132,7 +188,15 @@
         },
         {
           "language": "日文",
-          "content": "えっと……このブローチですか。元々はアクセサリーでもなんでもなくて、実は去年、太ももに刺さった鉄の破片なんです。手術で取ったあと、捨てずにブローチにしてみたものなんですが……ちょ、ちょっと変ですよね。私、一体何を考えてたんでしょうね。"
+          "content": "えっと……このブローチですか？元々はアクセサリーでもなんでもなくて、実は去年太腿に刺さった鉄の破片なんです。手術で取った後、捨てずにブローチにしてみたものなんですが……ち、ちょっと変ですよね。わたし、いったい何を考えてたんでしょうね。"
+        },
+        {
+          "language": "英文",
+          "content": "Oh... You want to know about the flower on my chest? Actually... it wasn't an accessory to begin with. It was a shard of metal that got lodged in my leg. After it was surgically removed, I... decided to turn it into a buttonhole flower instead of throwing it away. Y-Yeah, I guess it is kinda weird. I'm not sure what I was thinking."
+        },
+        {
+          "language": "韩文",
+          "content": "아…… 이 브로치요? 이건 원래 액세서리가 아니라, 작년에 제 허벅지에 박혔던 쇳조각이에요. 수술로 꺼낸 뒤에 버리지 않고 브로치로 만들었는데. 이, 이상하죠? 저도 그때 제가 무슨 생각이었는지 모르겠어요."
         }
       ]
     },
@@ -146,7 +210,15 @@
         },
         {
           "language": "日文",
-          "content": "今ではもう泣くのは恥ずかしいことだとは思いません……涙脆いのは別に恥ずべきことじゃないって思えるようになったんです。言葉にならない辛い思いを涙で表すのは、人なら当たり前。そんなことで自分を卑下しなくたっていい。そうですよね、ドクター？"
+          "content": "今ではもう泣くのを恥ずかしいことだとは思いません……涙もろいのは別に恥ずべきことじゃないって思えるようになったんです。言葉にならない辛い思いを涙で表すのは、人なら当たり前、そんなことで自分を卑下しなくたっていい……そうですよね、ドクター。"
+        },
+        {
+          "language": "英文",
+          "content": "I know now that there's no shame in crying... or having a soft heart. If you're sad about something you can't put into words, why not express your feelings with tears? It's part of being human, so there's nothing to be ashamed of.  Um... Am I right, Doctor?"
+        },
+        {
+          "language": "韩文",
+          "content": "이제는 더 이상 우는 게 부끄럽지 않아요…… 마음이 여린 건 부끄러워할 일이 아닌걸요. 말로 표현할 수 없는 슬픔을 눈물로 표현하는 건, 사람이라면 누구나 다 그러는 거니까 부끄러운 일이 아닌 거잖아요. 그렇죠, 박사님?"
         }
       ]
     },
@@ -160,7 +232,15 @@
         },
         {
           "language": "日文",
-          "content": "お会いするたびに、疲労の色が濃くなっているように見えますが、大丈夫ですか、ドクター？"
+          "content": "お会いする度に、疲労の色が濃くなっているように見えますが……大丈夫ですか、ドクター？"
+        },
+        {
+          "language": "英文",
+          "content": "You look a little worse for wear every time I see you... Are you doing alright these days, Doctor?"
+        },
+        {
+          "language": "韩文",
+          "content": "뵐 때마다 더 피곤해 보이시는 것 같은데…… 괜찮으세요, 박사님?"
         }
       ]
     },
@@ -174,7 +254,15 @@
         },
         {
           "language": "日文",
-          "content": "ご無沙汰しています、ドクター。未だお手伝いさせていただけるなんてすごく嬉しいです。はい、わたしも昔のままじゃありませんよ。もしお時間に余裕があれば、じっくりお話させて欲しいです……"
+          "content": "ご無沙汰しています、ドクター。またお手伝いさせていただけるなんてすごく嬉しいです。はい、わたしも昔のままじゃありませんよ。もしお時間に余裕があれば、じっくりお話しさせてほしいです……"
+        },
+        {
+          "language": "英文",
+          "content": "It's been a while since we last met, Doctor. I'm glad there's still something I can do for you. That's right, I have changed a lot. If you could find the time, I'd love to sit down with you and catch up..."
+        },
+        {
+          "language": "韩文",
+          "content": "정말 오랜만이네요, 박사님. 다시 박사님께 도움을 드릴 수 있게 되어 기뻐요. 네, 저도 많이 변했답니다. 시간 괜찮으시면 박사님이랑 같이 얘기를 나누고 싶어요……"
         }
       ]
     },
@@ -188,7 +276,15 @@
         },
         {
           "language": "日文",
-          "content": "さっき昔の自分の作戦記録も出てきたんですが、これを見れば、今後気をつけるべきミスを振り返えることくらいはできますので、それなりに役に立つと思います。はあ、あの時の私たら、なんだか……鈍臭いなぁ。"
+          "content": "さっき昔の自分の作戦記録も出てきたんですが、これを見れば今後気をつけるべきミスを振り返ることくらいはできますので、それなりに役に立つと思います。はぁ、あの時のわたしったら、なんだか……どんくさいなぁ。"
+        },
+        {
+          "language": "英文",
+          "content": "I just dug up my old combat records, which proved to be pretty useful. Comparing my before-and-after, I at least know what mistakes I shouldn't be making again. Ugh, I really looked like a... bumbling idiot back then."
+        },
+        {
+          "language": "韩文",
+          "content": "방금 제 옛날 작전 기록을 봤는데, 나름 유용한 것 같아요. 앞으로 어떤 실수를 조심해야 할지 돌아볼 수 있었거든요. 하아, 저 때의 전 다시 봐도 참…… 바보 같았네요."
         }
       ]
     },
@@ -202,7 +298,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクターに褒めていただけれるだけで、すごく嬉しいです。報酬なんて二の次ですよ。"
+          "content": "ドクターに褒めていただけるだけですごく嬉しいです。褒賞なんて二の次ですよ。"
+        },
+        {
+          "language": "英文",
+          "content": "I'm just glad to receive your acknowledgement, Doctor. The rewards are secondary."
+        },
+        {
+          "language": "韩文",
+          "content": "보상은 둘째치고, 박사님이 칭찬해 주시는 것만으로도 저는 정말 기뻐요."
         }
       ]
     },
@@ -216,7 +320,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクター、未だ私を昇進させてくださるんですか。それなら、ちょっとしたお願いをしてもいいですか。無茶なことは言いませんから……ハグしてもいいですか。"
+          "content": "ドクター、またわたしを昇進させてくださるんですか？それなら……ちょっとしたお願いをしてもいいですか？無茶なことは言いませんから……ハグしてもいいですか？"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, are you giving me a promotion? Then, can I... make a teensy tiny extra request? It's nothing big, just... Can I... have a hug?"
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 저를 또 승진시켜 주시려고요? 그럼…… 혹시 작은 부탁 하나 드려도 될까요? 과한 부탁은 아니에요…… 하…… 한 번만 안아 주시겠어요?"
         }
       ]
     },
@@ -230,7 +342,15 @@
         },
         {
           "language": "日文",
-          "content": "指揮官、応答を願います。こちらジェシカ。前線に到着。作戦スタンバイ。"
+          "content": "指揮官応答願います。こちらジェシカ、前線に到着。作戦スタンバイ。"
+        },
+        {
+          "language": "英文",
+          "content": "Come in, Commander, this is Jessica. On the line and ready to roll."
+        },
+        {
+          "language": "韩文",
+          "content": "지휘관님, 응답 바랍니다. 여기는 제시카, 전선에 도착했습니다. 작전 대기 중."
         }
       ]
     },
@@ -244,7 +364,15 @@
         },
         {
           "language": "日文",
-          "content": "各位、こちらに集合してください。"
+          "content": "各員、こちらに集合してください。"
+        },
+        {
+          "language": "英文",
+          "content": "Rally on me."
+        },
+        {
+          "language": "韩文",
+          "content": "이쪽으로 집합해 주세요."
         }
       ]
     },
@@ -259,6 +387,14 @@
         {
           "language": "日文",
           "content": "あと六分で到着予定です。"
+        },
+        {
+          "language": "英文",
+          "content": "ETA six mikes."
+        },
+        {
+          "language": "韩文",
+          "content": "도착 예정 시간까지 앞으로 6분."
         }
       ]
     },
@@ -273,6 +409,14 @@
         {
           "language": "日文",
           "content": "敵を視認しました、オーバー。"
+        },
+        {
+          "language": "英文",
+          "content": "Hostiles sighted, over."
+        },
+        {
+          "language": "韩文",
+          "content": "시야 내 적 출현, 이상."
         }
       ]
     },
@@ -287,6 +431,14 @@
         {
           "language": "日文",
           "content": "位置に着きました。"
+        },
+        {
+          "language": "英文",
+          "content": "In position."
+        },
+        {
+          "language": "韩文",
+          "content": "위치에 도착했습니다."
         }
       ]
     },
@@ -301,6 +453,14 @@
         {
           "language": "日文",
           "content": "ラジャー。"
+        },
+        {
+          "language": "英文",
+          "content": "Roger, wilco."
+        },
+        {
+          "language": "韩文",
+          "content": "롸저."
         }
       ]
     },
@@ -314,7 +474,15 @@
         },
         {
           "language": "日文",
-          "content": "私が最前線に立ちます。"
+          "content": "わたしが最前線に立ちます。"
+        },
+        {
+          "language": "英文",
+          "content": "I'm headed into the thick of it."
+        },
+        {
+          "language": "韩文",
+          "content": "제가 최전방에 서겠습니다."
         }
       ]
     },
@@ -328,7 +496,15 @@
         },
         {
           "language": "日文",
-          "content": "皆さんが後ろにいる限り、私は一歩も引きません。"
+          "content": "皆さんが後ろにいる限り、わたしは一歩も引きません。"
+        },
+        {
+          "language": "英文",
+          "content": "With all of you behind me, I won't take a single step back."
+        },
+        {
+          "language": "韩文",
+          "content": "여러분들이 제 뒤에 있는 한, 전 한 발자국도 물러서지 않겠습니다."
         }
       ]
     },
@@ -342,7 +518,15 @@
         },
         {
           "language": "日文",
-          "content": "ターゲット、ロックを……"
+          "content": "ターゲット、ロックオン……"
+        },
+        {
+          "language": "英文",
+          "content": "Drawing a bead on the target."
+        },
+        {
+          "language": "韩文",
+          "content": "타겟 조준……"
         }
       ]
     },
@@ -357,6 +541,14 @@
         {
           "language": "日文",
           "content": "もうそれ以上近づかないで……"
+        },
+        {
+          "language": "英文",
+          "content": "Don't come any closer…"
+        },
+        {
+          "language": "韩文",
+          "content": "더 이상 다가오지 말아 줘……"
         }
       ]
     },
@@ -371,6 +563,14 @@
         {
           "language": "日文",
           "content": "射撃許可を求めます……"
+        },
+        {
+          "language": "英文",
+          "content": "Requesting permission to fire."
+        },
+        {
+          "language": "韩文",
+          "content": "발포 허가 바랍니다……"
         }
       ]
     },
@@ -385,6 +585,14 @@
         {
           "language": "日文",
           "content": "報告、ターゲット……オールクリア。"
+        },
+        {
+          "language": "英文",
+          "content": "Be adviced. Target… eliminated."
+        },
+        {
+          "language": "韩文",
+          "content": "보고드립니다, 타겟…… 제거."
         }
       ]
     },
@@ -399,6 +607,14 @@
         {
           "language": "日文",
           "content": "まだ気は抜けません……この先にも新たな戦いが待ち受けているはずですから。"
+        },
+        {
+          "language": "英文",
+          "content": "No resting on your laurels now... We've got more fighting ahead of us."
+        },
+        {
+          "language": "韩文",
+          "content": "아직 긴장을 늦춰선 안 돼요…… 저 앞에는 분명 새로운 전투가 저희를 기다리고 있을 테니까요."
         }
       ]
     },
@@ -412,7 +628,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ふぅ。あ、危なかった……なんとか持ち直せて本当によかった。すみません、ドクター。す、少しだけ時間をください……気持ちを整理しますから。"
+        },
+        {
+          "language": "英文",
+          "content": "That was close, I almost... A-Anyway, good thing I managed to pull through in the end... Sorry, Doctor. Please, give me a minute. I need to get my emotions under control."
+        },
+        {
+          "language": "韩文",
+          "content": "하아. 아, 아슬아슬했다…… 정말 다행이야, 마지막까지 버텨냈어. 죄송해요, 박사님. 조금, 조금만 시간을 주세요, 금방 추스를게요."
         }
       ]
     },
@@ -426,7 +650,15 @@
         },
         {
           "language": "日文",
-          "content": "小さな失敗は、そこまで気にしなくていいと思います……一人も負傷者が出なかっただけで、もう十分な戦果ですよ。"
+          "content": "小さな失敗は……そこまで気にしなくていいと思います。一人も負傷者が出なかっただけで、もう十分な戦果ですよ。"
+        },
+        {
+          "language": "英文",
+          "content": "I think... a minor setback is no big deal. It's already enough that none of our people got hurt."
+        },
+        {
+          "language": "韩文",
+          "content": "작은 실패는…… 그렇게 신경 쓰지 않아도 된다고 생각해요. 한 명도 다치지 않은 것만으로 이미 충분히 괜찮은 결과인걸요."
         }
       ]
     },
@@ -440,7 +672,15 @@
         },
         {
           "language": "日文",
-          "content": "ドクター、あのう……いえ、謝っても仕方ありませんよね……今回の失敗による損失は、次の任務で倍返してみせます。"
+          "content": "ドクター、あの――いえ、謝っても仕方ありませんよね……今回の失敗による損失は、次の任務で挽回してみせます。"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, an apology doesn't even begin to cut it... I'll try to make up for this failure on subsequent operations."
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 죄송…… 아뇨, 사과는 의미가 없겠죠…… 이번 실패로 인한 손실은, 다음 임무에서 만회해 보겠습니다."
         }
       ]
     },
@@ -455,6 +695,14 @@
         {
           "language": "日文",
           "content": "この船で過ごした日々が懐かしいです。ずっとここにいられたらいいのに……"
+        },
+        {
+          "language": "英文",
+          "content": "How I miss the time I spent on this landship... If only I could've stayed longer..."
+        },
+        {
+          "language": "韩文",
+          "content": "이 함선에서 지내던 나날들이 그리워요. 계속 여기에 남아 있을 수 있다면 좋을 텐데……"
         }
       ]
     },
@@ -469,6 +717,14 @@
         {
           "language": "日文",
           "content": "どうしましたか、ドクター。"
+        },
+        {
+          "language": "英文",
+          "content": "Go ahead, Doctor."
+        },
+        {
+          "language": "韩文",
+          "content": "말씀하세요, 박사님."
         }
       ]
     },
@@ -482,7 +738,15 @@
         },
         {
           "language": "日文",
-          "content": "さっき握手した時に、不思議な顔をされていましたが……も、もしかして、私の手の胼胝で驚かせてしまいましたか。"
+          "content": "さっき握手した時に、不思議な顔をされていましたが……も、もしかしてわたしの手のタコで驚かせてしまいましたか？"
+        },
+        {
+          "language": "英文",
+          "content": "You looked a little surprised shaking my hand just now... D-Did my calluses scare you, Doctor?"
+        },
+        {
+          "language": "韩文",
+          "content": "방금 악수할 때 잠깐 흠칫하시던데…… 호, 혹시 제 손의 굳은살 때문에 놀라셨나요?"
         }
       ]
     },
@@ -497,6 +761,36 @@
         {
           "language": "日文",
           "content": "アークナイツ。"
+        },
+        {
+          "language": "英文",
+          "content": "Arknights."
+        },
+        {
+          "language": "韩文",
+          "content": "명일방주."
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，能和您一起坐在这里互相道声新年快乐，就已经很好了。记得有一年在玻利瓦尔，与我一起度过新年的，是一挺这——么高的铳，嗯，比我还高。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     },
@@ -511,6 +805,36 @@
         {
           "language": "日文",
           "content": "お久しぶりです、ドクター。"
+        },
+        {
+          "language": "英文",
+          "content": "Glad to see you again, Doctor."
+        },
+        {
+          "language": "韩文",
+          "content": "오랜만이에요, 박사님."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "从前，我总关注自己将来要达成什么目标，获得什么成果，但这些年的经历却打破了我所有对未来的想象。能让身边的人过得幸福有尊严，那就足够了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

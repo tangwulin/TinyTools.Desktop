@@ -2,10 +2,10 @@
   "name": "泥岩",
   "charaKey": "char_311_mudrok",
   "images": [
-    "https://prts.wiki/images/8/80/立绘_泥岩_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/72/立绘_泥岩_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/28/立绘_泥岩_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_泥岩_skin2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/80/%E7%AB%8B%E7%BB%98_%E6%B3%A5%E5%B2%A9_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/72/%E7%AB%8B%E7%BB%98_%E6%B3%A5%E5%B2%A9_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/28/%E7%AB%8B%E7%BB%98_%E6%B3%A5%E5%B2%A9_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0f/%E7%AB%8B%E7%BB%98_%E6%B3%A5%E5%B2%A9_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -919,6 +919,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？是这样，又过了一年了，我......其实过去并不喜欢这种辞旧迎新的日子。失去的总比得到的要印象深刻得多，不过现在也许不太一样了，嗯，我可以参加宴会吗？博士？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -941,6 +967,32 @@
         {
           "language": "繁体中文",
           "content": "您好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "最初，我只是想让自己能够活下来。但不知不觉地，带领同伴们的责任也落在了我的肩上。我想给自己，还有同伴们找到一个家。博士，和罗德岛同行的话，我可以找到属于我们的家吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

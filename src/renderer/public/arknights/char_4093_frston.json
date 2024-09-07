@@ -2,7 +2,7 @@
   "name": "Friston-3",
   "charaKey": "char_4093_frston",
   "images": [
-    "https://prts.wiki/images/4/46/立绘_Friston-3_1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/4/46/%E7%AB%8B%E7%BB%98_Friston-3_1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -684,6 +684,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "节日的意义在于怀念与憧憬，祝你快乐，博士。可惜我已经没有能够怀念的过去，也没有值得憧憬的未来了......欸，“正义骑士号”，THRM-EX，你们干嘛？博士，是你叫他们来的吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -702,6 +724,28 @@
         {
           "language": "韩文",
           "content": "안녕하신가, 박사."
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "凯尔希一遍遍提起那些我不记得的“变故”，是希望我能够接受，我知道。我了解自己现在的情况，我会留在罗德岛，但未来该怎么样，我希望自己找到答案......不是通过“运算”。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
         }
       ]
     }

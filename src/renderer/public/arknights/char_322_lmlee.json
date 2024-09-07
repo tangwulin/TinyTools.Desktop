@@ -2,9 +2,10 @@
   "name": "老鲤",
   "charaKey": "char_322_lmlee",
   "images": [
-    "https://prts.wiki/images/5/57/立绘_老鲤_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_老鲤_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/00/立绘_老鲤_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/5/57/%E7%AB%8B%E7%BB%98_%E8%80%81%E9%B2%A4_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1f/%E7%AB%8B%E7%BB%98_%E8%80%81%E9%B2%A4_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/00/%E7%AB%8B%E7%BB%98_%E8%80%81%E9%B2%A4_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/77/%E7%AB%8B%E7%BB%98_%E8%80%81%E9%B2%A4_skin2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -1050,6 +1051,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "上了年纪，差点忘了今天也是节日。那我也说两句吉祥话，讨个彩头？祝罗德岛生意兴——呃，不对，“但愿人无恙，宁可药蒙尘”嘛，还是希望大家平安的好。新的一年，一定要平安健康啊。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "上了年纪，差点连今天是咩日子都唔记得了。那我也说两句讨个彩头？祝罗德岛生意兴——呃，不对，“但愿人无恙，宁可药蒙尘”才是，在这里祝愿大家平安好一些。新的一年，一定要平安健康啊。"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1076,6 +1107,36 @@
         {
           "language": "中文-方言",
           "content": "欢迎光临鲤氏侦探事务所，请问有什么委托......嗯？我还以为是谁呢，原来是博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "“开水仙人掌”“跃龙门”，还有“一苇渡江”，尝尝如何？这几道菜，平时可不易吃到。今天算犒劳大家。总是紧绷着精神可不行，偶尔也得放松放松。辛苦了博士，你们做的事，值得敬重。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "“滚水仙人掌”，“跃龙门”，还有“一苇渡江”，试下吖？这几道菜，平时冇咩可能食到。今天就当作是慰劳一下大家吧。整天紧绷精神可不行，有时都要放松下。辛苦你了博士，你们的事业，值得尊敬。"
         }
       ]
     }

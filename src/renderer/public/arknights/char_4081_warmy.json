@@ -2,8 +2,8 @@
   "name": "温米",
   "charaKey": "char_4081_warmy",
   "images": [
-    "https://prts.wiki/images/1/15/立绘_温米_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/20/立绘_温米_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/1/15/%E7%AB%8B%E7%BB%98_%E6%B8%A9%E7%B1%B3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/20/%E7%AB%8B%E7%BB%98_%E6%B8%A9%E7%B1%B3_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -13,6 +13,14 @@
     {
       "language": "中文-普通话",
       "base": "voice_cn/char_4081_warmy"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4081_warmy"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4081_warmy"
     }
   ],
   "voiceList": [
@@ -26,7 +34,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "はいは～い、「ぬくもり」を届けに来ましたよ～。え？もぉ、ドクターさん！ランナお姉ちゃんの真似しちゃダメです！鍋蓋ちゃん禁止！"
+        },
+        {
+          "language": "英文",
+          "content": "Coming, coming! Warmy coming in with warmth! Huh...? Sheesh, Doctor! No calling me a little potlid like Lanns!"
+        },
+        {
+          "language": "韩文",
+          "content": "네네~ 워미가 '온기'를 전하러 왔어요. 앗? 박사님! 라나 언니 따라 하시면 안 돼요! 절 냄비 뚜껑이라 부르는 건 금지예요, 금지!"
         }
       ]
     },
@@ -40,7 +56,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "どうですかドクターさん、いい匂いがするでしょう？えへへ、梨と季節野菜のスープを作ってるんですよ。弱火でじっくりことことです！前に話したでしょう？いっちばん美味しいご飯を作って、みんなの鉱石病を治すんです！ふー、ふー……これでもう熱くないはずです。さ、飲んでみてください。急がないとみんなに食べ尽くされちゃいますよ！"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, do you smell that? Hehe, it's the smell of my sweet pear and vegetables soup, slow cooked to perfection! I said it before, I'm gonna cook the best meals to cure everyone's Oripathy! Huff, huff—It's not so hot anymore. Give it a try, won'tcha? If you don't, everyone else will eat it right up!"
+        },
+        {
+          "language": "韩文",
+          "content": "어때요, 박사님? 향긋하죠? 헤헤, 달콤한 배랑 야채를 넣어서 약불에 천천히~ 오래 끓인 수프예요! 제가 말씀드렸잖아요, 세상에서 가장 맛있는 밥을 만들어서 모두의 광석병을 치료할 거라고요! 후우, 후우…… 이제 안 뜨거울 거예요, 자 어서 드셔 보세요. 아니면 다른 분들이 다 먹어버릴지도 몰라요!"
         }
       ]
     },
@@ -54,7 +78,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ロドスってとーっても大きなトレーラーで、工場とはちょっと違う動力炉が積まれてるんですね……さっき動力エリアに行ったら、ボイラーのおじさんに迷子だと勘違いされて、頑なに送ってくって言われて連れ戻されちゃったんです。全然平気だったのになぁ。わたし、熱い場所には慣れてるんですよ。"
+        },
+        {
+          "language": "英文",
+          "content": "Rhodes Island is such a big, biiiig transport, and it has a kinda different furnace than the one at the factory... Oh, I just went to the engine level. The boiler man there thought I was lost and took me back up. I was fine down there, though. I'm used to the heat."
+        },
+        {
+          "language": "韩文",
+          "content": "로도스 아일랜드는 엄~청 큰 수송 차량 같아요. 공장이랑은 다르게 생긴 동력로도 있고요…… 근데 아까 동력층에 갔더니, 거기 계신 아저씨께서 제가 길을 잃은 줄 알고 도로 데려다 주시지 뭐예요. 전 더운 곳에는 익숙한 편이라 아무렇지도 않았는데 말이죠."
         }
       ]
     },
@@ -68,7 +100,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ドクターさん、早く食べちゃってください。わたしに遠慮はいりませんよ。ご飯を美味しそうに食べている人を見ると、わたしも嬉しくなるんです！あれ、どうして別のお皿に？そういうことなら、綺麗に「片付ける」としましょうか！あむ――え？食べないやつを除けただけですか？別に気にしませんよ。"
+        },
+        {
+          "language": "英文",
+          "content": "Come, Doctor. Hurry up and eat. No need to worry about me. It cheers me right up to see people enjoying their food. Aw, you still want to share with me? Okay, I'll clean this plate! Om nom nom... Wha? You were just picking out things you don't want to eat? Well alright then."
+        },
+        {
+          "language": "韩文",
+          "content": "어서 드세요, 박사님. 전 신경 쓰지 않으셔도 돼요. 다른 분들이 맛있게 식사하시는 모습만 봐도 저는 기분이 좋아지거든요! 어라, 왜 덜어 주시는 거예요? 좋아요, 그럼 제가 마무리 '청소'할게요! 냐암~ 네? 먹기 싫은 걸 따로 골라낸 거였다고요? 뭐, 그래도 괜찮아요."
         }
       ]
     },
@@ -82,7 +122,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "このブレスレットはサカビンノキの葉で編んだんです。しばらくは青い状態を保てるんですよ。えへへ、わたしのアーツをこんなふうに使えるなんて思わなかったでしょう！まあ、保つって言ってもほんのちょっとで、長くはできませんから、大丈夫です。ずっと元気なままだと、疲れちゃいますからね。はい、枯れるまでを少しだけゆっくりにしましょう。"
+        },
+        {
+          "language": "英文",
+          "content": "I made this bracelet from bottle tree leaves. I can keep them fresh for a short while. Hehe, didn't think my Arts could be used like this, did you? Oh, Don't worry, it'll only be for a short while. I won't keep it going for too long, or they'll get tired, too. We should let them be. The withering will come slowly."
+        },
+        {
+          "language": "韩文",
+          "content": "이 팔찌는 병나무의 잎을 직접 엮어서 만들었어요. 제 능력을 이용하면 한동안 시들지 않게 보존할 수 있죠. 헤헤, 제 아츠를 이렇게 사용할 수 있을 줄은 생각도 못 하셨죠? 걱정 마세요, 유지 시간이 길지는 않거든요. 계속 싱싱한 상태를 유지하려다 보면 잎들도 지칠 거예요. 네, 잎들이 자연스럽게 시들 수 있도록 저희는 옆에서 지켜보도록 해요."
         }
       ]
     },
@@ -96,7 +144,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "パパが余ったにんじんを集めて、それを小動物の形に彫ってくれていたんです。ドクターさん、このにんじんのサンドビースト、レイお姉ちゃんは気に入ってくれると思いますか？あ……深く彫り過ぎちゃったかも。パパの腕に比べるとまだまだですね。もっとパパに教われたらよかったのに。"
+        },
+        {
+          "language": "英文",
+          "content": "Dad liked to collect the carrots we had left to carve into small animals. Doctor, do you think Ray will like this carrot sandbeast? Ah! I think I carved a little too deep. I'm still not very good at this, not like Dad. If only he'd taught me a bit longer..."
+        },
+        {
+          "language": "韩文",
+          "content": "예전에 아빠는 당근 자투리를 모아, 그것을 깎아선 작은 동물 모양으로 만들어 주곤 하셨어요. 박사님, 레이 언니가 이 당근 샌드비스트를 좋아할까요? 으음…… 아무래도 이쪽을 너무 깊게 판 것 같아요. 아빠가 만든 거에 비하면 전 아직 한참 멀었네요. 아빠한테 조금 더 배울 수 있다면 좋을 텐데……"
         }
       ]
     },
@@ -110,7 +166,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ドクターさん、見てください！医療部のお姉さんが貼ってくれた絆創膏、白梨の模様なんです！ロドスには感染者がたくさんいますねぇ、わたしの故郷もそうでした。でも、ここと違ってあんまり暮らしは良くなくて、わたしも昔は行く当てがなくって……感染者って、いちゃいけないんでしょうか？"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, look! The lady at Medical gave me a plaster with pears on it! Rhodes Island has so many Infected. It's the same back home, but we didn't live so well. And I had nowhere to go... Doctor, Is it a bad thing to be an Infected?"
+        },
+        {
+          "language": "韩文",
+          "content": "이거 보세요, 박사님! 의료부 언니가 주신 제 반창고에 배 그림이 그려져 있어요! 로도스 아일랜드엔 감염자 분들이 참 많은 것 같네요. 제 고향도 그랬어요. 하지만 고향에서의 생활은 로도스 아일랜드에서의 생활보다 훨씬 힘들었어요, 저도 갈 곳이 없었고요…… 박사님, 감염자가 된 게 정말 잘못한 걸까요?"
         }
       ]
     },
@@ -124,7 +188,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "「光のない暗闇の中で、温かかった呼吸が徐々に熱を失っていく……」、自分とサンドビーストのお話で、レイお姉ちゃんはこう言っていました。あの事故の後、作業員のおじさんたちも似たような話をしているのを聞いて、その時はよく分からなかったんです。でも、今はもう理解できるようになりました。"
+        },
+        {
+          "language": "英文",
+          "content": "Deep in the pitch darkness, those warm breaths slowly got colder...' That's how Ray told her sandbeast stories. I've heard the workers saying stuff like that ever since the accident. They were kind of hard to understand at first, but I know what they mean now."
+        },
+        {
+          "language": "韩文",
+          "content": "“빛 하나 없는 어둠 속에서, 따뜻했던 숨결은 점차 온기를 잃어갔다……” 레이 언니는 이렇게 자신과 샌드비스트의 이야기를 말해주셨어요. 그 사고 이후, 작업자 아저씨들도 저한테 비슷한 이야기를 들려주셨는데…… 그때는 이해하기 어려웠는데, 지금은 알 것 같아요."
         }
       ]
     },
@@ -138,7 +210,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "そうですよ、鉱石病の発作ってすごくつらいし、自分がどうにかなっちゃいそうで怖いんです。ふー、ふー、ドクターさん、梨の煮込みを一口いかがですか？とっても甘いですよ。鉱石病は治せませんが、生きてると苦い思いもするので、甘い物で中和しないと。それじゃ、わたしはランナお姉ちゃんにこれ持って行きますね。"
+        },
+        {
+          "language": "英文",
+          "content": "Yeah, it hurts a lot when my Oripathy flares up. And I'm worried I could go out of control, too. Huff... Hufffff... Doctor, want to try a bite of stewed pear? It doesn't cure Oripathy, but it's sweet. When life's all hard and bitter, we need something sweet! Hehe, does it taste good? Alright, I'll take this to Lanns now."
+        },
+        {
+          "language": "韩文",
+          "content": "맞아요. 광석병이 발작하면 너무 아파서, 제가 금방이라도 어떻게 되어버릴 것만 같아 무서워져요. 후우, 후우, 박사님, 배 조림 한 입 드셔 보시겠어요? 이걸로 광석병을 치료할 순 없지만, 엄청 달콤할 거예요. 쓰디쓴 인생일수록, 달콤함이 필요한 법이잖아요? 그럼 저 라나 언니한테 이거 가져다주고 올게요."
         }
       ]
     },
@@ -152,7 +232,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ドクターさん、さっきよりあったかくなりました？ふふ、おやすみなさい。わたしがそばにいますよ。"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor? Are you feeling warmer? Have a good sleep now. I'm right here."
+        },
+        {
+          "language": "韩文",
+          "content": "이제 좀 따뜻해지셨나요, 박사님? 후후, 주무세요. 제가 곁에 있어 드릴게요."
         }
       ]
     },
@@ -166,7 +254,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ドクターさん、また会えましたね。きっとレム・ビリトンのご飯が恋しいんじゃないですか？ちょうどこれからランナお姉ちゃんと厨房に行くので……待った。わたしは鍋蓋ちゃんじゃないです。そう呼ばないでください――"
+        },
+        {
+          "language": "英文",
+          "content": "Nice to see you again, Doctor. Do you miss Billy stew? I was just heading to the aft kitchen with Lanns— Hey! I'm not a little potlid. Don't call me Potlid!"
+        },
+        {
+          "language": "韩文",
+          "content": "박사님~ 또 뵙네요. 림 빌리턴 요리가 그리우셨나요? 마침 라나 언니랑 주방에 가던 중이었는데…… 전 냄비 뚜껑이 아니에요. 냄비 뚜껑이라고 부르지 마세요!"
         }
       ]
     },
@@ -180,7 +276,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ええ？これぜーんぶ、ドクターさんが指揮したんですか？すごいなぁ……"
+        },
+        {
+          "language": "英文",
+          "content": "Whoa... Did you command all these battles, Doctor? You're amazing…"
+        },
+        {
+          "language": "韩文",
+          "content": "네? 이걸 전부, 박사님께서 지휘하신 건가요? 대단하다……"
         }
       ]
     },
@@ -194,7 +298,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "しょ、昇進？ということは、クロージャお姉ちゃんにこだわりのご当地食材をもっと仕入れてもらえるんですか？"
+        },
+        {
+          "language": "英文",
+          "content": "I-I got promoted? Does that mean I can ask Closure to buy some more authentic ingredients?"
+        },
+        {
+          "language": "韩文",
+          "content": "스, 승진이요? 그럼 이제 클로저 언니한테 더 많은 현지 식재료를 구입해 달라고 부탁해도 되는 건가요?"
         }
       ]
     },
@@ -208,7 +320,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "認めてくれてありがとうございます、ドクターさん！わたし、もっと頑張ってみんなにぬくもりを届けますね！えっと……その、つまり、みんなの役に立てたらなって。"
+        },
+        {
+          "language": "英文",
+          "content": "Thanks for your recognition, Doctor! I'll do what I can to bring even more warmth to the people! Um... Actually, what I mean is... I'm glad I can help out!"
+        },
+        {
+          "language": "韩文",
+          "content": "인정해 주셔서 감사합니다, 박사님! 모두가 더 따뜻해질 수 있도록 더 노력할게요! 앗…… 그, 그러니까 제 말은, 다른 분들께 더 많은 도움이 될 수 있다면 좋겠어요."
         }
       ]
     },
@@ -222,7 +342,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "準備はできていますよ。"
+        },
+        {
+          "language": "英文",
+          "content": "I'm all set."
+        },
+        {
+          "language": "韩文",
+          "content": "전 준비 됐어요."
         }
       ]
     },
@@ -236,7 +364,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "え？今日はわたしがシェフなんですか？"
+        },
+        {
+          "language": "英文",
+          "content": "Huh? I'm the head chef today?"
+        },
+        {
+          "language": "韩文",
+          "content": "네? 오늘은 제가 메인 셰프라고요?"
         }
       ]
     },
@@ -250,7 +386,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "も、もっとゆっくり……置いてかないでくださいよぉ！"
+        },
+        {
+          "language": "英文",
+          "content": "S-Slow down... Wait for me!"
+        },
+        {
+          "language": "韩文",
+          "content": "자, 잠시만요…… 절 기다려 주세요!"
         }
       ]
     },
@@ -264,7 +408,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "あいつらに良い思いはさせませんよ！"
+        },
+        {
+          "language": "英文",
+          "content": "They're not part of a good breakfast!"
+        },
+        {
+          "language": "韩文",
+          "content": "저 사람들한테 줄 과일은 없어요!"
         }
       ]
     },
@@ -278,7 +430,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "お手伝いしますね！"
+        },
+        {
+          "language": "英文",
+          "content": "I'm here to help."
+        },
+        {
+          "language": "韩文",
+          "content": "제가 도와드릴게요!"
         }
       ]
     },
@@ -292,7 +452,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "クッキングスタート！"
+        },
+        {
+          "language": "英文",
+          "content": "Fire up the barbie."
+        },
+        {
+          "language": "韩文",
+          "content": "요리 시작합니다!"
         }
       ]
     },
@@ -306,7 +474,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "そーっと……"
+        },
+        {
+          "language": "英文",
+          "content": "Light and gentle…"
+        },
+        {
+          "language": "韩文",
+          "content": "약불로……"
         }
       ]
     },
@@ -320,7 +496,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ここは涼しすぎるかも。"
+        },
+        {
+          "language": "英文",
+          "content": "This place feels a little too cool…"
+        },
+        {
+          "language": "韩文",
+          "content": "여긴 너무 시원한 것 같은데요."
         }
       ]
     },
@@ -334,7 +518,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "火花ちゃん、ぴょんぴょんして。"
+        },
+        {
+          "language": "英文",
+          "content": "Sparky spark, hop n' jump!"
+        },
+        {
+          "language": "韩文",
+          "content": "불꽃아, 폴짝폴짝 뛰어봐."
         }
       ]
     },
@@ -348,7 +540,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "焔ちゃん、ゆらゆらして。"
+        },
+        {
+          "language": "英文",
+          "content": "Little flames, shake n' dance!"
+        },
+        {
+          "language": "韩文",
+          "content": "불꽃아, 살랑살랑 흔들어 봐."
         }
       ]
     },
@@ -362,7 +562,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "あいつらのお腹をこんがり焼いちゃって！"
+        },
+        {
+          "language": "英文",
+          "content": "Roast their tummies!"
+        },
+        {
+          "language": "韩文",
+          "content": "녀석들의 배를 바싹 구워버리는 거야!"
         }
       ]
     },
@@ -376,7 +584,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "しーっ、焔ちゃんが静かに燃えてるんですよ。"
+        },
+        {
+          "language": "英文",
+          "content": "Shh, it's burning quietly."
+        },
+        {
+          "language": "韩文",
+          "content": "쉬잇, 불꽃이 조용히 타오르고 있어요."
         }
       ]
     },
@@ -390,7 +606,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "みんなすごかったですね……あとで鍋いっぱいの料理を作って、お疲れ様会をしないと！"
+        },
+        {
+          "language": "英文",
+          "content": "Everyone did such a great job... I'll make a big stew to reward them!"
+        },
+        {
+          "language": "韩文",
+          "content": "다들 정말 대단하네요…… 이따가 냄비 가득 요리를 해서, 뒤풀이를 해야겠어요!"
         }
       ]
     },
@@ -404,7 +628,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ん～、いい匂い。今日も大成功ですね！"
+        },
+        {
+          "language": "英文",
+          "content": "Hm—Smells so good. Today was another huge success!"
+        },
+        {
+          "language": "韩文",
+          "content": "음~ 좋은 냄새가 나네요. 오늘도 대성공이에요!"
         }
       ]
     },
@@ -418,7 +650,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "あう……鍋からいっぱい溢れちゃいました。もったいない……"
+        },
+        {
+          "language": "英文",
+          "content": "We spilled a lot out of the pot. What a shame..."
+        },
+        {
+          "language": "韩文",
+          "content": "윽…… 냄비에서 넘쳐버렸네요. 아까워라……"
         }
       ]
     },
@@ -432,7 +672,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "うぅぅ、ちょっと目を離したら全部焦げちゃいました……"
+        },
+        {
+          "language": "英文",
+          "content": "I wasn't paying attention, it's all burnt..."
+        },
+        {
+          "language": "韩文",
+          "content": "흑흑, 한눈판 사이에 전부 타버렸어요……"
         }
       ]
     },
@@ -446,7 +694,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "とてもあったかい部屋ですね。えっと？温度調整にはコントロールパネルを使わなくちゃいけないんですか？"
+        },
+        {
+          "language": "英文",
+          "content": "This room's so warm… Hm? You can adjust the temperature with this panel?"
+        },
+        {
+          "language": "韩文",
+          "content": "정말 따뜻한 방이네요. 어라? 온도 조절은 제어판을 사용해야 하는 거라고요?"
         }
       ]
     },
@@ -460,7 +716,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "ふー、ふーっ、火傷はしてないですよね？"
+        },
+        {
+          "language": "英文",
+          "content": "Huff—huff—Didn't burn you, did I?"
+        },
+        {
+          "language": "韩文",
+          "content": "후우, 후우, 데이진 않으셨죠?"
         }
       ]
     },
@@ -474,7 +738,15 @@
         },
         {
           "language": "日文",
-          "content": ""
+          "content": "わたしは――あぁ、もういいです。ドクターさんがそう呼びたいなら鍋蓋ちゃんでいいですよ。"
+        },
+        {
+          "language": "英文",
+          "content": "I'm not— Okay, if it's what you want to call me, Doctor, then no worries. I <i>am</i> a little potlid."
+        },
+        {
+          "language": "韩文",
+          "content": "저는…… 됐어요. 박사님이 원하시는 대로 부르세요. 네네, 저는 냄비 뚜껑이랍니다."
         }
       ]
     },
@@ -485,6 +757,28 @@
         {
           "language": "中文",
           "content": "明日方舟。"
+        },
+        {
+          "language": "日文",
+          "content": "アークナイツ。"
+        },
+        {
+          "language": "英文",
+          "content": "Arknights."
+        },
+        {
+          "language": "韩文",
+          "content": "명일방주."
+        }
+      ]
+    },
+    {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年啦，博士、博士！要不要一起去甲板上看烟花？呃......不是源石技艺啦，是真的烟花，是罗德岛的大家一起准备的！嘘——您听到了吗？"
         },
         {
           "language": "日文",
@@ -499,6 +793,28 @@
         {
           "language": "中文",
           "content": "博士，今天您好好吃饭了吗？"
+        },
+        {
+          "language": "日文",
+          "content": "ドクターさん、今日はちゃんとご飯食べましたか？"
+        },
+        {
+          "language": "英文",
+          "content": "Doctor, are you eating good today?"
+        },
+        {
+          "language": "韩文",
+          "content": "박사님, 오늘 식사는 잘 챙겨 드셨나요?"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "小时候我有好多好多愿望，爸爸却只是祝福我幸福快乐地成长......现在我明白了，要先做到幸福快乐，剩下的愿望就等待它们慢慢实现吧。博士，在罗德岛的新的一年，您也要幸福快乐哦。"
         },
         {
           "language": "日文",

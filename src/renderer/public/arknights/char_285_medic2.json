@@ -2,8 +2,8 @@
   "name": "Lancet-2",
   "charaKey": "char_285_medic2",
   "images": [
-    "https://prts.wiki/images/8/8e/立绘_Lancet-2_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/25/立绘_Lancet-2_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/8/8e/%E7%AB%8B%E7%BB%98_Lancet-2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/25/%E7%AB%8B%E7%BB%98_Lancet-2_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -17,6 +17,10 @@
     {
       "language": "韩语",
       "base": "voice_kr/char_285_medic2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_285_medic2"
     }
   ],
   "voiceList": [
@@ -34,7 +38,7 @@
         },
         {
           "language": "英文",
-          "content": "Do you need medical assistance, Doctor? You look quite energetic, though..."
+          "content": "Do you require medical assistance, Doctor? But, you look quite well…?"
         },
         {
           "language": "韩文",
@@ -60,7 +64,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, you have been working far too late these days. Please get adequate rest, or Dr. Kal'tsit may give you an earful next time she sees you!"
+          "content": "Doctor, you have been working far too late these days. Please get adequate rest, or Dr. Kal'tsit may give you an earful again…"
         },
         {
           "language": "韩文",
@@ -86,7 +90,7 @@
         },
         {
           "language": "英文",
-          "content": "Please tell me where you feel uncomfortable. I could also do an examination, if you like."
+          "content": "Are you feeling unwell? I could give you a medical examination, if you wish."
         },
         {
           "language": "韩文",
@@ -112,7 +116,7 @@
         },
         {
           "language": "英文",
-          "content": "You've worked hard. How would you like a cup of coffee, Doctor? I'd also like a sip of that coffee... but I can't... so I'll just have to be satisfied watching you enjoy yours."
+          "content": "You've worked hard, Doctor. How would you like a cup of coffee? Actually, I've always wanted to try coffee... but... I can't drink… Anyway, I am also satisfied watching you enjoy yours."
         },
         {
           "language": "韩文",
@@ -138,7 +142,7 @@
         },
         {
           "language": "英文",
-          "content": "I've printed out the standard blood test report I just did for you. Everything looks normal, but there's a very unique characteristic about your blood..."
+          "content": "I've printed out the results of the routine blood test you just did. All indicators are normal. But Doctor, your blood appears to be very unique…"
         },
         {
           "language": "韩文",
@@ -164,7 +168,7 @@
         },
         {
           "language": "英文",
-          "content": "What do I like? I like 'lovely Ms. Closure.'Why, you ask? Uh... I'm not sure either! That's what my settings have been ever since Ms. Closure first initialized me..."
+          "content": "What do I like? I like 'lovely Ms. Closure.' Why, you ask? Uh... I'm not sure either... It's been my default setting ever since the first time Ms. Closure switched me on…"
         },
         {
           "language": "韩文",
@@ -190,7 +194,7 @@
         },
         {
           "language": "英文",
-          "content": "I only feel useful when someone's sick or injured. But as long as you're healthy, as long as I get to be by your side... I'm okay with being useless! I'll still feel safe."
+          "content": "I am only useful when healing the sick or injured. But as long as you're healthy, as long as I get to be by your side, I'm okay with being totally useless. I'll still feel calm and satisfied."
         },
         {
           "language": "韩文",
@@ -216,7 +220,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, I made a recording of you snoring just now! Your sleep quality is normal. The length of your REM sleep cycle is—"
+          "content": "Doctor, unbeknownst to you, I recorded your snoring just now. Your sleep quality is normal. The length of your REM sleep cycle is—"
         },
         {
           "language": "韩文",
@@ -242,7 +246,7 @@
         },
         {
           "language": "英文",
-          "content": "Hello, Doctor. You want me to say something more interesting to you? I'm afraid I have nothing interesting to say. I'm just a medical robot..."
+          "content": "Hi, nice to meet you, Doctor. I understand that you want me to say something more interesting, but I'm afraid I cannot do so. Because I'm just a medical robot…"
         },
         {
           "language": "韩文",
@@ -294,7 +298,7 @@
         },
         {
           "language": "英文",
-          "content": "Medical supplies: confirmed. Battery charge: confirmed. Ready to deploy."
+          "content": "Medical supplies: confirmed. Battery charge: confirmed. Ready for deployment."
         },
         {
           "language": "韩文",
@@ -320,7 +324,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm pretty cumbersome... not much I can do besides providing emergency treatment and healing. Yet you still want me to be the captain?"
+          "content": "Doctor, I'm pretty cumbersome. There's not much I can do besides providing emergency treatment and healing... Are you sure you still want me to be the captain?"
         },
         {
           "language": "韩文",
@@ -346,7 +350,7 @@
         },
         {
           "language": "英文",
-          "content": "Deploying. I hope no one gets injured."
+          "content": "Moving out. Everyone, please be safe."
         },
         {
           "language": "韩文",
@@ -372,7 +376,7 @@
         },
         {
           "language": "英文",
-          "content": "Be careful, everyone! Leave the first aid to me."
+          "content": "Be careful, everyone. Leave the first aid to me."
         },
         {
           "language": "韩文",
@@ -424,7 +428,7 @@
         },
         {
           "language": "英文",
-          "content": "Ready."
+          "content": "Ready to operate."
         },
         {
           "language": "韩文",
@@ -450,7 +454,7 @@
         },
         {
           "language": "英文",
-          "content": "Very well."
+          "content": "Affirmative."
         },
         {
           "language": "韩文",
@@ -476,7 +480,7 @@
         },
         {
           "language": "英文",
-          "content": "Copy."
+          "content": "Roger that."
         },
         {
           "language": "韩文",
@@ -502,7 +506,7 @@
         },
         {
           "language": "英文",
-          "content": "Commence treatment."
+          "content": "Commencing treatment."
         },
         {
           "language": "韩文",
@@ -528,7 +532,7 @@
         },
         {
           "language": "英文",
-          "content": "First aid program: executed."
+          "content": "Initiating first aid."
         },
         {
           "language": "韩文",
@@ -554,7 +558,7 @@
         },
         {
           "language": "英文",
-          "content": "Painkillers deployed."
+          "content": "Analgesic deployed."
         },
         {
           "language": "韩文",
@@ -580,7 +584,7 @@
         },
         {
           "language": "英文",
-          "content": "Equipment disinfected. Ready for treatment."
+          "content": "Equipment sterilized. Ready for treatment."
         },
         {
           "language": "韩文",
@@ -606,7 +610,7 @@
         },
         {
           "language": "英文",
-          "content": "With every battle, ever more soldiers are injured. When will humans finally stop hurting each other?"
+          "content": "With every battle, we suffer even more casualties. When will humans finally stop hurting each other?"
         },
         {
           "language": "韩文",
@@ -632,7 +636,7 @@
         },
         {
           "language": "英文",
-          "content": "Well done, Doctor. That was a tough one. The enemies looked sickly, don't you think? Can I treat them too?"
+          "content": "Well done, Doctor. That was a tough battle. Um, the enemies do not look well. Can I treat them too?"
         },
         {
           "language": "韩文",
@@ -658,7 +662,7 @@
         },
         {
           "language": "英文",
-          "content": "Is everyone okay? Hold still, I'll perform first aid on your wounds."
+          "content": "Is everyone okay? Please hold still, I'll perform first aid."
         },
         {
           "language": "韩文",
@@ -684,7 +688,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't worry, we've successfully retreated. However... I'll have to clean your wounds now. It might hurt, please be brave!"
+          "content": "Don't worry, we've successfully retreated. I will clean your wounds now. It might hurt, please be brave."
         },
         {
           "language": "韩文",
@@ -710,7 +714,7 @@
         },
         {
           "language": "英文",
-          "content": "'Lovely Ms. Closure' told me that you need help here."
+          "content": "Lovely Ms. Closure' told me that you need help here."
         },
         {
           "language": "韩文",
@@ -762,7 +766,7 @@
         },
         {
           "language": "英文",
-          "content": "I asked 'lovely Ms. Closure' to change 'what I like the most' to you, Doctor. But she refused to do it... Waaahhh..."
+          "content": "I asked 'lovely Ms. Closure' to change 'what I like the most' to you, Doctor. But she refused to do it..."
         },
         {
           "language": "韩文",
@@ -801,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐。我注意到，过去一年罗德岛上的非生命作业平台增加了。希望在新的一年里我也能和博士在一起工作，不被新型号淘汰......呜......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -814,7 +844,7 @@
         },
         {
           "language": "英文",
-          "content": "Welcome back, Doctor. You are in good condition. Keep it up!"
+          "content": "Welcome back, Doctor. You are in good condition. Please keep it up."
         },
         {
           "language": "韩文",
@@ -823,6 +853,32 @@
         {
           "language": "繁体中文",
           "content": "歡迎回來，博士。你的身體狀況良好，要繼續保持哦。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，今天大家看起来都很开心。我也很想加入他们，但是作为医疗作业平台，出现在宴会场合的话，大家应该会很不自在。所以我待在角落就好了......希望大家能一直这样健康开心。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

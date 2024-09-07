@@ -2,9 +2,9 @@
   "name": "慕斯",
   "charaKey": "char_185_frncat",
   "images": [
-    "https://prts.wiki/images/c/c5/立绘_慕斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_慕斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/52/立绘_慕斯_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/c/c5/%E7%AB%8B%E7%BB%98_%E6%85%95%E6%96%AF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d3/%E7%AB%8B%E7%BB%98_%E6%85%95%E6%96%AF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/52/%E7%AB%8B%E7%BB%98_%E6%85%95%E6%96%AF_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -563,7 +563,7 @@
         },
         {
           "language": "韩文",
-          "content": "무스, 혼자서요…?"
+          "content": "무스, 무섭지 않아요……!"
         },
         {
           "language": "繁体中文",
@@ -797,7 +797,7 @@
         },
         {
           "language": "韩文",
-          "content": "조금만 더… 힘내고 싶었는데…"
+          "content": "저…… 더 버틸 수 있어요……"
         },
         {
           "language": "繁体中文",
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年快乐......！那边放的糕点中有我自己做的，我还准备了一些可以搭配食用的茶水，但是因为我的手套......看起来没有我原先做的那么精致，不过，还是会很好吃的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "你好，博士。"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "空小姐又给了我几张她的签名专辑，真开心！她甚至还在我的手套上也画了一个小爱心，她说这是她见过最酷的手套了，我这样子很特别。博士，我、我没有自己想的那么奇怪......对不对？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

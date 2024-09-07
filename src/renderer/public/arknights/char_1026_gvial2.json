@@ -2,9 +2,9 @@
   "name": "百炼嘉维尔",
   "charaKey": "char_1026_gvial2",
   "images": [
-    "https://prts.wiki/images/d/d8/立绘_百炼嘉维尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/76/立绘_百炼嘉维尔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4e/立绘_百炼嘉维尔_skin1.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/d/d8/%E7%AB%8B%E7%BB%98_%E7%99%BE%E7%82%BC%E5%98%89%E7%BB%B4%E5%B0%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/76/%E7%AB%8B%E7%BB%98_%E7%99%BE%E7%82%BC%E5%98%89%E7%BB%B4%E5%B0%94_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4e/%E7%AB%8B%E7%BB%98_%E7%99%BE%E7%82%BC%E5%98%89%E7%BB%B4%E5%B0%94_skin1.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -910,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐啊，博士。对了，你听说了吧？我和祖玛玛她们打算筹办一场阿卡胡拉式的跨年宴会，总是看你们办宴会，也该让你们看看我们提亚卡乌是怎么举办祭典的。你会来的，对吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -932,6 +958,32 @@
         {
           "language": "繁体中文",
           "content": "博士！......哦，不好意思，沒把你撞疼吧？"
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我们之间就不用说什么肉麻的话了吧？我是罗德岛的医生兼战士，嘉维尔。哪里有矿石病人，哪里就有我。就这么简单，不是吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
         }
       ]
     }

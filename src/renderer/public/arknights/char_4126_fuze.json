@@ -2,8 +2,8 @@
   "name": "导火索",
   "charaKey": "char_4126_fuze",
   "images": [
-    "https://prts.wiki/images/a/ad/立绘_导火索_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_导火索_2.png?image_process=format,webp/quality,Q_90"
+    "https://media.prts.wiki/a/ad/%E7%AB%8B%E7%BB%98_%E5%AF%BC%E7%81%AB%E7%B4%A2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1f/%E7%AB%8B%E7%BB%98_%E5%AF%BC%E7%81%AB%E7%B4%A2_2.png?image_process=format,webp/quality,Q_90"
   ],
   "voiceBase": [
     {
@@ -233,6 +233,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Do exactly as I say."
         }
       ]
     },
@@ -247,6 +251,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Enough talk. Now we act."
         }
       ]
     },
@@ -261,6 +269,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Matryoshka gotov poruchit."
         }
       ]
     },
@@ -275,6 +287,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Focus on the task at hand."
         }
       ]
     },
@@ -289,6 +305,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Remember our objectives."
         }
       ]
     },
@@ -303,6 +323,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Lower your voice."
         }
       ]
     },
@@ -317,6 +341,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Remain silent."
         }
       ]
     },
@@ -331,6 +359,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "With me."
         }
       ]
     },
@@ -345,6 +377,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Remain alert."
         }
       ]
     },
@@ -359,6 +395,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Stay focused."
         }
       ]
     },
@@ -373,6 +413,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Hold position."
         }
       ]
     },
@@ -401,6 +445,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Asset secured."
         }
       ]
     },
@@ -429,6 +477,10 @@
         {
           "language": "日文",
           "content": ""
+        },
+        {
+          "language": "英文",
+          "content": "Move, right now!"
         }
       ]
     },
@@ -489,6 +541,24 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我和战车打算今晚一起喝几杯，你来吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -498,6 +568,24 @@
         },
         {
           "language": "日文",
+          "content": ""
+        }
+      ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我能在这里找到一些归属感，这很好。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
           "content": ""
         }
       ]
