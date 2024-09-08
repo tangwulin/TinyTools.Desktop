@@ -1,6 +1,6 @@
 import type { ElectronAPI } from '@electron-toolkit/preload'
 import { createAlova } from 'alova'
-import GlobalFetch from 'alova/GlobalFetch'
+import fetchAdapter from 'alova/fetch'
 import VueHook from 'alova/vue'
 import characterList from '../data/arknightsCharacterList.json'
 import { CharaData } from '../types/CharaData'
@@ -23,7 +23,7 @@ try {
 const apiInst = createAlova({
   statesHook: VueHook,
   baseURL: isElectron ? await electron.ipcRenderer.invoke('getRendererPath') : undefined,
-  requestAdapter: GlobalFetch(),
+  requestAdapter: fetchAdapter(),
   responded: (response) => response.json()
 })
 
