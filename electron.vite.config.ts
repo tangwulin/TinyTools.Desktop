@@ -13,6 +13,12 @@ const revision = execSync('git rev-parse HEAD').toString().trim().substring(0, 7
 const githubSHA = execSync('git rev-parse HEAD').toString().trim().toString()
 process.env.revision = revision
 process.env.githubSHA = githubSHA
+const now = new Date()
+const year = now.getFullYear()
+const month = now.getMonth()
+const date = now.getDate()
+const buildDate = `${year}/${month + 1}/${date}`
+process.env.buildDate = buildDate
 
 export default ({ mode }) => {
   return defineConfig({
@@ -90,7 +96,8 @@ export default ({ mode }) => {
       define: {
         __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
         __GITHUB_SHA__: JSON.stringify(process.env.githubSHA),
-        __REVISION__: JSON.stringify(process.env.revision)
+        __REVISION__: JSON.stringify(process.env.revision),
+        __BUILD_DATE__: JSON.stringify(process.env.buildDate)
       }
     }
   })
