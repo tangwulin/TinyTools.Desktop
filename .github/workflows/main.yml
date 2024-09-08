@@ -31,7 +31,7 @@ jobs:
         run: rm ./.npmrc
 
       - name: Install Dependencies
-        run: npm install
+        run: npm install --force
 
       - name: build-linux
         if: matrix.os == 'ubuntu-latest'
