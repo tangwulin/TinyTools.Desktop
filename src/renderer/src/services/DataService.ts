@@ -143,7 +143,7 @@ export async function importData(data: schemaVersion2) {
   if (data.courses && Array.isArray(data.courses)) {
     courseStore.updateCourseTable(data.courses)
   } else {
-    throw new Error('数据文件中没有课程表信息或者课程表信息格式错误')
+    // throw new Error('数据文件中没有课程表信息或者课程表信息格式错误')
   }
 
   if (data.config) {
