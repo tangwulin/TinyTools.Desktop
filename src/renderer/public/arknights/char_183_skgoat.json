@@ -1,12 +1,29 @@
 {
   "name": "地灵",
   "charaKey": "char_183_skgoat",
-  "voiceBase": {
-    "日语": "voice/char_183_skgoat",
-    "中文-普通话": "voice_cn/char_183_skgoat",
-    "韩语": "voice_kr/char_183_skgoat",
-    "英语": "voice_en/char_183_skgoat"
-  },
+  "images": [
+    "https://media.prts.wiki/1/15/%E7%AB%8B%E7%BB%98_%E5%9C%B0%E7%81%B5_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/46/%E7%AB%8B%E7%BB%98_%E5%9C%B0%E7%81%B5_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8b/%E7%AB%8B%E7%BB%98_%E5%9C%B0%E7%81%B5_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_183_skgoat"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_183_skgoat"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_183_skgoat"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_183_skgoat"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -208,7 +225,7 @@
         },
         {
           "language": "韩文",
-          "content": "프로방스는 여전히 둔하네. 계속 저렇게 놔뒀다간 나처럼 중증 감염자가 되고 말 거야. 너희도 제대로 뭐라 한마디 해주면 안 될까?"
+          "content": "프로방스는 여전히 무신경한가 보네. 계속 저렇게 놔뒀다간 나처럼 중증 감염자가 되고 말 거야. 너희가 뭐라 한마디 해주면 안 될까?"
         },
         {
           "language": "繁体中文",
@@ -274,7 +291,7 @@
       "text": [
         {
           "language": "中文",
-          "content": "地灵，地质学者兼术师，向你报道。我每天的工作时间是八小时，如果加班的话要额外支付加班费。"
+          "content": "地灵，地质学者兼术师，向你报到。我每天的工作时间是八小时，如果加班的话要额外支付加班费。"
         },
         {
           "language": "日文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "看看我们脚下宽广的岩层，你觉得它们会在意新年吗？嗯，所以我也不在意。今天对我来说就是普通的休息日而已，所有任务都会被算入加班内容，包括参加晚会。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士，該工作了。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "有太多科研上的谜团需要解答，而我的时间或许不多了。即便如此，我也要确保工作和生活划清界限。只有二者分别找到意义，我的人生才有价值。我在罗德岛找到了这种平衡，还是很幸运的吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/15/立绘_地灵_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/46/立绘_地灵_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8b/立绘_地灵_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

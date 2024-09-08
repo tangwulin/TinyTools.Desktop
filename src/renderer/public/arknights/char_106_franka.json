@@ -1,12 +1,29 @@
 {
   "name": "芙兰卡",
   "charaKey": "char_106_franka",
-  "voiceBase": {
-    "日语": "voice/char_106_franka",
-    "中文-普通话": "voice_cn/char_106_franka",
-    "韩语": "voice_kr/char_106_franka",
-    "英语": "voice_en/char_106_franka"
-  },
+  "images": [
+    "https://media.prts.wiki/6/6c/%E7%AB%8B%E7%BB%98_%E8%8A%99%E5%85%B0%E5%8D%A1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/50/%E7%AB%8B%E7%BB%98_%E8%8A%99%E5%85%B0%E5%8D%A1_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f5/%E7%AB%8B%E7%BB%98_%E8%8A%99%E5%85%B0%E5%8D%A1_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_106_franka"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_106_franka"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_106_franka"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_106_franka"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "喔，年终奖金到手了！谢谢你，博士。我会把这当作对我的认可，今年我会更加努力的！有什么艰难的任务就尽管派给我吧！（好，接下来再去黑钢领一份......）"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士，早安。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "比起黑钢，罗德岛还是很有趣的。就是每次体检，医疗干员脸上的表情都像是要参加我的追悼会一样，实在是太恐怖了......好啦我知道了，我会听话。还有很多愿望没有完成，我不会自暴自弃的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/6c/立绘_芙兰卡_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/50/立绘_芙兰卡_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f5/立绘_芙兰卡_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,10 +1,26 @@
 {
   "name": "棘刺",
   "charaKey": "char_293_thorns",
-  "voiceBase": {
-    "日语": "voice/char_293_thorns",
-    "中文-普通话": "voice_cn/char_293_thorns"
-  },
+  "images": [
+    "https://media.prts.wiki/e/e2/%E7%AB%8B%E7%BB%98_%E6%A3%98%E5%88%BA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/41/%E7%AB%8B%E7%BB%98_%E6%A3%98%E5%88%BA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/08/%E7%AB%8B%E7%BB%98_%E6%A3%98%E5%88%BA_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/3a/%E7%AB%8B%E7%BB%98_%E6%A3%98%E5%88%BA_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_293_thorns"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_293_thorns"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_293_thorns"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -50,7 +66,7 @@
         },
         {
           "language": "韩文",
-          "content": "추출액의 분리와 해석은 거의 끝났다. 다음은 순화 작업인데, 실제 효과에 대해서는 아직 실험이 필요하다…… 뭐지? 박사, 내 머리카락이 어떻게 됐다고? 머리카락이…… 폭발하고 있다고? 신경 쓰지 마라, 실험 실패는 한두 번 있는 일이 아니니."
+          "content": "추출액의 분리와 분석은 거의 끝났다. 다음은 정제 작업인데, 실제 효과에 대해서는 아직 실험이 필요하다…… 음? 왜 내 머리카락을 보고 있는 거지, 박사? 머리가…… 폭탄 맞은 것 같다고? 신경 쓰지 마라, 실험 실패는 한두 번 있는 일이 아니니."
         },
         {
           "language": "繁体中文",
@@ -102,7 +118,7 @@
         },
         {
           "language": "韩文",
-          "content": "언제나 머리를 계속 굴려라. 생각하길 포기하는 건 자신의 급소를 상대방에게 맡기는 거나 다름없다. 나는 전에 그렇게 배웠다. 어쩌다 보니 지금도 기억에 남아있을 뿐이지만 말이야."
+          "content": "언제나 머리를 계속 굴려라. 생각하길 포기하는 건 약점을 적에게 맡기는 거나 다름없다. 나는 전에 그렇게 배웠다. 어쩌다 보니 지금도 기억에 남아있을 뿐이지만 말이야."
         },
         {
           "language": "繁体中文",
@@ -154,7 +170,7 @@
         },
         {
           "language": "韩文",
-          "content": "라테라노 종교의 신도가 아니라면 이베리아에는 가지 않는 게 좋아. 그들이 말하는 '가장 순수한 신앙'은 그 땅에 깊게 뿌리 내렸으니. 현지 사람들의 경건함은 아마 라테라노 사람들조차 열등감을 느낄 정도다. 나? 나는 이 이야기와 관계없다."
+          "content": "라테라노 종교의 신도가 아니라면 이베리아에는 가지 않는 게 좋아. 그들이 말하는 '가장 순수한 신앙'은 그 땅에 깊게 뿌리를 내렸다. 현지 사람들의 경건함은 어쩌면 라테라노 사람들조차 부끄러움을 느끼게 할 정도지. 나? 나는 이 이야기와 상관없다."
         },
         {
           "language": "繁体中文",
@@ -180,7 +196,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사, 이베리아 징벌군의 역사에 대해 알고 있나? 조금이라도 소문을 들어본 적이 있다면 알겠지. 그 땅에 사는 자들은 그 차갑고 엄숙한 회백색 건축물보다 상상도 할 수 없을 만큼 광기를 품고 있다는 것을."
+          "content": "박사, 이베리아 징벌군의 역사에 대해 알고 있나? 조금이라도 소문을 들어본 적이 있다면 알겠지. 그 땅에 사는 자들은 그들의 차갑고 엄숙한 회백색 건축물보다 상상도 할 수 없을 만큼의 광기를 품고 있다는 것을."
         },
         {
           "language": "繁体中文",
@@ -310,7 +326,7 @@
         },
         {
           "language": "韩文",
-          "content": "그렇군…… 이 자료, 확실히 도움이 되는 점도 있군."
+          "content": "흠…… 이 자료, 확실히 도움이 되는 점도 있군."
         },
         {
           "language": "繁体中文",
@@ -440,7 +456,7 @@
         },
         {
           "language": "韩文",
-          "content": "속전속결로 끝내자. 내 귀중한 시간을 허비하지 않기 위해서라도 말이야."
+          "content": "속전속결로 끝내지. 내 시간은 귀중하니까."
         },
         {
           "language": "繁体中文",
@@ -544,7 +560,7 @@
         },
         {
           "language": "韩文",
-          "content": "시간을 들일 생각은 없어."
+          "content": "오래 걸리진 않을 거다."
         },
         {
           "language": "繁体中文",
@@ -570,7 +586,7 @@
         },
         {
           "language": "韩文",
-          "content": "모두의 행동력을 빼앗는다, 그거면 되겠지."
+          "content": "모두의 행동을 제압한다, 그거면 되겠지."
         },
         {
           "language": "繁体中文",
@@ -596,7 +612,7 @@
         },
         {
           "language": "韩文",
-          "content": "돌아다니지 마라. 그러면 서로 수고를 덜 하게 될 테니."
+          "content": "움직이지 마라. 그러면 서로 수고를 덜 하게 될 테니."
         },
         {
           "language": "繁体中文",
@@ -752,7 +768,7 @@
         },
         {
           "language": "韩文",
-          "content": "너의 지휘 실수를 내 서투름으로 더 크게 만든 것 같군. 돌아가면 함께 반성하는 시간을 가져야겠어."
+          "content": "내 서투름으로 네 지휘 실수가 더 두드러진 것 같군. 돌아가면 함께 반성하는 시간을 가져야겠어."
         },
         {
           "language": "繁体中文",
@@ -830,7 +846,7 @@
         },
         {
           "language": "韩文",
-          "content": "이런, 약제가 새어 나왔어."
+          "content": "이런, 약제가 새어 나왔잖아."
         },
         {
           "language": "繁体中文",
@@ -891,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "辞旧迎新......？买新衣服的话应该没什么必要，我这件衣服挺耐炸的，穿着它也很舒服，我暂时还不考虑把它换掉。不过这倒是一个很好的想法，之前那套健身体操是该编新的动作了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -908,18 +950,39 @@
         },
         {
           "language": "韩文",
-          "content": "피로가 쌓인 모양이군. 내가 눈을 뜨게 해줄까, 박사."
+          "content": "피로가 많이 쌓인 모양이군. 잠 깰 수 있게 좀 도와줄까, 박사."
         },
         {
           "language": "繁体中文",
           "content": "你看起來似乎很疲倦，要不要我來幫你清醒一下，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我知道罗德岛对伊比利亚一直很好奇，但是，我口中的伊比利亚也许仍旧不是它的真正样貌。就像至高之术，不同的剑士会使出不同的招数，而它的终点，也许只是可见而不可领悟的简单一招。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/e2/立绘_棘刺_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/41/立绘_棘刺_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/08/立绘_棘刺_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

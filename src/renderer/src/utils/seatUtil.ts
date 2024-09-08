@@ -1,31 +1,32 @@
-import { shuffle } from 'lodash-es'
+import { maxBy, shuffle } from 'lodash-es'
+import { GenderPreference } from '../enum/GenderPreference'
 import { Person } from '../types/person'
 import { Seat } from '../types/seat'
 import { SeatTableItem } from '../types/SeatTableItem'
 
-function calcDistance(x: Seat, y: Seat): number
-function calcDistance(x: unknown, y: unknown) {
-  const xIndex = typeof x === 'number' ? x : (x as Seat).locationIndex
-  const yIndex = typeof y === 'number' ? y : (y as Seat).locationIndex
-  const xRow = Math.ceil(xIndex / 8)
-  const yRow = Math.ceil(yIndex / 8)
-  const xCol = xIndex % 8
-  const yCol = yIndex % 8
-  return Math.max(Math.abs(xRow - yRow), Math.abs(xCol - yCol))
-}
-
-const calcWeightByDistance = (distance: number) => {
-  switch (distance) {
-    case 0:
-      return -10
-    case 1:
-      return -5
-    case 2:
-      return -2
-    default:
-      return distance
-  }
-}
+// function calcDistance(x: Seat, y: Seat): number
+// function calcDistance(x: unknown, y: unknown) {
+//   const xIndex = typeof x === 'number' ? x : (x as Seat).locationIndex
+//   const yIndex = typeof y === 'number' ? y : (y as Seat).locationIndex
+//   const xRow = Math.ceil(xIndex / 8)
+//   const yRow = Math.ceil(yIndex / 8)
+//   const xCol = xIndex % 8
+//   const yCol = yIndex % 8
+//   return Math.max(Math.abs(xRow - yRow), Math.abs(xCol - yCol))
+// }
+//
+// const calcWeightByDistance = (distance: number) => {
+//   switch (distance) {
+//     case 0:
+//       return -10
+//     case 1:
+//       return -5
+//     case 2:
+//       return -2
+//     default:
+//       return distance
+//   }
+// }
 
 // const calcWeightByGender = (x: OldSeat, y: OldSeat) => (x.owner.genderCode === y.owner.genderCode ? 0 : 1)
 
@@ -141,7 +142,12 @@ export const calcWeightByCorrectionAlgorithm = (
     weight[i] = 0
 
     //远离原位置
-    weight[i] += calcWeightByDistance(calcDistance(originSeats[i], item))
+    //不远离了，这个实测是有严重问题的
+    // weight[i] += calcWeightByDistance(calcDistance(originSeats[i], item))
+
+    //在同权重区域内选择一个
+    // weight[i] += Math.cos(1.2 * i * Math.PI)
+    weight[i] += Math.random()
 
     //排除原位置
     if (originSeats[i].personId === item.personId) {
@@ -164,48 +170,188 @@ export const calcWeightByCorrectionAlgorithm = (
   return weight
 }
 
-export const genWeightSeries = (weights: number[]) =>
-  Array.from({ length: weights.length }, (_, i) => ({ index: i, weight: weights[i] }))
+// export const genWeightSeries = (weights: number[]) =>
+//   Array.from({ length: weights.length }, (_, i) => ({ index: i, weight: weights[i] }))
 
-function calcSeatByWeight(
-  seatsWeightSeries: { weightSeries: { index: number; weight: number }[]; ownerId: number }[],
-  allSeat: Seat[]
-) {
-  const remainStudentIds = seatsWeightSeries.map((x) => x.ownerId) as (number | undefined | null)[]
-  const result = new Array(allSeat.length).fill(null) as Seat[]
-  for (let i = 0; i < result.length; i++) {
-    let bestStudentId: number | null = null
-    let bestStudentPriority = -Infinity
-    let bestStudentIndex = -1
-    for (let j = remainStudentIds.length; j >= 0; j--) {
-      const studentId = remainStudentIds[j]
-      if (!studentId) continue
+/**
+ * 判断两个人的性别是否符合要求
+ * @param genderPolicy
+ * ’none‘:不限制
+ * ’together‘:男女必须坐在一起
+ * ’apart‘:男女必须分开坐
+ * @param gender1
+ * @param gender2
+ * @returns {boolean} 是否符合要求
+ */
+function judgeGenderPreference(
+  genderPolicy: GenderPreference,
+  gender1: number | undefined | null,
+  gender2: number | undefined | null
+): boolean {
+  if (!gender1 || !gender2) return true
+  //有一个人性别不是男或女，那么直接返回true
+  if (![1, 2].includes(gender1) || ![1, 2].includes(gender2)) return true
 
-      const currentPriority =
-        seatsWeightSeries
-          .find((x) => x.ownerId === studentId)
-          ?.weightSeries.find((x) => x.index === i)?.weight ?? -Infinity
-      if (currentPriority < bestStudentPriority) continue
-
-      bestStudentId = studentId
-      bestStudentPriority = currentPriority
-      bestStudentIndex = j
-    }
-
-    result[i] = allSeat.find((item) => item.personId === bestStudentId) as Seat
-    remainStudentIds[bestStudentIndex] = null
+  switch (genderPolicy) {
+    case 'none':
+      return true
+    case 'together':
+      return gender1 !== gender2
+    case 'apart':
+      return gender1 === gender2
+    default:
+      return true
   }
-  return result
 }
 
-function getWeightSeries(seatsWeights: number[][], allSeat: Seat[]) {
+interface PersonAndWeightSeries {
+  weightSeries: number[]
+  ownerId: number
+  gender: number
+}
+
+function calcSeatByWeight(
+  seatsWeightSeries: PersonAndWeightSeries[],
+  allSeat: Seat[],
+  options: { genderPreference: GenderPreference }
+) {
+  const remainStudentIds = seatsWeightSeries.map((x) => x.ownerId) as number[]
+  const remainStudents = seatsWeightSeries.slice() as PersonAndWeightSeries[]
+  const remainStudents2 = [] as PersonAndWeightSeries[]
+  const temp = [] as PersonAndWeightSeries[]
+  const result = new Array(allSeat.length).fill(null) as Seat[]
+
+  function beforeNext() {
+    remainStudents.push(...remainStudents2)
+    remainStudentIds.push(...remainStudents2.map((x) => x.ownerId))
+    remainStudents2.length = 0
+    temp.length = 0
+  }
+
+  function removeSomeoneFromRemainStudents(who: PersonAndWeightSeries | undefined | null) {
+    if (!who) return
+    const index = remainStudentIds.indexOf(who.ownerId)
+    if (index === -1) return
+    remainStudentIds.splice(index, 1)
+    remainStudents.splice(index, 1)
+  }
+
+  function moveSomeoneToRemainStudents2(who: PersonAndWeightSeries | undefined | null) {
+    if (!who) return
+    remainStudents2.push(who)
+    removeSomeoneFromRemainStudents(who)
+  }
+
+  function moveSomeoneToTemp(who: PersonAndWeightSeries | undefined | null) {
+    if (!who) return
+    temp.push(who)
+    removeSomeoneFromRemainStudents(who)
+  }
+
+  //这里的i是座位的index
+  for (let i = 0; i < result.length; i += 2) {
+    const bestStudent1 = maxBy(remainStudents, (o) => o?.weightSeries[i])
+    if (bestStudent1) moveSomeoneToTemp(bestStudent1)
+    const bestStudent2 = maxBy(remainStudents, (o) => o?.weightSeries[i + 1])
+    if (bestStudent2) moveSomeoneToTemp(bestStudent2)
+
+    if (!bestStudent2 && bestStudent1) {
+      result[i] = allSeat.find((item) => item.personId === bestStudent1?.ownerId) as Seat
+      beforeNext()
+      continue
+    }
+
+    if (!bestStudent1 || !bestStudent2) break
+
+    //如果两个人的性别符合要求，那么就安排他们坐下
+    if (judgeGenderPreference(options.genderPreference, bestStudent1.gender, bestStudent2.gender)) {
+      result[i] = allSeat.find((item) => item.personId === bestStudent1.ownerId) as Seat
+      result[i + 1] = allSeat.find((item) => item.personId === bestStudent2.ownerId) as Seat
+      removeSomeoneFromRemainStudents(bestStudent1)
+      removeSomeoneFromRemainStudents(bestStudent2)
+      beforeNext()
+      continue
+    }
+
+    //如果两个人的性别不符合要求，则先判断谁的优先级更高，然后再安排
+    const flag = bestStudent1.weightSeries[i] > bestStudent2.weightSeries[i + 1]
+    if (flag) {
+      result[i] = allSeat.find((item) => item.personId === bestStudent1.ownerId) as Seat
+      removeSomeoneFromRemainStudents(bestStudent1)
+      moveSomeoneToRemainStudents2(bestStudent2)
+    } else {
+      result[i + 1] = allSeat.find((item) => item.personId === bestStudent2.ownerId) as Seat
+      removeSomeoneFromRemainStudents(bestStudent2)
+      moveSomeoneToRemainStudents2(bestStudent1)
+    }
+
+    //在剩下的符合性别偏好的人中找到最适合的人
+    const currentGender = flag ? bestStudent1.gender : bestStudent2.gender
+    const bestStudent = maxBy(
+      remainStudents.filter((item) =>
+        judgeGenderPreference(options.genderPreference, item.gender, currentGender)
+      ),
+      (o) => o.weightSeries[i]
+    )
+    if (bestStudent) {
+      result[i + (flag ? 1 : 0)] = allSeat.find(
+        (item) => item.personId === bestStudent.ownerId
+      ) as Seat
+      removeSomeoneFromRemainStudents(bestStudent)
+      beforeNext()
+      continue
+    }
+
+    // do {
+    //   const bestStudent = maxBy(remainStudents, (o) => o.weightSeries[i])
+    //   if (!bestStudent) break
+    //   if (
+    //     judgeGenderPreference(
+    //       options.genderPreference,
+    //       flag ? bestStudent1.gender : bestStudent2.gender,
+    //       bestStudent.gender
+    //     )
+    //   ) {
+    //     result[i + (flag ? 1 : 0)] = allSeat.find(
+    //       (item) => item.personId === bestStudent.ownerId
+    //     ) as Seat
+    //     removeSomeoneFromRemainStudents(bestStudent)
+    //     beforeNext()
+    //     break
+    //   } else {
+    //     //如果性别不符合要求，那么就把这个人先剔除出去
+    //     moveSomeoneToRemainStudents2(bestStudent)
+    //   }
+    // } while (result[i + (flag ? 1 : 0)] === null)
+
+    //如果还是没有找到符合要求的人，那么就取remainStudents2的第一个
+    if (result[i + (flag ? 1 : 0)] === null) {
+      const bestStudent = remainStudents2.shift()
+      if (!bestStudent) break
+      result[i + (flag ? 1 : 0)] = allSeat.find(
+        (item) => item.personId === bestStudent.ownerId
+      ) as Seat
+      beforeNext()
+    }
+    //别忘了把remainStudents2的人还回去
+    beforeNext()
+  }
+
+  return result.map((item, index) => ({ ...item, locationIndex: index }))
+}
+
+function matchPersonAndWeights(seatsWeights: number[][], allSeat: Seat[], personList: Person[]) {
+  const genderMap = new Map<number, number>(personList.map((x) => [x.id as number, x.genderCode]))
   return seatsWeights.map((x, i) => ({
-    ownerId: allSeat[i].personId as number,
-    weightSeries: genWeightSeries(x).sort((a, b) => b.weight - a.weight)
+    ownerId: allSeat[i].personId!,
+    weightSeries: x,
+    gender: genderMap.get(allSeat[i].personId!)!
   }))
 }
 
 export const calcNewSeatByCorrectionAlgorithm = (
+  personList: Person[],
+  options: { genderPreference: GenderPreference },
   originSeatTable: SeatTableItem[],
   olderSeatTable1?: SeatTableItem[] | undefined,
   olderSeatTable2?: SeatTableItem[] | undefined
@@ -214,9 +360,9 @@ export const calcNewSeatByCorrectionAlgorithm = (
   const seatsWeights = originSeat.map((x) =>
     calcWeightByCorrectionAlgorithm(x, originSeatTable, olderSeatTable1, olderSeatTable2)
   )
-  const seatsWeightSeries = getWeightSeries(seatsWeights, originSeat)
+  const weightMatches = matchPersonAndWeights(seatsWeights, originSeat, personList)
 
-  const result = calcSeatByWeight(seatsWeightSeries, originSeat)
+  const result = calcSeatByWeight(weightMatches, originSeat, options)
 
   return updateSeatTable(originSeatTable, result)
 }
@@ -239,7 +385,11 @@ const calcBigGroup = (index: number) => {
   }
 }
 
-export const calcNewSeatBySideToMiddleAlgorithm = (originSeatTable: SeatTableItem[]) => {
+export const calcNewSeatBySideToMiddleAlgorithm = (
+  originSeatTable: SeatTableItem[],
+  personList: Person[],
+  options: { genderPreference: GenderPreference }
+) => {
   const allSeat = getSeatsFromSeatTable(originSeatTable)
   const seatsWeights = allSeat.map((x) => {
     const bigGroup = calcBigGroup(x.locationIndex)
@@ -275,8 +425,8 @@ export const calcNewSeatBySideToMiddleAlgorithm = (originSeatTable: SeatTableIte
     }
   })
 
-  const seatsWeightSeries = getWeightSeries(seatsWeights, allSeat)
-  const result = calcSeatByWeight(seatsWeightSeries, allSeat)
+  const weightMatches = matchPersonAndWeights(seatsWeights, allSeat, personList)
+  const result = calcSeatByWeight(weightMatches, allSeat, options)
 
   return updateSeatTable(originSeatTable, result)
 }
@@ -384,14 +534,22 @@ export const updateSeatTable = (seatTable: SeatTableItem[], seats: Seat[]) => {
   return result.map((item, index) => ({ ...item, locationIndex: index }) as SeatTableItem)
 }
 
-//TODO:让真随机计算座位的实现支持权重等特性
-export const calcNewSeatByRealRandom = (seatTable: SeatTableItem[]) => {
-  const newSeats = shuffle(getSeatsFromSeatTable(seatTable)).map((item, index) => {
-    item.locationIndex = index
-    return item
+export const calcNewSeatByRealRandom = (
+  seatTable: SeatTableItem[],
+  personList: Person[],
+  options: {
+    genderPreference: GenderPreference
+  }
+) => {
+  const originalSeats = getSeatsFromSeatTable(seatTable)
+  const seatsWeights = originalSeats.map(() => {
+    return new Array(originalSeats.length).fill(0).map(() => Math.random())
   })
 
-  return updateSeatTable(seatTable, newSeats)
+  const weightMatches = matchPersonAndWeights(seatsWeights, originalSeats, personList)
+  const result = calcSeatByWeight(weightMatches, originalSeats, options)
+
+  return updateSeatTable(seatTable, result)
 }
 
 export const calcNewSeatByAssignMenAndWomenTogetherAlgorithm = (

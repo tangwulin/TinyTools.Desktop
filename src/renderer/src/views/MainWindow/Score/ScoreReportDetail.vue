@@ -47,11 +47,10 @@ const allRates = computed(() => [...new Set(historyForThis.value?.map((item) => 
 const fullData = computed(() =>
   allRates.value
     .map((r) => historyForThis.value?.filter((s) => s.description === r))
-    .map(
-      (item) =>
-        item?.reduce((accumulator, currentValue) => {
-          return accumulator + currentValue.score
-        }, 0)
+    .map((item) =>
+      item?.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue.score
+      }, 0)
     )
     .map((sum, index) => ({
       value: sum,

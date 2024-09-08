@@ -1,11 +1,29 @@
 {
   "name": "麦哲伦",
   "charaKey": "char_248_mgllan",
-  "voiceBase": {
-    "日语": "voice/char_248_mgllan",
-    "中文-普通话": "voice_cn/char_248_mgllan",
-    "韩语": "voice_kr/char_248_mgllan"
-  },
+  "images": [
+    "https://media.prts.wiki/9/93/%E7%AB%8B%E7%BB%98_%E9%BA%A6%E5%93%B2%E4%BC%A6_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cf/%E7%AB%8B%E7%BB%98_%E9%BA%A6%E5%93%B2%E4%BC%A6_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4f/%E7%AB%8B%E7%BB%98_%E9%BA%A6%E5%93%B2%E4%BC%A6_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_248_mgllan"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_248_mgllan"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_248_mgllan"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_248_mgllan"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -21,7 +39,7 @@
         },
         {
           "language": "英文",
-          "content": "I will stay with you until the next expedition, Doctor. If you need me at your side, please do not be afraid to call upon me boldly!"
+          "content": "I'll stay with you until my next expedition, Doctor. Don't be afraid to send me out anywhere you need me."
         },
         {
           "language": "韩文",
@@ -47,7 +65,7 @@
         },
         {
           "language": "英文",
-          "content": "Actually, I've known about you for a long time, Doctor! Well, Mayer and MuMu told me all about you, so I had to come to Rhodes Island to see what you are like in person... Oh, I also brought a small present for you! Here!"
+          "content": "I actually heard about you a long time ago, Doctor! Yeah, Mayer and MuMu told me all about you. I just had to come to Rhodes Island to see what you're like in person. Oh, I also got a little present for you! Here!"
         },
         {
           "language": "韩文",
@@ -73,7 +91,7 @@
         },
         {
           "language": "英文",
-          "content": "This one? This is the pendant of the Great Emperor of Penguin Logistics. I used to see it many times when I went to Penguin Logistics. I always thought it was really cute. Every time, I used to rub it a whole lot! Doctor, you've never rubbed it before? You didn't dare? Why?!"
+          "content": "This one? It's an Emperor strap! Who...? The Emperor of Penguin Logistics! I visited that company a whole bunch, so I've met him lots of times. He's so cute! I give him plenty of pets every time I go! You ever pet him before, Doctor? You don't dare? Why?!"
         },
         {
           "language": "韩文",
@@ -99,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "Is Iffy doing better these days? When I left Rhine Lab last time, I was really worried about her condition..."
+          "content": "Is Iffy doing better these days? Last time I left Rhine Lab, she was in pretty bad shape. I've been worried about her…"
         },
         {
           "language": "韩文",
@@ -125,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "Has Mayer made anything new recently? I haven't worked on any new equipment for a long time so I should do some research with her. Oh right, Doctor, let me let you in on a secret on what happens when you disturb Mayer... Oh no! You've already been bitten before?"
+          "content": "Has Mayer made anything new? I haven't worked on any new equipment for a long time, so I wanna do some research with her. Oh right, Doctor, I'll let you in on a little secret. If you bother Mayer while she's working... What? She already bit you?"
         },
         {
           "language": "韩文",
@@ -151,7 +169,7 @@
         },
         {
           "language": "英文",
-          "content": "My drone and Meeboo, Sisyphus and Kirkika, are not controlled the same way. There is no limit to the types of uses they can have. However, there is currently a new system under development and it will soon be ready. Hehe, I'm looking forward to it."
+          "content": "Unlike Meeboo, Sisyphus or Kirkika, my drones are operated differently. There <i>is</i> a limit to how many I can run at once, and it's just the way it goes. But I have a new system in development. I think you'll be surprised before long."
         },
         {
           "language": "韩文",
@@ -177,7 +195,7 @@
         },
         {
           "language": "英文",
-          "content": "The Polar North? The dreams that are buried there are cold and cruel, but... in order to make my dreams a reality, I am willing to do anything it takes."
+          "content": "The North? It's like a cold, cruel wonderland. But it's also the place where my dreams lie. And I'm willing to do whatever it takes to make them come true."
         },
         {
           "language": "韩文",
@@ -203,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "'The tiny gardner, and the tiny flower, growing under the tile with no one to care for it...' This was Iffy's favorite story to read, perhaps due to how she can relate to it. However... she seems to have forgotten the book here. How odd."
+          "content": "'The tiny gardner, and the tiny flower, growing under the tile with no one to care for it...' It was Iffy's favorite storybook, maybe because it resonated with her. But, well... It seems like she doesn't remember it. Hmm… that's odd."
         },
         {
           "language": "韩文",
@@ -229,7 +247,7 @@
         },
         {
           "language": "英文",
-          "content": "The Polar North...that place is both mysterious and beautiful. The towering cliffs, the lonely, snow-covered trees, and the source of the radiant snow all stretch to the end of the earth. Doctor, you should go with me. Let's head there together, okay?"
+          "content": "The North... it's both mysterious and beautiful. The towering cliffs, the lonely, snow-covered trees, the glowing, prismatic Originum crystals… And the vast snowland, stretching to the ends of the earth. Doctor, you should come see it with me. We'll go together, okay?"
         },
         {
           "language": "韩文",
@@ -255,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor? Doctor you can't! If you fall asleep, you'll freeze to death!"
+          "content": "Doctor? Stay awake Doctor! If you fall asleep, you'll freeze to death!"
         },
         {
           "language": "韩文",
@@ -281,7 +299,7 @@
         },
         {
           "language": "英文",
-          "content": "Rhine Lab Commissioner Magallan discovered a mysterous research ship? Woah, y-you're that doctor from Rhodes Island, Ahem... Would you like to join my expedition? It'll be very interesting!"
+          "content": "Rhine Lab Specialist Magallan just discovered a mysterous research vessel! And you are…? Oh my goodness, you're that doctor from Rhodes Island! Uh, W-Would you like to join my expedition!? Adventuring together would be really interesting!"
         },
         {
           "language": "韩文",
@@ -307,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "The efficiency has improved."
+          "content": "Efficiency improved!"
         },
         {
           "language": "韩文",
@@ -333,7 +351,7 @@
         },
         {
           "language": "英文",
-          "content": "Update completed! Now the response speed of the device is twice as fast as before."
+          "content": "Update complete! Now my devices respond twice as fast."
         },
         {
           "language": "韩文",
@@ -359,7 +377,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, if you want to see the results of my research, then I must also demonstrate my strength! Hehehe, just so you know, I'm very strong, so don't be scared!"
+          "content": "Doctor, if you're curious about the results of my research, then I'll have to show you my stuff! Hehe, just so you know, I'll be showing you true power, so brace youself!"
         },
         {
           "language": "韩文",
@@ -411,7 +429,7 @@
         },
         {
           "language": "英文",
-          "content": "Everyone, maintain communication, over!"
+          "content": "Everyone, maintain communication, beep-beep!"
         },
         {
           "language": "韩文",
@@ -437,7 +455,7 @@
         },
         {
           "language": "英文",
-          "content": "Need to calibrate the equipment...Done!"
+          "content": "Hold on, calibrating my equipment… Done!"
         },
         {
           "language": "韩文",
@@ -463,7 +481,7 @@
         },
         {
           "language": "英文",
-          "content": "Once the drone is commissioned, it can take off at any time."
+          "content": "Preflight testing complete. Drones standing by."
         },
         {
           "language": "韩文",
@@ -515,7 +533,7 @@
         },
         {
           "language": "英文",
-          "content": "Do you need my skills?"
+          "content": "I bet you need my skills."
         },
         {
           "language": "韩文",
@@ -541,7 +559,7 @@
         },
         {
           "language": "英文",
-          "content": "Time to start working!"
+          "content": "Time to work!"
         },
         {
           "language": "韩文",
@@ -567,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "The equipment is working fine!"
+          "content": "All my equipment's good to go!"
         },
         {
           "language": "韩文",
@@ -593,7 +611,7 @@
         },
         {
           "language": "英文",
-          "content": "Is the target marked? Ok, the drone is launched!"
+          "content": "Is the target marked? Ok, launching drone!"
         },
         {
           "language": "韩文",
@@ -619,7 +637,7 @@
         },
         {
           "language": "英文",
-          "content": "Now! Snow blindness is a terrible think, you know!"
+          "content": "Now! Let 'em go snow blind!"
         },
         {
           "language": "韩文",
@@ -645,7 +663,7 @@
         },
         {
           "language": "英文",
-          "content": "3... 2... 1!"
+          "content": "Three… two… one! Take flight!"
         },
         {
           "language": "韩文",
@@ -697,7 +715,7 @@
         },
         {
           "language": "英文",
-          "content": "Watch out, that's a blind spot! Huh, it's already over? As expected, Doctor, you're so reliable."
+          "content": "Watch out, there's a blind spot in my scan—What, it's already over? All thanks to you, Doctor, you're reliable as ever."
         },
         {
           "language": "韩文",
@@ -723,7 +741,7 @@
         },
         {
           "language": "英文",
-          "content": "There are no other hostile signals."
+          "content": "No more hostiles detected!"
         },
         {
           "language": "韩文",
@@ -749,7 +767,7 @@
         },
         {
           "language": "英文",
-          "content": "There are still enemies nearby. Will you pursue them?"
+          "content": "There's still some enemies around. Are we going after them?"
         },
         {
           "language": "韩文",
@@ -775,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "We've been surrounded? Its my fault..."
+          "content": "They're flanking us? My bad, sorry…"
         },
         {
           "language": "韩文",
@@ -801,7 +819,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh? Th-there are even heated floors?! Ahh~ this is bliss~"
+          "content": "Hm...? You even have heated floors?! Ahh, this is bliss."
         },
         {
           "language": "韩文",
@@ -827,7 +845,7 @@
         },
         {
           "language": "英文",
-          "content": "Huh?"
+          "content": "Mhm?"
         },
         {
           "language": "韩文",
@@ -853,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "Lets go, Lets go! Ice skating is not that scary with me here."
+          "content": "Come on, Doctor. Ice skating isn't so cary. I'm here with you."
         },
         {
           "language": "韩文",
@@ -892,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐博士！因为工作，我已经有一段时间没有和爸爸妈妈一起过节了，不过刚刚已经寄了信还有一些我在极北做的小标本，嘿嘿。而且他们也知道博士呢！我有和爸爸妈妈讲工作里认识的朋友啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -905,7 +949,7 @@
         },
         {
           "language": "英文",
-          "content": "Do you need something?"
+          "content": "Um? Anything I can help with?"
         },
         {
           "language": "韩文",
@@ -916,11 +960,32 @@
           "content": "有什麼事嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我有能帮助我进行科研的知识，健康的身体，支持我的父母、朋友们，还有极北，博士，我的人生真的很幸福呢。我还有一个小小的愿望，如果有记载，我希望我的名字终有一天能被写在极北那栏里。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/93/立绘_麦哲伦_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cf/立绘_麦哲伦_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4f/立绘_麦哲伦_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

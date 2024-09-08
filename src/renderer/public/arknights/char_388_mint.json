@@ -1,11 +1,30 @@
 {
   "name": "薄绿",
   "charaKey": "char_388_mint",
-  "voiceBase": {
-    "日语": "voice/char_388_mint",
-    "中文-普通话": "voice_cn/char_388_mint",
-    "韩语": "voice_kr/char_388_mint"
-  },
+  "images": [
+    "https://media.prts.wiki/d/d8/%E7%AB%8B%E7%BB%98_%E8%96%84%E7%BB%BF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/20/%E7%AB%8B%E7%BB%98_%E8%96%84%E7%BB%BF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e4/%E7%AB%8B%E7%BB%98_%E8%96%84%E7%BB%BF_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/62/%E7%AB%8B%E7%BB%98_%E8%96%84%E7%BB%BF_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_388_mint"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_388_mint"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_388_mint"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_388_mint"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -21,7 +40,7 @@
         },
         {
           "language": "英文",
-          "content": "Can I read any of the books here? I can read all of them? Mm-hm, mm-hm, I'll be careful! I won't mess them up!"
+          "content": "Can I read any of the books here? I can read all of them?  Oh, thank you! I'll be careful! I won't mess them up!"
         },
         {
           "language": "韩文",
@@ -47,7 +66,7 @@
         },
         {
           "language": "英文",
-          "content": "Ah. Sorry, no. You shouldn't just carelessly touch my book. It might bite your hand. I'm actually not joking. I'm serious. Look. I even have to tie it shut like this."
+          "content": "Ah, sorry, please don't go touching my book. It might bite your hand if you do. No, really, I'm not joking, I'm serious. Look! I even have to tie it shut like this."
         },
         {
           "language": "韩文",
@@ -125,7 +144,7 @@
         },
         {
           "language": "英文",
-          "content": "I like reading, but I like hanging out with everyone too! It makes me so happy when I can be with the people I like. Also, don't be fooled. I'm really good at sporty stuff! Especially climbing trees. I can climb super high!"
+          "content": "I like reading, but I love hanging out with everyone too! It makes me so happy when I can be with the people I like. Also, don't let my looks fool you. I'm really good at sporty stuff! Especially climbing trees. I can climb super high!"
         },
         {
           "language": "韩文",
@@ -151,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "I got some new inspiration after talking to Miss Eyjafjalla today! She's very well-researched on environmental geology. Thank goodness my group's research wasn't stopped because of my accident. Heheh! If I get results this time, I can reapply to the Institution to resume my studies."
+          "content": "Thank goodness my group's research wasn't halted after my accident, because I talked to Miss Eyjafjalla today, and she's given me a lot of new inspiration! She's very well-researched on environmental geology, heehee. If I can just get results this time, that'll let me reapply to the Institution to resume my studies."
         },
         {
           "language": "韩文",
@@ -177,7 +196,7 @@
         },
         {
           "language": "英文",
-          "content": "Skyfire is an alumna from my university. Although she skipped a year and graduated soon after I entered, there's times she's looked after me... Oh, that's right! She's also the one who introduced me to Rhodes Island so I could receive treatment."
+          "content": "Skyfire is an alumna from my university. She graduated soon after I entered since she skipped a year, but even still, she did look after me... Oh, speaking of! She's also the one who introduced me to Rhodes Island! It's thanks to her I'm receiving treatment here."
         },
         {
           "language": "韩文",
@@ -203,7 +222,7 @@
         },
         {
           "language": "英文",
-          "content": "Um, are you wondering why I always follow you, Doctor? It's because when I'm near you, I feel really at ease, so I just unconsciously... Doctor, am I just annoying you... Do you want me to go away?"
+          "content": "Um, I suppose I've been following you around, haven't I? I mean, I feel really at ease when I'm around you, so I just unconsciously... A-Am I annoying you, Doctor? Do you want me to go away?"
         },
         {
           "language": "韩文",
@@ -229,7 +248,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, this is for you. Yep, I found it on the way back with a whole lot of nice-looking stones, but then I realized I'd gotten separated from the others. Eh? The ore chunk on your desk from before? I put that there too, yes... Did you like it, Doctor?"
+          "content": "Doctor, this is for you. I found it on the way back, and so many more pretty-looking stones just like it! But, well... that was before I realized I'd gotten separated from the others. Mm? The ore chunk on your desk from before? I put that there too, yes. Did you like it, Doctor?"
         },
         {
           "language": "韩文",
@@ -255,7 +274,7 @@
         },
         {
           "language": "英文",
-          "content": "Nnh... mmmmnnh... there! Ah, Doctor! Sorry! Did I wake you up? A bug landed on your head just now, and for a moment, I, um... did it hurt? I can shush it better!"
+          "content": "Nnh... mmmmnnh... there! Ah, Doctor! Sorry! Did I wake you up? There was a bug on your head, so I just, um—did it hurt? I can shush it better!"
         },
         {
           "language": "韩文",
@@ -281,7 +300,7 @@
         },
         {
           "language": "英文",
-          "content": "Thank you for helping me move all these books! Just leave them here, please. Um, my codename is Mint. What's yours? ...Huh? Doctor? Wait, so you're the Doctor Skyfire was telling me about?"
+          "content": "Thank you for helping me move all these books! Just leave them here, please. Oh, my codename is Mint. What's yours? Doctor? Wait, so you're <i>the</i> Doctor? Skyfire was telling me about you!"
         },
         {
           "language": "韩文",
@@ -411,7 +430,7 @@
         },
         {
           "language": "英文",
-          "content": "Eh? Me, the leader?"
+          "content": "Wait! You want me as the leader?"
         },
         {
           "language": "韩文",
@@ -489,7 +508,7 @@
         },
         {
           "language": "英文",
-          "content": "Whuh? What is it? I'm listening, I'm listening!"
+          "content": "Mmmm… Whuh? What? Yes, I'm listening!"
         },
         {
           "language": "韩文",
@@ -541,7 +560,7 @@
         },
         {
           "language": "英文",
-          "content": "And, there..."
+          "content": "One, two—whoopsie-daisy."
         },
         {
           "language": "韩文",
@@ -593,7 +612,7 @@
         },
         {
           "language": "英文",
-          "content": "Oi!"
+          "content": "Take that!"
         },
         {
           "language": "韩文",
@@ -697,7 +716,7 @@
         },
         {
           "language": "英文",
-          "content": "Everything went just like you said it would, Doctor! That was amazing...!"
+          "content": "Everything went just like you said it would, Doctor! Amazing...!"
         },
         {
           "language": "韩文",
@@ -892,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "嗯......有一点想爸爸妈妈了。天火学姐这么多年也一直都在外面，我要不要去问问她是怎么排解情绪的呢......啊，博士，今天会有信使来罗德岛吗？我可能要寄一封信出去呢。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,12 +961,32 @@
           "content": "你在這裡啊博士，找到你了。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "要是可以参与更多的研究项目就好啦，导师还有团队成员总是太照顾我，担心过度劳累对病情不好，都不太让我参与一线的勘测了。我一定要在罗德岛好好治病，这样才能尽快回去投身于研究呀。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d8/立绘_薄绿_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/20/立绘_薄绿_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e4/立绘_薄绿_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/62/立绘_薄绿_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,12 +1,28 @@
 {
   "name": "掠风",
   "charaKey": "char_433_windft",
-  "voiceBase": {
-    "日语": "voice/char_433_windft",
-    "中文-普通话": "voice_cn/char_433_windft",
-    "韩语": "voice_kr/char_433_windft",
-    "英语": "voice_en/char_433_windft"
-  },
+  "images": [
+    "https://media.prts.wiki/0/05/%E7%AB%8B%E7%BB%98_%E6%8E%A0%E9%A3%8E_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/5d/%E7%AB%8B%E7%BB%98_%E6%8E%A0%E9%A3%8E_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_433_windft"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_433_windft"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_433_windft"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_433_windft"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -74,7 +90,7 @@
         },
         {
           "language": "英文",
-          "content": "I consulted with my profs and sent a lot of resumes out close to graduation, but got no reply. I was told later how a lot of spots and big companies are fixed in advance, and not for students with no background like me. So the day I got Rhodes Island's hiring invitation, I thought it was some employment scam."
+          "content": "I consulted with my profs and sent a lot of resumes out close to graduation, but got no reply. I was told later how a lot of spots and big companies  are fixed in advance, and not for students with no background like me. So the day I got Rhodes Island's hiring invitation, I thought it was some employment scam."
         },
         {
           "language": "韩文",
@@ -893,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "小时候没能好好地庆祝过一次，长大后有条件庆祝了，却没能和家人一起。我要是能赚到更多的钱就好了，这样平时就可以请几天假回去看看他们，也不会心疼工资。这就是我的新年目标。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,10 +959,32 @@
           "content": "博士，等下去玩極限飛盤嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛看起来好有钱啊，这些东西大家都能吃完吗？浪费可不太好。喔——那边那个是小刻吗，不、不拦着吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/0/05/立绘_掠风_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5d/立绘_掠风_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

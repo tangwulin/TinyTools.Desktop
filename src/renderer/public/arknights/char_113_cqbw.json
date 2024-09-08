@@ -1,16 +1,45 @@
 {
   "name": "W",
   "charaKey": "char_113_cqbw",
-  "voiceBase": {
-    "日语": "voice/char_113_cqbw",
-    "中文-普通话": "voice_cn/char_113_cqbw",
-    "韩语": "voice_kr/char_113_cqbw",
-    "英语": "voice_en/char_113_cqbw",
-    "中文-普通话(恍惚)": "voice_cn/char_113_cqbw_epoque__7",
-    "日语(恍惚)": "voice/char_113_cqbw_epoque__7",
-    "韩语(恍惚)": "voice_kr/char_113_cqbw_epoque__7",
-    "英语(恍惚)": "voice_en/char_113_cqbw_epoque__7"
-  },
+  "images": [
+    "https://media.prts.wiki/4/44/%E7%AB%8B%E7%BB%98_W_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/39/%E7%AB%8B%E7%BB%98_W_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a3/%E7%AB%8B%E7%BB%98_W_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_113_cqbw"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_113_cqbw"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_113_cqbw"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_113_cqbw"
+    },
+    {
+      "language": "中文-普通话(恍惚)",
+      "base": "voice_cn/char_113_cqbw_epoque__7"
+    },
+    {
+      "language": "日语(恍惚)",
+      "base": "voice/char_113_cqbw_epoque__7"
+    },
+    {
+      "language": "韩语(恍惚)",
+      "base": "voice_kr/char_113_cqbw_epoque__7"
+    },
+    {
+      "language": "英语(恍惚)",
+      "base": "voice_en/char_113_cqbw_epoque__7"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1577,6 +1606,52 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "很少见到这么热闹的罗德岛，什么，这是可以放松享受的意思吗？很不巧，我只准备了一些惊吓礼盒，至于里面有什么，你应该清楚得很吧？那还想要吗？不要了？真可惜。"
+        },
+        {
+          "language": "日文",
+          "content": "こんなに賑やかなロドスは珍しいわ。え、リラックスして楽しめってこと？あいにくだけど、あたしはびっくり箱くらいしか用意してないわ。中身がなにかは、あんたならわかっでるでしょう？それでもほしい？要らない？あら、残念だわ。"
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文(恍惚)",
+          "content": "赫德雷，又有任务了吗？......特蕾西娅举办了一个小型聚会庆祝新年，并且邀请了我们？......哈，没想到我们还有过新年的一天。等等，我又没说不去，先让我找找我的相机！"
+        },
+        {
+          "language": "日文(恍惚)",
+          "content": "なによ、ヘドリー、また任務？…テレジアが年越しのパーティーを？あたしたちも招待してる？…ふん、あたしたちにも新年を祝う日が来るなんてね。ちょっと、行かないなんて行ってないでしょう？カメラを取ってくるわ。"
+        },
+        {
+          "language": "英文(恍惚)",
+          "content": ""
+        },
+        {
+          "language": "韩文(恍惚)",
+          "content": ""
+        },
+        {
+          "language": "繁体中文(恍惚)",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1621,11 +1696,52 @@
           "content": "小心腳下。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "真是愉快的其乐融融，这就是你和凯尔希在这里安心举办的庆祝现状的宴会？真正应该看到这个景象的，绝对不是现在的你，也不是现在的我，更不应该是明明什么都没有忘的凯尔希。"
+        },
+        {
+          "language": "日文",
+          "content": "本当楽しそうな仲良しごっこね。これがケルシーとあんたがロドスでのうのうと現状をいわうパーティーだって言うの？この光景を目にするべきなのは、絶対に今のあんたでも、今のわたしでもないわよ。さらに言えば、明らかに何一つ忘れてないケルシーなんて、論外ね。"
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文(恍惚)",
+          "content": "这场仗也不知道会打到什么时候，大家都在很努力地活着啊，明明活着就只是受苦，还是说，活着才能受苦？嗯？喂，赫德雷，我刚才好像说了一句你会喜欢的话！"
+        },
+        {
+          "language": "日文(恍惚)",
+          "content": "この戦争がいつまで続くかだってわからないのに、みんな必死に生きてるわ。生きてでも苦しむだけなのにね。それとも、生きてるからこそ苦しむこともできるってゆうべきかしら。あら、ねぇ、ヘドリー、あたし、今あんたがすきそうなことを言わなかった。"
+        },
+        {
+          "language": "英文(恍惚)",
+          "content": ""
+        },
+        {
+          "language": "韩文(恍惚)",
+          "content": ""
+        },
+        {
+          "language": "繁体中文(恍惚)",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/44/立绘_W_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/39/立绘_W_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a3/立绘_W_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

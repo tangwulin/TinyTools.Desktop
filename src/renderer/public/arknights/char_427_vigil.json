@@ -1,13 +1,33 @@
 {
   "name": "伺夜",
   "charaKey": "char_427_vigil",
-  "voiceBase": {
-    "日语": "voice/char_427_vigil",
-    "中文-普通话": "voice_cn/char_427_vigil",
-    "韩语": "voice_kr/char_427_vigil",
-    "英语": "voice_en/char_427_vigil",
-    "意大利语": "voice_custom/char_427_vigil_ita"
-  },
+  "images": [
+    "https://media.prts.wiki/f/f1/%E7%AB%8B%E7%BB%98_%E4%BC%BA%E5%A4%9C_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b5/%E7%AB%8B%E7%BB%98_%E4%BC%BA%E5%A4%9C_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8a/%E7%AB%8B%E7%BB%98_%E4%BC%BA%E5%A4%9C_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_427_vigil"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_427_vigil"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_427_vigil"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_427_vigil"
+    },
+    {
+      "language": "意大利语",
+      "base": "voice_custom/char_427_vigil_ita"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1030,6 +1050,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新的一年，愿我们都对自己的目标坚定不移，干杯。啊，没事的，这是苹果汁，太烈的酒我喝不来。你笑什么？家族成员就一定要会喝酒？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "È passato un altro anno, speriamo di non abbandonare mai il nostro obiettivo. Salute. Ah, non preoccuparti, è solo succo di mela, non reggo i liquori forti. Che ti ridi? Non è che tutti i mafiosi sono degli ubriaconi? Eh?"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1058,11 +1108,36 @@
           "content": "Questi documenti non sono importanti, Doc. L'importante è ciò che fai."
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我们还挺像的。我认为就算是一摊泥泞的叙拉古，也并非无法改变。而你的野心，哈，甚至比我的还要大。我们都必须拥有配得上这份野心的实力，我会继续磨炼自己，希望你也一样。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "Doc, tu ed io siamo molto simili. Credo ci sia ancora una possibilità di cambiare il pantano che è a Siracusa. Ma tu, tu sei una brava persona. Hai molta più ambizione di me. Dobbiamo essere in grado di realizzare i nostri obiettivi. Continuerò ad allenarmi. Spero farai lo stesso."
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f1/立绘_伺夜_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b5/立绘_伺夜_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8a/立绘_伺夜_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

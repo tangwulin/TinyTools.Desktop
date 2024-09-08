@@ -1,12 +1,29 @@
 {
   "name": "深海色",
   "charaKey": "char_110_deepcl",
-  "voiceBase": {
-    "日语": "voice/char_110_deepcl",
-    "中文-普通话": "voice_cn/char_110_deepcl",
-    "韩语": "voice_kr/char_110_deepcl",
-    "英语": "voice_en/char_110_deepcl"
-  },
+  "images": [
+    "https://media.prts.wiki/5/52/%E7%AB%8B%E7%BB%98_%E6%B7%B1%E6%B5%B7%E8%89%B2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7c/%E7%AB%8B%E7%BB%98_%E6%B7%B1%E6%B5%B7%E8%89%B2_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/df/%E7%AB%8B%E7%BB%98_%E6%B7%B1%E6%B5%B7%E8%89%B2_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_110_deepcl"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_110_deepcl"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_110_deepcl"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_110_deepcl"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -22,7 +39,7 @@
         },
         {
           "language": "英文",
-          "content": "Good morning, Doctor. Can I paint a portrait of you? And don't worry, I'll try not to... bring it to life. Besides, I'm not capable of bringing EVERYTHING to life, you know!"
+          "content": "Good morning, Doctor. Can I paint a portrait of you? And don't worry, I'll try not to... bring it to life. Besides, it's not like I can bring everything to life, you know."
         },
         {
           "language": "韩文",
@@ -48,7 +65,7 @@
         },
         {
           "language": "英文",
-          "content": "I feel like I'm not supposed to appear here..."
+          "content": "Maybe I wasn't supposed to appear here?…"
         },
         {
           "language": "韩文",
@@ -100,7 +117,7 @@
         },
         {
           "language": "英文",
-          "content": "There are lots of fun creative resources here at Rhodes Island! I'm feeling inspired..."
+          "content": "There are lots of fun, creative things here at Rhodes Island. I'm feeling inspired…"
         },
         {
           "language": "韩文",
@@ -126,7 +143,7 @@
         },
         {
           "language": "英文",
-          "content": "See my adorable 'assistants'? Oh, you think they're scary? No way! They're the cutest babies!"
+          "content": "See my lovely 'assistants'? Hehe… What? You think they're scary? But, but they're so cute!"
         },
         {
           "language": "韩文",
@@ -152,7 +169,7 @@
         },
         {
           "language": "英文",
-          "content": "Ha, so this is your color? Look into my eyes, then... paint me in your colors."
+          "content": "Heh, so these are the colors of your soul…? Alright then, look at me. And paint me in those colors, your colors."
         },
         {
           "language": "韩文",
@@ -178,7 +195,7 @@
         },
         {
           "language": "英文",
-          "content": "That's right. Even if no one understands me, I'll continue to make art. No matter what monsters my works turn into..."
+          "content": "That's right. Even if no one understands me, I'll keep making art. No matter what kinds of monsters my works might become…"
         },
         {
           "language": "韩文",
@@ -204,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "We artists are a unique breed... we get stuck at least thirty days a month and think everything we produce is garbage. Also, we only become inspired after midnight."
+          "content": "We artists are a unique breed… We spend at least thirty days a month stuck in a rut, thinking all our work is trash. And we only make any progress when inspiration strikes after midnight."
         },
         {
           "language": "韩文",
@@ -230,7 +247,7 @@
         },
         {
           "language": "英文",
-          "content": "The battered world, paint peeling, finally closes its eyes in its dark depths—that's right, darkness is the true color of the ocean. Black is the only color you see, you say? Wait till I share all I know with you..."
+          "content": "In the end, the mottled world sleeps peacefully in the dark depths—Yes, that's the true color of the ocean. Black is the only color you see? Looks like I still have more to share with you…"
         },
         {
           "language": "韩文",
@@ -256,7 +273,7 @@
         },
         {
           "language": "英文",
-          "content": "Are you... dreaming? Is the world in your dreams as colorful as the beings in this world, Doctor?..."
+          "content": "Are you... dreaming? Is the world in your dreams as colorful as the beings of this world, Doctor…?"
         },
         {
           "language": "韩文",
@@ -282,7 +299,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm Deepcolor, a painter. That's right, just a 'painter', nothing more."
+          "content": "I'm Deepcolor, a painter. Yes, just a 'painter', nothing more."
         },
         {
           "language": "韩文",
@@ -308,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "What is this unpleasant feeling...?"
+          "content": "What's this unsettling feeling...?"
         },
         {
           "language": "韩文",
@@ -334,7 +351,7 @@
         },
         {
           "language": "英文",
-          "content": "Um, could you just... stop caring about me? If you keep treating me like this... like I matter... I-I don't know what will become of me..."
+          "content": "Um, could you just... stop caring about me? If you keep treating me so well... I-I don't know what I might become…"
         },
         {
           "language": "韩文",
@@ -360,7 +377,7 @@
         },
         {
           "language": "英文",
-          "content": "Thank you, Doctor. Now, let's complete this piece of art, shall we?"
+          "content": "Thank you, Doctor. Now, let's complete this work of art, shall we?"
         },
         {
           "language": "韩文",
@@ -386,7 +403,7 @@
         },
         {
           "language": "英文",
-          "content": "Me? Going to battle? Are you nuts?"
+          "content": "You're sending me to fight? Seriously?!"
         },
         {
           "language": "韩文",
@@ -412,7 +429,7 @@
         },
         {
           "language": "英文",
-          "content": "I can't lead that many people."
+          "content": "I can't lead so many people."
         },
         {
           "language": "韩文",
@@ -464,7 +481,7 @@
         },
         {
           "language": "英文",
-          "content": "Is that... the enemy?"
+          "content": "Is that who we're fighting?!"
         },
         {
           "language": "韩文",
@@ -542,7 +559,7 @@
         },
         {
           "language": "英文",
-          "content": "Doodling on the canvas..."
+          "content": "Scumble-scumble..."
         },
         {
           "language": "韩文",
@@ -568,7 +585,7 @@
         },
         {
           "language": "英文",
-          "content": "Aw, give me a minute!"
+          "content": "Aww, I just need a minute!"
         },
         {
           "language": "韩文",
@@ -594,7 +611,7 @@
         },
         {
           "language": "英文",
-          "content": "No need to be in such a hurry."
+          "content": "No need to rush."
         },
         {
           "language": "韩文",
@@ -646,7 +663,7 @@
         },
         {
           "language": "英文",
-          "content": "You gotta get past my 'assistants' first."
+          "content": "You'll have to get past my 'assistants' first."
         },
         {
           "language": "韩文",
@@ -672,7 +689,7 @@
         },
         {
           "language": "英文",
-          "content": "Can you defeat these little ones?"
+          "content": "Can you defeat my little ones?"
         },
         {
           "language": "韩文",
@@ -698,7 +715,7 @@
         },
         {
           "language": "英文",
-          "content": "If you really make me mad... you won't want to know what happens next."
+          "content": "If you really make me mad... you won't like what happens next."
         },
         {
           "language": "韩文",
@@ -724,7 +741,7 @@
         },
         {
           "language": "英文",
-          "content": "I need to sketch these victorious heroes."
+          "content": "Let me sketch these triumphant heroes."
         },
         {
           "language": "韩文",
@@ -776,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "If only the end of the battle could be erased and redone, like a sketch."
+          "content": "If only battles were like sketches. I'd just erase that one and redo it…"
         },
         {
           "language": "韩文",
@@ -854,7 +871,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, since we happen to have some time off, wanna see my newest work?"
+          "content": "Doctor, since we happen to have some time off, want to see my latest work?"
         },
         {
           "language": "韩文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好，博士。博士问新年在我眼中是什么颜色的吗？嗯......食物的香气、干员们的笑脸、饱含着心意的礼物......温暖的、柔软的姜黄？很新奇的感受呢，让我把这一切都画下来吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -906,7 +949,7 @@
         },
         {
           "language": "英文",
-          "content": "Good morning to you, Doctor."
+          "content": "Good morning, Doctor."
         },
         {
           "language": "韩文",
@@ -917,11 +960,32 @@
           "content": "早上好，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天是什么日子？啊啊，原来是这样。我的“助手”看起来也一起加入进去了呢，那么，让它们为罗德岛创作出一幅更美丽的作品吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/52/立绘_深海色_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7c/立绘_深海色_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/df/立绘_深海色_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

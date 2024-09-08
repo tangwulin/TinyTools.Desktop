@@ -1,12 +1,29 @@
 {
   "name": "陨星",
   "charaKey": "char_219_meteo",
-  "voiceBase": {
-    "日语": "voice/char_219_meteo",
-    "中文-普通话": "voice_cn/char_219_meteo",
-    "韩语": "voice_kr/char_219_meteo",
-    "英语": "voice_en/char_219_meteo"
-  },
+  "images": [
+    "https://media.prts.wiki/f/f8/%E7%AB%8B%E7%BB%98_%E9%99%A8%E6%98%9F_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9b/%E7%AB%8B%E7%BB%98_%E9%99%A8%E6%98%9F_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ad/%E7%AB%8B%E7%BB%98_%E9%99%A8%E6%98%9F_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_219_meteo"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_219_meteo"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_219_meteo"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_219_meteo"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "又过去了一年。作为雇佣兵来说，每多活一年，都算是值得高兴的事。但我不希望有更多人生活在这种不安中......博士，我为罗德岛上的孩子们准备了一点礼物，可以请您帮我分给他们吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士，你好嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我从未在某一个组织逗留过这么长时间，也从没有安定下来的打算。但是，当阿米娅对我说“我也想帮助萨卡兹人”的时候，我动摇了。我愿意相信，也许这片大地上，还有很多人对未来抱有期待。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f8/立绘_陨星_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9b/立绘_陨星_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ad/立绘_陨星_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

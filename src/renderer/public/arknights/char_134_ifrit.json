@@ -1,12 +1,30 @@
 {
   "name": "伊芙利特",
   "charaKey": "char_134_ifrit",
-  "voiceBase": {
-    "日语": "voice/char_134_ifrit",
-    "中文-普通话": "voice_cn/char_134_ifrit",
-    "韩语": "voice_kr/char_134_ifrit",
-    "英语": "voice_en/char_134_ifrit"
-  },
+  "images": [
+    "https://media.prts.wiki/5/53/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E8%8A%99%E5%88%A9%E7%89%B9_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f2/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E8%8A%99%E5%88%A9%E7%89%B9_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E8%8A%99%E5%88%A9%E7%89%B9_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/06/%E7%AB%8B%E7%BB%98_%E4%BC%8A%E8%8A%99%E5%88%A9%E7%89%B9_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_134_ifrit"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_134_ifrit"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_134_ifrit"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_134_ifrit"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？哼，别小瞧我，新年是什么意思赫默早就教给我了，不就是庆祝一年过去，为新一年规划新目标之类的嘛！我的新目标？喂，你拿着作业过来干什么，赫默都说了今天我可以不用写的！走开啊！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "啊？找我有事嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天怎么回事啊，外面这么吵？哦哦，有派对啊！有烤肉台吗？本大爷已经很会烤肉了，你们都来吃！什么嘛，不是炭火炉，没劲，本大爷的炭火炉都去哪了？阿消撤走了？啊啊啊——"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/53/立绘_伊芙利特_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f2/立绘_伊芙利特_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_伊芙利特_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/06/立绘_伊芙利特_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

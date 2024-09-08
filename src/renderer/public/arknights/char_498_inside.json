@@ -1,12 +1,29 @@
 {
   "name": "隐现",
   "charaKey": "char_498_inside",
-  "voiceBase": {
-    "日语": "voice/char_498_inside",
-    "中文-普通话": "voice_cn/char_498_inside",
-    "韩语": "voice_kr/char_498_inside",
-    "英语": "voice_en/char_498_inside"
-  },
+  "images": [
+    "https://media.prts.wiki/b/bf/%E7%AB%8B%E7%BB%98_%E9%9A%90%E7%8E%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d6/%E7%AB%8B%E7%BB%98_%E9%9A%90%E7%8E%B0_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c8/%E7%AB%8B%E7%BB%98_%E9%9A%90%E7%8E%B0_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_498_inside"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_498_inside"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_498_inside"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_498_inside"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -110,7 +127,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't get me wrong, Doctor, yes, I was elected as 'a representative of the Notarial Hall', but that's just because everyone's curious about what magical place could Federico endorse, and they needed someone out to take a look for them. In other words, they picked me to come take a look-see here. I've got no say on any matters relating to the Notarial Hall, so don't ask me about that sort of thing, okay?"
+          "content": "Don't get me wrong, Doctor, yes, I was elected as 'a representative of the Notarial Hall', but that's just because everyone's curious about what magical place could  Federico endorse, and they needed someone out to take a look for them. In other words, they picked me to come take a look-see here. I've got no say on any matters relating to the Notarial Hall, so don't ask me about that sort of thing, okay?"
         },
         {
           "language": "韩文",
@@ -198,7 +215,7 @@
         },
         {
           "language": "英文",
-          "content": "I thought you might have found this business annoying, so I dealt with it in your place, and here's the mission report. The scene was something of an eyesore, so I didn't attach any photos. I executed every last name in your notes, no exceptions. What's with the look, Doctor? Do you feel unwell?"
+          "content": "I thought you might have found this business annoying, so I dealt with it in your place, and here's the mission report. The scene was something of an eyesore, so I didn't attach any photos. I executed every last name in your notes, no exceptions.   What's with the look, Doctor? Do you feel unwell?"
         },
         {
           "language": "韩文",
@@ -757,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士！新年往往意味着成倍的棘手事件，不知道罗德岛这边怎么样......我这会儿怎么不在拉特兰处理事务？啊哈哈，外派任务也是很重要的嘛。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -777,10 +816,28 @@
           "content": "일단 쉬는 것도 나쁘지 않은 선택이야, 박사."
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哎，现在的气氛好像只适合说严肃的话？好吧，说真的，博士，本来我对罗德岛的好奇心没有其他执行者那么强，但现在我很佩服你们的本领。总是朝着冲突前进，而不是避开它，这可不容易。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bf/立绘_隐现_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d6/立绘_隐现_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

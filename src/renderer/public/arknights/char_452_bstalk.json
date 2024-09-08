@@ -1,11 +1,25 @@
 {
   "name": "豆苗",
   "charaKey": "char_452_bstalk",
-  "voiceBase": {
-    "日语": "voice/char_452_bstalk",
-    "中文-普通话": "voice_cn/char_452_bstalk",
-    "韩语": "voice_kr/char_452_bstalk"
-  },
+  "images": [
+    "https://media.prts.wiki/4/4b/%E7%AB%8B%E7%BB%98_%E8%B1%86%E8%8B%97_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/87/%E7%AB%8B%E7%BB%98_%E8%B1%86%E8%8B%97_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/58/%E7%AB%8B%E7%BB%98_%E8%B1%86%E8%8B%97_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_452_bstalk"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_452_bstalk"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_452_bstalk"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -51,7 +65,7 @@
         },
         {
           "language": "韩文",
-          "content": "자자 비키세요~ 빈스토크 사육 센터의 산책 시간이야. 우리 애들 밟지 않게, 발밑 조심해 줘~"
+          "content": "자자 비키세요~ 빈스토크 육성 센터의 산책 시간이야. 우리 애들 밟지 않게, 발밑 조심해 줘~"
         },
         {
           "language": "繁体中文",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐哦博士。我的新年愿望是，豆苗培育公司在今年顺利成立！如果博士可以给予我一点小小的帮助的话，我工作时也会更努力的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "喲~在幹嘛呢，博士？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛的宴会一如既往地热闹呢，可是什么时候能在罗德岛举办宠物大赛呢？比比谁的宠物能做到更多事，或者单纯的人气比拼这样。宠物对战？博士！你的想法太暴力啦！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4b/立绘_豆苗_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_豆苗_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/58/立绘_豆苗_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

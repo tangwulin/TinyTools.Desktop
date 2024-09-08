@@ -1,12 +1,29 @@
 {
   "name": "明椒",
   "charaKey": "char_4071_peper",
-  "voiceBase": {
-    "日语": "voice/char_4071_peper",
-    "中文-普通话": "voice_cn/char_4071_peper",
-    "韩语": "voice_kr/char_4071_peper",
-    "英语": "voice_en/char_4071_peper"
-  },
+  "images": [
+    "https://media.prts.wiki/9/94/%E7%AB%8B%E7%BB%98_%E6%98%8E%E6%A4%92_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6e/%E7%AB%8B%E7%BB%98_%E6%98%8E%E6%A4%92_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e7/%E7%AB%8B%E7%BB%98_%E6%98%8E%E6%A4%92_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4071_peper"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4071_peper"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4071_peper"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4071_peper"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐！没想到会和这么多人一起迎接新年，大家聚在一块许愿好热闹啊！博士今年有什么愿望吗？我的话，就是希望姥姥平安......啊，愿望是不是说出来就不灵了？博士你快忘掉！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "嗨，博士，今天有哪些任務？啊對了，先說好，太離譜的活我可不接！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "像罗德岛这样的好雇主不好找，我们之间的合作真的很愉快！当初在伦蒂尼姆被博士你打败的时候，我完全没想过会有这么一天......我们今后还可以继续合作，合作很久很久，对吧，博士？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/94/立绘_明椒_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6e/立绘_明椒_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e7/立绘_明椒_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

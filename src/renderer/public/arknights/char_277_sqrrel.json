@@ -1,12 +1,29 @@
 {
   "name": "阿消",
   "charaKey": "char_277_sqrrel",
-  "voiceBase": {
-    "日语": "voice/char_277_sqrrel",
-    "中文-普通话": "voice_cn/char_277_sqrrel",
-    "韩语": "voice_kr/char_277_sqrrel",
-    "英语": "voice_en/char_277_sqrrel"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c6/%E7%AB%8B%E7%BB%98_%E9%98%BF%E6%B6%88_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e1/%E7%AB%8B%E7%BB%98_%E9%98%BF%E6%B6%88_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/52/%E7%AB%8B%E7%BB%98_%E9%98%BF%E6%B6%88_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_277_sqrrel"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_277_sqrrel"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_277_sqrrel"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_277_sqrrel"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -274,7 +291,7 @@
       "text": [
         {
           "language": "中文",
-          "content": "博士长官您好，龙门消防署警员阿消向您报道！"
+          "content": "博士长官您好，龙门消防署警员阿消向您报到！"
         },
         {
           "language": "日文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐长官，新的一年也请多多配合我的工作哦！等一下我好像闻到了烟花的味道这一批有经过我的检查吗啊啊啊不许点火不许放——"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "有事嗎長官！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "报告长官，宴会烤肉要使用的炭火炉已经全部替换成电磁炉，庆典随时可以开始！接下来我也一定会让每一位干员都更加了解火灾的可怕之处的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c6/立绘_阿消_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e1/立绘_阿消_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/52/立绘_阿消_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

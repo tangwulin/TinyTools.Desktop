@@ -1,11 +1,24 @@
 {
   "name": "梅",
   "charaKey": "char_133_mm",
-  "voiceBase": {
-    "日语": "voice/char_133_mm",
-    "中文-普通话": "voice_cn/char_133_mm",
-    "韩语": "voice_kr/char_133_mm"
-  },
+  "images": [
+    "https://media.prts.wiki/a/a4/%E7%AB%8B%E7%BB%98_%E6%A2%85_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/86/%E7%AB%8B%E7%BB%98_%E6%A2%85_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_133_mm"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_133_mm"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_133_mm"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -337,7 +350,7 @@
         },
         {
           "language": "韩文",
-          "content": "탐정국장으로 발탁해줘서, 감개무량한 것이다……가 아닌 것이다, 너는 내 상사가 아닌 것이다!"
+          "content": "탐정국장이 발탁해줘서 더할 나위 없이 감개무량한 것이다……가 아닌 것이다, 너는 내 상사가 아닌 것이다!"
         },
         {
           "language": "繁体中文",
@@ -892,6 +905,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年快乐！身为皇家侦探，去年也解决了很多事件！只是，距离揭露企鹅物流的真相还差一步......今年也要努力才行！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,10 +955,32 @@
           "content": "博士，找到你了！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "张贴的彩带，布置好的点心，各色的气球，博士，根据我的推理，今天一定有一场什么节日的庆祝！什么？预告通知昨天就发到每位干员的终端上了？呀呀！！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/a4/立绘_梅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/86/立绘_梅_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { useDialog } from 'naive-ui'
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
@@ -52,7 +52,7 @@ function fininshUpdate() {
 <template>
   <div class="flex justify-center items-center">
     <p>应用正在恢复数据，请稍侯……</p>
-    <n-progress type="circle" :percentage="percentage" />
+    <n-progress :percentage="percentage" type="circle" />
   </div>
 </template>
 

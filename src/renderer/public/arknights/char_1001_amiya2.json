@@ -1,12 +1,28 @@
 {
   "name": "阿米娅(近卫)",
   "charaKey": "char_1001_amiya2",
-  "voiceBase": {
-    "日语": "voice/char_1001_amiya2",
-    "中文-普通话": "voice_cn/char_1001_amiya2",
-    "韩语": "voice_kr/char_1001_amiya2",
-    "英语": "voice_en/char_1001_amiya2"
-  },
+  "images": [
+    "https://media.prts.wiki/9/95/%E7%AB%8B%E7%BB%98_%E9%98%BF%E7%B1%B3%E5%A8%85(%E8%BF%91%E5%8D%AB)_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E9%98%BF%E7%B1%B3%E5%A8%85(%E8%BF%91%E5%8D%AB)_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1001_amiya2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1001_amiya2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1001_amiya2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1001_amiya2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -841,6 +857,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "有一瞬间，我听到自己心底有个声音在怒吼：这片大地的苦难恒久，不会因为我们翻过一两页单薄的年历就迎来任何新的转机......但我不信，博士。我们的前行和战斗，一定是有意义的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -865,10 +907,32 @@
           "content": "歡迎回家，博士！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "要切断仇恨的往复循环，就无法避免伤痛......但是，我相信有一天，我可以放下这把剑。博士，到那一天为止，我都一定会保护着你。我希望......受伤的人不是你。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/95/立绘_阿米娅(近卫)_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_阿米娅(近卫)_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -9,6 +9,9 @@ export const getDynamicSeatHistoryList = <E>(config?: DynamicListConfig<SeatHist
 
 export const getSeatHistoryList = async () => await db.seatHistories.toArray()
 
+export const addSeatHistories = async (seatHistories: SeatHistory[]) =>
+  await db.seatHistories.bulkAdd(seatHistories)
+
 export const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => {
   if (type === '手动更改') {
     db.seatHistories
@@ -33,7 +36,15 @@ export const saveHistory = (currentSeatTable: SeatTableItem[], type: string) => 
             })
         }
       })
+      .catch((e) => {
+        console.error(e)
+        throw e
+      })
   } else {
-    db.seatHistories.add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
+    db.seatHistories
+      .add(deepcopy(new SeatHistory(Date.now(), currentSeatTable, type)))
+      .catch((e) => {
+        console.error(e)
+      })
   }
 }

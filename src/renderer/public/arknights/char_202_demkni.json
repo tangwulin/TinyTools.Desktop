@@ -1,12 +1,30 @@
 {
   "name": "塞雷娅",
   "charaKey": "char_202_demkni",
-  "voiceBase": {
-    "日语": "voice/char_202_demkni",
-    "中文-普通话": "voice_cn/char_202_demkni",
-    "韩语": "voice_kr/char_202_demkni",
-    "英语": "voice_en/char_202_demkni"
-  },
+  "images": [
+    "https://media.prts.wiki/4/4e/%E7%AB%8B%E7%BB%98_%E5%A1%9E%E9%9B%B7%E5%A8%85_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E5%A1%9E%E9%9B%B7%E5%A8%85_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0d/%E7%AB%8B%E7%BB%98_%E5%A1%9E%E9%9B%B7%E5%A8%85_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c1/%E7%AB%8B%E7%BB%98_%E5%A1%9E%E9%9B%B7%E5%A8%85_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_202_demkni"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_202_demkni"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_202_demkni"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_202_demkni"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "人生就是成长的堆砌，新的一年也好好磨练自己，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "博士，身體如何？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "规则和传统，它的建立代表着它会被破坏，我要做的并不是审判或是制裁，我要做的只是将乱序的转回有序，将混乱的重归井然。这条路很难走，但我不会被阻挡。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4e/立绘_塞雷娅_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_塞雷娅_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0d/立绘_塞雷娅_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c1/立绘_塞雷娅_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

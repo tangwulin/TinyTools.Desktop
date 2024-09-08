@@ -1,12 +1,29 @@
 {
   "name": "红",
   "charaKey": "char_144_red",
-  "voiceBase": {
-    "日语": "voice/char_144_red",
-    "中文-普通话": "voice_cn/char_144_red",
-    "韩语": "voice_kr/char_144_red",
-    "英语": "voice_en/char_144_red"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c4/%E7%AB%8B%E7%BB%98_%E7%BA%A2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ab/%E7%AB%8B%E7%BB%98_%E7%BA%A2_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d5/%E7%AB%8B%E7%BB%98_%E7%BA%A2_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_144_red"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_144_red"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_144_red"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_144_red"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？新的猎物吗？没有？好吧，红休息一会......博士也来休息一会。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士，累了嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛有很多墙壁，但是，甲板上能吹到风。凯尔希和博士，都在。红不讨厌......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c4/立绘_红_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ab/立绘_红_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d5/立绘_红_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

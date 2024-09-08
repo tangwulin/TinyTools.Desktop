@@ -1,12 +1,28 @@
 {
   "name": "炎熔",
   "charaKey": "char_121_lava",
-  "voiceBase": {
-    "日语": "voice/char_121_lava",
-    "中文-普通话": "voice_cn/char_121_lava",
-    "韩语": "voice_kr/char_121_lava",
-    "英语": "voice_en/char_121_lava"
-  },
+  "images": [
+    "https://media.prts.wiki/8/80/%E7%AB%8B%E7%BB%98_%E7%82%8E%E7%86%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/cb/%E7%AB%8B%E7%BB%98_%E7%82%8E%E7%86%94_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_121_lava"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_121_lava"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_121_lava"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_121_lava"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -789,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我一点都不胖吧？刚才我想吃炸羽兽肉，芙蓉那家伙居然把皮给我去掉了！那可是油滋滋的皮欸！！今天也被她看着不能吃这不能吃那的，我待会儿肯定要和她吵......算了，哼。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -813,10 +855,32 @@
           "content": "是博士啊。早。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "自从我变成感染者，姐姐也受了很多苦，其实我明白姐姐想做的事是什么的，她和我一样，都想用自己的努力去帮助别人。而且她好像今天也还在忙呢，还总说我不让人放心，她其实才是吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/80/立绘_炎熔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/cb/立绘_炎熔_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

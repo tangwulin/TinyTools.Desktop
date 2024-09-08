@@ -1,12 +1,30 @@
 {
   "name": "艾丽妮",
   "charaKey": "char_4009_irene",
-  "voiceBase": {
-    "日语": "voice/char_4009_irene",
-    "中文-普通话": "voice_cn/char_4009_irene",
-    "韩语": "voice_kr/char_4009_irene",
-    "英语": "voice_en/char_4009_irene"
-  },
+  "images": [
+    "https://media.prts.wiki/5/55/%E7%AB%8B%E7%BB%98_%E8%89%BE%E4%B8%BD%E5%A6%AE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/40/%E7%AB%8B%E7%BB%98_%E8%89%BE%E4%B8%BD%E5%A6%AE_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E8%89%BE%E4%B8%BD%E5%A6%AE_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/32/%E7%AB%8B%E7%BB%98_%E8%89%BE%E4%B8%BD%E5%A6%AE_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4009_irene"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4009_irene"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4009_irene"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4009_irene"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -364,7 +382,7 @@
         },
         {
           "language": "韩文",
-          "content": "이베리아가 거대한 파도를 마주한다 해도, 그 어떤 폭풍에 휘말힌다 해도 저는 절대로 물러설 생각이 없습니다. 제 검 또한, 결코 흔들리지 않을 겁니다!"
+          "content": "이베리아가 거대한 파도를 마주한다 해도, 그 어떤 폭풍에 휘말린다 해도 저는 절대로 물러설 생각이 없습니다. 제 검 또한, 결코 흔들리지 않을 겁니다!"
         },
         {
           "language": "繁体中文",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新的一年......这么快就到了吗？大海的波涛是不是又离我们更近了一些？对不起，我很难不去想这些事。但换个角度说，我们明年依然能奔波在大地上，也算是挺幸运的了吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +961,32 @@
           "content": "博士，海岸線上又有新動靜了，我得跟你聊聊。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "......想治愈矿石病？在看清伊比利亚......不，在得知我们所有人面对的海洋的威胁到底是什么之后，我觉得，你们的理想也没那么不切实际了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/55/立绘_艾丽妮_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/40/立绘_艾丽妮_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_艾丽妮_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

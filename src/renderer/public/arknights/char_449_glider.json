@@ -1,12 +1,30 @@
 {
   "name": "蜜莓",
   "charaKey": "char_449_glider",
-  "voiceBase": {
-    "日语": "voice/char_449_glider",
-    "中文-普通话": "voice_cn/char_449_glider",
-    "韩语": "voice_kr/char_449_glider",
-    "英语": "voice_en/char_449_glider"
-  },
+  "images": [
+    "https://media.prts.wiki/f/f3/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%8E%93_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fa/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%8E%93_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/73/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%8E%93_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6d/%E7%AB%8B%E7%BB%98_%E8%9C%9C%E8%8E%93_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_449_glider"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_449_glider"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_449_glider"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_449_glider"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐呀！今天是很重要的日子，大家是不是都在和家人一起庆祝呢？欸，我吗？妈妈正在等着我去找她看烟花呢......嘿嘿，博士，现在罗德岛已经是我的第二个家啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "哇！博、博士，我現在要跳了，拜託你接住我！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我知道妈妈有时候还会为我无法实现最初当高管的理想而伤心，不过，总有一天我会让她真的开心起来，发现她的女儿现在很好，而且在做一件很厉害的事，总有一天能消除人们对矿石病的偏见。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f3/立绘_蜜莓_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fa/立绘_蜜莓_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/73/立绘_蜜莓_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6d/立绘_蜜莓_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

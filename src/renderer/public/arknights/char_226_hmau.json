@@ -1,12 +1,33 @@
 {
   "name": "吽",
   "charaKey": "char_226_hmau",
-  "voiceBase": {
-    "日语": "voice/char_226_hmau",
-    "中文-普通话": "voice_cn/char_226_hmau",
-    "中文-方言": "voice_custom/char_226_hmau_cn_topolect",
-    "韩语": "voice_kr/char_226_hmau"
-  },
+  "images": [
+    "https://media.prts.wiki/e/e4/%E7%AB%8B%E7%BB%98_%E5%90%BD_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e6/%E7%AB%8B%E7%BB%98_%E5%90%BD_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a8/%E7%AB%8B%E7%BB%98_%E5%90%BD_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_226_hmau"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_226_hmau"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_226_hmau_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_226_hmau"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_226_hmau"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -22,7 +43,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, Doc. Have you eaten yet? You could have one of my cookies if you're hungry."
+          "content": "Hi, Doc. Have you eaten yet? Here, I got some cookies if you're hungry."
         },
         {
           "language": "韩文",
@@ -52,7 +73,7 @@
         },
         {
           "language": "英文",
-          "content": "Doc, if Aak ever steps out of line, could you be lenient with him? He teases people a lot, but he's not a bad person. Also, if he ever gets under your skin, just tell me and I'll get him to tone it down."
+          "content": "Doc, I know Aak's been a nuisance to you, but could you be lenient with him? He teases people a lot, but he's not a bad person. Also, let me know if he ever gets under your skin, I'll give him a lesson on that."
         },
         {
           "language": "韩文",
@@ -82,7 +103,7 @@
         },
         {
           "language": "英文",
-          "content": "Just call on me when you're hungry, Doc, and I'll make you a little something to eat. I may not be a chef, but Mr. Lee taught me how to cook a few recipes."
+          "content": "Just call on me when you're hungry, Doc, and I'll make you a little something to eat. I may not look a like a chef, but I did learn a recipe or two from Mr. Lee."
         },
         {
           "language": "韩文",
@@ -142,7 +163,7 @@
         },
         {
           "language": "英文",
-          "content": "Hahah, just between you and me, Doc, for the longest time I thought all detectives do the same stuff as Mr. Lee. You know, like investigating crime scenes, that sort of thing."
+          "content": "Hahah, just between you and me, Doc, for the longest time I thought all detectives do the same stuff as Mr. Lee. You know, taking sips of tea at the scene of gang fights, that sort of thing."
         },
         {
           "language": "韩文",
@@ -172,7 +193,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm sure you already know, but with the intellect and talent that Aak's got, he's destined for great things one day. But personally, all that matters to me is that he doesn't ever go back to his old way of doing things."
+          "content": "I'm sure you already know, but with the intellect and talent that Aak's got, he's destined for great things one day. But personally, all that matters to me is that he doesn't ever go back to what he used to be."
         },
         {
           "language": "韩文",
@@ -202,7 +223,7 @@
         },
         {
           "language": "英文",
-          "content": "Me and Mr. Lee, well... How should I put it... I was a bit scared at first. He seemed like a guy who's got dark secrets, which had me on edge... But now after knowing him for so many years, I know that's definitely not the case."
+          "content": "Me and Mr. Lee, well... How should I put it... I was a bit scared of him at first. He seemed like a clever guy who's got a lot going on, which had me on edge... But now after knowing him for so many years, I know I have nothing to worry about, haha."
         },
         {
           "language": "韩文",
@@ -232,7 +253,7 @@
         },
         {
           "language": "英文",
-          "content": "If you need info on something or someone, just tell me and I'll ask Mr. Lee for you. Nothing in Lungmen happens without him knowing about it."
+          "content": "Hey, Doc, If you need info on something or someone, just tell me and I'll ask Mr. Lee for you. Nothing in Lungmen happens without him knowing about it."
         },
         {
           "language": "韩文",
@@ -262,7 +283,7 @@
         },
         {
           "language": "英文",
-          "content": "To be honest with you, I actually don't like getting into fights. I'd much rather we could all get along with each other. But I'm not a militant pacifist; there are things I'll fight to protect. Things like the agency, and now, Rhodes Island as well."
+          "content": "To be honest with you, I actually don't like getting into fights. I'd much rather we could all get along with each other. But I won't back down from inevitable conflicts; there are things I'll fight to protect. Things like the agency, and now, Rhodes Island as well."
         },
         {
           "language": "韩文",
@@ -292,7 +313,7 @@
         },
         {
           "language": "英文",
-          "content": "Do– Phew, I just nearly woke the Doc up... Guess I'll take this opportunity to rest too."
+          "content": "Do– Phew, almost woke the Doc up... Guess I'll take this opportunity to rest too."
         },
         {
           "language": "韩文",
@@ -322,7 +343,7 @@
         },
         {
           "language": "英文",
-          "content": "You must be the doctor that Mr. Lee talked about. The name's Hung, it's a pleasure to meet you. My fields of expertise are security and repairing machinery. If you ever need a bodyguard for a public appearance, or if your TV or fridge break down, then be sure to give me a holler!"
+          "content": "You must be the doctor that Mr. Lee talked about. The name's Hung, it's a pleasure to meet you. My fields of expertise are security and repairing machinery. If you ever need a bodyguard for a public appearance, or if your TV or fridge break down, just give me a holler!"
         },
         {
           "language": "韩文",
@@ -352,7 +373,7 @@
         },
         {
           "language": "英文",
-          "content": "So this is what the elite of the elite are like... I've got to work just as hard."
+          "content": "Woah, your operators never cease to amaze me... I've got to work harder."
         },
         {
           "language": "韩文",
@@ -412,7 +433,7 @@
         },
         {
           "language": "英文",
-          "content": "Doc, don't hesitate to give me all the work you need done. I'll admit I'm not an expert at many things, but I've got the build for physically intense tasks!"
+          "content": "Doc, don't hesitate to give me all the work you need done. I might not have the brain for many things, but I've got the brawn!"
         },
         {
           "language": "韩文",
@@ -502,7 +523,7 @@
         },
         {
           "language": "英文",
-          "content": "Stay close behind me so we don't get split up."
+          "content": "Stay close behind so we don't get split up."
         },
         {
           "language": "韩文",
@@ -532,7 +553,7 @@
         },
         {
           "language": "英文",
-          "content": "You can all rest easy, knowing I'm here!"
+          "content": "Don't worry, you've got me."
         },
         {
           "language": "韩文",
@@ -622,7 +643,7 @@
         },
         {
           "language": "英文",
-          "content": "Get behind me!"
+          "content": "I'll cover you!"
         },
         {
           "language": "韩文",
@@ -682,7 +703,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't think you're getting past us!"
+          "content": "You shall not pass!"
         },
         {
           "language": "韩文",
@@ -712,7 +733,7 @@
         },
         {
           "language": "英文",
-          "content": "Is anyone in need of healing?"
+          "content": "Anyone need healing?"
         },
         {
           "language": "韩文",
@@ -772,7 +793,7 @@
         },
         {
           "language": "英文",
-          "content": "It's just a scratch!"
+          "content": "A little scratch ain't gonna stop me!"
         },
         {
           "language": "韩文",
@@ -802,7 +823,7 @@
         },
         {
           "language": "英文",
-          "content": "*pant*... *pant*... Sorry, Doc, but could you give me a minute? My body's shaking."
+          "content": "*pant*... *pant*... Sorry, Doc, but could you give me a minute? I'm totally burned out."
         },
         {
           "language": "韩文",
@@ -832,7 +853,7 @@
         },
         {
           "language": "英文",
-          "content": "You just stay here and rest, Doc. I'll clean up the battlefield."
+          "content": "You can stay here and rest, Doc. I'll clean up the battlefield."
         },
         {
           "language": "韩文",
@@ -952,7 +973,7 @@
         },
         {
           "language": "英文",
-          "content": "Are there any broken machines in here?"
+          "content": "Any broken machines need fixing?"
         },
         {
           "language": "韩文",
@@ -982,7 +1003,7 @@
         },
         {
           "language": "英文",
-          "content": "Need a hand, Doc?"
+          "content": "Sup, Doc? Anything I can help you with?"
         },
         {
           "language": "韩文",
@@ -1029,6 +1050,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老板，新年好啊！我心情很好？哈哈，那当然，大家聚在一起高高兴兴的，这么喜庆的事，哪能不高兴？这么说来，老板您是不是也能好好歇上一天了？今天我下厨，晚饭可以过来和我们一起吃啊！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "老板，新年好啊！我心情好好？哈哈，那当然，大家聚在一起开开心心，这么喜庆的事，哪有可能不高兴？话说回来，老板你也可以好好休息一天了是吧？今天我下厨，晚上可以和我们一起吃的！"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1057,11 +1108,36 @@
           "content": "老板，早上好啊。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老板，过去一年也让您费心了，阿比上一年也踏实了不少，他能意识到自己究竟要走什么路。槐琥？槐琥早就不需要我怎么担心了。不过，罗德岛好像要办晚会的样子，有没有用得到我的地方？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "老板，过去一年辛苦你了，阿确实踏实过上一年不少，他也算意识到自己要走一条怎样的路了。槐琥？槐琥一早就不用我担心了。不过，罗德岛好像要办晚会，有冇用得到我的地方？"
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/e4/立绘_吽_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e6/立绘_吽_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a8/立绘_吽_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

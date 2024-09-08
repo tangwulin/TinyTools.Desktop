@@ -1,11 +1,25 @@
 {
   "name": "锡兰",
   "charaKey": "char_348_ceylon",
-  "voiceBase": {
-    "日语": "voice/char_348_ceylon",
-    "中文-普通话": "voice_cn/char_348_ceylon",
-    "韩语": "voice_kr/char_348_ceylon"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c2/%E7%AB%8B%E7%BB%98_%E9%94%A1%E5%85%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c6/%E7%AB%8B%E7%BB%98_%E9%94%A1%E5%85%B0_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/93/%E7%AB%8B%E7%BB%98_%E9%94%A1%E5%85%B0_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_348_ceylon"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_348_ceylon"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_348_ceylon"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -259,7 +273,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사. 앉은 채로 주무시는 건 역시 예의가…… 뭐, 괜찮겠죠. 담요 정도는 덮어 줄게요."
+          "content": "박사, 앉은 채로 자는 건 좋은 습관이 아니에요…… 흠, 좋아요. 그럼 담요라도 덮어 줄게요."
         },
         {
           "language": "繁体中文",
@@ -866,6 +880,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。嗯，我先在这里跟医疗部的同事们闲聊一会儿，晚些再去找黑。在家里过新年当然比不上在罗德岛有趣，而且我给父亲寄过贺卡了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -890,11 +930,32 @@
           "content": "你好，博士，來和我一起喝杯紅茶嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在学校里，我虽然从前人著述中学到新的知识，但随着罗德岛驶过长长航道之后，我才真正触及这片大地之宽广，获得许多书中不曾记录的经验。啊，而且，黑在这里过得很好，多谢你们照顾她啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c2/立绘_锡兰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c6/立绘_锡兰_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/93/立绘_锡兰_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

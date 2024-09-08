@@ -1,12 +1,29 @@
 {
   "name": "灵知",
   "charaKey": "char_206_gnosis",
-  "voiceBase": {
-    "日语": "voice/char_206_gnosis",
-    "中文-普通话": "voice_cn/char_206_gnosis",
-    "韩语": "voice_kr/char_206_gnosis",
-    "英语": "voice_en/char_206_gnosis"
-  },
+  "images": [
+    "https://media.prts.wiki/4/4b/%E7%AB%8B%E7%BB%98_%E7%81%B5%E7%9F%A5_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/09/%E7%AB%8B%E7%BB%98_%E7%81%B5%E7%9F%A5_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9c/%E7%AB%8B%E7%BB%98_%E7%81%B5%E7%9F%A5_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_206_gnosis"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_206_gnosis"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_206_gnosis"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_206_gnosis"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "以我在谢拉格的经验来看，今天会是吵闹的一天......博士，我还有实验要做，就先失陪了，作为报酬，我会给你提供一些新的研究成果。以及，姑且说一声，新年快乐。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "你應該更好地利用時間，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "出去庆祝？我没兴趣。我已经走出实验室和你打了招呼，这个纪念日已经没有更多理由能让我为它停留了，除非你认为我能在这种嘈杂的环境下为你产出新的研究成果。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4b/立绘_灵知_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/09/立绘_灵知_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9c/立绘_灵知_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

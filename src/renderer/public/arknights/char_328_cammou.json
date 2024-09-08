@@ -1,11 +1,25 @@
 {
   "name": "卡达",
   "charaKey": "char_328_cammou",
-  "voiceBase": {
-    "日语": "voice/char_328_cammou",
-    "中文-普通话": "voice_cn/char_328_cammou",
-    "韩语": "voice_kr/char_328_cammou"
-  },
+  "images": [
+    "https://media.prts.wiki/1/1a/%E7%AB%8B%E7%BB%98_%E5%8D%A1%E8%BE%BE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b8/%E7%AB%8B%E7%BB%98_%E5%8D%A1%E8%BE%BE_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b5/%E7%AB%8B%E7%BB%98_%E5%8D%A1%E8%BE%BE_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_328_cammou"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_328_cammou"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_328_cammou"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哦！我突然想到一个新点子，等下等下，摄像机在哪，这里有没有个地方可以布置三脚架？博士，帮我试验一下，待会儿放烟花的时候你看向窗外，我拍一下你的眼睛——"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "嗨~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士！虽然来罗德岛最初的原因只是想赚点路费，但是维修无人机不需要花钱的公司我真的一辈子都不会离开了！哪怕是这里有这么大的菲林，我也不会害——啊啊啊那位是煌吗？！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/1a/立绘_卡达_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_卡达_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b5/立绘_卡达_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

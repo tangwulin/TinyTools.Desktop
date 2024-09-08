@@ -1,12 +1,28 @@
 {
   "name": "梓兰",
   "charaKey": "char_278_orchid",
-  "voiceBase": {
-    "日语": "voice/char_278_orchid",
-    "中文-普通话": "voice_cn/char_278_orchid",
-    "韩语": "voice_kr/char_278_orchid",
-    "英语": "voice_en/char_278_orchid"
-  },
+  "images": [
+    "https://media.prts.wiki/b/bb/%E7%AB%8B%E7%BB%98_%E6%A2%93%E5%85%B0_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/21/%E7%AB%8B%E7%BB%98_%E6%A2%93%E5%85%B0_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_278_orchid"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_278_orchid"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_278_orchid"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_278_orchid"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -248,7 +264,7 @@
       "text": [
         {
           "language": "中文",
-          "content": "预备行动组A6的组长，梓兰，前来报道。您就是博士吗，接下来的工作请多多关照。"
+          "content": "预备行动组A6的组长，梓兰，前来报到。您就是博士吗，接下来的工作请多多关照。"
         },
         {
           "language": "日文",
@@ -841,6 +857,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "泡普卡，一定要安安稳稳地坐在床上......空爆，你要干什么，那是刚挂上彩带的窗户！月见夜你这家伙，快从烟花堆上下来！你们不要再闹了，再这样下去就没有什么新年礼物了，谁都没有！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -865,10 +907,32 @@
           "content": "博士你好，今天也好好把計畫的任務完成吧。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "一直都在忙着工作，没想到一转眼又是一年了，别的能力不提，我的耐心是真的比以前增多了不少。懂事？算了吧，他们还是很闹腾，不过比以前好多了。看，这是他们听说我加班，给我泡的红茶。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bb/立绘_梓兰_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/21/立绘_梓兰_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

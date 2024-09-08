@@ -1,13 +1,34 @@
 {
   "name": "食铁兽",
   "charaKey": "char_241_panda",
-  "voiceBase": {
-    "日语": "voice/char_241_panda",
-    "中文-普通话": "voice_cn/char_241_panda",
-    "中文-方言": "voice_custom/char_241_panda_cn_topolect",
-    "韩语": "voice_kr/char_241_panda",
-    "英语": "voice_en/char_241_panda"
-  },
+  "images": [
+    "https://media.prts.wiki/e/ef/%E7%AB%8B%E7%BB%98_%E9%A3%9F%E9%93%81%E5%85%BD_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/81/%E7%AB%8B%E7%BB%98_%E9%A3%9F%E9%93%81%E5%85%BD_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/20/%E7%AB%8B%E7%BB%98_%E9%A3%9F%E9%93%81%E5%85%BD_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fa/%E7%AB%8B%E7%BB%98_%E9%A3%9F%E9%93%81%E5%85%BD_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_241_panda"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_241_panda"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_241_panda_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_241_panda"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_241_panda"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1166,6 +1187,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "元旦快乐！之前每年这个时候，各个电影院里都会上映我主演的电影，而且场场爆满，座无虚席哦！不过，总沉浸在过去里可不好，拳头要向前挥，人也要向前走嘛。今天就忘掉所有伤感的事吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "元旦快乐！之前每年这个时候，各家电影院里头都会上映我主演的电影，而且场场爆满，座无虚席哦！不过，总是沉浸在过去里头可不好，拳头要向前挥，人也要向前走嘛。今天就忘了所有伤感的事吧！"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1198,12 +1253,40 @@
           "content": "博士！你好好吃早飯沒得！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "成为感染者后，我一度觉得我的事业、人生都到此为止了。但是罗德岛不仅控制了我的病情，还给了一个新的开始。从逆境中站起不正是主角应该做的事嘛。博士，让我们一起重回巅峰吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "成为感染者后，我一度觉得我的事业、人生都到此为止了。但是罗德岛不仅控制了我的病情，还给了我一个新的开始。从逆境中站起来不就是主角应该做的事嘛。博士，让我们一起重回巅峰吧！"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/ef/立绘_食铁兽_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/81/立绘_食铁兽_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/20/立绘_食铁兽_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fa/立绘_食铁兽_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

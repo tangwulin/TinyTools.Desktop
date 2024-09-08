@@ -1,11 +1,25 @@
 {
   "name": "酸糖",
   "charaKey": "char_366_acdrop",
-  "voiceBase": {
-    "日语": "voice/char_366_acdrop",
-    "中文-普通话": "voice_cn/char_366_acdrop",
-    "韩语": "voice_kr/char_366_acdrop"
-  },
+  "images": [
+    "https://media.prts.wiki/b/bd/%E7%AB%8B%E7%BB%98_%E9%85%B8%E7%B3%96_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E9%85%B8%E7%B3%96_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E9%85%B8%E7%B3%96_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_366_acdrop"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_366_acdrop"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_366_acdrop"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "啊，博士，新年快乐！一会儿我们还有个街头聚会，你也该来试试身手了吧？这次就尝试一下街舞怎么样？不难的，我教你！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "唷，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我之前滑滑板是为了逃补习班躲大人，后来是为了涂鸦甩开警察，当时说是为了自由，其实现在想来还是有些任性的。真正的自由应该是为了更多人而奋斗，对吧？就像我们现在做的事一样。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bd/立绘_酸糖_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2e/立绘_酸糖_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_酸糖_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

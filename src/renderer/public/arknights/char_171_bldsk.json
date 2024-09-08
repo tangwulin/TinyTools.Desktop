@@ -1,12 +1,30 @@
 {
   "name": "华法琳",
   "charaKey": "char_171_bldsk",
-  "voiceBase": {
-    "日语": "voice/char_171_bldsk",
-    "中文-普通话": "voice_cn/char_171_bldsk",
-    "韩语": "voice_kr/char_171_bldsk",
-    "英语": "voice_en/char_171_bldsk"
-  },
+  "images": [
+    "https://media.prts.wiki/e/ee/%E7%AB%8B%E7%BB%98_%E5%8D%8E%E6%B3%95%E7%90%B3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/77/%E7%AB%8B%E7%BB%98_%E5%8D%8E%E6%B3%95%E7%90%B3_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/24/%E7%AB%8B%E7%BB%98_%E5%8D%8E%E6%B3%95%E7%90%B3_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7e/%E7%AB%8B%E7%BB%98_%E5%8D%8E%E6%B3%95%E7%90%B3_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_171_bldsk"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_171_bldsk"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_171_bldsk"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_171_bldsk"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？哦哦，一不留神一年又过去了，时间过得还真是快呢。博士是一个人来的吗？一个人呀！路上有遇到其他干员吗？唔！那就好办了，博士，我们来采血体检吧！......欸，开玩笑的啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "你好，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "看他们一个个活蹦乱跳的，每次出任务回来的时候也能这样就好了，唉，医生总是这样操心，但有些干员真的不懂得爱惜自己，他们怎么就不怕我呢？我是不是也要和凯尔希那样凶一点才好？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/ee/立绘_华法琳_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/77/立绘_华法琳_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_华法琳_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7e/立绘_华法琳_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

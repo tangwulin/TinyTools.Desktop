@@ -1,12 +1,29 @@
 {
   "name": "白金",
   "charaKey": "char_204_platnm",
-  "voiceBase": {
-    "日语": "voice/char_204_platnm",
-    "中文-普通话": "voice_cn/char_204_platnm",
-    "韩语": "voice_kr/char_204_platnm",
-    "英语": "voice_en/char_204_platnm"
-  },
+  "images": [
+    "https://media.prts.wiki/5/56/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%87%91_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/77/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%87%91_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/af/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%87%91_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_204_platnm"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_204_platnm"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_204_platnm"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_204_platnm"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -174,7 +191,7 @@
         },
         {
           "language": "日文",
-          "content": "あ、あそこにニアールさんが！いやいや、彼女に手を出すつもりはないよ。 それより向こうの方こそ、私を見るなりあのハンマーを振るってくるんじゃないかって心配なんだよね。"
+          "content": "あ、あそこにニアールさんが！いやいや、彼女に手を出すつもりはないよ。  それより向こうの方こそ、私を見るなりあのハンマーを振るってくるんじゃないかって心配なんだよね。"
         },
         {
           "language": "英文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哦？没想到在这里碰到你了。我在这里干什么？吹吹风啊，下面太吵了，人又多，我想一个人待着。嗯？问完问题还不走，是想和我再多待一会儿吗？好无聊，不如我们偷偷跑掉吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "氣色不錯呢，博士~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "无聊的任务，无聊的敌人，但就算再无聊也比卡西米尔好很多。越走越远的感觉真好啊，从卡西米尔吹来的风再也无法吹歪我的箭，我也再也不想呼吸那里的空气。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/56/立绘_白金_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/77/立绘_白金_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/af/立绘_白金_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,12 +1,28 @@
 {
   "name": "火龙S黑角",
   "charaKey": "char_1030_noirc2",
-  "voiceBase": {
-    "日语": "voice/char_1030_noirc2",
-    "中文-普通话": "voice_cn/char_1030_noirc2",
-    "韩语": "voice_kr/char_1030_noirc2",
-    "英语": "voice_en/char_1030_noirc2"
-  },
+  "images": [
+    "https://media.prts.wiki/d/d2/%E7%AB%8B%E7%BB%98_%E7%81%AB%E9%BE%99S%E9%BB%91%E8%A7%92_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2b/%E7%AB%8B%E7%BB%98_%E7%81%AB%E9%BE%99S%E9%BB%91%E8%A7%92_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1030_noirc2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1030_noirc2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1030_noirc2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1030_noirc2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -52,7 +68,7 @@
         },
         {
           "language": "韩文",
-          "content": "외근 임무할 때는 자신과 주변 동료들의 식생활을 잘 챙기는 것도 중요해. 박사, 얼마 전에 간편 바베큐 세트로 날고기를 노릇하게 굽는 법을 배웠는데, 지금 내 실력을 한번 보여줄게!"
+          "content": "외근  임무할 때는 자신과 주변 동료들의 식생활을 잘 챙기는 것도 중요해. 박사, 얼마 전에 간편 바베큐 세트로 날고기를 노릇하게 굽는 법을 배웠는데, 지금 내 실력을 한번 보여줄게!"
         },
         {
           "language": "繁体中文",
@@ -918,9 +934,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/d2/立绘_火龙S黑角_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2b/立绘_火龙S黑角_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

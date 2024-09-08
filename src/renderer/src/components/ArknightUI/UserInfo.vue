@@ -2,6 +2,7 @@
 import rhodesIsland from '../../assets/images/ArknightUI/rhodes-island.png'
 import Level from '../../components/ArknightUI/Level.vue'
 import { useArknightsUIStore } from '../../stores/arknightsUI'
+
 const arknightsUIStore = useArknightsUIStore()
 </script>
 

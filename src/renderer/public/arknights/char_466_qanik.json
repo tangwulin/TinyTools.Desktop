@@ -1,12 +1,29 @@
 {
   "name": "雪绒",
   "charaKey": "char_466_qanik",
-  "voiceBase": {
-    "日语": "voice/char_466_qanik",
-    "中文-普通话": "voice_cn/char_466_qanik",
-    "韩语": "voice_kr/char_466_qanik",
-    "英语": "voice_en/char_466_qanik"
-  },
+  "images": [
+    "https://media.prts.wiki/a/ab/%E7%AB%8B%E7%BB%98_%E9%9B%AA%E7%BB%92_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/92/%E7%AB%8B%E7%BB%98_%E9%9B%AA%E7%BB%92_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/50/%E7%AB%8B%E7%BB%98_%E9%9B%AA%E7%BB%92_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_466_qanik"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_466_qanik"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_466_qanik"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_466_qanik"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，母亲为了表达感谢，为罗德岛的未来做了一次占卜，她会亲自告诉您得到的结果。她还嘱咐我一定要把这个给您：这种羽毛在我们部落只会送给最彪悍的猛士或者最聪慧的智者，您有这个资格。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "呼啊！有沒有被嚇到？什麼，完全沒有！原先在雪地裡，我能嚇到不少人呢。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我当初那么害怕合同和填表，现在也能顺利地完成这些工作了，每次回去，部落里也叫我“了不起的小使者”。我听说麦哲伦姐姐已经突破了一次极限，果然，人一旦有了梦想，就不会再停下脚步。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/ab/立绘_雪绒_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/92/立绘_雪绒_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/50/立绘_雪绒_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

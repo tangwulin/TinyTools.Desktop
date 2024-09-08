@@ -1,12 +1,29 @@
 {
   "name": "初雪",
   "charaKey": "char_174_slbell",
-  "voiceBase": {
-    "日语": "voice/char_174_slbell",
-    "中文-普通话": "voice_cn/char_174_slbell",
-    "韩语": "voice_kr/char_174_slbell",
-    "英语": "voice_en/char_174_slbell"
-  },
+  "images": [
+    "https://media.prts.wiki/d/de/%E7%AB%8B%E7%BB%98_%E5%88%9D%E9%9B%AA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/05/%E7%AB%8B%E7%BB%98_%E5%88%9D%E9%9B%AA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f9/%E7%AB%8B%E7%BB%98_%E5%88%9D%E9%9B%AA_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_174_slbell"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_174_slbell"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_174_slbell"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_174_slbell"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我怎么在这里？你看，恩希亚就在罗德岛，身为姐姐在新年时探望自己的妹妹，这是天经地义的一件事情，博士，你难道忍心让恩希亚一个人在外面过节吗？这样就太狠心了哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "祝福你，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哥哥也来了？呣......啊，博士不必为此担心，我们都清楚自己应该做什么，在今天，在这里，我们的身份都只是罗德岛的干员，这里也就是我暂时放轻松的一个小天地。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/de/立绘_初雪_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/05/立绘_初雪_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f9/立绘_初雪_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

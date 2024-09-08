@@ -9,12 +9,13 @@ import router from '../../../router'
   <div class="team-row">
     <div class="item" @click="router.push({ name: 'groupManage' })">
       <div class="title">编队</div>
+      <div class="sub">分组管理</div>
       <img :src="image2" alt="icon" class="icon" />
       <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>
     <div class="item" @click="router.push({ name: 'personManage' })">
       <div class="title">干员</div>
-      <div class="sub">角色管理</div>
+      <div class="sub">人员管理</div>
       <img :src="image3" alt="icon" class="icon" />
       <img :src="image10" alt="right bottom" class="right-bottom" />
     </div>

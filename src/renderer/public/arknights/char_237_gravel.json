@@ -1,12 +1,29 @@
 {
   "name": "砾",
   "charaKey": "char_237_gravel",
-  "voiceBase": {
-    "日语": "voice/char_237_gravel",
-    "中文-普通话": "voice_cn/char_237_gravel",
-    "韩语": "voice_kr/char_237_gravel",
-    "英语": "voice_en/char_237_gravel"
-  },
+  "images": [
+    "https://media.prts.wiki/3/38/%E7%AB%8B%E7%BB%98_%E7%A0%BE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/62/%E7%AB%8B%E7%BB%98_%E7%A0%BE_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c3/%E7%AB%8B%E7%BB%98_%E7%A0%BE_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_237_gravel"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_237_gravel"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_237_gravel"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_237_gravel"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -26,7 +43,7 @@
         },
         {
           "language": "韩文",
-          "content": "아아~ 날 옆에 두고 싶어? 가슴이 계속 두근거리네~"
+          "content": "아아~ 박사 곁을 지키라고? 이런 지시라니 가슴이 계속 두근거리네~"
         },
         {
           "language": "繁体中文",
@@ -780,7 +797,7 @@
         },
         {
           "language": "韩文",
-          "content": "미안해, 나… 또 저질러버렸나 봐…"
+          "content": "미안해, 내가…… 또 실수했나 봐……"
         },
         {
           "language": "繁体中文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士，请给我您的手——啾——嗯？为什么突然做这种事？亲吻缔结守护誓约之人的手，就是我们卡西米尔骑士庆祝新年的仪式呀~没有听说过？您也要关心关心这方面的事情呀。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "今天還好嗎，博士~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，你会因为找不回过去的一切痕迹而......无法安眠吗？当踏上罗德岛的甲板时我在想，走出去，会不会就能和自己遗忘的记忆更近一点？博士，这种时候，安慰我才是解风情的做法哦~"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/38/立绘_砾_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/62/立绘_砾_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c3/立绘_砾_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

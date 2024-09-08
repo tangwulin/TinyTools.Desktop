@@ -1,10 +1,25 @@
 {
   "name": "灰喉",
   "charaKey": "char_367_swllow",
-  "voiceBase": {
-    "日语": "voice/char_367_swllow",
-    "中文-普通话": "voice_cn/char_367_swllow"
-  },
+  "images": [
+    "https://media.prts.wiki/2/23/%E7%AB%8B%E7%BB%98_%E7%81%B0%E5%96%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/66/%E7%AB%8B%E7%BB%98_%E7%81%B0%E5%96%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/41/%E7%AB%8B%E7%BB%98_%E7%81%B0%E5%96%89_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_367_swllow"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_367_swllow"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_367_swllow"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -20,11 +35,11 @@
         },
         {
           "language": "英文",
-          "content": "That's fine. If I stick with you, I'll at least be able to escape that dusty cabin and catch some fresh air."
+          "content": "Fine. At least I can get a break from the dusty air outside, if I stay here with you."
         },
         {
           "language": "韩文",
-          "content": "뭐, 좋아. 적어도 당신과 함께 있으면 먼지투성이의 공기 속에서 한숨 돌릴 수 있으니까."
+          "content": "뭐, 좋아.  적어도 당신과 함께 있으면 먼지투성이의 공기 속에서 한숨 돌릴 수 있으니까."
         },
         {
           "language": "繁体中文",
@@ -46,7 +61,7 @@
         },
         {
           "language": "英文",
-          "content": "I don't shy away from sensitive topics regarding the Infected? That's correct, they're not like us, which should be obvious, but they're also like us in the sense that they have the right to seize hope. Therefore, there's no need for me to take extra care of them. That's equality, is it not?"
+          "content": "I don't shy away from sensitive discussions about the Infected? That's true. They're obviously different from us. But they also have the right to seize hope, just like us. So they don't need me to do anything special for them. That's equality, isn't it?"
         },
         {
           "language": "韩文",
@@ -72,7 +87,7 @@
         },
         {
           "language": "英文",
-          "content": "Blaze is sometimes too reckless. I know she's strong, but... What? You know how to deal with her? Tch... Forget it, I'll ask Amiya how to handle her after we get back."
+          "content": "Blaze is too reckless sometimes. I know she's strong, but… What? You know how to handle her?  Forget it, I'll ask Amiya what I should do to get along with her after we get back."
         },
         {
           "language": "韩文",
@@ -98,7 +113,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm just speaking objectively here, but if you don't want to be discriminated against, then you also shouldn't expect preferential treatment from others... What, she went back to her room to cry? Look, I feel a little bad about it, but is someone like her really suited to be an Operator?"
+          "content": "I was just speaking objectively. If you don't want to be discriminated against, then you shouldn't expect special treatment... What, she went back to her room crying? Look, I feel a little bad about it, but is someone that fragile really operator material?"
         },
         {
           "language": "韩文",
@@ -124,7 +139,7 @@
         },
         {
           "language": "英文",
-          "content": "Rhodes Island is changing. Maybe you might not feel it, Doctor, since these changes are because of you, and not everyone is as disagreeable as I am. However, I do enjoy Rhodes Island's current direction."
+          "content": "Rhodes Island is changing, Doctor. Maybe you don't feel it, since you're the reason it's changing, and not everyone is so annoyingly outspoken as I am. Anyway, I do appreciate the direction Rhodes Island is moving."
         },
         {
           "language": "韩文",
@@ -150,7 +165,7 @@
         },
         {
           "language": "英文",
-          "content": "I used to prefer choosing long-distance missions, as if trying to flee from Rhodes Island. Isn't that a bit ungrateful, considering Rhodes Island adopted me? As for right now? Haha, if there are still operators who like splattering blood everywhere, maybe I will apply to be sent somewhere else."
+          "content": "I used to prefer long-distance missions, like I was running away from Rhodes Island. I'll admit that was a little ungrateful, considering Rhodes Island adopted me. But now? Hehe, if you still have operators who like splattering blood all over the place, maybe I'll apply to serve in some faraway place again."
         },
         {
           "language": "韩文",
@@ -176,7 +191,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, are you afraid? Of Catastrophes, Originite, Oripathy, and the Infected? Mm, even now, I'm still plagued by nightmares. But now, I have Amiya, as well as idiots like that Blaze. It seems that I'm not as afraid as I used to be."
+          "content": "Doctor, would you sometimes feel afraid? Catastrophes, Originium, Oripathy, and the Infected? Hm, I'm still plagued by nightmares even now. But these days, I have Amiya, and idiots like that Blaze. I guess I'm not as afraid as I used to be."
         },
         {
           "language": "韩文",
@@ -202,7 +217,7 @@
         },
         {
           "language": "英文",
-          "content": "Why are you called 'Doctor?' No, I'm not trying to get you to remember anything, it's just that title makes me very... wistful. Looking at all the Infected people around you makes me remember... just a little bit of the past."
+          "content": "Why are you called 'Doctor?' No, I'm not trying to get you to remember anything, it's just that title makes me very... wistful. Looking at all the Infected around you... Brings to mind a little bit of the past."
         },
         {
           "language": "韩文",
@@ -228,7 +243,7 @@
         },
         {
           "language": "英文",
-          "content": "I've known this entire time. When my mother brought me to Rhodes Island, she had already gone crazy. I could not feel the pain of her turmoil, but I can relate with it, because I relied on that obsession to get me to where I am today. Only now, I've found a new direction... I want to find her, and I want to save her."
+          "content": "I've known the whole time. When my mother brought me to Rhodes Island, she'd already lost her mind. I didn't feel the pain her inner conflicts caused her, but I can relate to it, because I relied on that obsession to get me to where I am today. Only now, I've found a new direction... I want to find her, and I want to save her."
         },
         {
           "language": "韩文",
@@ -254,7 +269,7 @@
         },
         {
           "language": "英文",
-          "content": "You shoulder the future of Rhodes Island, and those who hold up the bridge cannot be so lackadaisical."
+          "content": "You shoulder the future of Rhodes Island. And with the burden of that responsibility, you can't be so lackadaisical."
         },
         {
           "language": "韩文",
@@ -280,7 +295,7 @@
         },
         {
           "language": "英文",
-          "content": "So you're Doctor? Amiya told me about you. I'm GreyThroat; please don't disappoint me."
+          "content": "So you're the Doctor? Amiya told me about you. I'm GreyThroat. Please don't disappoint me."
         },
         {
           "language": "韩文",
@@ -306,7 +321,7 @@
         },
         {
           "language": "英文",
-          "content": "For efficiency's sake, speed up the playback. I can still see it clearly."
+          "content": "For efficiency's sake, speed up the playback. I'll still be able to see it all clearly."
         },
         {
           "language": "韩文",
@@ -332,7 +347,7 @@
         },
         {
           "language": "英文",
-          "content": "Even now, there are still a handful of Operators who I am on bad terms with. Hopefully my promotion will not be a cause of criticism?"
+          "content": "Even now, I'm still on bad terms with a handful of operators. My promotion might spark controversy, just a reminder."
         },
         {
           "language": "韩文",
@@ -358,7 +373,7 @@
         },
         {
           "language": "英文",
-          "content": "Whether Infected or not, we all choose to step upon this land through our own free will, and so we must all work hard to survive, right?"
+          "content": "Whether Infected or not, we all choose to walk upon this land of our own free will. And so we must all work hard to survive, right?"
         },
         {
           "language": "韩文",
@@ -488,7 +503,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm right here."
+          "content": "I'm here."
         },
         {
           "language": "韩文",
@@ -592,7 +607,7 @@
         },
         {
           "language": "英文",
-          "content": "Your movements are too slow."
+          "content": "Such slow movements."
         },
         {
           "language": "韩文",
@@ -618,7 +633,7 @@
         },
         {
           "language": "英文",
-          "content": "I see them. But they don't see me. Too bad."
+          "content": "I see them. Too bad they don't see me."
         },
         {
           "language": "韩文",
@@ -644,7 +659,7 @@
         },
         {
           "language": "英文",
-          "content": "The skills are enough to solve this situation."
+          "content": "I'm skilled enough to resolve this."
         },
         {
           "language": "韩文",
@@ -670,7 +685,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't worry, there's nothing in their line of sight."
+          "content": "Don't worry, their sights are totally empty."
         },
         {
           "language": "韩文",
@@ -722,7 +737,7 @@
         },
         {
           "language": "英文",
-          "content": "I have no talent to speak of, so as a crossbowman, I cannot allow an enemy to get within three meters of me."
+          "content": "I have no talent to speak of. So as a crossbowman, I can't let an enemy within three meters. Not even a corpse."
         },
         {
           "language": "韩文",
@@ -774,7 +789,7 @@
         },
         {
           "language": "英文",
-          "content": "Be aware of your surroundings; I'll ensure the safety of the retreat route."
+          "content": "Watch your flanks. I'll cover our retreat."
         },
         {
           "language": "韩文",
@@ -800,7 +815,7 @@
         },
         {
           "language": "英文",
-          "content": "Though I've been here for many years, I rarely go anywhere else..."
+          "content": "I've been here for years, but I rarely wander around inside…"
         },
         {
           "language": "韩文",
@@ -826,7 +841,7 @@
         },
         {
           "language": "英文",
-          "content": "Hyah?!"
+          "content": "Huh?!"
         },
         {
           "language": "韩文",
@@ -852,7 +867,7 @@
         },
         {
           "language": "英文",
-          "content": "Aren't you afraid of upsetting the Operators who are Infected if you're always around me?"
+          "content": "Aren't you afraid of upsetting the Infected operators if they see you with me all the time?"
         },
         {
           "language": "韩文",
@@ -891,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。阿米娅在哪里？和大家一起准备晚会？那我在这里等就好。煌在找我？难道她已经看到我放她桌子上的礼物了？我、我怕她又说什么肉麻话，我先走了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -915,11 +956,32 @@
           "content": "你好。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "要做的事还有很多，对吧？煌能理解我是因为我们一同作战过，但不是任何有分歧的两个人、两个团体都能有这样的机会。我很幸运......所以我也要承担更多，直到，我们都能安眠的那一天。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/23/立绘_灰喉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/66/立绘_灰喉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/41/立绘_灰喉_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

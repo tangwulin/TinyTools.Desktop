@@ -1,13 +1,34 @@
 {
   "name": "令",
   "charaKey": "char_2023_ling",
-  "voiceBase": {
-    "日语": "voice/char_2023_ling",
-    "中文-普通话": "voice_cn/char_2023_ling",
-    "中文-方言": "voice_custom/char_2023_ling_cn_topolect",
-    "韩语": "voice_kr/char_2023_ling",
-    "英语": "voice_en/char_2023_ling"
-  },
+  "images": [
+    "https://media.prts.wiki/d/df/%E7%AB%8B%E7%BB%98_%E4%BB%A4_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a3/%E7%AB%8B%E7%BB%98_%E4%BB%A4_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/5e/%E7%AB%8B%E7%BB%98_%E4%BB%A4_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/70/%E7%AB%8B%E7%BB%98_%E4%BB%A4_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_2023_ling"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_2023_ling"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_2023_ling_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_2023_ling"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_2023_ling"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1166,6 +1187,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "年爱热闹就算了，夕自己不声不响的，倒是把她那些画卷里的造物拿去陪孩子们玩了，呵呵，可真能闹腾。有这点人之常情在，我们兄弟姐妹各自活着，也算有些生趣。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "年爱热闹就算了，夕自个儿不声不响的，倒是把她那些画里头的东西拿去陪娃们耍了，呵呵，可真能闹腾。有这点人之常情在，俺兄弟姐妹各自活着，也算有点意思。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1198,12 +1253,40 @@
           "content": "還好著嗎？博士？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "没错，墙上那些是我写的，放在你们宴会的酒席间，倒也不坏。你问为何而写？有什么值得写？只是酒过三巡，兴致起了。这样说来，你来得正好，罗德岛的事我还想多问问你。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "没错，墙上那些是我写的，放在你们宴会的酒席间，倒也不差。你问为啥而写？有啥值得写？就是酒过三巡，兴致起了。这样说来，你来得正好，罗德岛的事我还想多问问你。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/df/立绘_令_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a3/立绘_令_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/5e/立绘_令_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/70/立绘_令_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

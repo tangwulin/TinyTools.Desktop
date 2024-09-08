@@ -1,10 +1,26 @@
 {
   "name": "风笛",
   "charaKey": "char_222_bpipe",
-  "voiceBase": {
-    "日语": "voice/char_222_bpipe",
-    "中文-普通话": "voice_cn/char_222_bpipe"
-  },
+  "images": [
+    "https://media.prts.wiki/5/5e/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E7%AC%9B_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9d/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E7%AC%9B_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d8/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E7%AC%9B_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/73/%E7%AB%8B%E7%BB%98_%E9%A3%8E%E7%AC%9B_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_222_bpipe"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_222_bpipe"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_222_bpipe"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -20,7 +36,7 @@
         },
         {
           "language": "英文",
-          "content": "Assistant? You mean that job where I just stand next to people? I've seen that in the army as well. Wait, I also have to do paperwork? And assess combat data? And compile a report?! Th-that sounds hectic!"
+          "content": "Assistant? The one where ye just stand next tae folk, aye? Nae bother, saw that plenty in the army myself. Wait, I have tae do paperwork too? And assess combat data? And compile reports?! Th-that sounds mighty hectic."
         },
         {
           "language": "韩文",
@@ -46,7 +62,7 @@
         },
         {
           "language": "英文",
-          "content": "Back in school, Chenchen always had a pissed off look on her face. But that's just the kind of girl she is. She made a lot of enemies at first, but later on, there wasn't a single person who could take their eyes off her! But y'know, bandagin' her wounds, cookin' for her, teamin' up with her squad and whatnot... I had to look after her quite a lot, and that was no easy feat..."
+          "content": "Back in school, Chenchen always had a pissed off look on her face, made no end of enemies at first, but tha's just the kind of girl she is. Nae time at all, she had people seein' her wi fresh eyes. But y'know, bandagin' up her wounds, cookin' for her, teamin' up wi her squad and all that... I had tae look after her a fair bit, and that was no easy thing."
         },
         {
           "language": "韩文",
@@ -72,7 +88,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm real good at operatin' all sorts of equipment! Wheat threshers, tractors, tillers, I'm good with all that stuff. Hm? PDAs, LED screens, and wireless systems? I'm not too good with that stuff... Woah, I barely just touched it... Why's it goin' up in smoke?!"
+          "content": "I'm great at drivin' machines! Harvesters, tractors, tillers, I'll be right at home wi anythin'. Hm? PDAs? Screens? Wireless systems? If yer meanin' little gadgety stuff, I'm nae so—ah crims, I just barely touched this—why's it smokin'?"
         },
         {
           "language": "韩文",
@@ -98,7 +114,7 @@
         },
         {
           "language": "英文",
-          "content": "Did you not get a good supper in yesterday? I don't wanna hear your old 'work, work, work' routine! If your body gives out on you, you won't be able to get a thing done. Tell me what you'd like, and I'll make it for you! Ah, I won't be able to make anything too complicated though."
+          "content": "Ye didnae get a proper supper in yesterday, did ye? No, I dinnae want tae hear aboot 'work, work, work'! If yer body gives out on ye, ye willnae be able tae get a thing done. Tell me what ye'd like, and I'll whip it right up for ye. Ah, na anything too fancy though, aye? I'd be lost tryin'."
         },
         {
           "language": "韩文",
@@ -124,7 +140,7 @@
         },
         {
           "language": "英文",
-          "content": "The Rhodes Island ship is just... so much better than Victoria's warships by I don't know how many times. There's even sunlight, wheat fields, and packs of beasts... Doctor, why don't we try growin' something, like potatoes? I know all about growin' potatoes!"
+          "content": "This Rhodes Island ship is... crivens, it's a million times more wonderful than Victoria's warships! We've got sunlight, wheat fields, herds of stockbeasts... Doctor, what if, we try growin' somethin' too? Like potatoes, say? I know all aboot growin' potatoes!"
         },
         {
           "language": "韩文",
@@ -150,7 +166,7 @@
         },
         {
           "language": "英文",
-          "content": "Where do you think someone's hometown ends? Is it the house farthest away from the tractors, or where the land meets the sky? Or is it the red and blue bars that are constantly being redrawn on the map? After so many battles... I sometimes suddenly forget what my hometown looks like."
+          "content": "Where d'ye think someone's hometown ends? The hoose furthest from the tractors? Or where the land meets the sky? Does it stop at the fronts we keep drawin' and redrawin' maps wi, all reds and blues and lines and arrows...? Y'know, after so many battles... sometimes I cannae recall what my hometown looks like."
         },
         {
           "language": "韩文",
@@ -176,7 +192,7 @@
         },
         {
           "language": "英文",
-          "content": "I know I've seen her before, that girl called Reed. But she looks so lonely and pitiful now... Is she really the same terrifyin' person I once knew? How strange. I should go ask her... I can't talk to her? Huh? Why not?!"
+          "content": "I'm sure that I ran across her once, that Reed lass. But she looks so lonely the noo, so pitiful... can she really be the same terrifyin' person I met before? It's right strange. I should go ask her...  What? I cannae talk tae her? Why no?!"
         },
         {
           "language": "韩文",
@@ -202,7 +218,7 @@
         },
         {
           "language": "英文",
-          "content": "My mum is part of the reason I ended up goin' to military school in the first place. I blame her for sayin' stuff like 'Vouivre women must keep gettin' stronger.' ...Sounds like I was just bein' stubborn, right? Lookin' back, there's no need to try to be as strong as my mum. Hey, wouldn't you say I'm cuter this way?"
+          "content": "My mum's part of the reason I ended up runnin' off to military school at all. Always bangin' on like 'Vouivre women must keep gettin' stronger', she is. ...S'pose I wanted to be cheeky about it, aye? Though lookin' back on it, no need to be AS tough as my mum. Och, I'm still more soft and cute than hard and chiselled, wouldn't you say? Go on, say?"
         },
         {
           "language": "韩文",
@@ -228,7 +244,7 @@
         },
         {
           "language": "英文",
-          "content": "When I was still in the army, I once came across a ghost-like squadron. They haunted the darkness of Victoria, and most of the people who witnessed 'em went missin.' I have a duty to expose 'em, and that's why I've been runnin' all over the world. Oh, you don't need to step in. Don't you have your own stuff to worry about?"
+          "content": "When I was still in the army, I came across this spectre-like force. Hauntin' the dark edges of Victoria, and most of the people who witnessed them went missin'. I've a duty to expose them, and that's why I've been scramblin' aboot. Oh, dinnae you step in for me. You've got yer own callin' to worry about, na?"
         },
         {
           "language": "韩文",
@@ -254,7 +270,7 @@
         },
         {
           "language": "英文",
-          "content": "Ah! You're slackin' off again! How nice, but if you're gonna nap, wouldn't it be better to throw yourself atop a pile of hay? Mm, just thinkin' about it is makin' me sleepy too... It should be fine if I go rest for a while, right?"
+          "content": "Ah! Fancy that, skivin' off! Aww, got me jealous. Doesnae beat a nice hay pile for a few winks though, aye? I'm noddin' off just thinkin' aboot it... Wouldn't hurt tae take a wee kip myself..."
         },
         {
           "language": "韩文",
@@ -280,7 +296,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey there! You're the Doctor, right? Superintendent Ch'en from Lungmen said I'd be able to find some helpers here! I need to sign my name here first? Um... Baaag... pipe. All right! Huh? I need to 'become an Operator' first? 'Full-time room and board?' The heck is that?!"
+          "content": "Hello! You're the Doctor, aye? Officer Ch'en fae Lungmen said I'd be able tae find some helpers here! I need tae sign my name first? Aye, right enough. Baaag...pipe. There! Eh? 'Become an Operator?' 'Full-time bed and board'? Ach, what's goin' on here?!"
         },
         {
           "language": "韩文",
@@ -306,7 +322,7 @@
         },
         {
           "language": "英文",
-          "content": "Woah, you folks here at Rhodes Island sure can fight!"
+          "content": "Whoa, you folks here at Rhodes Island sure can fight!"
         },
         {
           "language": "韩文",
@@ -332,7 +348,7 @@
         },
         {
           "language": "英文",
-          "content": "A promotion? Hm... can't tell you if I like it or not. For soldiers, more responsibilities means more battles, and a greater risk of mistakes."
+          "content": "A promotion? Hmm... cannae say if I like it or na. For soldiers, more responsibilities means more battles, and a greater risk of mistakes."
         },
         {
           "language": "韩文",
@@ -358,7 +374,7 @@
         },
         {
           "language": "英文",
-          "content": "Joining Rhodes Island has been a good thing for me. Oripathy and the Infected may seem scary at first, but runnin' away from these problems won't solve anything, right? Thank you, I've also understood what I need to do."
+          "content": "Joinin' Rhodes Island has been a good thing for me. Oripathy and the Infected may seem a touch scary at first, but runnin' from it willnae solve a thing. That's what I've learned here, and I mean it when I say, thank you—I see my way now, right ahead of me."
         },
         {
           "language": "韩文",
@@ -384,7 +400,7 @@
         },
         {
           "language": "英文",
-          "content": "Stand at attention!"
+          "content": "Stand to attention!"
         },
         {
           "language": "韩文",
@@ -410,7 +426,7 @@
         },
         {
           "language": "英文",
-          "content": "I'll lead the team and execute the operation plan right away!"
+          "content": "Assumin' leadership! Team will hereby carry out the operation!"
         },
         {
           "language": "韩文",
@@ -436,7 +452,7 @@
         },
         {
           "language": "英文",
-          "content": "Follow the orders, and move out immediately!"
+          "content": "Honor your orders! Move out!"
         },
         {
           "language": "韩文",
@@ -462,7 +478,7 @@
         },
         {
           "language": "英文",
-          "content": "Everyone, spread out!"
+          "content": "All units, spread out!"
         },
         {
           "language": "韩文",
@@ -488,7 +504,7 @@
         },
         {
           "language": "英文",
-          "content": "Go ahead."
+          "content": "Orders, please."
         },
         {
           "language": "韩文",
@@ -514,7 +530,7 @@
         },
         {
           "language": "英文",
-          "content": "Awaiting your orders."
+          "content": "Standing by."
         },
         {
           "language": "韩文",
@@ -696,7 +712,7 @@
         },
         {
           "language": "英文",
-          "content": "I've seen more serious matters, both in school and in the military."
+          "content": "Be it school or the military, I've still seen worse."
         },
         {
           "language": "韩文",
@@ -722,7 +738,7 @@
         },
         {
           "language": "英文",
-          "content": "Phew... I've managed to live up to the reputation of this uniform once more."
+          "content": "Phew... I've managed tae live up t' the reputation of this uniform once more."
         },
         {
           "language": "韩文",
@@ -748,7 +764,7 @@
         },
         {
           "language": "英文",
-          "content": "The enemy is getting away! Everyone, please be careful when givin' chase!"
+          "content": "Enemy routed! All units, pursue only wi caution!"
         },
         {
           "language": "韩文",
@@ -774,7 +790,7 @@
         },
         {
           "language": "英文",
-          "content": "You go on ahead!"
+          "content": "You get out of here! Go!"
         },
         {
           "language": "韩文",
@@ -800,7 +816,7 @@
         },
         {
           "language": "英文",
-          "content": "How do I get to the greenhouse?"
+          "content": "How do I get tae the greenhoose?"
         },
         {
           "language": "韩文",
@@ -826,7 +842,7 @@
         },
         {
           "language": "英文",
-          "content": "Oh, hey?"
+          "content": "Whoa-whoa!"
         },
         {
           "language": "韩文",
@@ -891,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "过新年的时候，我们家乡的人会聚在一起，烧烤，饮酒，围着火堆舞蹈，吹起响亮的风笛，然后打扮成稀奇古怪的样子跳进湖里。哦，不用担心，其实他们就是需要醒醒酒而已。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -904,7 +946,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, wanna go farming together?"
+          "content": "Doctor, how's about we go farmin'!"
         },
         {
           "language": "韩文",
@@ -915,12 +957,32 @@
           "content": "要不要一起去務農啊博士！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "回想起来，已经和罗德岛的各位共同经历了许多战斗呢。有时候真的很怀念躺在草垛上午睡的日子。但是我不放开手中这柄矛，才能让更多人过上那种悠闲的生活吧？所以我是不会抱怨的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/5e/立绘_风笛_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9d/立绘_风笛_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d8/立绘_风笛_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/73/立绘_风笛_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

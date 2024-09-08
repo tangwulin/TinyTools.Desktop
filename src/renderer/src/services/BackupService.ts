@@ -13,6 +13,13 @@ export class AppBackupDatabase extends Dexie {
     })
   }
 
+  public static getInstance(): AppBackupDatabase {
+    if (!AppBackupDatabase._instance) {
+      AppBackupDatabase._instance = new AppBackupDatabase()
+    }
+    return AppBackupDatabase._instance
+  }
+
   public async getLatestBackup() {
     return this.backup.orderBy('timestamp').last()
   }
@@ -31,13 +38,6 @@ export class AppBackupDatabase extends Dexie {
       await importData(data)
     }
     throw new Error('备份不存在')
-  }
-
-  public static getInstance(): AppBackupDatabase {
-    if (!AppBackupDatabase._instance) {
-      AppBackupDatabase._instance = new AppBackupDatabase()
-    }
-    return AppBackupDatabase._instance
   }
 }
 

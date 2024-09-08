@@ -1,12 +1,29 @@
 {
   "name": "远山",
   "charaKey": "char_109_fmout",
-  "voiceBase": {
-    "日语": "voice/char_109_fmout",
-    "中文-普通话": "voice_cn/char_109_fmout",
-    "韩语": "voice_kr/char_109_fmout",
-    "英语": "voice_en/char_109_fmout"
-  },
+  "images": [
+    "https://media.prts.wiki/4/4a/%E7%AB%8B%E7%BB%98_%E8%BF%9C%E5%B1%B1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f3/%E7%AB%8B%E7%BB%98_%E8%BF%9C%E5%B1%B1_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/71/%E7%AB%8B%E7%BB%98_%E8%BF%9C%E5%B1%B1_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_109_fmout"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_109_fmout"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_109_fmout"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_109_fmout"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐。博士，是不是很想让我占卜一下您今年的运势呢？其实我已经偷看过啦。我的占卜固然可靠，不过命运当然是由自己亲手揭晓才有意义。别担心，我会陪着你的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "幸運之風吹拂著你，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "从来都不存在预设好的道路，也没有无法改变的命运。事到如今，罗德岛各位不是已经多次证明了这一点吗？看看这个水晶球吧，只要您的内心没有阴霾，就永远可以看到希望的光亮。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4a/立绘_远山_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f3/立绘_远山_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/71/立绘_远山_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

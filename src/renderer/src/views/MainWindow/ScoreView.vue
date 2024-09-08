@@ -15,7 +15,9 @@ import { useRoute } from 'vue-router'
 import AddGroup from '../../components/AddGroup.vue'
 import EntityItem from '../../components/EntityItem.vue'
 import GroupItem from '../../components/GroupItem.vue'
+import RateItem from '../../components/ScoreView/RateItem.vue'
 import db from '../../db'
+import { getAvatar } from '../../services/AvatarService'
 import { getDynamicGroupList } from '../../services/DBServices/Group'
 import { getDynamicPersonList } from '../../services/DBServices/Person'
 import { addRate, getDynamicRateList, updateRate } from '../../services/DBServices/Rate'
@@ -25,10 +27,8 @@ import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
 import { Rate } from '../../types/rate'
-import { getAvatar } from '../../services/AvatarService'
 
 import { remToPx } from '../../utils/styleUtil'
-import RateItem from '../../components/ScoreView/RateItem.vue'
 
 const route = useRoute()
 
@@ -259,7 +259,7 @@ watch(
       @close="showModal = false"
     >
       <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: 1rem auto auto">
-        <RateItem v-for="item in rates" @click="scoreHandler(item)" :rate="item" />
+        <RateItem v-for="item in rates" :rate="item" @click="scoreHandler(item)" />
       </div>
     </n-card>
   </n-modal>
@@ -298,10 +298,10 @@ watch(
         >
           <EntityItem
             v-for="item in persons"
-            :display-name="item.name"
-            @click="clickHandler(item)"
             :avatar="getAvatar(item)"
+            :display-name="item.name"
             :enable-avatar="enableAvatar"
+            @click="clickHandler(item)"
           >
             <template v-slot:footer>
               <n-tag :type="item?.score >= 0 ? 'info' : 'error'" size="small"
@@ -318,11 +318,11 @@ watch(
         >
           <GroupItem
             v-for="item in groups"
-            @click="clickHandler(item)"
+            :avatar="getAvatar(item)"
+            :enable-avatar="enableAvatar"
             :group="item"
             :members-avatar="createAvatars(item)"
-            :enable-avatar="enableAvatar"
-            :avatar="getAvatar(item)"
+            @click="clickHandler(item)"
           />
 
           <add-group

@@ -1,11 +1,25 @@
 {
   "name": "埃拉托",
   "charaKey": "char_4043_erato",
-  "voiceBase": {
-    "日语": "voice/char_4043_erato",
-    "中文-普通话": "voice_cn/char_4043_erato",
-    "韩语": "voice_kr/char_4043_erato"
-  },
+  "images": [
+    "https://media.prts.wiki/f/f2/%E7%AB%8B%E7%BB%98_%E5%9F%83%E6%8B%89%E6%89%98_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/53/%E7%AB%8B%E7%BB%98_%E5%9F%83%E6%8B%89%E6%89%98_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c6/%E7%AB%8B%E7%BB%98_%E5%9F%83%E6%8B%89%E6%89%98_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4043_erato"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4043_erato"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4043_erato"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "是新年啊......虽然还不知道罗德岛的传统，但无论如何，仪式感是很重要的。喜悦的心情如果没有仪式来强化，是很容易淡忘的。新年快乐博士，礼物的话，就为你弹一首曲子吧。有什么想听的吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "博士，想聽我唱首歌嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛是个独一无二的地方，来自各国各地的人，可以为了一个共同的信念并肩战斗，这简直就像神话里才会出现的情景。我想要继续见证罗德岛的故事，我们一定可以谱写最宏伟的传说。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f2/立绘_埃拉托_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/53/立绘_埃拉托_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c6/立绘_埃拉托_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

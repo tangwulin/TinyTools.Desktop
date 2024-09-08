@@ -1,13 +1,33 @@
 {
   "name": "缄默德克萨斯",
   "charaKey": "char_1028_texas2",
-  "voiceBase": {
-    "日语": "voice/char_1028_texas2",
-    "中文-普通话": "voice_cn/char_1028_texas2",
-    "韩语": "voice_kr/char_1028_texas2",
-    "英语": "voice_en/char_1028_texas2",
-    "意大利语": "voice_custom/char_1028_texas2_ita"
-  },
+  "images": [
+    "https://media.prts.wiki/6/65/%E7%AB%8B%E7%BB%98_%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f2/%E7%AB%8B%E7%BB%98_%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b9/%E7%AB%8B%E7%BB%98_%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1028_texas2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1028_texas2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1028_texas2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1028_texas2"
+    },
+    {
+      "language": "意大利语",
+      "base": "voice_custom/char_1028_texas2_ita"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1030,6 +1050,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "又是新的一年，新年快乐。我收到了空新寄来的CD，是和以前不同的风格，很能让人放松。看来叙拉古的经历给了她新的灵感，你也想听听吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "Ne è passato un'altro anno, felice anno nuovo. Sora mi ha inviato il suo ultimo CD per posta aerea. È un nuovo stile molto rilassante. Forse l'esperienza Siracusa l'avrà isperata, vuoi ascoltarlo?"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1058,11 +1108,36 @@
           "content": "En, proprio come i vecchi tempi. Non potrebbe andare meglio di così. Giorno. Che programmi hai?"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我偶尔会想，罗德岛在做的事业很困难，但你们真的在付诸行动。我？我没那么复杂的想法，但很乐意尽力帮忙。我们所寻找的，都是那份平静的生活。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "A volte penso alla difficile missione di Rhodes Island, ma tu stai facendo il possibile per realizzarla. Io? Tendo a semplificare le cose, ma sono più che felice di aiutarti. Tutti cerchiamo la nostra pace e tranquillità."
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/65/立绘_缄默德克萨斯_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f2/立绘_缄默德克萨斯_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b9/立绘_缄默德克萨斯_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

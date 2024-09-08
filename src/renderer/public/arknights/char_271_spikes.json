@@ -1,11 +1,26 @@
 {
   "name": "芳汀",
   "charaKey": "char_271_spikes",
-  "voiceBase": {
-    "日语": "voice/char_271_spikes",
-    "中文-普通话": "voice_cn/char_271_spikes",
-    "韩语": "voice_kr/char_271_spikes"
-  },
+  "images": [
+    "https://media.prts.wiki/6/6c/%E7%AB%8B%E7%BB%98_%E8%8A%B3%E6%B1%80_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ee/%E7%AB%8B%E7%BB%98_%E8%8A%B3%E6%B1%80_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/ff/%E7%AB%8B%E7%BB%98_%E8%8A%B3%E6%B1%80_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fd/%E7%AB%8B%E7%BB%98_%E8%8A%B3%E6%B1%80_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_271_spikes"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_271_spikes"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_271_spikes"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -229,7 +244,7 @@
         },
         {
           "language": "英文",
-          "content": "I want to capture a few people to try out some new Arts in our next operation. I can't...? Alright, fine. It's a shame, but if that's what you say, Professor, maybe some other time, then. Eh? Not this time, and not ever? Geez, don't be so uptight."
+          "content": "I want to capture a few people to try out some new Arts in our next operation. I can't...? Alright, fine. It's a shame, but if that's what you say, Professor, maybe some other time, then.  Eh? Not this time, and not ever? Geez, don't be so uptight."
         },
         {
           "language": "韩文",
@@ -892,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老师，我新学会了一个小戏法哦。这次可以离得近一点，没有危险。将一块金属放在手中，然后轻轻地......看，就变成小小的烟花。怎么样，不比外面吵吵闹闹的烟花逊色吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,12 +957,32 @@
           "content": "你看起來好像很睏，再睡一會吧，老師。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老师，当您在指挥罗德岛前行时，都会有哪些考量呢？敌人，朋友，需要做的，不能做的事......一定要有不能逾越的底线，才能不迷失自己，是这样吗？是这样啊......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/6c/立绘_芳汀_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ee/立绘_芳汀_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/ff/立绘_芳汀_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fd/立绘_芳汀_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

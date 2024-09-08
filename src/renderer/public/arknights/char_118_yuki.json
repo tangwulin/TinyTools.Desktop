@@ -1,12 +1,29 @@
 {
   "name": "白雪",
   "charaKey": "char_118_yuki",
-  "voiceBase": {
-    "日语": "voice/char_118_yuki",
-    "中文-普通话": "voice_cn/char_118_yuki",
-    "韩语": "voice_kr/char_118_yuki",
-    "英语": "voice_en/char_118_yuki"
-  },
+  "images": [
+    "https://media.prts.wiki/1/10/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%9B%AA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/40/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%9B%AA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6f/%E7%AB%8B%E7%BB%98_%E7%99%BD%E9%9B%AA_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_118_yuki"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_118_yuki"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_118_yuki"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_118_yuki"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，诸事如意。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "雇主，你好。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "白雪，永远在此守候。职责所在，情义所在。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/10/立绘_白雪_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/40/立绘_白雪_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_白雪_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

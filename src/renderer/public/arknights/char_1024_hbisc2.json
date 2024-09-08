@@ -1,12 +1,28 @@
 {
   "name": "濯尘芙蓉",
   "charaKey": "char_1024_hbisc2",
-  "voiceBase": {
-    "日语": "voice/char_1024_hbisc2",
-    "中文-普通话": "voice_cn/char_1024_hbisc2",
-    "韩语": "voice_kr/char_1024_hbisc2",
-    "英语": "voice_en/char_1024_hbisc2"
-  },
+  "images": [
+    "https://media.prts.wiki/d/dc/%E7%AB%8B%E7%BB%98_%E6%BF%AF%E5%B0%98%E8%8A%99%E8%93%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d2/%E7%AB%8B%E7%BB%98_%E6%BF%AF%E5%B0%98%E8%8A%99%E8%93%89_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1024_hbisc2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1024_hbisc2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1024_hbisc2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1024_hbisc2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -230,7 +246,7 @@
         },
         {
           "language": "英文",
-          "content": "We happily see off recovered patients, and say goodbye to former companions with a smile. People come and leave. Our varied dreams may lead us to different paths, but we'll always mean something to each other... Doctor, would you be open for food with me today? I'll go and ask Lava along."
+          "content": "We happily see off recovered patients, and say goodbye to former companions with a smile. People come and leave. Our varied dreams may lead us to different paths, but we'll always mean something to  each other... Doctor, would you be open for food with me today? I'll go and ask Lava along."
         },
         {
           "language": "韩文",
@@ -893,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年快乐。难得的假期，好好休息一下吧。不过还是需要控制不健康食品的摄入，熬夜到太晚也是不允许的。我还是会监督您的啦。嗯，我也会注意自己的身体健康的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,10 +959,32 @@
           "content": "博士，認真工作和保持健康一樣重要，都不能懈怠哦。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛教给我的不只有知识，还有值得奋斗终生的理想。作为萨卡兹，作为感染者，作为医生，作为姐姐，我都在这里找到了归宿。应该说，我已经非常幸运了吧。现在，我只想守护好这一切。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/dc/立绘_濯尘芙蓉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d2/立绘_濯尘芙蓉_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

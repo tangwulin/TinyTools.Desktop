@@ -1,15 +1,19 @@
 <script lang="ts" setup>
 import { History24Filled as HistoryIcon } from '@vicons/fluent'
+import { KeyboardArrowDownRound as ArrowDownIcon } from '@vicons/material'
 import deepcopy from 'deepcopy'
-import { debounce, shuffle } from 'lodash-es'
+import { chunk, shuffle } from 'lodash-es'
 import { domToPng } from 'modern-screenshot'
-import { MessageReactive, useMessage } from 'naive-ui'
+import { MessageReactive, useDialog, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { nextTick, onMounted, onUnmounted, ref, toRaw } from 'vue'
+import * as XLSX from 'xlsx'
 import videoSrc from '../../assets/video/单抽出金.mp4'
 import SeatTable from '../../components/SeatTable.vue'
+import genderPreferences from '../../data/genderPreference.json'
 import raffleConfig from '../../data/raffleModes.json'
 import db from '../../db'
+import { caching } from '../../services/CacheService'
 import { getDynamicSeatHistoryList, saveHistory } from '../../services/DBServices/SeatHistories'
 import { useSettingStore } from '../../stores/setting'
 import { Audio } from '../../types/audio'
@@ -29,8 +33,9 @@ import {
 } from '../../utils/seatUtil'
 
 const setting = useSettingStore()
+const dialog = useDialog()
 
-const { enableBgm, enableFinalBgm, enableFadein, fadeinTime, bgms, finalBgms } =
+const { enableBgm, enableFinalBgm, enableFadein, fadeinTime, bgms, finalBgms, genderPreference } =
   storeToRefs(setting)
 
 const bgmList = shuffle(toRaw(bgms.value))
@@ -176,6 +181,7 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
     if (i < series.length) {
       //去除所有座位的颜色
       seatTable.value = seatTable.value.map((item) => {
+        if (item.type !== 'seat') return item
         ;(item.data as Seat).color = undefined
         return item
       }) //给当前座位上色
@@ -190,6 +196,7 @@ const raffleSeatRemainMysterious = (result: SeatTableItem[]) => {
 
       //去除所有座位的颜色
       seatTable.value = seatTable.value.map((item) => {
+        if (item.type !== 'seat') return item
         ;(item.data as Seat).color = undefined
         return item as SeatTableItem
       })
@@ -207,7 +214,9 @@ const raffleSeatFeint = (result: SeatTableItem[], times: number) => {
   let i = 1
   const timer = setInterval(() => {
     if (i < times) {
-      seatTable.value = calcNewSeatByRealRandom(seatTable.value)
+      seatTable.value = calcNewSeatByRealRandom(seatTable.value, persons.value, {
+        genderPreference: genderPreference.value
+      })
       i++
     } else {
       pauseBgm()
@@ -231,20 +240,27 @@ const raffleSeatGacha = (result: SeatTableItem[]) => {
 
 const handler = (type: 'Immediately' | 'RemainMysterious' | 'Feint' | 'Gacha', times?: number) => {
   let result = [] as SeatTableItem[]
+  pauseBgm()
   switch (lotteryMode.value) {
     case 1:
-      result = calcNewSeatByRealRandom(seatTable.value)
+      result = calcNewSeatByRealRandom(seatTable.value, persons.value, {
+        genderPreference: genderPreference.value
+      })
       saveHistory(result, '平等')
       break
     case 2:
       message.error('尚未从V3移植')
       break
     case 3:
-      result = calcNewSeatBySideToMiddleAlgorithm(seatTable.value)
+      result = calcNewSeatBySideToMiddleAlgorithm(seatTable.value, persons.value, {
+        genderPreference: genderPreference.value
+      })
       saveHistory(result, '两边到中间')
       break
     case 4:
       result = calcNewSeatByCorrectionAlgorithm(
+        persons.value,
+        { genderPreference: genderPreference.value },
         seatTable.value,
         seatHistories.value.at(-2)?.seatTable,
         seatHistories.value.at(-3)?.seatTable
@@ -286,10 +302,14 @@ const playVideo = () => {
   nextTick(() => {
     const videoElement = document.querySelector('video')
     if (videoElement) {
-      videoElement.addEventListener('ended', () => {
-        playingVideo.value = false
-        message.success('抽选完成')
-      })
+      videoElement.addEventListener(
+        'ended',
+        () => {
+          playingVideo.value = false
+          message.success('抽选完成')
+        },
+        { once: true }
+      )
     }
   })
 }
@@ -319,20 +339,87 @@ const rollbackHandler = (x: SeatHistory) => {
     message.error('请先等待抽选完成后再进行回滚操作')
     return
   }
-  if (isPreview.value) {
-    exitPreview()
+  dialog.warning({
+    title: '回滚前确',
+    content:
+      `你确定要回滚到${new Date(x.timestamp).toLocaleString()}吗？` +
+      '这会删除这条记录之后的所有记录！',
+    positiveText: '确定',
+    negativeText: '不确定',
+    onPositiveClick: () => {
+      rollback()
+    },
+    onNegativeClick: () => {
+      message.info('已取消回滚')
+    }
+  })
+
+  async function rollback() {
+    if (isPreview.value) {
+      exitPreview()
+    }
+    seatTable.value = x.seatTable
+    await db
+      .transaction('rw', [db.seatTable, db.seatHistories], async () => {
+        await db.seatTable.bulkPut(deepcopy(x.seatTable))
+        await db.seatHistories.where('timestamp').above(x.timestamp).delete()
+      })
+      .then(() => {
+        message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
+      })
+      .catch((err) => {
+        console.error(err)
+        message.error('回滚失败')
+      })
   }
-  message.error('暂未实现')
-  seatTable.value = x.seatTable
-  saveHistory(x.seatTable, '回滚而来')
-  message.success('已回滚到' + new Date(x.timestamp).toLocaleString())
 }
 
 const delHandler = (x: SeatHistory) => {
-  db.seatHistories.delete(x.timestamp)
-  message.success('删除成功')
+  dialog.warning({
+    title: '删除前确',
+    content: `你确定要删除${new Date(x.timestamp).toLocaleString()}的记录吗？`,
+    positiveText: '确定',
+    negativeText: '不确定',
+    onPositiveClick: () => {
+      del()
+    },
+    onNegativeClick: () => {
+      message.info('已取消删除')
+    }
+  })
+
+  async function del() {
+    await db.seatHistories
+      .delete(x.timestamp)
+      .then(() => {
+        message.success('删除成功')
+      })
+      .catch((err) => {
+        console.error(err)
+        message.error('删除失败')
+      })
+  }
 }
-const save = async () => {
+
+const saveMethods = [
+  { label: '保存为图片', key: 'saveAsPng' },
+  { label: '保存为Excel', key: 'saveAsXlsx' }
+]
+
+const handleSave = (key: string) => {
+  switch (key) {
+    case 'saveAsPng':
+      saveAsPng()
+      break
+    case 'saveAsXlsx':
+      saveAsXlsx()
+      break
+    default:
+      message.error('保存方法异常')
+      break
+  }
+}
+const saveAsPng = async () => {
   loading.value = true
   let msgReactive = message.create('正在生成图片……', {
     type: 'loading',
@@ -356,7 +443,7 @@ const save = async () => {
   domToPng(target, options)
     .then((dataUrl) => {
       const link = document.createElement('a')
-      link.download = 'seat-' + currentDate.value + '-' + currentTime.value + '.png'
+      link.download = '座位表-' + currentDate.value + '-' + currentTime.value + '.png'
       link.href = dataUrl
       link.click()
     })
@@ -372,9 +459,27 @@ const save = async () => {
     })
 }
 
+const saveAsXlsx = () => {
+  const data = deepcopy(seatTable.value).filter((item) => item.type !== 'aisle')
+  const names = data.map((item) => item.data?.displayName ?? '')
+  const table = chunk(names, 8).map((row, rowIndex) => {
+    const thisRow = {}
+    thisRow['行数'] = `第${rowIndex + 1}行`
+    for (let i = 0; i < row.length; i++) {
+      const rowName = `第${i + 1}列`
+      thisRow[rowName] = row[i]
+    }
+    return thisRow
+  })
+  const worksheet = XLSX.utils.json_to_sheet(table)
+  const workbook = XLSX.utils.book_new()
+  XLSX.utils.book_append_sheet(workbook, worksheet, '座位表')
+  XLSX.writeFile(workbook, '座位表-' + currentDate.value + '-' + currentTime.value + '.xlsx')
+}
+
 const play = (option: Audio) => {
   const player = document.getElementById('player') as HTMLAudioElement
-  player.src = option.url
+  player.src = caching(option.url)
   player.currentTime = option.offset
   if (option.name) {
     message.info('正在播放：' + option.name)
@@ -423,18 +528,33 @@ const playFinalBgm = () => {
   play(bgm)
 }
 
-const dragHandler = debounce(
-  () => {
-    db.transaction('rw', db.seatTable, db.seatHistories, async () => {
-      await db.seatTable.bulkPut(deepcopy(seatTable.value))
+// const dragHandler = debounce(
+//   () => {
+//     db.transaction('rw', db.seatTable, db.seatHistories, async () => {
+//       await db.seatTable.bulkPut(deepcopy(seatTable.value))
+//       saveHistory(seatTable.value, '手动更改')
+//     }).catch((err) => {
+//       console.log(err)
+//       message.error('保存失败')
+//     })
+//   },
+//   100,
+//   {
+//     maxWait: 2000
+//   }
+// )
+
+const dragHandler = () => {
+  db.seatTable
+    .bulkPut(deepcopy(seatTable.value))
+    .then(() => {
       saveHistory(seatTable.value, '手动更改')
     })
-  },
-  100,
-  {
-    maxWait: 2000
-  }
-)
+    .catch((err) => {
+      console.log(err)
+      message.error('保存失败')
+    })
+}
 </script>
 
 <template>
@@ -473,6 +593,18 @@ const dragHandler = debounce(
           </template>
           <span>{{ raffleModes.find((item) => item.value === lotteryMode)?.description }}</span>
         </n-popover>
+        <n-popover>
+          <template #trigger>
+            <n-p depth="3"
+              >性别偏好：{{
+                genderPreferences.find((item) => item.key === genderPreference)?.label
+              }}
+            </n-p>
+          </template>
+          <span>{{
+            genderPreferences.find((item) => item.key === genderPreference)?.description
+          }}</span>
+        </n-popover>
       </n-space>
       <n-button-group class="mt-2">
         <n-button :disabled="loading || isPreview" @click="handler('Immediately')"
@@ -496,7 +628,16 @@ const dragHandler = debounce(
             </n-icon>
           </template>
         </n-button>
-        <n-button :disabled="loading || isPreview" @click="save">保存图片</n-button>
+        <n-button :disabled="loading || isPreview" @click="saveAsPng">保存</n-button>
+        <n-dropdown :options="saveMethods" trigger="click" @select="handleSave">
+          <n-button :disabled="loading || isPreview" class="p-1" icon-placement="right">
+            <template #icon>
+              <n-icon>
+                <ArrowDownIcon />
+              </n-icon>
+            </template>
+          </n-button>
+        </n-dropdown>
         <n-switch v-model:value="reverse">
           <template #checked> 老师视角</template>
           <template #unchecked> 学生视角</template>
@@ -523,7 +664,7 @@ const dragHandler = debounce(
     </div>
 
     <!--  视频Modal  <-->
-    <n-modal v-model:show="playingVideo" transform-origin="center" :mask-closable="false">
+    <n-modal v-model:show="playingVideo" :mask-closable="false" transform-origin="center">
       <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
     </n-modal>
 

@@ -1,12 +1,28 @@
 {
   "name": "克洛丝",
   "charaKey": "char_124_kroos",
-  "voiceBase": {
-    "日语": "voice/char_124_kroos",
-    "中文-普通话": "voice_cn/char_124_kroos",
-    "韩语": "voice_kr/char_124_kroos",
-    "英语": "voice_en/char_124_kroos"
-  },
+  "images": [
+    "https://media.prts.wiki/b/ba/%E7%AB%8B%E7%BB%98_%E5%85%8B%E6%B4%9B%E4%B8%9D_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/ab/%E7%AB%8B%E7%BB%98_%E5%85%8B%E6%B4%9B%E4%B8%9D_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_124_kroos"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_124_kroos"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_124_kroos"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_124_kroos"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -815,6 +831,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新~年~快~乐~！我已经很困了，就把祝贺新年的话，先说给博士您听吧~之前的罐头好吃吗？如果喜欢的话，我还可以再给您几个哦~"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -839,10 +881,32 @@
           "content": "博士~啊呼~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "像这样大家都聚在一起真的好开心呢~什么事都不用操心，只用关心会有什么节目，有什么好吃的~是不是灯光秀要开始了？走吧走吧~要是每一天都是这样就好了哦，博士~"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/ba/立绘_克洛丝_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/ab/立绘_克洛丝_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

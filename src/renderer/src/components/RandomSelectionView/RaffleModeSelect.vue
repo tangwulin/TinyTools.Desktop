@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { Dice, DiceOutline } from '@vicons/ionicons5'
 import { ref } from 'vue'
 

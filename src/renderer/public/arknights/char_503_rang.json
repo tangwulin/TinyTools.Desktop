@@ -1,12 +1,27 @@
 {
   "name": "巡林者",
   "charaKey": "char_503_rang",
-  "voiceBase": {
-    "日语": "voice/char_503_rang",
-    "中文-普通话": "voice_cn/char_503_rang",
-    "韩语": "voice_kr/char_503_rang",
-    "英语": "voice_en/char_503_rang"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c8/%E7%AB%8B%E7%BB%98_%E5%B7%A1%E6%9E%97%E8%80%85_1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_503_rang"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_503_rang"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_503_rang"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_503_rang"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -737,6 +752,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，他们正吵着还要继续听老夫讲故事，帮忙劝劝吧，已经三个小时了啊......年轻人在新年这一天的活力果然非比寻常，比不了了......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -761,9 +802,32 @@
           "content": "博士，有什麼事？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "退休？还早呢，老夫现在早上也能吃得下五个包子，等什么时候胃口开始不好了，老夫再找个地方好好地晒太阳去吧，现在，不用担心。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c8/立绘_巡林者_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

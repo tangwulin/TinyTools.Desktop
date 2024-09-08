@@ -1,12 +1,29 @@
 {
   "name": "鸿雪",
   "charaKey": "char_4055_bgsnow",
-  "voiceBase": {
-    "日语": "voice/char_4055_bgsnow",
-    "中文-普通话": "voice_cn/char_4055_bgsnow",
-    "韩语": "voice_kr/char_4055_bgsnow",
-    "英语": "voice_en/char_4055_bgsnow"
-  },
+  "images": [
+    "https://media.prts.wiki/5/54/%E7%AB%8B%E7%BB%98_%E9%B8%BF%E9%9B%AA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0f/%E7%AB%8B%E7%BB%98_%E9%B8%BF%E9%9B%AA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9d/%E7%AB%8B%E7%BB%98_%E9%B8%BF%E9%9B%AA_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4055_bgsnow"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4055_bgsnow"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4055_bgsnow"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4055_bgsnow"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -204,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "Noble?' Correct, I was once a noble. Until a conspiracy wrested my family away, and left me with the sole luck of escaping underground to Zeruertza. There was no avaricious nobility in the city, nor any commoners who'd take advantage for their own gain. Only kindhearted Durins... What more could I ask for?"
+          "content": "Noble? Correct, I was once a noble. Until a conspiracy wrested my family away, and left me with the sole luck of escaping underground to Zeruertza. There was no avaricious nobility in the city, nor any commoners who'd take advantage for their own gain. Only kindhearted Durins... What more could I ask for?"
         },
         {
           "language": "韩文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。请欣赏这部由我创作、由罗德岛杜林族干员联袂呈现的短剧——欸，杜林呢？睡着了？......算了，别打扰她，我来演她的角色吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "呼啊......早安，博士，您推薦的書很有趣，我熬夜把它看完了。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我最近渐渐觉得，如果让我给来到地上的杜林人推荐一个落脚处，我一定会推荐罗德岛。这里虽然比不上那些地下城市，但至少是一个可以让人安心生活的地方。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/54/立绘_鸿雪_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0f/立绘_鸿雪_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9d/立绘_鸿雪_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,10 +1,20 @@
 {
   "name": "熔泉",
   "charaKey": "char_363_toddi",
-  "voiceBase": {
-    "日语": "voice/char_363_toddi",
-    "中文-普通话": "voice_cn/char_363_toddi"
-  },
+  "images": [
+    "https://media.prts.wiki/1/14/%E7%AB%8B%E7%BB%98_%E7%86%94%E6%B3%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b9/%E7%AB%8B%E7%BB%98_%E7%86%94%E6%B3%89_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_363_toddi"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_363_toddi"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -891,6 +901,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年会有例行公事的庆祝，是，我明白。所以我坐在这里，一边喝酒一边看杂志，顺便看你发牢骚，开心得很。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -915,10 +951,32 @@
           "content": "嗨，有事快說。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我说过，矿石病只是次要的。要是不能做自己喜欢的事，活得再久又有什么意思呢？但是在罗德岛上，我总还能做点有趣的事。和你合作的感觉不赖，今后也不许让我失望。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/14/立绘_熔泉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b9/立绘_熔泉_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

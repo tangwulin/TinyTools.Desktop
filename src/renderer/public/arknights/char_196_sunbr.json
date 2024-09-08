@@ -1,13 +1,33 @@
 {
   "name": "古米",
   "charaKey": "char_196_sunbr",
-  "voiceBase": {
-    "日语": "voice/char_196_sunbr",
-    "中文-普通话": "voice_cn/char_196_sunbr",
-    "韩语": "voice_kr/char_196_sunbr",
-    "英语": "voice_en/char_196_sunbr",
-    "俄语": "voice_custom/char_196_sunbr"
-  },
+  "images": [
+    "https://media.prts.wiki/1/16/%E7%AB%8B%E7%BB%98_%E5%8F%A4%E7%B1%B3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1f/%E7%AB%8B%E7%BB%98_%E5%8F%A4%E7%B1%B3_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fd/%E7%AB%8B%E7%BB%98_%E5%8F%A4%E7%B1%B3_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_196_sunbr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_196_sunbr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_196_sunbr"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_196_sunbr"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_196_sunbr"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -894,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，古米今天在厨房里忙了一整天哦。凛冬姐一大早就跑出去玩了，早露姐姐也在忙着装饰餐厅。之前大家明明说好今天要一起准备新年晚餐的呀......真理姐！室内不可以放烟花的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -918,11 +964,32 @@
           "content": "博士，要吃點東西嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士！快来尝尝古米烤的馅饼，是不是比之前更好吃了？嘿嘿，古米也是在成长的嘛。为了让爸爸妈妈放心，也为了让凛冬姐他们放心。古米会更坚强的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/16/立绘_古米_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1f/立绘_古米_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fd/立绘_古米_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

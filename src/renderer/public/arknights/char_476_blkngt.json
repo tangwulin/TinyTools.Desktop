@@ -1,12 +1,30 @@
 {
   "name": "夜半",
   "charaKey": "char_476_blkngt",
-  "voiceBase": {
-    "日语": "voice/char_476_blkngt",
-    "中文-普通话": "voice_cn/char_476_blkngt",
-    "韩语": "voice_kr/char_476_blkngt",
-    "英语": "voice_en/char_476_blkngt"
-  },
+  "images": [
+    "https://media.prts.wiki/a/ac/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E5%8D%8A_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7e/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E5%8D%8A_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/20/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E5%8D%8A_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1e/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E5%8D%8A_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_476_blkngt"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_476_blkngt"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_476_blkngt"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_476_blkngt"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -152,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "There's plenty who think the wilds are a frightening place, but to me, they were my home. I made a mistake once. It torn my family apart, and these slumberfoots are the only ones left to roam with me. I'll never make a mistake like it again."
+          "content": "There's plenty who think the wilds are a frightening place, but to me, they were my home. I made a mistake once. It torn my family apart,  and these slumberfoots are the only ones left to roam with me. I'll never make a mistake like it again."
         },
         {
           "language": "韩文",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天是新年啊，等冬天过去，商道上的队伍又会变多，换作往常，我们就该做一单大的，让贵族老爷们支援点好吃的好喝的，来庆祝一下了。现在这么舒服，不知道什么时候才能把那群孩子都接来。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "喂，小帽，不准在走廊上亂跑！別以為躥進別人懷裡我就會看不見......好吧，看在博士的份上，饒你一次。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我还记得小时候家里的炉火，妈妈的怀抱，爸爸送的手工小兽。后来我离开了荒地，再一次失去了自己的家。我知道在能力变得更强之前，我无法保护好我想守护的人，所以，我不会停下自己的脚步。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/ac/立绘_夜半_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7e/立绘_夜半_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/20/立绘_夜半_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1e/立绘_夜半_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

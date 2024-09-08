@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import type { ElectronAPI } from '@electron-toolkit/preload'
 import { UploadFileInfo, useDialog, useMessage } from 'naive-ui'
 import { getAppData, parseJSON } from '../../../services/DataService'
@@ -74,7 +74,7 @@ const exportData = async () => {
     <n-space vertical>
       <p>数据导入与导出</p>
       <n-space>
-        <n-upload accept=".json" :on-before-upload="getJsonText">
+        <n-upload :on-before-upload="getJsonText" accept=".json">
           <n-button type="primary">导入数据</n-button>
         </n-upload>
         <n-button type="primary" @click="exportData">导出数据</n-button>

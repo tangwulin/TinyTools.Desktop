@@ -1,6 +1,6 @@
 import VueLuckyCanvas from '@lucky-canvas/vue'
-import { init } from '@sentry/electron/renderer'
-import * as Sentry from '@sentry/vue'
+import * as SentryElectron from '@sentry/electron/renderer'
+import * as SentryVue from '@sentry/vue'
 import { createPinia } from 'pinia'
 import piniaPluginPersistedstate from 'pinia-plugin-persistedstate'
 import { createApp } from 'vue'
@@ -16,14 +16,18 @@ app.use(pinia)
 app.use(VueLuckyCanvas)
 
 if (import.meta.env.PROD) {
-  init({
-    dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744'
+  SentryElectron.init({
+    dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744',
+    integrations: [SentryElectron.replayIntegration()],
+    // Session Replay
+    replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
+    replaysOnErrorSampleRate: 1.0
   })
 
-  Sentry.init({
+  SentryVue.init({
     app,
     dsn: 'https://a3ae7a7848252f65da88af57ffa2b59d@o4506597396381696.ingest.sentry.io/4506597399199744',
-    integrations: [Sentry.browserTracingIntegration({ router })]
+    integrations: [SentryVue.browserTracingIntegration({ router })]
   })
 }
 

@@ -1,12 +1,33 @@
 {
   "name": "雪雉",
   "charaKey": "char_383_snsant",
-  "voiceBase": {
-    "日语": "voice/char_383_snsant",
-    "中文-普通话": "voice_cn/char_383_snsant",
-    "中文-方言": "voice_custom/char_383_snsant_cn_topolect",
-    "韩语": "voice_kr/char_383_snsant"
-  },
+  "images": [
+    "https://media.prts.wiki/8/89/%E7%AB%8B%E7%BB%98_%E9%9B%AA%E9%9B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/24/%E7%AB%8B%E7%BB%98_%E9%9B%AA%E9%9B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e0/%E7%AB%8B%E7%BB%98_%E9%9B%AA%E9%9B%89_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_383_snsant"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_383_snsant"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_383_snsant_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_383_snsant"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_383_snsant"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -56,7 +77,7 @@
         },
         {
           "language": "英文",
-          "content": "My dream is to be praised sincerely by the entire world... Ah, um, maybe just Lungmen... Well, maybe I should start with Rhodes Island, or, um, just you! Yes, that is my dream for the time being..."
+          "content": "My dream is for all Terra to know… Okay, maybe just Lungmen… Umm, well, maybe I'll just start with Rhodes Island, or even just you! Yes, my dream is for you to know my skill…"
         },
         {
           "language": "韩文",
@@ -90,7 +111,7 @@
         },
         {
           "language": "英文",
-          "content": "Ugh, I forgot to turn off the light when I left the office yesterday... Hm? Rhodes Island has a power generation facility so there's no need to pay for electricity? Really? Does that I mean I get to eat dinner in the future?"
+          "content": "Aaaugh… I forgot to turn out the lights when I left the office yesterday… Hm? Rhodes Island has power generation facilities so we don't have to pay for electricity? R-Really? Does that mean I can start eating dinner every day?"
         },
         {
           "language": "韩文",
@@ -124,7 +145,7 @@
         },
         {
           "language": "英文",
-          "content": "This is the Originium ammunition that Jessica ordered... Eh? D-Doctor! Isn't this dollar amount wrong? Or is this the currency of some small remote country? It's not? It's LMD? I, I, I, I, I see... Don't worry, I was just a l-l-l-little s-surprised."
+          "content": "So this is the Originium ammunition that Jessica ordered... Uh, D-Doctor, the amount on the bill, is it right? Or maybe it's in the currency of some small, remote country? It's not? It's Lungmen Dollars? I-I-I-I see... Nonono, I-I'm just a-a-a little surprised, hehehe..."
         },
         {
           "language": "韩文",
@@ -158,7 +179,7 @@
         },
         {
           "language": "英文",
-          "content": "Oripathy... Hm, even though it's a bit beyond my field of study, it does seem to be worth looking into... But if I add another research project, I'll go from two meals a day to two days a meal... Ugh..."
+          "content": "Oripathy... Hm, even though it's a bit outside my field of study, it might be worth looking into... But if I add another research project, I'll go from two meals a day to two days a meal... Aww…"
         },
         {
           "language": "韩文",
@@ -192,7 +213,7 @@
         },
         {
           "language": "英文",
-          "content": "Frugality is a type of virtue, but for me, it's closer to a habit... D-despite that, if you or my friends were in need, I'd gladly help out! I'm serious!"
+          "content": "Frugality is a virtue, but for me, it's more like a habit... E-Even so, if you or my friends ever have money troubles, I'll gladly help out! I'm serious!"
         },
         {
           "language": "韩文",
@@ -226,7 +247,7 @@
         },
         {
           "language": "英文",
-          "content": "You'd like to take a look at my clawhook? That's maybe fine... but whatever you do, don't push this button. And watch your thumb when you're holding the grip... W-wait, you're not winding the rope correctly, and... Ack! Sorry, don't mind me, you can keep looking at it..."
+          "content": "You'd like to take a look at my clawhook? That's probably fine... B-But whatever you do, don't push this button. And watch your thumb when you're holding the grip... W-Wait, you're not winding the rope correctly, and... Oh, I-I'm sorry, don't mind me, you can keep looking at it..."
         },
         {
           "language": "韩文",
@@ -260,7 +281,7 @@
         },
         {
           "language": "英文",
-          "content": "After I become a great, world-famous scientist with lots of money, I swear I'll have three meals a day and dessert too, just like Jessica... And then, with the money I'm not able to spend, I'd put it back into making Lungmen a better place. Um... if a day like that ever comes."
+          "content": "After I become a great, world-famous scientist with lots of money, I swear I'll have three meals a day and dessert too, just like Jessica... And then, with the money I can't even spend, I'll invest it into making Lungmen a better place. Um... if a day like that ever comes."
         },
         {
           "language": "韩文",
@@ -294,7 +315,7 @@
         },
         {
           "language": "英文",
-          "content": "Money is very important. Before I returned to Lungmen, I refused a large retention fee from the research institute, so my self-funded research project went under... But it's more important to be home. I can always save up more money, and now I won't go dizzy from looking at all those large numbers!"
+          "content": "Money is very important. Before I went back to Lungmen, I turned down a big retention fee from the research institute, so my self-funded research project went under... But, it's more important to be home. I can always save up again, and now I won't go dizzy looking at all those big numbers!"
         },
         {
           "language": "韩文",
@@ -328,7 +349,7 @@
         },
         {
           "language": "英文",
-          "content": "...Did you fall asleep? Just let me handle the rest, though I am a bit hungry."
+          "content": "…Doctor fell asleep? Then I'll handle the rest of the work, though I am a bit hungry."
         },
         {
           "language": "韩文",
@@ -362,7 +383,7 @@
         },
         {
           "language": "英文",
-          "content": "Oww... my head! Sorry... Oh, y-you're the Doctor? It's a pleasure to meet you. My name is Snowsant. Sorry, I shouldn't be walking with my head down..."
+          "content": "Oww... my head! Sorry... Oh, a-are you the Doctor? It's a pleasure to meet you! My name is Snowsant. Sorry, I shouldn't be walking with my head down…"
         },
         {
           "language": "韩文",
@@ -430,7 +451,7 @@
         },
         {
           "language": "英文",
-          "content": "Ehh? A p-promotion? I feel a bit more pressure, but I'll be okay. This is the proof that I'm one step farther than when I first came."
+          "content": "Wha-what? A promotion? I… feel a bit more pressure, but I'll be okay. This is proof that I'm one step closer to making something of myself!"
         },
         {
           "language": "韩文",
@@ -498,7 +519,7 @@
         },
         {
           "language": "英文",
-          "content": "It'll be all right, as long as I work just as hard as I did during training..."
+          "content": "It'll be all right. I just need to remember my training and work hard…"
         },
         {
           "language": "韩文",
@@ -532,7 +553,7 @@
         },
         {
           "language": "英文",
-          "content": "You want m-me to be the squad leader? I really don't know anything about battle though..."
+          "content": "You want m-me to be the squad leader? But I really don't know anything about battle…"
         },
         {
           "language": "韩文",
@@ -566,7 +587,7 @@
         },
         {
           "language": "英文",
-          "content": "Clawhook inspection complete! Take a deep breath... I can do this!"
+          "content": "Clawhook checked and ready! Take a deep breath... I can do this!"
         },
         {
           "language": "韩文",
@@ -600,7 +621,7 @@
         },
         {
           "language": "英文",
-          "content": "I found the enemy!"
+          "content": "I see the enemy!"
         },
         {
           "language": "韩文",
@@ -634,7 +655,7 @@
         },
         {
           "language": "英文",
-          "content": "M-me?"
+          "content": "M-Me?"
         },
         {
           "language": "韩文",
@@ -702,7 +723,7 @@
         },
         {
           "language": "英文",
-          "content": "My clawhook won't malfunction, right?"
+          "content": "I hope my clawhook won't malfunction…"
         },
         {
           "language": "韩文",
@@ -770,7 +791,7 @@
         },
         {
           "language": "英文",
-          "content": "Clawhook at the ready!"
+          "content": "Clawhook standing by!"
         },
         {
           "language": "韩文",
@@ -804,7 +825,7 @@
         },
         {
           "language": "英文",
-          "content": "Stop moving around, it'll be easier this way!"
+          "content": "Please hold still, don't make it hard on you!"
         },
         {
           "language": "韩文",
@@ -838,7 +859,7 @@
         },
         {
           "language": "英文",
-          "content": "O-owww!"
+          "content": "So… heavy…"
         },
         {
           "language": "韩文",
@@ -872,7 +893,7 @@
         },
         {
           "language": "英文",
-          "content": "My equipment's in good shape!"
+          "content": "Claw's all good for a catch!"
         },
         {
           "language": "韩文",
@@ -906,7 +927,7 @@
         },
         {
           "language": "英文",
-          "content": "As long as we work together, there's no obstacle we can't overcome!"
+          "content": "As long as we work together, there's no obstacle we can't overcome! R-Right, Doctor?"
         },
         {
           "language": "韩文",
@@ -940,7 +961,7 @@
         },
         {
           "language": "英文",
-          "content": "What a flawless victory - not a bit of waste!"
+          "content": "Not a single resource wasted, a flawless victory!"
         },
         {
           "language": "韩文",
@@ -1008,7 +1029,7 @@
         },
         {
           "language": "英文",
-          "content": "I, I'll go salvage some damage parts, to at least reduce our losses..."
+          "content": "I, I'll go salvage some damaged parts, to at least reduce our losses…"
         },
         {
           "language": "韩文",
@@ -1042,7 +1063,7 @@
         },
         {
           "language": "英文",
-          "content": "Woah, so this is what it's like inside Rhodes Island... I'm so envious..."
+          "content": "Wooooah, so this is what it's like inside Rhodes Island... I'm so jealous…"
         },
         {
           "language": "韩文",
@@ -1076,7 +1097,7 @@
         },
         {
           "language": "英文",
-          "content": "Eek!"
+          "content": "Eeh-eeh!"
         },
         {
           "language": "韩文",
@@ -1110,7 +1131,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor?"
+          "content": "Yes, Doctor?"
         },
         {
           "language": "韩文",
@@ -1165,6 +1186,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "原来今天是节日吗？怪不得食堂准备了丰盛的自助餐，终于可以好好吃一顿了，嘿嘿。说起来，罗德岛的节日真的好多啊，如果用这些时间再去打一份工的话，是不是可以多赚一点经费呢......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "原来跟朝是节日啊？怪不得食堂准备了丰盛的自助餐，终于可以好好地吃一顿得嘞，嘿嘿。话起来，罗德岛的节日真当是冒多，如果用格些辰光再去打一份工的话语，是不是可以多赚一点儿经费呢......"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1197,11 +1252,40 @@
           "content": "你好啊，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "虽然罗德岛的条件不算很宽裕，不，能吃饱穿暖，已经相当宽裕了......总之，能有这样支持我做科研工作的环境，我真的很感激！我也要加倍努力，做出对得起实验经费的成果才行！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "虽然罗德岛的条件不算冒宽裕，不对，可以吃饱穿暖，已经相当宽裕得嘞......总而言之，能有实价套支持我做科研工作的环境，我真当冒感激得！我也要加倍努力，做出对得起实验经费的成果才可以！"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/89/立绘_雪雉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/24/立绘_雪雉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e0/立绘_雪雉_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

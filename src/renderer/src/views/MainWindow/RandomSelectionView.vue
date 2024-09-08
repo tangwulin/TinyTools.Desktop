@@ -1,17 +1,18 @@
 <script lang="ts" setup>
-import { NButton, useMessage } from 'naive-ui'
+import { NButton, type TransferOption, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
+import PinyinMatch from 'pinyin-match'
 import { computed, nextTick, ref, watch } from 'vue'
 import raffleBgm from '../../assets/audio/raffle-2.mp3'
 import groupVideo from '../../assets/video/十连出金.mp4'
 import singleVideo from '../../assets/video/单抽出金.mp4'
+import EntityItem from '../../components/EntityItem.vue'
+import RaffleModeSelect from '../../components/RandomSelectionView/RaffleModeSelect.vue'
 import db from '../../db'
+import { getAvatar } from '../../services/AvatarService'
 import { useSettingStore } from '../../stores/setting'
 import { Person } from '../../types/person'
 import { selectSomething } from '../../utils/arrayUtil'
-import { getAvatar } from '../../services/AvatarService'
-import EntityItem from '../../components/EntityItem.vue'
-import RaffleModeSelect from '../../components/RandomSelectionView/RaffleModeSelect.vue'
 
 const message = useMessage()
 
@@ -58,13 +59,23 @@ const handler = (fast: boolean) => {
   if (fast) {
     const player = document.querySelector('audio')
     if (player) player.play()
-    const interval = setInterval(() => {
-      selectedPerson.value = selectSomething(list, number.value).slice()
-      //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
-    }, 250)
-    setTimeout(() => {
-      clearInterval(interval)
-    }, 3000)
+    // const interval = setInterval(() => {
+    //   selectedPerson.value = selectSomething(list, number.value).slice()
+    //   //不使用lodash的shuffle，因为lodash的shuffle不一定机会均等
+    // }, 250)
+    // setTimeout(() => {
+    //   clearInterval(interval)
+    // }, 3000)
+    const startTime = Date.now()
+    let time = startTime
+    selectedPerson.value = selectSomething(list, number.value).slice()
+    requestAnimationFrame(function f() {
+      if (Date.now() - time >= 250) {
+        selectedPerson.value = selectSomething(list, number.value).slice()
+        time = Date.now()
+      }
+      if (Date.now() - startTime <= 3000) requestAnimationFrame(() => f())
+    })
   } else {
     playingVideo.value = true
     nextTick(() => {
@@ -94,10 +105,19 @@ function createValues(x: Person[]) {
   return x.map((item) => item.id as number)
 }
 
+function filter(pattern: string, option: TransferOption) {
+  if (pattern === '') return true
+  return !!PinyinMatch.match(option.label, pattern)
+}
+
 db.persons
   .toArray()
   .then((result) => {
-    persons.value = result
+    persons.value = result.sort((a, b) =>
+      a.name.localeCompare(b.name, undefined, {
+        numeric: true
+      })
+    )
   })
   .then(() => {
     options1.value = createOptions(persons.value)
@@ -148,10 +168,10 @@ watch(
             <EntityItem
               v-for="item in selectedPerson"
               :key="item.id"
-              :display-name="item.name"
-              size="large"
               :avatar="getAvatar(item)"
+              :display-name="item.name"
               :enable-avatar="enableAvatar"
+              size="large"
             />
           </div>
         </n-layout>
@@ -237,6 +257,10 @@ watch(
               :options="options1"
               class="pr-3"
               source-filterable
+              source-filter-placeholder="可输入拼音进行模糊查找"
+              target-filterable
+              target-filter-placeholder="可输入拼音进行模糊查找"
+              :filter="filter"
             />
           </n-collapse-item>
         </n-collapse>
@@ -255,7 +279,7 @@ watch(
   </n-modal>
 
   <!--  视频Modal  <-->
-  <n-modal v-model:show="playingVideo" transform-origin="center" :mask-closable="false">
+  <n-modal v-model:show="playingVideo" :mask-closable="false" transform-origin="center">
     <video :src="videoSrc" autoplay preload="auto" style="width: 100%; height: 100%" />
   </n-modal>
 </template>

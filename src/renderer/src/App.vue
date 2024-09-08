@@ -17,7 +17,7 @@ import { dateZhCN, NConfigProvider, zhCN } from 'naive-ui'
 <style>
 @font-face {
   font-family: 'HYWenHei-85W';
-  src: url('./assets/fonts/HYWenHei-85W.ttf') format('truetype');
+  src: url('./assets/fonts/HYWenHei-85W.woff2');
 }
 
 body {

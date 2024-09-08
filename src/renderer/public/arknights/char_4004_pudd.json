@@ -1,12 +1,29 @@
 {
   "name": "布丁",
   "charaKey": "char_4004_pudd",
-  "voiceBase": {
-    "日语": "voice/char_4004_pudd",
-    "中文-普通话": "voice_cn/char_4004_pudd",
-    "韩语": "voice_kr/char_4004_pudd",
-    "英语": "voice_en/char_4004_pudd"
-  },
+  "images": [
+    "https://media.prts.wiki/3/30/%E7%AB%8B%E7%BB%98_%E5%B8%83%E4%B8%81_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ed/%E7%AB%8B%E7%BB%98_%E5%B8%83%E4%B8%81_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a6/%E7%AB%8B%E7%BB%98_%E5%B8%83%E4%B8%81_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4004_pudd"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4004_pudd"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4004_pudd"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4004_pudd"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士新年快乐！嘿嘿，我准备休几天假，去附近的雪山度假村，那里有一个非常大的滑雪场，还可以泡温泉和冰钓呢！那么，我就出发——电力系统需要维护？唔......好吧......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "早上好，博士。呼哈......我也該去補覺了。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "可露希尔小姐说，今天为大家准备了一个惊喜。博士可以期待一下晚上的灯光秀哦。其实，彩灯的节能方案都是我做的，为了这个还加了一周班......不，没什么......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/30/立绘_布丁_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ed/立绘_布丁_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a6/立绘_布丁_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,12 +1,28 @@
 {
   "name": "夜烟",
   "charaKey": "char_141_nights",
-  "voiceBase": {
-    "日语": "voice/char_141_nights",
-    "中文-普通话": "voice_cn/char_141_nights",
-    "韩语": "voice_kr/char_141_nights",
-    "英语": "voice_en/char_141_nights"
-  },
+  "images": [
+    "https://media.prts.wiki/a/a0/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E7%83%9F_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/08/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E7%83%9F_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_141_nights"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_141_nights"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_141_nights"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_141_nights"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -74,7 +90,7 @@
         },
         {
           "language": "英文",
-          "content": "So rare to see a pharma take in runaway kitties from a jail. Did you all want a peek at my maps? Or, was it some advice on prison breaks?"
+          "content": "So rare to see a pharma take in runaway kitties from a jail. Did you all want a peek at my maps? Or,  was it some advice on prison breaks?"
         },
         {
           "language": "韩文",
@@ -282,7 +298,7 @@
         },
         {
           "language": "英文",
-          "content": "Hello, I'm Haze. I like relaxing work environments, and an employer who knows better than to bother me with too many questions."
+          "content": "Hello, I'm Haze. I like relaxing work environments,  and an employer who knows better than to bother me with too many questions."
         },
         {
           "language": "韩文",
@@ -893,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？对猫猫来说，“年”这个时间未免也太漫长了。心里装着一天之外的事怎么能开心呢？不过今天的确是个适合打盹的日子。博士，不如一起懒洋洋地度过这一天吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,10 +959,32 @@
           "content": "博士，你在啊喵~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "猫猫会光顾有食物的花园，但如果想要用绳索留下猫猫，它就一定会逃走。当然，猫猫心情好的时候，也是会带回一些东西来报答的。明白了吗？博士，一定要让罗德岛成为大家都喜欢的花园哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/a0/立绘_夜烟_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/08/立绘_夜烟_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

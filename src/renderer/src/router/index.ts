@@ -152,6 +152,11 @@ const routes: RouteRecordRaw[] = [
         component: () => import('../views/MainWindow/Setup/ScheduleView.vue')
       },
       {
+        path: '/setup/pptpath',
+        name: 'setup pptpath',
+        component: () => import('../views/MainWindow/Setup/PPTPathView.vue')
+      },
+      {
         path: '/setup/work-schedule',
         name: 'setup workSchedule',
         component: () => import('../views/MainWindow/Setup/WorkScheduleView.vue')

@@ -1,12 +1,29 @@
 {
   "name": "青枳",
   "charaKey": "char_488_buildr",
-  "voiceBase": {
-    "日语": "voice/char_488_buildr",
-    "中文-普通话": "voice_cn/char_488_buildr",
-    "韩语": "voice_kr/char_488_buildr",
-    "英语": "voice_en/char_488_buildr"
-  },
+  "images": [
+    "https://media.prts.wiki/f/f7/%E7%AB%8B%E7%BB%98_%E9%9D%92%E6%9E%B3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1a/%E7%AB%8B%E7%BB%98_%E9%9D%92%E6%9E%B3_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d3/%E7%AB%8B%E7%BB%98_%E9%9D%92%E6%9E%B3_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_488_buildr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_488_buildr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_488_buildr"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_488_buildr"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -264,7 +281,7 @@
         },
         {
           "language": "英文",
-          "content": "Finding the structural support core in an instant and destroying it right away... Alright, with a little practice, I'm sure I can do this, too."
+          "content": "Finding the structural support core in an instant and destroying it right away...  Alright, with a little practice, I'm sure I can do this, too."
         },
         {
           "language": "韩文",
@@ -730,7 +747,7 @@
         },
         {
           "language": "韩文",
-          "content": "……박사, 다음부터 말 건 땐 해머에서 멀리 떨어져 있어 줘, 위험하다고!"
+          "content": "……박사, 다음부터 말 걸 땐 해머에서 멀리 떨어져 있어 줘, 위험하다고!"
         }
       ]
     },
@@ -757,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好，博士，晚上的庆典您应该会来吧？我给设计礼堂的干员提了一点建议，依照干员们的家乡做了分区......是啊，这样特殊的日子，归属感很重要。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -777,10 +816,28 @@
           "content": "기분 전환 겸 바람이나 쐬러 가자, 박사. 계속 같은 장소에 틀어박혀 있으면 생각도 답답해진다고."
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我刚刚整理了过去一年的建筑稿，没想到竟然有这么多，有种难得的充实感。虽然我一个人能为汐斯塔做的并不多，但我知道，画下去的每一笔都能代表我踏实走过的路。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f7/立绘_青枳_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1a/立绘_青枳_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

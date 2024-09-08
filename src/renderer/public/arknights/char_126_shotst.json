@@ -1,12 +1,30 @@
 {
   "name": "流星",
   "charaKey": "char_126_shotst",
-  "voiceBase": {
-    "日语": "voice/char_126_shotst",
-    "中文-普通话": "voice_cn/char_126_shotst",
-    "韩语": "voice_kr/char_126_shotst",
-    "英语": "voice_en/char_126_shotst"
-  },
+  "images": [
+    "https://media.prts.wiki/b/be/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%9F_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/ba/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%9F_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a3/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%9F_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/67/%E7%AB%8B%E7%BB%98_%E6%B5%81%E6%98%9F_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_126_shotst"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_126_shotst"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_126_shotst"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_126_shotst"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "又是一年了，森林是不是还和我当初离去时一样呢？虽然我仍旧有些不习惯现代生活，人们对矿石病的恐惧也似乎并没有减少，但是，新年的到来让这片大地重新焕发生机，万事都还是有希望的吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "博士，您好。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哎呀，电子器械还是让人有些头疼呢......不过我也已经进步很多了吧？有些东西还是你们口中说的“老旧”的更适合我一些，就像这把弓，用了这么多年，我只信任它。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/be/立绘_流星_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/ba/立绘_流星_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a3/立绘_流星_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/67/立绘_流星_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

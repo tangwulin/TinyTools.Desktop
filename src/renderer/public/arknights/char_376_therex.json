@@ -1,10 +1,28 @@
 {
   "name": "THRM-EX",
   "charaKey": "char_376_therex",
-  "voiceBase": {
-    "日语": "voice/char_376_therex",
-    "中文-普通话": "voice_cn/char_376_therex"
-  },
+  "images": [
+    "https://media.prts.wiki/8/8a/%E7%AB%8B%E7%BB%98_THRM-EX_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/aa/%E7%AB%8B%E7%BB%98_THRM-EX_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_376_therex"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_376_therex"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_376_therex"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_376_therex"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -20,11 +38,11 @@
         },
         {
           "language": "英文",
-          "content": "Thermal-EX, ready to commence thermal shock! What, the designated combat time has not been reached yet? Then, I shall postpone it. Commencing thermal shock after a delay of 10 seconds!"
+          "content": "Thermal-EX, ready to commence thermal shock! What, it's not yet the designated combat time? Then, I shall postpone it. Commencing thermal shock after ten second delay!"
         },
         {
           "language": "韩文",
-          "content": "Thermal-EX, 지금 막 에너지 쇼크 스탠바이 페이즈로 이행하겠습니다! 뭣이? 아직도 작전 예정 시각이 오지 않았다고요? 그럼 쇼크 발동까지의 시간을 10초로 연장하겠습니다!"
+          "content": "Thermal-EX, 에너지 쇼크 기동을 이행하겠습니다! 뭣이? 아직 작전 예정 시각이 오지 않았다고요? 그럼 쇼크 기동까지의 시간을 10초로 연장하겠습니다!"
         },
         {
           "language": "繁体中文",
@@ -46,11 +64,11 @@
         },
         {
           "language": "英文",
-          "content": "I heard that there's some expression from the East: 'No martial art is infallible, except for heat.'"
+          "content": "I have heard an expression from the East: 'No martial art is infallible, except for heat.'"
         },
         {
           "language": "韩文",
-          "content": "동쪽 나라에 이런 말이 있다고 들었습니다. \"천하의 무술, 열에너지만은 격파하지 못한다\"라고 합니다."
+          "content": "동쪽 나라에 이런 말이 있다고 들었습니다. “천하의 무공 중 파해되지 않는 견고함이란 없으나, 열에너지만은 파해되지 않는다”라고 말입니다."
         },
         {
           "language": "繁体中文",
@@ -72,7 +90,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, it's great to be with you! My burning heart won't calm down! —I'm talking about the Raythean Industries custom-made full-thermal Arts impact generator on my body!"
+          "content": "Doctor, it's a great honor to be with you! My burning heart just can't calm down! And by that, I mean the Raythean Industries custom-made full-thermal Arts impact generator I have installed!"
         },
         {
           "language": "韩文",
@@ -98,11 +116,11 @@
         },
         {
           "language": "英文",
-          "content": "Once upon a time, God said, 'Let there be light,' and so there was light. God said, 'Let there be strength,' and so there was the high-performance version of Raythean's Challenger Hellcat."
+          "content": "In the beginning, God said, 'Let there be light,' and there was light. God said, 'Let there be power,' and there was the high-performance variant of Raythean's Challenger Hellcat."
         },
         {
           "language": "韩文",
-          "content": "그 옛날, 신은 \"빛이 있으라!\"라고 말씀하셨습니다. 그러자 빛이 생겨났습니다. 그리고 신은 \"파워가 있으라!\"라고 말씀하셨습니다. 그러자 이 '레이시언 프로보카퇴르 라바캣 데빌' 퍼포먼스 모델이 생겨났습니다."
+          "content": "그 옛날, 신은 “빛이 있으라!”라고 말씀하셨습니다. 그러자 빛이 생겨났습니다. 그리고 신은 “열에너지가 있으라!”라고 말씀하셨습니다. 그러자 이 '레이시언 프로보카퇴르 라바캣 데빌' 퍼포먼스 모델이 생겨났습니다."
         },
         {
           "language": "繁体中文",
@@ -124,11 +142,11 @@
         },
         {
           "language": "英文",
-          "content": "As a perfect industrial-grade mass-produced combat platform, I am very happy! Nowadays, not only do I get constant performance optimizations from Miss Mayer, but I even get to work with hot partners like Miss Blaze! Life is great!"
+          "content": "As a perfect industrial-grade mass-produced combat platform, I am very happy now! Not only do I get regular performance optimizations from Mayer, but I even get to work with passionate partners like Blaze! Life is so good!"
         },
         {
           "language": "韩文",
-          "content": "완벽한 공업급 양산형 작전 플랫폼으로서, 저 자신을 명예롭게 생각하고 있습니다! 이제는 메이어 님께 끊임없이 성능 개선을 받을 수 있는 것만이 아니라, 블레이즈 님과 같이 뜨거운 분도 파트너가 되어 주셨습니다! 실로 훌륭합니다!"
+          "content": "완벽한 공업용 등급 양산형 작전 플랫폼으로서, 저 자신을 명예롭게 생각하고 있습니다! 이제는 메이어 님께 끊임없이 성능 개선을 받을 수 있는 것만이 아니라, 블레이즈 님과 같이 뜨거운 분도 파트너가 되어 주셨습니다! 실로 훌륭합니다!"
         },
         {
           "language": "繁体中文",
@@ -150,11 +168,11 @@
         },
         {
           "language": "英文",
-          "content": "Even though I'm already this dazzling, only you, the peerless Doctor, are worthy of becoming the brightest sun!"
+          "content": "Dazzling though I am, you, the peerless Doctor, are the only one I could call my brightest sun!"
         },
         {
           "language": "韩文",
-          "content": "이렇게 빛이 나는 저이기는 하지만, 저에게는 누구도 당해낼 수 없는 박사님이야말로 세계에서 가장 빛나는 존재이십니다!"
+          "content": "저는 어느 모로 보나 빛나는 존재입니다! 그러나 제게 있어 가장 눈부신 존재는 그 누구도 당해낼 수 없는 박사님이십니다!"
         },
         {
           "language": "繁体中文",
@@ -180,7 +198,7 @@
         },
         {
           "language": "韩文",
-          "content": "제가 방출할 수 있는 빛과 에너지는 순간의 반짝임이지만…… 박사님이 나아가는 길을 비출 수 있다면 만족합니다!"
+          "content": "제가 방출할 수 있는 빛과 에너지는 그저 찰나의 순간에 불과하지만…… 박사님이 나아가시는 길을 잠시나마 비출 수 있다면 저는 만족합니다!"
         },
         {
           "language": "繁体中文",
@@ -206,7 +224,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사님께서 휴식을 취하셔도, 저는 난로 역할로써 옆에 붙어 있어 드릴 수 있습니다! 역시 저로군요!"
+          "content": "박사님께서 휴식을 취하실 때도, 저는 난로 역할로써 옆에 붙어 있어 드릴 수 있습니다! 역시 저로군요!"
         },
         {
           "language": "繁体中文",
@@ -228,11 +246,11 @@
         },
         {
           "language": "英文",
-          "content": "Born from Raythean Industries, improved in the hands of the great Mayer. I, Thermal-EX, the throbbing heart of hotness, am here to help!"
+          "content": "Born from Raythean Industries, improved by the hands of the great Mayer. I, Thermal-EX, the throbbing heart of hotness, am here to help!"
         },
         {
           "language": "韩文",
-          "content": "레이시언 공업에서 태어나, 위대한 메이어 님의 손에 의해 진화를 이룩했습니다! 팽창하는 뜨거운 마음……Thermal-EX, 힘이 되어 드리겠습니다!"
+          "content": "레이시언 공업에서 태어나, 위대한 메이어 님의 손에 의해 진화를 이룩했습니다! 팽창하는 뜨거운 마음…… Thermal-EX, 힘이 되어 드리겠습니다!"
         },
         {
           "language": "繁体中文",
@@ -254,11 +272,11 @@
         },
         {
           "language": "英文",
-          "content": "Ohhhhh! This power blazing within me is... is... a hotfix!"
+          "content": "Ohhhhh! This power blazing within me... It's… It's… It's a hotfix!"
         },
         {
           "language": "韩文",
-          "content": "아아! 이 뜨거운 파워는 그야말로…… 그야말로…… 그래, 핫픽스다!"
+          "content": "아아! 이 뜨거운 파워는 그래…… 그렇지…… 바로 핫픽스다!"
         },
         {
           "language": "繁体中文",
@@ -284,7 +302,7 @@
         },
         {
           "language": "韩文",
-          "content": "드디어 이 나의 실력을 보여줄 때다!"
+          "content": "드디어 이 나의 실력을 보여줄 때가 온 건가!"
         },
         {
           "language": "繁体中文",
@@ -306,11 +324,11 @@
         },
         {
           "language": "英文",
-          "content": "What's the situation right now?"
+          "content": "What's the situation?"
         },
         {
           "language": "韩文",
-          "content": "그래서, 상황은 어떤가?"
+          "content": "지금 상황은 어떻지?"
         },
         {
           "language": "繁体中文",
@@ -332,7 +350,7 @@
         },
         {
           "language": "英文",
-          "content": "All forces, move out!"
+          "content": "All units, move out!"
         },
         {
           "language": "韩文",
@@ -358,7 +376,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's rock and roll!"
+          "content": "Rock and roll!"
         },
         {
           "language": "韩文",
@@ -410,7 +428,7 @@
         },
         {
           "language": "英文",
-          "content": "Storing energy!"
+          "content": "Charging up!"
         },
         {
           "language": "韩文",
@@ -440,7 +458,7 @@
         },
         {
           "language": "韩文",
-          "content": "돕겠습니다!"
+          "content": "제가 돕겠습니다!"
         },
         {
           "language": "繁体中文",
@@ -462,7 +480,7 @@
         },
         {
           "language": "英文",
-          "content": "Shock ready!"
+          "content": "Detonation imminent!"
         },
         {
           "language": "韩文",
@@ -514,7 +532,7 @@
         },
         {
           "language": "英文",
-          "content": "Delivering thermal shock!"
+          "content": "Deploying thermal shock!"
         },
         {
           "language": "韩文",
@@ -570,7 +588,7 @@
         },
         {
           "language": "韩文",
-          "content": "열에너지를 찬양하라!"
+          "content": "에너지를 찬양하라!"
         },
         {
           "language": "繁体中文",
@@ -592,11 +610,11 @@
         },
         {
           "language": "英文",
-          "content": "Aren't I awesome? I knew that your commands would make a perfect match for me, Doctor!"
+          "content": "Aren't I awesome? I knew your command would be a perfect match for me, Doctor!"
         },
         {
           "language": "韩文",
-          "content": "역시 저입니다! 역시 박사님의 지휘와 저의 조합은 완벽하다고밖에 할 수 없겠군요!"
+          "content": "역시 접니다! 박사 박사님의 지휘와 저의 조합은 완벽하다고밖에 할 수 없겠군요!"
         },
         {
           "language": "繁体中文",
@@ -622,7 +640,7 @@
         },
         {
           "language": "韩文",
-          "content": "훌~륭~합~니~다!! 박사님!!"
+          "content": "훌~륭~합~니~다!! 박사 박사님!!"
         },
         {
           "language": "繁体中文",
@@ -644,11 +662,11 @@
         },
         {
           "language": "英文",
-          "content": "My retreat was just a fluke. Nothing must be allowed through our net on the battlefield."
+          "content": "My retreat was just a fluke. Nothing can be allowed through our battlefield net."
         },
         {
           "language": "韩文",
-          "content": "이번의 후퇴는 예상치 못한 상황이었습니다. 원래대로라면 적을 놓치는 일은 없었을 것입니다!"
+          "content": "저의 철수는 예상치 못한 상황이었습니다. 원래대로라면 적을 놓치는 일은 없었을 것입니다!"
         },
         {
           "language": "繁体中文",
@@ -670,11 +688,11 @@
         },
         {
           "language": "英文",
-          "content": "Calculating: Imminent danger! Dropping smoke bombs! Doctor, I'll cover your retreat!"
+          "content": "Contact! Contact! Enemy ambush! Dropping smoke! Doctor, I'll cover your retreat!"
         },
         {
           "language": "韩文",
-          "content": "위험합니다! 적의 함정에 빠졌습니다. 연막탄, 발사했습니다! 박사님, 제가 엄호하겠으니 서둘러 퇴각하시죠!"
+          "content": "위험합니다! 적의 함정에 빠졌습니다. 연막탄, 발사했습니다! 박사님, 제가 엄호할 테니 서둘러 퇴각하시죠!"
         },
         {
           "language": "繁体中文",
@@ -696,11 +714,11 @@
         },
         {
           "language": "英文",
-          "content": "Rest? Haha, it's too early for me! I just swapped to the newest energy storage device, so there are 50 more hours until the end of today's workday!"
+          "content": "Rest? Haha, it's too early for me! I just swapped to the newest energy storage device, so we have fifty more hours until the end of the workday!"
         },
         {
           "language": "韩文",
-          "content": "휴식 말입니까? 하하, 저에게는 아직 이릅니다! 조금 전 새 에너지 저장 장치로 교환한 참입니다. 오늘의 업무 종료까지 앞으로 50시간이나 있답니다!"
+          "content": "휴식 말입니까? 하하하, 저에게는 아직 이른 시간인 것 같군요! 조금 전 새 에너지 저장 장치로 교환한 참입니다. 오늘의 업무 종료까지 50시간, 앞으로 50시간 남았습니다!"
         },
         {
           "language": "繁体中文",
@@ -722,11 +740,11 @@
         },
         {
           "language": "英文",
-          "content": "Uwoooahh! My thermal sensor feels your burning heart!"
+          "content": "A-ha! My thermal sensor feels your burning heart!"
         },
         {
           "language": "韩文",
-          "content": "와하핫! 이 온도 센서로 당신의 그 열의에 찬 마음을 느꼈습니다!"
+          "content": "와하핫! 이 온도 센서가 당신의 그 열의에 찬 마음을 감지했습니다!"
         },
         {
           "language": "繁体中文",
@@ -752,7 +770,7 @@
         },
         {
           "language": "韩文",
-          "content": "저의 CPU도 당신의 정열에 녹아버릴 것만 같군요!"
+          "content": "저의 CPU도 당신의 열정에 녹아버릴 것만 같군요!"
         },
         {
           "language": "繁体中文",
@@ -787,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士新年快乐！用塞壬音响之类放歌太过于没有气势了，就让我用更加热烈且直接的方式为这次的烟花大会助威吧！嘭！！咻~~~~嘭！！！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -811,9 +855,32 @@
           "content": "歡迎回來，博士！今天您也是如此充滿著光與熱啊！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士！！如此热闹的场面，连我都觉得耀眼！不要再犹豫了，快跟着我，和大家一起庆祝吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/8a/立绘_THRM-EX_1.png?image_process=format,webp/quality,Q_90"
   ]
 }

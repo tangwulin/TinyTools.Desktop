@@ -139,11 +139,9 @@ const characterImages = asyncComputed(
             <n-space>
               <div v-for="(image, index) in characterImages" class="flex flex-col">
                 <n-image :key="index" :src="image" lazy width="100" />
-                <n-button
-                  text
-                  size="small"
-                  @click="selectedCharacterImageIndex = index"
-                >更换该立绘</n-button>
+                <n-button size="small" text @click="selectedCharacterImageIndex = index"
+                  >更换该立绘
+                </n-button>
               </div>
             </n-space>
           </n-space>

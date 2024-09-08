@@ -1,12 +1,30 @@
 {
   "name": "夏栎",
   "charaKey": "char_492_quercu",
-  "voiceBase": {
-    "日语": "voice/char_492_quercu",
-    "中文-普通话": "voice_cn/char_492_quercu",
-    "韩语": "voice_kr/char_492_quercu",
-    "英语": "voice_en/char_492_quercu"
-  },
+  "images": [
+    "https://media.prts.wiki/4/4d/%E7%AB%8B%E7%BB%98_%E5%A4%8F%E6%A0%8E_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/02/%E7%AB%8B%E7%BB%98_%E5%A4%8F%E6%A0%8E_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/bc/%E7%AB%8B%E7%BB%98_%E5%A4%8F%E6%A0%8E_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a3/%E7%AB%8B%E7%BB%98_%E5%A4%8F%E6%A0%8E_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_492_quercu"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_492_quercu"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_492_quercu"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_492_quercu"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐博士！浆果果脯、风味沙虫罐头，还有玫瑰馅的鲜花饼，都是我从维多利亚带来的特产，博士挑一挑自己喜欢的？我自酿的水果酒也发酵好了，想尝可要早点来，不然很快就会被分光的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "你又回到這間辦公室了，博士，身體和大腦都好好放鬆過了嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新芽从土里冒出，藤蔓也会开出稚嫩的小花，已经长成的枝桠则会庇护在它们周围，遮挡住风雨。不论是在罗德岛，还是在我的老家，我都希望能成为这样的人——和枝桠一样，庇护年轻的孩子们。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/4d/立绘_夏栎_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/02/立绘_夏栎_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bc/立绘_夏栎_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a3/立绘_夏栎_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -26,11 +26,9 @@ const github_sha = __GITHUB_SHA__
 // noinspection TypeScriptUnresolvedReference
 // @ts-ignore:2304
 const revision = __REVISION__ // @ts-ignore
-const now = new Date()
-const year = now.getFullYear()
-const month = now.getMonth()
-const date = now.getDate()
-const buildDate = `${year}/${month + 1}/${date}`
+// noinspection TypeScriptUnresolvedReference
+// @ts-ignore:2304
+const buildDate = __BUILD_DATE__ // @ts-ignore
 const githubLink = `https://github.com/tangwulin/TinyTools.Desktop/tree/${github_sha}`
 /* eslint-enable */
 
@@ -135,15 +133,15 @@ const checkUpdate = () => {
             ></path>
           </svg>
         </a>
-        <!--        <a href="https://github.com/tangwulin/TinyTools/" target="_blank">-->
-        <!--          <img-->
-        <!--            class="h-12"-->
-        <!--            src="https://gitee.com/static/images/logo-black.svg?t=158106664"-->
-        <!--            alt="gitee logo"-->
-        <!--          />-->
-        <!--        </a>-->
+        <a href="https://gitee.com/twl12138/TinyTools.Desktop" target="_blank">
+          <img
+            class="h-12"
+            src="https://gitee.com/static/images/logo-black.svg?t=158106664"
+            alt="gitee logo"
+          />
+        </a>
       </div>
-      <n-button type="primary" class="mt-4" @click="checkUpdate">检查更新 </n-button>
+      <n-button class="mt-4" type="primary" @click="checkUpdate">检查更新</n-button>
       <div class="mt-4 text-xs">
         <p class="mt-auto flex">
           Powered By Aurora Studio

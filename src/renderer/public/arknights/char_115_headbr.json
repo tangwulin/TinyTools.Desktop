@@ -1,13 +1,34 @@
 {
   "name": "凛冬",
   "charaKey": "char_115_headbr",
-  "voiceBase": {
-    "日语": "voice/char_115_headbr",
-    "中文-普通话": "voice_cn/char_115_headbr",
-    "韩语": "voice_kr/char_115_headbr",
-    "英语": "voice_en/char_115_headbr",
-    "俄语": "voice_custom/char_115_headbr"
-  },
+  "images": [
+    "https://media.prts.wiki/6/6e/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2c/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0a/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/bf/%E7%AB%8B%E7%BB%98_%E5%87%9B%E5%86%AC_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_115_headbr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_115_headbr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_115_headbr"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_115_headbr"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_115_headbr"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -49,7 +70,7 @@
         },
         {
           "language": "英文",
-          "content": "You can't go out without permission? What? Aren't you the one in charge? Screw the rules, let's just get out."
+          "content": "You can't go out without permission? Что? Aren't you the one in charge? Screw the rules, let's just get out."
         },
         {
           "language": "韩文",
@@ -75,7 +96,7 @@
         },
         {
           "language": "英文",
-          "content": "You said something? My headphone was on."
+          "content": "You said something? My headphones were on."
         },
         {
           "language": "韩文",
@@ -101,7 +122,7 @@
         },
         {
           "language": "英文",
-          "content": "The leader of Rhodes Island looks younger than even Istina. How can you let a kid like that go to battle? Huh?"
+          "content": "The leader of Rhodes Island looks younger than even Istina. How can you let a kid like that go to battle?!"
         },
         {
           "language": "韩文",
@@ -153,7 +174,7 @@
         },
         {
           "language": "英文",
-          "content": "Every soldier wants to be the general. And I trust you have no opinion on me taking your position?"
+          "content": "Every soldier wants to be the general. And I trust you have no opinion on me taking your position someday?"
         },
         {
           "language": "韩文",
@@ -205,7 +226,7 @@
         },
         {
           "language": "英文",
-          "content": "I found Istina and her gang along my travels. There are quiet a few of them. Where are the others, you ask? I dealt with them. Had no choice, they refused to behave themselves."
+          "content": "I found Istina and the girls out there in the field. We used to have a bunch more, too. What happened to them…? I dealt with 'em. Had no choice, they wouldn't play nice."
         },
         {
           "language": "韩文",
@@ -283,7 +304,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm Zima, leader of the Ursus Student Self-Governing Group. I can make do without one, but my comrades need a place to call home. Let's cut the crap, gimme a job to do. I know lodging here ain't free."
+          "content": "I'm Zima, leader of the Ursus Student Self-governing Group. I can make do without one, but my comrades need a place to call home. Let's cut the crap, gimme a job to do. I know lodging here ain't free."
         },
         {
           "language": "韩文",
@@ -335,7 +356,7 @@
         },
         {
           "language": "英文",
-          "content": "A promotion? Cool. So I'll keep getting promoted if I keep doing a good job knocking heads, yeah?"
+          "content": "A promotion? Cool! So I'll keep getting promoted if I keep doing a good job knocking heads, yeah?"
         },
         {
           "language": "韩文",
@@ -439,7 +460,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's go."
+          "content": "Time to go."
         },
         {
           "language": "韩文",
@@ -465,7 +486,7 @@
         },
         {
           "language": "英文",
-          "content": "Time to throw a fight."
+          "content": "Roll out."
         },
         {
           "language": "韩文",
@@ -491,7 +512,7 @@
         },
         {
           "language": "英文",
-          "content": "Who else can it be?"
+          "content": "Duh, it's me!"
         },
         {
           "language": "韩文",
@@ -517,7 +538,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm heading into the thick of it!"
+          "content": "I'm heading into the thick of it."
         },
         {
           "language": "韩文",
@@ -569,7 +590,7 @@
         },
         {
           "language": "英文",
-          "content": "Hah!"
+          "content": "Hah."
         },
         {
           "language": "韩文",
@@ -595,7 +616,7 @@
         },
         {
           "language": "英文",
-          "content": "The hell are you afraid of?!"
+          "content": "What're you scared of?!"
         },
         {
           "language": "韩文",
@@ -699,7 +720,7 @@
         },
         {
           "language": "英文",
-          "content": "Who else has a death wish? No line over here!"
+          "content": "Who else has a death wish? Happy to help!"
         },
         {
           "language": "韩文",
@@ -725,7 +746,7 @@
         },
         {
           "language": "英文",
-          "content": "Not bad. A decent victory."
+          "content": "Not bad. A solid win."
         },
         {
           "language": "韩文",
@@ -777,7 +798,7 @@
         },
         {
           "language": "英文",
-          "content": "Man, you guys suck. Get lost!"
+          "content": "Man, you suck. Get lost!"
         },
         {
           "language": "韩文",
@@ -829,7 +850,7 @@
         },
         {
           "language": "英文",
-          "content": "Hmm?"
+          "content": "Huh?"
         },
         {
           "language": "韩文",
@@ -894,6 +915,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哦，早上好。今天好吵啊。真是，明明都是大人了，怎么还会因为新年这么兴奋......喂，你怎么还坐在这，难道打算在新年的第一天坐在这里度过吗？快跟我出去。我专门买了好多烟花呢。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -918,12 +965,32 @@
           "content": "幹什麼？有事嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛给我们提供了安身之处，这个恩情我一直记得。为了保护其他几个人，也为了“凛冬将军”这个称号，我一定会努力变强。喂，如果你不好好干的话，我可是很快会取代你的。我是认真的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/6e/立绘_凛冬_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2c/立绘_凛冬_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0a/立绘_凛冬_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bf/立绘_凛冬_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,11 +1,25 @@
 {
   "name": "安哲拉",
   "charaKey": "char_218_cuttle",
-  "voiceBase": {
-    "日语": "voice/char_218_cuttle",
-    "中文-普通话": "voice_cn/char_218_cuttle",
-    "韩语": "voice_kr/char_218_cuttle"
-  },
+  "images": [
+    "https://media.prts.wiki/2/2e/%E7%AB%8B%E7%BB%98_%E5%AE%89%E5%93%B2%E6%8B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/45/%E7%AB%8B%E7%BB%98_%E5%AE%89%E5%93%B2%E6%8B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6f/%E7%AB%8B%E7%BB%98_%E5%AE%89%E5%93%B2%E6%8B%89_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_218_cuttle"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_218_cuttle"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_218_cuttle"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年好，博士。和这么多人一起过新年对我来说是第一次，感觉倒是不坏。啊，说起来，出发前说好要给老妈写信的，完全忘了，赶紧写一封好了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "博士，吃糖嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我原本没有对未来计划那么多，没想到自己也渐渐地走到了这一步，这样一看，当初跟着莫妮卡一起来是件好事呢......现在对未来的看法？嗯......好麻烦，还是没有。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/2e/立绘_安哲拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/45/立绘_安哲拉_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_安哲拉_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

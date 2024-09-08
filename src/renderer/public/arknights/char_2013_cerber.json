@@ -1,11 +1,30 @@
 {
   "name": "刻俄柏",
   "charaKey": "char_2013_cerber",
-  "voiceBase": {
-    "日语": "voice/char_2013_cerber",
-    "中文-普通话": "voice_cn/char_2013_cerber",
-    "韩语": "voice_kr/char_2013_cerber"
-  },
+  "images": [
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E5%88%BB%E4%BF%84%E6%9F%8F_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6d/%E7%AB%8B%E7%BB%98_%E5%88%BB%E4%BF%84%E6%9F%8F_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f3/%E7%AB%8B%E7%BB%98_%E5%88%BB%E4%BF%84%E6%9F%8F_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d4/%E7%AB%8B%E7%BB%98_%E5%88%BB%E4%BF%84%E6%9F%8F_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_2013_cerber"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_2013_cerber"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_2013_cerber"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_2013_cerber"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -21,7 +40,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm? What should I do? Just put this stack of papers on this box?"
+          "content": "Hm...? What should I do? Just put these papers in this box?"
         },
         {
           "language": "韩文",
@@ -47,7 +66,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, are you working? Can I watch? Great! Sofa, here I come~"
+          "content": "Doctor, are you working? Can I watch? Yay! Here I come, sofa."
         },
         {
           "language": "韩文",
@@ -73,7 +92,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm super strong. Forget one bad guy, I can take on a hundred at once. Uhh, maybe a hundred is a bit much... But ninety-nine is no problem! Mhm!"
+          "content": "I'm super strong! Forget one bad guy, I can take on a hundre—Uhh, maybe a hundred is a bit much... But ninety-nine is no problem! Um-hum!"
         },
         {
           "language": "韩文",
@@ -99,7 +118,7 @@
         },
         {
           "language": "英文",
-          "content": "I found a bunch of these little bottle things in some room, and the sauce inside tasted pretty good. Is it spicy? Yeah, seems to be a little hot, but it's also really tasty. Want some, Doctor?"
+          "content": "I found a bunch of these little bottle things in some room, and the sauce inside tasted pretty good. Spicy? Umm... a little. But it's really yummy! Want some, Doctor?"
         },
         {
           "language": "韩文",
@@ -125,7 +144,7 @@
         },
         {
           "language": "英文",
-          "content": "My den is right here. Doctor's den is above my head, and Vulcan's is to my left... Okay, got it! Repeat it? Mm, sure. My den is above my head, Doctor's is to my left, and Vulcan's is right here..."
+          "content": "My den is right here. Doctor's den is above my head, and Vulcan's den is on my left... Okay, got it! One more time? Um, sure. My den is above my head, Doctor's den is on my left, and Vulcan's den is right here!"
         },
         {
           "language": "韩文",
@@ -151,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "So this is where I started from? Oh, oh, then where did I go before this? And where did you catch me? Can you find it all on this map?!"
+          "content": "Whoa… So this is where I started&nbsp;? Oh, oh, then how far did I go? And where did you catch me? You can find it all on this map?!"
         },
         {
           "language": "韩文",
@@ -177,7 +196,7 @@
         },
         {
           "language": "英文",
-          "content": "So hungry... My tummy's been grumbling for so long. Can we head to the cafeteria?"
+          "content": "So hungry... My tummy's been grumbling for hours. Can we go to the canteen yet?"
         },
         {
           "language": "韩文",
@@ -203,7 +222,7 @@
         },
         {
           "language": "英文",
-          "content": "I don't know much about these Arts, but when other people try to use my weapons, they can't make all those cool sparkly things happen. But don't worry, as long as I'm here, the bad guys won't be able to hurt you. I know who the bad guys are."
+          "content": "I don't know much about Arts, but when other people try to use my weapons, they can't make all those cool sparky things happen. Anyway Doctor, don't worry. As long as I'm here, the bad guys can't hurt you. And I can tell who the bad guys are."
         },
         {
           "language": "韩文",
@@ -229,7 +248,7 @@
         },
         {
           "language": "英文",
-          "content": "There's a whole bunch of bad guys out there, and my friends won't always be around. That's why the more weapons I have, the more power I have. Isn't that right? Hey, can you stuff another hammer back there? And a javelin too, those are super useful! Hm? No means no!"
+          "content": "Bad guys usually come in groups, and I don't always have friends around. But the more weapons you have, the more power you have. Am I right? So, can I get another hammer for my bag? Or a javelin! They're super useful! No…? Hmph! But I need it!"
         },
         {
           "language": "韩文",
@@ -255,7 +274,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor's snoring sure sounds funny."
+          "content": "Doctor's snoring sounds funny."
         },
         {
           "language": "韩文",
@@ -281,7 +300,7 @@
         },
         {
           "language": "英文",
-          "content": "You seem like you're a pretty nice person. 'Doctor,' was it? My name is Ceobe, but if that's too hard to say, you can just call me Kay! I'll be in your care!"
+          "content": "You seem pretty nice. They call you 'Doctor,' right? My name is Ceobe, but if that's too hard to say, you can also call me Kay. I'm staying here from now on!"
         },
         {
           "language": "韩文",
@@ -333,7 +352,7 @@
         },
         {
           "language": "英文",
-          "content": "This little button is for me? Do I look good wearing it?"
+          "content": "This little button is for me? Alright, I'll put it on. Hmmm... Done!  Do I look cool?"
         },
         {
           "language": "韩文",
@@ -359,7 +378,7 @@
         },
         {
           "language": "英文",
-          "content": "One's not enough, two gets the job done, and three is for safety. As long as I bring the right weapons for the job, I'll take out the bad guys as they come."
+          "content": "One's not enough, two gets the job done, and three is for safety. As long as I bring the right weapons for the job, I'll take out every bad guy I see!"
         },
         {
           "language": "韩文",
@@ -385,7 +404,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, I'm all ears."
+          "content": "I'm all ears, Doctor!"
         },
         {
           "language": "韩文",
@@ -411,7 +430,7 @@
         },
         {
           "language": "英文",
-          "content": "Lead? What's a lead?"
+          "content": "I'm in command? What's a command?"
         },
         {
           "language": "韩文",
@@ -437,7 +456,7 @@
         },
         {
           "language": "英文",
-          "content": "I wonder if there's gonna be anything tasty when I get back~"
+          "content": "Are we gonna eat goodies when we get back?"
         },
         {
           "language": "韩文",
@@ -463,7 +482,7 @@
         },
         {
           "language": "英文",
-          "content": "Phew... All righty!"
+          "content": "Phew... Alright!"
         },
         {
           "language": "韩文",
@@ -593,7 +612,7 @@
         },
         {
           "language": "英文",
-          "content": "Haah!"
+          "content": "Ha-yah!"
         },
         {
           "language": "韩文",
@@ -619,7 +638,7 @@
         },
         {
           "language": "英文",
-          "content": "Gooooooo!"
+          "content": "Let's go!"
         },
         {
           "language": "韩文",
@@ -671,7 +690,7 @@
         },
         {
           "language": "英文",
-          "content": "Prey should stay still!"
+          "content": "Stay still, my prey!"
         },
         {
           "language": "韩文",
@@ -723,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "All that's needed is a bang, bang! And that takes care of them!"
+          "content": "All you need is a little bang, bump, pow! And they're done!"
         },
         {
           "language": "韩文",
@@ -749,7 +768,7 @@
         },
         {
           "language": "英文",
-          "content": "Are you hurt? Do you need help?"
+          "content": "Are you hurt? Should I wrap your ouchie?"
         },
         {
           "language": "韩文",
@@ -775,7 +794,7 @@
         },
         {
           "language": "英文",
-          "content": "Hurry, run! We won't be able to get away if we don't hurry up!"
+          "content": "Hurry! Run! Before it's too late!"
         },
         {
           "language": "韩文",
@@ -801,7 +820,7 @@
         },
         {
           "language": "英文",
-          "content": "This fluffy thing is gonna feel absolutely amazing~"
+          "content": "This thing's super fluffy. Lying on it's gonna feel great!"
         },
         {
           "language": "韩文",
@@ -853,7 +872,7 @@
         },
         {
           "language": "英文",
-          "content": "Hey, can you take me with you?"
+          "content": "Doctor, can I follow you around?"
         },
         {
           "language": "韩文",
@@ -892,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天是节日吗？是不是代表我可以不用干活了？那我要在这里待一整天！火神大姐烤了很多小刻形状的蜜饼，我都带来了，博士，快吃！要不然我就要把它吃完啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -905,7 +950,7 @@
         },
         {
           "language": "英文",
-          "content": "Good morning, Doctor! Mhm, that's a proper greeting, right?"
+          "content": "Nice to meet you, Doctor! Mhm, that's a proper greeting, right?"
         },
         {
           "language": "韩文",
@@ -916,12 +961,32 @@
           "content": "博士好！嗯，是該這樣說，沒錯。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "以前我经常一年四季都吃不饱，能安安稳稳睡一觉都要谢天谢地啦，现在天天都有温暖的被窝，我已经很满足了。嗯，如果我的房间里也能有博士这儿这么多零食就更好了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/3d/立绘_刻俄柏_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6d/立绘_刻俄柏_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f3/立绘_刻俄柏_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d4/立绘_刻俄柏_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

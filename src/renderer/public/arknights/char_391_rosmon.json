@@ -1,11 +1,25 @@
 {
   "name": "迷迭香",
   "charaKey": "char_391_rosmon",
-  "voiceBase": {
-    "日语": "voice/char_391_rosmon",
-    "中文-普通话": "voice_cn/char_391_rosmon",
-    "韩语": "voice_kr/char_391_rosmon"
-  },
+  "images": [
+    "https://media.prts.wiki/5/59/%E7%AB%8B%E7%BB%98_%E8%BF%B7%E8%BF%AD%E9%A6%99_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/07/%E7%AB%8B%E7%BB%98_%E8%BF%B7%E8%BF%AD%E9%A6%99_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/ba/%E7%AB%8B%E7%BB%98_%E8%BF%B7%E8%BF%AD%E9%A6%99_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_391_rosmon"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_391_rosmon"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_391_rosmon"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我已经不太想得起以前的新年是怎么过的了。我总觉得我有过哥哥和弟弟，我们在院子里放烟花，但又总是在想......他们是真的吗？我只有罗德岛的大家了。不要，不要离开我。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "啊，你是，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "晚会上，是穿蓝色的鞋子好，还是白色的鞋子好呢？博士，过去一年自己做了什么，我已经不记得了。但是，被我伤到的只有坏人，对吗？如果我没有做错事的话，我想穿这双新买的白色鞋子。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/59/立绘_迷迭香_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/07/立绘_迷迭香_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/ba/立绘_迷迭香_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

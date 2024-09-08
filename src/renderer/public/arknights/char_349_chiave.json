@@ -1,11 +1,24 @@
 {
   "name": "贾维",
   "charaKey": "char_349_chiave",
-  "voiceBase": {
-    "日语": "voice/char_349_chiave",
-    "中文-普通话": "voice_cn/char_349_chiave",
-    "韩语": "voice_kr/char_349_chiave"
-  },
+  "images": [
+    "https://media.prts.wiki/2/2d/%E7%AB%8B%E7%BB%98_%E8%B4%BE%E7%BB%B4_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/80/%E7%AB%8B%E7%BB%98_%E8%B4%BE%E7%BB%B4_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_349_chiave"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_349_chiave"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_349_chiave"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -129,7 +142,7 @@
         },
         {
           "language": "韩文",
-          "content": "아오스타가 전에 그러더라고, “그러면 제 명에 못 산다”고. 그래서 내가 뭐라 그랬게? “안 그러면 따분해 죽을 텐데 오래 살아봤자 뭐해!” 이렇게 받아쳐 줬지."
+          "content": "아오스타가 전에 그러더라고, “그러면 제 명에 못 산다”고. 그래서 내가 뭐라 그랬게?  “안 그러면 따분해 죽을 텐데 오래 살아봤자 뭐해!” 이렇게 받아쳐 줬지."
         },
         {
           "language": "繁体中文",
@@ -892,6 +905,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士！我和奥斯塔、布洛卡有一个新年计划，哼哼，告诉你的话，你可就必须加入了。我们打算偷偷把食堂的巧克力酱全部换成叙拉古肉酱，然后——欸，博士，你别走啊！别告诉凯尔希医生啊！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,10 +955,32 @@
           "content": "博士，吃過沒？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛有这么多厉害的人，还有像博士这样聪明的人。总有一天，总有一天我也要干一番惊天动地的大事！至少在我死之前要做到！呃——还是先好好活着？说的也是啊哈哈......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/2d/立绘_贾维_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/80/立绘_贾维_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

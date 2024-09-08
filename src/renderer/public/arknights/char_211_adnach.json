@@ -1,12 +1,28 @@
 {
   "name": "安德切尔",
   "charaKey": "char_211_adnach",
-  "voiceBase": {
-    "日语": "voice/char_211_adnach",
-    "中文-普通话": "voice_cn/char_211_adnach",
-    "韩语": "voice_kr/char_211_adnach",
-    "英语": "voice_en/char_211_adnach"
-  },
+  "images": [
+    "https://media.prts.wiki/9/94/%E7%AB%8B%E7%BB%98_%E5%AE%89%E5%BE%B7%E5%88%87%E5%B0%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/22/%E7%AB%8B%E7%BB%98_%E5%AE%89%E5%BE%B7%E5%88%87%E5%B0%94_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_211_adnach"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_211_adnach"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_211_adnach"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_211_adnach"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -789,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在拉特兰，这一天大家也都会聚在一起庆祝，有些朋友还会专门过来探望，看看我的光环有没有变正。可惜，那时我最后也没能获得自己的铳，不过好像反而在弩上开了窍，蛮厉害吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -813,10 +855,32 @@
           "content": "願上天祝福您，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，能和您在一起工作这么久，我真的十分满足，过去的这一年我和小队里的其他人都承蒙您的照顾了。博士，您指引的方向，就是我将奔赴的未来。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/94/立绘_安德切尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_安德切尔_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

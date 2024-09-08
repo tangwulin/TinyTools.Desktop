@@ -1,12 +1,29 @@
 {
   "name": "玫拉",
   "charaKey": "char_4006_melnte",
-  "voiceBase": {
-    "日语": "voice/char_4006_melnte",
-    "中文-普通话": "voice_cn/char_4006_melnte",
-    "韩语": "voice_kr/char_4006_melnte",
-    "英语": "voice_en/char_4006_melnte"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c3/%E7%AB%8B%E7%BB%98_%E7%8E%AB%E6%8B%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E7%8E%AB%E6%8B%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/82/%E7%AB%8B%E7%BB%98_%E7%8E%AB%E6%8B%89_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4006_melnte"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4006_melnte"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4006_melnte"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4006_melnte"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -22,7 +39,7 @@
         },
         {
           "language": "英文",
-          "content": "You want me to take care of your secretarial work? I can, but please do keep the workload under control. I used to write reports often enough, but most don't find the contents of my reports very pleasant to read."
+          "content": "You would like me to take care of your secretarial work? I can, but please do keep the amount of work under control. I used to write reports fairly often, but most don't find the contents of my reports very pleasant to read."
         },
         {
           "language": "韩文",
@@ -44,7 +61,7 @@
         },
         {
           "language": "英文",
-          "content": "You can stop looking at my shoulder. It's not an Oripathy lesion. It's just a tattoo that resembles one. Why? To fool anyone who thinks they've found a weakness. Rare is the man stubborn enough to keep going after the first wrong guess."
+          "content": "You can stop looking at my shoulder. This is not an Oripathy lesion. It's just a tattoo that resembles one. Why? To outwit anyone who thinks they've found a weakness. You won't bother me again after the first time you guess wrong."
         },
         {
           "language": "韩文",
@@ -66,7 +83,7 @@
         },
         {
           "language": "英文",
-          "content": "That's right. I became an Infected while I was testing this railgun. Why am I still using it? First, it's safe now that it's been fine-tuned. Second, while I don't want to admit it, this is the weapon that suits me the most. I don't want to or dare to abandon it."
+          "content": "That's right. I became an Infected while I was testing <i>this</i> railgun. Why am I still using it? First, it's safe now that it has been fine-tuned. Secondly, while I don't want to admit it, this is the weapon that suits me the most. I don't want to or dare to abandon it."
         },
         {
           "language": "韩文",
@@ -88,7 +105,7 @@
         },
         {
           "language": "英文",
-          "content": "The medicine in my earrings? This isn't a medicine. it's a perfume I mixed myself. A highly concentrated perfume can induce... emotions that run opposite to hostility. It comes in handy in dangerous situations. As for the lower concentration I have here... It can, er, alleviate carsickness. I tend to get pretty carsick."
+          "content": "The medicine in my earrings? It's not medicine. It's a perfume that I mixed myself. A highly concentrated perfume that can induce... emotions that run opposite to hostility. It comes in handy in dangerous situations. As for the lower concentrated one that I have here... Umm, it's for alleviating carsickness. I tend to get carsick pretty badly."
         },
         {
           "language": "韩文",
@@ -110,7 +127,7 @@
         },
         {
           "language": "英文",
-          "content": "Rather than a weapons tester, it would perhaps be more apt to say I was a mercenary at my previous job. As soon as the higher-ups gave the order, I would take to the battlefield with newly-issued equipment. It was nothing like the battles I've fought since coming to Rhodes Island. No one knew or cared why I fought."
+          "content": "I'd say I was a mercenary, more than a weapons tester. As soon as the higher-ups gave the order, I would have to take to the battlefield with newly-issued equipment. It was nothing like the battles I've fought for Rhodes Island. No one knew or cared why I fought."
         },
         {
           "language": "韩文",
@@ -132,7 +149,7 @@
         },
         {
           "language": "英文",
-          "content": "I was infected not because of an accident, but because of a transaction. For my infection, the client got their data, and the fixer got a significant payment. Plus, they got to keep me on a leash with their insurance... If it wasn't for them treating me like a tuskbeast, why would I have run?"
+          "content": "I was infected not because of an accident, but because of a transaction. For my infection, the client got their data, and the provided got a significant payment. Plus, they got to keep me on a leash with their insurance... If it wasn't for them treating me like a tuskbeast, why would I have run?"
         },
         {
           "language": "韩文",
@@ -154,7 +171,7 @@
         },
         {
           "language": "英文",
-          "content": "The first time I struck a dummy, I thought back to my parents, that bandit, and how powerless I was despite the gun in my hand... Even after I ran out of ammo, I was still mechanically pulling the trigger over and over, until the coach took away the launcher. That's right. It wasn't a gun. It was a launcher."
+          "content": "The first time I struck a dummy, I thought back to my parents, that bandit, and how powerless I was despite having a gun in my hand... Even after I was out of ammo, I was still mechanically pulling the trigger over and over, until the coach took away the launcher in my hand. That's right. A launcher, not a gun."
         },
         {
           "language": "韩文",
@@ -176,7 +193,7 @@
         },
         {
           "language": "英文",
-          "content": "I once thought about opening a sundries shop like my parents did. I even had an agreement with a landlord, at one point. Then, I had nightmares that entire night... Now? Much better. I'm even trying to help Instructor Dur-nar—Oh, please don't tell anyone about this."
+          "content": "I once thought about opening a sundries shop like my parents did. Once, I even had an agreement with a landlord. Then, I had nightmares that entire night... Now? Much better. I'm even trying to help Instructor Dur-nar—Oh, please don't tell anyone about this."
         },
         {
           "language": "韩文",
@@ -198,7 +215,7 @@
         },
         {
           "language": "英文",
-          "content": "My father used to tell me stories of how the great Blacksteel founder upgraded his firearms, but it wasn't until recently that I realized true greatness is not to popularize a type of weapon. Instead, it's to make weapons useless forever. Right, it's very ironic. That's what I dream of achieving, and it's only ever going to be a dream."
+          "content": "My father used to tell me stories of how the great Blacksteel founder upgraded their firearms. But it wasn't until recently that I realized true greatness is not to popularize some kind of weapon. Instead, it's to make weapons useless forever. Right, it's very ironic. This is what I dream of achieving, and it is something that I can only dream of achieving."
         },
         {
           "language": "韩文",
@@ -220,7 +237,7 @@
         },
         {
           "language": "英文",
-          "content": "Rest easy. I'll keep the office locked down."
+          "content": "Please rest at ease. I will ensure the office's safety during this period of time."
         },
         {
           "language": "韩文",
@@ -242,7 +259,7 @@
         },
         {
           "language": "英文",
-          "content": "Nice to meet you, Doctor. As a field operator, I will be in your service from here on. I hope my firepower won't let you down."
+          "content": "Nice to meet you, Doctor. As a field operator, I will be in your service from here onwards. I hope that my firepower will not betray your expectations."
         },
         {
           "language": "韩文",
@@ -264,7 +281,7 @@
         },
         {
           "language": "英文",
-          "content": "That is excellent CQC, but perhaps a little too risky..."
+          "content": "That is excellent CQC, but perhaps a little too dangerous..."
         },
         {
           "language": "韩文",
@@ -286,7 +303,7 @@
         },
         {
           "language": "英文",
-          "content": "The only way my former employer expressed approval was by raising wages—Don't get the wrong idea. For every wage increase, they make you do ten times the work. That's not how Rhodes Island operates, right?"
+          "content": "The only way my former employer expresses approval is by raising wages—Don't get the wrong idea. For every wage increase, they make you do ten times the work afterwards. That's not how Rhodes Island works, right?"
         },
         {
           "language": "韩文",
@@ -308,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "Thank you for your trust, Doctor. I used to think of Rhodes Island as a stopover so beautiful that it's almost unreal, but it now seems I will have to extend my stay here for a while longer."
+          "content": "Thank you for your trust, Doctor. I used to think of Rhodes Island as a stopping point so beautiful that it's almost unreal, but it now seems I will have to extend my stay here for a little longer."
         },
         {
           "language": "韩文",
@@ -330,7 +347,7 @@
         },
         {
           "language": "英文",
-          "content": "I'll provide fire support."
+          "content": "I'll provide fire support for everyone."
         },
         {
           "language": "韩文",
@@ -352,7 +369,7 @@
         },
         {
           "language": "英文",
-          "content": "You're making me the leader? Looks like this will be a tough battle."
+          "content": "You are appointing me as the leader? It appears this will be a tough battle."
         },
         {
           "language": "韩文",
@@ -374,7 +391,7 @@
         },
         {
           "language": "英文",
-          "content": "Double check your weapons, everyone, we don't want anything going wrong on the battlefield."
+          "content": "Everyone, so that we don't run into any unexpected issues on the field, check your weapons once again."
         },
         {
           "language": "韩文",
@@ -440,7 +457,7 @@
         },
         {
           "language": "英文",
-          "content": "Your orders?"
+          "content": "Your command?"
         },
         {
           "language": "韩文",
@@ -484,7 +501,7 @@
         },
         {
           "language": "英文",
-          "content": "The weapon's in good condition. We can begin collecting data."
+          "content": "Weapon's good. Ready for data collection."
         },
         {
           "language": "韩文",
@@ -506,7 +523,7 @@
         },
         {
           "language": "英文",
-          "content": "Shh. Do you hear that? The sound of the reaper approaching?"
+          "content": "Shh. Do you hear that? That's the sound of the reaper making her advent."
         },
         {
           "language": "韩文",
@@ -572,7 +589,7 @@
         },
         {
           "language": "英文",
-          "content": "Don't huddle up here, it'll get in the way of my determining the blast radius."
+          "content": "Don't huddle there. Hard for me to assess the blast area."
         },
         {
           "language": "韩文",
@@ -594,7 +611,7 @@
         },
         {
           "language": "英文",
-          "content": "I... I'm a little scared. If I were on the other side facing you and your command, how much of the firepower I'm so proud of would I be able to unleash?"
+          "content": "I... I'm suddenly a little terrified. If I were on the other side facing you and your command, how much of the firepower I'm so proud of would actually be effective?"
         },
         {
           "language": "韩文",
@@ -616,7 +633,7 @@
         },
         {
           "language": "英文",
-          "content": "A perfect performance, to the point that I want to write an evaluation report."
+          "content": "A perfect performance, to the point that I want to write an evaluation report, voluntarily."
         },
         {
           "language": "韩文",
@@ -638,7 +655,7 @@
         },
         {
           "language": "英文",
-          "content": "A few of them got away. It seems we need some further adjustment."
+          "content": "A few of them got away. It seems we need some further adjustments."
         },
         {
           "language": "韩文",
@@ -757,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐，博士。需要我用这门炮放个烟花吗？......不是比喻，是真的。它真的有一个烟花模式，第一次交到我手里的时候就有了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -770,17 +809,35 @@
         },
         {
           "language": "英文",
-          "content": "Good morning. A dreamless night of sleep alleviates exhaustion the best, don't you think?"
+          "content": "Good morning. A dream-less night of sleep alleviates exhaustion the most, don't you think?"
         },
         {
           "language": "韩文",
           "content": "좋은 아침입니다. 꿈도 꾸지 않을 정도로 깊은 수면이 피로 회복에 가장 좋다고 생각하는데, 박사님은 어떠신가요?"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛是个可以让人毫不害羞地述说自己理想的地方，我喜欢这一点。如果能重来的话，我一定不去做什么武器测试员，而是直接来罗德岛......那样，也许我现在已经为自己的理想迈出一步了吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c3/立绘_玫拉_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_玫拉_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

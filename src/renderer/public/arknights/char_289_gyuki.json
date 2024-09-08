@@ -1,11 +1,24 @@
 {
   "name": "缠丸",
   "charaKey": "char_289_gyuki",
-  "voiceBase": {
-    "日语": "voice/char_289_gyuki",
-    "中文-普通话": "voice_cn/char_289_gyuki",
-    "韩语": "voice_kr/char_289_gyuki"
-  },
+  "images": [
+    "https://media.prts.wiki/1/11/%E7%AB%8B%E7%BB%98_%E7%BC%A0%E4%B8%B8_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/22/%E7%AB%8B%E7%BB%98_%E7%BC%A0%E4%B8%B8_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_289_gyuki"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_289_gyuki"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_289_gyuki"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -311,7 +324,7 @@
         },
         {
           "language": "韩文",
-          "content": "좋아, 앞으론 더 날뛸 수 있겠어!"
+          "content": "좋아, 이걸로 더 많은 전투 스킬을 배울 수 있겠어!"
         },
         {
           "language": "繁体中文",
@@ -892,6 +905,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年的话，你们的庆祝方式是什么样的？随便怎样都可以？好，那我要找角峰他们办场足球对抗赛！你可一定要来看啊！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,10 +955,32 @@
           "content": "嗯嗯，我在聽呢。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "这把刀啊，如果拿在我自己手里，就总是会惹出事。还好，博士你很可信，只要听你的，我无论怎么挥刀都不会有错！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/11/立绘_缠丸_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/22/立绘_缠丸_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

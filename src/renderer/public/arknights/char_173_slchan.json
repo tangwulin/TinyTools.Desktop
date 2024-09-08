@@ -1,12 +1,30 @@
 {
   "name": "崖心",
   "charaKey": "char_173_slchan",
-  "voiceBase": {
-    "日语": "voice/char_173_slchan",
-    "中文-普通话": "voice_cn/char_173_slchan",
-    "韩语": "voice_kr/char_173_slchan",
-    "英语": "voice_en/char_173_slchan"
-  },
+  "images": [
+    "https://media.prts.wiki/a/a7/%E7%AB%8B%E7%BB%98_%E5%B4%96%E5%BF%83_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/da/%E7%AB%8B%E7%BB%98_%E5%B4%96%E5%BF%83_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0d/%E7%AB%8B%E7%BB%98_%E5%B4%96%E5%BF%83_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a0/%E7%AB%8B%E7%BB%98_%E5%B4%96%E5%BF%83_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_173_slchan"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_173_slchan"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_173_slchan"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_173_slchan"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐！看，给博士用的登山器材我都准备好了，快走吧！嗯？外面还是半夜？当然啦，我们要早点爬上山顶去迎接新年的日出啊。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "早安哦，博士~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "老哥和老姐还在闹别扭，但我能感觉到，其实他们的关系缓和了不少。欸，总之要多谢你啦。啊，真希望待在家里的感觉，能和待在罗德岛一样轻松啊......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/a/a7/立绘_崖心_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/da/立绘_崖心_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0d/立绘_崖心_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a0/立绘_崖心_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

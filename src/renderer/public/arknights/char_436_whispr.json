@@ -1,10 +1,26 @@
 {
   "name": "絮雨",
   "charaKey": "char_436_whispr",
-  "voiceBase": {
-    "日语": "voice/char_436_whispr",
-    "中文-普通话": "voice_cn/char_436_whispr"
-  },
+  "images": [
+    "https://media.prts.wiki/3/38/%E7%AB%8B%E7%BB%98_%E7%B5%AE%E9%9B%A8_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/87/%E7%AB%8B%E7%BB%98_%E7%B5%AE%E9%9B%A8_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fc/%E7%AB%8B%E7%BB%98_%E7%B5%AE%E9%9B%A8_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6e/%E7%AB%8B%E7%BB%98_%E7%B5%AE%E9%9B%A8_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_436_whispr"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_436_whispr"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_436_whispr"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -50,7 +66,7 @@
         },
         {
           "language": "韩文",
-          "content": "아까 그 스즈란이라는 아이의 권유를 거절한 건, 좋지 않았을까요? 다 같이 차를 마시거나, 그런 일은 정말 서툴러서……"
+          "content": "아까 그 스즈란이라는 아이의 권유를 거절하는 게 아니었는데…… 다 같이 차를 마시거나, 그런 일은 정말 서툴러서……"
         },
         {
           "language": "繁体中文",
@@ -72,7 +88,7 @@
         },
         {
           "language": "英文",
-          "content": "My body is more frail than most others. I may easily die, forget all that happened, then come to be young, and born anew. 'Rejuvenation'... what a cruel fate it is..."
+          "content": "My body is more frail than most others. I may easily die, forget all that happened, then come to be young, and born anew.  'Rejuvenation'... what a cruel fate it is..."
         },
         {
           "language": "韩文",
@@ -102,7 +118,7 @@
         },
         {
           "language": "韩文",
-          "content": "어떤 기억도, 마지막에는 거품이 되어 사라집니다. 고통도 기쁨도 잊고 싶지 않은 과거도, 어느샌가 제게서 빠져나가 버린답니다."
+          "content": "어떤 기억도, 마지막에는 거품이 되어 사라집니다. 고통도 기쁨도 잊고 싶지 않은 과거도, 어느샌가 저에게서 빠져나가 버린답니다."
         },
         {
           "language": "繁体中文",
@@ -128,7 +144,7 @@
         },
         {
           "language": "韩文",
-          "content": "잘 기억나진 않지만, 아직도 제 핏속을 흐르는 것이 있습니다. 바다를 조심하세요, 박사님. 그건 우리를 집어삼키는 검은 악몽…… 공포 그 자체입니다."
+          "content": "잘 기억나진 않지만, 아직도 제 핏속에 흐르고 있는 것이 있습니다. 바다를 조심하세요, 박사님. 그건 우리를 집어삼키는 검은 악몽…… 공포 그 자체입니다."
         },
         {
           "language": "繁体中文",
@@ -180,7 +196,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사님, 이 꽃을, 치료를 받는 저 아이들에게 전해 주시겠습니까? 네, 언제나처럼 침대 옆에…… 감사합니다, 계속 비밀을 지켜주셔서."
+          "content": "박사님, 이 꽃을, 치료를 받는 저 아이들에게 전해 주시겠어요? 네, 언제나처럼 침대 옆에…… 감사합니다, 계속 비밀을 지켜주셔서."
         },
         {
           "language": "繁体中文",
@@ -206,7 +222,7 @@
         },
         {
           "language": "韩文",
-          "content": "박사님, 큰일입니다. 빨리 클로저 씨를 부르러 가죠! 쏜즈 씨 일행이 복도의 수도관을 폭파시켜 위디 씨가 매우 화가 나 있습니다! 저도 이렇게 흠뻑 젖었습니다…… 네? 제가 즐거워 보인다고요? 그, 그렇지는……"
+          "content": "박사님, 큰일입니다. 빨리 클로저 씨를 부르러 가죠! 쏜즈 씨 일행이 복도의 수도관을 폭파시켜 위디 씨가 매우 화가 나 있습니다! 저도 보시다시피 이렇게 흠뻑 젖어…… 네? 제가 즐거워 보인다고요? 그, 그렇지는……"
         },
         {
           "language": "繁体中文",
@@ -232,7 +248,7 @@
         },
         {
           "language": "韩文",
-          "content": "영화를 볼 때마다, 남은 영화표의 반쪽을 보존하고 있습니다. 영화 내용을 기억하고 있지 않아도, 그 남겨진 흔적이 저에게 알려주니까요…… 박사님, 같이 영화를 봐주시겠어요? 당신과 보낸 시간도 보존해 두고 싶어요."
+          "content": "영화를 볼 때마다, 남은 영화표의 반쪽을 간직하고 있습니다. 영화 내용을 기억하고 있지 않아도, 그 남겨진 흔적이 저에게 알려주니까요…… 박사님, 같이 영화를 봐주시겠어요? 당신과 보낸 시간도 제 마음속에 간직하고 싶어요."
         },
         {
           "language": "繁体中文",
@@ -284,7 +300,7 @@
         },
         {
           "language": "韩文",
-          "content": "제 코드네임은 위스퍼레인, 일개 떠돌이 의사입니다. 혹시 괜찮으시다면, 저를 지붕 밑에서 비를 피하고 있는 여행자라고 생각하시고, 신경 쓰지 마세요……"
+          "content": "제 코드네임은 위스퍼레인, 일개 떠돌이 의사입니다. 혹시 괜찮으시다면, 저를 지붕 밑에서 비를 피하고 있는 여행자라고 생각하시고, 신경 쓰지 말아 주세요……"
         },
         {
           "language": "繁体中文",
@@ -414,7 +430,7 @@
         },
         {
           "language": "韩文",
-          "content": "제가 팀장…인가요? 네?"
+          "content": "제가 팀장…… 인가요? 어?"
         },
         {
           "language": "繁体中文",
@@ -466,7 +482,7 @@
         },
         {
           "language": "韩文",
-          "content": "다들 조심해 주세요. 자기방어에 신경 쓰세요."
+          "content": "다들 조심해 주세요. 자기방어에 신경 써주세요."
         },
         {
           "language": "繁体中文",
@@ -544,7 +560,7 @@
         },
         {
           "language": "韩文",
-          "content": "부상자는 이쪽으로."
+          "content": "부상자는 이쪽으로 와주세요."
         },
         {
           "language": "繁体中文",
@@ -804,7 +820,7 @@
         },
         {
           "language": "韩文",
-          "content": "여기는 무척 조용합니다. 빗소리가 들립니다."
+          "content": "여기는 정말 조용하네요. 빗소리가 들려요."
         },
         {
           "language": "繁体中文",
@@ -830,7 +846,7 @@
         },
         {
           "language": "韩文",
-          "content": "엣? 까, 깜짝 놀랐습니다……"
+          "content": "어? 까, 깜짝 놀랐습니다……"
         },
         {
           "language": "繁体中文",
@@ -856,7 +872,7 @@
         },
         {
           "language": "韩文",
-          "content": "우, 움직이지 마세요! 머리카락이 엉켜버렸습니다……"
+          "content": "우, 움직이지 마세요! 머리카락이 엉켜버렸잖아요……"
         },
         {
           "language": "繁体中文",
@@ -891,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "极境先生，棘刺先生，请不要再吹哨子了，已经有好几个干员在瞪你们了——啊，新年快乐，博士。罗德岛的新年真的非常热闹......我以前有这样开心地迎接过新的一年吗？我不记得了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -915,12 +957,32 @@
           "content": "今天要做些什麼呢，博士？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "请让我一个人坐在这里吧。属于这艘舰船的纪念日，似乎不适合我参与，我并不知道自己何时会离开......嗯，但是我会清楚地记得，雨落在甲板上的声音，很特别。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/38/立绘_絮雨_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/87/立绘_絮雨_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fc/立绘_絮雨_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6e/立绘_絮雨_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

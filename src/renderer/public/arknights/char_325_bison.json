@@ -1,11 +1,24 @@
 {
   "name": "拜松",
   "charaKey": "char_325_bison",
-  "voiceBase": {
-    "日语": "voice/char_325_bison",
-    "中文-普通话": "voice_cn/char_325_bison",
-    "韩语": "voice_kr/char_325_bison"
-  },
+  "images": [
+    "https://media.prts.wiki/8/80/%E7%AB%8B%E7%BB%98_%E6%8B%9C%E6%9D%BE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/72/%E7%AB%8B%E7%BB%98_%E6%8B%9C%E6%9D%BE_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_325_bison"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_325_bison"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_325_bison"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -866,6 +879,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年到了，我谨代表峯驰物流向罗德岛送上新年贺帖。恭祝罗德岛全体员工在新的一年诸事顺利，平安健康。然后，这个是我自己送给博士的贺卡，祝您新年快乐。今年也要请您继续指教了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -890,10 +929,32 @@
           "content": "早上好，博士！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "父亲说过，一个企业最宝贵的，就是在任何时候都能将所有人凝聚在一起的共同理想。我在企鹅物流和罗德岛，都看到了这种凝聚力。在这一点上，我需要向您和大帝先生学习。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/80/立绘_拜松_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/72/立绘_拜松_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

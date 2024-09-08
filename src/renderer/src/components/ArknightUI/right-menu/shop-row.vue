@@ -37,12 +37,12 @@ const handleClick1 = () => {
           class="item mr-1"
           @click="router.push({ name: 'personManage', query: { showAddModal: 'true' } })"
         >
-          <div class="title">公开招募</div>
+          <div class="title">添加人员</div>
           <img :src="image4" alt="icon" class="icon" />
           <img :src="image10" alt="right bottom" class="right-bottom" />
         </div>
         <div class="item" @click="router.push({ name: 'randomSelection' })">
-          <div class="title">干员寻访</div>
+          <div class="title">随机抽选</div>
           <img :src="image5" alt="icon" class="icon" />
           <img :src="image10" alt="right bottom" class="right-bottom" />
         </div>

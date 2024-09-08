@@ -1,12 +1,28 @@
 {
   "name": "石英",
   "charaKey": "char_4063_quartz",
-  "voiceBase": {
-    "日语": "voice/char_4063_quartz",
-    "中文-普通话": "voice_cn/char_4063_quartz",
-    "韩语": "voice_kr/char_4063_quartz",
-    "英语": "voice_en/char_4063_quartz"
-  },
+  "images": [
+    "https://media.prts.wiki/d/da/%E7%AB%8B%E7%BB%98_%E7%9F%B3%E8%8B%B1_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/78/%E7%AB%8B%E7%BB%98_%E7%9F%B3%E8%8B%B1_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4063_quartz"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4063_quartz"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4063_quartz"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4063_quartz"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年好。对了，待会儿发表祝福感言的时候记得控制下时长，大家都在等着切蛋糕。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,10 +959,32 @@
           "content": "博士您好。小心，您差點撞在我的劍上了。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "如果没有遇见罗德岛，我是会一个人继续在荒野上游荡，还是最终回到城市接受惩罚......我不知道，也不需要那个答案了，我现在正在罗德岛，和您站在一起。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/da/立绘_石英_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/78/立绘_石英_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,18 +1,23 @@
 import deepcopy from 'deepcopy'
+import { storeToRefs } from 'pinia'
+import { toRaw } from 'vue'
 import { dbVersion, schemaVersion, supportedSchemaVersion } from '../config'
 import db from '../db'
-import { schemaVersion1 } from '../interface/schema'
+import { schemaVersion1, schemaVersion2 } from '../interface/schema'
+import { useCourseStore } from '../stores/course'
 import { useSettingStore } from '../stores/setting'
 import { addGroups, getGroupList } from './DBServices/Group'
 import { addPersons, getPersonList } from './DBServices/Person'
 import { addRates, getRateList } from './DBServices/Rate'
-import { addSeatHistories, getRateHistoryList } from './DBServices/RateHistories'
-import { getSeatHistoryList } from './DBServices/SeatHistories'
+import { addRateHistories, getRateHistoryList } from './DBServices/RateHistories'
+import { addSeatHistories, getSeatHistoryList } from './DBServices/SeatHistories'
 import { addSeatTables, getSeatTable } from './DBServices/SeatTable'
 
 // @ts-ignore:2304
 const version = __APP_VERSION__ as string
 export const getAppData = async () => {
+  const courseStore = useCourseStore()
+  const { coursesTable } = storeToRefs(courseStore)
   const timestamp = Date.now()
   const settingsStore = useSettingStore()
   return deepcopy({
@@ -29,7 +34,6 @@ export const getAppData = async () => {
     rates: await getRateList(),
     rateHistories: await getRateHistoryList(),
     config: {
-      coloringEdgeSeats: settingsStore.coloringEdgeSeats,
       bgms: settingsStore.bgms,
       finalBgms: settingsStore.finalBgms,
       isBGMInitialized: settingsStore.isBGMInitialized,
@@ -45,11 +49,12 @@ export const getAppData = async () => {
       enableAvatar: settingsStore.enableAvatar,
       enableFallbackAvatar: settingsStore.enableFallbackAvatar,
       avatarWorks: settingsStore.avatarWorks
-    }
-  }) as schemaVersion1
+    },
+    courses: toRaw(coursesTable.value)
+  }) as schemaVersion2
 }
 export const parseJSON = async (json: string) => {
-  let data = null as any
+  let data = null
 
   try {
     data = JSON.parse(json)
@@ -60,10 +65,33 @@ export const parseJSON = async (json: string) => {
   if (!data) {
     throw new Error('不是有效的JSON文件')
   }
-  await importData(data)
+  await importData(updateSchemaVersion(data))
 }
 
-export async function importData(data: any) {
+function updateSchemaVersion(data: schemaVersion1 | schemaVersion2): schemaVersion2 {
+  if (data.version.schema === 1) {
+    return updateSchemaVersion(schemeV1ToSchemaV2(data as schemaVersion1))
+  }
+  if (data.version.schema === 2) {
+    return data as schemaVersion2
+  }
+  throw new Error('不支持的数据文件版本')
+}
+
+function schemeV1ToSchemaV2(data: schemaVersion1): schemaVersion2 {
+  return {
+    ...data,
+    courses: [],
+    version: {
+      schema: 2,
+      db: 2,
+      app: data.version.app
+    }
+  } as schemaVersion2 //v1到v2没有修改，只是增加了设置和课程表字段
+}
+
+export async function importData(data: schemaVersion2) {
+  const courseStore = useCourseStore()
   if (!data.version || !data.version.schema || !data.version.app) {
     throw new Error('不是有效的TinyTools数据文件')
   }
@@ -107,8 +135,21 @@ export async function importData(data: any) {
   }
 
   if (data.rateHistories && Array.isArray(data.rateHistories)) {
-    await addSeatHistories(data.rateHistories)
+    await addRateHistories(data.rateHistories)
   } else {
     throw new Error('数据文件中没有评分历史信息或者评分历史信息格式错误')
+  }
+
+  if (data.courses && Array.isArray(data.courses)) {
+    courseStore.updateCourseTable(data.courses)
+  } else {
+    // throw new Error('数据文件中没有课程表信息或者课程表信息格式错误')
+  }
+
+  if (data.config) {
+    const settingsStore = useSettingStore()
+    settingsStore.updateSettings(data.config)
+  } else {
+    throw new Error('数据文件中没有配置信息或者配置信息格式错误')
   }
 }

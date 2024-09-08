@@ -1,11 +1,25 @@
 {
   "name": "稀音",
   "charaKey": "char_336_folivo",
-  "voiceBase": {
-    "日语": "voice/char_336_folivo",
-    "中文-普通话": "voice_cn/char_336_folivo",
-    "韩语": "voice_kr/char_336_folivo"
-  },
+  "images": [
+    "https://media.prts.wiki/d/dd/%E7%AB%8B%E7%BB%98_%E7%A8%80%E9%9F%B3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/f5/%E7%AB%8B%E7%BB%98_%E7%A8%80%E9%9F%B3_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/14/%E7%AB%8B%E7%BB%98_%E7%A8%80%E9%9F%B3_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_336_folivo"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_336_folivo"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_336_folivo"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年的祝福，得亲口对你说。新年快乐。“镜头也要说！博士，新年快乐！新年快乐！”"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "又見面了。“您好，您好。”"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "“稀音小姐不太适合参与这样热闹的宴会，那样她会手足无措的，所以，镜头在这里陪小姐喝饮料。博士想要镜头帮您做什么吗？镜头的曲库最近更新了三首歌曲，请按这里的按钮挑选！”"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/dd/立绘_稀音_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/f5/立绘_稀音_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/14/立绘_稀音_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

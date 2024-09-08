@@ -1,12 +1,30 @@
 {
   "name": "斯卡蒂",
   "charaKey": "char_263_skadi",
-  "voiceBase": {
-    "日语": "voice/char_263_skadi",
-    "中文-普通话": "voice_cn/char_263_skadi",
-    "韩语": "voice_kr/char_263_skadi",
-    "英语": "voice_en/char_263_skadi"
-  },
+  "images": [
+    "https://media.prts.wiki/4/45/%E7%AB%8B%E7%BB%98_%E6%96%AF%E5%8D%A1%E8%92%82_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b8/%E7%AB%8B%E7%BB%98_%E6%96%AF%E5%8D%A1%E8%92%82_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1b/%E7%AB%8B%E7%BB%98_%E6%96%AF%E5%8D%A1%E8%92%82_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/3d/%E7%AB%8B%E7%BB%98_%E6%96%AF%E5%8D%A1%E8%92%82_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_263_skadi"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_263_skadi"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_263_skadi"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_263_skadi"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年，是安心享乐的日子吧？我见过赏金猎人们庆祝的方式，畅饮，歌唱，直到第一缕阳光照在他们脸上才睡去......你们准备干什么？先大吃一场，再去点燃会开花的炸药，唔......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "注意安全，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我对罗德岛来说是个隐患。如果有人再因为我而遇害，我，我......患难要一同承担？家人就该这样？......你刚才，说了很自以为是的话哟。不过，我一点都不讨厌，谢谢你，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/45/立绘_斯卡蒂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b8/立绘_斯卡蒂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1b/立绘_斯卡蒂_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/3d/立绘_斯卡蒂_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

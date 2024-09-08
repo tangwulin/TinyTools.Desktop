@@ -9,12 +9,12 @@ import { useRoute, useRouter } from 'vue-router'
 import AddGroup from '../../components/AddGroup.vue'
 import GroupItem from '../../components/GroupItem.vue'
 import { AppDatabase } from '../../db'
+import { getAvatar } from '../../services/AvatarService'
 import { deleteGroup, getDynamicGroupList } from '../../services/DBServices/Group'
 import { getDynamicPersonList } from '../../services/DBServices/Person'
 import { useSettingStore } from '../../stores/setting'
 import { Group } from '../../types/group'
 import { Person } from '../../types/person'
-import { getAvatar } from '../../services/AvatarService'
 
 const db = AppDatabase.getInstance()
 
@@ -251,10 +251,10 @@ const pasteAvatarLink = async () => {
         <group-item
           v-for="item in groups"
           :key="item.id"
-          :group="item"
           :avatar="getAvatar(item)"
-          :members-avatar="createAvatars(item)"
           :enable-avatar="enableAvatar"
+          :group="item"
+          :members-avatar="createAvatars(item)"
           @click="clickHandler(item)"
         />
 

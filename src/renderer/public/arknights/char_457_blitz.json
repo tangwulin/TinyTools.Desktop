@@ -1,9 +1,16 @@
 {
   "name": "闪击",
   "charaKey": "char_457_blitz",
-  "voiceBase": {
-    "联动": "voice/char_457_blitz"
-  },
+  "images": [
+    "https://media.prts.wiki/d/df/%E7%AB%8B%E7%BB%98_%E9%97%AA%E5%87%BB_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/96/%E7%AB%8B%E7%BB%98_%E9%97%AA%E5%87%BB_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "联动",
+      "base": "voice/char_457_blitz"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -890,6 +897,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "希望朋友们今年能过得更好。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -915,9 +948,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/df/立绘_闪击_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/96/立绘_闪击_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import { asyncComputed } from '@vueuse/core'
 import { useDialog, useNotification } from 'naive-ui'
 import { storeToRefs } from 'pinia'
-import { h, ref } from 'vue'
+import { computed, h, ref } from 'vue'
 import IconArchive from '../../../components/ArknightUI/icons/Archive.vue'
 import IconFriend from '../../../components/ArknightUI/icons/Friend.vue'
 import { getCharacterKey, getCharacterSupportLanguages } from '../../../services/ArknightsUIService'
@@ -49,12 +48,9 @@ const genders = [
 
 const keyword = ref('')
 const selectedSex = ref(1)
-const selectedAvatar = asyncComputed(
-  () =>
-    getAvatarUrls(selectedSex.value, [2]).then((res) =>
-      res.filter((item) => item.description.includes(keyword.value))
-    ),
-  []
+
+const selectedAvatar = computed(() =>
+  getAvatarUrls(selectedSex.value, [2]).filter((item) => item.description.includes(keyword.value))
 )
 
 const clickHandler = (name: string) => {
@@ -176,7 +172,7 @@ const clickHandler = (name: string) => {
       title="更换干员"
       @close="showArchive = false"
     >
-      <n-input v-model:value="keyword" placeholder="搜索" type="text" clearable />
+      <n-input v-model:value="keyword" clearable placeholder="搜索" type="text" />
       <n-space>
         <span>筛选</span>
         <n-radio-group v-model:value="selectedSex">
@@ -193,8 +189,8 @@ const clickHandler = (name: string) => {
           <entity-item
             v-for="(item, index) in selectedAvatar"
             :key="index"
-            :display-name="item.description"
             :avatar="item.url"
+            :display-name="item.description"
             @click="clickHandler(item.description)"
           />
         </div>

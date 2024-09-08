@@ -1,12 +1,30 @@
 {
   "name": "蓝毒",
   "charaKey": "char_129_bluep",
-  "voiceBase": {
-    "日语": "voice/char_129_bluep",
-    "中文-普通话": "voice_cn/char_129_bluep",
-    "韩语": "voice_kr/char_129_bluep",
-    "英语": "voice_en/char_129_bluep"
-  },
+  "images": [
+    "https://media.prts.wiki/6/66/%E7%AB%8B%E7%BB%98_%E8%93%9D%E6%AF%92_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/36/%E7%AB%8B%E7%BB%98_%E8%93%9D%E6%AF%92_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/ea/%E7%AB%8B%E7%BB%98_%E8%93%9D%E6%AF%92_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d8/%E7%AB%8B%E7%BB%98_%E8%93%9D%E6%AF%92_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_129_bluep"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_129_bluep"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_129_bluep"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_129_bluep"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -364,7 +382,7 @@
         },
         {
           "language": "韩文",
-          "content": "독극물'로서의 부담감을 안고 살기보다, 있는 그대로의 나 자신을 받아들이고, 운명을 바꾸도록 노력하자… 이런 자그마한 꿈을 이룰 기회를 주신 건… 박사님, 바로 당신이에요. 정말, 뭐라고 감사의 말씀을 드려야 할지……"
+          "content": "'독극물'로서의 부담감을 안고 살기보다, 있는 그대로의 나 자신을 받아들이고, 운명을 바꾸도록 노력하자… 이런 자그마한 꿈을 이룰 기회를 주신 건… 박사님, 바로 당신이에요. 정말, 뭐라고 감사의 말씀을 드려야 할지……"
         },
         {
           "language": "繁体中文",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哎呀，博士，新年快乐，不过您新年这一天也不会脱下制服吗？我原本以为今天您会换一身衣服穿，看来博士在这方面真的没什么追求呢。有点苦恼，要是送礼物的话，真的不知道该送什么了。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +961,32 @@
           "content": "你好，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "像我这样的“毒物”，能在这里拥有自己的位置，真的很开心。虽然干员们仍然对我有些害怕，但他们也只是害怕，他们并不排斥我。只要时间够久，我们之间的关系就会变好的，对吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/6/66/立绘_蓝毒_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/36/立绘_蓝毒_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/ea/立绘_蓝毒_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

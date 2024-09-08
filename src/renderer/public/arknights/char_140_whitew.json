@@ -1,13 +1,33 @@
 {
   "name": "拉普兰德",
   "charaKey": "char_140_whitew",
-  "voiceBase": {
-    "日语": "voice/char_140_whitew",
-    "中文-普通话": "voice_cn/char_140_whitew",
-    "韩语": "voice_kr/char_140_whitew",
-    "英语": "voice_en/char_140_whitew",
-    "意大利语": "voice_custom/char_140_whitew_ita"
-  },
+  "images": [
+    "https://media.prts.wiki/7/75/%E7%AB%8B%E7%BB%98_%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fe/%E7%AB%8B%E7%BB%98_%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/11/%E7%AB%8B%E7%BB%98_%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_140_whitew"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_140_whitew"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_140_whitew"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_140_whitew"
+    },
+    {
+      "language": "意大利语",
+      "base": "voice_custom/char_140_whitew_ita"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1030,6 +1050,36 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "德克萨斯在哪？马上就是倒计时了，这种日子难道她没在罗德岛？呵呵，连这种节日都没看到她人，她那群朋友都在哪？我要去找她了，博士，一起去？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "Dov'è Texas? Il conto alla rovescia sta per iniziare. È a Rhodes Island? Sparisce sempre, anche oggi che è festa. E dove sono i suoi amici? Vado a cercarla, Doc vieni con me?"
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1058,11 +1108,36 @@
           "content": "Ciao,Doc."
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "给，威士忌，苦杏仁口味加冰块。一口喝完？呵呵，在叙拉古，这个口味叫“关灯”，一口喝完就意味着杀了旁边的人。德克萨斯？她才不会和你说这些，不过这个口味她原先爱喝。来吧，干杯——"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "意大利文",
+          "content": "Tieni, Whisky con ghiaccio aromatizzato alle mandorle. L'hai bevuto tutto d'un fiato? Ahah, a Siracusa lo chiamiamo \"luci spente\". Finito di bere, spegni qualsiasi luce della persona che ti sta accanto. Texas? Non lo direbbe mai, ma un tempo le piaceva questa roba. Dai, salute!"
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/75/立绘_拉普兰德_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fe/立绘_拉普兰德_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/11/立绘_拉普兰德_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

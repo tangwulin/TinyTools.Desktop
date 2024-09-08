@@ -1,12 +1,29 @@
 {
   "name": "淬羽赫默",
   "charaKey": "char_1031_slent2",
-  "voiceBase": {
-    "日语": "voice/char_1031_slent2",
-    "中文-普通话": "voice_cn/char_1031_slent2",
-    "韩语": "voice_kr/char_1031_slent2",
-    "英语": "voice_en/char_1031_slent2"
-  },
+  "images": [
+    "https://media.prts.wiki/b/b4/%E7%AB%8B%E7%BB%98_%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4f/%E7%AB%8B%E7%BB%98_%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/19/%E7%AB%8B%E7%BB%98_%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1031_slent2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1031_slent2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1031_slent2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1031_slent2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -44,7 +61,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, can you pass a message onto Ifrit for me? I'm returning to Trimounts—there's some urgent business that requires me in person—so she'll have to eat dinner with Saria tonight. I... I'll make it up to her next time, I promise."
+          "content": "Doctor, can you pass a message onto Ifrit for me? I'm returning to Trimounts—there's some urgent business that requires me in person. So she'll have to eat dinner with Saria tonight. I... I'll make it up to her next time, I promise."
         },
         {
           "language": "韩文",
@@ -66,7 +83,7 @@
         },
         {
           "language": "英文",
-          "content": "Do you need coffee? This is a special bean Joyce prepared for me, that keeps me up even in the daytime. After all, I can't coop up alone in the lab day and night like I once did. I have lots of meetings that I'd rather not take, and lots of reports to read that I'd also rather not."
+          "content": "Do you need coffee? This is a special bean Joyce prepared for me that keeps me up even in the daytime. After all, I can't coop up alone in the lab day and night like I once did. I have lots of meetings that I'd rather not take, and lots of reports to read that I'd also rather not."
         },
         {
           "language": "韩文",
@@ -110,7 +127,7 @@
         },
         {
           "language": "英文",
-          "content": "Guess what this stack of papers is? They're whistleblower reports. Some labs think they can protect themselves by airing other labs' dirty laundry to me. *sigh*... The more they do this, the more anger I feel welling up inside."
+          "content": "Guess what this stack of papers is? They're whistleblower reports. Some labs think they can protect themselves by airing other labs' dirty laundry to me. The more they do this, the more anger I feel welling up inside."
         },
         {
           "language": "韩文",
@@ -132,7 +149,7 @@
         },
         {
           "language": "英文",
-          "content": "Return those gifts to senders, and have them convey to whoever's behind them that I'll be making a personal visit, and they'd better be prepared... Sorry, Doctor, am I bothering you at work? I'll excuse myself for now. Yes, alright, I'll be back in Trimounts later today..."
+          "content": "Return those gifts to senders, and have them convey to whoever's behind them, that I'll be making a personal visit, and they'd better be prepared... Sorry, Doctor, am I bothering you at work? I'll excuse myself for now. Yes, alright, I'll be back in Trimounts later today..."
         },
         {
           "language": "韩文",
@@ -176,7 +193,7 @@
         },
         {
           "language": "英文",
-          "content": "Yes, Doctor? No, I'm no longer restricting Ifrit from seeing Saria. Honestly, on the contrary, I hope they see more of each other now. Ifrit is grown up, after all, and more importantly, her presence will remind Saria that not all prices are numbers, and reports do not remove scars."
+          "content": "Yes, Doctor? No, I'm no longer restricting Ifrit from seeing Saria. Honestly, on the contrary, I hope they see more of each other now. Ifrit is grown up, after all. And more importantly, her presence will remind Saria that,  not all prices are numbers, and reports do not remove scars."
         },
         {
           "language": "韩文",
@@ -198,7 +215,7 @@
         },
         {
           "language": "英文",
-          "content": "To be honest, being domineering is an awful sensation. When people come to my desk, the way they look at me makes me—uncomfortable, but that's something I'll gradually adapt to. *yawn*... I'm going to rest for a short while, Doctor. I'd like to hear your thoughts after I wake up."
+          "content": "To be honest, being domineering is an awful sensation. When people come to my desk, the way they look at me makes me uncomfortable. But that's something I'll gradually adapt to. I'm going to rest for a short while, Doctor. I'd like to hear your thoughts after I wake up."
         },
         {
           "language": "韩文",
@@ -264,7 +281,7 @@
         },
         {
           "language": "英文",
-          "content": "Some battles are unavoidable. I know."
+          "content": "Some battles are unavoidable, I know."
         },
         {
           "language": "韩文",
@@ -308,7 +325,7 @@
         },
         {
           "language": "英文",
-          "content": "I know what you want to ask. The path I'm about to walk is a thorny one. Am I really prepared for it...? I don't know whether future me will come to regret this, but at least right now, I will firmly walk on."
+          "content": "I know what you want to ask. The path I'm about to walk is a thorny one. Am I really prepared for it…? I don't know whether future me will come to regret this, but at least right now, I will firmly walk on."
         },
         {
           "language": "韩文",
@@ -757,6 +774,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我猜是伊芙利特派你来的，是吗？她为了让我放下工作可真是煞费苦心，净给我捣乱，还威胁要烧掉我的实验报告，你已经是她的第三个使者了......好吧，今天的工作就到此为止，走吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -777,10 +816,28 @@
           "content": "박사, 커피 한 잔 어때?"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "当我刚进入莱茵时，科研是我的一切。“炎魔事件”后，伊芙利特和她的矿石病是我的一切。而现在，我知道了越来越多的东西，我想做的事也越来越多。但是，博士，我们最终会在同一个终点重逢的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/b4/立绘_淬羽赫默_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4f/立绘_淬羽赫默_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

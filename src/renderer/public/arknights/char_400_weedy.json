@@ -1,11 +1,26 @@
 {
   "name": "温蒂",
   "charaKey": "char_400_weedy",
-  "voiceBase": {
-    "日语": "voice/char_400_weedy",
-    "中文-普通话": "voice_cn/char_400_weedy",
-    "韩语": "voice_kr/char_400_weedy"
-  },
+  "images": [
+    "https://media.prts.wiki/2/26/%E7%AB%8B%E7%BB%98_%E6%B8%A9%E8%92%82_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c2/%E7%AB%8B%E7%BB%98_%E6%B8%A9%E8%92%82_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/a/a5/%E7%AB%8B%E7%BB%98_%E6%B8%A9%E8%92%82_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/97/%E7%AB%8B%E7%BB%98_%E6%B8%A9%E8%92%82_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_400_weedy"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_400_weedy"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_400_weedy"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -129,7 +144,7 @@
         },
         {
           "language": "韩文",
-          "content": "이 축수포는 원래 공사용으로 만든 거라서, 고압 방수 말고도, 고온 스팀도 방사할 수 있어. 그러니까 함부로 만지지 마. 클로저의 지원 로봇이랑은 다르니까."
+          "content": "이 저수포는 원래 공사용으로 만든 거라서, 고압 방수 말고도, 고온 스팀도 방사할 수 있어. 그러니까 함부로 만지지 마. 클로저의 지원 로봇이랑은 다르니까."
         },
         {
           "language": "繁体中文",
@@ -892,6 +907,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，站住不许动，让我检查一下。嗯，衣摆没有沾灰，鞋带也是干净的，还不错嘛。等等，衬衫的领子怎么这么皱，难道你打算就这样出席晚会吗？快回去整理一下，我在这等你。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +957,32 @@
           "content": "博士，你好。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我作为一名体弱的科学家却想要踏上战场，但罗德岛竟然满足了我这个任性的要求。无论在研究室还是战场，我都总是在问自己：是不是能做到更多？在追求科学的价值上，我可是很贪心的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/2/26/立绘_温蒂_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/c/c2/立绘_温蒂_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/a/a5/立绘_温蒂_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

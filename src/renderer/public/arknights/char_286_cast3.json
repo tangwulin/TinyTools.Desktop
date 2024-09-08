@@ -1,11 +1,24 @@
 {
   "name": "Castle-3",
   "charaKey": "char_286_cast3",
-  "voiceBase": {
-    "日语": "voice/char_286_cast3",
-    "中文-普通话": "voice_cn/char_286_cast3",
-    "韩语": "voice_kr/char_286_cast3"
-  },
+  "images": [
+    "https://media.prts.wiki/9/95/%E7%AB%8B%E7%BB%98_Castle-3_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/e/e4/%E7%AB%8B%E7%BB%98_Castle-3_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_286_cast3"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_286_cast3"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_286_cast3"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -788,6 +801,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年......定时插件启用，节日模式更换中——哦吼！可露希尔商店新年大促绝赞进行中！部分商品九折以下！更推出工资预支福利，月利率仅......快乐......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -812,10 +851,32 @@
           "content": "今天天氣不錯啊，博士！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，我有个疑问，我和罗德岛这艘舰船的区别到底是什么呢？是功能吗，还是体积呢？如果将我的智能模块和罗德岛连接在一起，那我到底是“我”，还是罗德岛呢？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/95/立绘_Castle-3_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/e/e4/立绘_Castle-3_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

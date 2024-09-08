@@ -1,12 +1,33 @@
 {
   "name": "乌有",
   "charaKey": "char_455_nothin",
-  "voiceBase": {
-    "日语": "voice/char_455_nothin",
-    "中文-普通话": "voice_cn/char_455_nothin",
-    "中文-方言": "voice_custom/char_455_nothin_cn_topolect",
-    "韩语": "voice_kr/char_455_nothin"
-  },
+  "images": [
+    "https://media.prts.wiki/b/bb/%E7%AB%8B%E7%BB%98_%E4%B9%8C%E6%9C%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/68/%E7%AB%8B%E7%BB%98_%E4%B9%8C%E6%9C%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/2/2f/%E7%AB%8B%E7%BB%98_%E4%B9%8C%E6%9C%89_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_455_nothin"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_455_nothin"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_455_nothin_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_455_nothin"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_455_nothin"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -22,7 +43,7 @@
         },
         {
           "language": "英文",
-          "content": "Hm. The office of the vaunted Doctor, then? Marvelous, truly. Allow me a brief moment to consult my feng shui crash-course guidebook..."
+          "content": "Hm. So this is the place you work, Doctor? Marvelous, truly marvelous. Allow me, then, for a brief moment, so that I can consult my feng shui crash-course guidebook…"
         },
         {
           "language": "韩文",
@@ -56,7 +77,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm no mere braggart! Beyond a little kickboxing in a scuffle, I can rustle up meals, practice acupuncture, divine with feng shui, work masonry, tend to rice and angle fish alike—I'm a maestro of all kinds! Doctor, you need only give the order, and I'll see everything through!"
+          "content": "I might sound like a braggart, but beyond a little kickboxing in a scuffle, I can rustle up meals, practice acupuncture, and divine with feng shui. And the list goes on: working masonry, farming, fishing—I'm a maestro of all kinds! Just give the order, and I'll see everything through."
         },
         {
           "language": "韩文",
@@ -90,7 +111,7 @@
         },
         {
           "language": "英文",
-          "content": "D-Doctor, I was a little idle, see, and went to make myself useful at HR, and by carelessness glimpsed at a few operator files, and... er, well, could FEater be the very star of 'Fiends of the Gods Reincarnated Immortal' herself? Truly? Could I go get an autograph?"
+          "content": "D-Doctor, I was a little idle, and went to make myself useful at HR, and by carelessness glimpsed at a few operator files, and by chance… Er, by no means do I intend to pry into a fellow operator's privacy, Doctor, but could that FEater be the very star of 'Fiends of the Gods Reincarnated Immortal' herself? Truly? Could I go get an autograph?"
         },
         {
           "language": "韩文",
@@ -124,7 +145,7 @@
         },
         {
           "language": "英文",
-          "content": "Who was my master? Hmm, a question as complex as a showdown of Yan cuisines. Normally I'd refrain from answering that, as slipping up would get me beaten sideways. That said... you need only know, Doctor, I'm the last descendant of the Lien line. Ah, but my family name's not Lien. I'm a Ch'u."
+          "content": "Who was my master? Hmm, a question as complex as a showdown of Yanese cuisines. Normally I'd refrain from answering that, as slipping up would get me beaten sideways. That said... you need only know, Doctor, I'm the last descendant of the Lien line. Ah, but my family name's not Lien. It's Ch'u."
         },
         {
           "language": "韩文",
@@ -158,7 +179,7 @@
         },
         {
           "language": "英文",
-          "content": "M-Miss Dusk really did... come to Rhodes Island with us, then? My, um... what was it now? My recollection's quite fuzzy now, yet I have the vague impression that within her painted dreams, I had a peek into my own miserable future. Ah, let's never we mind. Dear, oh, dear. You be quite careful too, Doctor."
+          "content": "Heavens be praised... Miss Dusk really did come to Rhodes Island with us, then? Truth be told, my recollection's quite fuzzy now, yet I have the vague impression that within her painted dreams, I had a peek into my own miserable future... Ah, look at me, carried away by my emotions again. I say it's high time we set aside the nonsense and look forward. Now, You be careful too, Doctor."
         },
         {
           "language": "韩文",
@@ -260,7 +281,7 @@
         },
         {
           "language": "英文",
-          "content": "Say, Doctor, are people able to brush the past away as they live? Certainly not, hm? If the bonds you once left behind still hold fast, what ought you do? You've no idea either? Well, then. It seems we're companions in our misery. Here, what say we crack some sunflower seeds?"
+          "content": "Say, Doctor, are people able to leave their past behind like water under the bridge? Certainly not, right? But if the bonds you once left behind still hold fast, what ought you do? You've no idea either? Well, then. It seems we're companions in our misery. Here, what say we crack some sunflower seeds?"
         },
         {
           "language": "韩文",
@@ -294,7 +315,7 @@
         },
         {
           "language": "英文",
-          "content": "Countless, they were, the ancient parasol trees about Kou-wu City. Oh, just reminiscing all of a sudden. I remember the leaves scattered across the ground come fall, when my parents would visit me from the country. Only then would my strict master speak nothing but good, and her other disciples, my brothers and sisters, wouldn't bully me. No, well, just reminiscing."
+          "content": "Countless, they were, the ancient parasol trees about Kou-wu City. Oh, just reminiscing all of a sudden. I remember the leaves scattered across the ground come fall, when my parents would visit me from the country. Only then would my strict master speak nothing but good, and I would be spared of my seniors' bully for a moment. No, no, just reminiscing."
         },
         {
           "language": "韩文",
@@ -362,7 +383,7 @@
         },
         {
           "language": "英文",
-          "content": "My codename? 'Mr. Nothing.' The latter man of Tzu-hsu and Wu-yu; Nonexistent and Nothing indeed. And you, fine soul, are the Doctor? That is to say, my new boss? Well, then, would you like me to massage your back? Loosen up your legs?"
+          "content": "My codename? It's 'nothing' worth mentioning here. And you, fine soul, are the Doctor? That is to say, my new boss? Ah. Pleasure to meet you. How can I be of service? Perhaps you would like a back massage? Or some chiropractic maybe?"
         },
         {
           "language": "韩文",
@@ -396,7 +417,7 @@
         },
         {
           "language": "英文",
-          "content": "Ho, what a hundredfold bouquet of martial prowess. You've got my eyes wide open now!"
+          "content": "Ho. what a hundredfold bouquet of martial prowess. You've got my eyes wide open now!"
         },
         {
           "language": "韩文",
@@ -430,7 +451,7 @@
         },
         {
           "language": "英文",
-          "content": "A promotion and a raise?! Ohh, ohh, I thank you, Doctor, in all respects possible! Be it for you, I would brave the greatest fires and waters, I would not hesitate to... well, that said, how much might my wages be growing by?"
+          "content": "A promotion and a raise?! Ohh, ohh, I thank you, Doctor, in all respects possible! Be it for you, I would brave hell and high waters... That said, how much might my wages be growing by?"
         },
         {
           "language": "韩文",
@@ -464,7 +485,7 @@
         },
         {
           "language": "英文",
-          "content": "Sooner or later, I plan to return to Kou-wu City and set every debt in my books straight. My only worry is I may invite trouble and sweep others up in its path. You know this, dear Doctor, and yet you still wish to bestow such partiality on me...? Your kindness toward me is a grace, and I will never, in eternity, forget it."
+          "content": "Sooner or later, I plan to return to Kou-wu City and set that last unsettled debt in my book straight. My only worry is I may invite trouble and sweep others up in its path. You know this, dear Doctor, and yet you still wish to bestow such partiality on me...? Your kindness toward me is a grace, and I will never, in eternity, forget it."
         },
         {
           "language": "韩文",
@@ -532,7 +553,7 @@
         },
         {
           "language": "英文",
-          "content": "Me, the captain? Hold one moment, just let me find my secret tomes for the art of war, now..."
+          "content": "Me, the captain? Hold one moment, just let me find my secret tomes for the art of war…"
         },
         {
           "language": "韩文",
@@ -702,7 +723,7 @@
         },
         {
           "language": "英文",
-          "content": "Very well! Leave this to me."
+          "content": "Alright! Leave this to me!"
         },
         {
           "language": "韩文",
@@ -736,7 +757,7 @@
         },
         {
           "language": "英文",
-          "content": "The Doctor, you are! What a sagacious decision!"
+          "content": "<i>The</i> Doctor, you are! What a sagacious decision!"
         },
         {
           "language": "韩文",
@@ -770,7 +791,7 @@
         },
         {
           "language": "英文",
-          "content": "Compose yourself. Collect yourself!"
+          "content": "Mind at ease, thoughts at peace."
         },
         {
           "language": "韩文",
@@ -872,7 +893,7 @@
         },
         {
           "language": "英文",
-          "content": "Let's have you make a move first, now."
+          "content": "Now, if I may have the honor to see your move first…"
         },
         {
           "language": "韩文",
@@ -906,7 +927,7 @@
         },
         {
           "language": "英文",
-          "content": "More hands bring more fuel for the fire. When we concert our efforts together, yes, we truly can burn the sky a red to rival sunsets. Not bad, not bad."
+          "content": "More hands bring more fuel for the fire. When we concert our efforts together, yes, we truly can burn the sky a red to rival sunsets. Now that's what I call a feat!"
         },
         {
           "language": "韩文",
@@ -940,7 +961,7 @@
         },
         {
           "language": "英文",
-          "content": "As they say, those of just ways have much support, and those of lost ways find little. Seen as such, our victory is assured."
+          "content": "As they say, those of just ways have much support, and those of lost ways find little. Seen as such, it was a victory preordained."
         },
         {
           "language": "韩文",
@@ -974,7 +995,7 @@
         },
         {
           "language": "英文",
-          "content": "Pursue not the cornered. Suppose anything troublesome should happen, we'll just bear it together."
+          "content": "Pursue not the desperate. Suppose anything troublesome should happen, we'll just bear it together."
         },
         {
           "language": "韩文",
@@ -1110,7 +1131,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, what say I teach you a thing or two about some moves?"
+          "content": "Doctor, what say I teach you a move or two?"
         },
         {
           "language": "韩文",
@@ -1165,6 +1186,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "各位，走过路过......哎，是博士啊。今天不是放假嘛，休息区人多，我就想在这儿低价发几本生活小秘笈，给各位添个彩头。您最近睡得好吗？我正好有一本《冬季助眠呼吸吐纳法》，看看？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "各位，走过路过......哎，是博士啊。今天不是放假嘛，休息区人多，我就想在这块儿低价发几本生活小秘笈，给各位添个彩头。你最近睡得啊好啊？我正好有一本《冬季助眠呼吸吐纳法》，啊要看看啊？"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1197,11 +1252,40 @@
           "content": "這不博士嘛，巧啦！"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "师父当年说我适合习武，但从没教过这功夫有何用处，只教我们要对得起良心。啊，我只是在想，要是没来罗德岛，我这会儿大概在龙门开健身馆吧？且不论赚钱的事，这把扇子恐怕就不会再用了吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "师父当年讲我适合习武，但从没教过这功夫有什么用处，只教我们要对得起良心。啊，我只是在想，要是没的来罗德岛，我这刻儿大概在龙门开健身馆吧？且不论赚钱的事，这把扇子恐怕就不会再用了吧。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bb/立绘_乌有_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/68/立绘_乌有_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/2/2f/立绘_乌有_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

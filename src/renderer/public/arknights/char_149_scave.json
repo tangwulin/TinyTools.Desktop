@@ -1,12 +1,29 @@
 {
   "name": "清道夫",
   "charaKey": "char_149_scave",
-  "voiceBase": {
-    "日语": "voice/char_149_scave",
-    "中文-普通话": "voice_cn/char_149_scave",
-    "韩语": "voice_kr/char_149_scave",
-    "英语": "voice_en/char_149_scave"
-  },
+  "images": [
+    "https://media.prts.wiki/3/3a/%E7%AB%8B%E7%BB%98_%E6%B8%85%E9%81%93%E5%A4%AB_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d8/%E7%AB%8B%E7%BB%98_%E6%B8%85%E9%81%93%E5%A4%AB_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/46/%E7%AB%8B%E7%BB%98_%E6%B8%85%E9%81%93%E5%A4%AB_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_149_scave"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_149_scave"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_149_scave"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_149_scave"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年？和平时没什么区别的一天罢了。如果需要我提醒你的话，人多的地方麻烦也多，最好别玩得太开心。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "有任務？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "嘁，我只是在等你们散场，然后我来拿点奶酪，怎么了？我从来只负责打扫那些最脏的地方，难道你们的表彰名单里会有我的名字吗？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/3a/立绘_清道夫_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d8/立绘_清道夫_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/46/立绘_清道夫_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

@@ -1,13 +1,33 @@
 {
   "name": "年",
   "charaKey": "char_2014_nian",
-  "voiceBase": {
-    "日语": "voice/char_2014_nian",
-    "中文-普通话": "voice_cn/char_2014_nian",
-    "中文-方言": "voice_custom/char_2014_nian_cn_topolect",
-    "韩语": "voice_kr/char_2014_nian",
-    "英语": "voice_en/char_2014_nian"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c9/%E7%AB%8B%E7%BB%98_%E5%B9%B4_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/15/%E7%AB%8B%E7%BB%98_%E5%B9%B4_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/6f/%E7%AB%8B%E7%BB%98_%E5%B9%B4_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_2014_nian"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_2014_nian"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_2014_nian_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_2014_nian"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_2014_nian"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1166,6 +1186,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "来了来了来了！可算到了这一天，该推出我的全新巨制了！对，就是之前那个《无极玄战·巨怪末日围攻》，那可是我呕心沥血搞出来的特效大片。你不看？今天不是大家都放假吗，干嘛不来？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "来了来了来了！总算到这一天了，该推出我的全新巨制了！对头，就是原先那个《无极玄战·巨怪末日围攻》，那可是我呕心沥血搞出来的特效大片。你不看？今天不是大家都放假的嘛，咋不来喃？"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1198,11 +1252,40 @@
           "content": "博士，你吃了沒得？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哎，菜虽然不好吃，但也还算尽兴......是啊，他们像是都尽了兴，可我不行。光是看着罗德岛这些背着刀枪，和我吃辣打麻将的人，我就觉得可惜。站在那里瞪着我干嘛？陪我出去走走吧。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "哎，菜虽然不得行，但也还算尽兴......是哇，他们像是都尽了兴，但是我不安逸。光是看到罗德岛这些背起刀枪，跟我吃海椒打麻将的人，我就觉得可惜。站到那儿瞅我做啥子？陪我出去逛哈嘛。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c9/立绘_年_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/15/立绘_年_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/6f/立绘_年_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

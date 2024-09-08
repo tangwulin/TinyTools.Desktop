@@ -1,12 +1,28 @@
 {
   "name": "米格鲁",
   "charaKey": "char_122_beagle",
-  "voiceBase": {
-    "日语": "voice/char_122_beagle",
-    "中文-普通话": "voice_cn/char_122_beagle",
-    "韩语": "voice_kr/char_122_beagle",
-    "英语": "voice_en/char_122_beagle"
-  },
+  "images": [
+    "https://media.prts.wiki/4/44/%E7%AB%8B%E7%BB%98_%E7%B1%B3%E6%A0%BC%E9%B2%81_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d3/%E7%AB%8B%E7%BB%98_%E7%B1%B3%E6%A0%BC%E9%B2%81_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_122_beagle"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_122_beagle"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_122_beagle"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_122_beagle"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -789,6 +805,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐！博士，今天是假期对吧！那应该，是可以不用训练的吧......可是我刚刚看到，杜宾教官还有好几个前辈都在训练场，我是不是也应该去呢......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -813,10 +855,32 @@
           "content": "你好呀，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "比起矿石病，感觉还是和大家分开更可怕。现在能和大家一起来到罗德岛，又认识了不少新的朋友，我已经很开心啦！只要我继续努力变强，就一定可以保护好大家！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/44/立绘_米格鲁_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d3/立绘_米格鲁_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

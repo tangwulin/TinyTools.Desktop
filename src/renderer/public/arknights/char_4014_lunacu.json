@@ -1,12 +1,29 @@
 {
   "name": "子月",
   "charaKey": "char_4014_lunacu",
-  "voiceBase": {
-    "日语": "voice/char_4014_lunacu",
-    "中文-普通话": "voice_cn/char_4014_lunacu",
-    "韩语": "voice_kr/char_4014_lunacu",
-    "英语": "voice_en/char_4014_lunacu"
-  },
+  "images": [
+    "https://media.prts.wiki/3/3f/%E7%AB%8B%E7%BB%98_%E5%AD%90%E6%9C%88_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/95/%E7%AB%8B%E7%BB%98_%E5%AD%90%E6%9C%88_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/99/%E7%AB%8B%E7%BB%98_%E5%AD%90%E6%9C%88_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4014_lunacu"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4014_lunacu"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4014_lunacu"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4014_lunacu"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "嗯？今天很特殊吗？新的一年？不懂。在我看来，每天都很新，每个吃饱的日子都值得庆祝。不过......你想尝尝我烤的肉吗？很好吃的。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "終於來了？下次再敢讓我在這個悶死人的小房間裡等你，別怪我不客氣。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "说实话，我还是搞不懂你们要干什么。不过，争取让所有人都能不会因为石头而生病，都能放心地大吃大喝，可能也不错。在睡觉时要警惕四周的一切还是很累的，我在这里......能睡得很安稳。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/3/3f/立绘_子月_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/95/立绘_子月_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/99/立绘_子月_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

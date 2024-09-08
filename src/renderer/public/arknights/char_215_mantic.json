@@ -1,12 +1,30 @@
 {
   "name": "狮蝎",
   "charaKey": "char_215_mantic",
-  "voiceBase": {
-    "日语": "voice/char_215_mantic",
-    "中文-普通话": "voice_cn/char_215_mantic",
-    "韩语": "voice_kr/char_215_mantic",
-    "英语": "voice_en/char_215_mantic"
-  },
+  "images": [
+    "https://media.prts.wiki/9/98/%E7%AB%8B%E7%BB%98_%E7%8B%AE%E8%9D%8E_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/61/%E7%AB%8B%E7%BB%98_%E7%8B%AE%E8%9D%8E_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/16/%E7%AB%8B%E7%BB%98_%E7%8B%AE%E8%9D%8E_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4d/%E7%AB%8B%E7%BB%98_%E7%8B%AE%E8%9D%8E_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_215_mantic"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_215_mantic"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_215_mantic"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_215_mantic"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -100,7 +118,7 @@
         },
         {
           "language": "英文",
-          "content": "I… I've never had any friends... S-surely no one wants a friend that… they can't even notice… right?"
+          "content": "I… I've never had any friends... S-surely no one wants a friend that…  they can't even notice… right?"
         },
         {
           "language": "韩文",
@@ -893,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年快乐......过去一年，注意到我的人，变多了......我有点害怕，但是，温柔的人，也很多......所以，我会努力去适应的......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,12 +961,32 @@
           "content": "博士......你好......"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "失去同伴的感觉，我再也不想体会了......我一定会拼上性命，来保护大家。哪怕是在大家看不到的地方......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/9/98/立绘_狮蝎_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/61/立绘_狮蝎_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/16/立绘_狮蝎_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4d/立绘_狮蝎_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

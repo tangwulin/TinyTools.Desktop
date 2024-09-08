@@ -1,12 +1,28 @@
 {
   "name": "摩根",
   "charaKey": "char_154_morgan",
-  "voiceBase": {
-    "日语": "voice/char_154_morgan",
-    "中文-普通话": "voice_cn/char_154_morgan",
-    "韩语": "voice_kr/char_154_morgan",
-    "英语": "voice_en/char_154_morgan"
-  },
+  "images": [
+    "https://media.prts.wiki/5/59/%E7%AB%8B%E7%BB%98_%E6%91%A9%E6%A0%B9_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d1/%E7%AB%8B%E7%BB%98_%E6%91%A9%E6%A0%B9_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_154_morgan"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_154_morgan"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_154_morgan"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_154_morgan"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -44,7 +60,7 @@
         },
         {
           "language": "英文",
-          "content": "Eugh, this doesn't taste right. Is this can gone off...? Ay, get Hannah to try this for me, will you? And if she scoffs the whole thing in one go... well, waste not want not, yeah?"
+          "content": "Eugh, this doesn't taste right. Is this can gone off...? Ay, get Hannah to try this for me, will you? Oh, and if she scoffs the whole thing in one go... well, waste not want not, yeah?"
         },
         {
           "language": "韩文",
@@ -66,7 +82,7 @@
         },
         {
           "language": "英文",
-          "content": "Why do I fight with such a naff-off big machete? Because I'm trying to be efficient here! If I scare some enemies off, that's enemies I don't need to do in. No, obviously, I'm handy with my fists too. You spend as long as us on the streets, you learn how to scrap from every angle."
+          "content": "Why do I fight with such a naff-off big machete? Because I'm trying to be efficient here! If I scare some enemies off, that's enemies I don't need to do in. I mean obviously, I'm handy with me fists too. 'Cuz you spend as long as us on the streets, you learn how to scrap from every angle."
         },
         {
           "language": "韩文",
@@ -132,7 +148,7 @@
         },
         {
           "language": "英文",
-          "content": "I guess my old Morgan's Memoirs is gone. Probably lost it in the Glasgow Gang base, if you'd even call it a base... and if the Glasgow Gang still exists. War's not some heroic fantasy. There's moments of deathly honest grief... just, instants you can't describe."
+          "content": "I guess me old Morgan's Memoirs is gone. Probably lost it in the Glasgow Gang base, if you'd even call it a base... and if the Glasgow Gang still exists. War's not some heroic fantasy. There's moments of deathly honest grief... just, instants you can't describe."
         },
         {
           "language": "韩文",
@@ -154,7 +170,7 @@
         },
         {
           "language": "英文",
-          "content": "Got a good head on my shoulders, don't I? Not like I'm book-smart or anything here—the most I'm good at is scheming a thing or two in the street. Be honest, sometimes, there's this thought that plagues me, how maybe I'm not helping Vina at all. But that's rubbish, though... right? Yeah, alright, love! I'm not quitting any time soon!"
+          "content": "I got a good head on my shoulders, don't I? Not like I'm book-smart or anything here—the most I'm good at is scheming a thing or two in the street. Be honest, sometimes, there's this thought that plagues me, how maybe I'm no help to Vina at all... What, that's rubbish, you think...? Yeah, alright, fair dos, love! I can't be quitting now!"
         },
         {
           "language": "韩文",
@@ -198,7 +214,7 @@
         },
         {
           "language": "英文",
-          "content": "Once we succeed with all this, I... hahah, this is going to sound terrible, but first thing I'll wanna do is get smashed with the girls again... Doctor, promise you'll come crawling with us. We'll have a right hoot... forget all our troubles. Sound good, love?"
+          "content": "Once we succeed with all this, I... hahah, the ffffirst thing I wanna do! Is go out and get smashed with the girls again... Doctor, promise me, you'll come crawling with us. We'll have a right hoot... forget all our troubles. Sound good, love?"
         },
         {
           "language": "韩文",
@@ -220,7 +236,7 @@
         },
         {
           "language": "英文",
-          "content": "...Ay-yi-yi, someone's wide open. I could do some face painting on you, love?"
+          "content": "Ay-yi-yi, someone's wide open. I could do some face painting on you, love?"
         },
         {
           "language": "韩文",
@@ -330,7 +346,7 @@
         },
         {
           "language": "英文",
-          "content": "Yeah, I'm coming. Am I on time?"
+          "content": "Coming, love, coming. Not too late, am I?"
         },
         {
           "language": "韩文",
@@ -462,7 +478,7 @@
         },
         {
           "language": "英文",
-          "content": "Yeah, there's method to a brawl."
+          "content": "Watch. There's method to a brawl."
         },
         {
           "language": "韩文",
@@ -484,7 +500,7 @@
         },
         {
           "language": "英文",
-          "content": "Can't just count on flesh alone."
+          "content": "Can't just be <i>all</i> brawn."
         },
         {
           "language": "韩文",
@@ -506,7 +522,7 @@
         },
         {
           "language": "英文",
-          "content": "Here, watch your left."
+          "content": "Ay-up! Watch your left."
         },
         {
           "language": "韩文",
@@ -550,7 +566,7 @@
         },
         {
           "language": "英文",
-          "content": "Who's the next sap getting duffed up?"
+          "content": "Lessee, who's the next sap getting duffed up?"
         },
         {
           "language": "韩文",
@@ -757,6 +773,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新的一年，希望维娜开开心心，汉娜少惹麻烦，达格达更加自在。对了，博士，我也希望你......嗯，少点工作，多一些自己的时间。这样的话，我就能带你在伦蒂尼姆好好逛逛啦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -770,17 +808,35 @@
         },
         {
           "language": "英文",
-          "content": "Fancy that, Doctor, bumping into you again."
+          "content": "Alright, Doctor! Fancy seeing you about."
         },
         {
           "language": "韩文",
           "content": "박사, 또 만나다니, 이런 우연이 다 있네!"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "诺伯特区有很多感染者，他们和失业的水手、老工人，还有我们这种小混混一样，都是伦蒂尼姆不想要的人。而在这里......大家都有平等的工作机会。唉，为什么外面不能和罗德岛一样呢？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/59/立绘_摩根_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d1/立绘_摩根_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

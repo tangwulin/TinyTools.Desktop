@@ -1,12 +1,29 @@
 {
   "name": "安赛尔",
   "charaKey": "char_212_ansel",
-  "voiceBase": {
-    "日语": "voice/char_212_ansel",
-    "中文-普通话": "voice_cn/char_212_ansel",
-    "韩语": "voice_kr/char_212_ansel",
-    "英语": "voice_en/char_212_ansel"
-  },
+  "images": [
+    "https://media.prts.wiki/e/e4/%E7%AB%8B%E7%BB%98_%E5%AE%89%E8%B5%9B%E5%B0%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8a/%E7%AB%8B%E7%BB%98_%E5%AE%89%E8%B5%9B%E5%B0%94_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/b1/%E7%AB%8B%E7%BB%98_%E5%AE%89%E8%B5%9B%E5%B0%94_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_212_ansel"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_212_ansel"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_212_ansel"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_212_ansel"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -66,7 +83,7 @@
       "text": [
         {
           "language": "中文",
-          "content": "卡缇！下次别在用那种攻击动作了，都说了这样会让你自己受伤的！"
+          "content": "卡缇！下次别再用那种攻击动作了，都说了这样会让你自己受伤的！"
         },
         {
           "language": "日文",
@@ -789,6 +806,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "新年的时候，医疗部反而更加忙碌呢。有人放烟花时受了伤，有人是吃坏了肚子......想要享受节日的心情可以理解，但也一定要注意安全啊。博士，新年快乐。祝您今年不用到医疗部看病哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -813,11 +856,32 @@
           "content": "您好，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "虽然最初来到罗德岛，是因为只有这里通过了我的简历，现在看来更像是一种缘分呢。A4小队的大家都在成长，我也不能落下。博士，体检报告显示，过去一年里，我的身体健康了很多哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/e/e4/立绘_安赛尔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8a/立绘_安赛尔_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/b1/立绘_安赛尔_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

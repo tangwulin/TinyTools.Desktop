@@ -1,12 +1,29 @@
 {
   "name": "海沫",
   "charaKey": "char_4066_highmo",
-  "voiceBase": {
-    "日语": "voice/char_4066_highmo",
-    "中文-普通话": "voice_cn/char_4066_highmo",
-    "韩语": "voice_kr/char_4066_highmo",
-    "英语": "voice_en/char_4066_highmo"
-  },
+  "images": [
+    "https://media.prts.wiki/d/df/%E7%AB%8B%E7%BB%98_%E6%B5%B7%E6%B2%AB_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/bc/%E7%AB%8B%E7%BB%98_%E6%B5%B7%E6%B2%AB_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/9c/%E7%AB%8B%E7%BB%98_%E6%B5%B7%E6%B2%AB_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_4066_highmo"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_4066_highmo"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_4066_highmo"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_4066_highmo"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我对新年并没有什么期许，也不想做出一份期许。我只是想四处走走，和回忆中的去年对照，看看是否有了什么变化。如果你不觉得无聊，我不介意你的陪同。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "我們還有一些時間，在潮水淹沒腳下的土地之前。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "罗德岛意图解决矿石病问题，是出于作为医者的天职，还是核心成员作为感染者的自救？如今星空之下另有威胁所有人的顽疾，罗德岛又会怎么做呢。你已经有答案了吧，博士？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/d/df/立绘_海沫_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bc/立绘_海沫_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/9c/立绘_海沫_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

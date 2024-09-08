@@ -1,11 +1,30 @@
 {
   "name": "空",
   "charaKey": "char_101_sora",
-  "voiceBase": {
-    "日语": "voice/char_101_sora",
-    "中文-普通话": "voice_cn/char_101_sora",
-    "韩语": "voice_kr/char_101_sora"
-  },
+  "images": [
+    "https://media.prts.wiki/f/f0/%E7%AB%8B%E7%BB%98_%E7%A9%BA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/46/%E7%AB%8B%E7%BB%98_%E7%A9%BA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/1b/%E7%AB%8B%E7%BB%98_%E7%A9%BA_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8b/%E7%AB%8B%E7%BB%98_%E7%A9%BA_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_101_sora"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_101_sora"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_101_sora"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_101_sora"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -21,7 +40,7 @@
         },
         {
           "language": "英文",
-          "content": "Heya, Doctor! So, what are you up to? Looks like fun!"
+          "content": "Yahoo, Doctor! Whacha doing? Looks like fun!"
         },
         {
           "language": "韩文",
@@ -47,11 +66,11 @@
         },
         {
           "language": "英文",
-          "content": "Are there any karaoke venues at Rhodes Island? It would be great if we had a place to sing the night away when we don't have battles to fight!"
+          "content": "Does Rhodes Island have a karaoke place? It'd be great if we had a place to sing the night away, especially when we don't have battles to fight!"
         },
         {
           "language": "韩文",
-          "content": "로도스 아일랜드엔 노래 부를 만한 데 혹시 없어? 아니 별 건 아니고~ 싸울 일 없는 날엔 사람들이랑 같이 노래방 같은데 갈까 해서!"
+          "content": "로도스 아일랜드엔 노래 부를 만한 데 혹시 없을까? 아니 별건 아니고~ 작전 없는 날엔 사람들이랑 같이 노래 부르면서 쉴 수 있는 곳이 있나 해서!"
         },
         {
           "language": "繁体中文",
@@ -73,7 +92,7 @@
         },
         {
           "language": "英文",
-          "content": "My duty as an idol was to make my fans happy with my songs and performances. But I'm an Operator now... what should my duty be, then?"
+          "content": "My job as an idol is to make the fans happy with my songs and performances. But what should I do as an operator of Rhodes Island...&nbsp;?"
         },
         {
           "language": "韩文",
@@ -99,7 +118,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor, anything I can help with? Don't you underestimate me—I'm considered quite physically capable at Penguin Logistics!"
+          "content": "Hi, hi, Doctor! Anything I can help with? Don't judge me by my look— I actually do some heavy lifting at Penguin Logistics."
         },
         {
           "language": "韩文",
@@ -125,7 +144,7 @@
         },
         {
           "language": "英文",
-          "content": "Yup, my special skill is singing! Let's see, I can do a cappella, lead vocals, choir singing, pop music, and I can even rap, yo! Though I guess that's not a very useful skill for an Operator... If only I had a more practical skill..."
+          "content": "Yup, my special skill is singing! I can do a cappella, lead vocals, choir singing, pop music, and I can even rap, yo yo! But, I guess that's not a very useful skill for an Operator. If only I had a more practical skill…"
         },
         {
           "language": "韩文",
@@ -151,11 +170,11 @@
         },
         {
           "language": "英文",
-          "content": "Ears...? Uh, I can't tell you... even if you ask Texas, she's not gonna tell you! I'll explain if I get the chance someday..."
+          "content": "M-My ears...? Uh, I can't tell you! A-And even if you ask Texas, she's not going to tell you either! Ehhh—Sorry, I'll explain if I get the chance someday…"
         },
         {
           "language": "韩文",
-          "content": "귀, 귀가 왜 그러냐고?! 뭐, 뭐라고 대답해야 하나… 아, 텍사스 씨한테는 물어보면 안 돼! 나중에 가르쳐 줄 테니까…!"
+          "content": "귀, 귀가 왜 그러냐고?! 뭐, 뭐라고 대답해야 하나…… 아앗, 텍사스 씨한테 물어본다고 해도 대답 안 해줄 거야! 나중에 내가 다 설명해 줄게……!"
         },
         {
           "language": "繁体中文",
@@ -177,7 +196,7 @@
         },
         {
           "language": "英文",
-          "content": "You know, Texas actually saved my life and taught me so much I never knew. Which is why... I want to stay by her side whenever I have the chance... I'm uhh, trying to show my gratitude for her, that's all!"
+          "content": "You know, Texas actually saved my life. She also taught me so much I never knew. Which is why I... want to be there with her whenever I can... I, uhh, I'm just trying to show my gratitude for her, that's all!"
         },
         {
           "language": "韩文",
@@ -203,11 +222,11 @@
         },
         {
           "language": "英文",
-          "content": "You think I look upset? Um... it's because... Exusiai went on a mission with Texas today, right? If only I were as skilled as Exusiai, I could..."
+          "content": "You think I look upset? Um... it's because... Exusiai went on a mission with Texas again, right? If only I were as good as Exusiai…"
         },
         {
           "language": "韩文",
-          "content": "안 좋은 일이라도 있었냐고? 흥… 당연하지. 오늘도 엑시아만 텍사스 씨랑 같이 임무를 맡았잖아. 휴… 나도 엑시아처럼 강해지면 좋을 텐데…"
+          "content": "기분이 별로 안 좋아 보인다고? 음…… 오늘도 엑시아가 텍사스 씨랑 같이 임무를 맡았잖아. 에휴…… 나도 엑시아처럼 강하면 좋을 텐데……"
         },
         {
           "language": "繁体中文",
@@ -229,7 +248,7 @@
         },
         {
           "language": "英文",
-          "content": "Doctor! Could you teach me to use weapons? My songs have no practical use except for support and encouragement. If I could fight with weapons... Huh? You're not good at fighting either?!"
+          "content": "Doctor! Could you teach me to use a weapon? My songs have no practical use except for support and encouragement. If I could fight with a weapon... What? You're not good at fighting either?!"
         },
         {
           "language": "韩文",
@@ -255,7 +274,7 @@
         },
         {
           "language": "英文",
-          "content": "...Texas, are you listening to my songs?"
+          "content": "Texas... are you listening to my song?"
         },
         {
           "language": "韩文",
@@ -281,7 +300,7 @@
         },
         {
           "language": "英文",
-          "content": "Hiiii! I'm the loveable idol from Monster Siren Records: Sora! Oops, sorry, introducing myself like this at Rhodes Island must be kinda weird. Hmm..."
+          "content": "(｡･∀･)ﾉﾞHiiii! I'm the loveable idol from Monster Siren Records: Sora! Oops, sorry, introducing myself like this at Rhodes Island must be kinda weird. Aww…"
         },
         {
           "language": "韩文",
@@ -307,7 +326,7 @@
         },
         {
           "language": "英文",
-          "content": "Levely uppity!"
+          "content": "Leveling—up!"
         },
         {
           "language": "韩文",
@@ -333,7 +352,7 @@
         },
         {
           "language": "英文",
-          "content": "A promotion? You mean like debuting as a trainee idol?"
+          "content": "A promotion? Do we also have an idol ranking on Rhodes Island?"
         },
         {
           "language": "韩文",
@@ -359,7 +378,7 @@
         },
         {
           "language": "英文",
-          "content": "I feel as excited as I did during my first live performance! I'm just so happy that you trust me this much, Doctor! It's like all my hard work has paid off! ...Huh? My ears? What about them?"
+          "content": "I can feel the surge in my heart. It's like back to my first concert. I'm just delighted that you trust me so much, Doctor! All my hard work has paid off! Hmm? My ears? Wh-What about them?"
         },
         {
           "language": "韩文",
@@ -385,11 +404,11 @@
         },
         {
           "language": "英文",
-          "content": "As a member of the squad, I'll start by learning the very basics."
+          "content": "As a squad member, I'll try my best to learn from the basics!"
         },
         {
           "language": "韩文",
-          "content": "팀의 일원으로서, 임무도 열심히 공부해야지~!"
+          "content": "팀의 일원인만큼, 기초 지식부터 열심히 다져보는 거야!"
         },
         {
           "language": "繁体中文",
@@ -411,7 +430,7 @@
         },
         {
           "language": "英文",
-          "content": "The leader? You mean like being the lead singer?"
+          "content": "I'm the leader? Is that like standing at the center of the idol group?"
         },
         {
           "language": "韩文",
@@ -437,7 +456,7 @@
         },
         {
           "language": "英文",
-          "content": "Singing on the battlefield... now that's something new!"
+          "content": "Singing on the battlefield... Now that's a fresh experience!"
         },
         {
           "language": "韩文",
@@ -463,7 +482,7 @@
         },
         {
           "language": "英文",
-          "content": "If only my songs could put an end to all this fighting..."
+          "content": "If only my music could put an end to all this fighting..."
         },
         {
           "language": "韩文",
@@ -515,7 +534,7 @@
         },
         {
           "language": "英文",
-          "content": "I can handle this!"
+          "content": "Yes, I can handle this!"
         },
         {
           "language": "韩文",
@@ -541,7 +560,7 @@
         },
         {
           "language": "英文",
-          "content": "The concert's starting!"
+          "content": "It's show time!"
         },
         {
           "language": "韩文",
@@ -567,7 +586,7 @@
         },
         {
           "language": "英文",
-          "content": "All right, let's make some noise!"
+          "content": "Alright, let's make some noise!"
         },
         {
           "language": "韩文",
@@ -619,7 +638,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm cheering for you!"
+          "content": "You have my full support!"
         },
         {
           "language": "韩文",
@@ -645,7 +664,7 @@
         },
         {
           "language": "英文",
-          "content": "Counterattack!"
+          "content": "Now we change the game!"
         },
         {
           "language": "韩文",
@@ -671,7 +690,7 @@
         },
         {
           "language": "英文",
-          "content": "Keep it up!"
+          "content": "Don't lose heart, we can win this one!"
         },
         {
           "language": "韩文",
@@ -723,7 +742,7 @@
         },
         {
           "language": "英文",
-          "content": "Awesome! A smashing victory! Texas, were you watching me?"
+          "content": "Awesome! A smashing victory! Texas, did you see how I sparkled on the stage?"
         },
         {
           "language": "韩文",
@@ -749,7 +768,7 @@
         },
         {
           "language": "英文",
-          "content": "Good job, everyone!"
+          "content": "We did a good job, team. Thank you for your hard work!"
         },
         {
           "language": "韩文",
@@ -775,7 +794,7 @@
         },
         {
           "language": "英文",
-          "content": "I'm sorry... my performance wasn't good enough..."
+          "content": "I'm sorry... I wasn't good enough to be your help..."
         },
         {
           "language": "韩文",
@@ -892,6 +911,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今年似乎不能举办个人演唱会了呢，不过，想要唱歌的心情是不会改变的。新年快乐！今年我也要为各位粉丝带来更多的欢笑——嗯，不对不对，是为罗德岛的各位带来更多的歌曲哦！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,12 +961,32 @@
           "content": "今天也要開開心心哦，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "偶像和信使，都是传递爱与希望的工作。看到粉丝和客人的笑容，我也可以收获一份幸福。跟着罗德岛各位一起，一定可以把幸福的心情传递到更远的地方吧。为了这个小小的理想，继续努力吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/f/f0/立绘_空_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/46/立绘_空_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/1b/立绘_空_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8b/立绘_空_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

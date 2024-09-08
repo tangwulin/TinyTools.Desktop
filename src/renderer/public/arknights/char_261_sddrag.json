@@ -1,12 +1,29 @@
 {
   "name": "苇草",
   "charaKey": "char_261_sddrag",
-  "voiceBase": {
-    "日语": "voice/char_261_sddrag",
-    "中文-普通话": "voice_cn/char_261_sddrag",
-    "韩语": "voice_kr/char_261_sddrag",
-    "英语": "voice_en/char_261_sddrag"
-  },
+  "images": [
+    "https://media.prts.wiki/0/0a/%E7%AB%8B%E7%BB%98_%E8%8B%87%E8%8D%89_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/59/%E7%AB%8B%E7%BB%98_%E8%8B%87%E8%8D%89_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8a/%E7%AB%8B%E7%BB%98_%E8%8B%87%E8%8D%89_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_261_sddrag"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_261_sddrag"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_261_sddrag"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_261_sddrag"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "啊，被你找到了。为什么没参加聚会？请你......坐在我身边吧。现在的我，看着别人在节日里绽放欢笑，其实，也会觉得心痛的。这场雪，大概不会停下来吧......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士......？不，沒什麼。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "感谢的话，我已经说过了。我只希望，最终危险来临时，罗德岛不会被卷入其中，或者至少，能由我来保护你......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/0/0a/立绘_苇草_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/59/立绘_苇草_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8a/立绘_苇草_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

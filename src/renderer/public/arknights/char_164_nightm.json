@@ -1,12 +1,29 @@
 {
   "name": "夜魔",
   "charaKey": "char_164_nightm",
-  "voiceBase": {
-    "日语": "voice/char_164_nightm",
-    "中文-普通话": "voice_cn/char_164_nightm",
-    "韩语": "voice_kr/char_164_nightm",
-    "英语": "voice_en/char_164_nightm"
-  },
+  "images": [
+    "https://media.prts.wiki/5/50/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E9%AD%94_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/0/0d/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E9%AD%94_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/58/%E7%AB%8B%E7%BB%98_%E5%A4%9C%E9%AD%94_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_164_nightm"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_164_nightm"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_164_nightm"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_164_nightm"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，新年快乐......愿望？那个，希望今年能恢复健康，这样，这样才能多帮您一些忙......啊~那么我的愿望是，让这个愿望没那么容易实现。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "早安，博士~"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "今天罗德岛好热闹啊，其实，我非常非常喜欢这种忙来忙去，热热闹闹的氛围......欸？一起参加聚会？我、我就不了吧，只要看着大家开心的样子，我就很高兴了......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/50/立绘_夜魔_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/0/0d/立绘_夜魔_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/58/立绘_夜魔_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

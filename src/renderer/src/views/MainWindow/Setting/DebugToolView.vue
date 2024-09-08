@@ -1,15 +1,15 @@
 <script lang="ts" setup>
 import { type ElectronAPI } from '@electron-toolkit/preload'
+import deepcopy from 'deepcopy'
 import { NButton, useMessage } from 'naive-ui'
 import { storeToRefs } from 'pinia'
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { AppDatabase } from '../../../db'
-import { LocalCacheProvider } from '../../../providers/LocalCacheProvider'
 import backupDB from '../../../services/BackupService'
-import { createCache } from '../../../services/CacheService'
 import { getAppData } from '../../../services/DataService'
 import { useSettingStore } from '../../../stores/setting'
+import eventBus from '../../../utils/eventBus'
 
 const db = AppDatabase.getInstance()
 
@@ -28,10 +28,6 @@ let isElectron: boolean
 const electron = window.electron as ElectronAPI
 
 const imageSrc = ref('')
-const cache = createCache(new LocalCacheProvider())
-cache('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png').then((res) => {
-  imageSrc.value = res
-})
 
 try {
   isElectron = !!window.electron
@@ -102,6 +98,21 @@ const testAddBackup = async () => {
   const data = await getAppData()
   console.log(data)
   await backupDB.addBackup(data)
+}
+
+const openUpdateProgress = () => {
+  eventBus.emit('createUpdateNotification')
+}
+
+const downloadProgress = ref({
+  total: 0,
+  delta: 0,
+  transferred: 0,
+  percent: 0,
+  bytesPerSecond: 0
+})
+const modifiedUpdateProgress = () => {
+  eventBus.emit('downloadProgress', null, deepcopy(downloadProgress.value))
 }
 </script>
 
@@ -177,6 +188,20 @@ const testAddBackup = async () => {
     <n-space class="items-center">
       <p>缓存测试</p>
       <n-image :src="imageSrc" />
+    </n-space>
+    <n-space class="items-center">
+      <p>假的更新下载进度</p>
+      <n-button :disabled="!isElectron" round type="primary" @click="openUpdateProgress"
+        >打开更新进度
+      </n-button>
+      <n-button :disabled="!isElectron" round type="primary" @click="modifiedUpdateProgress"
+        >更新下载进度
+      </n-button>
+      <n-input-number v-model:value="downloadProgress.total" placeholder="总数" />
+      <n-input-number v-model:value="downloadProgress.delta" placeholder="差异" />
+      <n-input-number v-model:value="downloadProgress.transferred" placeholder="已下载" />
+      <n-input-number v-model:value="downloadProgress.percent" placeholder="百分比" />
+      <n-input-number v-model:value="downloadProgress.bytesPerSecond" placeholder="下载速度" />
     </n-space>
   </n-space>
 </template>

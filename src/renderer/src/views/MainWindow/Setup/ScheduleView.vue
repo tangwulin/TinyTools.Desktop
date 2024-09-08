@@ -1,26 +1,25 @@
 <script lang="ts" setup>
 import { File as FileIcon } from '@vicons/tabler'
-import { useObservable } from '@vueuse/rxjs'
-import { from } from '@vueuse/rxjs/index'
-import { liveQuery } from 'dexie'
 import { NText, useMessage } from 'naive-ui'
+import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
 import * as XLSX from 'xlsx'
 // @ts-ignore:2307
 import courseXlsx from '../../../assets/xlsx/course.xlsx'
-
-import { AppDatabase } from '../../../db'
-import { CourseTableItem } from '../../../interface/course'
+import { useCourseStore } from '../../../stores/course'
 
 import downloadAnyFile from '../../../utils/downloadAnyFile'
 
-const db = AppDatabase.getInstance()
+// const db = AppDatabase.getInstance()
+//
+// const allCourses = useObservable(from(liveQuery(() => db.coursesTable.toArray())))
 
-const allCourses = useObservable(from(liveQuery(() => db.coursesTable.toArray())))
+const courseStore = useCourseStore()
+const { coursesTable } = storeToRefs(courseStore)
 
 const message = useMessage()
 
-const hasImportSuccess = computed(() => allCourses.value?.length !== 0)
+const hasImportSuccess = computed(() => coursesTable.value?.length !== 0)
 
 // interface courseFromExcel {
 //   ['开始时间']: string
@@ -74,13 +73,25 @@ const parseExcel = async (uploadFileInfo) => {
         return undefined
       }
     })
-    .filter((item) => item !== undefined)
+    .filter((item) => item !== undefined) as {
+    time: { start: { hour: number; minute: number }; end: { hour: number; minute: number } }
+    mon: string
+    tue: string
+    wed: string
+    thu: string
+    fri: string
+    spe1: string
+    spe2: string
+    spe3: string
+    spe4: string
+    spe5: string
+  }[]
 
   if (coursesFromExcel.length === 0) {
     message.error('未检测到有效的信息，请检查文件格式是否正确')
+    return
   } else {
-    db.open()
-    db.coursesTable.bulkPut(coursesFromExcel as CourseTableItem[])
+    courseStore.updateCourseTable(coursesFromExcel)
     message.success('导入成功')
   }
 }
@@ -90,7 +101,7 @@ const downloadTemplate = () => {
 }
 
 const clearHandler = () => {
-  db.coursesTable.clear()
+  coursesTable.value = []
   message.success('清除成功')
 }
 </script>
@@ -118,7 +129,7 @@ const clearHandler = () => {
           </tr>
         </thead>
         <tbody>
-          <tr v-for="course in allCourses" :key="course.id">
+          <tr v-for="course in coursesTable" :key="course.order">
             <td>
               {{ course.time.start.hour }}:{{ course.time.start.minute }} -
               {{ course.time.end.hour }}:{{ course.time.end.minute }}

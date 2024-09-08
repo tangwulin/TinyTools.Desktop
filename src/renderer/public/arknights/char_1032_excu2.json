@@ -1,12 +1,28 @@
 {
   "name": "圣约送葬人",
   "charaKey": "char_1032_excu2",
-  "voiceBase": {
-    "日语": "voice/char_1032_excu2",
-    "中文-普通话": "voice_cn/char_1032_excu2",
-    "韩语": "voice_kr/char_1032_excu2",
-    "英语": "voice_en/char_1032_excu2"
-  },
+  "images": [
+    "https://media.prts.wiki/7/71/%E7%AB%8B%E7%BB%98_%E5%9C%A3%E7%BA%A6%E9%80%81%E8%91%AC%E4%BA%BA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/94/%E7%AB%8B%E7%BB%98_%E5%9C%A3%E7%BA%A6%E9%80%81%E8%91%AC%E4%BA%BA_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_1032_excu2"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_1032_excu2"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_1032_excu2"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_1032_excu2"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -198,7 +214,7 @@
         },
         {
           "language": "英文",
-          "content": "As you can see, this is a burnt flower. I have, to the best of my abilities, maintained its condition in order to bring it to you. It is not a gift, becuase it does not meet the criteria for one. It's a question in my mind. I am still pondering the things behind this flower."
+          "content": "As you can see, this is a burnt flower. I have, to the best of my abilities, maintained its condition in order to bring it to you. It is not a gift, because it does not meet the criteria for one. It's a question in my mind. I am still pondering the things behind this flower."
         },
         {
           "language": "韩文",
@@ -757,6 +773,28 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "数字的变化，象征物的变化，人们用这种方式来提醒自己时间流逝。是的，我说过我可以理解，尽管我并不需要这种提醒，但如果这个日子能让你感到喜悦，那么它确实很有意义。新年快乐，博士。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -777,10 +815,28 @@
           "content": "많이 변하셨군요, 박사님."
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我在找你，博士。我与贵司签署的清理协议即将到期，如果需要更换一份新的协议，我带来的条目可供参考。中庭公证所此前没有与外部企业长期合作的先例，与罗德岛的合作将会是一次新的尝试。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/71/立绘_圣约送葬人_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/94/立绘_圣约送葬人_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

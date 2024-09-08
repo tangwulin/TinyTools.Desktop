@@ -1,12 +1,29 @@
 {
   "name": "天火",
   "charaKey": "char_166_skfire",
-  "voiceBase": {
-    "日语": "voice/char_166_skfire",
-    "中文-普通话": "voice_cn/char_166_skfire",
-    "韩语": "voice_kr/char_166_skfire",
-    "英语": "voice_en/char_166_skfire"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c2/%E7%AB%8B%E7%BB%98_%E5%A4%A9%E7%81%AB_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8c/%E7%AB%8B%E7%BB%98_%E5%A4%A9%E7%81%AB_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/75/%E7%AB%8B%E7%BB%98_%E5%A4%A9%E7%81%AB_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_166_skfire"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_166_skfire"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_166_skfire"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_166_skfire"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -750,7 +767,7 @@
         },
         {
           "language": "英文",
-          "content": "Is that it? I had higher expectations."
+          "content": "Is that it? I had  higher expectations."
         },
         {
           "language": "韩文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "哼，他们不让我靠近烟花，说我控制不好会把这些都炸掉，还专门让后勤部干员在这里守着，我哪里就——啊！灭火器灭火器！......生气导致体温上升是正常生理现象，我、我离远点就是了！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "心情如何？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我发觉自己对一些事情想得仍旧有些简单。绝对的力量有时候并不能做到我想要做的一切，它是可以暂时阻挡一些什么，但依然无法触及到根本。我还需要继续努力，罗德岛，我要在这里学到更多。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c2/立绘_天火_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8c/立绘_天火_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/75/立绘_天火_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

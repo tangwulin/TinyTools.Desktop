@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import { computed, PropType } from 'vue'
 
 import { remToPx } from '../utils/styleUtil'
@@ -61,7 +61,7 @@ const fontSize = computed(() => {
 })
 </script>
 <template>
-  <div class="entity-item" :style="{ width: size + 'px', height: size + 'px' }">
+  <div :style="{ width: size + 'px', height: size + 'px' }" class="entity-item">
     <div
       style="
         width: 100%;

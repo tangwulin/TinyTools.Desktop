@@ -1,12 +1,30 @@
 {
   "name": "桃金娘",
   "charaKey": "char_151_myrtle",
-  "voiceBase": {
-    "日语": "voice/char_151_myrtle",
-    "中文-普通话": "voice_cn/char_151_myrtle",
-    "韩语": "voice_kr/char_151_myrtle",
-    "英语": "voice_en/char_151_myrtle"
-  },
+  "images": [
+    "https://media.prts.wiki/4/42/%E7%AB%8B%E7%BB%98_%E6%A1%83%E9%87%91%E5%A8%98_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/dc/%E7%AB%8B%E7%BB%98_%E6%A1%83%E9%87%91%E5%A8%98_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/b/bb/%E7%AB%8B%E7%BB%98_%E6%A1%83%E9%87%91%E5%A8%98_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/96/%E7%AB%8B%E7%BB%98_%E6%A1%83%E9%87%91%E5%A8%98_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_151_myrtle"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_151_myrtle"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_151_myrtle"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_151_myrtle"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -867,6 +885,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "把旗子取下来，这边打一个结，好，布兜这样就做好了！啊博士，你也在呀。走吧，让我们去把食堂里好吃的扫荡一空！新年第一天，就由大吃一顿开始吧！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -891,12 +935,32 @@
           "content": "博士，有什麼有趣的事情嗎？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "跟着杜林来到了一个不错的地方呢。见过了巨大的移动城市，在战场上打过了许多坏人，还吃到了许多没见过的美食。等我回到老家，把这些故事写成游记出版的话，一定会畅销的！"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/42/立绘_桃金娘_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/dc/立绘_桃金娘_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/b/bb/立绘_桃金娘_skin1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/96/立绘_桃金娘_skin2.png?image_process=format,webp/quality,Q_90"
   ]
 }

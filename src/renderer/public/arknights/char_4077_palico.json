@@ -1,9 +1,16 @@
 {
   "name": "泰拉大陆调查团",
   "charaKey": "char_4077_palico",
-  "voiceBase": {
-    "联动": "voice/char_4077_palico"
-  },
+  "images": [
+    "https://media.prts.wiki/8/88/%E7%AB%8B%E7%BB%98_%E6%B3%B0%E6%8B%89%E5%A4%A7%E9%99%86%E8%B0%83%E6%9F%A5%E5%9B%A2_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/56/%E7%AB%8B%E7%BB%98_%E6%B3%B0%E6%8B%89%E5%A4%A7%E9%99%86%E8%B0%83%E6%9F%A5%E5%9B%A2_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "联动",
+      "base": "voice/char_4077_palico"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -97,7 +104,7 @@
         },
         {
           "language": "英文",
-          "content": "*dink* *dink* No Machalite Ore left... Could substitute with Rock Spider stones and gloompincer shells... Don't know without trying. In you go."
+          "content": "*dink* *dink* No Machalite Ore left...  Could substitute with Rock Spider stones and gloompincer shells... Don't know without trying. In you go."
         },
         {
           "language": "韩文",
@@ -811,9 +818,5 @@
         }
       ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/8/88/立绘_泰拉大陆调查团_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/56/立绘_泰拉大陆调查团_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

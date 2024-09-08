@@ -1,11 +1,25 @@
 {
   "name": "鞭刃",
   "charaKey": "char_265_sophia",
-  "voiceBase": {
-    "日语": "voice/char_265_sophia",
-    "中文-普通话": "voice_cn/char_265_sophia",
-    "韩语": "voice_kr/char_265_sophia"
-  },
+  "images": [
+    "https://media.prts.wiki/7/7a/%E7%AB%8B%E7%BB%98_%E9%9E%AD%E5%88%83_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/4/4a/%E7%AB%8B%E7%BB%98_%E9%9E%AD%E5%88%83_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/51/%E7%AB%8B%E7%BB%98_%E9%9E%AD%E5%88%83_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_265_sophia"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_265_sophia"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_265_sophia"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -892,6 +906,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "自从玛嘉烈离开卡西米尔后，很久没有和她一起度过新年了，呵呵，今天的宴会可要好好置办一番......哎呀，博士，你有兴趣来参加临光家的小型家宴吗？可以特别邀请你哦。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -916,11 +956,32 @@
           "content": "日安，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在罗德岛见到了许多有趣的小家伙，他们训练时的眼神，和玛莉娅一模一样。我很期待他们成为独当一面的战士的样子，在那之前，我的教鞭是不会放松的。不要误会，这是我的职责，不是兴趣爱好。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/7a/立绘_鞭刃_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/4/4a/立绘_鞭刃_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/51/立绘_鞭刃_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

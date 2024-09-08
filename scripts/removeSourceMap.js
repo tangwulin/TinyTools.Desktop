@@ -38,6 +38,7 @@ const gReplaceStr = ''
 dirContentReplace(rendererPath, gExtension, gSrcStr, gReplaceStr) // 去掉js文件的sourcemap关联
 dirContentReplace(mainPath, gExtension, gSrcStr, gReplaceStr)
 dirContentReplace(preloadPath, gExtension, gSrcStr, gReplaceStr)
+
 function dirContentReplace(filePath, extension, srcStr, replaceStr) {
   const fs = require('fs')
   const path = require('path')

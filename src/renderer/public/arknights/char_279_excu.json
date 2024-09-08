@@ -1,12 +1,29 @@
 {
   "name": "送葬人",
   "charaKey": "char_279_excu",
-  "voiceBase": {
-    "日语": "voice/char_279_excu",
-    "中文-普通话": "voice_cn/char_279_excu",
-    "韩语": "voice_kr/char_279_excu",
-    "英语": "voice_en/char_279_excu"
-  },
+  "images": [
+    "https://media.prts.wiki/7/76/%E7%AB%8B%E7%BB%98_%E9%80%81%E8%91%AC%E4%BA%BA_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/f/fa/%E7%AB%8B%E7%BB%98_%E9%80%81%E8%91%AC%E4%BA%BA_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/9/99/%E7%AB%8B%E7%BB%98_%E9%80%81%E8%91%AC%E4%BA%BA_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_279_excu"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_279_excu"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_279_excu"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_279_excu"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -204,7 +221,7 @@
         },
         {
           "language": "英文",
-          "content": "Private disputes are more frequent than public conflicts, as chaos is the norm over order. I have seen much more people who fired upon me at first glance than those who opened their doors to welcome me. But it matters not, for I can complete any commission, whether it is to kill a living person on behalf of the dead, or to create a dead person on behalf of the living."
+          "content": "Private disputes are more frequent than public conflicts, as chaos is the norm over order. I have seen much more people who fired upon me at first glance than those who opened their doors to welcome me. But it matters not, for I can complete any commission, whether it is to kill a living person on behalf of the dead, or to create a dead person on  behalf of the living."
         },
         {
           "language": "韩文",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，今日甲板上堆放了许多烟花。如果有人想利用其造成破坏的话，后果不堪设想。为了您的安全，我会再去检查——不用吗？好的，我尊重您的判断。不过这种手段或许可以运用到下一次任务中。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士，請多加小心。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我会严格执行罗德岛派给我的每一个任务，就如同执行公证所的命令一样。但是相对而言，您指派的任务更能体现我的效率。不，我无意比较合作对象。我只是想说，您的确是一位优秀的指挥者。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/7/76/立绘_送葬人_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/f/fa/立绘_送葬人_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/9/99/立绘_送葬人_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

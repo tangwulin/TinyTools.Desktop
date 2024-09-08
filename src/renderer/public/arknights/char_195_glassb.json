@@ -1,13 +1,33 @@
 {
   "name": "真理",
   "charaKey": "char_195_glassb",
-  "voiceBase": {
-    "日语": "voice/char_195_glassb",
-    "中文-普通话": "voice_cn/char_195_glassb",
-    "韩语": "voice_kr/char_195_glassb",
-    "英语": "voice_en/char_195_glassb",
-    "俄语": "voice_custom/char_195_glassb"
-  },
+  "images": [
+    "https://media.prts.wiki/1/19/%E7%AB%8B%E7%BB%98_%E7%9C%9F%E7%90%86_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/3/30/%E7%AB%8B%E7%BB%98_%E7%9C%9F%E7%90%86_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7a/%E7%AB%8B%E7%BB%98_%E7%9C%9F%E7%90%86_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_195_glassb"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_195_glassb"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_195_glassb"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_195_glassb"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_195_glassb"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -894,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "没有哦，我、我没有醉蜜，只是被索尼娅稍、稍微灌了一点，但我觉得还是应该先来跟您道一声，新年快乐......咦，索尼娅为新年准备了鲜花吗？这个花，为什么会烫手呢......"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -918,11 +964,32 @@
           "content": "你好，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "《银枝》《源石技艺的数学原理》《超命题逻辑》......嗯？我在整理今年看过的书单。不只是悬疑小说，涉猎各种各样的知识，能让我有一种安心的感觉。可以让我相信，自己的确在往前走。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/1/19/立绘_真理_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/3/30/立绘_真理_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7a/立绘_真理_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

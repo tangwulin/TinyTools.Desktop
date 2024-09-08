@@ -1,12 +1,28 @@
 {
   "name": "达格达",
   "charaKey": "char_157_dagda",
-  "voiceBase": {
-    "日语": "voice/char_157_dagda",
-    "中文-普通话": "voice_cn/char_157_dagda",
-    "韩语": "voice_kr/char_157_dagda",
-    "英语": "voice_en/char_157_dagda"
-  },
+  "images": [
+    "https://media.prts.wiki/c/c8/%E7%AB%8B%E7%BB%98_%E8%BE%BE%E6%A0%BC%E8%BE%BE_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/6/65/%E7%AB%8B%E7%BB%98_%E8%BE%BE%E6%A0%BC%E8%BE%BE_2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_157_dagda"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_157_dagda"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_157_dagda"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_157_dagda"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +909,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "曾经，每年的最后一次暮钟敲响之时，塔楼骑士会伫立在塔楼之上，看着伦蒂尼姆的万家灯火逐渐熄灭......如今只剩我一人，我仍想在此时手托火光，守护维多利亚至暗时刻中的光明。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,10 +959,32 @@
           "content": "博士，你好。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "又一年过去了。我们一同经历了许多艰苦的时光，前路也依旧布满荆棘。即便如此，也请不要气馁。博士，我相信，我们终究会克服一切困难，迎来阴云散尽的那一天。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/c/c8/立绘_达格达_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/6/65/立绘_达格达_2.png?image_process=format,webp/quality,Q_90"
   ]
 }

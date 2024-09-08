@@ -1,13 +1,34 @@
 {
   "name": "陈",
   "charaKey": "char_010_chen",
-  "voiceBase": {
-    "日语": "voice/char_010_chen",
-    "中文-普通话": "voice_cn/char_010_chen",
-    "中文-方言": "voice_custom/char_010_chen_cn_topolect",
-    "韩语": "voice_kr/char_010_chen",
-    "英语": "voice_en/char_010_chen"
-  },
+  "images": [
+    "https://media.prts.wiki/b/bc/%E7%AB%8B%E7%BB%98_%E9%99%88_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/d/d0/%E7%AB%8B%E7%BB%98_%E9%99%88_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/5/53/%E7%AB%8B%E7%BB%98_%E9%99%88_skin1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/c/c5/%E7%AB%8B%E7%BB%98_%E9%99%88_skin2.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_010_chen"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_010_chen"
+    },
+    {
+      "language": "中文-方言",
+      "base": "voice_custom/char_010_chen_cn_topolect"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_010_chen"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_010_chen"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -1166,6 +1187,40 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "博士，关于上次的报告——博士也还在工作吗？嗯，倒是在我的意料之外，毕竟外面已经闹成这样，我以为打开门就能看到一屋子正在庆祝的干员。新年快乐，好了，这是打印出的事件报告——"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "博士，上次那份报告——博士还在工作吗？嗯，出乎我意料之外呢，毕竟外面已经闹成这样，我还以为一打开门就会看到一屋子正在庆祝的干员。新年快乐，给，这是打印好的事件报告——"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -1198,11 +1253,40 @@
           "content": "哦，系博士呀？"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我离开龙门只是为了寻求一种方式，这是我自己的事，并不需要你们过多的干预。罗德岛，你们确实有着能让他人信服你们所代表东西的力量，希望你们不要让我失望。我？仍是不够，仍需更快。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        },
+        {
+          "language": "中文-方言",
+          "content": "我离开龙门只是为了寻求一种方式，这是我自己的事，唔需要你们过多干预。罗德岛，你们确实有能力令他人信服你们所代表东西，希望你们唔好令我失望。我？仍是不够，仍需更快。"
+        },
+        {
+          "language": "繁体中文-方言",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/b/bc/立绘_陈_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/d/d0/立绘_陈_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/5/53/立绘_陈_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

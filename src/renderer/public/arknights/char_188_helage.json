@@ -1,13 +1,33 @@
 {
   "name": "赫拉格",
   "charaKey": "char_188_helage",
-  "voiceBase": {
-    "日语": "voice/char_188_helage",
-    "中文-普通话": "voice_cn/char_188_helage",
-    "韩语": "voice_kr/char_188_helage",
-    "英语": "voice_en/char_188_helage",
-    "俄语": "voice_custom/char_188_helage"
-  },
+  "images": [
+    "https://media.prts.wiki/4/48/%E7%AB%8B%E7%BB%98_%E8%B5%AB%E6%8B%89%E6%A0%BC_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/1/10/%E7%AB%8B%E7%BB%98_%E8%B5%AB%E6%8B%89%E6%A0%BC_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8c/%E7%AB%8B%E7%BB%98_%E8%B5%AB%E6%8B%89%E6%A0%BC_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_188_helage"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_188_helage"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_188_helage"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_188_helage"
+    },
+    {
+      "language": "俄语",
+      "base": "voice_custom/char_188_helage"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -894,6 +914,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "有多少个新年是在战壕里，或是在炮火中度过的，我已经记不清了。战争并不挑日期，而我大部分生命都系在战争之上，这个节日已经无法为我翻开新的一页。哈哈，但是孩子们看起来很开心，对吧？"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -918,11 +964,32 @@
           "content": "氣色不錯，博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "我必须向罗德岛表达我的感激。斗争越是漫长，我越是明白一处安身之地多么可贵。他们带来的那些阿撒兹勒的技术，于罗德岛是否有益？......那就好，毕竟我能为你们做的，只是挥刀而已。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/4/48/立绘_赫拉格_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/1/10/立绘_赫拉格_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8c/立绘_赫拉格_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }

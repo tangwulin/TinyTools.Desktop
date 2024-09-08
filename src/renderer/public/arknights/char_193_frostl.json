@@ -1,12 +1,29 @@
 {
   "name": "霜叶",
   "charaKey": "char_193_frostl",
-  "voiceBase": {
-    "日语": "voice/char_193_frostl",
-    "中文-普通话": "voice_cn/char_193_frostl",
-    "韩语": "voice_kr/char_193_frostl",
-    "英语": "voice_en/char_193_frostl"
-  },
+  "images": [
+    "https://media.prts.wiki/5/50/%E7%AB%8B%E7%BB%98_%E9%9C%9C%E5%8F%B6_1.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/7/7a/%E7%AB%8B%E7%BB%98_%E9%9C%9C%E5%8F%B6_2.png?image_process=format,webp/quality,Q_90",
+    "https://media.prts.wiki/8/8c/%E7%AB%8B%E7%BB%98_%E9%9C%9C%E5%8F%B6_skin1.png?image_process=format,webp/quality,Q_90"
+  ],
+  "voiceBase": [
+    {
+      "language": "日语",
+      "base": "voice/char_193_frostl"
+    },
+    {
+      "language": "中文-普通话",
+      "base": "voice_cn/char_193_frostl"
+    },
+    {
+      "language": "韩语",
+      "base": "voice_kr/char_193_frostl"
+    },
+    {
+      "language": "英语",
+      "base": "voice_en/char_193_frostl"
+    }
+  ],
   "voiceList": [
     {
       "title": "任命助理",
@@ -893,6 +910,32 @@
       ]
     },
     {
+      "title": "新年祝福",
+      "filename": "CN_038.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "在来罗德岛之前，我从来没有庆祝过这样的节日。新年？即便没有工作，也不会有这样温暖安全的房间。我可以自己先听一会儿音乐吗？等我一下......待会儿会来找你的，博士。谢谢。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
+    },
+    {
       "title": "问候",
       "filename": "CN_042.wav",
       "text": [
@@ -917,11 +960,32 @@
           "content": "博士。"
         }
       ]
+    },
+    {
+      "title": "周年庆典",
+      "filename": "CN_044.wav",
+      "text": [
+        {
+          "language": "中文",
+          "content": "不用那么担心，以前的经历不全是坏事，它足以让我知晓那些不正确的活法。以及，罗德岛的这些时光让我更加想用现在这种全新的眼光，去探寻这片大地更多的未知的地方。博士，要和我一起。"
+        },
+        {
+          "language": "日文",
+          "content": ""
+        },
+        {
+          "language": "英文",
+          "content": ""
+        },
+        {
+          "language": "韩文",
+          "content": ""
+        },
+        {
+          "language": "繁体中文",
+          "content": ""
+        }
+      ]
     }
-  ],
-  "images": [
-    "https://prts.wiki/images/5/50/立绘_霜叶_1.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/7/7a/立绘_霜叶_2.png?image_process=format,webp/quality,Q_90",
-    "https://prts.wiki/images/8/8c/立绘_霜叶_skin1.png?image_process=format,webp/quality,Q_90"
   ]
 }
