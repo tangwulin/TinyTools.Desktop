@@ -24,21 +24,21 @@ export const launchUpdater = () => {
 
   const autoUpdater = new NsisUpdater(updaterOptions)
 
-  const header1 = import.meta.env.VITE_UPDATE_HEADER1
-
-  const headers = {}
-  headers[header1] = import.meta.env.VITE_UPDATE_HEADER1_VALUE
-
-  const feedUrl = import.meta.env.VITE_UPDATE_URL
+  // const header1 = import.meta.env.VITE_UPDATE_HEADER1
+  //
+  // const headers = {}
+  // headers[header1] = import.meta.env.VITE_UPDATE_HEADER1_VALUE
+  //
+  // const feedUrl = import.meta.env.VITE_UPDATE_URL
 
   autoUpdater.logger = logger
   // 配置提供更新的程序，及build中配置的url
-  autoUpdater.setFeedURL({
-    provider: 'generic',
-    url: feedUrl,
-    useMultipleRangeRequest: false,
-    requestHeaders: headers
-  })
+  // autoUpdater.setFeedURL({
+  //   provider: 'generic',
+  //   url: feedUrl,
+  //   useMultipleRangeRequest: false,
+  //   requestHeaders: headers
+  // })
   autoUpdater.autoRunAppAfterInstall = true
   autoUpdater.forceDevUpdateConfig = true
 
