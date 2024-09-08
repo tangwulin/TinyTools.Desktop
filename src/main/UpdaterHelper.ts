@@ -1,6 +1,7 @@
 // 将日志在渲染进程里面打印出来
 import { ipcMain } from 'electron'
-import { autoUpdater } from 'electron-updater'
+import { createGiteeUpdaterOptions } from './gitee-updater-ts'
+import { NsisUpdater } from 'electron-updater'
 import logger from './Logger'
 import { sentMessageToMainWindow } from './Window'
 
@@ -16,12 +17,12 @@ export function printUpdaterMessage(arg) {
 }
 
 export const launchUpdater = () => {
-  // const updaterOptions = createGiteeUpdaterOptions({
-  //   repo: 'twl12138/TinyTools.Desktop',
-  //   updateManifest: 'latest.yml'
-  // })
+  const updaterOptions = createGiteeUpdaterOptions({
+    repo: 'twl12138/TinyTools.Desktop',
+    updateManifest: 'latest.yml'
+  })
 
-  // const autoUpdater = new NsisUpdater(updaterOptions)
+  const autoUpdater = new NsisUpdater(updaterOptions)
 
   const header1 = import.meta.env.VITE_UPDATE_HEADER1
 
