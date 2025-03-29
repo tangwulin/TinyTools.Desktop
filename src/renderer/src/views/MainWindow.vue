@@ -378,15 +378,15 @@ const getUpdateNotificationContent = (data: UpdateProgressData) => {
 
 const update = async () => {
   await beforeUpdate()
-  localStorage.setItem('updateFlag', String(true))
+  // localStorage.setItem('updateFlag', String(true))
   electron.ipcRenderer.send('updateNow')
 }
 
 onBeforeMount(() => {
-  const flag = localStorage.getItem('updateFlag')
-  if (flag === 'true') {
-    router.push({ name: 'afterupdate' })
-  }
+  // const flag = localStorage.getItem('updateFlag')
+  // if (flag === 'true') {
+  //   router.push({ name: 'afterupdate' })
+  // }
 })
 </script>
 <template>
