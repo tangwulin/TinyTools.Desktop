@@ -15,7 +15,8 @@ const works = [
   { value: 2, label: '明日方舟' },
   { value: 3, label: '崩坏·星穹铁道' },
   { value: 4, label: '蔚蓝档案' },
-  { value: 5, label: '赛马娘' }
+  { value: 5, label: '赛马娘' },
+  { value: 6, label: '鸣潮' }
 ]
 
 const genders = [

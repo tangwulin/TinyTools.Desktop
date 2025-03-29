@@ -11,6 +11,8 @@ const starRail = avatarConfig['starRail']
 const blueArchive = avatarConfig['blueArchive']
 // noinspection SpellCheckingInspection
 const umamusume = avatarConfig['umamusume']
+// noinspection SpellCheckingInspection
+const wutheringwaves = avatarConfig['wutheringwaves']
 
 function generateHash(input: string) {
   let hash = 0
@@ -45,6 +47,9 @@ export const getAvatarUrls = (sex: number, works: number[]) => {
           case 3:
             result = result.concat(starRail.male)
             break
+          case 6:
+            result = result.concat(wutheringwaves.male)
+            break
           default:
             break
         }
@@ -67,6 +72,9 @@ export const getAvatarUrls = (sex: number, works: number[]) => {
             break
           case 5:
             result = result.concat(umamusume.female)
+            break
+          case 6:
+            result = result.concat(wutheringwaves.female)
             break
           default:
             break
