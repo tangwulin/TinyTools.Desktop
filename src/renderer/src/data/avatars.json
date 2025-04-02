@@ -1035,10 +1035,6 @@
         "url": "https://static.kivo.wiki/images/students/河驹风 兰舞/泳装/avatar.png"
       },
       {
-        "description": "马路库特",
-        "url": "https://static.kivo.wiki/images/students/ 马路库特/original/malkuth.png"
-      },
-      {
         "description": "橘光",
         "url": "https://static.kivo.wiki/images/students/橘 光/original/光.png"
       },
@@ -1692,6 +1688,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/b/b0/8dj1skmxiu5i8hj87k2wix2s4c2pgf5.png/100px-Chr_icon_1084_108401_01.png"
       },
       {
+        "description": "【With a Twist】谷水琴蕾",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/3/3d/74ylw7ol5x5jygwdg7gxvjn75os6z1h.png/100px-Chr_icon_1084_108402_01.png"
+      },
+      {
         "description": "第一红宝石",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/2/25/2yu11t47hkyi7mbwb0tsof6qzq2y6yp.png/100px-Chr_icon_1085_108501_01.png"
       },
@@ -1780,6 +1780,10 @@
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/b/b6/l4ojntluwuh3rtcsq8lxsokcwbnok26.png/100px-Chr_icon_1107_110701_01.png"
       },
       {
+        "description": "【Tap! Tap! Tap!】跳舞城",
+        "url": "https://patchwiki.biligame.com/images/umamusume/thumb/0/0a/7ih7xhc10294beiqt0mpuergif7vmps.png/100px-Chr_icon_1107_110702_01.png"
+      },
+      {
         "description": "大鸣大放",
         "url": "https://patchwiki.biligame.com/images/umamusume/thumb/2/2c/o9f0lo9o0a0sia02znnop52t3e81sa7.png/100px-Chr_icon_1108_110801_01.png"
       },
@@ -1831,6 +1835,10 @@
   },
   "starRail": {
     "male": [
+      {
+        "description": "那刻夏",
+        "url": "https://patchwiki.biligame.com/images/sr/c/c7/f3udn1bfun9og7a2h8nkabbom5kh53b.png"
+      },
       {
         "description": "万敌",
         "url": "https://patchwiki.biligame.com/images/sr/d/d9/0dyo0uk3edcfpjbz82qbwep032ge0m4.png"
@@ -1917,6 +1925,10 @@
       }
     ],
     "female": [
+      {
+        "description": "遐蝶",
+        "url": "https://patchwiki.biligame.com/images/sr/8/81/johi69tjqhfyngs4cfkfsu2w8bomyiy.png"
+      },
       {
         "description": "缇宝",
         "url": "https://patchwiki.biligame.com/images/sr/1/16/s15opurtx1s67wf670orxm0ysqnr7nk.png"
@@ -3918,12 +3930,12 @@
         "url": "https://patchwiki.biligame.com/images/ys/8/8f/eo7y6muz7scr7y3tdp2995zmxe7no46.png"
       },
       {
-        "description": "香菱",
-        "url": "https://patchwiki.biligame.com/images/ys/9/9c/l5ae2erhaq8tn896a2yibndx5g7r5g5.png"
-      },
-      {
         "description": "安柏",
         "url": "https://patchwiki.biligame.com/images/ys/1/1c/l3iu4yd9jdee9fjj2ly9bp14dkpamuj.png"
+      },
+      {
+        "description": "香菱",
+        "url": "https://patchwiki.biligame.com/images/ys/9/9c/l5ae2erhaq8tn896a2yibndx5g7r5g5.png"
       },
       {
         "description": "芭芭拉",
